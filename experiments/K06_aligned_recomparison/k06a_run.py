@@ -132,7 +132,7 @@ def main():
         results[name] = {}
         for j, h in enumerate(HORIZONS):
             m = HistGradientBoostingClassifier(max_iter=120, learning_rate=.075,
-                                               max_leaf_nodes=31, l2_regularization=.02,
+                                               max_leaf_nodes=31, min_samples_leaf=15, l2_regularization=.02,
                                                random_state=42)
             m.fit(Xtr, ytr[:, j])
             results[name][f"{h}ns"] = metrics(yte[:, j], m.predict_proba(Xte)[:, 1])
