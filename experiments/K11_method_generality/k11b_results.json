@@ -1,0 +1,295 @@
+{
+ "n_pairs": 14582,
+ "bound_A": 3.5,
+ "methods": {
+  "real_5pt": {
+   "mean_statistic": 5.069034098542255,
+   "frac_below": 0.04244959539157866,
+   "future_mean": 5.096158981323242,
+   "drift_mean": 0.13562321769179114,
+   "drift_std": 0.5725309734881839
+  },
+  "gen22": {
+   "mean_statistic": 4.923584095739465,
+   "frac_below": 0.030613084624879987,
+   "mean_error": {
+    "bias": -0.14545000280279008,
+    "scatter_std": 0.4418103615857119,
+    "rmse": 0.46513664542780236,
+    "bias_share_of_mse": 0.09778367494909787
+   },
+   "frac_error_pp": {
+    "bias": -1.183651076669867,
+    "scatter_std": 14.48226461470602,
+    "rmse": 14.530554643291074,
+    "bias_share_of_mse": 0.006635642972366474
+   },
+   "corr_mean_with_real": 0.8556576912178365,
+   "corr_frac_with_real": 0.4720996187315124,
+   "drift_mean": -0.04618928557461859,
+   "drift_std": 0.1599511293152525,
+   "corr_drift_with_real": 0.2641587156839443,
+   "future_only": {
+    "mean_error": {
+     "bias": -0.18181250326640974,
+     "scatter_std": 0.5522629507375985,
+     "rmse": 0.5814208055284893,
+     "bias_share_of_mse": 0.09778367511664236
+    },
+    "frac_error_pp": {
+     "bias": -1.4795638458373337,
+     "scatter_std": 18.102830768382525,
+     "rmse": 18.163193304113843,
+     "bias_share_of_mse": 0.006635642972366475
+    }
+   }
+  },
+  "idea02_heavy_langevin": {
+   "mean_statistic": 4.964735088117451,
+   "frac_below": 0.012778311159877473,
+   "mean_error": {
+    "bias": -0.10429901042480368,
+    "scatter_std": 0.46098752151793254,
+    "rmse": 0.4726391631793112,
+    "bias_share_of_mse": 0.04869686088106043
+   },
+   "frac_error_pp": {
+    "bias": -2.9671284231701187,
+    "scatter_std": 12.584892113407012,
+    "rmse": 12.929940471080213,
+    "bias_share_of_mse": 0.05265985232467081
+   },
+   "corr_mean_with_real": 0.8416515786237064,
+   "corr_frac_with_real": 0.37300359572566466,
+   "drift_mean": 0.004724509408077969,
+   "drift_std": 0.0650780745757077,
+   "corr_drift_with_real": 0.011766171649283086,
+   "future_only": {
+    "mean_error": {
+     "bias": -0.13089870828371317,
+     "scatter_std": 0.5754564056410278,
+     "rmse": 0.5901563747208327,
+     "bias_share_of_mse": 0.04919676166069043
+    },
+    "frac_error_pp": {
+     "bias": -3.8686394184611164,
+     "scatter_std": 15.634408420982629,
+     "rmse": 16.105933615415275,
+     "bias_share_of_mse": 0.05769586592788964
+    }
+   }
+  },
+  "idea11_elastic_modes": {
+   "mean_statistic": 4.963176830325691,
+   "frac_below": 0.005124278029229339,
+   "mean_error": {
+    "bias": -0.10585726821656385,
+    "scatter_std": 0.45772791202638274,
+    "rmse": 0.4698091130260305,
+    "bias_share_of_mse": 0.05076898621196032
+   },
+   "frac_error_pp": {
+    "bias": -3.7325317362349315,
+    "scatter_std": 12.891313577470548,
+    "rmse": 13.420795763093837,
+    "bias_share_of_mse": 0.07734824842341337
+   },
+   "corr_mean_with_real": 0.8441011051595537,
+   "corr_frac_with_real": 0.2801170936630314,
+   "drift_mean": 0.002971469392347787,
+   "drift_std": 0.023895373956248765,
+   "corr_drift_with_real": 0.03715896218135981,
+   "future_only": {
+    "mean_error": {
+     "bias": -0.13265174829944337,
+     "scatter_std": 0.5721415670445462,
+     "rmse": 0.5873180220860652,
+     "bias_share_of_mse": 0.05101281638244639
+    },
+    "frac_error_pp": {
+     "bias": -4.729718145659032,
+     "scatter_std": 16.119690072388828,
+     "rmse": 16.799245273739153,
+     "bias_share_of_mse": 0.07926673682588681
+    }
+   }
+  },
+  "idea12_elastic_focused": {
+   "mean_statistic": 4.962020460933883,
+   "frac_below": 0.00472805132659748,
+   "mean_error": {
+    "bias": -0.10701363760837247,
+    "scatter_std": 0.4578264107392272,
+    "rmse": 0.4701669288715867,
+    "bias_share_of_mse": 0.051805288638011565
+   },
+   "frac_error_pp": {
+    "bias": -3.772154406498118,
+    "scatter_std": 12.947369544695336,
+    "rmse": 13.485678588538562,
+    "bias_share_of_mse": 0.07824080562883896
+   },
+   "corr_mean_with_real": 0.8440262697043105,
+   "corr_frac_with_real": 0.26558067479459674,
+   "drift_mean": 0.001670553826563088,
+   "drift_std": 0.0203032434301946,
+   "corr_drift_with_real": 0.03069048382413456,
+   "future_only": {
+    "mean_error": {
+     "bias": -0.13395266386522806,
+     "scatter_std": 0.5722677961060507,
+     "rmse": 0.5877361198843126,
+     "bias_share_of_mse": 0.05194430576727274
+    },
+    "frac_error_pp": {
+     "bias": -4.774293649705116,
+     "scatter_std": 16.185849076993254,
+     "rmse": 16.875295262507795,
+     "bias_share_of_mse": 0.0800415507447846
+    }
+   }
+  },
+  "idea13_local_fluctuation": {
+   "mean_statistic": 4.969399579788247,
+   "frac_below": 0.020243755619561408,
+   "mean_error": {
+    "bias": -0.09963451875400829,
+    "scatter_std": 0.46086586343285796,
+    "rmse": 0.47151286451703145,
+    "bias_share_of_mse": 0.04465114111464274
+   },
+   "frac_error_pp": {
+    "bias": -2.220583977201725,
+    "scatter_std": 11.473550506785314,
+    "rmse": 11.686460303768571,
+    "bias_share_of_mse": 0.03610508960791552
+   },
+   "corr_mean_with_real": 0.8417441712296247,
+   "corr_frac_with_real": 0.5202236211665404,
+   "drift_mean": 0.009972062537722783,
+   "drift_std": 0.05444015321091913,
+   "corr_drift_with_real": -0.00606676588081716,
+   "future_only": {
+    "mean_error": {
+     "bias": -0.12565115515406838,
+     "scatter_std": 0.5754421187051465,
+     "rmse": 0.5890007171230097,
+     "bias_share_of_mse": 0.045509422452063575
+    },
+    "frac_error_pp": {
+     "bias": -3.028776916746674,
+     "scatter_std": 14.344406918675066,
+     "rmse": 14.660678683469964,
+     "bias_share_of_mse": 0.042680197707995665
+    }
+   }
+  },
+  "idea14_elastic_plus_fast": {
+   "mean_statistic": 4.972879197168439,
+   "frac_below": 0.023127828830064465,
+   "mean_error": {
+    "bias": -0.09615490137381677,
+    "scatter_std": 0.4594860517500535,
+    "rmse": 0.46943923654831127,
+    "bias_share_of_mse": 0.04195503442342563
+   },
+   "frac_error_pp": {
+    "bias": -1.9321766561514195,
+    "scatter_std": 11.385480763877876,
+    "rmse": 11.54826735294995,
+    "bias_share_of_mse": 0.027993680551106858
+   },
+   "corr_mean_with_real": 0.8427794874291504,
+   "corr_frac_with_real": 0.532865485804486,
+   "drift_mean": 0.013886632090438264,
+   "drift_std": 0.06229166032727489,
+   "corr_drift_with_real": 0.034011762711608336,
+   "future_only": {
+    "mean_error": {
+     "bias": -0.12173658560135289,
+     "scatter_std": 0.573799600911449,
+     "rmse": 0.5865712047825171,
+     "bias_share_of_mse": 0.04307256696077055
+    },
+    "frac_error_pp": {
+     "bias": -2.70431868056508,
+     "scatter_std": 14.204728221412678,
+     "rmse": 14.459863186429219,
+     "bias_share_of_mse": 0.03497738751162279
+    }
+   }
+  },
+  "idea08_rotamer_all_pairs": {
+   "mean_statistic": 5.064762381839002,
+   "frac_below": 0.002840471340448481,
+   "mean_error": {
+    "bias": -0.004271716703252475,
+    "scatter_std": 0.48920845460744256,
+    "rmse": 0.48922710434213995,
+    "bias_share_of_mse": 7.624017173329339e-05
+   },
+   "frac_error_pp": {
+    "bias": -3.960912405113018,
+    "scatter_std": 13.265229327242656,
+    "rmse": 13.843956666550095,
+    "bias_share_of_mse": 0.08185967458658773
+   },
+   "corr_mean_with_real": 0.8241624569148458,
+   "corr_frac_with_real": 0.19268299764431726,
+   "drift_mean": 0.11725521484482308,
+   "drift_std": 0.3728429700348532,
+   "corr_drift_with_real": 0.2644929677933123,
+   "future_only": {
+    "mean_error": {
+     "bias": -0.018368002846968077,
+     "scatter_std": 0.594881554219366,
+     "rmse": 0.5951650586845928,
+     "bias_share_of_mse": 0.0009524649943371427
+    },
+    "frac_error_pp": {
+     "bias": -4.9866463981468785,
+     "scatter_std": 16.597327101111272,
+     "rmse": 17.330259928847976,
+     "bias_share_of_mse": 0.0827955497401875
+    }
+   }
+  },
+  "idea08_rotamer_pairs_with_path": {
+   "frac_of_all_pairs": 0.4608421341379783,
+   "mean_statistic": 5.2763467859641615,
+   "frac_below": 0.006163653733098177,
+   "mean_error": {
+    "bias": 0.026076250969105638,
+    "scatter_std": 0.6643798415998726,
+    "rmse": 0.6648913781881035,
+    "bias_share_of_mse": 0.0015381153335497185
+   },
+   "frac_error_pp": {
+    "bias": -3.0086346266901827,
+    "scatter_std": 11.791129552073407,
+    "rmse": 12.168920183430329,
+    "bias_share_of_mse": 0.061127243783546496
+   },
+   "corr_mean_with_real": 0.6633349933742316,
+   "corr_frac_with_real": 0.3465538437516739,
+   "drift_mean": 0.254436836736192,
+   "drift_std": 0.516472117167525,
+   "corr_drift_with_real": 0.23993397266578487,
+   "future_only": {
+    "mean_error": {
+     "bias": 0.004324552229121719,
+     "scatter_std": 0.8049043202885935,
+     "rmse": 0.8049159375805807,
+     "bias_share_of_mse": 2.886564325277082e-05
+    },
+    "frac_error_pp": {
+     "bias": -3.837838955026455,
+     "scatter_std": 14.783524549443143,
+     "rmse": 15.273559046558423,
+     "bias_share_of_mse": 0.06313831639155093
+    }
+   }
+  }
+ },
+ "reading_rule": "If the error is mostly scatter, the generator fails to capture per-pair differences. If it is mostly bias, the generator output is shifted as a whole."
+}
