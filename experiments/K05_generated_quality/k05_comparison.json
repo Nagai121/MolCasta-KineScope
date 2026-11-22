@@ -1,0 +1,86 @@
+{
+ "n_pairs": 14582,
+ "generated_5pt": {
+  "n_pairs": 14582,
+  "n_frames": 5,
+  "dist_mean": 4.923584095739465,
+  "dist_std": 0.7378033153891421,
+  "dist_q10_q50_q90": [
+   3.7750709533691404,
+   5.024541616439819,
+   5.8181235790252686
+  ],
+  "per_pair_std_mean": 0.059980177251666635,
+  "per_pair_range_mean": 0.16837404238934087,
+  "lag1_autocorr_mean": 0.07156916601534757,
+  "lag1_autocorr_median": 0.10452223382053766,
+  "increment_std": 0.07572777011483708,
+  "increment_abs_mean": 0.05160293429415505,
+  "frac_frames_below": 0.03061308462487999,
+  "frac_pairs_ever_below": 0.04574132492113565,
+  "crossings_per_pair_mean": 0.054176381840625426,
+  "frac_pairs_with_crossing": 0.04574132492113565,
+  "dwell_below_frames_mean": 3.314842578710645
+ },
+ "elastic_only_5pt": {
+  "n_pairs": 14582,
+  "n_frames": 5,
+  "dist_mean": 4.961187503629221,
+  "dist_std": 0.7174538168550912,
+  "dist_q10_q50_q90": [
+   3.828349232673645,
+   5.053040266036987,
+   5.854674911499023
+  ],
+  "per_pair_std_mean": 0.01278369249092226,
+  "per_pair_range_mean": 0.03397204656526395,
+  "lag1_autocorr_mean": 0.2828820386514585,
+  "lag1_autocorr_median": 0.34591486426024914,
+  "increment_std": 0.0182087227434531,
+  "increment_abs_mean": 0.009820894443061744,
+  "frac_frames_below": 0.002386503908928816,
+  "frac_pairs_ever_below": 0.005760526676724729,
+  "crossings_per_pair_mean": 0.006583459059113976,
+  "frac_pairs_with_crossing": 0.005760526676724729,
+  "dwell_below_frames_mean": 2.0714285714285716
+ },
+ "real_5pt": {
+  "n_pairs": 14582,
+  "n_frames": 5,
+  "dist_mean": 5.069034098542255,
+  "dist_std": 0.9700216549032376,
+  "dist_q10_q50_q90": [
+   3.7606399297714237,
+   5.086220026016235,
+   6.104499435424805
+  ],
+  "per_pair_std_mean": 0.33155920796557964,
+  "per_pair_range_mean": 0.9081865775864763,
+  "lag1_autocorr_mean": -0.1724021397140972,
+  "lag1_autocorr_median": -0.1706078450295221,
+  "increment_std": 0.6591598526374975,
+  "increment_abs_mean": 0.41535825570200946,
+  "frac_frames_below": 0.04244959539157866,
+  "frac_pairs_ever_below": 0.1161706213139487,
+  "crossings_per_pair_mean": 0.22363187491427788,
+  "frac_pairs_with_crossing": 0.1161706213139487,
+  "dwell_below_frames_mean": 1.593565525383707
+ },
+ "final_distance_1ns": {
+  "gen": {
+   "mean": 4.921467304229736,
+   "std": 0.7531095147132874,
+   "frac_formed_le3.5": 0.03963790975174873
+  },
+  "coarse": {
+   "mean": 4.962246894836426,
+   "std": 0.7186500430107117,
+   "frac_formed_le3.5": 0.004937594294335482
+  },
+  "real": {
+   "mean": 5.132475852966309,
+   "std": 1.08676278591156,
+   "frac_formed_le3.5": 0.053422027156768616
+  }
+ }
+}
