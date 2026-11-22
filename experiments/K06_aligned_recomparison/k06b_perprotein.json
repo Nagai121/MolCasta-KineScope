@@ -1,0 +1,104 @@
+{
+ "1": {
+  "history": {
+   "better_proteins": 95,
+   "worse_proteins": 5,
+   "mean_gain_vs_static": 0.07121551322966231
+  },
+  "gen8": {
+   "better_proteins": 40,
+   "worse_proteins": 60,
+   "mean_gain_vs_static": -0.0058628020777107045
+  },
+  "gen6": {
+   "better_proteins": 45,
+   "worse_proteins": 55,
+   "mean_gain_vs_static": -0.005795624271411873
+  }
+ },
+ "5": {
+  "history": {
+   "better_proteins": 93,
+   "worse_proteins": 7,
+   "mean_gain_vs_static": 0.05181636244871559
+  },
+  "gen8": {
+   "better_proteins": 35,
+   "worse_proteins": 65,
+   "mean_gain_vs_static": -0.005042541701608232
+  },
+  "gen6": {
+   "better_proteins": 38,
+   "worse_proteins": 62,
+   "mean_gain_vs_static": -0.0054960825117020004
+  }
+ },
+ "10": {
+  "history": {
+   "better_proteins": 94,
+   "worse_proteins": 6,
+   "mean_gain_vs_static": 0.03883133194385014
+  },
+  "gen8": {
+   "better_proteins": 52,
+   "worse_proteins": 48,
+   "mean_gain_vs_static": 0.0013719688374433637
+  },
+  "gen6": {
+   "better_proteins": 48,
+   "worse_proteins": 52,
+   "mean_gain_vs_static": 0.0004061516214838873
+  }
+ },
+ "30": {
+  "history": {
+   "better_proteins": 85,
+   "worse_proteins": 15,
+   "mean_gain_vs_static": 0.03703680359859163
+  },
+  "gen8": {
+   "better_proteins": 55,
+   "worse_proteins": 45,
+   "mean_gain_vs_static": 0.0011572329846653421
+  },
+  "gen6": {
+   "better_proteins": 54,
+   "worse_proteins": 46,
+   "mean_gain_vs_static": 5.2208225531860384e-05
+  }
+ },
+ "50": {
+  "history": {
+   "better_proteins": 90,
+   "worse_proteins": 10,
+   "mean_gain_vs_static": 0.03441047011127244
+  },
+  "gen8": {
+   "better_proteins": 44,
+   "worse_proteins": 56,
+   "mean_gain_vs_static": -0.0017584796970179929
+  },
+  "gen6": {
+   "better_proteins": 43,
+   "worse_proteins": 57,
+   "mean_gain_vs_static": -0.0024322053544402512
+  }
+ },
+ "90": {
+  "history": {
+   "better_proteins": 78,
+   "worse_proteins": 22,
+   "mean_gain_vs_static": 0.027261911060560272
+  },
+  "gen8": {
+   "better_proteins": 44,
+   "worse_proteins": 56,
+   "mean_gain_vs_static": -0.0018258402798092285
+  },
+  "gen6": {
+   "better_proteins": 45,
+   "worse_proteins": 55,
+   "mean_gain_vs_static": -0.0012770574590781443
+  }
+ }
+}
