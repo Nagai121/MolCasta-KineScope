@@ -1,0 +1,29 @@
+contact train n: 15926 test n: 7384
+max |X[:,0] - hist[:,-1]| train 4.768170231983504e-07
+max |X[:,0] - hist[:,-1]| test 4.767291397200779e-07
+mean11 - mean10: test std 0.0406 mean 0.0
+1 ns: static 0.3398 full 0.5669 gain 0.2271 (ref 0.2271)
+  1 ns mean10 (prefix_mean_1.0ns): auprc 0.5476 recovery 0.915
+  1 ns mean11 (mean_only_full): auprc 0.5008 recovery 0.709
+5 ns: static 0.2870 full 0.5192 gain 0.2322 (ref 0.2322)
+  5 ns mean10 (prefix_mean_1.0ns): auprc 0.4691 recovery 0.784
+  5 ns mean11 (mean_only_full): auprc 0.4479 recovery 0.693
+10 ns: static 0.3204 full 0.5234 gain 0.2030 (ref 0.203)
+  10 ns mean10 (prefix_mean_1.0ns): auprc 0.4506 recovery 0.641
+  10 ns mean11 (mean_only_full): auprc 0.4516 recovery 0.647
+30 ns: static 0.2868 full 0.4386 gain 0.1518 (ref 0.1518)
+  30 ns mean10 (prefix_mean_1.0ns): auprc 0.4505 recovery 1.079
+  30 ns mean11 (mean_only_full): auprc 0.4372 recovery 0.990
+50 ns: static 0.2604 full 0.4638 gain 0.2034 (ref 0.2034)
+  50 ns mean10 (prefix_mean_1.0ns): auprc 0.4125 recovery 0.748
+  50 ns mean11 (mean_only_full): auprc 0.3935 recovery 0.655
+90 ns: static 0.2872 full 0.4722 gain 0.1850 (ref 0.185)
+  90 ns mean10 (prefix_mean_1.0ns): auprc 0.4237 recovery 0.738
+  90 ns mean11 (mean_only_full): auprc 0.4066 recovery 0.645
+1 ns: recovery diff -0.206 auprc diff -0.0467
+5 ns: recovery diff -0.091 auprc diff -0.0212
+10 ns: recovery diff +0.005 auprc diff +0.0011
+30 ns: recovery diff -0.088 auprc diff -0.0134
+50 ns: recovery diff -0.093 auprc diff -0.0190
+90 ns: recovery diff -0.092 auprc diff -0.0171
+saved /home/hatch/workspace/kinescope/repo/experiments/G149_contact_formation_origin_frame_mean/results.json /home/hatch/workspace/kinescope/repo/experiments/G149_contact_formation_origin_frame_mean/results.csv
