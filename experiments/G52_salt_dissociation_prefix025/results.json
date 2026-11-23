@@ -1,0 +1,177 @@
+{
+  "cuts": {
+    "0.1ns": {
+      "label": "0.1 ns",
+      "frames": [
+        0,
+        1
+      ],
+      "covered_length": "0.1 ns"
+    },
+    "0.25ns": {
+      "label": "0.25 ns",
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "covered_length": "0.2 ns"
+    },
+    "0.5ns": {
+      "label": "0.5 ns",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "covered_length": "0.5 ns"
+    }
+  },
+  "hist6_definition": "[first, mean, std, min, last-first, frac<=4.0] computed on the prefix frames",
+  "residual_spread_vs_full_mean": {
+    "0.1ns": {
+      "cut_label": "0.1 ns",
+      "frames": [
+        0,
+        1
+      ],
+      "covered_length": "0.1 ns",
+      "train_n": 735,
+      "test_n": 360,
+      "train_residual_std": 1.0648989397144437,
+      "test_residual_std": 1.1502041641380818,
+      "train_residual_mean": 0.4414765685257644,
+      "test_residual_mean": 0.31878274531834044
+    },
+    "0.25ns": {
+      "cut_label": "0.25 ns",
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "covered_length": "0.2 ns",
+      "train_n": 735,
+      "test_n": 360,
+      "train_residual_std": 0.9207577613397284,
+      "test_residual_std": 0.9337539579678831,
+      "train_residual_mean": 0.3994001936536822,
+      "test_residual_mean": 0.27855391922470635
+    },
+    "0.5ns": {
+      "cut_label": "0.5 ns",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "covered_length": "0.5 ns",
+      "train_n": 735,
+      "test_n": 360,
+      "train_residual_std": 0.5408023267296694,
+      "test_residual_std": 0.5308579717262297,
+      "train_residual_mean": 0.24977269939962826,
+      "test_residual_mean": 0.22028166315323386
+    }
+  },
+  "references": {
+    "real_history_gain_1ns": 0.1788,
+    "static_only_auprc_1ns": 0.3734,
+    "full_hist6_auprc_1ns": 0.5522,
+    "prefix_mean_0.1ns_recovery": 0.693,
+    "prefix_hist6_0.1ns_recovery": 0.566,
+    "prefix_mean_0.5ns_recovery": 0.951,
+    "prefix_hist6_0.5ns_recovery": 0.985
+  },
+  "metrics_1ns": {
+    "static_only": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.3734017091925338,
+      "auc": 0.5771436216980772,
+      "brier": 0.23092684898851487,
+      "logloss": 0.7508938990509689
+    },
+    "full_hist6": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.5522159031068683,
+      "auc": 0.7858480828777858,
+      "brier": 0.18351876146562257,
+      "logloss": 0.6452561538668448
+    },
+    "mean_only_full": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.5381718889613397,
+      "auc": 0.7935700905997936,
+      "brier": 0.17106012856942468,
+      "logloss": 0.5734040578657502
+    },
+    "prefix_mean_0.1ns": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.4972758795285614,
+      "auc": 0.7119155931037119,
+      "brier": 0.1919326128670417,
+      "logloss": 0.6713715072961352
+    },
+    "prefix_hist6_0.1ns": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.4745220155367939,
+      "auc": 0.6918077908176917,
+      "brier": 0.204175449580473,
+      "logloss": 0.7460869981950353
+    },
+    "prefix_mean_0.25ns": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.5013898758774854,
+      "auc": 0.7203639282847205,
+      "brier": 0.1882988957224708,
+      "logloss": 0.6547078339963959
+    },
+    "prefix_hist6_0.25ns": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.48993151232814675,
+      "auc": 0.7305325127107305,
+      "brier": 0.19298465237318668,
+      "logloss": 0.6847323378500744
+    },
+    "prefix_mean_0.5ns": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.543428606335997,
+      "auc": 0.777973164111778,
+      "brier": 0.1716070854730756,
+      "logloss": 0.5865380750967801
+    },
+    "prefix_hist6_0.5ns": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.5494670801218444,
+      "auc": 0.7616499101647617,
+      "brier": 0.18279686032323256,
+      "logloss": 0.6589393567328048
+    }
+  },
+  "base_gain_1ns": 0.1788141939143345,
+  "recovery_vs_real_history_gain": {
+    "full_hist6": 1.0,
+    "mean_only_full": 0.9214602944089734,
+    "prefix_mean_0.1ns": 0.6927535651636955,
+    "prefix_hist6_0.1ns": 0.5655049195518806,
+    "prefix_mean_0.25ns": 0.7157606668868111,
+    "prefix_hist6_0.25ns": 0.6516809464881715,
+    "prefix_mean_0.5ns": 0.9508579460136085,
+    "prefix_hist6_0.5ns": 0.9846274899947777
+  }
+}
