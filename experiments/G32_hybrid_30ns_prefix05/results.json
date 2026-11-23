@@ -1,0 +1,65 @@
+{
+  "label": "HB formation 90ns",
+  "horizon_ns": 90,
+  "train_n": 9610,
+  "test_n": 4972,
+  "test_positives": 345,
+  "relations": {
+    "corr_prefix_gen_train": 0.7649817069423092,
+    "corr_prefix_gen_test": 0.7804122181121247,
+    "gen_minus_prefix_mean_test": -0.15653847460734865,
+    "gen_minus_prefix_std_test": 0.6029062906515584,
+    "gen_minus_full_mean_test": -0.1293658024971393,
+    "gen_minus_full_std_test": 0.4741496172147445,
+    "corr_gen_full_test": 0.8444994421918979,
+    "corr_prefix_full_test": 0.9829484191225331
+  },
+  "static_only": {
+    "n": 4972,
+    "positives": 345,
+    "auprc": 0.3638886114495804,
+    "auc": 0.861673291299023,
+    "brier": 0.05282158864226674,
+    "logloss": 0.19074033188587747
+  },
+  "full_hist": {
+    "n": 4972,
+    "positives": 345,
+    "auprc": 0.42644656209548093,
+    "auc": 0.904971136649095,
+    "brier": 0.04873598576331413,
+    "logloss": 0.16856699000074848
+  },
+  "prefix_mean_0.5ns": {
+    "n": 4972,
+    "positives": 345,
+    "auprc": 0.4350640691995785,
+    "auc": 0.8969088181217366,
+    "brier": 0.04844231117790136,
+    "logloss": 0.17068784861138644,
+    "gain": 0.07117545774999812,
+    "recovery": 1.1377523882276073
+  },
+  "gen_mean_only": {
+    "n": 4972,
+    "positives": 345,
+    "auprc": 0.38226957831204733,
+    "auc": 0.8749823812969245,
+    "brier": 0.05144903322346028,
+    "logloss": 0.1839500774464364,
+    "gain": 0.01838096686246693,
+    "recovery": 0.29382303404581633
+  },
+  "mixed": {
+    "n": 4972,
+    "positives": 345,
+    "auprc": 0.46480145591001076,
+    "auc": 0.8955782536654734,
+    "brier": 0.04759786608276549,
+    "logloss": 0.16963425113811825,
+    "gain": 0.10091284446043036,
+    "recovery": 1.613109819271921
+  },
+  "full_gain": 0.06255795064590053,
+  "mixed_minus_prefix": 0.4753574310443138
+}
