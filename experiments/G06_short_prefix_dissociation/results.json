@@ -1,0 +1,232 @@
+{
+  "references": {
+    "hb_dissociation_real_history_gain_1ns": 0.1785,
+    "contact_dissociation_real_history_gain_1ns": 0.2142,
+    "g02_formation_recovery_prefix_mean": {
+      "0.1ns": 0.57,
+      "0.5ns": 0.77
+    }
+  },
+  "phenomena": {
+    "hb_dissociation": {
+      "cuts": {
+        "0.1ns": [
+          0,
+          1
+        ],
+        "0.5ns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "residual_spread_vs_full_mean": {
+        "0.1ns": {
+          "frames": [
+            0,
+            1
+          ],
+          "train_residual_std": 0.2903097383376791,
+          "test_residual_std": 0.2965415965679778,
+          "train_residual_mean": 0.036780807247257644,
+          "test_residual_mean": 0.029928670096381945
+        },
+        "0.5ns": {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "train_residual_std": 0.14310625682824912,
+          "test_residual_std": 0.16287342637055077,
+          "train_residual_mean": 0.02304864286708471,
+          "test_residual_mean": 0.025694633662422972
+        }
+      },
+      "metrics_1ns": {
+        "static_only": {
+          "n": 2080,
+          "positives": 311,
+          "auprc": 0.4159748410317585,
+          "auc": 0.8605957550453596,
+          "brier": 0.10247187414426535,
+          "logloss": 0.30583884097152664
+        },
+        "full_hist6": {
+          "n": 2080,
+          "positives": 311,
+          "auprc": 0.5945102167465611,
+          "auc": 0.90823016618832,
+          "brier": 0.08622829696308401,
+          "logloss": 0.2674670805912608
+        },
+        "mean_only_full": {
+          "n": 2080,
+          "positives": 311,
+          "auprc": 0.5690843076905324,
+          "auc": 0.9004215145076242,
+          "brier": 0.08900832455131964,
+          "logloss": 0.2710455923310473
+        },
+        "prefix_mean_0.1ns": {
+          "n": 2080,
+          "positives": 311,
+          "auprc": 0.5109213620895379,
+          "auc": 0.8787423272181315,
+          "brier": 0.09685907462252281,
+          "logloss": 0.2946401896731499
+        },
+        "prefix_hist6_0.1ns": {
+          "n": 2080,
+          "positives": 311,
+          "auprc": 0.5212662212830919,
+          "auc": 0.8860829323886367,
+          "brier": 0.09551553909655928,
+          "logloss": 0.29172012098516686
+        },
+        "prefix_mean_0.5ns": {
+          "n": 2080,
+          "positives": 311,
+          "auprc": 0.5210725356355531,
+          "auc": 0.889483767419964,
+          "brier": 0.09428303435423754,
+          "logloss": 0.28652312568145355
+        },
+        "prefix_hist6_0.5ns": {
+          "n": 2080,
+          "positives": 311,
+          "auprc": 0.5538555000427848,
+          "auc": 0.8984911634636531,
+          "brier": 0.0910946317113283,
+          "logloss": 0.2767545843920163
+        }
+      },
+      "base_gain_1ns": 0.1785353757148026,
+      "reference_gain_1ns": 0.1785,
+      "recovery_vs_real_history_gain": {
+        "full_hist6": 1.0,
+        "mean_only_full": 0.8575861565013044,
+        "prefix_mean_0.1ns": 0.5318078878073417,
+        "prefix_hist6_0.1ns": 0.5897507977328187,
+        "prefix_mean_0.5ns": 0.5886659390779818,
+        "prefix_hist6_0.5ns": 0.7722876122392726
+      }
+    },
+    "contact_dissociation": {
+      "cuts": {
+        "0.1ns": [
+          0,
+          1
+        ],
+        "0.5ns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "residual_spread_vs_full_mean": {
+        "0.1ns": {
+          "frames": [
+            0,
+            1
+          ],
+          "train_residual_std": 0.2520091046339369,
+          "test_residual_std": 0.24895566134475525,
+          "train_residual_mean": -0.0024967435410570508,
+          "test_residual_mean": 0.01125274868222732
+        },
+        "0.5ns": {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "train_residual_std": 0.11532564169764858,
+          "test_residual_std": 0.10574140672519604,
+          "train_residual_mean": 0.010695394401682743,
+          "test_residual_mean": 0.011155395313207318
+        }
+      },
+      "metrics_1ns": {
+        "static_only": {
+          "n": 2915,
+          "positives": 207,
+          "auprc": 0.3104787071230086,
+          "auc": 0.8666582821341667,
+          "brier": 0.05738202115240858,
+          "logloss": 0.1949411702114656
+        },
+        "full_hist6": {
+          "n": 2915,
+          "positives": 207,
+          "auprc": 0.5246376068451989,
+          "auc": 0.9232636881952919,
+          "brier": 0.046170462298291144,
+          "logloss": 0.15945559570654186
+        },
+        "mean_only_full": {
+          "n": 2915,
+          "positives": 207,
+          "auprc": 0.5035794140182117,
+          "auc": 0.9123406046853481,
+          "brier": 0.04727773815531048,
+          "logloss": 0.16487839324811493
+        },
+        "prefix_mean_0.1ns": {
+          "n": 2915,
+          "positives": 207,
+          "auprc": 0.5072502060180422,
+          "auc": 0.9078584476840852,
+          "brier": 0.047115397160659434,
+          "logloss": 0.16383148529665362
+        },
+        "prefix_hist6_0.1ns": {
+          "n": 2915,
+          "positives": 207,
+          "auprc": 0.46040400434256734,
+          "auc": 0.9058060211647007,
+          "brier": 0.04907704295789183,
+          "logloss": 0.16944515384681985
+        },
+        "prefix_mean_0.5ns": {
+          "n": 2915,
+          "positives": 207,
+          "auprc": 0.5128239880453418,
+          "auc": 0.9095362461556026,
+          "brier": 0.04667309606555635,
+          "logloss": 0.1637414731306342
+        },
+        "prefix_hist6_0.5ns": {
+          "n": 2915,
+          "positives": 207,
+          "auprc": 0.47064045593798814,
+          "auc": 0.9148809396385018,
+          "brier": 0.04783415502984118,
+          "logloss": 0.16585148720317533
+        }
+      },
+      "base_gain_1ns": 0.21415889972219027,
+      "reference_gain_1ns": 0.2142,
+      "recovery_vs_real_history_gain": {
+        "full_hist6": 1.0,
+        "mean_only_full": 0.9016702417956753,
+        "prefix_mean_0.1ns": 0.9188107482354836,
+        "prefix_hist6_0.1ns": 0.7000656868056558,
+        "prefix_mean_0.5ns": 0.9448371334780769,
+        "prefix_hist6_0.5ns": 0.7478640814028436
+      }
+    }
+  }
+}
