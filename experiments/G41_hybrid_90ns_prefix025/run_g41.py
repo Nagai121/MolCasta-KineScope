@@ -1,0 +1,176 @@
+"""G41: 0.25 ns の切り取りに生成した平均を足すと、90 ns 先でどうなるか
+(Doc D, hydrogen-bond formation, 90 ns)
+
+G14 found at 90 ns that mixing the 0.1 ns prefix mean with the
+proposal-22 generated mean adds only +0.015, while G30 found that
+mixing at the 0.5 ns prefix adds +0.098. This experiment measures
+the in-between 0.25 ns prefix at 90 ns.
+
+Conditions (90 ns, all retrained per condition):
+  - static_only: 7 static features only
+  - full_hist: static + real history 6 statistics (0-1 ns, 11 frames; reference)
+  - prefix_mean_0.25ns: static + prefix mean only (frames [0〜2]; G10)
+  - gen_mean_only: static + generated mean only (proposal 22, K05 gen5 mean)
+  - mixed: static + prefix mean + generated mean (2 columns)
+
+Recovery = (condition AUPRC - static-only AUPRC) / (real-history
+gain +0.1211). Model: HistGradientBoosting (max_iter=120, lr .075,
+max_leaf_nodes 31, min_samples_leaf 15, L2 .02, seed 42).
+
+Pre-fixed reading: if the mixed recovery is +0.05 or more above the
+prefix-mean-only recovery, mixing also helps at 90 ns with the
+0.25 ns prefix. If below +0.05, mixing does not help at 90 ns with
+the 0.25 ns prefix.
+
+Generated mean source: K05's generated_series.npz (proposal-22
+5-point series). The 5 points are [origin distance d0 (frame 10),
++0.1, +0.3, +0.5, +1.0 ns] forward from the origin. Alignment key is
+(tid, donor atom, acceptor atom), matching all 14,582 weak-base
+candidates 100% (same as G11/K09). The generator checkpoint .pt file
+is not loaded. Note (same caveat as G11/K09): the generated series
+runs forward from the origin while the real history runs backward to
+the origin; they share d0 but run in opposite time directions. The
+mean does not depend on direction, so this does not affect the mean
+column used here.
+"""
+import json
+import numpy as np
+from pathlib import Path
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.metrics import roc_auc_score, average_precision_score, brier_score_loss, log_loss
+
+CACHE = Path("/home/hatch/workspace/kinescope/work/data_cache")
+GEN = Path("/home/hatch/workspace/kinescope/repo/experiments/K05_generated_quality/generated_series.npz")
+OUT = Path("/home/hatch/workspace/g41")
+TRAIN_P = ("1bgf_A", "1ifg_A", "1j8r_A", "2b0a_A")
+TEST_P = ("1mix_A", "2qt4_A")
+HORIZON_IDX = 5  # 90 ns先
+PREFIX_FRAMES = [0, 1, 2]  # 0.25 ns の切り取り（G10 と同じ）
+
+
+def load_gen5():
+    z = np.load(GEN)
+    tids, pair, gen = z["tid"], z["pair"], z["gen"]
+    gen5 = np.column_stack([pair[:, 2].astype(np.float64), gen.astype(np.float64)])
+    assert gen5.shape == (14582, 5), gen5.shape
+    return {(str(t), int(pair[i, 0]), int(pair[i, 1])): gen5[i]
+            for i, t in enumerate(tids)}
+
+
+GEN5 = load_gen5()
+
+
+def load(prots):
+    parts = []
+    for p in prots:
+        for r in (1, 2, 3):
+            z = np.load(CACHE / f"{p}_R{r}.npz")
+            d = {k: z[k] for k in z.files}
+            tid = f"atlas-{p}-analysis-R{r}"
+            g = np.stack([GEN5[(tid, int(da), int(aa))]
+                          for da, aa in zip(d["donor_atom"], d["acceptor_atom"])])
+            d["gen5"] = g
+            parts.append(d)
+    return parts
+
+
+def cat(parts, key):
+    arrs = [p[key].T if key.startswith("hist") else p[key] for p in parts]
+    return np.concatenate(arrs)
+
+
+def hist6(series, bound=3.5):
+    return np.stack(
+        [series[:, 0], series.mean(1), series.std(1), series.min(1),
+         series[:, -1] - series[:, 0], (series <= bound).mean(1)],
+        axis=1).astype(np.float32)
+
+
+def predict(xtr, ytr, xte):
+    if np.unique(ytr).size < 2:
+        return np.full(len(xte), float(ytr.mean()))
+    m = HistGradientBoostingClassifier(
+        max_iter=120, learning_rate=.075, max_leaf_nodes=31,
+        min_samples_leaf=15, l2_regularization=.02, random_state=42)
+    m.fit(xtr, ytr)
+    return m.predict_proba(xte)[:, 1]
+
+
+def metrics(y, p):
+    p = np.clip(p, 1e-8, 1 - 1e-8)
+    return dict(n=int(len(y)), positives=int(y.sum()),
+                auprc=float(average_precision_score(y, p)),
+                auc=float(roc_auc_score(y, p)),
+                brier=float(brier_score_loss(y, p)),
+                logloss=float(log_loss(y, p, labels=[0, 1])))
+
+
+train = load(TRAIN_P)
+test = load(TEST_P)
+Xtr, Xte = cat(train, "X"), cat(test, "X")
+Htr, Hte = cat(train, "hist"), cat(test, "hist")
+Gtr, Gte = cat(train, "gen5"), cat(test, "gen5")
+Ytr, Yte = cat(train, "y"), cat(test, "y")
+ytr, yte = Ytr[:, HORIZON_IDX], Yte[:, HORIZON_IDX]
+print("train", Xtr.shape, "test", Xte.shape, "test pos 90ns", int(yte.sum()), flush=True)
+
+# alignment check (same as G11): gen5[0] vs origin distance (last history frame)
+print("alignment max |gen5[0] - hist[:,-1]| train",
+      float(np.abs(Gtr[:, 0] - Htr[:, -1]).max()),
+      "test", float(np.abs(Gte[:, 0] - Hte[:, -1]).max()), flush=True)
+
+prefix_tr = Htr[:, PREFIX_FRAMES].mean(1)
+prefix_te = Hte[:, PREFIX_FRAMES].mean(1)
+gen_mean_tr = Gtr.mean(1)
+gen_mean_te = Gte.mean(1)
+full_mean_tr, full_mean_te = Htr.mean(1), Hte.mean(1)
+
+relations = {
+    "corr_prefix_gen_train": float(np.corrcoef(prefix_tr, gen_mean_tr)[0, 1]),
+    "corr_prefix_gen_test": float(np.corrcoef(prefix_te, gen_mean_te)[0, 1]),
+    "gen_minus_prefix_mean_test": float(np.mean(gen_mean_te - prefix_te)),
+    "gen_minus_prefix_std_test": float(np.std(gen_mean_te - prefix_te)),
+    "gen_minus_full_mean_test": float(np.mean(gen_mean_te - full_mean_te)),
+    "gen_minus_full_std_test": float(np.std(gen_mean_te - full_mean_te)),
+    "corr_gen_full_test": float(np.corrcoef(gen_mean_te, full_mean_te)[0, 1]),
+    "corr_prefix_full_test": float(np.corrcoef(prefix_te, full_mean_te)[0, 1]),
+}
+print("relations (test):", json.dumps(relations, indent=1), flush=True)
+
+conds = {
+    "static_only": (Xtr, Xte),
+    "full_hist": (np.column_stack([Xtr, hist6(Htr)]), np.column_stack([Xte, hist6(Hte)])),
+    "prefix_mean_0.25ns": (np.column_stack([Xtr, prefix_tr[:, None].astype(np.float32)]),
+                          np.column_stack([Xte, prefix_te[:, None].astype(np.float32)])),
+    "gen_mean_only": (np.column_stack([Xtr, gen_mean_tr[:, None].astype(np.float32)]),
+                      np.column_stack([Xte, gen_mean_te[:, None].astype(np.float32)])),
+    "mixed": (np.column_stack([Xtr, prefix_tr[:, None].astype(np.float32),
+                               gen_mean_tr[:, None].astype(np.float32)]),
+              np.column_stack([Xte, prefix_te[:, None].astype(np.float32),
+                               gen_mean_te[:, None].astype(np.float32)])),
+}
+results = {"label": "HB formation 90ns", "horizon_ns": 90,
+           "train_n": int(len(ytr)), "test_n": int(len(yte)),
+           "test_positives": int(yte.sum()), "relations": relations}
+for name, (xtr, xte) in conds.items():
+    p = predict(xtr, ytr, xte)
+    results[name] = metrics(yte, p)
+    print(f"{name}: AUPRC {results[name]['auprc']:.4f} AUC {results[name]['auc']:.4f}", flush=True)
+
+s = results["static_only"]["auprc"]
+f = results["full_hist"]["auprc"]
+results["full_gain"] = f - s
+print(f"verify static_only diff {abs(s - 0.3035):.6f}, full_hist diff {abs(f - 0.4246):.6f}", flush=True)
+# G10 の 0.25 ns 切り取り平均だけの再現の確認 (AUPRC 0.4034, 回復率 0.825)
+assert abs(results["prefix_mean_0.25ns"]["auprc"] - 0.4034) < 5e-4, results["prefix_mean_0.25ns"]
+for name in conds:
+    if name in ("static_only", "full_hist"):
+        continue
+    results[name]["gain"] = results[name]["auprc"] - s
+    results[name]["recovery"] = (results[name]["auprc"] - s) / (f - s)
+    print(f"{name}: gain {results[name]['gain']:.4f} recovery {results[name]['recovery']:.3f}", flush=True)
+results["mixed_minus_prefix"] = results["mixed"]["recovery"] - results["prefix_mean_0.25ns"]["recovery"]
+print(f"mixed - prefix recovery: {results['mixed_minus_prefix']:+.3f}", flush=True)
+
+(OUT / "results.json").write_text(json.dumps(results, indent=2))
+print("saved to", OUT)
