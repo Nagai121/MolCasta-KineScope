@@ -128,8 +128,15 @@ for j1, h1 in enumerate(HORIZONS):
             PARTIAL.write_text(json.dumps(results, indent=2))
 
 
+# Gain definition (K56's): the gain of a history condition trained at h1
+# and evaluated at h2 is its AUPRC minus the AUPRC of the static-only
+# condition trained at the EVALUATION horizon h2 (the best static model
+# for that horizon). The reference gain is the matched-horizon gain
+# (train@h2 -> eval@h2). (Corrected 2026-11-23: the first version used
+# the static condition trained at the TRAIN horizon h1, which measures
+# something else when the static baseline itself transfers poorly.)
 def gain(h1, h2, macro=False):
-    s = results[f"static_train[{h1}]"][str(h2)]
+    s = results[f"static_train[{h2}]"][str(h2)]
     a = results[f"history_train[{h1}]"][str(h2)]
     key = "macro_auprc" if macro else "auprc"
     return float(a[key] - s[key])
