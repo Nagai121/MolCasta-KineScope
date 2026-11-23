@@ -1,0 +1,707 @@
+{
+  "reference_k01_g74": {
+    "1": {
+      "static": 0.3637,
+      "full": 0.4815
+    },
+    "5": {
+      "static": 0.3493,
+      "full": 0.4648
+    },
+    "10": {
+      "static": 0.3548,
+      "full": 0.4377
+    },
+    "30": {
+      "static": 0.3639,
+      "full": 0.4264
+    },
+    "50": {
+      "static": 0.3342,
+      "full": 0.4081
+    },
+    "90": {
+      "static": 0.3035,
+      "full": 0.4246
+    }
+  },
+  "g02_1ns_6stats": {
+    "0.1ns": 0.583,
+    "0.25ns": 0.7,
+    "0.5ns": 0.803
+  },
+  "g74_mean_only_recovery": {
+    "1": {
+      "prefix_mean_prefix_mean_0.1ns": 0.5697804099846088,
+      "prefix_mean_prefix_mean_0.25ns": 0.6467470246376312,
+      "prefix_mean_prefix_mean_0.5ns": 0.7698765446623117
+    },
+    "5": {
+      "prefix_mean_prefix_mean_0.1ns": 0.8456554595451667,
+      "prefix_mean_prefix_mean_0.25ns": 1.0294911109141869,
+      "prefix_mean_prefix_mean_0.5ns": 1.0371964120456245
+    },
+    "10": {
+      "prefix_mean_prefix_mean_0.1ns": 0.7706489382977723,
+      "prefix_mean_prefix_mean_0.25ns": 0.9753039247951127,
+      "prefix_mean_prefix_mean_0.5ns": 1.2294547845395858
+    },
+    "30": {
+      "prefix_mean_prefix_mean_0.1ns": 0.9788975081371146,
+      "prefix_mean_prefix_mean_0.25ns": 1.0530366160075684,
+      "prefix_mean_prefix_mean_0.5ns": 1.1377523882276073
+    },
+    "50": {
+      "prefix_mean_prefix_mean_0.1ns": 0.7451551746036752,
+      "prefix_mean_prefix_mean_0.25ns": 1.0036022838047258,
+      "prefix_mean_prefix_mean_0.5ns": 1.2663630849113257
+    },
+    "90": {
+      "prefix_mean_prefix_mean_0.1ns": 0.5895166784117475,
+      "prefix_mean_prefix_mean_0.25ns": 0.825437259564696,
+      "prefix_mean_prefix_mean_0.5ns": 0.6584941884139743
+    }
+  },
+  "horizons": {
+    "1": {
+      "metrics": {
+        "static_only": {
+          "n": 4972,
+          "positives": 290,
+          "auprc": 0.3636900260068624,
+          "auc": 0.9056003181664187,
+          "brier": 0.04322872675738882,
+          "logloss": 0.14938652439824082
+        },
+        "full_hist6": {
+          "n": 4972,
+          "positives": 290,
+          "auprc": 0.481505210399907,
+          "auc": 0.935213362989586,
+          "brier": 0.03950413281215262,
+          "logloss": 0.1343999478958736
+        },
+        "prefix_hist6_0.1ns": {
+          "n": 4972,
+          "positives": 290,
+          "auprc": 0.4323576244974137,
+          "auc": 0.928071189736187,
+          "brier": 0.041066729847394144,
+          "logloss": 0.13891542249080202
+        },
+        "prefix_hist6_0.25ns": {
+          "n": 4972,
+          "positives": 290,
+          "auprc": 0.4462035277329261,
+          "auc": 0.9268799069068626,
+          "brier": 0.04111437591641835,
+          "logloss": 0.13957869784715624
+        },
+        "prefix_hist6_0.5ns": {
+          "n": 4972,
+          "positives": 290,
+          "auprc": 0.45824004083663394,
+          "auc": 0.9330001914890482,
+          "brier": 0.03983618588004212,
+          "logloss": 0.1359535794382354
+        }
+      },
+      "base_gain": 0.11781518439304461,
+      "pooled_recovery_vs_real_history_gain": {
+        "full_hist6": 1.0,
+        "prefix_hist6_0.1ns": 0.5828416671782182,
+        "prefix_hist6_0.25ns": 0.7003638974988949,
+        "prefix_hist6_0.5ns": 0.8025282591278059
+      },
+      "per_protein": [
+        {
+          "protein": "1mix_A",
+          "horizon_ns": 1,
+          "n": 3101,
+          "positives": 204,
+          "auprc_static_only": 0.3720443067390537,
+          "auprc_full_hist6": 0.45900255525379813,
+          "auprc_prefix_hist6_0.1ns": 0.4261325108939573,
+          "auprc_prefix_hist6_0.25ns": 0.4333132394330953,
+          "auprc_prefix_hist6_0.5ns": 0.46264945076886216,
+          "recovery_prefix_hist6_0.1ns": 0.622001996115786,
+          "recovery_prefix_hist6_0.25ns": 0.7045787345136441,
+          "recovery_prefix_hist6_0.5ns": 1.0419384656125596
+        },
+        {
+          "protein": "2qt4_A",
+          "horizon_ns": 1,
+          "n": 1871,
+          "positives": 86,
+          "auprc_static_only": 0.353111548978445,
+          "auprc_full_hist6": 0.546762843522533,
+          "auprc_prefix_hist6_0.1ns": 0.45608516736666155,
+          "auprc_prefix_hist6_0.25ns": 0.4929597512522008,
+          "auprc_prefix_hist6_0.5ns": 0.470345829210382,
+          "recovery_prefix_hist6_0.1ns": 0.5317476375804596,
+          "recovery_prefix_hist6_0.25ns": 0.7221650782299159,
+          "recovery_prefix_hist6_0.5ns": 0.6053885697378936
+        }
+      ],
+      "per_protein_summary": {
+        "prefix_hist6_0.1ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.5768748168481228,
+          "median_recovery": 0.5768748168481228,
+          "min_recovery": 0.5317476375804596,
+          "max_recovery": 0.622001996115786
+        },
+        "prefix_hist6_0.25ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.71337190637178,
+          "median_recovery": 0.71337190637178,
+          "min_recovery": 0.7045787345136441,
+          "max_recovery": 0.7221650782299159
+        },
+        "prefix_hist6_0.5ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.8236635176752266,
+          "median_recovery": 0.8236635176752266,
+          "min_recovery": 0.6053885697378936,
+          "max_recovery": 1.0419384656125596
+        }
+      }
+    },
+    "5": {
+      "metrics": {
+        "static_only": {
+          "n": 4972,
+          "positives": 312,
+          "auprc": 0.349302325532271,
+          "auc": 0.8797997826565422,
+          "brier": 0.04854167952070918,
+          "logloss": 0.1714567253040607
+        },
+        "full_hist6": {
+          "n": 4972,
+          "positives": 312,
+          "auprc": 0.4647730596143089,
+          "auc": 0.9221979201056455,
+          "brier": 0.04278903719160868,
+          "logloss": 0.14801486411494005
+        },
+        "prefix_hist6_0.1ns": {
+          "n": 4972,
+          "positives": 312,
+          "auprc": 0.4177714489677587,
+          "auc": 0.9107089798613404,
+          "brier": 0.04500069999742989,
+          "logloss": 0.15506440213245318
+        },
+        "prefix_hist6_0.25ns": {
+          "n": 4972,
+          "positives": 312,
+          "auprc": 0.4706790245574,
+          "auc": 0.9157938538571585,
+          "brier": 0.04307104217448538,
+          "logloss": 0.1497597485103045
+        },
+        "prefix_hist6_0.5ns": {
+          "n": 4972,
+          "positives": 312,
+          "auprc": 0.46121606702540907,
+          "auc": 0.9200320512820512,
+          "brier": 0.043010740462427435,
+          "logloss": 0.14855015282831616
+        }
+      },
+      "base_gain": 0.11547073408203795,
+      "pooled_recovery_vs_real_history_gain": {
+        "full_hist6": 1.0,
+        "prefix_hist6_0.1ns": 0.5929565095415673,
+        "prefix_hist6_0.25ns": 1.051146855435206,
+        "prefix_hist6_0.5ns": 0.9691957220400735
+      },
+      "per_protein": [
+        {
+          "protein": "1mix_A",
+          "horizon_ns": 5,
+          "n": 3101,
+          "positives": 219,
+          "auprc_static_only": 0.38583921934686094,
+          "auprc_full_hist6": 0.4754504963941919,
+          "auprc_prefix_hist6_0.1ns": 0.42357933877475307,
+          "auprc_prefix_hist6_0.25ns": 0.4748698459408536,
+          "auprc_prefix_hist6_0.5ns": 0.4777534139342041,
+          "recovery_prefix_hist6_0.1ns": 0.4211536836815585,
+          "recovery_prefix_hist6_0.25ns": 0.9935203417195847,
+          "recovery_prefix_hist6_0.5ns": 1.0256989702177313
+        },
+        {
+          "protein": "2qt4_A",
+          "horizon_ns": 5,
+          "n": 1871,
+          "positives": 93,
+          "auprc_static_only": 0.2649638114572563,
+          "auprc_full_hist6": 0.4488284875292456,
+          "auprc_prefix_hist6_0.1ns": 0.41640155278209023,
+          "auprc_prefix_hist6_0.25ns": 0.47690877874554793,
+          "auprc_prefix_hist6_0.5ns": 0.43418500405706917,
+          "recovery_prefix_hist6_0.1ns": 0.8236369516977851,
+          "recovery_prefix_hist6_0.25ns": 1.1527225991212577,
+          "recovery_prefix_hist6_0.5ns": 0.9203572769657887
+        }
+      ],
+      "per_protein_summary": {
+        "prefix_hist6_0.1ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.6223953176896717,
+          "median_recovery": 0.6223953176896717,
+          "min_recovery": 0.4211536836815585,
+          "max_recovery": 0.8236369516977851
+        },
+        "prefix_hist6_0.25ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 1.0731214704204213,
+          "median_recovery": 1.0731214704204213,
+          "min_recovery": 0.9935203417195847,
+          "max_recovery": 1.1527225991212577
+        },
+        "prefix_hist6_0.5ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.9730281235917599,
+          "median_recovery": 0.9730281235917599,
+          "min_recovery": 0.9203572769657887,
+          "max_recovery": 1.0256989702177313
+        }
+      }
+    },
+    "10": {
+      "metrics": {
+        "static_only": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.35476856489174796,
+          "auc": 0.8750899670589793,
+          "brier": 0.04945700886925582,
+          "logloss": 0.17527504097694893
+        },
+        "full_hist6": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.4376925992987372,
+          "auc": 0.9083570872854281,
+          "brier": 0.046232954526879956,
+          "logloss": 0.16082345004219542
+        },
+        "prefix_hist6_0.1ns": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.380384925779109,
+          "auc": 0.8974835708728542,
+          "brier": 0.049076265621658226,
+          "logloss": 0.1684418116613413
+        },
+        "prefix_hist6_0.25ns": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.4224261071580554,
+          "auc": 0.9056317558060618,
+          "brier": 0.04697605147967093,
+          "logloss": 0.1622721388599302
+        },
+        "prefix_hist6_0.5ns": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.3932420292533452,
+          "auc": 0.9071486980847859,
+          "brier": 0.047425793311312234,
+          "logloss": 0.16351346398187933
+        }
+      },
+      "base_gain": 0.08292403440698926,
+      "pooled_recovery_vs_real_history_gain": {
+        "full_hist6": 1.0,
+        "prefix_hist6_0.1ns": 0.3089135866404728,
+        "prefix_hist6_0.25ns": 0.8158978606159678,
+        "prefix_hist6_0.5ns": 0.4639603540364472
+      },
+      "per_protein": [
+        {
+          "protein": "1mix_A",
+          "horizon_ns": 10,
+          "n": 3101,
+          "positives": 245,
+          "auprc_static_only": 0.402507802661433,
+          "auprc_full_hist6": 0.45948310054940267,
+          "auprc_prefix_hist6_0.1ns": 0.4123036913027681,
+          "auprc_prefix_hist6_0.25ns": 0.4396700053019201,
+          "auprc_prefix_hist6_0.5ns": 0.4026406037220053,
+          "recovery_prefix_hist6_0.1ns": 0.17193220578849358,
+          "recovery_prefix_hist6_0.25ns": 0.6522511337028722,
+          "recovery_prefix_hist6_0.5ns": 0.0023308532907262967
+        },
+        {
+          "protein": "2qt4_A",
+          "horizon_ns": 10,
+          "n": 1871,
+          "positives": 80,
+          "auprc_static_only": 0.2334198496388016,
+          "auprc_full_hist6": 0.3864498322654845,
+          "auprc_prefix_hist6_0.1ns": 0.3054124221644675,
+          "auprc_prefix_hist6_0.25ns": 0.3812998970646602,
+          "auprc_prefix_hist6_0.5ns": 0.3828290643194451,
+          "recovery_prefix_hist6_0.1ns": 0.47044749852250844,
+          "recovery_prefix_hist6_0.25ns": 0.966346887633206,
+          "recovery_prefix_hist6_0.5ns": 0.9763394866555509
+        }
+      ],
+      "per_protein_summary": {
+        "prefix_hist6_0.1ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.321189852155501,
+          "median_recovery": 0.321189852155501,
+          "min_recovery": 0.17193220578849358,
+          "max_recovery": 0.47044749852250844
+        },
+        "prefix_hist6_0.25ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.8092990106680391,
+          "median_recovery": 0.8092990106680391,
+          "min_recovery": 0.6522511337028722,
+          "max_recovery": 0.966346887633206
+        },
+        "prefix_hist6_0.5ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.4893351699731386,
+          "median_recovery": 0.4893351699731386,
+          "min_recovery": 0.0023308532907262967,
+          "max_recovery": 0.9763394866555509
+        }
+      }
+    },
+    "30": {
+      "metrics": {
+        "static_only": {
+          "n": 4972,
+          "positives": 345,
+          "auprc": 0.3638886114495804,
+          "auc": 0.861673291299023,
+          "brier": 0.05282158864226674,
+          "logloss": 0.19074033188587747
+        },
+        "full_hist6": {
+          "n": 4972,
+          "positives": 345,
+          "auprc": 0.42644656209548093,
+          "auc": 0.904971136649095,
+          "brier": 0.04873598576331413,
+          "logloss": 0.16856699000074848
+        },
+        "prefix_hist6_0.1ns": {
+          "n": 4972,
+          "positives": 345,
+          "auprc": 0.41060109495574815,
+          "auc": 0.8933543818106076,
+          "brier": 0.049771948120342725,
+          "logloss": 0.17441301362503397
+        },
+        "prefix_hist6_0.25ns": {
+          "n": 4972,
+          "positives": 345,
+          "auprc": 0.40507779810425065,
+          "auc": 0.8956659556541159,
+          "brier": 0.04939207619722965,
+          "logloss": 0.17378105108066377
+        },
+        "prefix_hist6_0.5ns": {
+          "n": 4972,
+          "positives": 345,
+          "auprc": 0.44642475255307673,
+          "auc": 0.9057310117364055,
+          "brier": 0.04792355455363668,
+          "logloss": 0.1669471478730953
+        }
+      },
+      "base_gain": 0.06255795064590053,
+      "pooled_recovery_vs_real_history_gain": {
+        "full_hist6": 1.0,
+        "prefix_hist6_0.1ns": 0.7467073812979654,
+        "prefix_hist6_0.25ns": 0.6584164958953849,
+        "prefix_hist6_0.5ns": 1.319354938122561
+      },
+      "per_protein": [
+        {
+          "protein": "1mix_A",
+          "horizon_ns": 30,
+          "n": 3101,
+          "positives": 251,
+          "auprc_static_only": 0.3885003210117183,
+          "auprc_full_hist6": 0.4412452551412225,
+          "auprc_prefix_hist6_0.1ns": 0.4315056322016852,
+          "auprc_prefix_hist6_0.25ns": 0.41922845534337116,
+          "auprc_prefix_hist6_0.5ns": 0.47379506093289175,
+          "recovery_prefix_hist6_0.1ns": 0.8153448648618336,
+          "recovery_prefix_hist6_0.25ns": 0.5825798219068082,
+          "recovery_prefix_hist6_0.5ns": 1.6171171948333465
+        },
+        {
+          "protein": "2qt4_A",
+          "horizon_ns": 30,
+          "n": 1871,
+          "positives": 94,
+          "auprc_static_only": 0.30929567741167174,
+          "auprc_full_hist6": 0.39892254226894425,
+          "auprc_prefix_hist6_0.1ns": 0.3671605597875555,
+          "auprc_prefix_hist6_0.25ns": 0.38185715095485373,
+          "auprc_prefix_hist6_0.5ns": 0.4030395924885288,
+          "recovery_prefix_hist6_0.1ns": 0.6456198425330562,
+          "recovery_prefix_hist6_0.25ns": 0.8095951326506118,
+          "recovery_prefix_hist6_0.5ns": 1.04593544832948
+        }
+      ],
+      "per_protein_summary": {
+        "prefix_hist6_0.1ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.7304823536974449,
+          "median_recovery": 0.7304823536974449,
+          "min_recovery": 0.6456198425330562,
+          "max_recovery": 0.8153448648618336
+        },
+        "prefix_hist6_0.25ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.69608747727871,
+          "median_recovery": 0.69608747727871,
+          "min_recovery": 0.5825798219068082,
+          "max_recovery": 0.8095951326506118
+        },
+        "prefix_hist6_0.5ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 1.3315263215814133,
+          "median_recovery": 1.3315263215814133,
+          "min_recovery": 1.04593544832948,
+          "max_recovery": 1.6171171948333465
+        }
+      }
+    },
+    "50": {
+      "metrics": {
+        "static_only": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.3341761994205714,
+          "auc": 0.8613222757444836,
+          "brier": 0.052211218464227355,
+          "logloss": 0.18540939931072076
+        },
+        "full_hist6": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.4081103824328296,
+          "auc": 0.8968730860273791,
+          "brier": 0.04881237830318968,
+          "logloss": 0.1703206491061416
+        },
+        "prefix_hist6_0.1ns": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.37040167677089203,
+          "auc": 0.8894135174057703,
+          "brier": 0.050557766666616884,
+          "logloss": 0.17451481919779827
+        },
+        "prefix_hist6_0.25ns": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.39863101551094093,
+          "auc": 0.8946827564516395,
+          "brier": 0.04874557126669107,
+          "logloss": 0.16916487296544908
+        },
+        "prefix_hist6_0.5ns": {
+          "n": 4972,
+          "positives": 325,
+          "auprc": 0.39519018651594534,
+          "auc": 0.8938491334359635,
+          "brier": 0.04945844898888081,
+          "logloss": 0.1708444105081192
+        }
+      },
+      "base_gain": 0.07393418301225818,
+      "pooled_recovery_vs_real_history_gain": {
+        "full_hist6": 1.0,
+        "prefix_hist6_0.1ns": 0.48996926556034953,
+        "prefix_hist6_0.25ns": 0.8717864114314079,
+        "prefix_hist6_0.5ns": 0.8252473295776852
+      },
+      "per_protein": [
+        {
+          "protein": "1mix_A",
+          "horizon_ns": 50,
+          "n": 3101,
+          "positives": 233,
+          "auprc_static_only": 0.38606820581877466,
+          "auprc_full_hist6": 0.42022242346917665,
+          "auprc_prefix_hist6_0.1ns": 0.38271532218217696,
+          "auprc_prefix_hist6_0.25ns": 0.4135381663929231,
+          "auprc_prefix_hist6_0.5ns": 0.4024820833875307,
+          "recovery_prefix_hist6_0.1ns": -0.09816894858835183,
+          "recovery_prefix_hist6_0.25ns": 0.8042918990365204,
+          "recovery_prefix_hist6_0.5ns": 0.48058127803618045
+        },
+        {
+          "protein": "2qt4_A",
+          "horizon_ns": 50,
+          "n": 1871,
+          "positives": 92,
+          "auprc_static_only": 0.20718874592360928,
+          "auprc_full_hist6": 0.3937821784761902,
+          "auprc_prefix_hist6_0.1ns": 0.35318955572230043,
+          "auprc_prefix_hist6_0.25ns": 0.3759883060399583,
+          "auprc_prefix_hist6_0.5ns": 0.39280704294308905,
+          "recovery_prefix_hist6_0.1ns": 0.7824541721614399,
+          "recovery_prefix_hist6_0.25ns": 0.9046382705285317,
+          "recovery_prefix_hist6_0.5ns": 0.994774009354127
+        }
+      ],
+      "per_protein_summary": {
+        "prefix_hist6_0.1ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.34214261178654404,
+          "median_recovery": 0.34214261178654404,
+          "min_recovery": -0.09816894858835183,
+          "max_recovery": 0.7824541721614399
+        },
+        "prefix_hist6_0.25ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.8544650847825261,
+          "median_recovery": 0.8544650847825261,
+          "min_recovery": 0.8042918990365204,
+          "max_recovery": 0.9046382705285317
+        },
+        "prefix_hist6_0.5ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.7376776436951538,
+          "median_recovery": 0.7376776436951538,
+          "min_recovery": 0.48058127803618045,
+          "max_recovery": 0.994774009354127
+        }
+      }
+    },
+    "90": {
+      "metrics": {
+        "static_only": {
+          "n": 4972,
+          "positives": 335,
+          "auprc": 0.3034582595872575,
+          "auc": 0.8506928373015236,
+          "brier": 0.05375967686912556,
+          "logloss": 0.19256375628947828
+        },
+        "full_hist6": {
+          "n": 4972,
+          "positives": 335,
+          "auprc": 0.4245816838572408,
+          "auc": 0.8985402940012038,
+          "brier": 0.048587825573552804,
+          "logloss": 0.1696807788677412
+        },
+        "prefix_hist6_0.1ns": {
+          "n": 4972,
+          "positives": 335,
+          "auprc": 0.3946638498843023,
+          "auc": 0.8887568841151157,
+          "brier": 0.04974952649180259,
+          "logloss": 0.17425597297813214
+        },
+        "prefix_hist6_0.25ns": {
+          "n": 4972,
+          "positives": 335,
+          "auprc": 0.3796466347671676,
+          "auc": 0.8853916743648589,
+          "brier": 0.05000175182726912,
+          "logloss": 0.17636060047165802
+        },
+        "prefix_hist6_0.5ns": {
+          "n": 4972,
+          "positives": 335,
+          "auprc": 0.4073237715756308,
+          "auc": 0.8960373890736097,
+          "brier": 0.04899460285491713,
+          "logloss": 0.17098622759165993
+        }
+      },
+      "base_gain": 0.12112342426998335,
+      "pooled_recovery_vs_real_history_gain": {
+        "full_hist6": 1.0,
+        "prefix_hist6_0.1ns": 0.7529971254259469,
+        "prefix_hist6_0.25ns": 0.6290143763611463,
+        "prefix_hist6_0.5ns": 0.857517962478156
+      },
+      "per_protein": [
+        {
+          "protein": "1mix_A",
+          "horizon_ns": 90,
+          "n": 3101,
+          "positives": 242,
+          "auprc_static_only": 0.31442088366616855,
+          "auprc_full_hist6": 0.40351699992195567,
+          "auprc_prefix_hist6_0.1ns": 0.3774704737728543,
+          "auprc_prefix_hist6_0.25ns": 0.369774481946315,
+          "auprc_prefix_hist6_0.5ns": 0.4041917484639413,
+          "recovery_prefix_hist6_0.1ns": 0.7076581197509881,
+          "recovery_prefix_hist6_0.25ns": 0.6212795866570788,
+          "recovery_prefix_hist6_0.5ns": 1.0075732654838565
+        },
+        {
+          "protein": "2qt4_A",
+          "horizon_ns": 90,
+          "n": 1871,
+          "positives": 93,
+          "auprc_static_only": 0.28103989691203285,
+          "auprc_full_hist6": 0.4904708453609695,
+          "auprc_prefix_hist6_0.1ns": 0.4479834982440617,
+          "auprc_prefix_hist6_0.25ns": 0.420321744482519,
+          "auprc_prefix_hist6_0.5ns": 0.4336565252685791,
+          "recovery_prefix_hist6_0.1ns": 0.797129567374962,
+          "recovery_prefix_hist6_0.25ns": 0.6650490226111246,
+          "recovery_prefix_hist6_0.5ns": 0.728720513786706
+        }
+      ],
+      "per_protein_summary": {
+        "prefix_hist6_0.1ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.7523938435629751,
+          "median_recovery": 0.7523938435629751,
+          "min_recovery": 0.7076581197509881,
+          "max_recovery": 0.797129567374962
+        },
+        "prefix_hist6_0.25ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.6431643046341018,
+          "median_recovery": 0.6431643046341018,
+          "min_recovery": 0.6212795866570788,
+          "max_recovery": 0.6650490226111246
+        },
+        "prefix_hist6_0.5ns": {
+          "n_proteins_defined": 2,
+          "macro_recovery": 0.8681468896352813,
+          "median_recovery": 0.8681468896352813,
+          "min_recovery": 0.728720513786706,
+          "max_recovery": 1.0075732654838565
+        }
+      }
+    }
+  },
+  "smallest_prefix_over_0.5_pooled": {
+    "1": "0.1ns",
+    "5": "0.1ns",
+    "10": "0.25ns",
+    "30": "0.1ns",
+    "50": "0.25ns",
+    "90": "0.1ns"
+  },
+  "smallest_prefix_over_0.5_macro": {
+    "1": "0.1ns",
+    "5": "0.1ns",
+    "10": "0.25ns",
+    "30": "0.1ns",
+    "50": "0.25ns",
+    "90": "0.1ns"
+  }
+}

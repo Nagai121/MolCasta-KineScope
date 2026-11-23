@@ -1,0 +1,52 @@
+train (9610, 7) test (4972, 7)
+=== horizon 1 ns, test positives 290 ===
+  static_only auprc 0.3637
+  full_hist6 auprc 0.4815
+  prefix_hist6_0.1ns auprc 0.4324
+  prefix_hist6_0.25ns auprc 0.4462
+  prefix_hist6_0.5ns auprc 0.4582
+  base gain 0.1178, pooled recovery: {'full_hist6': 1.0, 'prefix_hist6_0.1ns': 0.583, 'prefix_hist6_0.25ns': 0.7, 'prefix_hist6_0.5ns': 0.803}
+  per-protein summary 1ns: {"prefix_hist6_0.1ns": 0.577, "prefix_hist6_0.25ns": 0.713, "prefix_hist6_0.5ns": 0.824}
+=== horizon 5 ns, test positives 312 ===
+  static_only auprc 0.3493
+  full_hist6 auprc 0.4648
+  prefix_hist6_0.1ns auprc 0.4178
+  prefix_hist6_0.25ns auprc 0.4707
+  prefix_hist6_0.5ns auprc 0.4612
+  base gain 0.1155, pooled recovery: {'full_hist6': 1.0, 'prefix_hist6_0.1ns': 0.593, 'prefix_hist6_0.25ns': 1.051, 'prefix_hist6_0.5ns': 0.969}
+  per-protein summary 5ns: {"prefix_hist6_0.1ns": 0.622, "prefix_hist6_0.25ns": 1.073, "prefix_hist6_0.5ns": 0.973}
+=== horizon 10 ns, test positives 325 ===
+  static_only auprc 0.3548
+  full_hist6 auprc 0.4377
+  prefix_hist6_0.1ns auprc 0.3804
+  prefix_hist6_0.25ns auprc 0.4224
+  prefix_hist6_0.5ns auprc 0.3932
+  base gain 0.0829, pooled recovery: {'full_hist6': 1.0, 'prefix_hist6_0.1ns': 0.309, 'prefix_hist6_0.25ns': 0.816, 'prefix_hist6_0.5ns': 0.464}
+  per-protein summary 10ns: {"prefix_hist6_0.1ns": 0.321, "prefix_hist6_0.25ns": 0.809, "prefix_hist6_0.5ns": 0.489}
+=== horizon 30 ns, test positives 345 ===
+  static_only auprc 0.3639
+  full_hist6 auprc 0.4264
+  prefix_hist6_0.1ns auprc 0.4106
+  prefix_hist6_0.25ns auprc 0.4051
+  prefix_hist6_0.5ns auprc 0.4464
+  base gain 0.0626, pooled recovery: {'full_hist6': 1.0, 'prefix_hist6_0.1ns': 0.747, 'prefix_hist6_0.25ns': 0.658, 'prefix_hist6_0.5ns': 1.319}
+  per-protein summary 30ns: {"prefix_hist6_0.1ns": 0.73, "prefix_hist6_0.25ns": 0.696, "prefix_hist6_0.5ns": 1.332}
+=== horizon 50 ns, test positives 325 ===
+  static_only auprc 0.3342
+  full_hist6 auprc 0.4081
+  prefix_hist6_0.1ns auprc 0.3704
+  prefix_hist6_0.25ns auprc 0.3986
+  prefix_hist6_0.5ns auprc 0.3952
+  base gain 0.0739, pooled recovery: {'full_hist6': 1.0, 'prefix_hist6_0.1ns': 0.49, 'prefix_hist6_0.25ns': 0.872, 'prefix_hist6_0.5ns': 0.825}
+  per-protein summary 50ns: {"prefix_hist6_0.1ns": 0.342, "prefix_hist6_0.25ns": 0.854, "prefix_hist6_0.5ns": 0.738}
+=== horizon 90 ns, test positives 335 ===
+  static_only auprc 0.3035
+  full_hist6 auprc 0.4246
+  prefix_hist6_0.1ns auprc 0.3947
+  prefix_hist6_0.25ns auprc 0.3796
+  prefix_hist6_0.5ns auprc 0.4073
+  base gain 0.1211, pooled recovery: {'full_hist6': 1.0, 'prefix_hist6_0.1ns': 0.753, 'prefix_hist6_0.25ns': 0.629, 'prefix_hist6_0.5ns': 0.858}
+  per-protein summary 90ns: {"prefix_hist6_0.1ns": 0.752, "prefix_hist6_0.25ns": 0.643, "prefix_hist6_0.5ns": 0.868}
+saved /home/hatch/workspace/kinescope/repo/experiments/G78_hb_formation_6stats_long_horizons/results.json
+smallest prefix over 0.5 (pooled): {'1': '0.1ns', '5': '0.1ns', '10': '0.25ns', '30': '0.1ns', '50': '0.25ns', '90': '0.1ns'}
+smallest prefix over 0.5 (macro): {'1': '0.1ns', '5': '0.1ns', '10': '0.25ns', '30': '0.1ns', '50': '0.25ns', '90': '0.1ns'}
