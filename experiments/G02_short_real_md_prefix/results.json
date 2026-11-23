@@ -1,0 +1,172 @@
+{
+  "cuts": {
+    "0.1ns": [
+      "0.1 ns",
+      [
+        0,
+        1
+      ],
+      "0.1 ns"
+    ],
+    "0.25ns": [
+      "0.25 ns",
+      [
+        0,
+        1,
+        2
+      ],
+      "0.2 ns"
+    ],
+    "0.5ns": [
+      "0.5 ns",
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "0.5 ns"
+    ]
+  },
+  "residual_spread_vs_full_mean": {
+    "0.1ns": {
+      "cut_label": "0.1 ns",
+      "frames": [
+        0,
+        1
+      ],
+      "covered_length": "0.1 ns",
+      "train_n": 9610,
+      "test_n": 4972,
+      "train_residual_std": 0.42073220796217814,
+      "test_residual_std": 0.3961248475529315,
+      "train_residual_mean": 0.019927460373503614,
+      "test_residual_mean": 0.02522477922672203
+    },
+    "0.25ns": {
+      "cut_label": "0.25 ns",
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "covered_length": "0.2 ns",
+      "train_n": 9610,
+      "test_n": 4972,
+      "train_residual_std": 0.349816058212338,
+      "test_residual_std": 0.3185952096246839,
+      "train_residual_mean": 0.024720974367358917,
+      "test_residual_mean": 0.027133160727168214
+    },
+    "0.5ns": {
+      "cut_label": "0.5 ns",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "covered_length": "0.5 ns",
+      "train_n": 9610,
+      "test_n": 4972,
+      "train_residual_std": 0.2052311163502402,
+      "test_residual_std": 0.18792794145245817,
+      "train_residual_mean": 0.025971626767682658,
+      "test_residual_mean": 0.027172672110209375
+    }
+  },
+  "references": {
+    "real_history_gain_1ns": 0.1178,
+    "replica_lower_bound_A": 0.249,
+    "generator_mean_error_A": 0.483
+  },
+  "metrics_1ns": {
+    "static_only": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.3636900260068624,
+      "auc": 0.9056003181664187,
+      "brier": 0.04322872675738882,
+      "logloss": 0.14938652439824082
+    },
+    "base_hist_D6": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.481505210399907,
+      "auc": 0.935213362989586,
+      "brier": 0.03950413281215262,
+      "logloss": 0.1343999478958736
+    },
+    "mean_only_full": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.48647919991571514,
+      "auc": 0.9323620174107735,
+      "brier": 0.03831703611477302,
+      "logloss": 0.13127822151761853
+    },
+    "prefix_mean_0.1ns": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.43081881007274364,
+      "auc": 0.9243415722723858,
+      "brier": 0.04064609835936868,
+      "logloss": 0.13848732213900547
+    },
+    "prefix_hist6_0.1ns": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.4323576244974137,
+      "auc": 0.928071189736187,
+      "brier": 0.041066729847394144,
+      "logloss": 0.13891542249080202
+    },
+    "prefix_mean_0.25ns": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.4398866459701979,
+      "auc": 0.920253281091193,
+      "brier": 0.041467425401064885,
+      "logloss": 0.1419536871661684
+    },
+    "prefix_hist6_0.25ns": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.4462035277329261,
+      "auc": 0.9268799069068626,
+      "brier": 0.04111437591641835,
+      "logloss": 0.13957869784715624
+    },
+    "prefix_mean_0.5ns": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.4543931730761327,
+      "auc": 0.9310856692542238,
+      "brier": 0.039360559045057066,
+      "logloss": 0.1344036889421853
+    },
+    "prefix_hist6_0.5ns": {
+      "n": 4972,
+      "positives": 290,
+      "auprc": 0.45824004083663394,
+      "auc": 0.9330001914890482,
+      "brier": 0.03983618588004212,
+      "logloss": 0.1359535794382354
+    }
+  },
+  "base_gain_1ns": 0.11781518439304461,
+  "recovery_vs_real_history_gain": {
+    "base_hist_D6": 1.0,
+    "mean_only_full": 1.0422185776938084,
+    "prefix_mean_0.1ns": 0.5697804099846088,
+    "prefix_hist6_0.1ns": 0.5828416671782182,
+    "prefix_mean_0.25ns": 0.6467470246376312,
+    "prefix_hist6_0.25ns": 0.7003638974988949,
+    "prefix_mean_0.5ns": 0.7698765446623117,
+    "prefix_hist6_0.5ns": 0.8025282591278059
+  }
+}
