@@ -1,0 +1,29 @@
+train (2557, 5) test (1170, 5)
+max |X[:,0] - hist[:,-1]| train 4.761465834945966e-07
+max |X[:,0] - hist[:,-1]| test 4.764348791042039e-07
+mean11 - mean10: test std 0.1516 mean -0.0256
+1 ns: static 0.2402 full 0.3842 gain 0.1440 (ref 0.144)
+  1 ns hist6_10f: auprc 0.3803 recovery 0.973
+  1 ns hist6_11f: auprc 0.3842 recovery 1.000
+5 ns: static 0.2513 full 0.3301 gain 0.0788 (ref 0.079)
+  5 ns hist6_10f: auprc 0.3401 recovery 1.127
+  5 ns hist6_11f: auprc 0.3301 recovery 1.000
+10 ns: static 0.2034 full 0.2627 gain 0.0594 (ref 0.059)
+  10 ns hist6_10f: auprc 0.2784 recovery 1.264
+  10 ns hist6_11f: auprc 0.2627 recovery 1.000
+30 ns: static 0.1582 full 0.2466 gain 0.0884 (ref 0.088)
+  30 ns hist6_10f: auprc 0.2287 recovery 0.798
+  30 ns hist6_11f: auprc 0.2466 recovery 1.000
+50 ns: static 0.2295 full 0.2569 gain 0.0274 (ref 0.027)
+  50 ns hist6_10f: auprc 0.2453 recovery 0.576
+  50 ns hist6_11f: auprc 0.2569 recovery 1.000
+90 ns: static 0.2136 full 0.2736 gain 0.0601 (ref 0.06)
+  90 ns hist6_10f: auprc 0.2626 recovery 0.816
+  90 ns hist6_11f: auprc 0.2736 recovery 1.000
+1 ns: recovery diff +0.027 auprc diff +0.0039
+5 ns: recovery diff -0.127 auprc diff -0.0100
+10 ns: recovery diff -0.264 auprc diff -0.0157
+30 ns: recovery diff +0.202 auprc diff +0.0179
+50 ns: recovery diff +0.424 auprc diff +0.0116
+90 ns: recovery diff +0.184 auprc diff +0.0111
+saved /home/hatch/workspace/kinescope/repo/experiments/G160_salt_formation_6stats_origin_frame/results.json /home/hatch/workspace/kinescope/repo/experiments/G160_salt_formation_6stats_origin_frame/results.csv
