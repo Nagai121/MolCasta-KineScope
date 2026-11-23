@@ -1,0 +1,119 @@
+{
+  "prefix_frames": [
+    0,
+    1
+  ],
+  "prefix_label": "0.1 ns",
+  "generated_mean_source": "regenerated method-22 series for dissociation candidates (gen_g18.py, ~/workspace/kinescope/work/g18_gen22/, 18 trajectories, 20,713 pairs; 5-point forward series [d0, +0.1, +0.3, +0.5, +1.0 ns])",
+  "coverage": {
+    "dissociation_candidates": 6131,
+    "missing": 0
+  },
+  "quality_generated_vs_real_forward": {
+    "generated": {
+      "n": 6131,
+      "mean": 2.7757283027235085,
+      "std": 0.42792555704922086,
+      "per_pair_std": 0.06926860342131994,
+      "per_pair_range": 0.19485131909399667,
+      "frac_le35": 0.9785353123470886,
+      "ever_le35": 1.0,
+      "crossings_per_pair": 0.053824824661556026,
+      "drift": 0.0608118386403555
+    },
+    "real_forward": {
+      "n": 6131,
+      "mean": 2.8145380586964177,
+      "std": 0.6885899014286798,
+      "per_pair_std": 0.15718002252539381,
+      "per_pair_range": 0.4262101148590725,
+      "frac_le35": 0.8929049094764312,
+      "ever_le35": 1.0,
+      "crossings_per_pair": 0.4873593214809982,
+      "drift": 0.14338630584650844
+    }
+  },
+  "relations": {
+    "train": {
+      "n": 4051,
+      "corr_prefix_gen": 0.7332135260709828,
+      "corr_gen_full": 0.8262192411334668,
+      "corr_prefix_full": 0.9307695095116798,
+      "gen_minus_prefix_mean": -0.09268367245931357,
+      "gen_minus_prefix_std": 0.5417661718751717,
+      "gen_minus_full_mean": -0.055902865212055924,
+      "gen_minus_full_std": 0.37759481367828696,
+      "prefix_minus_full_mean": 0.036780807247257644,
+      "prefix_minus_full_std": 0.2903097383376791
+    },
+    "test": {
+      "n": 2080,
+      "corr_prefix_gen": 0.6831520878474089,
+      "corr_gen_full": 0.8005372723442096,
+      "corr_prefix_full": 0.9370201844301502,
+      "gen_minus_prefix_mean": -0.0804548748650879,
+      "gen_minus_prefix_std": 0.5930531811421816,
+      "gen_minus_full_mean": -0.05052620476870595,
+      "gen_minus_full_std": 0.3947478746494037,
+      "prefix_minus_full_mean": 0.029928670096381945,
+      "prefix_minus_full_std": 0.2965415965679778
+    }
+  },
+  "references": {
+    "real_history_gain_1ns": 0.1785,
+    "g06_prefix_mean_recovery_0.1ns": 0.532,
+    "g06_prefix_mean_auprc_0.1ns": 0.5109,
+    "g11_formation_mixed_minus_prefix": 0.186
+  },
+  "metrics_1ns": {
+    "static_only": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.4159748410317585,
+      "auc": 0.8605957550453596,
+      "brier": 0.10247187414426535,
+      "logloss": 0.30583884097152664
+    },
+    "base_hist_D6": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.5945102167465611,
+      "auc": 0.90823016618832,
+      "brier": 0.08622829696308401,
+      "logloss": 0.2674670805912608
+    },
+    "prefix_mean_0.1ns": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.5109213620895379,
+      "auc": 0.8787423272181315,
+      "brier": 0.09685907462252281,
+      "logloss": 0.2946401896731499
+    },
+    "gen_mean_only": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.40455993392942063,
+      "auc": 0.8583645818754215,
+      "brier": 0.10472966435232689,
+      "logloss": 0.30824738020953163
+    },
+    "mixed": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.5016366161469632,
+      "auc": 0.8798129268084318,
+      "brier": 0.09718942451882277,
+      "logloss": 0.29754074653478985
+    }
+  },
+  "base_gain_1ns": 0.1785353757148026,
+  "recovery_vs_real_history_gain": {
+    "base_hist_D6": 1.0,
+    "prefix_mean_0.1ns": 0.5318078878073417,
+    "gen_mean_only": -0.06393638827395408,
+    "mixed": 0.4798028109120693
+  },
+  "mixed_minus_prefix_recovery": -0.052005076895272395,
+  "decision_threshold": 0.05
+}
