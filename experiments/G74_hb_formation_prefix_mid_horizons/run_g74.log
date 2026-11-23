@@ -1,0 +1,35 @@
+train (9610, 7) test (4972, 7)
+0.1ns residual std test 0.3961
+0.25ns residual std test 0.3186
+0.5ns residual std test 0.1879
+1 ns: static 0.3637 full 0.4815 gain 0.1178 (ref 0.1178)
+  1 ns prefix_mean_0.1ns: auprc 0.4308 recovery 0.570
+  1 ns prefix_mean_0.25ns: auprc 0.4399 recovery 0.647
+  1 ns prefix_mean_0.5ns: auprc 0.4544 recovery 0.770
+5 ns: static 0.3493 full 0.4648 gain 0.1155 (ref 0.1155)
+  5 ns prefix_mean_0.1ns: auprc 0.4470 recovery 0.846
+  5 ns prefix_mean_0.25ns: auprc 0.4682 recovery 1.029
+  5 ns prefix_mean_0.5ns: auprc 0.4691 recovery 1.037
+10 ns: static 0.3548 full 0.4377 gain 0.0829 (ref 0.0829)
+  10 ns prefix_mean_0.1ns: auprc 0.4187 recovery 0.771
+  10 ns prefix_mean_0.25ns: auprc 0.4356 recovery 0.975
+  10 ns prefix_mean_0.5ns: auprc 0.4567 recovery 1.229
+30 ns: static 0.3639 full 0.4264 gain 0.0626 (ref 0.0626)
+  30 ns prefix_mean_0.1ns: auprc 0.4251 recovery 0.979
+  30 ns prefix_mean_0.25ns: auprc 0.4298 recovery 1.053
+  30 ns prefix_mean_0.5ns: auprc 0.4351 recovery 1.138
+50 ns: static 0.3342 full 0.4081 gain 0.0739 (ref 0.0739)
+  50 ns prefix_mean_0.1ns: auprc 0.3893 recovery 0.745
+  50 ns prefix_mean_0.25ns: auprc 0.4084 recovery 1.004
+  50 ns prefix_mean_0.5ns: auprc 0.4278 recovery 1.266
+90 ns: static 0.3035 full 0.4246 gain 0.1211 (ref 0.1211)
+  90 ns prefix_mean_0.1ns: auprc 0.3749 recovery 0.590
+  90 ns prefix_mean_0.25ns: auprc 0.4034 recovery 0.825
+  90 ns prefix_mean_0.5ns: auprc 0.3832 recovery 0.658
+1 ns: min cut over 0.5 = 0.1ns
+5 ns: min cut over 0.5 = 0.1ns
+10 ns: min cut over 0.5 = 0.1ns
+30 ns: min cut over 0.5 = 0.1ns
+50 ns: min cut over 0.5 = 0.1ns
+90 ns: min cut over 0.5 = 0.1ns
+saved /home/hatch/workspace/kinescope/repo/experiments/G74_hb_formation_prefix_mid_horizons/results.json /home/hatch/workspace/kinescope/repo/experiments/G74_hb_formation_prefix_mid_horizons/results.csv
