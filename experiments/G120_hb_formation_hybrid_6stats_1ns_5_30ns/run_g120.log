@@ -1,0 +1,40 @@
+train (9610, 7) test (4972, 7)
+K11 origin vs hist last: max abs diff train 5.56e-07 test 6.08e-07
+p11 test: {'corr_prefix_gen': 0.809, 'corr_gen_full': 0.834, 'corr_prefix_full': 0.999, 'gen_minus_prefix_mean': -0.0986, 'gen_minus_prefix_std': 0.5375, 'gen_minus_full_mean': -0.0894, 'gen_minus_full_std': 0.4886}
+p12 test: {'corr_prefix_gen': 0.8085, 'corr_gen_full': 0.8336, 'corr_prefix_full': 0.999, 'gen_minus_prefix_mean': -0.0999, 'gen_minus_prefix_std': 0.538, 'gen_minus_full_mean': -0.0907, 'gen_minus_full_std': 0.4892}
+p13 test: {'corr_prefix_gen': 0.8056, 'corr_gen_full': 0.8306, 'corr_prefix_full': 0.999, 'gen_minus_prefix_mean': -0.0914, 'gen_minus_prefix_std': 0.5417, 'gen_minus_full_mean': -0.0823, 'gen_minus_full_std': 0.493}
+p14 test: {'corr_prefix_gen': 0.8076, 'corr_gen_full': 0.8324, 'corr_prefix_full': 0.999, 'gen_minus_prefix_mean': -0.0875, 'gen_minus_prefix_std': 0.5391, 'gen_minus_full_mean': -0.0783, 'gen_minus_full_std': 0.4906}
+p22 test: {'corr_prefix_gen': 0.8213, 'corr_gen_full': 0.8445, 'corr_prefix_full': 0.999, 'gen_minus_prefix_mean': -0.1386, 'gen_minus_prefix_std': 0.5215, 'gen_minus_full_mean': -0.1294, 'gen_minus_full_std': 0.4741}
+=== horizon 5 ns, test positives 312 ===
+  static_only auprc 0.3493
+  full_hist6 auprc 0.4648
+  prefix_hist6_1ns auprc 0.4825
+  gen_mean_only_p11 auprc 0.3482
+  mixed_p11 auprc 0.4635
+  gen_mean_only_p12 auprc 0.3501
+  mixed_p12 auprc 0.4815
+  gen_mean_only_p13 auprc 0.3336
+  mixed_p13 auprc 0.4454
+  gen_mean_only_p14 auprc 0.3351
+  mixed_p14 auprc 0.4786
+  gen_mean_only_p22 auprc 0.3634
+  mixed_p22 auprc 0.4941
+  base gain 0.1155, prefix_hist6 recovery 1.153, mixed deltas {'p11': -0.165, 'p12': -0.009, 'p13': -0.321, 'p14': -0.034, 'p22': 0.1}
+=== horizon 30 ns, test positives 345 ===
+  static_only auprc 0.3639
+  full_hist6 auprc 0.4264
+  prefix_hist6_1ns auprc 0.4517
+  gen_mean_only_p11 auprc 0.3745
+  mixed_p11 auprc 0.4505
+  gen_mean_only_p12 auprc 0.3767
+  mixed_p12 auprc 0.4588
+  gen_mean_only_p13 auprc 0.3683
+  mixed_p13 auprc 0.4441
+  gen_mean_only_p14 auprc 0.3734
+  mixed_p14 auprc 0.4589
+  gen_mean_only_p22 auprc 0.3823
+  mixed_p22 auprc 0.4557
+  base gain 0.0626, prefix_hist6 recovery 1.403, mixed deltas {'p11': -0.019, 'p12': 0.114, 'p13': -0.121, 'p14': 0.115, 'p22': 0.065}
+saved /home/hatch/workspace/g120/results.json
+  5 ns mixed deltas: {'p11': -0.165, 'p12': -0.009, 'p13': -0.321, 'p14': -0.034, 'p22': 0.1}
+  30 ns mixed deltas: {'p11': -0.019, 'p12': 0.114, 'p13': -0.121, 'p14': 0.115, 'p22': 0.065}
