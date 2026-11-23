@@ -126,5 +126,18 @@
   "mae": 0.3169977134667454
  },
  "ratio_teacher_unseen_std": 1.18762549940929,
- "ratio_teacher_unseen_absmean": 1.3623711779900114
+ "ratio_teacher_unseen_absmean": 1.3623711779900114,
+ "real_mean_spread": {
+  "teacher": {
+   "n": 11028,
+   "mean": 5.0840197110634415,
+   "std": 0.9489935685261336
+  },
+  "unseen_docd": {
+   "n": 14582,
+   "mean": 5.078444735613603,
+   "std": 0.8800103107672417
+  },
+  "definition": "std of the real mean (mean of the 11-point backward history, frames 0-10) over all candidates; teacher from K51 npz real_hist, unseen from K08 cache hist"
+ }
 }
