@@ -1,0 +1,38 @@
+{
+  "train": {
+    "n": 9610,
+    "gen_mean_sd": 0.7302908247624975,
+    "real_mean_sd": 0.8768959148325464,
+    "sd_ratio_alpha": 0.8328135784529856,
+    "correlation": 0.8316537713826666,
+    "regression_slope_gen_on_real": 0.6926125533791202,
+    "gen_minus_real_mean": -0.16805110100196852,
+    "gen_minus_real_sd": 0.48693655869367636,
+    "gen_mean_overall": 4.925652328534875,
+    "real_mean_overall": 5.093703429536844
+  },
+  "test": {
+    "n": 4972,
+    "gen_mean_sd": 0.7409711500504432,
+    "real_mean_sd": 0.8852537305829266,
+    "sd_ratio_alpha": 0.8370155633939262,
+    "correlation": 0.8444994421918979,
+    "regression_slope_gen_on_real": 0.7068591763921072,
+    "gen_minus_real_mean": -0.1293658024971393,
+    "gen_minus_real_sd": 0.4741496172147445,
+    "gen_mean_overall": 4.919586566140933,
+    "real_mean_overall": 5.048952368638073
+  },
+  "all": {
+    "n": 14582,
+    "gen_mean_sd": 0.733955571857739,
+    "real_mean_sd": 0.8800103107672417,
+    "sd_ratio_alpha": 0.8340306504111706,
+    "correlation": 0.83594595371625,
+    "regression_slope_gen_on_real": 0.6972045474865504,
+    "gen_minus_real_mean": -0.15486063987413895,
+    "gen_minus_real_sd": 0.48296296022537666,
+    "gen_mean_overall": 4.923584095739464,
+    "real_mean_overall": 5.078444735613603
+  }
+}
