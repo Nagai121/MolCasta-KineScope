@@ -1,7 +1,7 @@
 """G35: at 5 ns, does mixing help with the LONGER 0.5 ns prefix?
 (Doc D, hydrogen-bond formation, 5 ns)
 
-G26 measures the 0.1 ns prefix mixture at 5 ns (in progress).
+G26 measured the 0.1 ns prefix mixture at 5 ns (-0.169).
 This experiment asks the same question with the 0.5 ns prefix, whose
 mean alone recovers 0.770 at 1 ns (G02). If lengthening the prefix
 changes the mixture's benefit at 5 ns, it shows here.
