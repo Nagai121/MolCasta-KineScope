@@ -1,0 +1,2217 @@
+{
+  "label": "Salt-bridge dissociation, 1.0 ns prefix 6-statistic recovery uncertainty across horizons",
+  "phenomenon": "salt-bridge dissociation (K15 expanded conditions)",
+  "prefix_frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "bootstrap": {
+    "n_boot": 10000,
+    "seed": 42,
+    "method": "percentile",
+    "resampling_unit": "protein (30 test proteins, sampled with replacement; unlike the 2-protein bases, the bootstrap distribution takes many distinct values)",
+    "note": "AUPRC inside the bootstrap uses a numpy reimplementation of sklearn's average_precision_score (same threshold-grouping treatment of ties); it was verified to agree with sklearn to 1e-12 on all fitted conditions before use. Models were retrained per condition and horizon; pooled AUPRCs were verified against G143 records to 4 decimal places."
+  },
+  "horizons": {
+    "1": {
+      "test_positives": 101,
+      "auprc": {
+        "static_only": 0.3734017091925338,
+        "full_hist6": 0.5522159031068683,
+        "prefix_hist6_1.0ns": 0.5638183509787118
+      },
+      "full_gain": 0.1788141939143345,
+      "recovery": 1.0648854971625012,
+      "prefix_minus_static_auprc": 0.190416641786178,
+      "per_protein": {
+        "1mix_A": {
+          "n": 30,
+          "positives": 8,
+          "auprc": {
+            "static_only": 0.2562351172219593,
+            "full_hist6": 0.4441086691086691,
+            "prefix_hist6_1.0ns": 0.4444461034134947
+          },
+          "full_gain": 0.1878735518867098,
+          "recovery_prefix": 1.0017960713545733
+        },
+        "2qt4_A": {
+          "n": 15,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.07142857142857142,
+            "full_hist6": 0.07692307692307693,
+            "prefix_hist6_1.0ns": 0.08333333333333333
+          },
+          "full_gain": 0.005494505494505503,
+          "recovery_prefix": 2.1666666666666634
+        },
+        "1u6t_A": {
+          "n": 18,
+          "positives": 12,
+          "auprc": {
+            "static_only": 0.6341841641473994,
+            "full_hist6": 0.8177951677951678,
+            "prefix_hist6_1.0ns": 0.8585028397528398
+          },
+          "full_gain": 0.1836110036477684,
+          "recovery_prefix": 1.2217060587270896
+        },
+        "1m5q_I": {
+          "n": 14,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.6293040293040293,
+            "full_hist6": 0.5402564102564102,
+            "prefix_hist6_1.0ns": 0.5633333333333332
+          },
+          "full_gain": -0.08904761904761904,
+          "recovery_prefix": 0.7408473879062123
+        },
+        "4zi3_D": {
+          "n": 14,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.7833333333333332,
+            "full_hist6": 0.911111111111111,
+            "prefix_hist6_1.0ns": 0.9666666666666666
+          },
+          "full_gain": 0.12777777777777777,
+          "recovery_prefix": 1.4347826086956523
+        },
+        "6jpt_A": {
+          "n": 7,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.3595238095238095,
+            "full_hist6": 0.9166666666666665,
+            "prefix_hist6_1.0ns": 0.7555555555555555
+          },
+          "full_gain": 0.5571428571428569,
+          "recovery_prefix": 0.710826210826211
+        },
+        "1a62_A": {
+          "n": 14,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.3611111111111111,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 0.8333333333333333
+          },
+          "full_gain": 0.6388888888888888,
+          "recovery_prefix": 0.7391304347826086
+        },
+        "1y0n_A": {
+          "n": 5,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.7,
+            "full_hist6": 0.5833333333333333,
+            "prefix_hist6_1.0ns": 0.5
+          },
+          "full_gain": -0.1166666666666667,
+          "recovery_prefix": 1.7142857142857135
+        },
+        "2ftx_A": {
+          "n": 5,
+          "positives": 1,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 0.3333333333333333,
+            "prefix_hist6_1.0ns": 0.25
+          },
+          "full_gain": -0.6666666666666667,
+          "recovery_prefix": 1.1249999999999998
+        },
+        "2hu9_A": {
+          "n": 24,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.3168115942028985,
+            "full_hist6": 0.5453968253968254,
+            "prefix_hist6_1.0ns": 0.5342857142857143
+          },
+          "full_gain": 0.22858523119392693,
+          "recovery_prefix": 0.9513918241652071
+        },
+        "4zds_B": {
+          "n": 10,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.6,
+            "full_hist6": 0.75,
+            "prefix_hist6_1.0ns": 0.775
+          },
+          "full_gain": 0.15000000000000002,
+          "recovery_prefix": 1.1666666666666667
+        },
+        "3rjs_A": {
+          "n": 10,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.6555555555555554,
+            "full_hist6": 0.5444444444444444,
+            "prefix_hist6_1.0ns": 0.5777777777777777
+          },
+          "full_gain": -0.11111111111111105,
+          "recovery_prefix": 0.6999999999999998
+        },
+        "1sei_A": {
+          "n": 21,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.37976190476190474,
+            "full_hist6": 0.4625,
+            "prefix_hist6_1.0ns": 0.4375
+          },
+          "full_gain": 0.08273809523809528,
+          "recovery_prefix": 0.6978417266187049
+        },
+        "1t8k_A": {
+          "n": 12,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.7875,
+            "full_hist6": 0.6791666666666667,
+            "prefix_hist6_1.0ns": 0.8041666666666667
+          },
+          "full_gain": -0.10833333333333328,
+          "recovery_prefix": -0.1538461538461544
+        },
+        "3pkz_A": {
+          "n": 8,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.6984126984126985,
+            "full_hist6": 0.5888888888888888,
+            "prefix_hist6_1.0ns": 0.5555555555555556
+          },
+          "full_gain": -0.10952380952380969,
+          "recovery_prefix": 1.304347826086955
+        },
+        "1uha_A": {
+          "n": 1,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "5yrv_I": {
+          "n": 25,
+          "positives": 7,
+          "auprc": {
+            "static_only": 0.323572459286745,
+            "full_hist6": 0.6857142857142857,
+            "prefix_hist6_1.0ns": 0.5674969987995198
+          },
+          "full_gain": 0.3621418264275407,
+          "recovery_prefix": 0.6735608032881573
+        },
+        "1pch_A": {
+          "n": 3,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "4ytw_C": {
+          "n": 14,
+          "positives": 1,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 0.5
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "5ii7_A": {
+          "n": 19,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.376031746031746,
+            "full_hist6": 0.5422222222222222,
+            "prefix_hist6_1.0ns": 0.5961904761904762
+          },
+          "full_gain": 0.16619047619047617,
+          "recovery_prefix": 1.3247373447946516
+        },
+        "3l9a_X": {
+          "n": 6,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.5666666666666667,
+            "full_hist6": 0.8041666666666667,
+            "prefix_hist6_1.0ns": 0.6791666666666667
+          },
+          "full_gain": 0.23750000000000004,
+          "recovery_prefix": 0.4736842105263159
+        },
+        "6in7_A": {
+          "n": 6,
+          "positives": 1,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "2end_A": {
+          "n": 27,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.7633458646616541,
+            "full_hist6": 0.7345238095238095,
+            "prefix_hist6_1.0ns": 0.8178571428571427
+          },
+          "full_gain": -0.028822055137844638,
+          "recovery_prefix": -1.8913043478260818
+        },
+        "3jtz_A": {
+          "n": 10,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.7928571428571428,
+            "full_hist6": 0.8541666666666666,
+            "prefix_hist6_1.0ns": 0.8541666666666666
+          },
+          "full_gain": 0.061309523809523814,
+          "recovery_prefix": 1.0
+        },
+        "6fc0_B": {
+          "n": 7,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.6984126984126984,
+            "full_hist6": 0.7555555555555555,
+            "prefix_hist6_1.0ns": 0.7555555555555555
+          },
+          "full_gain": 0.05714285714285716,
+          "recovery_prefix": 1.0
+        },
+        "1l9l_A": {
+          "n": 5,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.2,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.8,
+          "recovery_prefix": 1.0
+        },
+        "2i9x_A": {
+          "n": 13,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.6269230769230769,
+            "full_hist6": 0.5858119658119658,
+            "prefix_hist6_1.0ns": 0.7112087912087912
+          },
+          "full_gain": -0.0411111111111111,
+          "recovery_prefix": -2.050193050193051
+        },
+        "4cv4_A": {
+          "n": 4,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.3333333333333333,
+            "full_hist6": 0.5,
+            "prefix_hist6_1.0ns": 0.5
+          },
+          "full_gain": 0.16666666666666669,
+          "recovery_prefix": 1.0
+        },
+        "3bwu_D": {
+          "n": 7,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.14285714285714285,
+            "full_hist6": 0.5,
+            "prefix_hist6_1.0ns": 0.5
+          },
+          "full_gain": 0.35714285714285715,
+          "recovery_prefix": 1.0
+        },
+        "2hng_A": {
+          "n": 6,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        }
+      }
+    },
+    "5": {
+      "test_positives": 139,
+      "auprc": {
+        "static_only": 0.4640999974218541,
+        "full_hist6": 0.5780152766591036,
+        "prefix_hist6_1.0ns": 0.6140927270779288
+      },
+      "full_gain": 0.11391527923724948,
+      "recovery": 1.3167042266883915,
+      "prefix_minus_static_auprc": 0.14999272965607474,
+      "per_protein": {
+        "1mix_A": {
+          "n": 30,
+          "positives": 11,
+          "auprc": {
+            "static_only": 0.6469054378564407,
+            "full_hist6": 0.6299133529009691,
+            "prefix_hist6_1.0ns": 0.6465418639331683
+          },
+          "full_gain": -0.016992084955471665,
+          "recovery_prefix": 0.021396663459794497
+        },
+        "2qt4_A": {
+          "n": 15,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.625,
+            "full_hist6": 0.41666666666666663,
+            "prefix_hist6_1.0ns": 0.3611111111111111
+          },
+          "full_gain": -0.20833333333333337,
+          "recovery_prefix": 1.2666666666666664
+        },
+        "1u6t_A": {
+          "n": 18,
+          "positives": 11,
+          "auprc": {
+            "static_only": 0.6454148050404735,
+            "full_hist6": 0.829437006843424,
+            "prefix_hist6_1.0ns": 0.7974876430758784
+          },
+          "full_gain": 0.18402220180295048,
+          "recovery_prefix": 0.8263831023945862
+        },
+        "1m5q_I": {
+          "n": 14,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.3558594183594184,
+            "full_hist6": 0.538034188034188,
+            "prefix_hist6_1.0ns": 0.5195156695156695
+          },
+          "full_gain": 0.1821747696747696,
+          "recovery_prefix": 0.8983475123828675
+        },
+        "4zi3_D": {
+          "n": 14,
+          "positives": 8,
+          "auprc": {
+            "static_only": 0.6181433150183151,
+            "full_hist6": 0.5601887695637695,
+            "prefix_hist6_1.0ns": 0.6263548951048952
+          },
+          "full_gain": -0.05795454545454559,
+          "recovery_prefix": -0.14169000933706757
+        },
+        "6jpt_A": {
+          "n": 7,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.5428571428571428,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 0.95
+          },
+          "full_gain": 0.4571428571428572,
+          "recovery_prefix": 0.8906249999999999
+        },
+        "1a62_A": {
+          "n": 14,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.5401785714285714,
+            "full_hist6": 0.8303571428571428,
+            "prefix_hist6_1.0ns": 0.9166666666666666
+          },
+          "full_gain": 0.2901785714285714,
+          "recovery_prefix": 1.2974358974358975
+        },
+        "1y0n_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.8055555555555556,
+            "full_hist6": 0.5888888888888889,
+            "prefix_hist6_1.0ns": 0.7
+          },
+          "full_gain": -0.21666666666666667,
+          "recovery_prefix": 0.4871794871794875
+        },
+        "2ftx_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.9166666666666665,
+            "full_hist6": 0.5888888888888889,
+            "prefix_hist6_1.0ns": 0.8666666666666667
+          },
+          "full_gain": -0.3277777777777776,
+          "recovery_prefix": 0.15254237288135547
+        },
+        "2hu9_A": {
+          "n": 24,
+          "positives": 8,
+          "auprc": {
+            "static_only": 0.4154788011695906,
+            "full_hist6": 0.643154761904762,
+            "prefix_hist6_1.0ns": 0.7124255952380952
+          },
+          "full_gain": 0.22767596073517138,
+          "recovery_prefix": 1.3042518547397628
+        },
+        "4zds_B": {
+          "n": 10,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.5428571428571429,
+            "full_hist6": 0.6220238095238095,
+            "prefix_hist6_1.0ns": 0.3986111111111111
+          },
+          "full_gain": 0.07916666666666661,
+          "recovery_prefix": -1.8220551378446141
+        },
+        "3rjs_A": {
+          "n": 10,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.7361111111111112,
+            "full_hist6": 0.7470238095238095,
+            "prefix_hist6_1.0ns": 0.7470238095238095
+          },
+          "full_gain": 0.010912698412698374,
+          "recovery_prefix": 1.0
+        },
+        "1sei_A": {
+          "n": 21,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.10101010101010101,
+            "full_hist6": 0.5625,
+            "prefix_hist6_1.0ns": 0.45
+          },
+          "full_gain": 0.461489898989899,
+          "recovery_prefix": 0.7562243502051984
+        },
+        "1t8k_A": {
+          "n": 12,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.46590909090909094,
+            "full_hist6": 0.37976190476190474,
+            "prefix_hist6_1.0ns": 0.45
+          },
+          "full_gain": -0.0861471861471862,
+          "recovery_prefix": 0.184673366834171
+        },
+        "3pkz_A": {
+          "n": 8,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.5317460317460317,
+            "full_hist6": 0.7916666666666666,
+            "prefix_hist6_1.0ns": 0.7916666666666666
+          },
+          "full_gain": 0.2599206349206349,
+          "recovery_prefix": 1.0
+        },
+        "1uha_A": {
+          "n": 1,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "5yrv_I": {
+          "n": 25,
+          "positives": 12,
+          "auprc": {
+            "static_only": 0.48384799539051454,
+            "full_hist6": 0.639178863791867,
+            "prefix_hist6_1.0ns": 0.6408635278120572
+          },
+          "full_gain": 0.1553308684013524,
+          "recovery_prefix": 1.0108456486307498
+        },
+        "1pch_A": {
+          "n": 3,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "4ytw_C": {
+          "n": 14,
+          "positives": 1,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "5ii7_A": {
+          "n": 19,
+          "positives": 9,
+          "auprc": {
+            "static_only": 0.5044518752852085,
+            "full_hist6": 0.8949445616112284,
+            "prefix_hist6_1.0ns": 0.9017195767195769
+          },
+          "full_gain": 0.39049268632601986,
+          "recovery_prefix": 1.0173499154928913
+        },
+        "3l9a_X": {
+          "n": 6,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.9166666666666666,
+            "full_hist6": 0.9166666666666666,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "6in7_A": {
+          "n": 6,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.5,
+            "full_hist6": 0.5,
+            "prefix_hist6_1.0ns": 0.8333333333333333
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "2end_A": {
+          "n": 27,
+          "positives": 10,
+          "auprc": {
+            "static_only": 0.5649900896840255,
+            "full_hist6": 0.6492810457516339,
+            "prefix_hist6_1.0ns": 0.6578427128427128
+          },
+          "full_gain": 0.08429095606760839,
+          "recovery_prefix": 1.1015727842048877
+        },
+        "3jtz_A": {
+          "n": 10,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.6453703703703704,
+            "full_hist6": 0.8555555555555555,
+            "prefix_hist6_1.0ns": 0.8178571428571427
+          },
+          "full_gain": 0.21018518518518514,
+          "recovery_prefix": 0.8206419131529259
+        },
+        "6fc0_B": {
+          "n": 7,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.5873015873015872,
+            "full_hist6": 0.8095238095238095,
+            "prefix_hist6_1.0ns": 0.8095238095238095
+          },
+          "full_gain": 0.22222222222222232,
+          "recovery_prefix": 1.0
+        },
+        "1l9l_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.7555555555555555,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.24444444444444446,
+          "recovery_prefix": 1.0
+        },
+        "2i9x_A": {
+          "n": 13,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.5566233766233766,
+            "full_hist6": 0.46333333333333326,
+            "prefix_hist6_1.0ns": 0.4688888888888889
+          },
+          "full_gain": -0.09329004329004331,
+          "recovery_prefix": 0.9404485692188699
+        },
+        "4cv4_A": {
+          "n": 4,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.5833333333333333,
+            "full_hist6": 0.5833333333333333,
+            "prefix_hist6_1.0ns": 0.5833333333333333
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "3bwu_D": {
+          "n": 7,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.8055555555555556,
+            "full_hist6": 0.8055555555555556,
+            "prefix_hist6_1.0ns": 0.8055555555555556
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "2hng_A": {
+          "n": 6,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.75,
+            "full_hist6": 0.5,
+            "prefix_hist6_1.0ns": 0.5
+          },
+          "full_gain": -0.25,
+          "recovery_prefix": 1.0
+        }
+      }
+    },
+    "10": {
+      "test_positives": 131,
+      "auprc": {
+        "static_only": 0.3572141129163314,
+        "full_hist6": 0.5352768950075466,
+        "prefix_hist6_1.0ns": 0.5542866745769814
+      },
+      "full_gain": 0.17806278209121518,
+      "recovery": 1.1067588596908298,
+      "prefix_minus_static_auprc": 0.19707256166065001,
+      "per_protein": {
+        "1mix_A": {
+          "n": 30,
+          "positives": 12,
+          "auprc": {
+            "static_only": 0.5501156495200107,
+            "full_hist6": 0.8098735715115027,
+            "prefix_hist6_1.0ns": 0.8576583411142235
+          },
+          "full_gain": 0.25975792199149206,
+          "recovery_prefix": 1.1839588538296277
+        },
+        "2qt4_A": {
+          "n": 15,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.14090909090909093,
+            "full_hist6": 0.225,
+            "prefix_hist6_1.0ns": 0.5666666666666667
+          },
+          "full_gain": 0.08409090909090908,
+          "recovery_prefix": 5.063063063063064
+        },
+        "1u6t_A": {
+          "n": 18,
+          "positives": 9,
+          "auprc": {
+            "static_only": 0.4685615854733502,
+            "full_hist6": 0.6494691038808686,
+            "prefix_hist6_1.0ns": 0.611046361046361
+          },
+          "full_gain": 0.18090751840751845,
+          "recovery_prefix": 0.7876111331760394
+        },
+        "1m5q_I": {
+          "n": 14,
+          "positives": 8,
+          "auprc": {
+            "static_only": 0.816693722943723,
+            "full_hist6": 0.7557921245421245,
+            "prefix_hist6_1.0ns": 0.812202380952381
+          },
+          "full_gain": -0.06090159840159848,
+          "recovery_prefix": 0.07374752238398002
+        },
+        "4zi3_D": {
+          "n": 14,
+          "positives": 9,
+          "auprc": {
+            "static_only": 0.6017787767787768,
+            "full_hist6": 0.6936618936618937,
+            "prefix_hist6_1.0ns": 0.7896214896214897
+          },
+          "full_gain": 0.0918831168831169,
+          "recovery_prefix": 2.0443659206910096
+        },
+        "6jpt_A": {
+          "n": 7,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.33730158730158727,
+            "full_hist6": 0.9166666666666665,
+            "prefix_hist6_1.0ns": 0.8666666666666667
+          },
+          "full_gain": 0.5793650793650793,
+          "recovery_prefix": 0.9136986301369866
+        },
+        "1a62_A": {
+          "n": 14,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.5194805194805194,
+            "full_hist6": 0.9166666666666665,
+            "prefix_hist6_1.0ns": 0.9166666666666665
+          },
+          "full_gain": 0.3971861471861471,
+          "recovery_prefix": 1.0
+        },
+        "1y0n_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.7,
+            "full_hist6": 0.5333333333333333,
+            "prefix_hist6_1.0ns": 0.5333333333333333
+          },
+          "full_gain": -0.16666666666666663,
+          "recovery_prefix": 1.0
+        },
+        "2ftx_A": {
+          "n": 5,
+          "positives": 2,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 0.75,
+            "prefix_hist6_1.0ns": 0.75
+          },
+          "full_gain": -0.25,
+          "recovery_prefix": 1.0
+        },
+        "2hu9_A": {
+          "n": 24,
+          "positives": 7,
+          "auprc": {
+            "static_only": 0.21907016429760312,
+            "full_hist6": 0.4214091464091464,
+            "prefix_hist6_1.0ns": 0.3876226775295098
+          },
+          "full_gain": 0.20233898211154328,
+          "recovery_prefix": 0.8330204663132527
+        },
+        "4zds_B": {
+          "n": 10,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.2619047619047619,
+            "full_hist6": 0.3888888888888889,
+            "prefix_hist6_1.0ns": 0.47619047619047616
+          },
+          "full_gain": 0.12698412698412698,
+          "recovery_prefix": 1.6874999999999998
+        },
+        "3rjs_A": {
+          "n": 10,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.7777777777777777,
+            "full_hist6": 0.5694444444444444,
+            "prefix_hist6_1.0ns": 0.5666666666666667
+          },
+          "full_gain": -0.20833333333333326,
+          "recovery_prefix": 1.0133333333333332
+        },
+        "1sei_A": {
+          "n": 21,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.48831168831168825,
+            "full_hist6": 0.38359810697272,
+            "prefix_hist6_1.0ns": 0.36191696375519905
+          },
+          "full_gain": -0.10471358133896824,
+          "recovery_prefix": 1.2070518736947498
+        },
+        "1t8k_A": {
+          "n": 12,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.34851190476190474,
+            "full_hist6": 0.41547619047619044,
+            "prefix_hist6_1.0ns": 0.5178571428571428
+          },
+          "full_gain": 0.0669642857142857,
+          "recovery_prefix": 2.528888888888889
+        },
+        "3pkz_A": {
+          "n": 8,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.4206349206349206,
+            "full_hist6": 0.7555555555555555,
+            "prefix_hist6_1.0ns": 0.8055555555555556
+          },
+          "full_gain": 0.33492063492063495,
+          "recovery_prefix": 1.1492890995260665
+        },
+        "1uha_A": {
+          "n": 1,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "5yrv_I": {
+          "n": 25,
+          "positives": 16,
+          "auprc": {
+            "static_only": 0.5246726823503854,
+            "full_hist6": 0.5957425283573234,
+            "prefix_hist6_1.0ns": 0.7024532104892012
+          },
+          "full_gain": 0.071069846006938,
+          "recovery_prefix": 2.5014902680591202
+        },
+        "1pch_A": {
+          "n": 3,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "4ytw_C": {
+          "n": 14,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.16437728937728938,
+            "full_hist6": 0.41111111111111115,
+            "prefix_hist6_1.0ns": 0.7555555555555555
+          },
+          "full_gain": 0.24673382173382177,
+          "recovery_prefix": 2.3960163305703324
+        },
+        "5ii7_A": {
+          "n": 19,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.4111111111111111,
+            "full_hist6": 0.8055555555555556,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.3944444444444445,
+          "recovery_prefix": 1.492957746478873
+        },
+        "3l9a_X": {
+          "n": 6,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.8766666666666667,
+            "full_hist6": 0.9666666666666666,
+            "prefix_hist6_1.0ns": 0.9666666666666666
+          },
+          "full_gain": 0.08999999999999986,
+          "recovery_prefix": 1.0
+        },
+        "6in7_A": {
+          "n": 6,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.5833333333333333,
+            "full_hist6": 0.8333333333333333,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.25,
+          "recovery_prefix": 1.666666666666667
+        },
+        "2end_A": {
+          "n": 27,
+          "positives": 7,
+          "auprc": {
+            "static_only": 0.3483636977058029,
+            "full_hist6": 0.5026315789473684,
+            "prefix_hist6_1.0ns": 0.41784112430397263
+          },
+          "full_gain": 0.15426788124156554,
+          "recovery_prefix": 0.45036870953958447
+        },
+        "3jtz_A": {
+          "n": 10,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.9666666666666666,
+            "full_hist6": 0.696190476190476,
+            "prefix_hist6_1.0ns": 0.696190476190476
+          },
+          "full_gain": -0.27047619047619054,
+          "recovery_prefix": 1.0
+        },
+        "6fc0_B": {
+          "n": 7,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.8095238095238095,
+            "full_hist6": 0.5873015873015872,
+            "prefix_hist6_1.0ns": 0.5873015873015872
+          },
+          "full_gain": -0.22222222222222232,
+          "recovery_prefix": 1.0
+        },
+        "1l9l_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.7,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.30000000000000004,
+          "recovery_prefix": 1.0
+        },
+        "2i9x_A": {
+          "n": 13,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.5548611111111111,
+            "full_hist6": 0.33207070707070707,
+            "prefix_hist6_1.0ns": 0.2714285714285714
+          },
+          "full_gain": -0.22279040404040407,
+          "recovery_prefix": 1.2721936606889852
+        },
+        "4cv4_A": {
+          "n": 4,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.75,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.25,
+          "recovery_prefix": 1.0
+        },
+        "3bwu_D": {
+          "n": 7,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "2hng_A": {
+          "n": 6,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.2,
+            "full_hist6": 0.2,
+            "prefix_hist6_1.0ns": 0.5
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        }
+      }
+    },
+    "30": {
+      "test_positives": 149,
+      "auprc": {
+        "static_only": 0.47994505071240295,
+        "full_hist6": 0.543228544547926,
+        "prefix_hist6_1.0ns": 0.5626985654920569
+      },
+      "full_gain": 0.06328349383552306,
+      "recovery": 1.3076634958672542,
+      "prefix_minus_static_auprc": 0.08275351477965392,
+      "per_protein": {
+        "1mix_A": {
+          "n": 30,
+          "positives": 12,
+          "auprc": {
+            "static_only": 0.39338978922312257,
+            "full_hist6": 0.7200066137566139,
+            "prefix_hist6_1.0ns": 0.7320029507529509
+          },
+          "full_gain": 0.32661682453349133,
+          "recovery_prefix": 1.0367290846497923
+        },
+        "2qt4_A": {
+          "n": 15,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.2,
+            "full_hist6": 0.07142857142857142,
+            "prefix_hist6_1.0ns": 0.06666666666666667
+          },
+          "full_gain": -0.1285714285714286,
+          "recovery_prefix": 1.0370370370370372
+        },
+        "1u6t_A": {
+          "n": 18,
+          "positives": 9,
+          "auprc": {
+            "static_only": 0.5295873335089022,
+            "full_hist6": 0.5853581603581604,
+            "prefix_hist6_1.0ns": 0.6732856105405125
+          },
+          "full_gain": 0.05577082684925816,
+          "recovery_prefix": 2.576585020337057
+        },
+        "1m5q_I": {
+          "n": 14,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.2759129759129759,
+            "full_hist6": 0.3235897435897436,
+            "prefix_hist6_1.0ns": 0.33298368298368297
+          },
+          "full_gain": 0.04767676767676765,
+          "recovery_prefix": 1.197033898305085
+        },
+        "4zi3_D": {
+          "n": 14,
+          "positives": 10,
+          "auprc": {
+            "static_only": 0.741024531024531,
+            "full_hist6": 0.735540293040293,
+            "prefix_hist6_1.0ns": 0.7473701298701299
+          },
+          "full_gain": -0.005484237984238027,
+          "recovery_prefix": -1.1570611749228221
+        },
+        "6jpt_A": {
+          "n": 7,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.6333333333333333,
+            "full_hist6": 0.8333333333333333,
+            "prefix_hist6_1.0ns": 0.8333333333333333
+          },
+          "full_gain": 0.19999999999999996,
+          "recovery_prefix": 1.0
+        },
+        "1a62_A": {
+          "n": 14,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.5131313131313131,
+            "full_hist6": 0.731111111111111,
+            "prefix_hist6_1.0ns": 0.7333333333333334
+          },
+          "full_gain": 0.21797979797979794,
+          "recovery_prefix": 1.0101946246524565
+        },
+        "1y0n_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.5888888888888889,
+            "full_hist6": 0.8055555555555556,
+            "prefix_hist6_1.0ns": 0.5888888888888889
+          },
+          "full_gain": 0.21666666666666667,
+          "recovery_prefix": 0.0
+        },
+        "2ftx_A": {
+          "n": 5,
+          "positives": 2,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 0.5,
+            "prefix_hist6_1.0ns": 0.5
+          },
+          "full_gain": -0.5,
+          "recovery_prefix": 1.0
+        },
+        "2hu9_A": {
+          "n": 24,
+          "positives": 7,
+          "auprc": {
+            "static_only": 0.2973559120617944,
+            "full_hist6": 0.4996096295009338,
+            "prefix_hist6_1.0ns": 0.5391929499072357
+          },
+          "full_gain": 0.2022537174391394,
+          "recovery_prefix": 1.1957112131608307
+        },
+        "4zds_B": {
+          "n": 10,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.7533333333333332,
+            "full_hist6": 0.8583333333333332,
+            "prefix_hist6_1.0ns": 0.7116666666666667
+          },
+          "full_gain": 0.10499999999999998,
+          "recovery_prefix": -0.39682539682539547
+        },
+        "3rjs_A": {
+          "n": 10,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.7392857142857143,
+            "full_hist6": 0.6857142857142857,
+            "prefix_hist6_1.0ns": 0.7611111111111111
+          },
+          "full_gain": -0.0535714285714286,
+          "recovery_prefix": -0.4074074074074057
+        },
+        "1sei_A": {
+          "n": 21,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.7560606060606061,
+            "full_hist6": 0.499047619047619,
+            "prefix_hist6_1.0ns": 0.5330237358101135
+          },
+          "full_gain": -0.2570129870129871,
+          "recovery_prefix": 0.8678038913232907
+        },
+        "1t8k_A": {
+          "n": 12,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.8218253968253967,
+            "full_hist6": 0.43872053872053873,
+            "prefix_hist6_1.0ns": 0.47239057239057247
+          },
+          "full_gain": -0.38310485810485795,
+          "recovery_prefix": 0.9121127467905457
+        },
+        "3pkz_A": {
+          "n": 8,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.45,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 0.8333333333333333
+          },
+          "full_gain": 0.55,
+          "recovery_prefix": 0.6969696969696968
+        },
+        "1uha_A": {
+          "n": 1,
+          "positives": 1,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "5yrv_I": {
+          "n": 25,
+          "positives": 15,
+          "auprc": {
+            "static_only": 0.5995618356905206,
+            "full_hist6": 0.6127136269527574,
+            "prefix_hist6_1.0ns": 0.6861052836052836
+          },
+          "full_gain": 0.013151791262236867,
+          "recovery_prefix": 6.580354431510617
+        },
+        "1pch_A": {
+          "n": 3,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "4ytw_C": {
+          "n": 14,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.6666666666666666,
+            "full_hist6": 0.3055555555555556,
+            "prefix_hist6_1.0ns": 0.29444444444444445
+          },
+          "full_gain": -0.36111111111111105,
+          "recovery_prefix": 1.0307692307692309
+        },
+        "5ii7_A": {
+          "n": 19,
+          "positives": 7,
+          "auprc": {
+            "static_only": 0.6183473389355743,
+            "full_hist6": 0.6823438466295608,
+            "prefix_hist6_1.0ns": 0.7952380952380951
+          },
+          "full_gain": 0.06399650769398657,
+          "recovery_prefix": 2.764068894952253
+        },
+        "3l9a_X": {
+          "n": 6,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.81,
+            "full_hist6": 0.71,
+            "prefix_hist6_1.0ns": 0.81
+          },
+          "full_gain": -0.10000000000000009,
+          "recovery_prefix": -0.0
+        },
+        "6in7_A": {
+          "n": 6,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.6333333333333333,
+            "full_hist6": 0.8666666666666667,
+            "prefix_hist6_1.0ns": 0.9166666666666665
+          },
+          "full_gain": 0.2333333333333334,
+          "recovery_prefix": 1.2142857142857135
+        },
+        "2end_A": {
+          "n": 27,
+          "positives": 11,
+          "auprc": {
+            "static_only": 0.5406008529003181,
+            "full_hist6": 0.4870031038480237,
+            "prefix_hist6_1.0ns": 0.48905089266051827
+          },
+          "full_gain": -0.05359774905229442,
+          "recovery_prefix": 0.9617933803433317
+        },
+        "3jtz_A": {
+          "n": 10,
+          "positives": 7,
+          "auprc": {
+            "static_only": 0.9325396825396826,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.06746031746031744,
+          "recovery_prefix": 1.0
+        },
+        "6fc0_B": {
+          "n": 7,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.8766666666666667,
+            "full_hist6": 0.8528571428571428,
+            "prefix_hist6_1.0ns": 0.8261904761904761
+          },
+          "full_gain": -0.023809523809523947,
+          "recovery_prefix": 2.1199999999999912
+        },
+        "1l9l_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 0.8055555555555556,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": -0.19444444444444442,
+          "recovery_prefix": -0.0
+        },
+        "2i9x_A": {
+          "n": 13,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.7112087912087912,
+            "full_hist6": 0.8253968253968254,
+            "prefix_hist6_1.0ns": 0.7861904761904761
+          },
+          "full_gain": 0.11418803418803414,
+          "recovery_prefix": 0.6566509837467916
+        },
+        "4cv4_A": {
+          "n": 4,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.5,
+            "full_hist6": 0.5,
+            "prefix_hist6_1.0ns": 0.5
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "3bwu_D": {
+          "n": 7,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.5,
+            "full_hist6": 0.3333333333333333,
+            "prefix_hist6_1.0ns": 0.25
+          },
+          "full_gain": -0.16666666666666669,
+          "recovery_prefix": 1.4999999999999998
+        },
+        "2hng_A": {
+          "n": 6,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.5833333333333333,
+            "full_hist6": 0.8333333333333333,
+            "prefix_hist6_1.0ns": 0.8333333333333333
+          },
+          "full_gain": 0.25,
+          "recovery_prefix": 1.0
+        }
+      }
+    },
+    "50": {
+      "test_positives": 166,
+      "auprc": {
+        "static_only": 0.48632671783312764,
+        "full_hist6": 0.6165250269439089,
+        "prefix_hist6_1.0ns": 0.5775778084090629
+      },
+      "full_gain": 0.13019830911078123,
+      "recovery": 0.7008623322311573,
+      "prefix_minus_static_auprc": 0.09125109057593528,
+      "per_protein": {
+        "1mix_A": {
+          "n": 30,
+          "positives": 12,
+          "auprc": {
+            "static_only": 0.37972750399055627,
+            "full_hist6": 0.6128892136564771,
+            "prefix_hist6_1.0ns": 0.6734050671550672
+          },
+          "full_gain": 0.2331617096659208,
+          "recovery_prefix": 1.2595445606626343
+        },
+        "2qt4_A": {
+          "n": 15,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "1u6t_A": {
+          "n": 18,
+          "positives": 11,
+          "auprc": {
+            "static_only": 0.8723005455625777,
+            "full_hist6": 0.8122571872571873,
+            "prefix_hist6_1.0ns": 0.8232323232323233
+          },
+          "full_gain": -0.060043358305390426,
+          "recovery_prefix": 0.81721315587788
+        },
+        "1m5q_I": {
+          "n": 14,
+          "positives": 10,
+          "auprc": {
+            "static_only": 0.9133866133866134,
+            "full_hist6": 0.791024531024531,
+            "prefix_hist6_1.0ns": 0.8017388167388166
+          },
+          "full_gain": -0.12236208236208246,
+          "recovery_prefix": 0.9124378605900073
+        },
+        "4zi3_D": {
+          "n": 14,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.7672619047619047,
+            "full_hist6": 0.7805194805194805,
+            "prefix_hist6_1.0ns": 0.6716422466422466
+          },
+          "full_gain": 0.013257575757575801,
+          "recovery_prefix": -7.212454212454188
+        },
+        "6jpt_A": {
+          "n": 7,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.8261904761904761,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 0.8261904761904761
+          },
+          "full_gain": 0.17380952380952386,
+          "recovery_prefix": 0.0
+        },
+        "1a62_A": {
+          "n": 14,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.5427609427609428,
+            "full_hist6": 0.5652777777777778,
+            "prefix_hist6_1.0ns": 0.6527777777777778
+          },
+          "full_gain": 0.02251683501683499,
+          "recovery_prefix": 4.88598130841122
+        },
+        "1y0n_A": {
+          "n": 5,
+          "positives": 5,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "2ftx_A": {
+          "n": 5,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.75,
+            "full_hist6": 0.5,
+            "prefix_hist6_1.0ns": 0.41666666666666663
+          },
+          "full_gain": -0.25,
+          "recovery_prefix": 1.3333333333333335
+        },
+        "2hu9_A": {
+          "n": 24,
+          "positives": 12,
+          "auprc": {
+            "static_only": 0.4831683952965417,
+            "full_hist6": 0.5829445633915449,
+            "prefix_hist6_1.0ns": 0.5298171936758893
+          },
+          "full_gain": 0.09977616809500317,
+          "recovery_prefix": 0.4675344751156443
+        },
+        "4zds_B": {
+          "n": 10,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.8333333333333333,
+            "full_hist6": 0.72,
+            "prefix_hist6_1.0ns": 0.7
+          },
+          "full_gain": -0.11333333333333329,
+          "recovery_prefix": 1.1764705882352944
+        },
+        "3rjs_A": {
+          "n": 10,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.885,
+            "full_hist6": 0.6888888888888889,
+            "prefix_hist6_1.0ns": 0.7088888888888889
+          },
+          "full_gain": -0.19611111111111112,
+          "recovery_prefix": 0.8980169971671387
+        },
+        "1sei_A": {
+          "n": 21,
+          "positives": 9,
+          "auprc": {
+            "static_only": 0.722310405643739,
+            "full_hist6": 0.7609126984126986,
+            "prefix_hist6_1.0ns": 0.7782848324514993
+          },
+          "full_gain": 0.038602292768959545,
+          "recovery_prefix": 1.4500285551113627
+        },
+        "1t8k_A": {
+          "n": 12,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.32708333333333334,
+            "full_hist6": 0.5861111111111111,
+            "prefix_hist6_1.0ns": 0.5682539682539682
+          },
+          "full_gain": 0.2590277777777778,
+          "recovery_prefix": 0.9310608962083491
+        },
+        "3pkz_A": {
+          "n": 8,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.6916666666666667,
+            "full_hist6": 0.6488095238095237,
+            "prefix_hist6_1.0ns": 0.7321428571428572
+          },
+          "full_gain": -0.04285714285714293,
+          "recovery_prefix": -0.9444444444444448
+        },
+        "1uha_A": {
+          "n": 1,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "5yrv_I": {
+          "n": 25,
+          "positives": 15,
+          "auprc": {
+            "static_only": 0.5450248842805041,
+            "full_hist6": 0.6915296228053665,
+            "prefix_hist6_1.0ns": 0.5709730200650917
+          },
+          "full_gain": 0.14650473852486234,
+          "recovery_prefix": 0.1771146520300711
+        },
+        "1pch_A": {
+          "n": 3,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.5,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 0.3333333333333333
+          },
+          "full_gain": 0.5,
+          "recovery_prefix": -0.33333333333333337
+        },
+        "4ytw_C": {
+          "n": 14,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.5232900432900432,
+            "full_hist6": 0.43,
+            "prefix_hist6_1.0ns": 0.41025641025641024
+          },
+          "full_gain": -0.09329004329004326,
+          "recovery_prefix": 1.2116366232375515
+        },
+        "5ii7_A": {
+          "n": 19,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.5174242424242425,
+            "full_hist6": 0.8134920634920635,
+            "prefix_hist6_1.0ns": 0.6246031746031747
+          },
+          "full_gain": 0.29606782106782104,
+          "recovery_prefix": 0.36200804191543834
+        },
+        "3l9a_X": {
+          "n": 6,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.71,
+            "full_hist6": 0.71,
+            "prefix_hist6_1.0ns": 0.71
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "6in7_A": {
+          "n": 6,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.7333333333333333,
+            "full_hist6": 0.8541666666666666,
+            "prefix_hist6_1.0ns": 0.95
+          },
+          "full_gain": 0.12083333333333335,
+          "recovery_prefix": 1.7931034482758619
+        },
+        "2end_A": {
+          "n": 27,
+          "positives": 12,
+          "auprc": {
+            "static_only": 0.3808457874827844,
+            "full_hist6": 0.5790911835748792,
+            "prefix_hist6_1.0ns": 0.5448926237970861
+          },
+          "full_gain": 0.1982453960920948,
+          "recovery_prefix": 0.8274938008552484
+        },
+        "3jtz_A": {
+          "n": 10,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.911111111111111,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.08888888888888902,
+          "recovery_prefix": 1.0
+        },
+        "6fc0_B": {
+          "n": 7,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.81,
+            "full_hist6": 0.5961904761904762,
+            "prefix_hist6_1.0ns": 0.5961904761904762
+          },
+          "full_gain": -0.2138095238095239,
+          "recovery_prefix": 1.0
+        },
+        "1l9l_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.4777777777777778,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.5222222222222221,
+          "recovery_prefix": 1.0
+        },
+        "2i9x_A": {
+          "n": 13,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.5481832981832981,
+            "full_hist6": 0.8523809523809522,
+            "prefix_hist6_1.0ns": 0.8432900432900432
+          },
+          "full_gain": 0.3041976541976541,
+          "recovery_prefix": 0.9701151242770526
+        },
+        "4cv4_A": {
+          "n": 4,
+          "positives": 1,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 0.5,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": -0.5,
+          "recovery_prefix": -0.0
+        },
+        "3bwu_D": {
+          "n": 7,
+          "positives": 2,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 0.3666666666666667,
+            "prefix_hist6_1.0ns": 0.6666666666666666
+          },
+          "full_gain": -0.6333333333333333,
+          "recovery_prefix": 0.5263157894736843
+        },
+        "2hng_A": {
+          "n": 6,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        }
+      }
+    },
+    "90": {
+      "test_positives": 160,
+      "auprc": {
+        "static_only": 0.48235254274429173,
+        "full_hist6": 0.5405050116387546,
+        "prefix_hist6_1.0ns": 0.5440638545658194
+      },
+      "full_gain": 0.058152468894462905,
+      "recovery": 1.0611984838257422,
+      "prefix_minus_static_auprc": 0.06171131182152767,
+      "per_protein": {
+        "1mix_A": {
+          "n": 30,
+          "positives": 12,
+          "auprc": {
+            "static_only": 0.6627518315018314,
+            "full_hist6": 0.8814153439153439,
+            "prefix_hist6_1.0ns": 0.8471788628038629
+          },
+          "full_gain": 0.21866351241351256,
+          "recovery_prefix": 0.8434284680896521
+        },
+        "2qt4_A": {
+          "n": 15,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.17142857142857143,
+            "full_hist6": 0.75,
+            "prefix_hist6_1.0ns": 0.5666666666666667
+          },
+          "full_gain": 0.5785714285714285,
+          "recovery_prefix": 0.6831275720164609
+        },
+        "1u6t_A": {
+          "n": 18,
+          "positives": 10,
+          "auprc": {
+            "static_only": 0.6451773226773226,
+            "full_hist6": 0.6869612332112331,
+            "prefix_hist6_1.0ns": 0.5743104036486391
+          },
+          "full_gain": 0.04178391053391051,
+          "recovery_prefix": -1.6960336675804966
+        },
+        "1m5q_I": {
+          "n": 14,
+          "positives": 7,
+          "auprc": {
+            "static_only": 0.4621624407338693,
+            "full_hist6": 0.7607709750566893,
+            "prefix_hist6_1.0ns": 0.947845804988662
+          },
+          "full_gain": 0.29860853432282003,
+          "recovery_prefix": 1.62648855752304
+        },
+        "4zi3_D": {
+          "n": 14,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.46957671957671954,
+            "full_hist6": 0.6117354867354867,
+            "prefix_hist6_1.0ns": 0.6117354867354867
+          },
+          "full_gain": 0.14215876715876719,
+          "recovery_prefix": 1.0
+        },
+        "6jpt_A": {
+          "n": 7,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.7595238095238095,
+            "full_hist6": 0.71,
+            "prefix_hist6_1.0ns": 0.8766666666666667
+          },
+          "full_gain": -0.049523809523809526,
+          "recovery_prefix": -2.3653846153846168
+        },
+        "1a62_A": {
+          "n": 14,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.375,
+            "full_hist6": 0.34090909090909094,
+            "prefix_hist6_1.0ns": 0.5909090909090909
+          },
+          "full_gain": -0.03409090909090906,
+          "recovery_prefix": -6.33333333333334
+        },
+        "1y0n_A": {
+          "n": 5,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.95,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.050000000000000044,
+          "recovery_prefix": 1.0
+        },
+        "2ftx_A": {
+          "n": 5,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.5,
+            "full_hist6": 0.8333333333333333,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.33333333333333326,
+          "recovery_prefix": 1.5000000000000004
+        },
+        "2hu9_A": {
+          "n": 24,
+          "positives": 13,
+          "auprc": {
+            "static_only": 0.5216493543238007,
+            "full_hist6": 0.6289286055956692,
+            "prefix_hist6_1.0ns": 0.6295351885551934
+          },
+          "full_gain": 0.10727925127186855,
+          "recovery_prefix": 1.0056542430370528
+        },
+        "4zds_B": {
+          "n": 10,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.7759259259259259,
+            "full_hist6": 0.7999999999999999,
+            "prefix_hist6_1.0ns": 0.915079365079365
+          },
+          "full_gain": 0.024074074074074026,
+          "recovery_prefix": 5.780219780219792
+        },
+        "3rjs_A": {
+          "n": 10,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.69375,
+            "full_hist6": 0.3654761904761905,
+            "prefix_hist6_1.0ns": 0.38749999999999996
+          },
+          "full_gain": -0.32827380952380947,
+          "recovery_prefix": 0.932910244786945
+        },
+        "1sei_A": {
+          "n": 21,
+          "positives": 10,
+          "auprc": {
+            "static_only": 0.5836205899363794,
+            "full_hist6": 0.7748843262001155,
+            "prefix_hist6_1.0ns": 0.675267085855321
+          },
+          "full_gain": 0.19126373626373605,
+          "recovery_prefix": 0.479162949073467
+        },
+        "1t8k_A": {
+          "n": 12,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.8523809523809522,
+            "full_hist6": 0.7853535353535354,
+            "prefix_hist6_1.0ns": 0.7529461279461279
+          },
+          "full_gain": -0.06702741702741688,
+          "recovery_prefix": 1.483494797273055
+        },
+        "3pkz_A": {
+          "n": 8,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.4206349206349206,
+            "full_hist6": 0.47619047619047616,
+            "prefix_hist6_1.0ns": 0.47619047619047616
+          },
+          "full_gain": 0.05555555555555558,
+          "recovery_prefix": 1.0
+        },
+        "1uha_A": {
+          "n": 1,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "5yrv_I": {
+          "n": 25,
+          "positives": 15,
+          "auprc": {
+            "static_only": 0.6242649035205234,
+            "full_hist6": 0.684754738725327,
+            "prefix_hist6_1.0ns": 0.5961144356732592
+          },
+          "full_gain": 0.060489835204803555,
+          "recovery_prefix": -0.46537517835771547
+        },
+        "1pch_A": {
+          "n": 3,
+          "positives": 0,
+          "auprc": {
+            "static_only": 0.0,
+            "full_hist6": 0.0,
+            "prefix_hist6_1.0ns": 0.0
+          },
+          "full_gain": 0.0,
+          "recovery_prefix": NaN
+        },
+        "4ytw_C": {
+          "n": 14,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.5262896825396826,
+            "full_hist6": 0.2761904761904762,
+            "prefix_hist6_1.0ns": 0.29437229437229434
+          },
+          "full_gain": -0.25009920634920635,
+          "recovery_prefix": 0.9273015758537378
+        },
+        "5ii7_A": {
+          "n": 19,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.696923076923077,
+            "full_hist6": 0.31333333333333335,
+            "prefix_hist6_1.0ns": 0.2723232323232323
+          },
+          "full_gain": -0.3835897435897436,
+          "recovery_prefix": 1.1069113595851565
+        },
+        "3l9a_X": {
+          "n": 6,
+          "positives": 5,
+          "auprc": {
+            "static_only": 0.8766666666666667,
+            "full_hist6": 0.9666666666666666,
+            "prefix_hist6_1.0ns": 0.9266666666666665
+          },
+          "full_gain": 0.08999999999999986,
+          "recovery_prefix": 0.5555555555555545
+        },
+        "6in7_A": {
+          "n": 6,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.8333333333333333,
+            "full_hist6": 0.6666666666666666,
+            "prefix_hist6_1.0ns": 0.7
+          },
+          "full_gain": -0.16666666666666663,
+          "recovery_prefix": 0.8
+        },
+        "2end_A": {
+          "n": 27,
+          "positives": 11,
+          "auprc": {
+            "static_only": 0.4382465573642045,
+            "full_hist6": 0.5479549117320015,
+            "prefix_hist6_1.0ns": 0.5278554778554778
+          },
+          "full_gain": 0.10970835436779702,
+          "recovery_prefix": 0.8167921304412208
+        },
+        "3jtz_A": {
+          "n": 10,
+          "positives": 4,
+          "auprc": {
+            "static_only": 0.8041666666666667,
+            "full_hist6": 0.47619047619047616,
+            "prefix_hist6_1.0ns": 0.6428571428571428
+          },
+          "full_gain": -0.32797619047619053,
+          "recovery_prefix": 0.49183303085299473
+        },
+        "6fc0_B": {
+          "n": 7,
+          "positives": 6,
+          "auprc": {
+            "static_only": 0.9150793650793649,
+            "full_hist6": 0.976190476190476,
+            "prefix_hist6_1.0ns": 0.8178571428571427
+          },
+          "full_gain": 0.061111111111111116,
+          "recovery_prefix": -1.5909090909090906
+        },
+        "1l9l_A": {
+          "n": 5,
+          "positives": 3,
+          "auprc": {
+            "static_only": 0.7,
+            "full_hist6": 1.0,
+            "prefix_hist6_1.0ns": 1.0
+          },
+          "full_gain": 0.30000000000000004,
+          "recovery_prefix": 1.0
+        },
+        "2i9x_A": {
+          "n": 13,
+          "positives": 7,
+          "auprc": {
+            "static_only": 0.4187855794998652,
+            "full_hist6": 0.5190785405071119,
+            "prefix_hist6_1.0ns": 0.5818903318903319
+          },
+          "full_gain": 0.10029296100724666,
+          "recovery_prefix": 1.6262831484123952
+        },
+        "4cv4_A": {
+          "n": 4,
+          "positives": 3,
+          "auprc": {
+            "static_only": 1.0,
+            "full_hist6": 0.8055555555555556,
+            "prefix_hist6_1.0ns": 0.6388888888888888
+          },
+          "full_gain": -0.19444444444444442,
+          "recovery_prefix": 1.8571428571428577
+        },
+        "3bwu_D": {
+          "n": 7,
+          "positives": 2,
+          "auprc": {
+            "static_only": 0.5,
+            "full_hist6": 0.75,
+            "prefix_hist6_1.0ns": 0.75
+          },
+          "full_gain": 0.25,
+          "recovery_prefix": 1.0
+        },
+        "2hng_A": {
+          "n": 6,
+          "positives": 1,
+          "auprc": {
+            "static_only": 0.5,
+            "full_hist6": 0.25,
+            "prefix_hist6_1.0ns": 0.16666666666666666
+          },
+          "full_gain": -0.25,
+          "recovery_prefix": 1.3333333333333335
+        }
+      }
+    }
+  },
+  "bootstrap_results": {
+    "1": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 1.0648854971625012,
+      "ci_lower": 0.8929612719116222,
+      "ci_upper": 1.528957987255898,
+      "contains_0.5": false,
+      "contains_zero": false,
+      "n_distinct_boot_values": 10000
+    },
+    "5": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 1.3167042266883915,
+      "ci_lower": 0.8630386067478705,
+      "ci_upper": 2.837952382760026,
+      "contains_0.5": false,
+      "contains_zero": false,
+      "n_distinct_boot_values": 10000
+    },
+    "10": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 1.1067588596908298,
+      "ci_lower": 0.8240662406506416,
+      "ci_upper": 1.5552070270417564,
+      "contains_0.5": false,
+      "contains_zero": false,
+      "n_distinct_boot_values": 10000
+    },
+    "30": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 1.3076634958672542,
+      "ci_lower": -2.7734230512092406,
+      "ci_upper": 5.5697877612278335,
+      "contains_0.5": true,
+      "contains_zero": true,
+      "n_distinct_boot_values": 10000
+    },
+    "50": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.7008623322311573,
+      "ci_lower": 0.41214647979286045,
+      "ci_upper": 1.0983393297015491,
+      "contains_0.5": true,
+      "contains_zero": false,
+      "n_distinct_boot_values": 10000
+    },
+    "90": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 1.0611984838257422,
+      "ci_lower": -0.6906064417920542,
+      "ci_upper": 2.8468613537540604,
+      "contains_0.5": true,
+      "contains_zero": true,
+      "n_distinct_boot_values": 10000
+    }
+  },
+  "bootstrap_results_auprc": {
+    "1": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.190416641786178,
+      "ci_lower": 0.11868041939071944,
+      "ci_upper": 0.25539800649313643,
+      "contains_zero": false,
+      "n_distinct_boot_values": 10000
+    },
+    "5": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.14999272965607474,
+      "ci_lower": 0.06780277480580997,
+      "ci_upper": 0.2177751317106873,
+      "contains_zero": false,
+      "n_distinct_boot_values": 10000
+    },
+    "10": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.19707256166065001,
+      "ci_lower": 0.10952984827161598,
+      "ci_upper": 0.27828175380172515,
+      "contains_zero": false,
+      "n_distinct_boot_values": 10000
+    },
+    "30": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.08275351477965392,
+      "ci_lower": -0.014815442874976149,
+      "ci_upper": 0.16759149793212774,
+      "contains_zero": true,
+      "n_distinct_boot_values": 10000
+    },
+    "50": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.09125109057593528,
+      "ci_lower": 0.03206939359265186,
+      "ci_upper": 0.15285549006366878,
+      "contains_zero": false,
+      "n_distinct_boot_values": 10000
+    },
+    "90": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.06171131182152767,
+      "ci_lower": -0.024932817947877866,
+      "ci_upper": 0.1575615700174898,
+      "contains_zero": true,
+      "n_distinct_boot_values": 10000
+    }
+  },
+  "recovery_ci_contains_0.5": {
+    "1ns": false,
+    "5ns": false,
+    "10ns": false,
+    "30ns": true,
+    "50ns": true,
+    "90ns": true
+  },
+  "auprc_diff_ci_contains_zero": {
+    "1ns": false,
+    "5ns": false,
+    "10ns": false,
+    "30ns": true,
+    "50ns": false,
+    "90ns": true
+  }
+}
