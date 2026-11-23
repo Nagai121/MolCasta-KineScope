@@ -1,0 +1,1052 @@
+{
+  "static_train[1]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.3734017091925338,
+      "auc": 0.5771436216980772,
+      "brier": 0.23092684898851487,
+      "logloss": 0.7508938990509689,
+      "macro_auprc": 0.5576726674086472,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.4923447212895547,
+      "auc": 0.5897815684104301,
+      "brier": 0.27371281447344376,
+      "logloss": 0.8740523933140003,
+      "macro_auprc": 0.5991174271308923,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.4138892451103919,
+      "auc": 0.5285676189206308,
+      "brier": 0.28355315378822876,
+      "logloss": 0.9270258063389175,
+      "macro_auprc": 0.5841630282674637,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.520539456029496,
+      "auc": 0.598158338369541,
+      "brier": 0.2820257242802553,
+      "logloss": 0.9135333505067454,
+      "macro_auprc": 0.6714428574854422,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.49653700562868935,
+      "auc": 0.5555210532853062,
+      "brier": 0.3318341166756703,
+      "logloss": 1.0508998817507547,
+      "macro_auprc": 0.6793268810144041,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.4960678413414619,
+      "auc": 0.5460625,
+      "brier": 0.3223541032727635,
+      "logloss": 1.0286759633290172,
+      "macro_auprc": 0.6126504201880768,
+      "macro_n_proteins": 28
+    }
+  },
+  "history_train[1]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.5522159031068683,
+      "auc": 0.7858480828777858,
+      "brier": 0.18351876146562257,
+      "logloss": 0.6452561538668448,
+      "macro_auprc": 0.6724476209661395,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.6347696997767274,
+      "auc": 0.7347569907874605,
+      "brier": 0.25130909320717376,
+      "logloss": 0.92005374828352,
+      "macro_auprc": 0.6614658269965655,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.5619959843462992,
+      "auc": 0.6995233174439148,
+      "brier": 0.2578918163824309,
+      "logloss": 0.9668119538265433,
+      "macro_auprc": 0.6401405283868294,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.6377900324343003,
+      "auc": 0.697477655141703,
+      "brier": 0.27261001747400015,
+      "logloss": 1.0583127822996174,
+      "macro_auprc": 0.6955576101664028,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.6053751531996221,
+      "auc": 0.6513476586759409,
+      "brier": 0.32177774132273046,
+      "logloss": 1.3002613527469715,
+      "macro_auprc": 0.6987992291557625,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.5343136827670528,
+      "auc": 0.6230625,
+      "brier": 0.3430688627638488,
+      "logloss": 1.3658479039997526,
+      "macro_auprc": 0.6300491324600767,
+      "macro_n_proteins": 28
+    }
+  },
+  "static_train[5]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.3700411115846713,
+      "auc": 0.5602469513360603,
+      "brier": 0.24750261858650152,
+      "logloss": 0.7407997522121541,
+      "macro_auprc": 0.4891545722552627,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.4640999974218541,
+      "auc": 0.5727237214753085,
+      "brier": 0.27162273376511625,
+      "logloss": 0.7967221721505053,
+      "macro_auprc": 0.6122639141911375,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.4220914211301019,
+      "auc": 0.5457015233841128,
+      "brier": 0.27766298910411463,
+      "logloss": 0.8157119539273942,
+      "macro_auprc": 0.5705431454455121,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.5172305764954861,
+      "auc": 0.5923693501701708,
+      "brier": 0.27130001265385895,
+      "logloss": 0.7932645245370622,
+      "macro_auprc": 0.6272176698050345,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.575266544053422,
+      "auc": 0.5998944230530369,
+      "brier": 0.27904302451295765,
+      "logloss": 0.8281886950589097,
+      "macro_auprc": 0.7127418634281615,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.5610690088642293,
+      "auc": 0.6182343750000001,
+      "brier": 0.2696080980128638,
+      "logloss": 0.7915631408139758,
+      "macro_auprc": 0.6415866060129003,
+      "macro_n_proteins": 28
+    }
+  },
+  "history_train[5]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.5142076066305936,
+      "auc": 0.7588210558507588,
+      "brier": 0.19378757066415292,
+      "logloss": 0.596848398118834,
+      "macro_auprc": 0.6210825421059339,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.5780152766591036,
+      "auc": 0.6966372603274846,
+      "brier": 0.2428099278238234,
+      "logloss": 0.7535498839329168,
+      "macro_auprc": 0.6909242350767097,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.5446239908803518,
+      "auc": 0.69312310410347,
+      "brier": 0.23592904231840015,
+      "logloss": 0.7476684886951269,
+      "macro_auprc": 0.6661041649389032,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.6140050592279565,
+      "auc": 0.6781704252679792,
+      "brier": 0.2528487214956262,
+      "logloss": 0.8083694070530004,
+      "macro_auprc": 0.6716014547170251,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.6240701433326302,
+      "auc": 0.6676499813687742,
+      "brier": 0.27935253502435337,
+      "logloss": 0.8857542542978889,
+      "macro_auprc": 0.7402836051296775,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.558132235183123,
+      "auc": 0.6353437499999999,
+      "brier": 0.2931384376047426,
+      "logloss": 0.9287178754976387,
+      "macro_auprc": 0.6524267756404557,
+      "macro_n_proteins": 28
+    }
+  },
+  "static_train[10]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.2937009870679701,
+      "auc": 0.5156351542490156,
+      "brier": 0.2795870344724841,
+      "logloss": 0.8110390490576189,
+      "macro_auprc": 0.44855853523701206,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.38402448168104864,
+      "auc": 0.48606725479345025,
+      "brier": 0.31348720923683204,
+      "logloss": 0.9221359353278283,
+      "macro_auprc": 0.5521962273362861,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.3572141129163314,
+      "auc": 0.4849328310943698,
+      "brier": 0.3098516136456329,
+      "logloss": 0.9070491190266163,
+      "macro_auprc": 0.5385417969608107,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.4771338433794467,
+      "auc": 0.5592894176023411,
+      "brier": 0.2864920254163777,
+      "logloss": 0.8413145130914788,
+      "macro_auprc": 0.619631603171775,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.4943019367428074,
+      "auc": 0.5384424295118619,
+      "brier": 0.30667119910829216,
+      "logloss": 0.8918109238195453,
+      "macro_auprc": 0.668068120360679,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.520593791709667,
+      "auc": 0.5846093749999999,
+      "brier": 0.2816339141998893,
+      "logloss": 0.8311582795750029,
+      "macro_auprc": 0.6304412224704984,
+      "macro_n_proteins": 28
+    }
+  },
+  "history_train[10]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.47336636910503965,
+      "auc": 0.6947131006536947,
+      "brier": 0.21787923057704733,
+      "logloss": 0.6459983747858691,
+      "macro_auprc": 0.6106091859282615,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.5739859445355553,
+      "auc": 0.6702692144926592,
+      "brier": 0.24525852661358982,
+      "logloss": 0.7366469311578214,
+      "macro_auprc": 0.6589437076524248,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.5352768950075466,
+      "auc": 0.6349544984832828,
+      "brier": 0.25833455650227866,
+      "logloss": 0.7618695992775925,
+      "macro_auprc": 0.6339051569460789,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.5883170780583842,
+      "auc": 0.6594357326886987,
+      "brier": 0.25393012704624496,
+      "logloss": 0.7714287395269933,
+      "macro_auprc": 0.6472050258765594,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.6401847619933895,
+      "auc": 0.6518134393243076,
+      "brier": 0.26772819112438023,
+      "logloss": 0.8326952928101851,
+      "macro_auprc": 0.7007164511918565,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.5659922263296076,
+      "auc": 0.6201875,
+      "brier": 0.2854374874456619,
+      "logloss": 0.8623563556075654,
+      "macro_auprc": 0.6636263142210447,
+      "macro_n_proteins": 28
+    }
+  },
+  "static_train[30]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.3426652924661683,
+      "auc": 0.5931610535570931,
+      "brier": 0.2569253636356016,
+      "logloss": 0.7380431425411422,
+      "macro_auprc": 0.5222032962830911,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.41614284214143377,
+      "auc": 0.5493993945115401,
+      "brier": 0.2847700121928184,
+      "logloss": 0.8124504142368401,
+      "macro_auprc": 0.5680858292756751,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.3887963716737931,
+      "auc": 0.5504683489449649,
+      "brier": 0.28276712901752477,
+      "logloss": 0.8100493102993951,
+      "macro_auprc": 0.5691386468945411,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.47994505071240295,
+      "auc": 0.5722510257959859,
+      "brier": 0.27699150212203505,
+      "logloss": 0.7907041431823629,
+      "macro_auprc": 0.6309067010308855,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.5340162487236191,
+      "auc": 0.5783443050552726,
+      "brier": 0.28016080667939797,
+      "logloss": 0.8093251440341207,
+      "macro_auprc": 0.6630630221224353,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.5215665344282773,
+      "auc": 0.5837656250000001,
+      "brier": 0.2760513826762078,
+      "logloss": 0.7984542408966118,
+      "macro_auprc": 0.6948703593886159,
+      "macro_n_proteins": 28
+    }
+  },
+  "history_train[30]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.5383538157606786,
+      "auc": 0.7255246760197255,
+      "brier": 0.21934247089342998,
+      "logloss": 0.6440098875717493,
+      "macro_auprc": 0.650919002191237,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.557967159904219,
+      "auc": 0.6670139001920635,
+      "brier": 0.2477947791048534,
+      "logloss": 0.7413557612202288,
+      "macro_auprc": 0.6632580691372321,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.562081782560168,
+      "auc": 0.6627220907363579,
+      "brier": 0.24732742079744893,
+      "logloss": 0.7318996014579473,
+      "macro_auprc": 0.6527263861632937,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.543228544547926,
+      "auc": 0.6500842902127929,
+      "brier": 0.259102944298456,
+      "logloss": 0.790986171997831,
+      "macro_auprc": 0.6465038492363873,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.6198750616427804,
+      "auc": 0.6562849335486275,
+      "brier": 0.25961264174719256,
+      "logloss": 0.7768995578588437,
+      "macro_auprc": 0.7018818589146043,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.5982049551733457,
+      "auc": 0.6340625,
+      "brier": 0.26897368533262284,
+      "logloss": 0.7985965487567395,
+      "macro_auprc": 0.6697559737444101,
+      "macro_n_proteins": 28
+    }
+  },
+  "static_train[50]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.31030758800630687,
+      "auc": 0.5644711189265644,
+      "brier": 0.2829681594727804,
+      "logloss": 0.8313961735024799,
+      "macro_auprc": 0.5209857127600667,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.41995667473558307,
+      "auc": 0.53732217845633,
+      "brier": 0.3003077901415495,
+      "logloss": 0.8692481113018636,
+      "macro_auprc": 0.5470030791581835,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.395561341996731,
+      "auc": 0.554385146171539,
+      "brier": 0.2928594973012809,
+      "logloss": 0.8429578116422287,
+      "macro_auprc": 0.5462460008816244,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.5229276422317726,
+      "auc": 0.6142370940551545,
+      "brier": 0.2661616129113532,
+      "logloss": 0.7790130554930752,
+      "macro_auprc": 0.6675854182441691,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.48632671783312764,
+      "auc": 0.5232579803751087,
+      "brier": 0.3134973460559756,
+      "logloss": 0.9200384886428533,
+      "macro_auprc": 0.6788915614926838,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.48204159106503763,
+      "auc": 0.55046875,
+      "brier": 0.299671615536082,
+      "logloss": 0.8831928956042248,
+      "macro_auprc": 0.6381457605517179,
+      "macro_n_proteins": 28
+    }
+  },
+  "history_train[50]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.5246955231979459,
+      "auc": 0.7130241981727131,
+      "brier": 0.2217097485991769,
+      "logloss": 0.6675334776576801,
+      "macro_auprc": 0.6330135220169333,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.5933103528924351,
+      "auc": 0.696376835183437,
+      "brier": 0.23032810607309165,
+      "logloss": 0.6935976136962679,
+      "macro_auprc": 0.6582048327804342,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.547587321647983,
+      "auc": 0.6633887796259875,
+      "brier": 0.24579058237425735,
+      "logloss": 0.7319288585740613,
+      "macro_auprc": 0.6420950665725849,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.5769472851119368,
+      "auc": 0.6281370272591368,
+      "brier": 0.2681978187847265,
+      "logloss": 0.7875093563385481,
+      "macro_auprc": 0.6228771485082553,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.6165250269439089,
+      "auc": 0.6238666004223078,
+      "brier": 0.2747241910943538,
+      "logloss": 0.8170621513345201,
+      "macro_auprc": 0.709352023370242,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.5433659655120047,
+      "auc": 0.60521875,
+      "brier": 0.2858286616096624,
+      "logloss": 0.8494712512917029,
+      "macro_auprc": 0.6146233456898286,
+      "macro_n_proteins": 28
+    }
+  },
+  "static_train[90]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.31596805749125756,
+      "auc": 0.5716579379945717,
+      "brier": 0.2715894261686886,
+      "logloss": 0.7700887454299596,
+      "macro_auprc": 0.4646084997088771,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.45069454804383086,
+      "auc": 0.6056186724828282,
+      "brier": 0.2645052322488615,
+      "logloss": 0.7603276898278776,
+      "macro_auprc": 0.6138298746813369,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.44767127292098163,
+      "auc": 0.606720224007467,
+      "brier": 0.2615332223627175,
+      "logloss": 0.7542252013057597,
+      "macro_auprc": 0.6013894085674729,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.5198380531742974,
+      "auc": 0.6232704602563695,
+      "brier": 0.2571645128785739,
+      "logloss": 0.7423219498871167,
+      "macro_auprc": 0.6636932098368298,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.49787255157810706,
+      "auc": 0.5279157868587753,
+      "brier": 0.3032341017901804,
+      "logloss": 0.8733498056880712,
+      "macro_auprc": 0.6515863578958914,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.48235254274429173,
+      "auc": 0.5614687500000001,
+      "brier": 0.2886906257355767,
+      "logloss": 0.8216901501662818,
+      "macro_auprc": 0.6313335096513387,
+      "macro_n_proteins": 28
+    }
+  },
+  "history_train[90]": {
+    "1": {
+      "n": 360,
+      "positives": 101,
+      "auprc": 0.4334920421532682,
+      "auc": 0.6833976833976834,
+      "brier": 0.23267949337961727,
+      "logloss": 0.6990294839019954,
+      "macro_auprc": 0.6342937416897888,
+      "macro_n_proteins": 27
+    },
+    "5": {
+      "n": 360,
+      "positives": 139,
+      "auprc": 0.6056381849275126,
+      "auc": 0.6950421563201927,
+      "brier": 0.22842655470038511,
+      "logloss": 0.682769128280681,
+      "macro_auprc": 0.6894449684156027,
+      "macro_n_proteins": 28
+    },
+    "10": {
+      "n": 360,
+      "positives": 131,
+      "auprc": 0.514356496935192,
+      "auc": 0.661688722957432,
+      "brier": 0.24303497691685563,
+      "logloss": 0.7265383664023543,
+      "macro_auprc": 0.6574367785568782,
+      "macro_n_proteins": 27
+    },
+    "30": {
+      "n": 360,
+      "positives": 149,
+      "auprc": 0.5701224144179521,
+      "auc": 0.6456948376220618,
+      "brier": 0.25657283941448517,
+      "logloss": 0.7606218947788073,
+      "macro_auprc": 0.6743426728941756,
+      "macro_n_proteins": 28
+    },
+    "50": {
+      "n": 360,
+      "positives": 166,
+      "auprc": 0.566693641792283,
+      "auc": 0.6061358837411501,
+      "brier": 0.2816324463985414,
+      "logloss": 0.8435970421533897,
+      "macro_auprc": 0.7116287190630655,
+      "macro_n_proteins": 26
+    },
+    "90": {
+      "n": 360,
+      "positives": 160,
+      "auprc": 0.5405050116387546,
+      "auc": 0.62203125,
+      "brier": 0.2775586673441021,
+      "logloss": 0.8105106101076198,
+      "macro_auprc": 0.6656621585262591,
+      "macro_n_proteins": 28
+    }
+  },
+  "_summary": {
+    "1": {
+      "1": {
+        "transfer_gain": 0.1788141939143345,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.11477495355749234,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "5": {
+        "transfer_gain": 0.14080589743805982,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 0.7874425086496012,
+        "transfer_gain_macro": 0.06340987469728676,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 0.5524713600996919
+      },
+      "10": {
+        "transfer_gain": 0.09996465991250586,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 0.5590420856657301,
+        "transfer_gain_macro": 0.05293651851961434,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 0.46122012580991995
+      },
+      "30": {
+        "transfer_gain": 0.16495210656814485,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 0.9224777013348804,
+        "transfer_gain_macro": 0.09324633478258981,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 0.8124275540297339
+      },
+      "50": {
+        "transfer_gain": 0.1512938140054121,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 0.8460951040491408,
+        "transfer_gain_macro": 0.0753408546082861,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 0.6564224360199531
+      },
+      "90": {
+        "transfer_gain": 0.060090332960734405,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 0.33604901068156934,
+        "transfer_gain_macro": 0.07662107428114162,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 0.6675766088875922
+      }
+    },
+    "5": {
+      "1": {
+        "transfer_gain": 0.17066970235487328,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.498216073362927,
+        "transfer_gain_macro": 0.04920191280542807,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 0.6254985010422527
+      },
+      "5": {
+        "transfer_gain": 0.11391527923724948,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.07866032088557229,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "10": {
+        "transfer_gain": 0.1098859471137012,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 0.9646286946709189,
+        "transfer_gain_macro": 0.04667979346128737,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 0.5934350754708054
+      },
+      "30": {
+        "transfer_gain": 0.09386716248236487,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 0.8240085360882036,
+        "transfer_gain_macro": 0.050994154946094605,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 0.6482830780753635
+      },
+      "50": {
+        "transfer_gain": 0.12921035547058096,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.1342671179471604,
+        "transfer_gain_macro": 0.04594091858929672,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 0.5840418405631385
+      },
+      "90": {
+        "transfer_gain": 0.14153818750565855,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.2424864202007466,
+        "transfer_gain_macro": 0.0771810542244652,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 0.9811942457842374
+      }
+    },
+    "10": {
+      "1": {
+        "transfer_gain": 0.20478187142996773,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 1.1500543180610607,
+        "transfer_gain_macro": 0.10159873142601872,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.065385400029045
+      },
+      "5": {
+        "transfer_gain": 0.18740987796402042,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 1.0524932597538381,
+        "transfer_gain_macro": 0.1275623679780925,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.337645485622555
+      },
+      "10": {
+        "transfer_gain": 0.17806278209121518,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.09536335998526813,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "30": {
+        "transfer_gain": 0.20486766964383663,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 1.1505361605486444,
+        "transfer_gain_macro": 0.11418458920248298,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.197363318785353
+      },
+      "50": {
+        "transfer_gain": 0.19037320873165153,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 1.0691353156221617,
+        "transfer_gain_macro": 0.10355326961177413,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.085881093407061
+      },
+      "90": {
+        "transfer_gain": 0.1571423840188606,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 0.8825111130655152,
+        "transfer_gain_macro": 0.11889498159606748,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.2467574717840748
+      }
+    },
+    "30": {
+      "1": {
+        "transfer_gain": 0.15784498172189737,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 2.494252010360621,
+        "transfer_gain_macro": 0.0646509091355173,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 4.145046792125266
+      },
+      "5": {
+        "transfer_gain": 0.1340600085155535,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 2.118404032242311,
+        "transfer_gain_macro": 0.04069475368613962,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 2.6091150221798216
+      },
+      "10": {
+        "transfer_gain": 0.10837202734598123,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 1.7124848957872885,
+        "transfer_gain_macro": 0.01629832484567384,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 1.0449554387080053
+      },
+      "30": {
+        "transfer_gain": 0.06328349383552306,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.015597148205501732,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "50": {
+        "transfer_gain": 0.09700223439953387,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 1.5328204642374437,
+        "transfer_gain_macro": -0.008029552522630268,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": -0.5148090161634757
+      },
+      "90": {
+        "transfer_gain": 0.09017736370554913,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 1.4249744797580957,
+        "transfer_gain_macro": 0.04343597186329007,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 2.7848662647168076
+      }
+    },
+    "50": {
+      "1": {
+        "transfer_gain": 0.11904843536649445,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 0.9143623767433129,
+        "transfer_gain_macro": 0.01990766766307872,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 0.6535576427928618
+      },
+      "5": {
+        "transfer_gain": 0.13774342549950258,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 1.0579509552793154,
+        "transfer_gain_macro": 0.06139204363699369,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 2.015466603355234
+      },
+      "10": {
+        "transfer_gain": 0.15385804416026183,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 1.1817207551393725,
+        "transfer_gain_macro": 0.021824889699172734,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 0.716498974536309
+      },
+      "30": {
+        "transfer_gain": 0.13354834380965275,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 1.0257302473569077,
+        "transfer_gain_macro": 0.02299029742192049,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 0.7547586610582122
+      },
+      "50": {
+        "transfer_gain": 0.13019830911078123,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.03046046187755813,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "90": {
+        "transfer_gain": 0.08036692395915535,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 0.617265496825876,
+        "transfer_gain_macro": 0.03273715757038165,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 1.074742651702891
+      }
+    },
+    "90": {
+      "1": {
+        "transfer_gain": 0.05196114002276109,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 0.8935328286243864,
+        "transfer_gain_macro": -0.001284377191262065,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": -0.037414149212274934
+      },
+      "5": {
+        "transfer_gain": 0.07577969243883131,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 1.3031208111964927,
+        "transfer_gain_macro": 0.021093265989116983,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": 0.6144508065543814
+      },
+      "10": {
+        "transfer_gain": 0.08363968358531582,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 1.4382825901529304,
+        "transfer_gain_macro": 0.03229280456970596,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": 0.9406954723842408
+      },
+      "30": {
+        "transfer_gain": 0.11585241242905397,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 1.992218294967096,
+        "transfer_gain_macro": 0.03842246409307137,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": 1.1192536074771597
+      },
+      "50": {
+        "transfer_gain": 0.06101342276771293,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 1.049197461907287,
+        "transfer_gain_macro": -0.01671016396151015,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": -0.4867702198940362
+      },
+      "90": {
+        "transfer_gain": 0.058152468894462905,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.034328648874920376,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": 1.0
+      }
+    }
+  },
+  "_k53_recorded_gain": {
+    "1": 0.1788,
+    "90": 0.0582
+  }
+}

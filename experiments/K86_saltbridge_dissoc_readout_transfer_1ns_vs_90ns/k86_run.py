@@ -11,10 +11,12 @@ the full 6x6 matrix is computed.
   - primary: train@1 -> eval@90, and train@90 -> eval@1
   - reference: the matched-horizon condition's gain (train@h -> eval@h)
 The gain of a condition is its AUPRC minus the static-only condition's
-AUPRC trained at the SAME train horizon and evaluated at the same eval
-horizon (pooled over the 30 test proteins, and per-protein macro: AUPRC
-per protein pooled over its 3 replicas, averaged over proteins with
-both classes present at that horizon).
+AUPRC trained at the SAME EVAL horizon and evaluated at the same eval
+horizon (K56's definition; the static reference is always the one
+trained at the horizon being evaluated, not the one trained at the
+learning horizon). Pooled over the 30 test proteins, and per-protein
+macro: AUPRC per protein pooled over its 3 replicas, averaged over
+proteins with both classes present at that horizon.
 Recovery = cross-horizon gain / matched-horizon gain.
 Sanity check: the matched gains must reproduce K53's recorded values
 (1 ns +0.1788, 90 ns +0.0582).
@@ -33,10 +35,11 @@ from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import roc_auc_score, average_precision_score, brier_score_loss, log_loss
 
 CACHE = Path("/home/hatch/workspace/kinescope/work/k53_cache")
-HERE = Path(__file__).resolve().parent
+REPO = Path("/home/hatch/workspace/kinescope/repo/experiments")
+HERE = REPO / "K86_saltbridge_dissoc_readout_transfer_1ns_vs_90ns"
 OUT = HERE
 PARTIAL = OUT / "results_partial.json"
-_SPLIT = json.loads((HERE.parent / "K15_saltbridge_expansion" / "split.json").read_text())
+_SPLIT = json.loads((REPO / "K15_saltbridge_expansion" / "split.json").read_text())
 TRAIN_P = tuple(_SPLIT["orig_train"]) + tuple(_SPLIT["train_additions"])
 TEST_P = tuple(_SPLIT["orig_test"]) + tuple(_SPLIT["test_additions"])
 HORIZONS = (1, 5, 10, 30, 50, 90)
@@ -138,7 +141,8 @@ for j1, h1 in enumerate(HORIZONS):
 
 
 def gain(h1, h2, macro=False):
-    s = results[f"static_train[{h1}]"][str(h2)]
+    # K56's definition: the static reference is trained at the EVAL horizon.
+    s = results[f"static_train[{h2}]"][str(h2)]
     a = results[f"history_train[{h1}]"][str(h2)]
     key = "macro_auprc" if macro else "auprc"
     return float(a[key] - s[key])
