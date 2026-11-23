@@ -1,0 +1,30 @@
+train (4051, 7) test (2080, 7)
+max |X[:,0] - hist[:,-1]| train 1.192064198463072e-07
+max |X[:,0] - hist[:,-1]| test 1.1916594822025672e-07
+mean11 - mean10: test std 0.039 mean -0.0106
+1 ns: static 0.4160 full 0.5945 gain 0.1785 (ref 0.1785)
+  1 ns hist6_10f: auprc 0.6049 recovery 1.058
+  1 ns hist6_11f: auprc 0.5945 recovery 1.000
+5 ns: static 0.4346 full 0.6103 gain 0.1757 (ref 0.1757)
+  5 ns hist6_10f: auprc 0.6144 recovery 1.023
+  5 ns hist6_11f: auprc 0.6103 recovery 1.000
+10 ns: static 0.4496 full 0.5974 gain 0.1478 (ref 0.1478)
+  10 ns hist6_10f: auprc 0.5956 recovery 0.988
+  10 ns hist6_11f: auprc 0.5974 recovery 1.000
+30 ns: static 0.4409 full 0.5731 gain 0.1322 (ref 0.1322)
+  30 ns hist6_10f: auprc 0.5795 recovery 1.048
+  30 ns hist6_11f: auprc 0.5731 recovery 1.000
+50 ns: static 0.4088 full 0.5231 gain 0.1142 (ref 0.1142)
+  50 ns hist6_10f: auprc 0.5332 recovery 1.088
+  50 ns hist6_11f: auprc 0.5231 recovery 1.000
+90 ns: static 0.5118 full 0.5797 gain 0.0679 (ref 0.0679)
+  90 ns hist6_10f: auprc 0.5858 recovery 1.090
+  90 ns hist6_11f: auprc 0.5797 recovery 1.000
+1 ns: recovery diff -0.058 auprc diff -0.0104
+5 ns: recovery diff -0.023 auprc diff -0.0041
+10 ns: recovery diff +0.012 auprc diff +0.0018
+30 ns: recovery diff -0.048 auprc diff -0.0064
+50 ns: recovery diff -0.088 auprc diff -0.0101
+90 ns: recovery diff -0.090 auprc diff -0.0061
+saved /home/hatch/workspace/kinescope/repo/experiments/G156_hb_dissociation_6stats_origin_frame/results.json /home/hatch/workspace/kinescope/repo/experiments/G156_hb_dissociation_6stats_origin_frame/results.csv
+EXIT=0
