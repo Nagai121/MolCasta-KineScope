@@ -1048,5 +1048,307 @@
   "_k53_recorded_gain": {
     "1": 0.1788,
     "90": 0.0582
+  },
+  "_summary_old_definition": {
+    "1": {
+      "1": {
+        "transfer_gain": 0.1788141939143345,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.11477495355749234,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "5": {
+        "transfer_gain": 0.14416649504592233,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 0.8062363053516264,
+        "transfer_gain_macro": 0.13192796985067123,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 1.1494491242341187
+      },
+      "10": {
+        "transfer_gain": 0.17966538203706955,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 1.0047601820867913,
+        "transfer_gain_macro": 0.16205065069124946,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 1.4118990743923594
+      },
+      "30": {
+        "transfer_gain": 0.19568852329451036,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 1.0943679526260646,
+        "transfer_gain_macro": 0.12871570590814585,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 1.121461624845445
+      },
+      "50": {
+        "transfer_gain": 0.214387935191639,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 1.1989424916365812,
+        "transfer_gain_macro": 0.11202780925686662,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 0.9760649495776128
+      },
+      "90": {
+        "transfer_gain": 0.11752398466201064,
+        "matched_gain": 0.1788141939143345,
+        "recovery_vs_matched": 0.65724080448733,
+        "transfer_gain_macro": 0.16968524198091173,
+        "matched_gain_macro": 0.11477495355749234,
+        "recovery_vs_matched_macro": 1.4784169953587833
+      }
+    },
+    "5": {
+      "1": {
+        "transfer_gain": 0.14242497848717267,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.2502710737384624,
+        "transfer_gain_macro": 0.0623483998656732,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 0.7926283437919335
+      },
+      "5": {
+        "transfer_gain": 0.11391527923724948,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.07866032088557229,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "10": {
+        "transfer_gain": 0.18996146285450666,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.6675678989372185,
+        "transfer_gain_macro": 0.10674748031613868,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 1.3570689658312605
+      },
+      "30": {
+        "transfer_gain": 0.1418243177627852,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.2449982014037821,
+        "transfer_gain_macro": 0.09517223986155698,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 1.2099142082067615
+      },
+      "50": {
+        "transfer_gain": 0.173353678156852,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.5217772305663329,
+        "transfer_gain_macro": 0.11120175362225071,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 1.413695652017701
+      },
+      "90": {
+        "transfer_gain": 0.1549436368836818,
+        "matched_gain": 0.11391527923724948,
+        "recovery_vs_matched": 1.3601655363630654,
+        "transfer_gain_macro": 0.07561509373426578,
+        "matched_gain_macro": 0.07866032088557229,
+        "recovery_vs_matched_macro": 0.961286362463021
+      }
+    },
+    "10": {
+      "1": {
+        "transfer_gain": 0.14810673923590728,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 0.831766961610414,
+        "transfer_gain_macro": 0.05597750011936575,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 0.586991692910288
+      },
+      "5": {
+        "transfer_gain": 0.12253256975024995,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 0.6881425096878522,
+        "transfer_gain_macro": 0.09556101949339113,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.0020726986565232
+      },
+      "10": {
+        "transfer_gain": 0.17806278209121518,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.09536335998526813,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "30": {
+        "transfer_gain": 0.17328541088637495,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 0.9731702989881796,
+        "transfer_gain_macro": 0.08358773926875263,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 0.8765183953424605
+      },
+      "50": {
+        "transfer_gain": 0.15202597965125197,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 0.8537774029239559,
+        "transfer_gain_macro": 0.09584906569096041,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 1.0050932109121085
+      },
+      "90": {
+        "transfer_gain": 0.0666852240142104,
+        "matched_gain": 0.17806278209121518,
+        "recovery_vs_matched": 0.3745039992694821,
+        "transfer_gain_macro": 0.05604736998940529,
+        "matched_gain_macro": 0.09536335998526813,
+        "recovery_vs_matched_macro": 0.5877243628796591
+      }
+    },
+    "30": {
+      "1": {
+        "transfer_gain": 0.1172505764048043,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 1.8527829185528908,
+        "transfer_gain_macro": 0.02411475268096064,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 1.5461001179981357
+      },
+      "5": {
+        "transfer_gain": 0.09677448273247036,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 1.5292215531587436,
+        "transfer_gain_macro": 0.04438378491199069,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 2.8456346203298093
+      },
+      "10": {
+        "transfer_gain": 0.11118323467893748,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 1.7569073377634334,
+        "transfer_gain_macro": 0.027573422704784356,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 1.767850272465714
+      },
+      "30": {
+        "transfer_gain": 0.06328349383552306,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.015597148205501732,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "50": {
+        "transfer_gain": 0.054019642880164254,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 0.8536134717935135,
+        "transfer_gain_macro": -0.0447082697359138,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": -2.8664387327000855
+      },
+      "90": {
+        "transfer_gain": 0.05028436124365465,
+        "matched_gain": 0.06328349383552306,
+        "recovery_vs_matched": 0.7945888919209517,
+        "transfer_gain_macro": 0.01064946305734582,
+        "matched_gain_macro": 0.015597148205501732,
+        "recovery_vs_matched_macro": 0.6827827059814263
+      }
+    },
+    "50": {
+      "1": {
+        "transfer_gain": 0.10883814757093274,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 0.8359413291483389,
+        "transfer_gain_macro": 0.019472348141358453,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 0.6392663453243559
+      },
+      "5": {
+        "transfer_gain": 0.04880359927920819,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 0.3748404999459931,
+        "transfer_gain_macro": 0.02754174170151602,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 0.9041800420566672
+      },
+      "10": {
+        "transfer_gain": 0.14588282525058205,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 1.1204663581802388,
+        "transfer_gain_macro": 0.032648330831177574,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 1.0718265193224585
+      },
+      "30": {
+        "transfer_gain": 0.08585881291916131,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 0.6594464513829209,
+        "transfer_gain_macro": 0.03881883679216902,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 1.2744007936652122
+      },
+      "50": {
+        "transfer_gain": 0.13019830911078123,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.03046046187755813,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 1.0
+      },
+      "90": {
+        "transfer_gain": 0.06882109021417593,
+        "matched_gain": 0.13019830911078123,
+        "recovery_vs_matched": 0.5285866666334234,
+        "transfer_gain_macro": 0.060042361167174096,
+        "matched_gain_macro": 0.03046046187755813,
+        "recovery_vs_matched_macro": 1.971157279509624
+      }
+    },
+    "90": {
+      "1": {
+        "transfer_gain": 0.0382458414255909,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 0.6576821612681787,
+        "transfer_gain_macro": 0.01739871227199985,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": 0.5068277617156934
+      },
+      "5": {
+        "transfer_gain": -0.0029367736811062306,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": -0.050501272550198824,
+        "transfer_gain_macro": 0.010840169627555407,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": 0.3157761806196502
+      },
+      "10": {
+        "transfer_gain": 0.04539843461994053,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 0.7806794016317892,
+        "transfer_gain_macro": 0.03318509175054629,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": 0.9666879658287532
+      },
+      "30": {
+        "transfer_gain": 0.07663842074506844,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 1.3178876529585437,
+        "transfer_gain_macro": -0.02511438564420576,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": -0.7315867786032698
+      },
+      "50": {
+        "transfer_gain": 0.061324374446967034,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 1.0545446412302908,
+        "transfer_gain_macro": -0.02352241486188933,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": -0.6852123702157762
+      },
+      "90": {
+        "transfer_gain": 0.058152468894462905,
+        "matched_gain": 0.058152468894462905,
+        "recovery_vs_matched": 1.0,
+        "transfer_gain_macro": 0.034328648874920376,
+        "matched_gain_macro": 0.034328648874920376,
+        "recovery_vs_matched_macro": 1.0
+      }
+    }
   }
 }
