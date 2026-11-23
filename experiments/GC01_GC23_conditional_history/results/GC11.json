@@ -1,0 +1,153 @@
+{
+  "baseline": {
+    "auc": 0.9328549588628006,
+    "auprc": 0.500030011055471,
+    "brier": 0.043722951812874396,
+    "logloss": 0.14424523090708555,
+    "rows": 153212,
+    "positives": 10314,
+    "r80": 24114
+  },
+  "rows": {
+    "500ps-mean": {
+      "metrics": {
+        "auc": 0.9366029760320814,
+        "auprc": 0.5141205685661729,
+        "brier": 0.042983993887901306,
+        "logloss": 0.14119578897953033,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23108
+      },
+      "fit_seconds": 0.59238600009121,
+      "cuda_peak_bytes": 46102528,
+      "checkpoint": "GC11-500ps-mean.pt"
+    },
+    "500ps-closest": {
+      "metrics": {
+        "auc": 0.936401051816148,
+        "auprc": 0.5113654106444707,
+        "brier": 0.04310717433691025,
+        "logloss": 0.14141246676445007,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23167
+      },
+      "fit_seconds": 0.6722504999488592,
+      "cuda_peak_bytes": 46102528,
+      "checkpoint": "GC11-500ps-closest.pt"
+    },
+    "500ps-occupancy": {
+      "metrics": {
+        "auc": 0.936773916090287,
+        "auprc": 0.5172344642513055,
+        "brier": 0.04284324124455452,
+        "logloss": 0.140987366437912,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 22967
+      },
+      "fit_seconds": 0.6218562999274582,
+      "cuda_peak_bytes": 46102528,
+      "checkpoint": "GC11-500ps-occupancy.pt"
+    },
+    "500ps-mean_and_occupancy": {
+      "metrics": {
+        "auc": 0.9373125323097675,
+        "auprc": 0.5189483554410861,
+        "brier": 0.04275045916438103,
+        "logloss": 0.1405380666255951,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 22988
+      },
+      "fit_seconds": 0.5779718999983743,
+      "cuda_peak_bytes": 47646208,
+      "checkpoint": "GC11-500ps-mean_and_occupancy.pt"
+    },
+    "500ps-motion": {
+      "metrics": {
+        "auc": 0.9362923677553254,
+        "auprc": 0.5119853569900273,
+        "brier": 0.04308130592107773,
+        "logloss": 0.1414491981267929,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23217
+      },
+      "fit_seconds": 0.6215016000205651,
+      "cuda_peak_bytes": 49292288,
+      "checkpoint": "GC11-500ps-motion.pt"
+    },
+    "1000ps-mean": {
+      "metrics": {
+        "auc": 0.9369955142897002,
+        "auprc": 0.5151631969442519,
+        "brier": 0.042908020317554474,
+        "logloss": 0.14087842404842377,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 22960
+      },
+      "fit_seconds": 0.6419736000243574,
+      "cuda_peak_bytes": 46102528,
+      "checkpoint": "GC11-1000ps-mean.pt"
+    },
+    "1000ps-closest": {
+      "metrics": {
+        "auc": 0.9364142231024856,
+        "auprc": 0.5107147208362011,
+        "brier": 0.04313236102461815,
+        "logloss": 0.14143140614032745,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23136
+      },
+      "fit_seconds": 0.6863228000001982,
+      "cuda_peak_bytes": 46102528,
+      "checkpoint": "GC11-1000ps-closest.pt"
+    },
+    "1000ps-occupancy": {
+      "metrics": {
+        "auc": 0.9376038350258895,
+        "auprc": 0.5190260694982297,
+        "brier": 0.04270079731941223,
+        "logloss": 0.1403573900461197,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 22747
+      },
+      "fit_seconds": 0.7119375000474975,
+      "cuda_peak_bytes": 46102528,
+      "checkpoint": "GC11-1000ps-occupancy.pt"
+    },
+    "1000ps-mean_and_occupancy": {
+      "metrics": {
+        "auc": 0.9380617395024791,
+        "auprc": 0.5211730483502166,
+        "brier": 0.04259515926241875,
+        "logloss": 0.13994446396827698,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 22794
+      },
+      "fit_seconds": 0.6776504999725148,
+      "cuda_peak_bytes": 47646208,
+      "checkpoint": "GC11-1000ps-mean_and_occupancy.pt"
+    },
+    "1000ps-motion": {
+      "metrics": {
+        "auc": 0.9363520417395644,
+        "auprc": 0.5120336890361762,
+        "brier": 0.04307813569903374,
+        "logloss": 0.14140629768371582,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23135
+      },
+      "fit_seconds": 0.6953692999668419,
+      "cuda_peak_bytes": 49292288,
+      "checkpoint": "GC11-1000ps-motion.pt"
+    }
+  }
+}

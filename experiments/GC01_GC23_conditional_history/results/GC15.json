@@ -1,0 +1,55 @@
+{
+  "baseline": {
+    "auc": 0.9328549588628006,
+    "auprc": 0.500030011055471,
+    "brier": 0.043722951812874396,
+    "logloss": 0.14424523090708555,
+    "rows": 153212,
+    "positives": 10314,
+    "r80": 24114
+  },
+  "rows": {
+    "distance": {
+      "metrics": {
+        "auc": 0.9324975164432816,
+        "auprc": 0.4987739596596787,
+        "brier": 0.04407557472586632,
+        "logloss": 0.14501842856407166,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24049
+      },
+      "fit_seconds": 1.9024919000221416,
+      "cuda_peak_bytes": 48000000,
+      "checkpoint": "GC15-distance.pt"
+    },
+    "existing_static": {
+      "metrics": {
+        "auc": 0.9324132164789973,
+        "auprc": 0.49862710355862583,
+        "brier": 0.04400169476866722,
+        "logloss": 0.14494271576404572,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24121
+      },
+      "fit_seconds": 0.6000583999557421,
+      "cuda_peak_bytes": 48000000,
+      "checkpoint": "GC15-existing_static.pt"
+    },
+    "combined": {
+      "metrics": {
+        "auc": 0.9326178519613936,
+        "auprc": 0.4990938881248734,
+        "brier": 0.04394098371267319,
+        "logloss": 0.14468085765838623,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24028
+      },
+      "fit_seconds": 0.6717251000227407,
+      "cuda_peak_bytes": 48000000,
+      "checkpoint": "GC15-combined.pt"
+    }
+  }
+}

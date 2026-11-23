@@ -1,0 +1,107 @@
+{
+  "train": [
+    "2vm5_A",
+    "3fp5_A",
+    "1i4m_A",
+    "3fyb_A",
+    "2oxo_A",
+    "2qsa_A",
+    "5pal_A",
+    "1uz3_A",
+    "4obi_A",
+    "5hqh_A",
+    "1m9z_A",
+    "3fpu_A",
+    "3po8_A",
+    "1tov_A",
+    "3cw3_A",
+    "1njh_A",
+    "7fd1_A",
+    "1j0p_A",
+    "1o4k_A",
+    "2nml_A",
+    "2fhz_A",
+    "2pu9_A",
+    "3cyi_A",
+    "3ueb_E"
+  ],
+  "validation": [
+    "1yu5_X",
+    "3mx7_A",
+    "4ftf_A",
+    "1knt_A",
+    "3txs_C",
+    "3t92_A",
+    "3msw_A",
+    "3wx4_A",
+    "2cyj_A",
+    "4wrp_A"
+  ],
+  "baseline": {
+    "auc": 0.9328549588628006,
+    "auprc": 0.500030011055471,
+    "brier": 0.043722951812874396,
+    "logloss": 0.14424523090708555,
+    "rows": 153212,
+    "positives": 10314,
+    "r80": 24114
+  },
+  "rows": {
+    "distance": {
+      "metrics": {
+        "auc": 0.9325104153138322,
+        "auprc": 0.4990065685604851,
+        "brier": 0.04392614588141441,
+        "logloss": 0.144667848944664,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23968
+      },
+      "fit_seconds": 2.0844182000728324,
+      "cuda_peak_bytes": 46102528,
+      "checkpoint": "GC06-distance.pt"
+    },
+    "past_100ps": {
+      "metrics": {
+        "auc": 0.9351775622926158,
+        "auprc": 0.5086951831362564,
+        "brier": 0.04329606518149376,
+        "logloss": 0.1423863172531128,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23548
+      },
+      "fit_seconds": 0.6501643999945372,
+      "cuda_peak_bytes": 46102528,
+      "checkpoint": "GC06-past_100ps.pt"
+    },
+    "past_500ps": {
+      "metrics": {
+        "auc": 0.9369355414283647,
+        "auprc": 0.5170496619655626,
+        "brier": 0.04284266009926796,
+        "logloss": 0.14084872603416443,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23060
+      },
+      "fit_seconds": 0.6830630999756977,
+      "cuda_peak_bytes": 52381696,
+      "checkpoint": "GC06-past_500ps.pt"
+    },
+    "static_and_past": {
+      "metrics": {
+        "auc": 0.9368462511325408,
+        "auprc": 0.5176060803480843,
+        "brier": 0.0428205281496048,
+        "logloss": 0.14085371792316437,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23009
+      },
+      "fit_seconds": 0.6437260999809951,
+      "cuda_peak_bytes": 83320320,
+      "checkpoint": "GC06-static_and_past.pt"
+    }
+  }
+}
