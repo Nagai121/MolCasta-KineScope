@@ -1,0 +1,209 @@
+{
+  "n_cal": 13808,
+  "n_test": 163074,
+  "no_overlap": true,
+  "real_mean_ols": {
+    "r2_on_test": 0.6262031859287579,
+    "residual_sd": 0.6075883590992472,
+    "corr_mean_with_origin": 0.7696339410977182,
+    "corr_residual_with_origin": -0.007797995673136653,
+    "corr_mean_with_frozen": -0.5909754281101434,
+    "per_horizon": {
+      "1": {
+        "corr_mean_with_label": -0.36235510700200585,
+        "corr_residual_with_label": -0.06589217633118355,
+        "mean_residual_pos_minus_neg": -0.1550615282199217,
+        "auc_neg_residual": 0.5570632861269943,
+        "auc_residual": 0.4429367138730058
+      },
+      "5": {
+        "corr_mean_with_label": -0.3552838516758629,
+        "corr_residual_with_label": -0.06834880838091136,
+        "mean_residual_pos_minus_neg": -0.15571518237247722,
+        "auc_neg_residual": 0.559884723926648,
+        "auc_residual": 0.440115276073352
+      },
+      "10": {
+        "corr_mean_with_label": -0.3497781250428914,
+        "corr_residual_with_label": -0.06874751268127718,
+        "mean_residual_pos_minus_neg": -0.15579154931277445,
+        "auc_neg_residual": 0.560845672969949,
+        "auc_residual": 0.4391543270300511
+      },
+      "30": {
+        "corr_mean_with_label": -0.35190339049523206,
+        "corr_residual_with_label": -0.07198150616467719,
+        "mean_residual_pos_minus_neg": -0.16084409803956676,
+        "auc_neg_residual": 0.5625047252839948,
+        "auc_residual": 0.4374952747160052
+      },
+      "50": {
+        "corr_mean_with_label": -0.34429317497294476,
+        "corr_residual_with_label": -0.06779015006319511,
+        "mean_residual_pos_minus_neg": -0.1530450274732295,
+        "auc_neg_residual": 0.5585652431535189,
+        "auc_residual": 0.4414347568464811
+      },
+      "90": {
+        "corr_mean_with_label": -0.3398512426792738,
+        "corr_residual_with_label": -0.06464424541058093,
+        "mean_residual_pos_minus_neg": -0.14466556273657155,
+        "auc_neg_residual": 0.5563854203305595,
+        "auc_residual": 0.4436145796694405
+      }
+    }
+  },
+  "real_mean_gbm": {
+    "r2_on_test": 0.6352458559766085,
+    "residual_sd": 0.6001888358758622,
+    "corr_mean_with_origin": 0.7696339410977182,
+    "corr_residual_with_origin": 0.018861929153821212,
+    "corr_mean_with_frozen": -0.5909754281101434,
+    "per_horizon": {
+      "1": {
+        "corr_mean_with_label": -0.36235510700200585,
+        "corr_residual_with_label": -0.07808497453368174,
+        "mean_residual_pos_minus_neg": -0.18151651685389747,
+        "auc_neg_residual": 0.5973602807523173,
+        "auc_residual": 0.40263971924768277
+      },
+      "5": {
+        "corr_mean_with_label": -0.3552838516758629,
+        "corr_residual_with_label": -0.07497231984507086,
+        "mean_residual_pos_minus_neg": -0.1687249969732575,
+        "auc_neg_residual": 0.5887317680118814,
+        "auc_residual": 0.41126823198811857
+      },
+      "10": {
+        "corr_mean_with_label": -0.3497781250428914,
+        "corr_residual_with_label": -0.07410677268906601,
+        "mean_residual_pos_minus_neg": -0.16589117192112138,
+        "auc_neg_residual": 0.5872286380025781,
+        "auc_residual": 0.4127713619974219
+      },
+      "30": {
+        "corr_mean_with_label": -0.35190339049523206,
+        "corr_residual_with_label": -0.077300340842121,
+        "mean_residual_pos_minus_neg": -0.1706255550303409,
+        "auc_neg_residual": 0.587150136089832,
+        "auc_residual": 0.412849863910168
+      },
+      "50": {
+        "corr_mean_with_label": -0.34429317497294476,
+        "corr_residual_with_label": -0.07317423781701356,
+        "mean_residual_pos_minus_neg": -0.1631884074610547,
+        "auc_neg_residual": 0.5840026514563279,
+        "auc_residual": 0.41599734854367204
+      },
+      "90": {
+        "corr_mean_with_label": -0.3398512426792738,
+        "corr_residual_with_label": -0.06782725601246284,
+        "mean_residual_pos_minus_neg": -0.14994017263321532,
+        "auc_neg_residual": 0.5769125117048169,
+        "auc_residual": 0.423087488295183
+      }
+    }
+  },
+  "gen_mean_ols": {
+    "r2_on_test": 0.9666397992394333,
+    "residual_sd": 0.14092252476740277,
+    "corr_mean_with_origin": 0.9801216475235565,
+    "corr_residual_with_origin": -0.014216406636524142,
+    "corr_mean_with_frozen": -0.7147762258598277,
+    "per_horizon": {
+      "1": {
+        "corr_mean_with_label": -0.3843264692245048,
+        "corr_residual_with_label": -0.0018198865782149797,
+        "mean_residual_pos_minus_neg": -0.0009933115853482076,
+        "auc_neg_residual": 0.5155914346684743,
+        "auc_residual": 0.48440856533152565
+      },
+      "5": {
+        "corr_mean_with_label": -0.3776678353391461,
+        "corr_residual_with_label": -0.01996244516492629,
+        "mean_residual_pos_minus_neg": -0.010548354541338097,
+        "auc_neg_residual": 0.5373215492458809,
+        "auc_residual": 0.462678450754119
+      },
+      "10": {
+        "corr_mean_with_label": -0.371716186621985,
+        "corr_residual_with_label": -0.027017845519266028,
+        "mean_residual_pos_minus_neg": -0.014200662030579382,
+        "auc_neg_residual": 0.5432955605304545,
+        "auc_residual": 0.45670443946954553
+      },
+      "30": {
+        "corr_mean_with_label": -0.37283960165870594,
+        "corr_residual_with_label": -0.032056222318239444,
+        "mean_residual_pos_minus_neg": -0.016613743923818185,
+        "auc_neg_residual": 0.5468515676523169,
+        "auc_residual": 0.4531484323476831
+      },
+      "50": {
+        "corr_mean_with_label": -0.3662586504614063,
+        "corr_residual_with_label": -0.02833160988476907,
+        "mean_residual_pos_minus_neg": -0.014835249419467018,
+        "auc_neg_residual": 0.5449146960607201,
+        "auc_residual": 0.45508530393928004
+      },
+      "90": {
+        "corr_mean_with_label": -0.36423072768048453,
+        "corr_residual_with_label": -0.034922712977195944,
+        "mean_residual_pos_minus_neg": -0.018126511707476308,
+        "auc_neg_residual": 0.5526333512520126,
+        "auc_residual": 0.44736664874798737
+      }
+    }
+  },
+  "gen_mean_gbm": {
+    "r2_on_test": 0.9760395948405863,
+    "residual_sd": 0.1193289387385679,
+    "corr_mean_with_origin": 0.9801216475235565,
+    "corr_residual_with_origin": -0.004288624738018229,
+    "corr_mean_with_frozen": -0.7147762258598277,
+    "per_horizon": {
+      "1": {
+        "corr_mean_with_label": -0.3843264692245048,
+        "corr_residual_with_label": -0.007473970879456466,
+        "mean_residual_pos_minus_neg": -0.0034542832205345046,
+        "auc_neg_residual": 0.5213532149259587,
+        "auc_residual": 0.4786467850740414
+      },
+      "5": {
+        "corr_mean_with_label": -0.3776678353391461,
+        "corr_residual_with_label": -0.011876545792081167,
+        "mean_residual_pos_minus_neg": -0.0053140604777393435,
+        "auc_neg_residual": 0.5249915234519315,
+        "auc_residual": 0.4750084765480686
+      },
+      "10": {
+        "corr_mean_with_label": -0.371716186621985,
+        "corr_residual_with_label": -0.014391950308511082,
+        "mean_residual_pos_minus_neg": -0.006405350378117413,
+        "auc_neg_residual": 0.5270960954262441,
+        "auc_residual": 0.4729039045737558
+      },
+      "30": {
+        "corr_mean_with_label": -0.37283960165870594,
+        "corr_residual_with_label": -0.018281077443731416,
+        "mean_residual_pos_minus_neg": -0.008022732688167606,
+        "auc_neg_residual": 0.5286737802107628,
+        "auc_residual": 0.47132621978923717
+      },
+      "50": {
+        "corr_mean_with_label": -0.3662586504614063,
+        "corr_residual_with_label": -0.015029320431420043,
+        "mean_residual_pos_minus_neg": -0.006663897462342893,
+        "auc_neg_residual": 0.5267377429143008,
+        "auc_residual": 0.4732622570856992
+      },
+      "90": {
+        "corr_mean_with_label": -0.36423072768048453,
+        "corr_residual_with_label": -0.016503243044151256,
+        "mean_residual_pos_minus_neg": -0.007253388170637261,
+        "auc_neg_residual": 0.5280894261117628,
+        "auc_residual": 0.4719105738882372
+      }
+    }
+  }
+}
