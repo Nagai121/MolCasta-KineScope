@@ -66,17 +66,17 @@ BOOT_SEED = 42  # 結果を見る前に固定（G73・G49・G59・G62・G67・G2
 
 # G142 の記録との照合用の期待値（合算 AUPRC）
 EXPECTED = {
-    1: {"static_only": 0.3734, "full": 0.5522, "prefix_mean_1.0ns": 0.5614,
+    1: {"static_only": 0.3734, "full_hist": 0.5522, "prefix_mean_1.0ns": 0.5614,
         "full_gain": 0.1788, "prefix_gain": 0.1880, "recovery": 1.052},
-    5: {"static_only": 0.4641, "full": 0.5780, "prefix_mean_1.0ns": 0.5731,
+    5: {"static_only": 0.4641, "full_hist": 0.5780, "prefix_mean_1.0ns": 0.5731,
         "full_gain": 0.1139, "prefix_gain": 0.1090, "recovery": 0.957},
-    10: {"static_only": 0.3572, "full": 0.5353, "prefix_mean_1.0ns": 0.5402,
+    10: {"static_only": 0.3572, "full_hist": 0.5353, "prefix_mean_1.0ns": 0.5402,
          "full_gain": 0.1781, "prefix_gain": 0.1830, "recovery": 1.028},
-    30: {"static_only": 0.4799, "full": 0.5432, "prefix_mean_1.0ns": 0.5584,
+    30: {"static_only": 0.4799, "full_hist": 0.5432, "prefix_mean_1.0ns": 0.5584,
          "full_gain": 0.0633, "prefix_gain": 0.0785, "recovery": 1.240},
-    50: {"static_only": 0.4863, "full": 0.6165, "prefix_mean_1.0ns": 0.5833,
+    50: {"static_only": 0.4863, "full_hist": 0.6165, "prefix_mean_1.0ns": 0.5833,
          "full_gain": 0.1302, "prefix_gain": 0.0970, "recovery": 0.745},
-    90: {"static_only": 0.4824, "full": 0.5405, "prefix_mean_1.0ns": 0.5342,
+    90: {"static_only": 0.4824, "full_hist": 0.5405, "prefix_mean_1.0ns": 0.5342,
          "full_gain": 0.0582, "prefix_gain": 0.0518, "recovery": 0.892},
 }
 
@@ -184,10 +184,21 @@ for hidx, hns in HORIZONS.items():
         idx = prot_idx[prot]
         if len(idx) == 0:
             continue
+        n_pos = int(yte[idx].sum())
+        if n_pos == 0:
+            # そのタンパク質に陽性が1件もない予測幅では、AUPRC は定義されない。
+            # sklearn は警告を出して 0.0 を返すが、ここでは nan と記録する。
+            per_protein[prot] = {
+                "n": int(len(idx)), "positives": 0,
+                "auprc": {c: float("nan") for c in CONDS},
+                "full_gain": float("nan"), "prefix_gain": float("nan"),
+                "recovery": float("nan"),
+            }
+            continue
         ap = {c: auprc(yte[idx], p[c][idx]) for c in CONDS}
         g = ap["full_hist"] - ap["static_only"]
         per_protein[prot] = {
-            "n": int(len(idx)), "positives": int(yte[idx].sum()),
+            "n": int(len(idx)), "positives": n_pos,
             "auprc": {c: ap[c] for c in CONDS},
             "full_gain": g,
             "prefix_gain": ap["prefix_mean_1.0ns"] - ap["static_only"],
