@@ -1,0 +1,87 @@
+cal 13808 test 163074
+full 6stats vs stored history cols: cal max diff 1.91e-06, test 3.81e-06
+--- horizon 1 ns: cal pos 885 test pos 11712 ---
+  static_only: pooled auprc 0.4591 macro auprc 0.4539
+  full_history: pooled auprc 0.5293 macro auprc 0.5251
+  full_6stats: pooled auprc 0.5297 macro auprc 0.5246
+  prefix_6stats_0.1ns: pooled auprc 0.4904 macro auprc 0.4872
+  prefix_6stats_0.25ns: pooled auprc 0.5046 macro auprc 0.5012
+  prefix_6stats_0.5ns: pooled auprc 0.5130 macro auprc 0.5074
+  base gain pooled 0.0702 macro 0.0712
+  full_history: recovery pooled 1.000 macro 1.000 per-protein mean 1.000 median 1.000
+  full_6stats: recovery pooled 1.006 macro 0.992 per-protein mean 0.957 median 0.974
+  prefix_6stats_0.1ns: recovery pooled 0.446 macro 0.468 per-protein mean 0.578 median 0.442
+  prefix_6stats_0.25ns: recovery pooled 0.649 macro 0.664 per-protein mean 0.719 median 0.577
+  prefix_6stats_0.5ns: recovery pooled 0.768 macro 0.751 per-protein mean 0.681 median 0.707
+--- horizon 5 ns: cal pos 932 test pos 12567 ---
+  static_only: pooled auprc 0.4575 macro auprc 0.4505
+  full_history: pooled auprc 0.5089 macro auprc 0.5023
+  full_6stats: pooled auprc 0.5078 macro auprc 0.5006
+  prefix_6stats_0.1ns: pooled auprc 0.4832 macro auprc 0.4783
+  prefix_6stats_0.25ns: pooled auprc 0.4927 macro auprc 0.4867
+  prefix_6stats_0.5ns: pooled auprc 0.5007 macro auprc 0.4948
+  base gain pooled 0.0514 macro 0.0518
+  full_history: recovery pooled 1.000 macro 1.000 per-protein mean 1.000 median 1.000
+  full_6stats: recovery pooled 0.978 macro 0.967 per-protein mean 0.961 median 0.949
+  prefix_6stats_0.1ns: recovery pooled 0.501 macro 0.536 per-protein mean 0.602 median 0.539
+  prefix_6stats_0.25ns: recovery pooled 0.684 macro 0.699 per-protein mean 0.721 median 0.707
+  prefix_6stats_0.5ns: recovery pooled 0.840 macro 0.855 per-protein mean 0.892 median 0.872
+--- horizon 10 ns: cal pos 940 test pos 12714 ---
+  static_only: pooled auprc 0.4505 macro auprc 0.4438
+  full_history: pooled auprc 0.4881 macro auprc 0.4826
+  full_6stats: pooled auprc 0.4897 macro auprc 0.4831
+  prefix_6stats_0.1ns: pooled auprc 0.4711 macro auprc 0.4652
+  prefix_6stats_0.25ns: pooled auprc 0.4737 macro auprc 0.4690
+  prefix_6stats_0.5ns: pooled auprc 0.4776 macro auprc 0.4725
+  base gain pooled 0.0376 macro 0.0388
+  full_history: recovery pooled 1.000 macro 1.000 per-protein mean 1.000 median 1.000
+  full_6stats: recovery pooled 1.041 macro 1.011 per-protein mean 1.397 median 0.993
+  prefix_6stats_0.1ns: recovery pooled 0.548 macro 0.551 per-protein mean -0.079 median 0.648
+  prefix_6stats_0.25ns: recovery pooled 0.616 macro 0.650 per-protein mean 0.085 median 0.596
+  prefix_6stats_0.5ns: recovery pooled 0.720 macro 0.738 per-protein mean 0.022 median 0.728
+--- horizon 30 ns: cal pos 996 test pos 13111 ---
+  static_only: pooled auprc 0.4492 macro auprc 0.4418
+  full_history: pooled auprc 0.4855 macro auprc 0.4788
+  full_6stats: pooled auprc 0.4876 macro auprc 0.4811
+  prefix_6stats_0.1ns: pooled auprc 0.4721 macro auprc 0.4661
+  prefix_6stats_0.25ns: pooled auprc 0.4735 macro auprc 0.4686
+  prefix_6stats_0.5ns: pooled auprc 0.4770 macro auprc 0.4715
+  base gain pooled 0.0363 macro 0.0370
+  full_history: recovery pooled 1.000 macro 1.000 per-protein mean 1.000 median 1.000
+  full_6stats: recovery pooled 1.057 macro 1.063 per-protein mean 1.110 median 1.002
+  prefix_6stats_0.1ns: recovery pooled 0.629 macro 0.656 per-protein mean 2.152 median 0.691
+  prefix_6stats_0.25ns: recovery pooled 0.668 macro 0.723 per-protein mean 2.085 median 0.783
+  prefix_6stats_0.5ns: recovery pooled 0.766 macro 0.803 per-protein mean 1.768 median 0.829
+--- horizon 50 ns: cal pos 975 test pos 12819 ---
+  static_only: pooled auprc 0.4470 macro auprc 0.4407
+  full_history: pooled auprc 0.4825 macro auprc 0.4752
+  full_6stats: pooled auprc 0.4815 macro auprc 0.4746
+  prefix_6stats_0.1ns: pooled auprc 0.4645 macro auprc 0.4589
+  prefix_6stats_0.25ns: pooled auprc 0.4649 macro auprc 0.4595
+  prefix_6stats_0.5ns: pooled auprc 0.4714 macro auprc 0.4653
+  base gain pooled 0.0354 macro 0.0344
+  full_history: recovery pooled 1.000 macro 1.000 per-protein mean 1.000 median 1.000
+  full_6stats: recovery pooled 0.972 macro 0.983 per-protein mean 0.820 median 0.958
+  prefix_6stats_0.1ns: recovery pooled 0.494 macro 0.526 per-protein mean 0.390 median 0.503
+  prefix_6stats_0.25ns: recovery pooled 0.505 macro 0.544 per-protein mean 0.544 median 0.549
+  prefix_6stats_0.5ns: recovery pooled 0.687 macro 0.712 per-protein mean 0.759 median 0.760
+--- horizon 90 ns: cal pos 945 test pos 13068 ---
+  static_only: pooled auprc 0.4418 macro auprc 0.4357
+  full_history: pooled auprc 0.4683 macro auprc 0.4630
+  full_6stats: pooled auprc 0.4726 macro auprc 0.4675
+  prefix_6stats_0.1ns: pooled auprc 0.4573 macro auprc 0.4495
+  prefix_6stats_0.25ns: pooled auprc 0.4620 macro auprc 0.4556
+  prefix_6stats_0.5ns: pooled auprc 0.4665 macro auprc 0.4608
+  base gain pooled 0.0265 macro 0.0273
+  full_history: recovery pooled 1.000 macro 1.000 per-protein mean 1.000 median 1.000
+  full_6stats: recovery pooled 1.162 macro 1.165 per-protein mean -11.347 median 0.959
+  prefix_6stats_0.1ns: recovery pooled 0.585 macro 0.507 per-protein mean 16.012 median 0.471
+  prefix_6stats_0.25ns: recovery pooled 0.763 macro 0.731 per-protein mean 0.616 median 0.596
+  prefix_6stats_0.5ns: recovery pooled 0.932 macro 0.919 per-protein mean 6.606 median 0.827
+horizon 1 ns: min cut pooled 0.25 ns macro 0.25 ns
+horizon 5 ns: min cut pooled 0.1 ns macro 0.1 ns
+horizon 10 ns: min cut pooled 0.1 ns macro 0.1 ns
+horizon 30 ns: min cut pooled 0.1 ns macro 0.1 ns
+horizon 50 ns: min cut pooled 0.25 ns macro 0.1 ns
+horizon 90 ns: min cut pooled 0.1 ns macro 0.1 ns
+saved /home/hatch/workspace/kinescope/repo/experiments/G86_hb_formation_strongbase_6stats_long_horizons/results.json
