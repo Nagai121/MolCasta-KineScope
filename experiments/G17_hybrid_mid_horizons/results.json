@@ -1,0 +1,123 @@
+{
+  "label": "HB formation 10ns and 30ns",
+  "train_n": 9610,
+  "test_n": 4972,
+  "horizons": {
+    "10": {
+      "test_positives": 325,
+      "static_only": {
+        "n": 4972,
+        "positives": 325,
+        "auprc": 0.35476856489174796,
+        "auc": 0.8750899670589793,
+        "brier": 0.04945700886925582,
+        "logloss": 0.17527504097694893
+      },
+      "full_hist": {
+        "n": 4972,
+        "positives": 325,
+        "auprc": 0.4376925992987372,
+        "auc": 0.9083570872854281,
+        "brier": 0.046232954526879956,
+        "logloss": 0.16082345004219542
+      },
+      "prefix_mean_0.1ns": {
+        "n": 4972,
+        "positives": 325,
+        "auprc": 0.41867388396686217,
+        "auc": 0.9035731903130225,
+        "brier": 0.04685471322501255,
+        "logloss": 0.16203931267409938,
+        "gain": 0.06390531907511421,
+        "recovery": 0.7706489382977723
+      },
+      "gen_mean_only": {
+        "n": 4972,
+        "positives": 325,
+        "auprc": 0.3751993103856603,
+        "auc": 0.8792014699309728,
+        "brier": 0.04858326280718837,
+        "logloss": 0.17254868332809878,
+        "gain": 0.020430745493912328,
+        "recovery": 0.24637905813456565
+      },
+      "mixed": {
+        "n": 4972,
+        "positives": 325,
+        "auprc": 0.4100224379318762,
+        "auc": 0.9063564582609126,
+        "brier": 0.04677257429456736,
+        "logloss": 0.16068375940550084,
+        "gain": 0.05525387304012824,
+        "recovery": 0.6663191610883704
+      },
+      "full_gain": 0.08292403440698926,
+      "mixed_minus_prefix": -0.10432977720940184
+    },
+    "30": {
+      "test_positives": 345,
+      "static_only": {
+        "n": 4972,
+        "positives": 345,
+        "auprc": 0.3638886114495804,
+        "auc": 0.861673291299023,
+        "brier": 0.05282158864226674,
+        "logloss": 0.19074033188587747
+      },
+      "full_hist": {
+        "n": 4972,
+        "positives": 345,
+        "auprc": 0.42644656209548093,
+        "auc": 0.904971136649095,
+        "brier": 0.04873598576331413,
+        "logloss": 0.16856699000074848
+      },
+      "prefix_mean_0.1ns": {
+        "n": 4972,
+        "positives": 345,
+        "auprc": 0.425126433451017,
+        "auc": 0.8924328844870842,
+        "brier": 0.04957953799075767,
+        "logloss": 0.17403406764659982,
+        "gain": 0.061237822001436626,
+        "recovery": 0.9788975081371146
+      },
+      "gen_mean_only": {
+        "n": 4972,
+        "positives": 345,
+        "auprc": 0.38226957831204733,
+        "auc": 0.8749823812969245,
+        "brier": 0.05144903322346028,
+        "logloss": 0.1839500774464364,
+        "gain": 0.01838096686246693,
+        "recovery": 0.29382303404581633
+      },
+      "mixed": {
+        "n": 4972,
+        "positives": 345,
+        "auprc": 0.45574087716974,
+        "auc": 0.8963882441748653,
+        "brier": 0.048251493705997614,
+        "logloss": 0.1705541638244707,
+        "gain": 0.09185226572015959,
+        "recovery": 1.468274851906114
+      },
+      "full_gain": 0.06255795064590053,
+      "mixed_minus_prefix": 0.48937734376899933
+    }
+  },
+  "diagnostics": {
+    "seed_check": "HistGradientBoosting with early stopping off (train n=9610 < 10000) is deterministic; seeds 1 and 7 gave identical AUPRCs to seed 42 for prefix-only and mixed at both horizons.",
+    "per_protein_mixed_minus_prefix_auprc": {
+      "10ns": {
+        "1mix_A": -0.0069,
+        "2qt4_A": -0.0053
+      },
+      "30ns": {
+        "1mix_A": 0.0305,
+        "2qt4_A": 0.0421
+      }
+    },
+    "note": "At 30 ns the mixed advantage is present in both test proteins; at 10 ns mixing hurts slightly in both. The 30 ns recovery 1.468 is inflated by the small full gain (+0.0626); the absolute AUPRC advantage of mixed over full history is +0.0293."
+  }
+}
