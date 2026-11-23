@@ -1,0 +1,81 @@
+{
+  "n_train": 9610,
+  "n_test": 4972,
+  "test_positives": 290,
+  "fraction_test_mean": 0.05971622906457982,
+  "fraction_test_std": 0.16399837023751038,
+  "replica_floor": {
+    "1bgf_A": {
+      "n_pairs": 355,
+      "diff_std": 0.07070861073151428,
+      "per_pair_std_mean": 0.01556496074262993
+    },
+    "1ifg_A": {
+      "n_pairs": 447,
+      "diff_std": 0.06097287765736329,
+      "per_pair_std_mean": 0.011377405054174871
+    },
+    "1j8r_A": {
+      "n_pairs": 721,
+      "diff_std": 0.06075089110019798,
+      "per_pair_std_mean": 0.010246348227511751
+    },
+    "2b0a_A": {
+      "n_pairs": 558,
+      "diff_std": 0.06167622178005773,
+      "per_pair_std_mean": 0.01241894432168952
+    },
+    "1mix_A": {
+      "n_pairs": 662,
+      "diff_std": 0.0843544152353,
+      "per_pair_std_mean": 0.018326713514770672
+    },
+    "2qt4_A": {
+      "n_pairs": 447,
+      "diff_std": 0.04952613783016187,
+      "per_pair_std_mean": 0.008163779017393319
+    },
+    "_pooled": {
+      "n_pairs": 3190,
+      "diff_std": 0.06635749188464847,
+      "diff_mae": 0.019055761375510592
+    }
+  },
+  "fraction_prediction": {
+    "docd7": {
+      "bias": -0.002822578771670824,
+      "std": 0.12424887116648818,
+      "mae": 0.05479156843883156,
+      "corr": 0.653734150854844
+    },
+    "rich99": {
+      "bias": -0.003208737469273328,
+      "std": 0.1177530697626955,
+      "mae": 0.051946394055889085,
+      "corr": 0.6961432481138325
+    }
+  },
+  "auprc": {
+    "static": 0.3636900260068624,
+    "static+real_frac": 0.4828595993403154,
+    "static+pred_frac_docd7": 0.33863992458786796,
+    "static+pred_frac_rich99": 0.3885293658341611,
+    "full_history": 0.481505210399907
+  },
+  "gain_full_history": 0.11781518439304461,
+  "gain_real_frac": 0.11916957333345302,
+  "recovery_vs_full": {
+    "static": 0.0,
+    "static+real_frac": 1.0114958776102239,
+    "static+pred_frac_docd7": -0.21262201088973817,
+    "static+pred_frac_rich99": 0.21083309384325094,
+    "full_history": 1.0
+  },
+  "recovery_vs_real_frac": {
+    "static": 0.0,
+    "static+real_frac": 1.0,
+    "static+pred_frac_docd7": -0.210205514027484,
+    "static+pred_frac_rich99": 0.2084369284246304,
+    "full_history": 0.9886347756182811
+  }
+}
