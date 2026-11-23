@@ -1,0 +1,135 @@
+{
+  "label": "Contact dissociation hybrid uncertainty at 90ns (G134)",
+  "phenomenon": "contact dissociation (DocD, K50 cache + G18 regenerated proposal-22 series, overlapping candidates only)",
+  "cells": [
+    {
+      "horizon_ns": 90,
+      "source": "G134",
+      "kind": "hist6_1.0ns",
+      "prefix_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "bootstrap": {
+    "n_boot": 10000,
+    "seed": 42,
+    "method": "percentile",
+    "resampling_unit": "protein (1mix_A, 2qt4_A; 2 proteins only, so only 3 resample combinations exist and the bootstrap distribution takes only 3 distinct values)",
+    "note": "The 10,000 draws are mapped onto the 3 exact combination values; this is mathematically identical to recomputing AUPRC on the resampled rows each time, because the difference depends only on the chosen combination."
+  },
+  "horizons": {
+    "90": {
+      "horizon_ns": 90,
+      "kind": "hist6_1.0ns",
+      "prefix_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "test_n_matched": 2226,
+      "test_positives": 160,
+      "auprc": {
+        "static_only": 0.32938005357838007,
+        "full_hist": 0.4817982895265883,
+        "prefix": 0.4696521691103728,
+        "gen_mean_only": 0.34522539158978144,
+        "mixed": 0.478662820382954
+      },
+      "full_gain": 0.15241823594820825,
+      "recovery": {
+        "full_hist": 1.0,
+        "prefix": 0.9203105826500787,
+        "gen_mean_only": 0.10395959455130825,
+        "mixed": 0.9794285170397867
+      },
+      "mixed_minus_prefix": 0.05911793438970803,
+      "mixed_minus_prefix_auprc": 0.009010651272581216,
+      "per_protein": {
+        "1mix_A": {
+          "n": 1494,
+          "positives": 117,
+          "auprc": {
+            "static_only": 0.3771858170903709,
+            "full_hist": 0.488090261224304,
+            "prefix": 0.4644607179417894,
+            "gen_mean_only": 0.4038971979069109,
+            "mixed": 0.4753579138095604
+          },
+          "full_gain": 0.11090444413393308,
+          "recovery_prefix": 0.7869378141963498,
+          "recovery_mixed": 0.88519533627194,
+          "mixed_minus_prefix_auprc": 0.010897195867770992,
+          "mixed_minus_prefix_recovery": 0.09825752207559023
+        },
+        "2qt4_A": {
+          "n": 732,
+          "positives": 43,
+          "auprc": {
+            "static_only": 0.29370699770139014,
+            "full_hist": 0.5082999212020809,
+            "prefix": 0.536866701461288,
+            "gen_mean_only": 0.2903722284097823,
+            "mixed": 0.5187885850906806
+          },
+          "full_gain": 0.21459292350069076,
+          "recovery_prefix": 1.1331207935154262,
+          "recovery_mixed": 1.0488770259405407,
+          "mixed_minus_prefix_auprc": -0.01807811637060741,
+          "mixed_minus_prefix_recovery": -0.08424376757488566
+        }
+      }
+    }
+  },
+  "bootstrap_results": {
+    "90": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.05911793438970803,
+      "ci_lower": -0.08424376757488566,
+      "ci_upper": 0.09825752207559023,
+      "contains_zero": true,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.09825752207559023,
+        "1mix_A+2qt4_A": 0.05911793438970805,
+        "2qt4_A+2qt4_A": -0.08424376757488566
+      },
+      "n_distinct_boot_values": 3
+    }
+  },
+  "bootstrap_results_auprc_diff": {
+    "90": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.009010651272581216,
+      "ci_lower": -0.01807811637060741,
+      "ci_upper": 0.010897195867770992,
+      "contains_zero": true,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.010897195867770992,
+        "1mix_A+2qt4_A": 0.009010651272581216,
+        "2qt4_A+2qt4_A": -0.01807811637060741
+      },
+      "n_distinct_boot_values": 3
+    }
+  },
+  "above_0.05_cells_contain_zero": {
+    "90ns_G134": true
+  }
+}
