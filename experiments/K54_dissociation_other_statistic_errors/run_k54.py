@@ -80,7 +80,7 @@ def load(prots):
         for r in (1, 2, 3):
             z = np.load(CACHE / f"{p}_R{r}.npz")
             xs.append(z["X"].astype(np.float64))
-            hs.append(z["hist"].astype(np.float64))
+            hs.append(z["hist"].T.astype(np.float64))  # cache stores (11 frames, N)
             ys.append(z["y"].astype(np.float64))
             gs.append(load_gen(p, r, z["donor_atom"], z["acceptor_atom"], z["hist"][-1]))
     return (np.concatenate(xs), np.concatenate(hs), np.concatenate(ys),
