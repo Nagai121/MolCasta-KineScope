@@ -1,0 +1,165 @@
+{
+  "cuts": {
+    "0.1ns": {
+      "label": "0.1 ns",
+      "frames": [
+        0,
+        1
+      ],
+      "covered_length": "0.1 ns"
+    },
+    "0.25ns": {
+      "label": "0.25 ns",
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "covered_length": "0.2 ns"
+    },
+    "0.5ns": {
+      "label": "0.5 ns",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "covered_length": "0.5 ns"
+    }
+  },
+  "hist6_definition": "[first, mean, std, min, last-first, frac<=3.5] computed on the prefix frames (same as G02/G12 prefix_hist6 / Doc D D6)",
+  "references": {
+    "real_history_gain_1ns_pooled": 0.0702,
+    "real_history_gain_1ns_macro": 0.0712,
+    "static_only_auprc_pooled": 0.4591,
+    "static_only_auprc_macro": 0.4539,
+    "full_history_auprc_pooled": 0.5293,
+    "full_history_auprc_macro": 0.5251,
+    "prefix_mean_0.1ns_recovery_pooled": 0.545,
+    "prefix_mean_0.1ns_recovery_macro": 0.553
+  },
+  "metrics_1ns": {
+    "static_only": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.45908041605930167,
+      "auc": 0.9234043351193567,
+      "brier": 0.04794324098401886,
+      "logloss": 0.15794373174624374,
+      "macro_auprc": 0.45389897977810933
+    },
+    "full_history": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.5292970722376975,
+      "auc": 0.9348741221715023,
+      "brier": 0.045058018352586084,
+      "logloss": 0.1484568662117388,
+      "macro_auprc": 0.5251144930077717
+    },
+    "mean_only_full": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.5275389448537929,
+      "auc": 0.9335383496878399,
+      "brier": 0.044996982113202966,
+      "logloss": 0.1491390072723915,
+      "macro_auprc": 0.5220683870930287
+    },
+    "prefix_mean_0.1ns": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.49735210430303206,
+      "auc": 0.9301032931320586,
+      "brier": 0.046304347254681945,
+      "logloss": 0.15253456800843063,
+      "macro_auprc": 0.49325321030787206
+    },
+    "prefix_hist6_0.1ns": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.49036411043880423,
+      "auc": 0.9298023889012177,
+      "brier": 0.046601990463691685,
+      "logloss": 0.15299351432533068,
+      "macro_auprc": 0.4871924686417991
+    },
+    "prefix_mean_0.25ns": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.49928012986564213,
+      "auc": 0.9307385498755996,
+      "brier": 0.04624110219640616,
+      "logloss": 0.15218270707672224,
+      "macro_auprc": 0.49579146991354184
+    },
+    "prefix_hist6_0.25ns": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.5046189237719688,
+      "auc": 0.9311073048364745,
+      "brier": 0.04616867507190066,
+      "logloss": 0.15193042193989045,
+      "macro_auprc": 0.5011942195070211
+    },
+    "prefix_mean_0.5ns": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.5078831398941264,
+      "auc": 0.932008134016536,
+      "brier": 0.045782633131385815,
+      "logloss": 0.15095673754277728,
+      "macro_auprc": 0.5027356775316352
+    },
+    "prefix_hist6_0.5ns": {
+      "n": 163074,
+      "positives": 11712,
+      "auprc": 0.5129879003058314,
+      "auc": 0.9329466182152576,
+      "brier": 0.045713841799844834,
+      "logloss": 0.15029304936660742,
+      "macro_auprc": 0.5073723261058941
+    }
+  },
+  "base_gain_1ns": {
+    "pooled": 0.07021665617839584,
+    "macro": 0.07121551322966235
+  },
+  "recovery_vs_real_history_gain": {
+    "full_history": {
+      "pooled": 1.0,
+      "macro": 1.0
+    },
+    "mean_only_full": {
+      "pooled": 0.9749613912198013,
+      "macro": 0.9572269330571331
+    },
+    "prefix_mean_0.1ns": {
+      "pooled": 0.5450514212254068,
+      "macro": 0.5526075533971029
+    },
+    "prefix_hist6_0.1ns": {
+      "pooled": 0.44553096205580767,
+      "macro": 0.4675033199061819
+    },
+    "prefix_mean_0.25ns": {
+      "pooled": 0.5725096578824136,
+      "macro": 0.5882495012053587
+    },
+    "prefix_hist6_0.25ns": {
+      "pooled": 0.6485428129327294,
+      "macro": 0.664114286116141
+    },
+    "prefix_mean_0.5ns": {
+      "pooled": 0.6950305880535543,
+      "macro": 0.6857592614130681
+    },
+    "prefix_hist6_0.5ns": {
+      "pooled": 0.7677307234564087,
+      "macro": 0.7508665444190369
+    }
+  }
+}
