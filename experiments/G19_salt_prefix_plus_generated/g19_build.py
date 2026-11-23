@@ -198,6 +198,16 @@ def run_one(protein, replica, verify_contact=False):
     else:
         origin = np.empty(0)
 
+    # Box-zero replicas (2hng_A R3, 4cv4_A R2: the whole box array is
+    # zero in the ATLAS data, the same finding as K15/K53) have no salt
+    # candidates; write the empty series so the join stays uniform.
+    if n_pairs == 0:
+        out = {"res_i": res_i.astype(np.int32), "res_j": res_j.astype(np.int32)}
+        for num in (11, 12, 13, 14):
+            out[f"gen{num}"] = np.empty((4, 9, 0), dtype=np.float32)
+        np.savez_compressed(OUT / f"{protein}_R{replica}.npz", **out)
+        return 0
+
     # ---- generation (proposals 11-14), K17 protocol ----
     boxv, ca_idx, owner, values, modes, left, right, blocks_e = generation(pos10, box10, maps)
     rng = np.random.default_rng([SEED, replica, 10])
@@ -268,7 +278,11 @@ def main():
                 print("SKIP", protein, replica, flush=True)
                 continue
             t0 = time.time()
-            n = run_one(protein, replica, verify_contact=verify)
+            try:
+                n = run_one(protein, replica, verify_contact=verify)
+            except Exception as e:
+                print("FAILED", protein, "R", replica, type(e).__name__, e, flush=True)
+                continue
             print("DONE", protein, "R", replica, "salt candidates", n,
                   "sec", round(time.time() - t0, 1), flush=True)
 
