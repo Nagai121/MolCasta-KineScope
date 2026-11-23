@@ -1,0 +1,85 @@
+{
+  "generated_series": "experiments/K05_generated_quality/generated_series.npz (method 22, 5-point forward series)",
+  "generated_rows": 14582,
+  "generated_d0_min_A": 3.5000522136688232,
+  "generated_d0_max_A": 5.999837398529053,
+  "generated_rows_d0_le_3.5_A": 0,
+  "dissociation_candidates_total": 6131,
+  "dissociation_candidates_covered": 0,
+  "dissociation_frame10_distance_max_A": 3.499847547095185,
+  "per_trajectory": {
+    "1bgf_A_R1": {
+      "n": 335,
+      "covered": 0
+    },
+    "1bgf_A_R2": {
+      "n": 337,
+      "covered": 0
+    },
+    "1bgf_A_R3": {
+      "n": 336,
+      "covered": 0
+    },
+    "1ifg_A_R1": {
+      "n": 252,
+      "covered": 0
+    },
+    "1ifg_A_R2": {
+      "n": 257,
+      "covered": 0
+    },
+    "1ifg_A_R3": {
+      "n": 254,
+      "covered": 0
+    },
+    "1j8r_A_R1": {
+      "n": 385,
+      "covered": 0
+    },
+    "1j8r_A_R2": {
+      "n": 380,
+      "covered": 0
+    },
+    "1j8r_A_R3": {
+      "n": 372,
+      "covered": 0
+    },
+    "2b0a_A_R1": {
+      "n": 377,
+      "covered": 0
+    },
+    "2b0a_A_R2": {
+      "n": 374,
+      "covered": 0
+    },
+    "2b0a_A_R3": {
+      "n": 392,
+      "covered": 0
+    },
+    "1mix_A_R1": {
+      "n": 466,
+      "covered": 0
+    },
+    "1mix_A_R2": {
+      "n": 486,
+      "covered": 0
+    },
+    "1mix_A_R3": {
+      "n": 463,
+      "covered": 0
+    },
+    "2qt4_A_R1": {
+      "n": 227,
+      "covered": 0
+    },
+    "2qt4_A_R2": {
+      "n": 216,
+      "covered": 0
+    },
+    "2qt4_A_R3": {
+      "n": 222,
+      "covered": 0
+    }
+  },
+  "conclusion": "No dissociation candidate is covered by the method-22 generated series. The generated series only contains formation candidates (origin distance 3.5-6.0 A); dissociation candidates all have origin distance <= 3.5 A, so the two sets are disjoint by construction. G18 as specified (prefix mean + method-22 generated mean) cannot be measured with saved data. Regenerating method 22 for dissociation candidates would require loading the generator checkpoint (.pt), which this experiment does not do."
+}
