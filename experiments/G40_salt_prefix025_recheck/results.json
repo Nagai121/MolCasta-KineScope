@@ -1,0 +1,471 @@
+{
+  "g27_reference_auprc_1ns": {
+    "static_only": 0.240221,
+    "full_hist6": 0.384196,
+    "mean_only_full": 0.368221,
+    "prefix_mean_0.1ns": 0.333328,
+    "prefix_hist6_0.1ns": 0.3388,
+    "prefix_mean_0.25ns": 0.328853,
+    "prefix_hist6_0.25ns": 0.288342,
+    "prefix_mean_0.5ns": 0.335168,
+    "prefix_hist6_0.5ns": 0.343364
+  },
+  "metrics_1ns": {
+    "static_only": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.240221050801635,
+      "auc": 0.7861642755164187,
+      "brier": 0.06945587614656841,
+      "logloss": 0.25803229533456434
+    },
+    "full_hist6": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.3841961943278115,
+      "auc": 0.8644981579656753,
+      "brier": 0.06330011742317355,
+      "logloss": 0.2346377482348385
+    },
+    "mean_only_full": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.3682210777868371,
+      "auc": 0.8518784756541967,
+      "brier": 0.06400693922703775,
+      "logloss": 0.23034867325851438
+    },
+    "prefix_mean_0.1ns": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.33332848990482034,
+      "auc": 0.8561016763011552,
+      "brier": 0.06335509982476942,
+      "logloss": 0.22530141258754713
+    },
+    "prefix_hist6_0.1ns": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.33880040256960997,
+      "auc": 0.8632701350825172,
+      "brier": 0.06329875350301888,
+      "logloss": 0.22535432784436493
+    },
+    "prefix_mean_0.25ns": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.3288530250616068,
+      "auc": 0.8397080700072882,
+      "brier": 0.06452424895822695,
+      "logloss": 0.23987432157802166
+    },
+    "prefix_hist6_0.25ns": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.288341690059781,
+      "auc": 0.833428180629187,
+      "brier": 0.06916710740972719,
+      "logloss": 0.260797321379741
+    },
+    "prefix_mean_0.5ns": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.3351677900554371,
+      "auc": 0.8442008366529888,
+      "brier": 0.06511448592002156,
+      "logloss": 0.23275704858418045
+    },
+    "prefix_hist6_0.5ns": {
+      "n": 1170,
+      "positives": 93,
+      "auprc": 0.34336431255544675,
+      "auc": 0.8571300206667265,
+      "brier": 0.06453737042703588,
+      "logloss": 0.2411516267669042
+    }
+  },
+  "base_gain_1ns": 0.1439751435261765,
+  "recovery_vs_real_history_gain": {
+    "full_hist6": 1.0,
+    "mean_only_full": 0.8890425378317479,
+    "prefix_mean_0.1ns": 0.6466910664079819,
+    "prefix_hist6_0.1ns": 0.68469702028845,
+    "prefix_mean_0.25ns": 0.6156060837255383,
+    "prefix_hist6_0.25ns": 0.33422879866341,
+    "prefix_mean_0.5ns": 0.6594661892907897,
+    "prefix_hist6_0.5ns": 0.7163963113887016
+  },
+  "diff_vs_g27": {
+    "static_only": 5.080163500981172e-08,
+    "full_hist6": 1.943278115090763e-07,
+    "mean_only_full": 7.778683708270506e-08,
+    "prefix_mean_0.1ns": 4.899048203221845e-07,
+    "prefix_hist6_0.1ns": 4.0256960998075186e-07,
+    "prefix_mean_0.25ns": 2.506160678983349e-08,
+    "prefix_hist6_0.25ns": -3.099402189898903e-07,
+    "prefix_mean_0.5ns": -2.0994456290113206e-07,
+    "prefix_hist6_0.5ns": 3.125554467464653e-07
+  },
+  "per_protein": [
+    {
+      "protein": "1a62_A",
+      "n": 47,
+      "positives": 2,
+      "auprc_static_only": 0.17261904761904762,
+      "auprc_full_hist6": 0.1736111111111111,
+      "auprc_prefix_mean_0.25ns": 0.17142857142857143,
+      "auprc_prefix_hist6_0.25ns": 0.19642857142857142
+    },
+    {
+      "protein": "1l9l_A",
+      "n": 22,
+      "positives": 4,
+      "auprc_static_only": 0.5111111111111111,
+      "auprc_full_hist6": 0.7182539682539683,
+      "auprc_prefix_mean_0.25ns": 0.7048611111111112,
+      "auprc_prefix_hist6_0.25ns": 0.8611111111111112,
+      "recovery_prefix_mean_0.25ns": 0.9353448275862072,
+      "recovery_prefix_hist6_0.25ns": 1.6896551724137931
+    },
+    {
+      "protein": "1m5q_I",
+      "n": 60,
+      "positives": 5,
+      "auprc_static_only": 0.13766909411894518,
+      "auprc_full_hist6": 0.6703463203463204,
+      "auprc_prefix_mean_0.25ns": 0.45687134502923976,
+      "auprc_prefix_hist6_0.25ns": 0.2477075040542533,
+      "recovery_prefix_mean_0.25ns": 0.5992414077301702,
+      "recovery_prefix_hist6_0.25ns": 0.2065761487770792
+    },
+    {
+      "protein": "1mix_A",
+      "n": 92,
+      "positives": 9,
+      "auprc_static_only": 0.2650518804603772,
+      "auprc_full_hist6": 0.4159073474862949,
+      "auprc_prefix_mean_0.25ns": 0.5586700336700336,
+      "auprc_prefix_hist6_0.25ns": 0.38546928916494133,
+      "recovery_prefix_mean_0.25ns": 1.9463540765096135,
+      "recovery_prefix_hist6_0.25ns": 0.7982303265408065
+    },
+    {
+      "protein": "1pch_A",
+      "n": 8,
+      "positives": 0,
+      "auprc_static_only": null,
+      "auprc_full_hist6": null,
+      "auprc_prefix_mean_0.25ns": null,
+      "auprc_prefix_hist6_0.25ns": null
+    },
+    {
+      "protein": "1sei_A",
+      "n": 76,
+      "positives": 4,
+      "auprc_static_only": 0.3392857142857143,
+      "auprc_full_hist6": 0.740909090909091,
+      "auprc_prefix_mean_0.25ns": 0.37763157894736843,
+      "auprc_prefix_hist6_0.25ns": 0.5206043956043955,
+      "recovery_prefix_mean_0.25ns": 0.09547717312683485,
+      "recovery_prefix_hist6_0.25ns": 0.45146446116535016
+    },
+    {
+      "protein": "1t8k_A",
+      "n": 19,
+      "positives": 1,
+      "auprc_static_only": 0.2,
+      "auprc_full_hist6": 0.07142857142857142,
+      "auprc_prefix_mean_0.25ns": 0.07692307692307693,
+      "auprc_prefix_hist6_0.25ns": 0.125,
+      "recovery_prefix_mean_0.25ns": 0.9572649572649572,
+      "recovery_prefix_hist6_0.25ns": 0.5833333333333334
+    },
+    {
+      "protein": "1u6t_A",
+      "n": 46,
+      "positives": 5,
+      "auprc_static_only": 0.5974891774891775,
+      "auprc_full_hist6": 0.6422222222222222,
+      "auprc_prefix_mean_0.25ns": 0.5523809523809523,
+      "auprc_prefix_hist6_0.25ns": 0.4976190476190475,
+      "recovery_prefix_mean_0.25ns": -1.0083870967741957,
+      "recovery_prefix_hist6_0.25ns": -2.232580645161293
+    },
+    {
+      "protein": "1uha_A",
+      "n": 32,
+      "positives": 3,
+      "auprc_static_only": 0.7,
+      "auprc_full_hist6": 1.0,
+      "auprc_prefix_mean_0.25ns": 1.0,
+      "auprc_prefix_hist6_0.25ns": 0.7916666666666666,
+      "recovery_prefix_mean_0.25ns": 1.0,
+      "recovery_prefix_hist6_0.25ns": 0.3055555555555555
+    },
+    {
+      "protein": "1y0n_A",
+      "n": 43,
+      "positives": 7,
+      "auprc_static_only": 0.588392857142857,
+      "auprc_full_hist6": 0.654875283446712,
+      "auprc_prefix_mean_0.25ns": 0.6215266875981161,
+      "auprc_prefix_hist6_0.25ns": 0.7755411255411255,
+      "recovery_prefix_mean_0.25ns": 0.498384795762754,
+      "recovery_prefix_hist6_0.25ns": 2.8150035852018362
+    },
+    {
+      "protein": "2end_A",
+      "n": 70,
+      "positives": 5,
+      "auprc_static_only": 0.3157142857142857,
+      "auprc_full_hist6": 0.44860028860028855,
+      "auprc_prefix_mean_0.25ns": 0.48409586056644877,
+      "auprc_prefix_hist6_0.25ns": 0.5454545454545454,
+      "recovery_prefix_mean_0.25ns": 1.2671129479047567,
+      "recovery_prefix_hist6_0.25ns": 1.7288522097947663
+    },
+    {
+      "protein": "2ftx_A",
+      "n": 25,
+      "positives": 0,
+      "auprc_static_only": null,
+      "auprc_full_hist6": null,
+      "auprc_prefix_mean_0.25ns": null,
+      "auprc_prefix_hist6_0.25ns": null
+    },
+    {
+      "protein": "2hng_A",
+      "n": 21,
+      "positives": 2,
+      "auprc_static_only": 0.25,
+      "auprc_full_hist6": 0.19642857142857142,
+      "auprc_prefix_mean_0.25ns": 0.19090909090909092,
+      "auprc_prefix_hist6_0.25ns": 0.15476190476190477,
+      "recovery_prefix_mean_0.25ns": 1.1030303030303028,
+      "recovery_prefix_hist6_0.25ns": 1.7777777777777775
+    },
+    {
+      "protein": "2hu9_A",
+      "n": 64,
+      "positives": 4,
+      "auprc_static_only": 0.25316425120772945,
+      "auprc_full_hist6": 0.7611111111111112,
+      "auprc_prefix_mean_0.25ns": 0.3254901960784313,
+      "auprc_prefix_hist6_0.25ns": 0.15619747899159664,
+      "recovery_prefix_mean_0.25ns": 0.142388802018501,
+      "recovery_prefix_hist6_0.25ns": -0.1908994421868799
+    },
+    {
+      "protein": "2i9x_A",
+      "n": 37,
+      "positives": 2,
+      "auprc_static_only": 0.35,
+      "auprc_full_hist6": 0.39285714285714285,
+      "auprc_prefix_mean_0.25ns": 0.20833333333333331,
+      "auprc_prefix_hist6_0.25ns": 0.17142857142857143,
+      "recovery_prefix_mean_0.25ns": -3.3055555555555545,
+      "recovery_prefix_hist6_0.25ns": -4.166666666666664
+    },
+    {
+      "protein": "2qt4_A",
+      "n": 24,
+      "positives": 0,
+      "auprc_static_only": null,
+      "auprc_full_hist6": null,
+      "auprc_prefix_mean_0.25ns": null,
+      "auprc_prefix_hist6_0.25ns": null
+    },
+    {
+      "protein": "3bwu_D",
+      "n": 20,
+      "positives": 1,
+      "auprc_static_only": 0.3333333333333333,
+      "auprc_full_hist6": 1.0,
+      "auprc_prefix_mean_0.25ns": 1.0,
+      "auprc_prefix_hist6_0.25ns": 1.0,
+      "recovery_prefix_mean_0.25ns": 1.0,
+      "recovery_prefix_hist6_0.25ns": 1.0
+    },
+    {
+      "protein": "3jtz_A",
+      "n": 25,
+      "positives": 5,
+      "auprc_static_only": 0.46417004048583,
+      "auprc_full_hist6": 0.5909090909090908,
+      "auprc_prefix_mean_0.25ns": 0.6165204678362574,
+      "auprc_prefix_hist6_0.25ns": 0.5188235294117647,
+      "recovery_prefix_mean_0.25ns": 1.2020796024716467,
+      "recovery_prefix_hist6_0.25ns": 0.4312284867482639
+    },
+    {
+      "protein": "3l9a_X",
+      "n": 28,
+      "positives": 4,
+      "auprc_static_only": 0.23648018648018648,
+      "auprc_full_hist6": 0.5434782608695652,
+      "auprc_prefix_mean_0.25ns": 0.41666666666666663,
+      "auprc_prefix_hist6_0.25ns": 0.6666666666666666,
+      "recovery_prefix_mean_0.25ns": 0.5869303269894194,
+      "recovery_prefix_hist6_0.25ns": 1.4012676823531354
+    },
+    {
+      "protein": "3pkz_A",
+      "n": 60,
+      "positives": 2,
+      "auprc_static_only": 0.3333333333333333,
+      "auprc_full_hist6": 0.8333333333333333,
+      "auprc_prefix_mean_0.25ns": 1.0,
+      "auprc_prefix_hist6_0.25ns": 1.0,
+      "recovery_prefix_mean_0.25ns": 1.3333333333333337,
+      "recovery_prefix_hist6_0.25ns": 1.3333333333333337
+    },
+    {
+      "protein": "3rjs_A",
+      "n": 28,
+      "positives": 3,
+      "auprc_static_only": 0.5069444444444444,
+      "auprc_full_hist6": 0.36507936507936506,
+      "auprc_prefix_mean_0.25ns": 0.3694444444444444,
+      "auprc_prefix_hist6_0.25ns": 0.2547008547008547,
+      "recovery_prefix_mean_0.25ns": 0.9692307692307693,
+      "recovery_prefix_hist6_0.25ns": 1.778052716514255
+    },
+    {
+      "protein": "4cv4_A",
+      "n": 25,
+      "positives": 1,
+      "auprc_static_only": 1.0,
+      "auprc_full_hist6": 0.5,
+      "auprc_prefix_mean_0.25ns": 0.5,
+      "auprc_prefix_hist6_0.25ns": 0.25,
+      "recovery_prefix_mean_0.25ns": 1.0,
+      "recovery_prefix_hist6_0.25ns": 1.5
+    },
+    {
+      "protein": "4ytw_C",
+      "n": 14,
+      "positives": 5,
+      "auprc_static_only": 0.49682539682539684,
+      "auprc_full_hist6": 0.6116666666666666,
+      "auprc_prefix_mean_0.25ns": 0.8583333333333332,
+      "auprc_prefix_hist6_0.25ns": 0.9028571428571428,
+      "recovery_prefix_mean_0.25ns": 3.147892190739462,
+      "recovery_prefix_hist6_0.25ns": 3.535590877677957
+    },
+    {
+      "protein": "4zds_B",
+      "n": 48,
+      "positives": 1,
+      "auprc_static_only": 0.5,
+      "auprc_full_hist6": 1.0,
+      "auprc_prefix_mean_0.25ns": 0.3333333333333333,
+      "auprc_prefix_hist6_0.25ns": 0.5,
+      "recovery_prefix_mean_0.25ns": -0.33333333333333337,
+      "recovery_prefix_hist6_0.25ns": 0.0
+    },
+    {
+      "protein": "4zi3_D",
+      "n": 60,
+      "positives": 5,
+      "auprc_static_only": 0.2777367268746579,
+      "auprc_full_hist6": 0.16020493147091613,
+      "auprc_prefix_mean_0.25ns": 0.3039178213091257,
+      "auprc_prefix_hist6_0.25ns": 0.14857142857142858,
+      "recovery_prefix_mean_0.25ns": -0.22275754696447278,
+      "recovery_prefix_hist6_0.25ns": 1.0989817509340727
+    },
+    {
+      "protein": "5ii7_A",
+      "n": 47,
+      "positives": 3,
+      "auprc_static_only": 0.27645502645502645,
+      "auprc_full_hist6": 0.42095238095238097,
+      "auprc_prefix_mean_0.25ns": 0.1497821350762527,
+      "auprc_prefix_hist6_0.25ns": 0.13170498084291188,
+      "recovery_prefix_mean_0.25ns": -0.8766450556788076,
+      "recovery_prefix_hist6_0.25ns": -1.0017487594540333
+    },
+    {
+      "protein": "5yrv_I",
+      "n": 68,
+      "positives": 5,
+      "auprc_static_only": 0.4808201058201058,
+      "auprc_full_hist6": 0.21088935574229692,
+      "auprc_prefix_mean_0.25ns": 0.3493535188216039,
+      "auprc_prefix_hist6_0.25ns": 0.17234432234432234,
+      "recovery_prefix_mean_0.25ns": 0.48703820131869374,
+      "recovery_prefix_hist6_0.25ns": 1.1427960074458499
+    },
+    {
+      "protein": "6fc0_B",
+      "n": 8,
+      "positives": 0,
+      "auprc_static_only": null,
+      "auprc_full_hist6": null,
+      "auprc_prefix_mean_0.25ns": null,
+      "auprc_prefix_hist6_0.25ns": null
+    },
+    {
+      "protein": "6in7_A",
+      "n": 30,
+      "positives": 3,
+      "auprc_static_only": 0.20555555555555555,
+      "auprc_full_hist6": 0.2,
+      "auprc_prefix_mean_0.25ns": 0.15873015873015872,
+      "auprc_prefix_hist6_0.25ns": 0.13294871794871793
+    },
+    {
+      "protein": "6jpt_A",
+      "n": 23,
+      "positives": 2,
+      "auprc_static_only": 0.75,
+      "auprc_full_hist6": 0.41666666666666663,
+      "auprc_prefix_mean_0.25ns": 0.3333333333333333,
+      "auprc_prefix_hist6_0.25ns": 0.7,
+      "recovery_prefix_mean_0.25ns": 1.25,
+      "recovery_prefix_hist6_0.25ns": 0.1500000000000001
+    }
+  ],
+  "per_protein_summary": {
+    "n_proteins_defined": 24,
+    "n_proteins_hist6_below_mean": 13,
+    "macro_recovery_prefix_mean_0.25ns": 0.5739343802796274,
+    "macro_recovery_prefix_hist6_0.25ns": 0.6723251630040957
+  },
+  "bootstrap": {
+    "n_boot": 2000,
+    "auprc_diff_hist6_minus_mean_0.25ns": -0.0405113350018258,
+    "diff_95ci": [
+      -0.09654322847339886,
+      0.011476880609022227
+    ],
+    "diff_fraction_below_0": 0.9415,
+    "recovery_hist6_0.25ns_95ci": [
+      -0.37317276599595645,
+      0.8065592264277126
+    ]
+  },
+  "feature_diagnostics_test": {
+    "0.1ns": {
+      "frac_le4_mean": 0.10683760792016983,
+      "frac_le4_zero_share": 0.8589743589743589,
+      "std_mean": 0.5837091207504272,
+      "std_median": 0.4140316843986511,
+      "min_mean": 7.0906782150268555
+    },
+    "0.25ns": {
+      "frac_le4_mean": 0.10142450779676437,
+      "frac_le4_zero_share": 0.8487179487179487,
+      "std_mean": 0.746663510799408,
+      "std_median": 0.5922709107398987,
+      "min_mean": 6.835676193237305
+    },
+    "0.5ns": {
+      "frac_le4_mean": 0.08803419023752213,
+      "frac_le4_zero_share": 0.8162393162393162,
+      "std_mean": 0.9586135745048523,
+      "std_median": 0.8448094725608826,
+      "min_mean": 6.389323711395264
+    }
+  }
+}
