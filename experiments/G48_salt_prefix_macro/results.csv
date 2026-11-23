@@ -1,0 +1,5 @@
+condition,pooled_auprc,pooled_recovery,macro_recovery,median_recovery,min_recovery,max_recovery,n_proteins_defined,n_proteins_hist6_below_mean
+prefix_mean_0.5ns,0.335168,0.6595,0.2047,0.6155,-6.3636,3.3034,24,
+prefix_hist6_0.5ns,0.343364,0.7164,0.7293,0.8845,-3.0052,2.8238,24,12
+prefix_mean_0.75ns,0.369993,0.9014,0.7958,0.4868,-0.8538,5.4444,24,
+prefix_hist6_0.75ns,0.313785,0.5109,0.9774,0.7716,-2.8040,7.3889,24,16
