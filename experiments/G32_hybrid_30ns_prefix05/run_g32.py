@@ -150,7 +150,7 @@ conds = {
               np.column_stack([Xte, prefix_te[:, None].astype(np.float32),
                                gen_mean_te[:, None].astype(np.float32)])),
 }
-results = {"label": "HB formation 90ns", "horizon_ns": 90,
+results = {"label": "HB formation 30ns", "horizon_ns": 30,
            "train_n": int(len(ytr)), "test_n": int(len(yte)),
            "test_positives": int(yte.sum()), "relations": relations}
 for name, (xtr, xte) in conds.items():

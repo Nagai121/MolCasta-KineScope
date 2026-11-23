@@ -1,6 +1,6 @@
 {
-  "label": "HB formation 90ns",
-  "horizon_ns": 90,
+  "label": "HB formation 30ns",
+  "horizon_ns": 30,
   "train_n": 9610,
   "test_n": 4972,
   "test_positives": 345,
