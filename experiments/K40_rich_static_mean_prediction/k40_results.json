@@ -1,0 +1,278 @@
+{
+ "origin_identity": {
+  "train": {
+   "n": 9610,
+   "mean": -0.13132248275029898,
+   "std": 0.5071246301571195,
+   "mae": 0.3228306128754684,
+   "r2": 0.6431208095030608,
+   "corr": 0.8158219873748267
+  },
+  "test": {
+   "n": 4972,
+   "mean": -0.09198373238234064,
+   "std": 0.48909430172538704,
+   "mae": 0.29853942380137755,
+   "r2": 0.6839576277091497,
+   "corr": 0.8336174832063187
+  }
+ },
+ "docd7": {
+  "train": {
+   "n": 9610,
+   "mean": -9.321747492321643e-07,
+   "std": 0.41445809615462964,
+   "mae": 0.27246273686757944,
+   "r2": 0.7766092626015568,
+   "corr": 0.8819791265891003
+  },
+  "test": {
+   "n": 4972,
+   "mean": 0.05380215741099616,
+   "std": 0.4921290295146994,
+   "mae": 0.31405336849375304,
+   "r2": 0.6872607724054898,
+   "corr": 0.8314941726354617
+  }
+ },
+ "rich_same": {
+  "train": {
+   "n": 9610,
+   "mean": -2.0435597122033457e-06,
+   "std": 0.3099025197555227,
+   "mae": 0.21868267301273853,
+   "r2": 0.875102391950335,
+   "corr": 0.9372505838959431
+  },
+  "test": {
+   "n": 4972,
+   "mean": 0.0452680962305942,
+   "std": 0.4698004542305226,
+   "mae": 0.2978891863115454,
+   "r2": 0.7157470839710636,
+   "corr": 0.8476064124467438
+  }
+ },
+ "rich_big": {
+  "train": {
+   "n": 9610,
+   "mean": -4.357929347847245e-07,
+   "std": 0.13885363920226385,
+   "mae": 0.10197905709705397,
+   "r2": 0.9749262991798876,
+   "corr": 0.9882130629572178
+  },
+  "test": {
+   "n": 4972,
+   "mean": 0.04513432849193254,
+   "std": 0.47943157697110894,
+   "mae": 0.3038703369724481,
+   "r2": 0.7040967353282441,
+   "corr": 0.8410000256647145
+  }
+ },
+ "ridge_rich": {
+  "train": {
+   "n": 9610,
+   "mean": -6.532409022310598e-16,
+   "std": 0.4731537293350244,
+   "mae": 0.30916304701567704,
+   "r2": 0.7088555998817003,
+   "corr": 0.8419365267134787
+  },
+  "test": {
+   "n": 4972,
+   "mean": 0.040742605359783815,
+   "std": 0.4813336110533518,
+   "mae": 0.31116975511848527,
+   "r2": 0.7022461442588122,
+   "corr": 0.8392643737669385
+  }
+ },
+ "ablation": {
+  "residue_onehot": {
+   "kept_F": 55,
+   "test": {
+    "n": 4972,
+    "mean": 0.04790980131408293,
+    "std": 0.46879913857655175,
+    "mae": 0.29838705850269104,
+    "r2": 0.7166322553448745,
+    "corr": 0.848306270190101
+   }
+  },
+  "atomname_onehot": {
+   "kept_F": 77,
+   "test": {
+    "n": 4972,
+    "mean": 0.04402988711072464,
+    "std": 0.47370606121802383,
+    "mae": 0.29901917048580556,
+    "r2": 0.7111860097257785,
+    "corr": 0.8448308056203324
+   }
+  },
+  "density_packing": {
+   "kept_F": 88,
+   "test": {
+    "n": 4972,
+    "mean": 0.0515513177759235,
+    "std": 0.4803559568595451,
+    "mae": 0.30631491269818617,
+    "r2": 0.7021729267966325,
+    "corr": 0.8401475431229022
+   }
+  },
+  "geometry": {
+   "kept_F": 87,
+   "test": {
+    "n": 4972,
+    "mean": 0.03464760514714818,
+    "std": 0.4741676889510983,
+    "mae": 0.3005220051348485,
+    "r2": 0.7115695997667439,
+    "corr": 0.8444950425194295
+   }
+  },
+  "neighbourhood": {
+   "kept_F": 95,
+   "test": {
+    "n": 4972,
+    "mean": 0.047199792867399885,
+    "std": 0.47462371625454475,
+    "mae": 0.2998342092034326,
+    "r2": 0.7097065312226079,
+    "corr": 0.8442257099626611
+   }
+  },
+  "docd7": {
+   "kept_F": 92,
+   "test": {
+    "n": 4972,
+    "mean": 0.035931763802002636,
+    "std": 0.586779455945714,
+    "mae": 0.39133138757682745,
+    "r2": 0.5589988340849259,
+    "corr": 0.7489006260813083
+   }
+  },
+  "extras_only": {
+   "kept_F": 92,
+   "test": {
+    "n": 4972,
+    "mean": 0.035931763802002636,
+    "std": 0.586779455945714,
+    "mae": 0.39133138757682745,
+    "r2": 0.5589988340849259,
+    "corr": 0.7489006260813083
+   }
+  }
+ },
+ "feature_names": [
+  "docd_origin_dist",
+  "docd_ca_dist",
+  "docd_log1p_sep",
+  "docd_donor_kind0",
+  "docd_acceptor_kind0",
+  "docd_donor_kind2",
+  "docd_acceptor_kind1",
+  "sep",
+  "cb_dist",
+  "donor_ca_i2",
+  "donor_ca_im2",
+  "acceptor_ca_i2",
+  "acceptor_ca_im2",
+  "cos_da_vs_caca",
+  "cos_da_vs_donor_chain",
+  "cos_da_vs_acceptor_chain",
+  "donor_atom_to_ca",
+  "acceptor_atom_to_ca",
+  "donor_ca_to_acceptor",
+  "acceptor_ca_to_donor",
+  "donor_heavy_count",
+  "acceptor_heavy_count",
+  "donor_heavy_5A",
+  "donor_heavy_8A",
+  "acceptor_heavy_5A",
+  "acceptor_heavy_8A",
+  "mid_heavy_5A",
+  "donor_competing_O_4A",
+  "acceptor_competing_N_4A",
+  "donor_nearest_other_O",
+  "acceptor_nearest_other_N",
+  "donor_min_other_heavy",
+  "acceptor_min_other_heavy",
+  "donor_res_neighbours_8A",
+  "acceptor_res_neighbours_8A",
+  "donor_res_ALA",
+  "acceptor_res_ALA",
+  "donor_res_ARG",
+  "acceptor_res_ARG",
+  "donor_res_ASN",
+  "acceptor_res_ASN",
+  "donor_res_ASP",
+  "acceptor_res_ASP",
+  "donor_res_CYS",
+  "acceptor_res_CYS",
+  "donor_res_GLN",
+  "acceptor_res_GLN",
+  "donor_res_GLU",
+  "acceptor_res_GLU",
+  "donor_res_GLY",
+  "acceptor_res_GLY",
+  "donor_res_HIS",
+  "acceptor_res_HIS",
+  "donor_res_ILE",
+  "acceptor_res_ILE",
+  "donor_res_LEU",
+  "acceptor_res_LEU",
+  "donor_res_LYS",
+  "acceptor_res_LYS",
+  "donor_res_MET",
+  "acceptor_res_MET",
+  "donor_res_PHE",
+  "acceptor_res_PHE",
+  "donor_res_PRO",
+  "acceptor_res_PRO",
+  "donor_res_SER",
+  "acceptor_res_SER",
+  "donor_res_THR",
+  "acceptor_res_THR",
+  "donor_res_TRP",
+  "acceptor_res_TRP",
+  "donor_res_TYR",
+  "acceptor_res_TYR",
+  "donor_res_VAL",
+  "acceptor_res_VAL",
+  "donor_res_other",
+  "acceptor_res_other",
+  "donor_atom_N",
+  "donor_atom_ND1",
+  "donor_atom_ND2",
+  "donor_atom_NE",
+  "donor_atom_NE1",
+  "donor_atom_NE2",
+  "donor_atom_NH1",
+  "donor_atom_NH2",
+  "donor_atom_NZ",
+  "donor_atom_OG",
+  "donor_atom_OG1",
+  "donor_atom_OH",
+  "acceptor_atom_O",
+  "acceptor_atom_OD1",
+  "acceptor_atom_OD2",
+  "acceptor_atom_OE1",
+  "acceptor_atom_OE2",
+  "acceptor_atom_OG",
+  "acceptor_atom_OG1",
+  "acceptor_atom_OH",
+  "donor_backbone_N",
+  "acceptor_backbone_O"
+ ],
+ "yardsticks": {
+  "k23_docd7_test_std": 0.4921,
+  "k23_replica_floor_std": 0.2486,
+  "k23_ridge_test_std": 0.4869,
+  "k23_origin_identity_test_std": 0.4891
+ }
+}
