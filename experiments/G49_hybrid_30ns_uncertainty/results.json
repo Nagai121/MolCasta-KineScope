@@ -1,0 +1,224 @@
+{
+  "label": "HB formation 30ns, hybrid uncertainty across prefix lengths",
+  "horizon_ns": 30,
+  "bootstrap": {
+    "n_boot": 10000,
+    "seed": 42,
+    "method": "percentile",
+    "resampling_unit": "protein (1mix_A, 2qt4_A; 2 proteins only, so only 3 resample combinations exist and the bootstrap distribution takes only 3 distinct values)",
+    "note": "The 10,000 draws are mapped onto the 3 exact combination values; this is mathematically identical to recomputing AUPRC on the resampled rows each time, because the difference depends only on the chosen combination."
+  },
+  "full_gain_30ns": 0.06255795064590053,
+  "prefixes": {
+    "0.1ns": {
+      "prefix_frames": [
+        0,
+        1
+      ],
+      "test_positives": 345,
+      "auprc": {
+        "static_only": 0.3638886114495804,
+        "full": 0.42644656209548093,
+        "prefix": 0.425126433451017,
+        "mixed": 0.45574087716974
+      },
+      "full_gain": 0.06255795064590053,
+      "recovery": {
+        "full": 1.0,
+        "prefix": 0.9788975081371146,
+        "mixed": 1.468274851906114
+      },
+      "mixed_minus_prefix": 0.48937734376899933,
+      "per_protein": {
+        "1mix_A": {
+          "n": 3101,
+          "positives": 251,
+          "auprc": {
+            "static_only": 0.3885003210117183,
+            "full": 0.4412452551412225,
+            "prefix": 0.4477337410938297,
+            "mixed": 0.4782032966932452
+          },
+          "full_gain": 0.052744934129504206,
+          "recovery_prefix": 1.1230162869608686,
+          "recovery_mixed": 1.7006936715719452,
+          "mixed_minus_prefix_auprc": 0.0304695555994155,
+          "mixed_minus_prefix_recovery": 0.5776773846110765
+        },
+        "2qt4_A": {
+          "n": 1871,
+          "positives": 94,
+          "auprc": {
+            "static_only": 0.30929567741167174,
+            "full": 0.39892254226894425,
+            "prefix": 0.37201837287641754,
+            "mixed": 0.41406885717670977
+          },
+          "full_gain": 0.0896268648572725,
+          "recovery_prefix": 0.6998202555074239,
+          "recovery_mixed": 1.1689930238203186,
+          "mixed_minus_prefix_auprc": 0.042050484300292235,
+          "mixed_minus_prefix_recovery": 0.4691727683128947
+        }
+      }
+    },
+    "0.25ns": {
+      "prefix_frames": [
+        0,
+        1,
+        2
+      ],
+      "test_positives": 345,
+      "auprc": {
+        "static_only": 0.3638886114495804,
+        "full": 0.42644656209548093,
+        "prefix": 0.42976442410210797,
+        "mixed": 0.4321371830631322
+      },
+      "full_gain": 0.06255795064590053,
+      "recovery": {
+        "full": 1.0,
+        "prefix": 1.0530366160075684,
+        "mixed": 1.0909655912461413
+      },
+      "mixed_minus_prefix": 0.03792897523857297,
+      "per_protein": {
+        "1mix_A": {
+          "n": 3101,
+          "positives": 251,
+          "auprc": {
+            "static_only": 0.3885003210117183,
+            "full": 0.4412452551412225,
+            "prefix": 0.4583444987743173,
+            "mixed": 0.450363266888838
+          },
+          "full_gain": 0.052744934129504206,
+          "recovery_prefix": 1.3241874108916547,
+          "recovery_mixed": 1.1728699049131075,
+          "mixed_minus_prefix_auprc": -0.007981231885479334,
+          "mixed_minus_prefix_recovery": -0.15131750597854726
+        },
+        "2qt4_A": {
+          "n": 1871,
+          "positives": 94,
+          "auprc": {
+            "static_only": 0.30929567741167174,
+            "full": 0.39892254226894425,
+            "prefix": 0.36604297191738994,
+            "mixed": 0.3866778846325785
+          },
+          "full_gain": 0.0896268648572725,
+          "recovery_prefix": 0.6331505023196581,
+          "recovery_mixed": 0.8633818369540773,
+          "mixed_minus_prefix_auprc": 0.02063491271518858,
+          "mixed_minus_prefix_recovery": 0.2302313346344193
+        }
+      }
+    },
+    "0.5ns": {
+      "prefix_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "test_positives": 345,
+      "auprc": {
+        "static_only": 0.3638886114495804,
+        "full": 0.42644656209548093,
+        "prefix": 0.4350640691995785,
+        "mixed": 0.46480145591001076
+      },
+      "full_gain": 0.06255795064590053,
+      "recovery": {
+        "full": 1.0,
+        "prefix": 1.1377523882276073,
+        "mixed": 1.613109819271921
+      },
+      "mixed_minus_prefix": 0.4753574310443138,
+      "per_protein": {
+        "1mix_A": {
+          "n": 3101,
+          "positives": 251,
+          "auprc": {
+            "static_only": 0.3885003210117183,
+            "full": 0.4412452551412225,
+            "prefix": 0.45032116695125196,
+            "mixed": 0.47406524515495535
+          },
+          "full_gain": 0.052744934129504206,
+          "recovery_prefix": 1.17207172517735,
+          "recovery_mixed": 1.6222396625456053,
+          "mixed_minus_prefix_auprc": 0.02374407820370339,
+          "mixed_minus_prefix_recovery": 0.45016793736825506
+        },
+        "2qt4_A": {
+          "n": 1871,
+          "positives": 94,
+          "auprc": {
+            "static_only": 0.30929567741167174,
+            "full": 0.39892254226894425,
+            "prefix": 0.41095668912064975,
+            "mixed": 0.45388678135617705
+          },
+          "full_gain": 0.0896268648572725,
+          "recovery_prefix": 1.1342694165512701,
+          "recovery_mixed": 1.6132562951383085,
+          "mixed_minus_prefix_auprc": 0.042930092235527295,
+          "mixed_minus_prefix_recovery": 0.47898687858703853
+        }
+      }
+    }
+  },
+  "bootstrap_results": {
+    "0.1ns": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.48937734376899933,
+      "ci_lower": 0.4691727683128947,
+      "ci_upper": 0.5776773846110765,
+      "contains_zero": false,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.5776773846110765,
+        "1mix_A+2qt4_A": 0.4893773437689994,
+        "2qt4_A+2qt4_A": 0.4691727683128947
+      },
+      "n_distinct_boot_values": 3
+    },
+    "0.25ns": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.03792897523857297,
+      "ci_lower": -0.15131750597854726,
+      "ci_upper": 0.2302313346344193,
+      "contains_zero": true,
+      "three_resample_values": {
+        "1mix_A+1mix_A": -0.15131750597854726,
+        "1mix_A+2qt4_A": 0.03792897523857303,
+        "2qt4_A+2qt4_A": 0.2302313346344193
+      },
+      "n_distinct_boot_values": 3
+    },
+    "0.5ns": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.4753574310443138,
+      "ci_lower": 0.45016793736825506,
+      "ci_upper": 0.47898687858703853,
+      "contains_zero": false,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.45016793736825506,
+        "1mix_A+2qt4_A": 0.47535743104431377,
+        "2qt4_A+2qt4_A": 0.47898687858703853
+      },
+      "n_distinct_boot_values": 3
+    }
+  },
+  "ci_overlap": {
+    "0.25ns_vs_0.1ns": false,
+    "0.25ns_vs_0.5ns": false,
+    "both_overlap": false
+  }
+}
