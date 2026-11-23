@@ -33,4 +33,4 @@ K17 の生成系列は、6タンパク質（1bgf_A・1ifg_A・1j8r_A・2b0a_A・
 ## ファイル
 
 - この記録: `experiments/G19_salt_prefix_plus_generated/README.md`
-- 前提確認の数え上げは、この記録のためにその場で実行したものです（スクリプトは保存していません。数え方は「残基ペア（res_i, res_j）の一致」で、K15 のキャッシュ `~/workspace/kinescope/work/k15_cache/` と K17 の保存値 `~/workspace/k17/out/` を比べました）
+- `count_overlap.py`：前提確認の数え上げ（残基ペア（res_i, res_j）の一致）。K15 のキャッシュ `~/workspace/kinescope/work/k15_cache/` と K17 の保存値 `~/workspace/k17/out/` を比べます。再実行すると記録と同じ数値が出ます
