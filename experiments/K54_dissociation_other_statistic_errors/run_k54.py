@@ -17,21 +17,25 @@ Method (K33's, adapted to K46's dissociation base):
   last-first, frac <= 3.5 A]. The mean is kept real; std / min /
   frac<=3.5 are replaced one at a time, and all three together, with
   the values computed from the GENERATED series.
-- Generated series: proposal-22 (K06(a)'s generation), regenerated
-  for the dissociation candidates (see gen_k54.py). gen5 = [origin
-  distance, generated forward distances at 0.1/0.3/0.5/1.0 ns];
-  gen6 = the same 6 statistics computed over those 5 points.
-  Alignment: dissociation candidates are matched to generated pairs
-  by (donor_atom, acceptor_atom) per trajectory; every candidate must
-  match (the generator keeps pairs with origin distance <= 6.0 A,
-  which includes all dissociation candidates at <= 3.5 A).
+- Generated series: residue-level generation, proposals 11-14
+  (K11/K17/K20 protocol; see gen_k54_residue.py). Each idea gives
+  4 branches x 9 points (origin + 8 steps). The generated statistics
+  are computed over the BRANCH-MEAN 9-point series, the same
+  convention as K48. Ideas 14 (closest to the real series, see the
+  quality check) and 11 (quietest) are measured as primary and
+  cross-check, the same pair as K48. Alignment: dissociation
+  candidates are matched to generated pairs by (donor_atom,
+  acceptor_atom) per trajectory; every candidate must match.
+  (An earlier attempt used proposal 22 with its candidate filter
+  bypassed; those results are superseded -- see README section 3.
+  Proposal 22 cannot be used as-is for dissociation.)
 - Reference conditions: static_only, base_hist (real hist6), and gen6
-  (all 6 statistics from the generated series).
-- Asymmetry to note (same as K33): the real statistics are computed
-  over the BACKWARD 11-frame history (0..1 ns), while the generated
-  statistics are computed over the FORWARD 5-point series (1..2 ns).
-  The swap therefore also changes backward to forward, not only real
-  to generated.
+  (all 6 statistics from the generated series, per idea).
+- Asymmetry to note (same as K33/K48): the real statistics are
+  computed over the BACKWARD 11-frame history (0..1 ns), while the
+  generated statistics are computed over the FORWARD 9-point series
+  (1..2 ns). The swap therefore also changes backward to forward,
+  not only real to generated.
 - Pipeline check: static_only/base_hist must reproduce K46's recorded
   values (static 0.4160 -> full 0.5945 at 1 ns).
 - Retention = (condition - static) / (base_hist - static) in AUPRC.
@@ -47,7 +51,7 @@ from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import roc_auc_score, average_precision_score, brier_score_loss, log_loss
 
 CACHE = Path("/home/hatch/workspace/kinescope/work/data_cache_k46")
-GEN_DIR = Path("/home/hatch/workspace/kinescope/work/k54_gen22")
+GEN_DIR = Path("/home/hatch/workspace/kinescope/work/k54_gen_residue")
 HERE = Path(__file__).resolve().parent
 PARTIAL = HERE / "results_k54_partial.json"
 TRAIN_P = ("1bgf_A", "1ifg_A", "1j8r_A", "2b0a_A")
@@ -62,29 +66,35 @@ def hist6(series, bound=BOUND):
 
 
 def load_gen(prot, rep, donor, acceptor, origin):
-    """Generated 6 statistics for the given candidates, aligned by
-    (donor_atom, acceptor_atom). Returns (N, 6) float32."""
-    z = np.load(GEN_DIR / f"atlas-{prot}-analysis-R{rep}.npz")
-    pair = z["pair"]  # (M, 3): donor atom, acceptor atom, origin distance
-    gen = z["gen_dist"]  # (M, 4): forward distances at 0.1/0.3/0.5/1.0 ns
-    key = {(int(p[0]), int(p[1])): k for k, p in enumerate(pair)}
+    """Generated 6 statistics per idea for the given candidates,
+    aligned by (donor_atom, acceptor_atom). Returns {idea: (N, 6)}.
+    Each idea's statistics are computed over the branch-mean 9-point
+    series (origin + 8 steps), the same convention as K48."""
+    z = np.load(GEN_DIR / f"{prot}_R{rep}.npz")
+    key = {(int(u), int(v)): k for k, (u, v) in enumerate(zip(z["donor_atom"], z["acceptor_atom"]))}
     idx = np.array([key[(int(u), int(v))] for u, v in zip(donor, acceptor)])
     assert len(idx) == len(donor), (prot, rep, len(idx), len(donor))
-    gen5 = np.column_stack([origin, gen[idx]]).T  # (5, N)
-    return hist6(gen5.T)
+    out = {}
+    for num in (11, 12, 13, 14):
+        gen9 = z[f"gen{num}"][:, :, idx].mean(axis=0)  # (9, N) branch-mean
+        out[num] = hist6(gen9.T)
+    return out
 
 
 def load(prots):
-    xs, hs, ys, gs = [], [], [], []
+    xs, hs, ys = [], [], []
+    gs = {num: [] for num in (11, 12, 13, 14)}
     for p in prots:
         for r in (1, 2, 3):
             z = np.load(CACHE / f"{p}_R{r}.npz")
             xs.append(z["X"].astype(np.float64))
             hs.append(z["hist"].T.astype(np.float64))  # cache stores (11 frames, N)
             ys.append(z["y"].astype(np.float64))
-            gs.append(load_gen(p, r, z["donor_atom"], z["acceptor_atom"], z["hist"][-1]))
+            g = load_gen(p, r, z["donor_atom"], z["acceptor_atom"], z["hist"][-1])
+            for num in gs:
+                gs[num].append(g[num])
     return (np.concatenate(xs), np.concatenate(hs), np.concatenate(ys),
-            np.concatenate(gs))
+            {num: np.concatenate(v) for num, v in gs.items()})
 
 
 def predict(xtr, ytr, xte):
@@ -143,14 +153,18 @@ def main():
 
     eval_static()
     eval_on(Fte, "base_hist")
-    for name, repl in (("std_only", [(2, 2)]), ("min_only", [(3, 3)]),
-                       ("frac35_only", [(5, 5)]),
-                       ("combined3", [(2, 2), (3, 3), (5, 5)])):
-        Fswap = Fte.copy()
-        for real_col, gen_col in repl:
-            Fswap[:, real_col] = Gte[:, gen_col]
-        eval_on(Fswap, name)
-    eval_on(Gte, "gen6")
+    # swap conditions, measured for idea 14 (closest to real, K20)
+    # and idea 11 (quietest) as a cross-check, the same pair as K48.
+    for idea in (14, 11):
+        G = Gte[idea]
+        for name, repl in (("std_only", [(2, 2)]), ("min_only", [(3, 3)]),
+                           ("frac35_only", [(5, 5)]),
+                           ("combined3", [(2, 2), (3, 3), (5, 5)])):
+            Fswap = Fte.copy()
+            for real_col, gen_col in repl:
+                Fswap[:, real_col] = G[:, gen_col]
+            eval_on(Fswap, f"{name}_i{idea}")
+        eval_on(G, f"gen6_i{idea}")
 
     retention = {}
     for name in list(results):
