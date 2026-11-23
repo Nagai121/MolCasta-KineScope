@@ -1,0 +1,323 @@
+{
+  "label": "Contact dissociation hybrid uncertainty at 1ns (G99), 10ns (G121), 90ns (G89)",
+  "phenomenon": "contact dissociation (DocD, K50 cache + G18 regenerated proposal-22 series, overlapping candidates only)",
+  "cells": [
+    {
+      "horizon_ns": 1,
+      "source": "G99",
+      "kind": "hist6_0.1ns",
+      "prefix_frames": [
+        0,
+        1
+      ]
+    },
+    {
+      "horizon_ns": 10,
+      "source": "G121",
+      "kind": "hist6_0.5ns",
+      "prefix_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "horizon_ns": 90,
+      "source": "G89",
+      "kind": "mean_0.1ns",
+      "prefix_frames": [
+        0,
+        1
+      ]
+    }
+  ],
+  "bootstrap": {
+    "n_boot": 10000,
+    "seed": 42,
+    "method": "percentile",
+    "resampling_unit": "protein (1mix_A, 2qt4_A; 2 proteins only, so only 3 resample combinations exist and the bootstrap distribution takes only 3 distinct values)",
+    "note": "The 10,000 draws are mapped onto the 3 exact combination values; this is mathematically identical to recomputing AUPRC on the resampled rows each time, because the difference depends only on the chosen combination."
+  },
+  "horizons": {
+    "1": {
+      "horizon_ns": 1,
+      "kind": "hist6_0.1ns",
+      "prefix_frames": [
+        0,
+        1
+      ],
+      "test_n_matched": 2226,
+      "test_positives": 105,
+      "auprc": {
+        "static_only": 0.28794507490961746,
+        "full_hist": 0.4567377947454239,
+        "prefix": 0.42495210653967413,
+        "gen_mean_only": 0.2901247973186022,
+        "mixed": 0.46499652836364264
+      },
+      "full_gain": 0.16879271983580646,
+      "recovery": {
+        "full_hist": 1.0,
+        "prefix": 0.8116880382242232,
+        "gen_mean_only": 0.012913604396594003,
+        "mixed": 1.0489282572509788
+      },
+      "mixed_minus_prefix": 0.23724021902675563,
+      "mixed_minus_prefix_auprc": 0.0400444218239685,
+      "per_protein": {
+        "1mix_A": {
+          "n": 1494,
+          "positives": 76,
+          "auprc": {
+            "static_only": 0.3349486769321194,
+            "full_hist": 0.4815100121475781,
+            "prefix": 0.44598873432226965,
+            "gen_mean_only": 0.3407110722782123,
+            "mixed": 0.46632981902874426
+          },
+          "full_gain": 0.14656133521545872,
+          "recovery_prefix": 0.7576354106416342,
+          "recovery_mixed": 0.8964242984241543,
+          "mixed_minus_prefix_auprc": 0.02034108470647461,
+          "mixed_minus_prefix_recovery": 0.13878888778252008
+        },
+        "2qt4_A": {
+          "n": 732,
+          "positives": 29,
+          "auprc": {
+            "static_only": 0.22689894270784555,
+            "full_hist": 0.414809443264702,
+            "prefix": 0.3962707165761037,
+            "gen_mean_only": 0.2209561536562419,
+            "mixed": 0.4997839676757605
+          },
+          "full_gain": 0.18791050055685643,
+          "recovery_prefix": 0.9013427848169188,
+          "recovery_mixed": 1.452207429383903,
+          "mixed_minus_prefix_auprc": 0.10351325109965681,
+          "mixed_minus_prefix_recovery": 0.5508646445669843
+        }
+      }
+    },
+    "10": {
+      "horizon_ns": 10,
+      "kind": "hist6_0.5ns",
+      "prefix_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "test_n_matched": 2226,
+      "test_positives": 122,
+      "auprc": {
+        "static_only": 0.3064560924196405,
+        "full_hist": 0.5095280026805925,
+        "prefix": 0.45693305146236474,
+        "gen_mean_only": 0.3047948377842949,
+        "mixed": 0.46810687751339425
+      },
+      "full_gain": 0.203071910260952,
+      "recovery": {
+        "full_hist": 1.0,
+        "prefix": 0.7410033167529568,
+        "gen_mean_only": -0.008180622485950226,
+        "mixed": 0.796027303264291
+      },
+      "mixed_minus_prefix": 0.05502398651133422,
+      "mixed_minus_prefix_auprc": 0.011173826051029512,
+      "per_protein": {
+        "1mix_A": {
+          "n": 1494,
+          "positives": 81,
+          "auprc": {
+            "static_only": 0.29227550903643423,
+            "full_hist": 0.5012186086165512,
+            "prefix": 0.42800886787271847,
+            "gen_mean_only": 0.28723726855751264,
+            "mixed": 0.44889032532587175
+          },
+          "full_gain": 0.20894309958011698,
+          "recovery_prefix": 0.6496187675450786,
+          "recovery_mixed": 0.7495572555598337,
+          "mixed_minus_prefix_auprc": 0.020881457453153285,
+          "mixed_minus_prefix_recovery": 0.09993848801475502
+        },
+        "2qt4_A": {
+          "n": 732,
+          "positives": 41,
+          "auprc": {
+            "static_only": 0.35399446099778503,
+            "full_hist": 0.554289590459174,
+            "prefix": 0.5456317874147341,
+            "gen_mean_only": 0.35401225140918396,
+            "mixed": 0.5304725542710216
+          },
+          "full_gain": 0.200295129461389,
+          "recovery_prefix": 0.9567747699720829,
+          "recovery_mixed": 0.8810902878557331,
+          "mixed_minus_prefix_auprc": -0.01515923314371248,
+          "mixed_minus_prefix_recovery": -0.07568448211634989
+        }
+      }
+    },
+    "90": {
+      "horizon_ns": 90,
+      "kind": "mean_0.1ns",
+      "prefix_frames": [
+        0,
+        1
+      ],
+      "test_n_matched": 2226,
+      "test_positives": 160,
+      "auprc": {
+        "static_only": 0.32938005357838007,
+        "full_hist": 0.4817982895265883,
+        "prefix": 0.452727137745004,
+        "gen_mean_only": 0.34522539158978144,
+        "mixed": 0.4609600465024537
+      },
+      "full_gain": 0.15241823594820825,
+      "recovery": {
+        "full_hist": 1.0,
+        "prefix": 0.809267233669712,
+        "gen_mean_only": 0.10395959455130825,
+        "mixed": 0.8632824812956407
+      },
+      "mixed_minus_prefix": 0.054015247625928686,
+      "mixed_minus_prefix_auprc": 0.008232908757449697,
+      "per_protein": {
+        "1mix_A": {
+          "n": 1494,
+          "positives": 117,
+          "auprc": {
+            "static_only": 0.3771858170903709,
+            "full_hist": 0.488090261224304,
+            "prefix": 0.4950173163266977,
+            "gen_mean_only": 0.4038971979069109,
+            "mixed": 0.49852017943405613
+          },
+          "full_gain": 0.11090444413393308,
+          "recovery_prefix": 1.0624596710843102,
+          "recovery_mixed": 1.0940441863371726,
+          "mixed_minus_prefix_auprc": 0.0035028631073584227,
+          "mixed_minus_prefix_recovery": 0.03158451525286229
+        },
+        "2qt4_A": {
+          "n": 732,
+          "positives": 43,
+          "auprc": {
+            "static_only": 0.29370699770139014,
+            "full_hist": 0.5082999212020809,
+            "prefix": 0.36306324152230224,
+            "gen_mean_only": 0.2903722284097823,
+            "mixed": 0.3886739958329372
+          },
+          "full_gain": 0.21459292350069076,
+          "recovery_prefix": 0.32319911900864173,
+          "recovery_mixed": 0.4425448732527351,
+          "mixed_minus_prefix_auprc": 0.025610754310634976,
+          "mixed_minus_prefix_recovery": 0.11934575424409341
+        }
+      }
+    }
+  },
+  "bootstrap_results": {
+    "1": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.23724021902675563,
+      "ci_lower": 0.13878888778252008,
+      "ci_upper": 0.5508646445669843,
+      "contains_zero": false,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.13878888778252008,
+        "1mix_A+2qt4_A": 0.2372402190267555,
+        "2qt4_A+2qt4_A": 0.5508646445669843
+      },
+      "n_distinct_boot_values": 3
+    },
+    "10": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.05502398651133422,
+      "ci_lower": -0.07568448211634989,
+      "ci_upper": 0.09993848801475502,
+      "contains_zero": true,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.09993848801475502,
+        "1mix_A+2qt4_A": 0.0550239865113343,
+        "2qt4_A+2qt4_A": -0.07568448211634989
+      },
+      "n_distinct_boot_values": 3
+    },
+    "90": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.054015247625928686,
+      "ci_lower": 0.03158451525286229,
+      "ci_upper": 0.11934575424409341,
+      "contains_zero": false,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.03158451525286229,
+        "1mix_A+2qt4_A": 0.05401524762592871,
+        "2qt4_A+2qt4_A": 0.11934575424409341
+      },
+      "n_distinct_boot_values": 3
+    }
+  },
+  "bootstrap_results_auprc_diff": {
+    "1": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.0400444218239685,
+      "ci_lower": 0.02034108470647461,
+      "ci_upper": 0.10351325109965681,
+      "contains_zero": false,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.02034108470647461,
+        "1mix_A+2qt4_A": 0.0400444218239685,
+        "2qt4_A+2qt4_A": 0.10351325109965681
+      },
+      "n_distinct_boot_values": 3
+    },
+    "10": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.011173826051029512,
+      "ci_lower": -0.01515923314371248,
+      "ci_upper": 0.020881457453153285,
+      "contains_zero": true,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.020881457453153285,
+        "1mix_A+2qt4_A": 0.011173826051029512,
+        "2qt4_A+2qt4_A": -0.01515923314371248
+      },
+      "n_distinct_boot_values": 3
+    },
+    "90": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.008232908757449697,
+      "ci_lower": 0.0035028631073584227,
+      "ci_upper": 0.025610754310634976,
+      "contains_zero": false,
+      "three_resample_values": {
+        "1mix_A+1mix_A": 0.0035028631073584227,
+        "1mix_A+2qt4_A": 0.008232908757449697,
+        "2qt4_A+2qt4_A": 0.025610754310634976
+      },
+      "n_distinct_boot_values": 3
+    }
+  },
+  "above_0.05_cells_contain_zero": {
+    "1ns_G99": false,
+    "10ns_G121": true,
+    "90ns_G89": false
+  }
+}
