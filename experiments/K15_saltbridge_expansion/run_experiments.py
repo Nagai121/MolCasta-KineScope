@@ -12,9 +12,9 @@ HERE = Path(__file__).parent
 CACHE = Path("/home/hatch/workspace/kinescope/work/k15_cache")
 ORIG_TRAIN = ("1bgf_A", "1ifg_A", "1j8r_A", "2b0a_A")
 ORIG_TEST = ("1mix_A", "2qt4_A")
-P108 = [l.strip() for l in open(HERE / "proteins108.txt") if l.strip()]
-TRAIN_P = ORIG_TRAIN + tuple(P108[:54])
-TEST_P = ORIG_TEST + tuple(P108[54:])
+_SPLIT = json.loads((HERE / "split.json").read_text())
+TRAIN_P = ORIG_TRAIN + tuple(_SPLIT["train_additions"])
+TEST_P = ORIG_TEST + tuple(_SPLIT["test_additions"])
 HORIZONS = (1, 5, 10, 30, 50, 90)
 BOUND = 4.0
 

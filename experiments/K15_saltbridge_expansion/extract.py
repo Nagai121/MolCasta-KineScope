@@ -25,9 +25,10 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 ORIG_TRAIN = ("1bgf_A", "1ifg_A", "1j8r_A", "2b0a_A")
 ORIG_TEST = ("1mix_A", "2qt4_A")
-P108 = [l.strip() for l in open(Path(__file__).with_name("proteins108.txt")) if l.strip()]
-TRAIN_P = ORIG_TRAIN + tuple(P108[:54])
-TEST_P = ORIG_TEST + tuple(P108[54:])
+import json as _json
+_SPLIT = _json.loads(Path(__file__).with_name("split.json").read_text())
+TRAIN_P = ORIG_TRAIN + tuple(_SPLIT["train_additions"])
+TEST_P = ORIG_TEST + tuple(_SPLIT["test_additions"])
 ALL_P = TRAIN_P + TEST_P
 HORIZON_FRAMES = (20, 60, 110, 310, 510, 910)
 FRAMES = list(range(11)) + list(HORIZON_FRAMES)
