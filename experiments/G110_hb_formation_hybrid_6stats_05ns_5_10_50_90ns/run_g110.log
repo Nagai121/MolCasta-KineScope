@@ -1,0 +1,72 @@
+train (9610, 7) test (4972, 7)
+K11 origin vs hist last: max abs diff train 5.56e-07 test 6.08e-07
+p11 test: {'corr_prefix_gen': 0.766, 'corr_gen_full': 0.834, 'corr_prefix_full': 0.9829, 'gen_minus_prefix_mean': -0.1166, 'gen_minus_prefix_std': 0.6198, 'gen_minus_full_mean': -0.0894, 'gen_minus_full_std': 0.4886}
+p12 test: {'corr_prefix_gen': 0.7655, 'corr_gen_full': 0.8336, 'corr_prefix_full': 0.9829, 'gen_minus_prefix_mean': -0.1179, 'gen_minus_prefix_std': 0.6204, 'gen_minus_full_mean': -0.0907, 'gen_minus_full_std': 0.4892}
+p13 test: {'corr_prefix_gen': 0.7626, 'corr_gen_full': 0.8306, 'corr_prefix_full': 0.9829, 'gen_minus_prefix_mean': -0.1094, 'gen_minus_prefix_std': 0.6236, 'gen_minus_full_mean': -0.0823, 'gen_minus_full_std': 0.493}
+p14 test: {'corr_prefix_gen': 0.7644, 'corr_gen_full': 0.8324, 'corr_prefix_full': 0.9829, 'gen_minus_prefix_mean': -0.1055, 'gen_minus_prefix_std': 0.6216, 'gen_minus_full_mean': -0.0783, 'gen_minus_full_std': 0.4906}
+p22 test: {'corr_prefix_gen': 0.7804, 'corr_gen_full': 0.8445, 'corr_prefix_full': 0.9829, 'gen_minus_prefix_mean': -0.1565, 'gen_minus_prefix_std': 0.6029, 'gen_minus_full_mean': -0.1294, 'gen_minus_full_std': 0.4741}
+=== horizon 5 ns, test positives 312 ===
+  static_only auprc 0.3493
+  full_hist6 auprc 0.4648
+  prefix_hist6_0.5ns auprc 0.4612
+  gen_mean_only_p11 auprc 0.3482
+  mixed_p11 auprc 0.4771
+  gen_mean_only_p12 auprc 0.3501
+  mixed_p12 auprc 0.4600
+  gen_mean_only_p13 auprc 0.3336
+  mixed_p13 auprc 0.4498
+  gen_mean_only_p14 auprc 0.3351
+  mixed_p14 auprc 0.4692
+  gen_mean_only_p22 auprc 0.3634
+  mixed_p22 auprc 0.4611
+  base gain 0.1155, prefix_hist6 recovery 0.969, mixed deltas {'p11': 0.137, 'p12': -0.011, 'p13': -0.099, 'p14': 0.069, 'p22': -0.001}
+=== horizon 10 ns, test positives 325 ===
+  static_only auprc 0.3548
+  full_hist6 auprc 0.4377
+  prefix_hist6_0.5ns auprc 0.3932
+  gen_mean_only_p11 auprc 0.3668
+  mixed_p11 auprc 0.4198
+  gen_mean_only_p12 auprc 0.3474
+  mixed_p12 auprc 0.4182
+  gen_mean_only_p13 auprc 0.3651
+  mixed_p13 auprc 0.3923
+  gen_mean_only_p14 auprc 0.3554
+  mixed_p14 auprc 0.3958
+  gen_mean_only_p22 auprc 0.3752
+  mixed_p22 auprc 0.4064
+  base gain 0.0829, prefix_hist6 recovery 0.464, mixed deltas {'p11': 0.321, 'p12': 0.301, 'p13': -0.012, 'p14': 0.031, 'p22': 0.158}
+=== horizon 50 ns, test positives 325 ===
+  static_only auprc 0.3342
+  full_hist6 auprc 0.4081
+  prefix_hist6_0.5ns auprc 0.3952
+  gen_mean_only_p11 auprc 0.3319
+  mixed_p11 auprc 0.4006
+  gen_mean_only_p12 auprc 0.3295
+  mixed_p12 auprc 0.3988
+  gen_mean_only_p13 auprc 0.3188
+  mixed_p13 auprc 0.4012
+  gen_mean_only_p14 auprc 0.3246
+  mixed_p14 auprc 0.4068
+  gen_mean_only_p22 auprc 0.3663
+  mixed_p22 auprc 0.4021
+  base gain 0.0739, prefix_hist6 recovery 0.825, mixed deltas {'p11': 0.073, 'p12': 0.048, 'p13': 0.082, 'p14': 0.157, 'p22': 0.094}
+=== horizon 90 ns, test positives 335 ===
+  static_only auprc 0.3035
+  full_hist6 auprc 0.4246
+  prefix_hist6_0.5ns auprc 0.4073
+  gen_mean_only_p11 auprc 0.3046
+  mixed_p11 auprc 0.3991
+  gen_mean_only_p12 auprc 0.3123
+  mixed_p12 auprc 0.4097
+  gen_mean_only_p13 auprc 0.3210
+  mixed_p13 auprc 0.4192
+  gen_mean_only_p14 auprc 0.3026
+  mixed_p14 auprc 0.4068
+  gen_mean_only_p22 auprc 0.3356
+  mixed_p22 auprc 0.4122
+  base gain 0.1211, prefix_hist6 recovery 0.858, mixed deltas {'p11': -0.068, 'p12': 0.02, 'p13': 0.098, 'p14': -0.004, 'p22': 0.04}
+saved /home/hatch/workspace/g110/results.json
+  5 ns mixed deltas: {'p11': 0.137, 'p12': -0.011, 'p13': -0.099, 'p14': 0.069, 'p22': -0.001}
+  10 ns mixed deltas: {'p11': 0.321, 'p12': 0.301, 'p13': -0.012, 'p14': 0.031, 'p22': 0.158}
+  50 ns mixed deltas: {'p11': 0.073, 'p12': 0.048, 'p13': 0.082, 'p14': 0.157, 'p22': 0.094}
+  90 ns mixed deltas: {'p11': -0.068, 'p12': 0.02, 'p13': 0.098, 'p14': -0.004, 'p22': 0.04}
