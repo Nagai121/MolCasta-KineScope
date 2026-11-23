@@ -1,0 +1,82 @@
+{
+  "phenomenon": "hb_dissociation",
+  "horizon_ns": 1,
+  "cuts": {
+    "0.25ns": [
+      0,
+      1,
+      2
+    ]
+  },
+  "residual_spread_vs_full_mean": {
+    "0.25ns": {
+      "frames": [
+        0,
+        1,
+        2
+      ],
+      "train_residual_std": 0.23427656682506448,
+      "test_residual_std": 0.25208362280567015,
+      "train_residual_mean": 0.03179976514766295,
+      "test_residual_mean": 0.026018207950810755
+    }
+  },
+  "metrics_1ns": {
+    "static_only": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.4159748410317585,
+      "auc": 0.8605957550453596,
+      "brier": 0.10247187414426535,
+      "logloss": 0.30583884097152664
+    },
+    "full_hist6": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.5945102167465611,
+      "auc": 0.90823016618832,
+      "brier": 0.08622829696308401,
+      "logloss": 0.2674670805912608
+    },
+    "mean_only_full": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.5690843076905324,
+      "auc": 0.9004215145076242,
+      "brier": 0.08900832455131964,
+      "logloss": 0.2710455923310473
+    },
+    "prefix_mean_0.25ns": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.5182993959062183,
+      "auc": 0.8800464956494396,
+      "brier": 0.0966547053739883,
+      "logloss": 0.2955768280343524
+    },
+    "prefix_hist6_0.25ns": {
+      "n": 2080,
+      "positives": 311,
+      "auprc": 0.5493486515208016,
+      "auc": 0.8927746342421008,
+      "brier": 0.09246322742771265,
+      "logloss": 0.28542961765167246
+    }
+  },
+  "base_gain_1ns": 0.1785353757148026,
+  "reference_gain_1ns": 0.1785,
+  "recovery_vs_real_history_gain": {
+    "full_hist6": 1.0,
+    "mean_only_full": 0.8575861565013044,
+    "prefix_mean_0.25ns": 0.5731332206000221,
+    "prefix_hist6_0.25ns": 0.7470441639650067
+  },
+  "g06_reference": {
+    "prefix_mean_0.1ns": 0.532,
+    "prefix_hist6_0.1ns": 0.59,
+    "prefix_mean_0.5ns": 0.589,
+    "prefix_hist6_0.5ns": 0.772,
+    "residual_std_test_0.1ns": 0.297,
+    "residual_std_test_0.5ns": 0.163
+  }
+}
