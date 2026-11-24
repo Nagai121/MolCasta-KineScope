@@ -1,0 +1,31 @@
+train (15926, 5) test (7384, 5) test proteins 2
+max |X[:,0] - hist[:,-1]| train 4.768170231983504e-07
+max |X[:,0] - hist[:,-1]| test 4.767291397200779e-07
+mean11 - mean10: test std 0.0406 mean 0.0
+{'1mix_A': 5012, '2qt4_A': 2372}
+1ns: static 0.3398 full 0.5669 6stats10 0.5682 6stats11 0.5669 gain 0.2271 recovery_diff -0.006 (record -0.006) auprc_diff -0.0013
+5ns: static 0.2870 full 0.5192 6stats10 0.5226 6stats11 0.5192 gain 0.2322 recovery_diff -0.015 (record -0.015) auprc_diff -0.0034
+10ns: static 0.3204 full 0.5234 6stats10 0.5066 6stats11 0.5234 gain 0.2030 recovery_diff +0.083 (record +0.083) auprc_diff +0.0168
+30ns: static 0.2868 full 0.4386 6stats10 0.4581 6stats11 0.4386 gain 0.1518 recovery_diff -0.128 (record -0.129) auprc_diff -0.0195
+50ns: static 0.2604 full 0.4638 6stats10 0.4358 6stats11 0.4638 gain 0.2034 recovery_diff +0.138 (record +0.138) auprc_diff +0.0280
+90ns: static 0.2872 full 0.4722 6stats10 0.4509 6stats11 0.4722 gain 0.1850 recovery_diff +0.115 (record +0.115) auprc_diff +0.0212
+checkpoint: saved test_predictions.npz
+bootstrap 2000/10000 draws done
+bootstrap 4000/10000 draws done
+bootstrap 6000/10000 draws done
+bootstrap 8000/10000 draws done
+bootstrap 10000/10000 draws done
+1ns bootstrap recovery diff: -0.006 [-0.073, +0.026] contains_zero=True n_distinct=3
+1ns bootstrap (AUPRC diff): -0.0013 [-0.0250, +0.0046] zero=True n_distinct=3
+5ns bootstrap recovery diff: -0.015 [-0.025, +0.035] contains_zero=True n_distinct=3
+5ns bootstrap (AUPRC diff): -0.0034 [-0.0078, +0.0068] zero=True n_distinct=3
+10ns bootstrap recovery diff: +0.083 [-0.058, +0.154] contains_zero=True n_distinct=3
+10ns bootstrap (AUPRC diff): +0.0168 [-0.0146, +0.0234] zero=True n_distinct=3
+30ns bootstrap recovery diff: -0.128 [-0.165, -0.065] contains_zero=False n_distinct=3
+30ns bootstrap (AUPRC diff): -0.0195 [-0.0210, -0.0128] zero=False n_distinct=3
+50ns bootstrap recovery diff: +0.138 [-0.027, +0.193] contains_zero=True n_distinct=3
+50ns bootstrap (AUPRC diff): +0.0280 [-0.0093, +0.0289] zero=True n_distinct=3
+90ns bootstrap recovery diff: +0.115 [-0.110, +0.219] contains_zero=True n_distinct=3
+90ns bootstrap (AUPRC diff): +0.0212 [-0.0310, +0.0306] zero=True n_distinct=3
+recovery-diff CIs contain zero: {'1ns': True, '5ns': True, '10ns': True, '30ns': False, '50ns': True, '90ns': True}
+saved /home/hatch/workspace/kinescope/repo/experiments/G171_contact_formation_6stats_origin_frame_uncertainty/results.json /home/hatch/workspace/kinescope/repo/experiments/G171_contact_formation_6stats_origin_frame_uncertainty/results.csv /home/hatch/workspace/kinescope/repo/experiments/G171_contact_formation_6stats_origin_frame_uncertainty/test_predictions.npz
