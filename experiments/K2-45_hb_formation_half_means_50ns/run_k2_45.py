@@ -212,7 +212,7 @@ out = {
     "label": "HB formation 50ns: guidance of first-half mean vs second-half mean of the history",
     "series": "K2 (what the guidance is, not where it is)",
     "experiment": "K2-45",
-    "horizon_ns": 5,
+    "horizon_ns": 50,
     "conditions_definition": {
         "base": "Material D conditions: train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, "
                 "test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 "

@@ -111,3 +111,4 @@
 - 結果: `results.json`（条件の定義、土台の再現の照合、読み方の判定を含む全指標と割合）、`results.csv`（条件ごとの指標・利得・割合）
 - 候補ごとの予測確率: `test_predictions.npz`（テスト候補ごとのタンパク質・ラベル・各条件の予測確率）
 - 入力データ: K01 のキャッシュ `~/workspace/kinescope/work/data_cache/`（18軌道分、この仮想マシン上）
+- 訂正（2026-11-24）: `results.json` と `run_k2_45.py` の `horizon_ns` が 5 になっていたのを 50 に訂正した。数値そのものは 50 ns先のもので変わらない（実行コードは HORIZON_IDX=4 で 50 ns先を測っている）。
