@@ -1,0 +1,275 @@
+{
+  "label": "HB formation 5ns: guidance of first-half mean vs second-half mean of the history",
+  "series": "K2 (what the guidance is, not where it is)",
+  "experiment": "K2-26",
+  "horizon_ns": 5,
+  "conditions_definition": {
+    "base": "Material D conditions: train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 (100 ps spacing), HistGBM (120 iters, lr 0.075, 31 leaves, min_samples_leaf 15, L2 0.02, seed 42) refit per condition, 7 static features.",
+    "first_half": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "span_ns": "0.0-0.4",
+      "feature": "mean of the pair distance over frames [0..4]"
+    },
+    "second_half": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "span_ns": "0.6-1.0",
+      "feature": "mean of the pair distance over frames [6..10]"
+    },
+    "note": "Frame 5 (0.5 ns) belongs to neither half by design.",
+    "both_halves": "static + first-half mean + second-half mean (2 features)",
+    "full_mean": "static + mean over frames [0..10] (same as G74 mean_only_full)",
+    "base_hist_D6": "static + 6 statistics of the full 11-frame history (all-in reference)"
+  },
+  "base_reproduction": {
+    "expected_from_G74_G136": {
+      "static_only_auprc": 0.3493,
+      "base_hist_D6_auprc": 0.4648,
+      "full6_gain": 0.1155,
+      "full_mean_auprc": 0.4868
+    },
+    "observed": {
+      "static_only_auprc": 0.349302325532271,
+      "base_hist_D6_auprc": 0.4647730596143089,
+      "full6_gain": 0.11547073408203795,
+      "full_mean_auprc": 0.4867668299446219
+    },
+    "match": "all within 5e-4 (identical to 4 decimal places)",
+    "n_train": 9610,
+    "n_test": 4972,
+    "n_test_positives": 312
+  },
+  "metrics_5ns": {
+    "static_only": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.349302325532271,
+      "auc": 0.8797997826565422,
+      "brier": 0.04854167952070918,
+      "logloss": 0.1714567253040607
+    },
+    "base_hist_D6": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.4647730596143089,
+      "auc": 0.9221979201056455,
+      "brier": 0.04278903719160868,
+      "logloss": 0.14801486411494005
+    },
+    "first_half_mean": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.45453121374079075,
+      "auc": 0.9089939611532958,
+      "brier": 0.04405804733597198,
+      "logloss": 0.15400817844160586
+    },
+    "second_half_mean": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.45189078545426975,
+      "auc": 0.9092993424672609,
+      "brier": 0.04340556070351571,
+      "logloss": 0.15248773540633664
+    },
+    "both_halves_mean": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.4695665552224232,
+      "auc": 0.9142703862660944,
+      "brier": 0.04340457888677178,
+      "logloss": 0.15157897332551182
+    },
+    "full_mean": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.4867668299446219,
+      "auc": 0.9111563909981292,
+      "brier": 0.04225565529152309,
+      "logloss": 0.14979000562473022
+    }
+  },
+  "gains": {
+    "static_only": {
+      "gain": 0.0,
+      "ratio_vs_full6_gain": 0.0,
+      "ratio_vs_fullmean_gain": 0.0
+    },
+    "base_hist_D6": {
+      "gain": 0.11547073408203795,
+      "ratio_vs_full6_gain": 1.0,
+      "ratio_vs_fullmean_gain": 0.8400040037656669
+    },
+    "first_half_mean": {
+      "gain": 0.10522888820851978,
+      "ratio_vs_full6_gain": 0.9113035354374581,
+      "ratio_vs_fullmean_gain": 0.7654986184132722
+    },
+    "second_half_mean": {
+      "gain": 0.10258845992199878,
+      "ratio_vs_full6_gain": 0.8884368904168674,
+      "ratio_vs_fullmean_gain": 0.7462905450432876
+    },
+    "both_halves_mean": {
+      "gain": 0.12026422969015221,
+      "ratio_vs_full6_gain": 1.041512645140964,
+      "ratio_vs_fullmean_gain": 0.87487479189098
+    },
+    "full_mean": {
+      "gain": 0.13746450441235092,
+      "ratio_vs_full6_gain": 1.1904705162321663,
+      "ratio_vs_fullmean_gain": 1.0
+    }
+  },
+  "reading_rule_fixed_in_advance": {
+    "rule": "second-half ratio (vs full6 gain) >= 0.8 and first-half ratio <= 0.5 -> 'current state carries it'; both ratios >= 0.8 -> 'persistent state carries it'; otherwise record the numbers as they are.",
+    "first_half_ratio_vs_full6": 0.9113035354374581,
+    "second_half_ratio_vs_full6": 0.8884368904168674,
+    "verdict": "続いている状態が効いている"
+  },
+  "per_protein": {
+    "static_only": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.38583921934686094,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.2649638114572563,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      }
+    },
+    "base_hist_D6": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.4754504963941919,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.08961127704733096,
+        "ratio_vs_full6_gain": 1.0
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.4488284875292456,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.1838646760719893,
+        "ratio_vs_full6_gain": 1.0
+      }
+    },
+    "first_half_mean": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.47840483549939994,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.092565616152539,
+        "ratio_vs_full6_gain": 1.032968385258561
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.4103414152226072,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.14537760376535092,
+        "ratio_vs_full6_gain": 0.790677181017797
+      }
+    },
+    "second_half_mean": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.47375357171877086,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.08791435237190992,
+        "ratio_vs_full6_gain": 0.981063491880327
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.42535573675374705,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.16039192529649077,
+        "ratio_vs_full6_gain": 0.8723368116325501
+      }
+    },
+    "both_halves_mean": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.47069282892938996,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.08485360958252902,
+        "ratio_vs_full6_gain": 0.9469077149487667
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.47510342308398873,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.21013961162673245,
+        "ratio_vs_full6_gain": 1.1429036621719313
+      }
+    },
+    "full_mean": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.5053029142129336,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.11946369486607267,
+        "ratio_vs_full6_gain": 1.3331323780038782
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.4490288408431208,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.1840650293858645,
+        "ratio_vs_full6_gain": 1.0010896781162943
+      }
+    }
+  }
+}
