@@ -1,0 +1,10 @@
+train (6383, 5) test (2915, 5)
+static_only {'n': 2915, 'positives': 211, 'auc': 0.8332, 'auprc': 0.3022, 'brier': 0.06, 'logloss': 0.2105}
+mean_first_half {'n': 2915, 'positives': 211, 'auc': 0.9094, 'auprc': 0.4942, 'brier': 0.0472, 'logloss': 0.1648}
+mean_second_half {'n': 2915, 'positives': 211, 'auc': 0.8958, 'auprc': 0.4975, 'brier': 0.0487, 'logloss': 0.1722}
+mean_both_halves {'n': 2915, 'positives': 211, 'auc': 0.9132, 'auprc': 0.5149, 'brier': 0.0466, 'logloss': 0.162}
+mean_full {'n': 2915, 'positives': 211, 'auc': 0.9168, 'auprc': 0.5253, 'brier': 0.0455, 'logloss': 0.159}
+full_hist6 {'n': 2915, 'positives': 211, 'auc': 0.9289, 'auprc': 0.5528, 'brier': 0.0437, 'logloss': 0.1501}
+base reproduction vs K50: OK
+gain_full +0.2506 gain_first +0.1920 (ratio 0.766) gain_second +0.1953 (ratio 0.779) gain_both +0.2127 (ratio 0.849) gain_mean_full +0.2231 (ratio 0.890) reading: どちらでもない（数値をそのまま記録）
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-41_contact_dissociation_half_means_5ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-41_contact_dissociation_half_means_5ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-41_contact_dissociation_half_means_5ns/test_predictions.npz
