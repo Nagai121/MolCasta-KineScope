@@ -1,0 +1,19 @@
+cal 13808 test 163074
+full mean vs stored history col 1: cal max diff 1.43e-06, test 2.86e-06
+--- horizon 30 ns: cal pos 996 test pos 13111 ---
+  static_only: pooled auprc 0.4492 macro auprc 0.4418
+  full_history: pooled auprc 0.4855 macro auprc 0.4788
+  first_half_frac: pooled auprc 0.4787 macro auprc 0.4735
+  second_half_frac: pooled auprc 0.4676 macro auprc 0.4593
+  both_halves_frac: pooled auprc 0.4811 macro auprc 0.4753
+  full_frac: pooled auprc 0.4864 macro auprc 0.4796
+  base reproduced (k06b_results.json, 30 ns)
+  base gain pooled 0.0363 macro 0.0370 (full-frac gain pooled 0.0372 macro 0.0378)
+  full_history: frac vs full-history pooled 1.000 macro 1.000 | vs full-frac pooled 0.977 macro 0.980 | per-protein median vs full-history 1.000
+  first_half_frac: frac vs full-history pooled 0.813 macro 0.857 | vs full-frac pooled 0.794 macro 0.840 | per-protein median vs full-history 0.821
+  second_half_frac: frac vs full-history pooled 0.507 macro 0.473 | vs full-frac pooled 0.495 macro 0.463 | per-protein median vs full-history 0.489
+  both_halves_frac: frac vs full-history pooled 0.879 macro 0.905 | vs full-frac pooled 0.859 macro 0.887 | per-protein median vs full-history 0.859
+  full_frac: frac vs full-history pooled 1.023 macro 1.021 | vs full-frac pooled 1.000 macro 1.000 | per-protein median vs full-history 0.910
+  judgment: {'pooled': 'どちらでもない（数値をそのまま記録）', 'macro': 'どちらでもない（数値をそのまま記録）', 'pooled_vs_full_frac': 'どちらでもない（数値をそのまま記録）', 'macro_vs_full_frac': 'どちらでもない（数値をそのまま記録）'}
+  per-protein shapes (vs full-history gain, gain > 0.01): {'now_state': 6, 'continuing': 4, 'other': 67, 'excluded_gain_le_0.01': 23}
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-115_hb_formation_half_fraction_strong_30ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-115_hb_formation_half_fraction_strong_30ns/test_predictions.npz
