@@ -240,7 +240,7 @@ out = {
              "mean) add on top of the full mean?",
     "series": "K2 (what the guidance is, not where it is)",
     "experiment": "K2-88",
-    "horizon_ns": 1,
+    "horizon_ns": 10,
     "conditions_definition": {
         "base": "Material D conditions: train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, "
                 "test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 "
