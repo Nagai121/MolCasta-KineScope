@@ -1,0 +1,18 @@
+{
+  "proteins": [
+    "2oxl_B",
+    "4h4n_A",
+    "1vbw_A",
+    "1j2l_A",
+    "4ftf_A",
+    "3msw_A",
+    "3wx4_A",
+    "4wlr_B"
+  ],
+  "origin": 149,
+  "window": 10,
+  "weight": 0.5,
+  "branches": 8,
+  "step_fs": 4,
+  "minimize": 25
+}
