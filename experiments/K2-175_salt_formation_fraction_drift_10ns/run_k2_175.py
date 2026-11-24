@@ -6,7 +6,7 @@ K2 系列（指導力の正体は何かを探る系列）の漂いの問い。K2
 なった（全部の平均＋漂い 0.5923 は全部の平均だけ 0.5691 を +0.0232
 上回る）。塩橋の形成の 30 ns先（K2-57）では、平均の漂いは足しに
 ならなかった（−0.0205）。ここでは、同じ問いを割合の形で 10 ns先で
-測る。割合の漂いはまだどの予測幅でも測っていない。K2-150 では、接触の形成
+測る。塩橋の形成の 10 ns先では、割合の漂いはまだ測っていない。K2-150 では、接触の形成
 の 1 ns先で、割合の漂いは足しにならなかった（−0.0004）。K2-155 では、
 塩橋の形成の 30 ns先で、割合の漂いは足しにならなかった（−0.0013）。
 K2-160 では、水素結合の解離の 90 ns先で、割合の漂いは足しにならなかっ
@@ -307,7 +307,20 @@ out = {
     "per_protein": per_protein,
     "drift_diff_per_protein": drift_diff_per_protein,
 }
-(OUT / "results.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
+def clean_nan(x):
+    """AUPRC が定義できないタンパク質の nan を None に直す（K2-135・K2-140 と
+    同じ扱い）。json.dumps は nan を NaN と書いてしまい、正しい JSON になら
+    ないため、書き出す前に直す。"""
+    if isinstance(x, dict):
+        return {k: clean_nan(v) for k, v in x.items()}
+    if isinstance(x, list):
+        return [clean_nan(v) for v in x]
+    if isinstance(x, float) and math.isnan(x):
+        return None
+    return x
+
+
+(OUT / "results.json").write_text(json.dumps(clean_nan(out), indent=2, ensure_ascii=False))
 
 np.savez(OUT / "test_predictions.npz",
          **{f"pred_{k}": v for k, v in preds.items()},
