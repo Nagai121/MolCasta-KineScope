@@ -1,0 +1,285 @@
+{
+  "label": "Contact formation 10ns: guidance of first-half fraction vs second-half fraction of the history",
+  "series": "K2 (what the guidance is, not where it is)",
+  "experiment": "K2-127",
+  "horizon_ns": 10,
+  "bound_A": 4.5,
+  "conditions_definition": {
+    "base": "Material D conditions: train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 (100 ps spacing), HistGBM (120 iters, lr 0.075, 31 leaves, min_samples_leaf 15, L2 0.02, seed 42) refit per condition, 5 static features. Contact formation, K13 cache.",
+    "fraction": "fraction of frames with pair min heavy-atom distance <= 4.5 A (same definition as the 'fraction <= 4.5 A' of the 6 statistics) within the given frame range, divided by the number of frames in that range (first/second half: 5, full: 11)",
+    "first_half": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "span_ns": "0.0-0.4",
+      "feature": "fraction of frames [0..4] with min distance <= 4.5 A"
+    },
+    "second_half": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "span_ns": "0.6-1.0",
+      "feature": "fraction of frames [6..10] with min distance <= 4.5 A"
+    },
+    "note": "Frame 5 (0.5 ns) belongs to neither half by design.",
+    "both_halves_frac": "static + first-half fraction and second-half fraction (2 features)",
+    "full_frac": "static + fraction over frames [0..10] (no prior 10ns contact-formation value)",
+    "base_hist_D6": "static + 6 statistics of the full 11-frame history (all-in reference)"
+  },
+  "base_reproduction": {
+    "expected_from_K27_10ns": {
+      "static_only_auprc": 0.3204,
+      "base_hist_D6_auprc": 0.5234,
+      "full6_gain": 0.203,
+      "test_n": 7384,
+      "test_positives": 226
+    },
+    "note": "Base reproduction is checked against the contact-formation 10ns record. There is no prior full-fraction 10ns contact-formation value.",
+    "observed": {
+      "static_only_auprc": 0.320384938464356,
+      "base_hist_D6_auprc": 0.5233798114377418,
+      "full6_gain": 0.2029948729733858,
+      "full_frac_auprc": 0.497333960672472
+    },
+    "match": "all within 5e-4 (identical to 4 decimal places)",
+    "n_train": 15926,
+    "n_test": 7384,
+    "n_test_positives": 226
+  },
+  "metrics_10ns": {
+    "static_only": {
+      "n": 7384,
+      "positives": 226,
+      "auprc": 0.320384938464356,
+      "auc": 0.8809584300751433,
+      "brier": 0.024294509115051953,
+      "logloss": 0.09708886226143049
+    },
+    "base_hist_D6": {
+      "n": 7384,
+      "positives": 226,
+      "auprc": 0.5233798114377418,
+      "auc": 0.9327279706844498,
+      "brier": 0.019617459822473066,
+      "logloss": 0.07510703454411785
+    },
+    "first_half_frac": {
+      "n": 7384,
+      "positives": 226,
+      "auprc": 0.4609428137672104,
+      "auc": 0.9037310812581753,
+      "brier": 0.02117881925021594,
+      "logloss": 0.08430861853948712
+    },
+    "second_half_frac": {
+      "n": 7384,
+      "positives": 226,
+      "auprc": 0.46307034309730855,
+      "auc": 0.8951139513435058,
+      "brier": 0.020876296703984117,
+      "logloss": 0.08496150863380193
+    },
+    "both_halves_frac": {
+      "n": 7384,
+      "positives": 226,
+      "auprc": 0.4924501814845815,
+      "auc": 0.9076959500725719,
+      "brier": 0.02061184310820478,
+      "logloss": 0.0818700302890845
+    },
+    "full_frac": {
+      "n": 7384,
+      "positives": 226,
+      "auprc": 0.497333960672472,
+      "auc": 0.9046335927126526,
+      "brier": 0.02010961125928542,
+      "logloss": 0.08113880884796754
+    }
+  },
+  "gains": {
+    "static_only": {
+      "gain": 0.0,
+      "ratio_vs_full6_gain": 0.0,
+      "ratio_vs_fullfrac_gain": 0.0
+    },
+    "base_hist_D6": {
+      "gain": 0.2029948729733858,
+      "ratio_vs_full6_gain": 1.0,
+      "ratio_vs_fullfrac_gain": 1.1471940926276292
+    },
+    "first_half_frac": {
+      "gain": 0.1405578753028544,
+      "ratio_vs_full6_gain": 0.6924208145950692,
+      "ratio_vs_fullfrac_gain": 0.7943410681158742
+    },
+    "second_half_frac": {
+      "gain": 0.14268540463295254,
+      "ratio_vs_full6_gain": 0.7029015193485192,
+      "ratio_vs_fullfrac_gain": 0.8063644706956064
+    },
+    "both_halves_frac": {
+      "gain": 0.17206524302022547,
+      "ratio_vs_full6_gain": 0.8476334426573647,
+      "ratio_vs_fullfrac_gain": 0.9724000781301491
+    },
+    "full_frac": {
+      "gain": 0.17694902220811598,
+      "ratio_vs_full6_gain": 0.8716920758452622,
+      "ratio_vs_fullfrac_gain": 1.0
+    }
+  },
+  "reading_rule_fixed_in_advance": {
+    "rule": "second-half ratio (vs full6 gain) >= 0.8 and first-half ratio <= 0.5 -> 'current state carries it'; both ratios >= 0.8 -> 'persistent state carries it'; otherwise record the numbers as they are.",
+    "first_half_ratio_vs_full6": 0.6924208145950692,
+    "second_half_ratio_vs_full6": 0.7029015193485192,
+    "verdict": "どちらでもない（数値をそのまま記録）"
+  },
+  "per_protein": {
+    "static_only": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 178,
+        "auprc_static": 0.38172224678223166,
+        "auprc_full6": 0.5337894603060316,
+        "auprc_condition": 0.38172224678223166,
+        "full6_gain": 0.15206721352379993,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 48,
+        "auprc_static": 0.2523042905855595,
+        "auprc_full6": 0.5052055627652375,
+        "auprc_condition": 0.2523042905855595,
+        "full6_gain": 0.25290127217967806,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      }
+    },
+    "base_hist_D6": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 178,
+        "auprc_static": 0.38172224678223166,
+        "auprc_full6": 0.5337894603060316,
+        "auprc_condition": 0.5337894603060316,
+        "full6_gain": 0.15206721352379993,
+        "gain": 0.15206721352379993,
+        "ratio_vs_full6_gain": 1.0
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 48,
+        "auprc_static": 0.2523042905855595,
+        "auprc_full6": 0.5052055627652375,
+        "auprc_condition": 0.5052055627652375,
+        "full6_gain": 0.25290127217967806,
+        "gain": 0.25290127217967806,
+        "ratio_vs_full6_gain": 1.0
+      }
+    },
+    "first_half_frac": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 178,
+        "auprc_static": 0.38172224678223166,
+        "auprc_full6": 0.5337894603060316,
+        "auprc_condition": 0.4673184986205385,
+        "full6_gain": 0.15206721352379993,
+        "gain": 0.08559625183830682,
+        "ratio_vs_full6_gain": 0.5628843315716456
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 48,
+        "auprc_static": 0.2523042905855595,
+        "auprc_full6": 0.5052055627652375,
+        "auprc_condition": 0.45799855029405884,
+        "full6_gain": 0.25290127217967806,
+        "gain": 0.20569425970849936,
+        "ratio_vs_full6_gain": 0.813338177130087
+      }
+    },
+    "second_half_frac": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 178,
+        "auprc_static": 0.38172224678223166,
+        "auprc_full6": 0.5337894603060316,
+        "auprc_condition": 0.46246286763192845,
+        "full6_gain": 0.15206721352379993,
+        "gain": 0.0807406208496968,
+        "ratio_vs_full6_gain": 0.5309535104821274
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 48,
+        "auprc_static": 0.2523042905855595,
+        "auprc_full6": 0.5052055627652375,
+        "auprc_condition": 0.49767272930178663,
+        "full6_gain": 0.25290127217967806,
+        "gain": 0.24536843871622716,
+        "ratio_vs_full6_gain": 0.9702143314720099
+      }
+    },
+    "both_halves_frac": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 178,
+        "auprc_static": 0.38172224678223166,
+        "auprc_full6": 0.5337894603060316,
+        "auprc_condition": 0.49909272076682276,
+        "full6_gain": 0.15206721352379993,
+        "gain": 0.1173704739845911,
+        "ratio_vs_full6_gain": 0.7718328709049538
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 48,
+        "auprc_static": 0.2523042905855595,
+        "auprc_full6": 0.5052055627652375,
+        "auprc_condition": 0.4993800399274009,
+        "full6_gain": 0.25290127217967806,
+        "gain": 0.2470757493418414,
+        "ratio_vs_full6_gain": 0.9769652292073177
+      }
+    },
+    "full_frac": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 178,
+        "auprc_static": 0.38172224678223166,
+        "auprc_full6": 0.5337894603060316,
+        "auprc_condition": 0.500819305821635,
+        "full6_gain": 0.15206721352379993,
+        "gain": 0.11909705903940337,
+        "ratio_vs_full6_gain": 0.78318696239386
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 48,
+        "auprc_static": 0.2523042905855595,
+        "auprc_full6": 0.5052055627652375,
+        "auprc_condition": 0.5213921693156479,
+        "full6_gain": 0.25290127217967806,
+        "gain": 0.26908787873008844,
+        "ratio_vs_full6_gain": 1.0640036580714007
+      }
+    }
+  },
+  "per_protein_shapes": {
+    "now_state": 0,
+    "continuing": 1,
+    "other": 1,
+    "excluded_gain_le_0.01": 0
+  }
+}
