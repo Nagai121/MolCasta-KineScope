@@ -1,0 +1,117 @@
+{
+  "experiment": "K2-59",
+  "horizon_ns": 1,
+  "reading": {
+    "gbm": "残りは前半から後半へと続いている",
+    "linear": "残りは前半から後半へと続いている"
+  },
+  "reading_rule_fixed_in_advance": "pooled Pearson of the residual (front-half vs back-half) > 0.5 -> 'residual persists from front to back'; < 0.5 -> 'does not persist' (K2-08 rule)",
+  "residual_fit": {
+    "half1_linear": {
+      "r2_train": 0.5539871672166593,
+      "r2_test": 0.5777020022004984,
+      "resid_std_test": 0.3553982232638124,
+      "resid_std_train": 0.3691777682230025
+    },
+    "half1_gbm": {
+      "r2_train": 0.6693666855339326,
+      "r2_test": 0.5858207090124894,
+      "resid_std_test": 0.3521038956140459,
+      "resid_std_train": 0.3178594797920731
+    },
+    "half2_linear": {
+      "r2_train": 0.7017895430221475,
+      "r2_test": 0.742392418190257,
+      "resid_std_test": 0.2520175249600701,
+      "resid_std_train": 0.2750415667444292
+    },
+    "half2_gbm": {
+      "r2_train": 0.7799059809687464,
+      "r2_test": 0.7462655696207632,
+      "resid_std_test": 0.25006935968364874,
+      "resid_std_train": 0.23628764828619805
+    }
+  },
+  "n_train": 6383,
+  "n_test": 2915,
+  "half_mean_test": {
+    "half1": 3.601736409777492,
+    "half2": 3.576714360983013,
+    "full": 3.5901008353588617
+  },
+  "line": 0.5,
+  "correlations": {
+    "gbm": {
+      "residual": {
+        "pooled": {
+          "pearson": 0.6874850572794746,
+          "spearman": 0.6809722570373459,
+          "n": 2915
+        },
+        "1mix_A": {
+          "pearson": 0.6576996278384627,
+          "spearman": 0.6506044190045368,
+          "n": 2022
+        },
+        "2qt4_A": {
+          "pearson": 0.8123585696095206,
+          "spearman": 0.7504918236767674,
+          "n": 893
+        }
+      },
+      "raw_mean": {
+        "pooled": {
+          "pearson": 0.8866452534588019,
+          "spearman": 0.9252263184089444,
+          "n": 2915
+        },
+        "1mix_A": {
+          "pearson": 0.8531914988302328,
+          "spearman": 0.9091776170902522,
+          "n": 2022
+        },
+        "2qt4_A": {
+          "pearson": 0.9634396543492175,
+          "spearman": 0.9573908292649521,
+          "n": 893
+        }
+      }
+    },
+    "linear": {
+      "residual": {
+        "pooled": {
+          "pearson": 0.7057911656374741,
+          "spearman": 0.7250351558261469,
+          "n": 2915
+        },
+        "1mix_A": {
+          "pearson": 0.6817197439384666,
+          "spearman": 0.6941870506712672,
+          "n": 2022
+        },
+        "2qt4_A": {
+          "pearson": 0.8255394946169986,
+          "spearman": 0.7997583455837785,
+          "n": 893
+        }
+      },
+      "raw_mean": {
+        "pooled": {
+          "pearson": 0.8866452534588019,
+          "spearman": 0.9252263184089444,
+          "n": 2915
+        },
+        "1mix_A": {
+          "pearson": 0.8531914988302328,
+          "spearman": 0.9091776170902522,
+          "n": 2022
+        },
+        "2qt4_A": {
+          "pearson": 0.9634396543492175,
+          "spearman": 0.9573908292649521,
+          "n": 893
+        }
+      }
+    }
+  }
+}
