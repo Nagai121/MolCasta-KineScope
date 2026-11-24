@@ -258,7 +258,7 @@ out = {
         "n_train": int(Xtr.shape[0]), "n_test": int(Xte.shape[0]),
         "n_test_positives": int(yte.sum()),
     },
-    "metrics_90ns": results,
+    "metrics_50ns": results,
     "gains": gains,
     "reading_rule_fixed_in_advance": {
         "rule": "second-half ratio (vs full6 gain) >= 0.8 and first-half ratio <= 0.5 "
