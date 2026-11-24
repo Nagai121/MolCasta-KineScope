@@ -1,0 +1,374 @@
+{
+  "scope": "diagnosis only; no subset is used as the primary result",
+  "panels": {
+    "previous": {
+      "by_distance": {
+        "3.5-4.0": {
+          "pairs": 560,
+          "metrics": {
+            "residual_sd": 0.2986992250447174,
+            "rmse": 0.29876475736657493,
+            "bias": 0.006257251952226814,
+            "residual_correlation": 0.6638524249225053
+          }
+        },
+        "4.0-4.5": {
+          "pairs": 446,
+          "metrics": {
+            "residual_sd": 0.4206233215022992,
+            "rmse": 0.4209800516948292,
+            "bias": -0.017327011668331976,
+            "residual_correlation": 0.6812104724401455
+          }
+        },
+        "4.5-5.0": {
+          "pairs": 693,
+          "metrics": {
+            "residual_sd": 0.39858153988190315,
+            "rmse": 0.39878387400828974,
+            "bias": -0.012701741393618479,
+            "residual_correlation": 0.6764084549771022
+          }
+        },
+        "5.0-5.5": {
+          "pairs": 844,
+          "metrics": {
+            "residual_sd": 0.4102452682832131,
+            "rmse": 0.41160511907111913,
+            "bias": -0.03343043369124479,
+            "residual_correlation": 0.7271296684259142
+          }
+        },
+        "5.5-6.0": {
+          "pairs": 1043,
+          "metrics": {
+            "residual_sd": 0.4528497852179071,
+            "rmse": 0.45383470444339785,
+            "bias": -0.029883289399289487,
+            "residual_correlation": 0.676357231935906
+          }
+        }
+      },
+      "by_protein": {
+        "2oxl_B": {
+          "pairs": 329,
+          "metrics": {
+            "residual_sd": 0.2712031649347334,
+            "rmse": 0.2712569089694862,
+            "bias": -0.00539944377356756,
+            "residual_correlation": 0.6632441256196715
+          }
+        },
+        "4h4n_A": {
+          "pairs": 305,
+          "metrics": {
+            "residual_sd": 0.4820673230619609,
+            "rmse": 0.4888744698462201,
+            "bias": -0.08129786776599857,
+            "residual_correlation": 0.7352729991455834
+          }
+        },
+        "1vbw_A": {
+          "pairs": 320,
+          "metrics": {
+            "residual_sd": 0.32442425514619366,
+            "rmse": 0.3254841657408475,
+            "bias": 0.026245853403021536,
+            "residual_correlation": 0.7687266462200887
+          }
+        },
+        "1j2l_A": {
+          "pairs": 315,
+          "metrics": {
+            "residual_sd": 0.36777511440395133,
+            "rmse": 0.37158739532521956,
+            "bias": 0.05309103116103077,
+            "residual_correlation": 0.6794332226382547
+          }
+        },
+        "4ftf_A": {
+          "pairs": 611,
+          "metrics": {
+            "residual_sd": 0.4654314173354559,
+            "rmse": 0.4684587162910794,
+            "bias": -0.053171088254752426,
+            "residual_correlation": 0.572938474443793
+          }
+        },
+        "3msw_A": {
+          "pairs": 851,
+          "metrics": {
+            "residual_sd": 0.3460293711681916,
+            "rmse": 0.346250733145807,
+            "bias": -0.012379195973680037,
+            "residual_correlation": 0.7143491230326191
+          }
+        },
+        "3wx4_A": {
+          "pairs": 423,
+          "metrics": {
+            "residual_sd": 0.36271734935095945,
+            "rmse": 0.36280285172246435,
+            "bias": 0.007876147393651164,
+            "residual_correlation": 0.710040764517168
+          }
+        },
+        "4wlr_B": {
+          "pairs": 432,
+          "metrics": {
+            "residual_sd": 0.5453842639893829,
+            "rmse": 0.5501665005898724,
+            "bias": -0.07238220060253121,
+            "residual_correlation": 0.7272578780012369
+          }
+        }
+      }
+    },
+    "reserve": {
+      "by_distance": {
+        "3.5-4.0": {
+          "pairs": 651,
+          "metrics": {
+            "residual_sd": 0.3248631863902139,
+            "rmse": 0.32493489180324403,
+            "bias": -0.006825982682591297,
+            "residual_correlation": 0.5832416355499555
+          }
+        },
+        "4.0-4.5": {
+          "pairs": 487,
+          "metrics": {
+            "residual_sd": 0.45961148883985936,
+            "rmse": 0.46195084581423373,
+            "bias": 0.04643127474982546,
+            "residual_correlation": 0.5400437809648606
+          }
+        },
+        "4.5-5.0": {
+          "pairs": 789,
+          "metrics": {
+            "residual_sd": 0.44063072803913594,
+            "rmse": 0.4406317392313765,
+            "bias": -0.0009439945809251181,
+            "residual_correlation": 0.6354991870457359
+          }
+        },
+        "5.0-5.5": {
+          "pairs": 1011,
+          "metrics": {
+            "residual_sd": 0.4542366486137531,
+            "rmse": 0.45486122458850714,
+            "bias": 0.023828568784173405,
+            "residual_correlation": 0.5751241348337419
+          }
+        },
+        "5.5-6.0": {
+          "pairs": 1229,
+          "metrics": {
+            "residual_sd": 0.4589096064484373,
+            "rmse": 0.45891440993305765,
+            "bias": 0.0020997032044631184,
+            "residual_correlation": 0.6394248370544909
+          }
+        }
+      },
+      "by_protein": {
+        "3u5v_A": {
+          "pairs": 361,
+          "metrics": {
+            "residual_sd": 0.5262373981536642,
+            "rmse": 0.5291161047332077,
+            "bias": 0.05511853655989557,
+            "residual_correlation": 0.49985096266048856
+          }
+        },
+        "6fc0_B": {
+          "pairs": 288,
+          "metrics": {
+            "residual_sd": 0.5917576872371352,
+            "rmse": 0.6042910907429686,
+            "bias": -0.12243595038665535,
+            "residual_correlation": 0.5190159446822453
+          }
+        },
+        "1ef1_D": {
+          "pairs": 489,
+          "metrics": {
+            "residual_sd": 0.5855495508368882,
+            "rmse": 0.5867105699754723,
+            "bias": 0.036891956246073804,
+            "residual_correlation": 0.5964082691094593
+          }
+        },
+        "3ofg_B": {
+          "pairs": 455,
+          "metrics": {
+            "residual_sd": 0.3174590094077017,
+            "rmse": 0.31804792008309635,
+            "bias": 0.019345718261786004,
+            "residual_correlation": 0.6947126598324165
+          }
+        },
+        "2p6v_A": {
+          "pairs": 619,
+          "metrics": {
+            "residual_sd": 0.37912712436161977,
+            "rmse": 0.3798231008755635,
+            "bias": -0.02298285299995093,
+            "residual_correlation": 0.6490448633761718
+          }
+        },
+        "1m8s_A": {
+          "pairs": 656,
+          "metrics": {
+            "residual_sd": 0.38215606594165963,
+            "rmse": 0.38572642946436475,
+            "bias": 0.05236047795161404,
+            "residual_correlation": 0.5943968818653506
+          }
+        },
+        "5dbl_A": {
+          "pairs": 628,
+          "metrics": {
+            "residual_sd": 0.36762330266852866,
+            "rmse": 0.36777914064007144,
+            "bias": 0.010705308264259653,
+            "residual_correlation": 0.6335345723954369
+          }
+        },
+        "1ifg_A": {
+          "pairs": 671,
+          "metrics": {
+            "residual_sd": 0.38867729170187737,
+            "rmse": 0.38877243628260516,
+            "bias": 0.008600588840655893,
+            "residual_correlation": 0.6630592961007538
+          }
+        }
+      }
+    },
+    "blind-ga351": {
+      "by_distance": {
+        "3.5-4.0": {
+          "pairs": 690,
+          "metrics": {
+            "residual_sd": 0.3147711532174698,
+            "rmse": 0.31479249914873336,
+            "bias": -0.0036658726722894664,
+            "residual_correlation": 0.6742109465170031
+          }
+        },
+        "4.0-4.5": {
+          "pairs": 423,
+          "metrics": {
+            "residual_sd": 0.7005050629671902,
+            "rmse": 0.7012206758235028,
+            "bias": -0.031671642832396964,
+            "residual_correlation": 0.5568035290734801
+          }
+        },
+        "4.5-5.0": {
+          "pairs": 711,
+          "metrics": {
+            "residual_sd": 0.45025222336973403,
+            "rmse": 0.45029367714154056,
+            "bias": -0.006109911968356791,
+            "residual_correlation": 0.6062317795097526
+          }
+        },
+        "5.0-5.5": {
+          "pairs": 973,
+          "metrics": {
+            "residual_sd": 0.5664793339716159,
+            "rmse": 0.5671287695352559,
+            "bias": -0.027133105565855298,
+            "residual_correlation": 0.656234759408757
+          }
+        },
+        "5.5-6.0": {
+          "pairs": 1183,
+          "metrics": {
+            "residual_sd": 0.4712083743252143,
+            "rmse": 0.47230818149689935,
+            "bias": -0.03221313823111221,
+            "residual_correlation": 0.6292531150064663
+          }
+        }
+      },
+      "by_protein": {
+        "5b1n_A": {
+          "pairs": 331,
+          "metrics": {
+            "residual_sd": 0.39868233798868086,
+            "rmse": 0.4029583565253555,
+            "bias": -0.058547676892382064,
+            "residual_correlation": 0.6145727037195682
+          }
+        },
+        "1utg_A": {
+          "pairs": 351,
+          "metrics": {
+            "residual_sd": 0.33849035037619807,
+            "rmse": 0.3388256003297867,
+            "bias": -0.015068846705671528,
+            "residual_correlation": 0.6627809798718305
+          }
+        },
+        "5h1n_B": {
+          "pairs": 344,
+          "metrics": {
+            "residual_sd": 0.5421737763260315,
+            "rmse": 0.5422991350516702,
+            "bias": -0.011659680191149381,
+            "residual_correlation": 0.5578325814096033
+          }
+        },
+        "1uha_A": {
+          "pairs": 460,
+          "metrics": {
+            "residual_sd": 0.3863636705721248,
+            "rmse": 0.3894336298956171,
+            "bias": 0.04880231711416105,
+            "residual_correlation": 0.7361474762319895
+          }
+        },
+        "1wq8_A": {
+          "pairs": 506,
+          "metrics": {
+            "residual_sd": 0.7910302716248988,
+            "rmse": 0.8001769289539484,
+            "bias": -0.12064090103779489,
+            "residual_correlation": 0.6828021810913333
+          }
+        },
+        "4f55_A": {
+          "pairs": 621,
+          "metrics": {
+            "residual_sd": 0.6125606116055982,
+            "rmse": 0.6161787697551855,
+            "bias": -0.06667663313627481,
+            "residual_correlation": 0.6348833707646179
+          }
+        },
+        "5dje_B": {
+          "pairs": 676,
+          "metrics": {
+            "residual_sd": 0.3869743923271197,
+            "rmse": 0.38777730567615115,
+            "bias": 0.024941100226566062,
+            "residual_correlation": 0.6249724690732978
+          }
+        },
+        "1vr8_A": {
+          "pairs": 691,
+          "metrics": {
+            "residual_sd": 0.3203796886146557,
+            "rmse": 0.32054169757673323,
+            "bias": 0.010189946444912345,
+            "residual_correlation": 0.6719036369065514
+          }
+        }
+      }
+    }
+  }
+}
