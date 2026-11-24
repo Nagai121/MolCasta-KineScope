@@ -1,0 +1,79 @@
+train proteins 58 test proteins 30
+train (735, 5) test (360, 5)
+5 ns: static 0.4641 full 0.5780 gain 0.1139 (ref 0.1139)
+  base_hist_D6: auprc 0.5780 gain +0.1139 recovery 1.000 ratio_to_full 0.988
+  drift_only: auprc 0.5526 gain +0.0885 recovery 0.777 ratio_to_full 0.767
+  mean_full: auprc 0.5794 gain +0.1153 recovery 1.012 ratio_to_full 1.000
+  mean_full_plus_drift: auprc 0.5548 gain +0.0907 recovery 0.796 ratio_to_full 0.786
+  mean_first_half: auprc 0.5789 gain +0.1148 recovery 1.008 ratio_to_full 0.996
+  mean_second_half: auprc 0.5574 gain +0.0933 recovery 0.819 ratio_to_full 0.809
+  mean_both: auprc 0.5971 gain +0.1330 recovery 1.168 ratio_to_full 1.154
+  (c) - (b) auprc diff: -0.0246 -> 足しにならない
+  (c) - mean_both auprc diff: -0.0424
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+per-protein: (c)-(b) >= +0.01 in 8/30, (c)-(b) < 0 in 13/30, median +0.0000, range [-0.1738, +0.2500]
+all base checks passed
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-98_salt_dissociation_drift_5ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-98_salt_dissociation_drift_5ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-98_salt_dissociation_drift_5ns/test_predictions.npz
