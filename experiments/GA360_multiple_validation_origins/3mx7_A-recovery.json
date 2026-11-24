@@ -1,0 +1,12 @@
+{
+  "reason": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan",
+  "original_step_fs": 4,
+  "fallback_step_fs": 2,
+  "completed": [
+    "3mx7_A-149.npz",
+    "3mx7_A-49.npz"
+  ],
+  "inherited": [
+    "3mx7_A-49.npz"
+  ]
+}
