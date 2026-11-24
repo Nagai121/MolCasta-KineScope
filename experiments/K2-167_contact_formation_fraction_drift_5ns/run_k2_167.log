@@ -1,0 +1,22 @@
+train (15926, 5) test (7384, 5) test pos 5ns 214
+{'1mix_A': 5012, '2qt4_A': 2372}
+static_only {'n': 7384, 'positives': 214, 'auprc': 0.287, 'auc': 0.891, 'brier': 0.0239, 'logloss': 0.094}
+base_hist_D6 {'n': 7384, 'positives': 214, 'auprc': 0.5192, 'auc': 0.9433, 'brier': 0.0187, 'logloss': 0.0721}
+drift_only {'n': 7384, 'positives': 214, 'auprc': 0.4731, 'auc': 0.908, 'brier': 0.0202, 'logloss': 0.0828}
+frac_full {'n': 7384, 'positives': 214, 'auprc': 0.5008, 'auc': 0.9199, 'brier': 0.0191, 'logloss': 0.0773}
+frac_full_plus_drift {'n': 7384, 'positives': 214, 'auprc': 0.5085, 'auc': 0.92, 'brier': 0.0187, 'logloss': 0.075}
+first_half_frac {'n': 7384, 'positives': 214, 'auprc': 0.5089, 'auc': 0.9167, 'brier': 0.019, 'logloss': 0.0779}
+second_half_frac {'n': 7384, 'positives': 214, 'auprc': 0.4514, 'auc': 0.9086, 'brier': 0.0203, 'logloss': 0.0826}
+both_halves_frac {'n': 7384, 'positives': 214, 'auprc': 0.4945, 'auc': 0.9174, 'brier': 0.0192, 'logloss': 0.0771}
+base gain (should be ~0.2322): 0.2322
+base reproduction OK (static 0.2870 / full6 0.5192 / gain +0.2322 / full frac 0.5008)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-frac 0.0
+base_hist_D6 gain 0.2322 ratio vs full6 1.0 ratio vs full-frac 1.0862
+drift_only gain 0.1861 ratio vs full6 0.8014 ratio vs full-frac 0.8705
+frac_full gain 0.2138 ratio vs full6 0.9206 ratio vs full-frac 1.0
+frac_full_plus_drift gain 0.2215 ratio vs full6 0.954 ratio vs full-frac 1.0363
+first_half_frac gain 0.2219 ratio vs full6 0.9555 ratio vs full-frac 1.0378
+second_half_frac gain 0.1644 ratio vs full6 0.708 ratio vs full-frac 0.769
+both_halves_frac gain 0.2075 ratio vs full6 0.8936 ratio vs full-frac 0.9706
+drift adds on top of full fraction (AUPRC diff): 0.0078 verdict: 漂いは足しにならない diff (c)-(both halves): 0.014
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-167_contact_formation_fraction_drift_5ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-167_contact_formation_fraction_drift_5ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-167_contact_formation_fraction_drift_5ns/test_predictions.npz
