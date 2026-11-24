@@ -1,0 +1,31 @@
+residual,candidate,candidate_label,scope,n,pearson,spearman,abs_ge_0.3
+gbm,crowd_mean,(a) 中点から8A以内の重原子の数の平均,pooled,4972,-0.087,-0.053,False
+gbm,crowd_mean,(a) 中点から8A以内の重原子の数の平均,1mix_A,3101,-0.102,-0.033,False
+gbm,crowd_mean,(a) 中点から8A以内の重原子の数の平均,2qt4_A,1871,-0.033,-0.061,False
+gbm,crowd_std,(b) その数のばらつき,pooled,4972,0.119,0.015,False
+gbm,crowd_std,(b) その数のばらつき,1mix_A,3101,0.136,0.01,False
+gbm,crowd_std,(b) その数のばらつき,2qt4_A,1871,0.016,-0.027,False
+gbm,ca_rmsf,(c) 2残基のCaのゆらぎ (RMSF),pooled,4972,0.129,0.092,False
+gbm,ca_rmsf,(c) 2残基のCaのゆらぎ (RMSF),1mix_A,3101,0.127,0.084,False
+gbm,ca_rmsf,(c) 2残基のCaのゆらぎ (RMSF),2qt4_A,1871,0.049,0.047,False
+gbm,ca_rmsf_centroid,(c参考) Caのゆらぎ (重心を引いた座標),pooled,4972,0.129,0.092,False
+gbm,ca_rmsf_centroid,(c参考) Caのゆらぎ (重心を引いた座標),1mix_A,3101,0.126,0.083,False
+gbm,ca_rmsf_centroid,(c参考) Caのゆらぎ (重心を引いた座標),2qt4_A,1871,0.049,0.047,False
+gbm,contact_mean,(d) 接触する残基の数の平均,pooled,4972,-0.07,-0.071,False
+gbm,contact_mean,(d) 接触する残基の数の平均,1mix_A,3101,-0.069,-0.053,False
+gbm,contact_mean,(d) 接触する残基の数の平均,2qt4_A,1871,-0.059,-0.1,False
+linear,crowd_mean,(a) 中点から8A以内の重原子の数の平均,pooled,4972,-0.074,-0.022,False
+linear,crowd_mean,(a) 中点から8A以内の重原子の数の平均,1mix_A,3101,-0.102,-0.016,False
+linear,crowd_mean,(a) 中点から8A以内の重原子の数の平均,2qt4_A,1871,-0.002,-0.014,False
+linear,crowd_std,(b) その数のばらつき,pooled,4972,0.124,0.006,False
+linear,crowd_std,(b) その数のばらつき,1mix_A,3101,0.145,0.001,False
+linear,crowd_std,(b) その数のばらつき,2qt4_A,1871,0.014,-0.021,False
+linear,ca_rmsf,(c) 2残基のCaのゆらぎ (RMSF),pooled,4972,0.121,0.068,False
+linear,ca_rmsf,(c) 2残基のCaのゆらぎ (RMSF),1mix_A,3101,0.123,0.065,False
+linear,ca_rmsf,(c) 2残基のCaのゆらぎ (RMSF),2qt4_A,1871,0.034,0.026,False
+linear,ca_rmsf_centroid,(c参考) Caのゆらぎ (重心を引いた座標),pooled,4972,0.121,0.068,False
+linear,ca_rmsf_centroid,(c参考) Caのゆらぎ (重心を引いた座標),1mix_A,3101,0.123,0.065,False
+linear,ca_rmsf_centroid,(c参考) Caのゆらぎ (重心を引いた座標),2qt4_A,1871,0.035,0.026,False
+linear,contact_mean,(d) 接触する残基の数の平均,pooled,4972,-0.063,-0.051,False
+linear,contact_mean,(d) 接触する残基の数の平均,1mix_A,3101,-0.065,-0.034,False
+linear,contact_mean,(d) 接触する残基の数の平均,2qt4_A,1871,-0.049,-0.082,False
