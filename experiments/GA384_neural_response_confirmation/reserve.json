@@ -1,0 +1,16 @@
+{
+  "pairs": 4167,
+  "rule": "joint/False/30/0.2/False",
+  "metrics": {
+    "residual_sd": 0.43634584178804164,
+    "rmse": 0.43647413437186494,
+    "bias": 0.010581886880617383,
+    "residual_correlation": 0.6049369506799847
+  },
+  "parent": {
+    "residual_sd": 0.4399878179328085,
+    "rmse": 0.44042750602181746,
+    "bias": 0.01967506369300591,
+    "residual_correlation": 0.5967316227403651
+  }
+}
