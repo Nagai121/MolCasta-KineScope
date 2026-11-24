@@ -1,0 +1,12 @@
+train (6383, 5) test (2915, 5)
+static_only {'n': 2915, 'positives': 246, 'auc': 0.8423, 'auprc': 0.2756, 'brier': 0.0701, 'logloss': 0.2328}
+full_hist6 {'n': 2915, 'positives': 246, 'auc': 0.8939, 'auprc': 0.5124, 'brier': 0.0553, 'logloss': 0.1916}
+drift_only {'n': 2915, 'positives': 246, 'auc': 0.8559, 'auprc': 0.348, 'brier': 0.0653, 'logloss': 0.2213}
+mean_full {'n': 2915, 'positives': 246, 'auc': 0.8809, 'auprc': 0.4714, 'brier': 0.0592, 'logloss': 0.2025}
+mean_full_plus_drift {'n': 2915, 'positives': 246, 'auc': 0.8829, 'auprc': 0.4566, 'brier': 0.0596, 'logloss': 0.2029}
+mean_both_halves {'n': 2915, 'positives': 246, 'auc': 0.887, 'auprc': 0.4786, 'brier': 0.058, 'logloss': 0.1989}
+mean_first_half {'n': 2915, 'positives': 246, 'auc': 0.8855, 'auprc': 0.472, 'brier': 0.059, 'logloss': 0.2009}
+mean_second_half {'n': 2915, 'positives': 246, 'auc': 0.8684, 'auprc': 0.4526, 'brier': 0.0608, 'logloss': 0.2095}
+base reproduction vs K50/K2-23: OK
+gain_full +0.2368 gain_drift +0.0724 (ratio 0.306) gain_mean_full +0.1958 (ratio 0.827) gain_c +0.1810 (ratio 0.764) diff (c)-(b) -0.0148 reading: 漂いは足しにならない diff (c)-(both halves) -0.0220
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-56_contact_dissociation_drift_30ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-56_contact_dissociation_drift_30ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-56_contact_dissociation_drift_30ns/test_predictions.npz
