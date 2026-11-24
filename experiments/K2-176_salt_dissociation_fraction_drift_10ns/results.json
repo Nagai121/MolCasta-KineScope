@@ -245,12 +245,12 @@
       "1uha_A": {
         "n": 1,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -265,12 +265,12 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -375,12 +375,12 @@
       "3bwu_D": {
         "n": 7,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -390,7 +390,7 @@
         "auprc_condition": 0.2,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       }
     },
     "base_hist_D6": {
@@ -547,12 +547,12 @@
       "1uha_A": {
         "n": 1,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -567,12 +567,12 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -677,12 +677,12 @@
       "3bwu_D": {
         "n": 7,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -692,7 +692,7 @@
         "auprc_condition": 0.2,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       }
     },
     "drift_only": {
@@ -849,12 +849,12 @@
       "1uha_A": {
         "n": 1,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -869,12 +869,12 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -979,12 +979,12 @@
       "3bwu_D": {
         "n": 7,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -994,7 +994,7 @@
         "auprc_condition": 0.2,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       }
     },
     "full_frac": {
@@ -1151,12 +1151,12 @@
       "1uha_A": {
         "n": 1,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -1171,12 +1171,12 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -1281,12 +1281,12 @@
       "3bwu_D": {
         "n": 7,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -1296,7 +1296,7 @@
         "auprc_condition": 0.2,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       }
     },
     "full_frac_drift": {
@@ -1453,12 +1453,12 @@
       "1uha_A": {
         "n": 1,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -1473,12 +1473,12 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -1583,12 +1583,12 @@
       "3bwu_D": {
         "n": 7,
         "positives": 0,
-        "auprc_static": NaN,
-        "auprc_full6": NaN,
-        "auprc_condition": NaN,
-        "full6_gain": NaN,
-        "gain": NaN,
-        "ratio_vs_full6_gain": NaN
+        "auprc_static": null,
+        "auprc_full6": null,
+        "auprc_condition": null,
+        "full6_gain": null,
+        "gain": null,
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -1598,7 +1598,7 @@
         "auprc_condition": 0.2,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       }
     }
   },
@@ -1618,9 +1618,9 @@
     "1sei_A": -0.007289465493799829,
     "1t8k_A": 0.011111111111111127,
     "3pkz_A": 0.05555555555555558,
-    "1uha_A": NaN,
+    "1uha_A": null,
     "5yrv_I": -0.012637987012987018,
-    "1pch_A": NaN,
+    "1pch_A": null,
     "4ytw_C": 0.012901912901912893,
     "5ii7_A": -0.24285714285714288,
     "3l9a_X": -0.06666666666666665,
@@ -1631,7 +1631,7 @@
     "1l9l_A": -0.11111111111111116,
     "2i9x_A": 0.05353535353535355,
     "4cv4_A": 0.0,
-    "3bwu_D": NaN,
+    "3bwu_D": null,
     "2hng_A": 0.0
   }
 }
