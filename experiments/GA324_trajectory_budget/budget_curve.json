@@ -1,0 +1,127 @@
+{
+  "10/1": {
+    "amber": 0.5395093874305232,
+    "two_force_fields": 0.6254521604314187,
+    "amber_total_ps": 10
+  },
+  "10/2": {
+    "amber": 0.5765608911553188,
+    "two_force_fields": 0.6368241230216343,
+    "amber_total_ps": 20
+  },
+  "10/4": {
+    "amber": 0.598213518567271,
+    "two_force_fields": 0.6427513118069018,
+    "amber_total_ps": 40
+  },
+  "10/6": {
+    "amber": 0.6059736992880482,
+    "two_force_fields": 0.6447633573410779,
+    "amber_total_ps": 60
+  },
+  "10/8": {
+    "amber": 0.6099632962692063,
+    "two_force_fields": 0.6457762379314068,
+    "amber_total_ps": 80
+  },
+  "25/1": {
+    "amber": 0.5752861907109189,
+    "two_force_fields": 0.6373920561844921,
+    "amber_total_ps": 25
+  },
+  "25/2": {
+    "amber": 0.6071118131224921,
+    "two_force_fields": 0.6471413616928163,
+    "amber_total_ps": 50
+  },
+  "25/4": {
+    "amber": 0.6250410795342901,
+    "two_force_fields": 0.6521819137579075,
+    "amber_total_ps": 100
+  },
+  "25/6": {
+    "amber": 0.631362611541817,
+    "two_force_fields": 0.6538878536515311,
+    "amber_total_ps": 150
+  },
+  "25/8": {
+    "amber": 0.6345927812713092,
+    "two_force_fields": 0.6547457631771684,
+    "amber_total_ps": 200
+  },
+  "50/1": {
+    "amber": 0.5854046335448357,
+    "two_force_fields": 0.6398921282801471,
+    "amber_total_ps": 50
+  },
+  "50/2": {
+    "amber": 0.6147926624949102,
+    "two_force_fields": 0.6491030000114311,
+    "amber_total_ps": 100
+  },
+  "50/4": {
+    "amber": 0.631051007484207,
+    "two_force_fields": 0.6538362465840569,
+    "amber_total_ps": 200
+  },
+  "50/6": {
+    "amber": 0.6367224697489375,
+    "two_force_fields": 0.6554332641763938,
+    "amber_total_ps": 300
+  },
+  "50/8": {
+    "amber": 0.6396071845560802,
+    "two_force_fields": 0.656235415209859,
+    "amber_total_ps": 400
+  },
+  "75/1": {
+    "amber": 0.5859972814241975,
+    "two_force_fields": 0.6391133015952782,
+    "amber_total_ps": 75
+  },
+  "75/2": {
+    "amber": 0.6138605636784191,
+    "two_force_fields": 0.648050442934595,
+    "amber_total_ps": 150
+  },
+  "75/4": {
+    "amber": 0.6291059490626555,
+    "two_force_fields": 0.6526259626526763,
+    "amber_total_ps": 300
+  },
+  "75/6": {
+    "amber": 0.6343908139120467,
+    "two_force_fields": 0.6541668845318273,
+    "amber_total_ps": 450
+  },
+  "75/8": {
+    "amber": 0.6370719433226859,
+    "two_force_fields": 0.6549402907127043,
+    "amber_total_ps": 600
+  },
+  "100/1": {
+    "amber": 0.5879713525890408,
+    "two_force_fields": 0.6396332644190041,
+    "amber_total_ps": 100
+  },
+  "100/2": {
+    "amber": 0.6150188401924827,
+    "two_force_fields": 0.6484552625830032,
+    "amber_total_ps": 200
+  },
+  "100/4": {
+    "amber": 0.6296914554506501,
+    "two_force_fields": 0.6529598081245764,
+    "amber_total_ps": 400
+  },
+  "100/6": {
+    "amber": 0.634753576571247,
+    "two_force_fields": 0.6544748225919194,
+    "amber_total_ps": 600
+  },
+  "100/8": {
+    "amber": 0.637316807706815,
+    "two_force_fields": 0.6552348356730159,
+    "amber_total_ps": 800
+  }
+}

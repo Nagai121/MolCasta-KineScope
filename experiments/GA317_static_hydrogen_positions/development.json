@@ -1,0 +1,38 @@
+{
+  "rebuilt_charmm": {
+    "residual_sd": 0.4273757541081178,
+    "rmse": 0.4275420350805184,
+    "bias": -0.011922942644704384,
+    "residual_correlation": 0.6121035011748686
+  },
+  "observed_static_H_charmm": {
+    "residual_sd": 0.43564846575524074,
+    "rmse": 0.4357364516137521,
+    "bias": -0.008756115008869303,
+    "residual_correlation": 0.5922848246769126
+  },
+  "both_charmm": {
+    "residual_sd": 0.4273040492614123,
+    "rmse": 0.42742912438386726,
+    "bias": -0.010339528826786853,
+    "residual_correlation": 0.6123427182588068
+  },
+  "amber_rebuilt_charmm": {
+    "residual_sd": 0.4147242268636133,
+    "rmse": 0.4147982657034616,
+    "bias": -0.00783689243117049,
+    "residual_correlation": 0.6414154310336397
+  },
+  "amber_static_H_charmm": {
+    "residual_sd": 0.415887882164454,
+    "rmse": 0.4159348945760637,
+    "bias": -0.006253478613252946,
+    "residual_correlation": 0.6388729760353591
+  },
+  "three_sources": {
+    "residual_sd": 0.41626550651331584,
+    "rmse": 0.41634515158336866,
+    "bias": -0.008143299957070093,
+    "residual_correlation": 0.6384478915727022
+  }
+}
