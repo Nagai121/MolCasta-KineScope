@@ -1,0 +1,201 @@
+{
+ "label": "Contact dissociation 5ns: drift of the fraction (first-half fraction minus second-half fraction) on top of the full fraction",
+ "series": "K2 (what the guidance is, not where it is)",
+ "experiment": "K2-168",
+ "horizon_ns": 5,
+ "bound_A": 4.5,
+ "conditions_definition": {
+  "base": "Material D conditions: train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 (100 ps spacing), HistGBM (120 iters, lr 0.075, 31 leaves, min_samples_leaf 15, L2 0.02, seed 42) refit per condition, 5 static features. Contact dissociation, k50_cache (features cast to float64, as in K2-131).",
+  "fraction": "fraction of frames with pair min heavy-atom distance <= 4.5 A (contact threshold; same definition as the 'fraction <= 4.5 A' of the 6 statistics) within the given frame range, divided by the number of frames in that range (first/second half: 5, full: 11)",
+  "drift": "first-half fraction minus second-half fraction; positive = the pair spent more time within 4.5 A in the first half than in the second half",
+  "first_half": {
+   "frames": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "span_ns": "0-0.4 ns"
+  },
+  "second_half": {
+   "frames": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "span_ns": "0.6-1.0 ns"
+  },
+  "full": {
+   "frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "span_ns": "0-1.0 ns"
+  },
+  "note": "Frame 5 (0.5 ns) belongs to neither half by design."
+ },
+ "base_reproduction": {
+  "expected_from_K50_K2_132_5ns": {
+   "static_only_auprc": 0.3022,
+   "base_hist_D6_auprc": 0.5528,
+   "full6_gain": 0.2506,
+   "full_frac_auprc": 0.5217,
+   "test_n": 2915,
+   "test_positives": 211
+  },
+  "observed": {
+   "static_only_auprc": 0.3022152865040793,
+   "base_hist_D6_auprc": 0.5528218101436452,
+   "full6_gain": 0.25060652363956587,
+   "full_frac_auprc": 0.5217311383627864
+  },
+  "match": "all within 5e-4",
+  "n_train": 6383
+ },
+ "metrics_5ns": {
+  "static_only": {
+   "n": 2915,
+   "positives": 211,
+   "auprc": 0.3022152865040793,
+   "auc": 0.8332048010319975,
+   "brier": 0.060007659020343274,
+   "logloss": 0.21050433915662342
+  },
+  "base_hist_D6": {
+   "n": 2915,
+   "positives": 211,
+   "auprc": 0.5528218101436452,
+   "auc": 0.9289011890406349,
+   "brier": 0.043672603448429145,
+   "logloss": 0.15014381229063972
+  },
+  "full_frac": {
+   "n": 2915,
+   "positives": 211,
+   "auprc": 0.5217311383627864,
+   "auc": 0.909419781822261,
+   "brier": 0.04681814238315636,
+   "logloss": 0.1637530667184898
+  },
+  "full_frac_plus_drift": {
+   "n": 2915,
+   "positives": 211,
+   "auprc": 0.5342240592756249,
+   "auc": 0.9064918744216046,
+   "brier": 0.04641306271223196,
+   "logloss": 0.1635531704212293
+  }
+ },
+ "gains": {
+  "static_only": {
+   "gain": 0.0,
+   "ratio_vs_full6_gain": 0.0
+  },
+  "base_hist_D6": {
+   "gain": 0.25060652363956587,
+   "ratio_vs_full6_gain": 1.0
+  },
+  "full_frac": {
+   "gain": 0.2195158518587071,
+   "ratio_vs_full6_gain": 0.8759382982959579
+  },
+  "full_frac_plus_drift": {
+   "gain": 0.23200877277154558,
+   "ratio_vs_full6_gain": 0.9257890393357499
+  }
+ },
+ "drift": {
+  "diff_c_minus_b_auprc": 0.01249292091283849,
+  "reading_rule_fixed_in_advance": "(c) full_frac_plus_drift beats (b) full_frac by AUPRC >= +0.01 -> drift adds; else it does not",
+  "verdict": "漂いが足しになる",
+  "test_drift_stats": {
+   "mean": -0.01790737546980381,
+   "std": 0.12560008466243744,
+   "min": -1.0,
+   "max": 0.6000000238418579
+  }
+ },
+ "per_protein": {
+  "static_only": {
+   "1mix_A": {
+    "n": 2022,
+    "positives": 163,
+    "auprc": 0.29709767606047954
+   },
+   "2qt4_A": {
+    "n": 893,
+    "positives": 48,
+    "auprc": 0.3490868449830811
+   }
+  },
+  "base_hist_D6": {
+   "1mix_A": {
+    "n": 2022,
+    "positives": 163,
+    "auprc": 0.5579863751644413
+   },
+   "2qt4_A": {
+    "n": 893,
+    "positives": 48,
+    "auprc": 0.5370388755082189
+   }
+  },
+  "full_frac": {
+   "1mix_A": {
+    "n": 2022,
+    "positives": 163,
+    "auprc": 0.5257753986485504
+   },
+   "2qt4_A": {
+    "n": 893,
+    "positives": 48,
+    "auprc": 0.5247055653728484
+   }
+  },
+  "full_frac_plus_drift": {
+   "1mix_A": {
+    "n": 2022,
+    "positives": 163,
+    "auprc": 0.5544966322218492
+   },
+   "2qt4_A": {
+    "n": 893,
+    "positives": 48,
+    "auprc": 0.4929851462131069
+   }
+  }
+ },
+ "per_protein_diff_c_minus_b": {
+  "1mix_A": {
+   "n": 2022,
+   "positives": 163,
+   "auprc_full_frac": 0.5257753986485504,
+   "auprc_full_frac_plus_drift": 0.5544966322218492,
+   "diff_c_minus_b": 0.02872123357329881
+  },
+  "2qt4_A": {
+   "n": 893,
+   "positives": 48,
+   "auprc_full_frac": 0.5247055653728484,
+   "auprc_full_frac_plus_drift": 0.4929851462131069,
+   "diff_c_minus_b": -0.0317204191597415
+  }
+ },
+ "reading_rule_fixed_in_advance": {
+  "rule": "(c) full_frac_plus_drift beats (b) full_frac by AUPRC >= +0.01 -> drift adds; else it does not",
+  "diff_c_minus_b_auprc": 0.01249292091283849,
+  "verdict": "漂いが足しになる"
+ }
+}
