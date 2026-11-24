@@ -165,11 +165,12 @@ def feats_for(cname):
 
 
 ytr, yte = Ytr[:, HIDX], Yte[:, HIDX]
-res, per_protein = {}, {}
+res, per_protein, preds = {}, {}, {}
 for cname in CONDS:
     xtr, xte = feats_for(cname)
     p = predict(xtr, ytr, xte)
     res[cname] = metrics(yte, p)
+    preds[cname] = p
     # タンパク質ごとの指標（テストの 2 タンパク質）。
     # テストの並びは 1mix_A の 3 レプリカ、つぎに 2qt4_A の 3 レプリカ
     per_protein[cname] = {}
@@ -247,4 +248,10 @@ with open(OUT / "results.csv", "w", newline="") as f:
                     f"{m['auprc']:.4f}", f"{m['brier']:.4f}",
                     f"{m['logloss']:.4f}", f"{gains[c]:+.4f}",
                     f"{ratios_full[c]:.3f}", f"{ratios_frac[c]:.3f}"])
-print("saved", OUT / "results.json", OUT / "results.csv", flush=True)
+counts = [sum(len(d["y"]) for d in test[i * 3:(i + 1) * 3]) for i in range(2)]
+test_protein = np.concatenate([np.repeat(p, n) for p, n in zip(TEST_P, counts)])
+np.savez(OUT / "test_predictions.npz",
+         **{f"pred_{k}": v for k, v in preds.items()},
+         y_test=yte, test_protein=test_protein)
+print("saved", OUT / "results.json", OUT / "results.csv",
+      OUT / "test_predictions.npz", flush=True)
