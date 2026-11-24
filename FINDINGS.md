@@ -99,6 +99,12 @@ fraction, with no overlap pattern by horizon — at 90 ns it never helps.
 Target: the per-pair window-mean distance over 0–1 ns, specifically its
 static-unpredictable component. Current status: static features leave a
 residual std of ≈0.49 Å; the best direct attempt (G01) reached 0.474 Å.
+A separate line of attempts that predicts the offset with learned models
+(the GA series, run on the Codex side) plateaued at a residual correlation
+of about 0.61–0.62 in validation, and its best model (GA386) scored 0.620
+on a held-out blind panel (3,980 pairs), versus 0.622 for its parent
+baseline — the validation gain did not survive blind scoring, and the 0.700
+line set for that series was not reached (GAm01).
 Success criteria, fixed in advance: residual std ≤ 0.30 Å (the replica-to-
 replica floor is 0.249 Å), and, using the predicted means as predictor
 input, recovery of ≥ 0.5 of the real-history guidance gain on the
