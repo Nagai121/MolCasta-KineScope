@@ -1,0 +1,3 @@
+horizon_ns,base_gain,static_auprc,full_hist6_auprc,first_half_auprc,first_half_gain,first_half_recovery,first_half_ratio_to_full,second_half_auprc,second_half_gain,second_half_recovery,second_half_ratio_to_full,full_mean_auprc,full_mean_gain,full_mean_recovery,verdict
+30,0.0626,0.3639,0.4264,0.439,0.0752,1.201,0.955,0.4,0.0361,0.577,0.459,0.4426,0.0787,1.258,どちらでもない
+90,0.1211,0.3035,0.4246,0.4129,0.1094,0.903,1.17,0.3943,0.0909,0.75,0.972,0.397,0.0935,0.772,どちらでもない
