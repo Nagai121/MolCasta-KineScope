@@ -229,7 +229,7 @@ out = {
     "phenomenon": "salt-bridge formation (K15 conditions, k15_cache)",
     "horizon_ns": 50,
     "bound_A": BOUND,
-    "fraction": "fraction of frames with min heavy-atom distance <= 4.5 A",
+    "fraction": "fraction of frames with min charged heavy-atom distance <= 4.0 A",
     "frames": {"first_half": FRAMES_FIRST, "second_half": FRAMES_SECOND,
                "full": FRAMES_FULL,
                "note": "frame 5 belongs to neither half"},
