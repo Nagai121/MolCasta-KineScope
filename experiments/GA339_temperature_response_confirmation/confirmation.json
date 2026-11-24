@@ -1,0 +1,35 @@
+{
+  "rule": {
+    "key": "low/0.1/-0.1",
+    "proteins": [
+      "2oxl_B",
+      "4h4n_A",
+      "1vbw_A",
+      "1j2l_A",
+      "4ftf_A",
+      "3msw_A",
+      "3wx4_A",
+      "4wlr_B"
+    ],
+    "origins": 1,
+    "temperature_K": [
+      275,
+      330
+    ],
+    "seeds": 4,
+    "ps": 25
+  },
+  "pairs": 3586,
+  "metrics": {
+    "residual_sd": 0.4113977315831332,
+    "rmse": 0.41184643429987405,
+    "bias": -0.019219570592830103,
+    "residual_correlation": 0.6741282259353361
+  },
+  "parent": {
+    "residual_sd": 0.4100337389612221,
+    "rmse": 0.4102122134940128,
+    "bias": -0.012099298043190236,
+    "residual_correlation": 0.6755310421698579
+  }
+}

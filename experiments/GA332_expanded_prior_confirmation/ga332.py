@@ -13,18 +13,24 @@ from .ga_native_offset import HOLD
 from .ga_static_offset import estimates
 
 
-def main():
+def main(reserve=False):
     root=Path("runs")
-    dest=root/"ga332"
+    dest=root/"ga332/reserve" if reserve else root/"ga332"
     dest.mkdir(parents=True,exist_ok=True)
     selected=json.loads((root/"ga330/fusion.json").read_bytes())["selected"]
     name,share,weight=selected.split("/")
     share,weight=float(share),float(weight)
-    rule=dict(recipe=selected,proteins=TEST+HOLD,origins=1)
-    record(dest/"locked.json",rule)
     names=TEST+HOLD
-    a,y,b,p,_,g=load(names,root/"ga312")
-    c,y2,b2,p2,_,g2=load(names,root/"ga321")
+    charmm=root/"ga321"
+    amber=root/"ga312"
+    if reserve:
+        names=tuple(json.loads((charmm/"reserve.json").read_bytes())["proteins"])
+        charmm=charmm/"reserve"
+        amber=charmm/"amber"
+    rule=dict(recipe=selected,proteins=names,origins=1)
+    record(dest/"locked.json",rule)
+    a,y,b,p,_,g=load(names,amber)
+    c,y2,b2,p2,_,g2=load(names,charmm)
     for q,r in ((y,y2),(b,b2),(p,p2),(g,g2)):
         np.testing.assert_array_equal(q,r)
     x=np.concatenate([build((n,1,1))[0] for n in names])
