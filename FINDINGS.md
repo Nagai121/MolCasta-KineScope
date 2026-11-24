@@ -86,9 +86,12 @@ fraction, with no overlap pattern by horizon — at 90 ns it never helps.
   distributed over the six history statistics; no single summary suffices
   (K27, K31).
 - The drift results (finding 5) also split by phenomenon, not by formation
-  vs dissociation: drift adds for hydrogen-bond dissociation and contact
-  formation at several horizons, never for hydrogen-bond formation or
-  salt-bridge dissociation.
+  vs dissociation: drift adds for hydrogen-bond dissociation (1, 10, 30 ns)
+  and contact formation (1, 5, 10, 30, 50 ns), for salt-bridge formation
+  only at 5 and 10 ns (the two largest drift gains in the whole mean-drift
+  map, +0.0437 and +0.0413), and for contact dissociation only at 1 ns; it
+  never adds for hydrogen-bond formation or salt-bridge dissociation, and
+  never at 90 ns for any combination.
 
 ## An open task, with the success line fixed in advance
 
