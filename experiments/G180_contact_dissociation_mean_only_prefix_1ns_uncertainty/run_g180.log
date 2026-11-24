@@ -1,0 +1,12 @@
+train (6383, 5) test (2915, 5) test proteins 2
+prefix mean (frames 0..9) test: mean 3.5951
+{'1mix_A': 2022, '2qt4_A': 893}
+1ns: static 0.3105 full 0.5246 prefix1.0 0.5064 gain 0.2142 recovery 0.915 (record 0.915) CI [0.915, 0.954] contains_0.5=False auprc_diff +0.1960 CI [+0.1960, +0.1997] contains_zero=False
+5ns: static 0.3022 full 0.5528 prefix1.0 0.5138 gain 0.2506 recovery 0.844 (record 0.844) CI [0.523, 0.929] contains_0.5=False auprc_diff +0.2115 CI [+0.0984, +0.2424] contains_zero=False
+10ns: static 0.2772 full 0.4794 prefix1.0 0.4695 gain 0.2022 recovery 0.951 (record 0.951) CI [0.737, 1.030] contains_0.5=False auprc_diff +0.1923 CI [+0.1351, +0.2143] contains_zero=False
+30ns: static 0.2756 full 0.5124 prefix1.0 0.4745 gain 0.2368 recovery 0.840 (record 0.840) CI [0.820, 1.154] contains_0.5=False auprc_diff +0.1989 CI [+0.1553, +0.2077] contains_zero=False
+50ns: static 0.2927 full 0.4533 prefix1.0 0.4455 gain 0.1606 recovery 0.952 (record 0.952) CI [0.919, 0.978] contains_0.5=False auprc_diff +0.1528 CI [+0.1079, +0.1609] contains_zero=False
+90ns: static 0.2886 full 0.4750 prefix1.0 0.4595 gain 0.1864 recovery 0.917 (record 0.917) CI [0.816, 0.961] contains_0.5=False auprc_diff +0.1708 CI [+0.1639, +0.1710] contains_zero=False
+recovery CIs contain 0.5: {'1ns': False, '5ns': False, '10ns': False, '30ns': False, '50ns': False, '90ns': False}
+auprc-diff CIs contain zero: {'1ns': False, '5ns': False, '10ns': False, '30ns': False, '50ns': False, '90ns': False}
+saved /home/hatch/workspace/kinescope/repo/experiments/G180_contact_dissociation_mean_only_prefix_1ns_uncertainty/results.json /home/hatch/workspace/kinescope/repo/experiments/G180_contact_dissociation_mean_only_prefix_1ns_uncertainty/results.csv /home/hatch/workspace/kinescope/repo/experiments/G180_contact_dissociation_mean_only_prefix_1ns_uncertainty/test_predictions.npz
