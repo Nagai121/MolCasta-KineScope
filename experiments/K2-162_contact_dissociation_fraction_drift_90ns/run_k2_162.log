@@ -1,0 +1,18 @@
+train (6383, 5) test (2915, 5) test pos 90ns 294
+{'1mix_A': 2022, '2qt4_A': 893}
+static_only {'n': 2915, 'positives': 294, 'auprc': 0.2886, 'auc': 0.8053, 'brier': 0.0812, 'logloss': 0.2744}
+base_hist_D6 {'n': 2915, 'positives': 294, 'auprc': 0.475, 'auc': 0.8514, 'brier': 0.0696, 'logloss': 0.2441}
+drift_frac_only {'n': 2915, 'positives': 294, 'auprc': 0.4031, 'auc': 0.8398, 'brier': 0.0737, 'logloss': 0.252}
+full_frac {'n': 2915, 'positives': 294, 'auprc': 0.44, 'auc': 0.8462, 'brier': 0.071, 'logloss': 0.246}
+full_frac_drift {'n': 2915, 'positives': 294, 'auprc': 0.4452, 'auc': 0.8485, 'brier': 0.0705, 'logloss': 0.2443}
+both_halves_frac {'n': 2915, 'positives': 294, 'auprc': 0.4372, 'auc': 0.8484, 'brier': 0.0712, 'logloss': 0.2451}
+base gain (should be ~0.1864): 0.1864
+base reproduction OK (static 0.2886 / full6 0.4750 / gain +0.1864 / full_frac 0.4400 / both_halves_frac 0.4372)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-frac 0.0
+base_hist_D6 gain 0.1864 ratio vs full6 1.0 ratio vs full-frac 1.2312
+drift_frac_only gain 0.1145 ratio vs full6 0.6142 ratio vs full-frac 0.7561
+full_frac gain 0.1514 ratio vs full6 0.8122 ratio vs full-frac 1.0
+full_frac_drift gain 0.1566 ratio vs full6 0.84 ratio vs full-frac 1.0342
+both_halves_frac gain 0.1485 ratio vs full6 0.7968 ratio vs full-frac 0.9811
+(c) - (b) = 0.0052 verdict: 漂いは足しにならない
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-162_contact_dissociation_fraction_drift_90ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-162_contact_dissociation_fraction_drift_90ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-162_contact_dissociation_fraction_drift_90ns/test_predictions.npz
