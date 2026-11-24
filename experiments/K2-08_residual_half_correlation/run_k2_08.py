@@ -1,0 +1,177 @@
+"""K2-08: 残りの平均は履歴の前半と後半でどれだけ続くか。
+
+K2-02 で距離そのものは 100 ps 以内に忘れられることが分かった。
+でも、平均のうち静的に予測できない部分（K2-03 の「残りの平均」）
+は、前半と後半で同じペアの値が続くのか。続くなら、指導力の担い手は
+ペアごとの「ずれ」そのものである。
+
+残りの平均の作り方（K2-03 と同じ形）:
+- 資料Dの条件。水素結合の形成の候補ペア。学習は 4 タンパク質
+  （1bgf_A・1ifg_A・1j8r_A・2b0a_A、9,610件）、テストは 1mix_A と
+  2qt4_A（4,972件）。
+- 前半の平均 = 履歴フレーム [0..4] のドナー・アクセプター間距離の
+  平均、後半の平均 = フレーム [6..10] の平均（フレーム 5 は除く。
+  K2-01・K2-04 と同じ分け方）。
+- 静的な予測は、資料Dの静的な特徴量（X の 7 列）から各半分の平均を
+  予測したもの。線形回帰と HistGradientBoosting 回帰（K39 と同じ
+  設定: 160回、学習率 0.065、葉 15、葉あたり最少 20、L2 0.15、
+  seed 20261121）の 2 通りで、どちらも学習側の候補だけで当てはめ、
+  テスト側の統計は使わない。残りの平均 = 半分の平均 − 静的な予測。
+- 予測は半分ごとに当てはめ直す。形成の候補は原点に向けて距離が
+  縮む向きに動くため、前半と後半では平均の水準が系統的に違う。
+  全部の平均に対する予測をそのまま当てはめると、その水準の違いが
+  残りに混ざるためである。
+- K2-03 のスクリプトと同じ形で、X は保存されたままの型で
+  sklearn に渡す。sklearn の学習はスレッド数を 1 に絞る。
+
+測るもの（先に固定）:
+- 前半の残りと後半の残りの相関（ピアソンとスピアマン、合算と
+  テスト 2 タンパク質ごと）。比較のため、生の平均の前半・後半の
+  相関も同じ形で記録する。
+- 参考として、K2-03 の全部の平均の残り（GBM）と、各半分の残り
+  （GBM）との相関も記録する。
+
+読み方（先に固定）:
+- 残りの平均の前半・後半の相関の絶対値が 0.5 以上なら「担い手は
+  前半と後半で続いている」、0.3 未満なら「続いていない」と記録する。
+  0.3 以上 0.5 未満の場合は、そのどちらでもない（中間）と記録する。
+"""
+import csv
+import json
+from pathlib import Path
+
+import numpy as np
+from scipy.stats import pearsonr, spearmanr
+from sklearn.ensemble import HistGradientBoostingRegressor
+from sklearn.linear_model import LinearRegression
+
+CACHE = Path("/home/hatch/workspace/kinescope/work/data_cache")
+K2_03 = Path("/home/hatch/workspace/kinescope/repo/experiments/K2-03_residual_mean_companions")
+OUT = Path(__file__).resolve().parent
+TRAIN_PROTEINS = ["1bgf_A", "1ifg_A", "1j8r_A", "2b0a_A"]
+TEST_PROTEINS = ["1mix_A", "2qt4_A"]
+LINE_HIGH = 0.5
+LINE_LOW = 0.3
+
+
+def load_cache(proteins):
+    Xs, hs = [], []
+    for p in proteins:
+        for r in (1, 2, 3):
+            z = np.load(CACHE / f"{p}_R{r}.npz")
+            Xs.append(z["X"])
+            hs.append(z["hist"])
+    return np.concatenate(Xs), np.concatenate(hs, axis=1)
+
+
+def corr_pair(a, b):
+    return dict(pearson=float(pearsonr(a, b)[0]),
+                spearman=float(spearmanr(a, b)[0]))
+
+
+def main():
+    Xtr, htr = load_cache(TRAIN_PROTEINS)
+    Xte, hte = load_cache(TEST_PROTEINS)
+    half1_tr = htr[0:5].mean(axis=0)
+    half2_tr = htr[6:11].mean(axis=0)
+    half1_te = hte[0:5].mean(axis=0)
+    half2_te = hte[6:11].mean(axis=0)
+    full_te = hte.mean(axis=0)
+    prot_of = np.array(["1mix_A"] * 3101 + ["2qt4_A"] * 1871)
+    assert len(half1_te) == 4972 == len(prot_of), (len(half1_te), len(prot_of))
+    print(f"train {len(half1_tr)} test {len(half1_te)}", flush=True)
+    print(f"half means (test): half1 {half1_te.mean():.3f} half2 {half2_te.mean():.3f} "
+          f"full {full_te.mean():.3f}", flush=True)
+
+    models = {
+        "linear": LinearRegression(),
+        "gbm": HistGradientBoostingRegressor(
+            max_iter=160, learning_rate=.065, max_leaf_nodes=15,
+            min_samples_leaf=20, l2_regularization=.15, random_state=20261121),
+    }
+    resid = {}
+    fit_info = {}
+    for half, (ytr, yte) in {"half1": (half1_tr, half1_te),
+                             "half2": (half2_tr, half2_te)}.items():
+        for name, model in models.items():
+            model.fit(Xtr, ytr)
+            pred_tr = model.predict(Xtr)
+            pred_te = model.predict(Xte)
+            resid[(half, name)] = yte - pred_te
+            fit_info[f"{half}_{name}"] = dict(
+                r2_train=float(1 - ((ytr - pred_tr) ** 2).sum() / ((ytr - ytr.mean()) ** 2).sum()),
+                r2_test=float(1 - ((yte - pred_te) ** 2).sum() / ((yte - yte.mean()) ** 2).sum()),
+                resid_std_test=float(resid[(half, name)].std()),
+                resid_std_train=float((ytr - pred_tr).std()))
+            print(f"{half} {name}: R2 train {fit_info[f'{half}_{name}']['r2_train']:.3f} "
+                  f"test {fit_info[f'{half}_{name}']['r2_test']:.3f} "
+                  f"resid std test {fit_info[f'{half}_{name}']['resid_std_test']:.3f} A", flush=True)
+
+    scopes = (("pooled", np.ones(len(half1_te), bool)),
+              ("1mix_A", prot_of == "1mix_A"),
+              ("2qt4_A", prot_of == "2qt4_A"))
+    rows = []
+    corr = {}
+    for name in ("gbm", "linear"):
+        corr[name] = {}
+        for label, a, b in (("residual", resid[("half1", name)], resid[("half2", name)]),
+                            ("raw_mean", half1_te, half2_te)):
+            entry = {}
+            for scope, mask in scopes:
+                c = corr_pair(a[mask], b[mask])
+                entry[scope] = dict(c, n=int(mask.sum()))
+                rows.append([name, label, scope, int(mask.sum()),
+                             round(c["pearson"], 3), round(c["spearman"], 3)])
+            corr[name][label] = entry
+            e = entry["pooled"]
+            print(f"{name} {label}: pooled pearson {e['pearson']:+.3f} "
+                  f"spearman {e['spearman']:+.3f} | "
+                  f"1mix {entry['1mix_A']['pearson']:+.3f}/{entry['1mix_A']['spearman']:+.3f} | "
+                  f"2qt4 {entry['2qt4_A']['pearson']:+.3f}/{entry['2qt4_A']['spearman']:+.3f}",
+                  flush=True)
+
+    # 参考: K2-03 の全部の平均の残り（GBM）との相関
+    ref = {}
+    k2_03_npz = K2_03 / "candidates.npz"
+    if k2_03_npz.exists():
+        z = np.load(k2_03_npz)
+        full_resid_gbm = z["resid_gbm"]
+        assert len(full_resid_gbm) == len(half1_te)
+        for half in ("half1", "half2"):
+            entry = {}
+            for scope, mask in scopes:
+                c = corr_pair(resid[(half, "gbm")][mask], full_resid_gbm[mask])
+                entry[scope] = dict(c, n=int(mask.sum()))
+            ref[half] = entry
+            print(f"gbm {half} vs K2-03 full residual: pooled "
+                  f"pearson {entry['pooled']['pearson']:+.3f} "
+                  f"spearman {entry['pooled']['spearman']:+.3f}", flush=True)
+
+    np.savez(OUT / "halves.npz",
+             resid_half1_gbm=resid[("half1", "gbm")],
+             resid_half2_gbm=resid[("half2", "gbm")],
+             resid_half1_linear=resid[("half1", "linear")],
+             resid_half2_linear=resid[("half2", "linear")],
+             half1_mean=half1_te, half2_mean=half2_te, full_mean=full_te,
+             protein=prot_of)
+
+    out = {
+        "residual_fit": fit_info,
+        "n_train": int(len(half1_tr)), "n_test": int(len(half1_te)),
+        "half_mean_test": dict(half1=float(half1_te.mean()),
+                               half2=float(half2_te.mean()),
+                               full=float(full_te.mean())),
+        "lines": {"high": LINE_HIGH, "low": LINE_LOW},
+        "correlations": corr,
+        "vs_k2_03_full_residual": ref,
+    }
+    (OUT / "results.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
+    with open(OUT / "results.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["residual", "quantity", "scope", "n", "pearson", "spearman"])
+        w.writerows(rows)
+    print("saved", OUT / "results.json", OUT / "results.csv", OUT / "halves.npz")
+
+
+if __name__ == "__main__":
+    main()
