@@ -1,0 +1,19 @@
+train (4051, 7) test (2080, 7) test pos 10ns 368
+{'1mix_A': 1415, '2qt4_A': 665}
+static_only {'n': 2080, 'positives': 368, 'auprc': 0.4496, 'auc': 0.855, 'brier': 0.1154, 'logloss': 0.3371}
+base_hist_D6 {'n': 2080, 'positives': 368, 'auprc': 0.5974, 'auc': 0.8905, 'brier': 0.1017, 'logloss': 0.3049}
+first_half_frac {'n': 2080, 'positives': 368, 'auprc': 0.554, 'auc': 0.8903, 'brier': 0.102, 'logloss': 0.306}
+second_half_frac {'n': 2080, 'positives': 368, 'auprc': 0.5553, 'auc': 0.884, 'brier': 0.1033, 'logloss': 0.3071}
+both_halves_frac {'n': 2080, 'positives': 368, 'auprc': 0.5898, 'auc': 0.8936, 'brier': 0.0996, 'logloss': 0.2992}
+full_frac {'n': 2080, 'positives': 368, 'auprc': 0.5983, 'auc': 0.8955, 'brier': 0.0991, 'logloss': 0.297}
+base gain (should be ~0.1478): 0.1478
+base reproduction OK (static 0.4496 / full6 0.5974 / gain +0.1478)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-frac 0.0
+base_hist_D6 gain 0.1478 ratio vs full6 1.0 ratio vs full-frac 0.9939
+first_half_frac gain 0.1044 ratio vs full6 0.7065 ratio vs full-frac 0.7022
+second_half_frac gain 0.1057 ratio vs full6 0.7153 ratio vs full-frac 0.7109
+both_halves_frac gain 0.1403 ratio vs full6 0.9488 ratio vs full-frac 0.943
+full_frac gain 0.1487 ratio vs full6 1.0062 ratio vs full-frac 1.0
+verdict: どちらでもない（数値をそのまま記録）
+verdict vs full-frac: どちらでもない（数値をそのまま記録）
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-108_hb_dissociation_half_fraction_10ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-108_hb_dissociation_half_fraction_10ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-108_hb_dissociation_half_fraction_10ns/test_predictions.npz
