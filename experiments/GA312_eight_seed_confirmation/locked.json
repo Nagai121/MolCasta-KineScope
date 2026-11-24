@@ -1,0 +1,19 @@
+{
+  "proteins": [
+    "2oxl_B",
+    "4h4n_A",
+    "1vbw_A",
+    "1j2l_A",
+    "4ftf_A",
+    "3msw_A",
+    "3wx4_A",
+    "4wlr_B"
+  ],
+  "origins": 1,
+  "seeds": 8,
+  "time_ps": 100,
+  "terms": {
+    "projected_mean": 0.4,
+    "static_force": 0.525
+  }
+}
