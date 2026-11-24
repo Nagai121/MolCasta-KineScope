@@ -39,6 +39,9 @@ G67 と同じやり方）。テストは 100 タンパク質なので、2 タン
   出します。タンパク質ごとの AUPRC が定義できないタンパク質
   （陽性が 0件か全件）は、その抽出の分母から除きます（G141 と同じ
   扱い）。
+- ブートストラップの途中結果はバッチ（100抽出）ごとに
+  `bootstrap_checkpoint.npz` に保存します。仮想マシンの再起動で
+  止まっても、済んだバッチはやり直さずに続けられます。
 
 段取り:
 - G141 と同じ段取りでモデルを学習し直す（同じ種・同じ条件で決定的な
@@ -366,10 +369,25 @@ def main():
             assert abs(ref_ap - fast) < 1e-9, (di, hkey, cname, ref_ap, fast)
     print("fast AP check: matches sklearn to 1e-9 on 3 draws x 2 conditions", flush=True)
 
-    # 抽出ごとの回復率をためる（合算とタンパク質ごとの平均）
+    # 抽出ごとの回復率をためる（合算とタンパク質ごとの平均）。
+    # バッチごとに bootstrap_checkpoint.npz に保存する。仮想マシンの
+    # 再起動で止まっても、済んだバッチはやり直さずに続けられる。
     boot = {str(h): {c: {"pooled": [], "macro": []} for c in CONDS if c != "static_only"}
             for h in HORIZONS}
-    for b0 in range(0, N_BOOT, BATCH):
+    boot_ckpt_path = OUT / "bootstrap_checkpoint.npz"
+    start_b0 = 0
+    if boot_ckpt_path.exists():
+        z = np.load(boot_ckpt_path)
+        start_b0 = int(z["n_draws_done"])
+        for h in HORIZONS:
+            hkey = str(h)
+            for cname in boot[hkey]:
+                for kind in ("pooled", "macro"):
+                    arr = z[f"{hkey}_{cname}_{kind}"]
+                    if len(arr) > 0:
+                        boot[hkey][cname][kind] = [arr]
+        print(f"resuming bootstrap from checkpoint: {start_b0}/{N_BOOT} draws", flush=True)
+    for b0 in range(start_b0, N_BOOT, BATCH):
         Wb = W[b0:b0 + BATCH]
         for hi, h in enumerate(HORIZONS):
             hkey = str(h)
@@ -405,6 +423,12 @@ def main():
                         (ap_macro[cname] - ap_macro["static_only"]) / gm)
         if (b0 // BATCH + 1) % 20 == 0:
             print(f"  bootstrap {b0 + BATCH}/{N_BOOT} draws", flush=True)
+        # バッチごとに途中結果を保存する（再起動で止まっても続けられる）
+        np.savez(
+            boot_ckpt_path,
+            n_draws_done=np.array(b0 + BATCH),
+            **{f"{hkey}_{cname}_{kind}": np.concatenate(boot[hkey][cname][kind])
+               for hkey in boot for cname in boot[hkey] for kind in ("pooled", "macro")})
 
     boot_ci = {}
     for h in HORIZONS:
