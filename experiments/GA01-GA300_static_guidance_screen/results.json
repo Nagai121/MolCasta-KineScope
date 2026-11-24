@@ -1,0 +1,5766 @@
+{
+  "generator": [
+    "2vm5_A",
+    "1i4m_A",
+    "2oxo_A",
+    "5pal_A",
+    "4obi_A",
+    "1m9z_A",
+    "3po8_A",
+    "3cw3_A",
+    "7fd1_A",
+    "1o4k_A",
+    "2fhz_A",
+    "3cyi_A"
+  ],
+  "readout": [
+    "3fp5_A",
+    "3fyb_A",
+    "2qsa_A",
+    "1uz3_A",
+    "5hqh_A",
+    "3fpu_A",
+    "1tov_A",
+    "1njh_A",
+    "1j0p_A",
+    "2nml_A",
+    "2pu9_A",
+    "3ueb_E"
+  ],
+  "validation": [
+    "1yu5_X",
+    "3mx7_A",
+    "4ftf_A",
+    "1knt_A",
+    "3txs_C",
+    "3t92_A",
+    "3msw_A",
+    "3wx4_A",
+    "2cyj_A",
+    "4wrp_A"
+  ],
+  "source_sha256": "17c138f395b2956575bf3d3d4392df0a7cc4dd38a7a12e495b2cb9ecdc923db7",
+  "generator_rows": 65536,
+  "readout_rows": 65536,
+  "cuda": "NVIDIA GeForce RTX 4060 Ti",
+  "baseline": {
+    "auc": 0.9328549588628006,
+    "auprc": 0.500030011055471,
+    "brier": 0.043722951812874396,
+    "logloss": 0.14424523090708555,
+    "rows": 153212,
+    "positives": 10314,
+    "r80": 24114
+  },
+  "observed": {
+    "auc": 0.9375220892564496,
+    "auprc": 0.5196799230286563,
+    "brier": 0.04270988702774048,
+    "logloss": 0.14035260677337646,
+    "rows": 153212,
+    "positives": 10314,
+    "r80": 22906
+  },
+  "trials": {
+    "GA01": {
+      "view": "distance",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328456417679398,
+        "auprc": 0.5000098087772678,
+        "brier": 0.043706685304641724,
+        "logloss": 0.14418534934520721,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24105
+      },
+      "fit_seconds": 0.17967380001209676,
+      "cpu_seconds": 0.10717740003019571,
+      "gpu_peak": 27841536,
+      "checkpoint": "GA01.pt",
+      "sha256": "e57e91cd6e03361b57dd02758e887582391c841a6dd45a2f7696ad369689e6ef"
+    },
+    "GA02": {
+      "view": "distance",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328433640598528,
+        "auprc": 0.4998903101322462,
+        "brier": 0.04373349994421005,
+        "logloss": 0.14420846104621887,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24123
+      },
+      "fit_seconds": 0.19617810007184744,
+      "cpu_seconds": 0.10603289993014187,
+      "gpu_peak": 27841536,
+      "checkpoint": "GA02.pt",
+      "sha256": "afa827897cce239f751a39ed2df7ba9481f7a66ad820ad257445999542d3034b"
+    },
+    "GA03": {
+      "view": "distance",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328532602502908,
+        "auprc": 0.5000252643088223,
+        "brier": 0.04370686784386635,
+        "logloss": 0.14418832957744598,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24123
+      },
+      "fit_seconds": 0.17370260006282479,
+      "cpu_seconds": 0.11654959991574287,
+      "gpu_peak": 28272128,
+      "checkpoint": "GA03.pt",
+      "sha256": "cf627aa152cdb860f0fb8673d4bd21addb34ac1c3bb9104729dd1e042dc321d1"
+    },
+    "GA04": {
+      "view": "distance",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.932855836835474,
+        "auprc": 0.5000326375293818,
+        "brier": 0.04371066763997078,
+        "logloss": 0.14419510960578918,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24092
+      },
+      "fit_seconds": 0.19828380004037172,
+      "cpu_seconds": 0.11846339993644506,
+      "gpu_peak": 27842560,
+      "checkpoint": "GA04.pt",
+      "sha256": "f3cf3e05eeeb96a7d59bdcdcae448f971bd63d5c8125c380bd6b1fa2491ad4a1"
+    },
+    "GA05": {
+      "view": "distance",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328393487257872,
+        "auprc": 0.4999304916007233,
+        "brier": 0.043752700090408325,
+        "logloss": 0.1442236304283142,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24123
+      },
+      "fit_seconds": 0.14672339998651296,
+      "cpu_seconds": 0.1067326000193134,
+      "gpu_peak": 27841536,
+      "checkpoint": "GA05.pt",
+      "sha256": "d6c102acea35970a30f1ea8020003e5684be5c7ff12b1c5f4347e558058a1166"
+    },
+    "GA06": {
+      "view": "distance",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.932850524897252,
+        "auprc": 0.5000071880945249,
+        "brier": 0.043716881424188614,
+        "logloss": 0.14421337842941284,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24115
+      },
+      "fit_seconds": 0.2648964000400156,
+      "cpu_seconds": 0.1013958000112325,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA06.pt",
+      "sha256": "13a311e1bd0e859f26068cc5d753de26d1274df785ada856f6b12ff69335690f"
+    },
+    "GA07": {
+      "view": "distance",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9327485928805241,
+        "auprc": 0.4997582149978042,
+        "brier": 0.04376602545380592,
+        "logloss": 0.14430798590183258,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23933
+      },
+      "fit_seconds": 0.22682429989799857,
+      "cpu_seconds": 0.1065025000134483,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA07.pt",
+      "sha256": "ed0e99907b157134820f76a07d3fc09a7c7a8bbc4445dd492d80c8047beb8522"
+    },
+    "GA08": {
+      "view": "distance",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328480083588861,
+        "auprc": 0.5000160566470809,
+        "brier": 0.04371645301580429,
+        "logloss": 0.14423756301403046,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24100
+      },
+      "fit_seconds": 0.20750139991287142,
+      "cpu_seconds": 0.1135403000516817,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA08.pt",
+      "sha256": "49dbc15e68b2ac1aa88eaa9b5a7a02af1afaafebb0f97d6a8a8cb66894d6945f"
+    },
+    "GA09": {
+      "view": "distance",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9326093999477988,
+        "auprc": 0.499235532491116,
+        "brier": 0.04381248727440834,
+        "logloss": 0.1444815844297409,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23925
+      },
+      "fit_seconds": 0.21004829998128116,
+      "cpu_seconds": 0.12508770008571446,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA09.pt",
+      "sha256": "0d9a47ecbfba7d2b7fefdb1a18100b4a3bbe87274785d7ef510017d474e4599c"
+    },
+    "GA10": {
+      "view": "distance",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328085762585338,
+        "auprc": 0.4999415688740139,
+        "brier": 0.04374687746167183,
+        "logloss": 0.14428262412548065,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24016
+      },
+      "fit_seconds": 0.21075530000962317,
+      "cpu_seconds": 0.11243249999824911,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA10.pt",
+      "sha256": "054a8a8a1cc1f2e5500f2fdeeb932b1026a61404eb4f586a0f71e2ea1eb12204"
+    },
+    "GA11": {
+      "view": "distance",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328531608507573,
+        "auprc": 0.5000308608674043,
+        "brier": 0.04370803385972977,
+        "logloss": 0.144203320145607,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24109
+      },
+      "fit_seconds": 0.18488570000045002,
+      "cpu_seconds": 0.10805750009603798,
+      "gpu_peak": 28103680,
+      "checkpoint": "GA11.pt",
+      "sha256": "8cdeacbab8378c6c482f42b6f96c5f1a7ce9d8caf3ca7a25c8f1503acd339955"
+    },
+    "GA12": {
+      "view": "distance",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328386743016474,
+        "auprc": 0.4999173355573284,
+        "brier": 0.04375297203660011,
+        "logloss": 0.14424115419387817,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24118
+      },
+      "fit_seconds": 0.17961460002698004,
+      "cpu_seconds": 0.1204256999772042,
+      "gpu_peak": 28103680,
+      "checkpoint": "GA12.pt",
+      "sha256": "521ff293073e821b000b814f4aa3b0ef9dbfaf7490df84265beae959c3674b05"
+    },
+    "GA13": {
+      "view": "distance",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328336134066162,
+        "auprc": 0.4999012057957236,
+        "brier": 0.043784864246845245,
+        "logloss": 0.14430496096611023,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24128
+      },
+      "fit_seconds": 0.17476169997826219,
+      "cpu_seconds": 0.1148049000184983,
+      "gpu_peak": 28288512,
+      "checkpoint": "GA13.pt",
+      "sha256": "e5c9e5bbbcce777ae614d486f4990206bde9c68c6308785187ae9a8d91a1e5ff"
+    },
+    "GA14": {
+      "view": "distance",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328461631914324,
+        "auprc": 0.4999922188008567,
+        "brier": 0.04372319206595421,
+        "logloss": 0.14420393109321594,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24129
+      },
+      "fit_seconds": 0.1868188000516966,
+      "cpu_seconds": 0.11751689994707704,
+      "gpu_peak": 28103680,
+      "checkpoint": "GA14.pt",
+      "sha256": "0bfdd82d501c6624675ef58c3fc04aaff4fe98e00b3a8666450cba57ad2a7d96"
+    },
+    "GA15": {
+      "view": "distance",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328199281602321,
+        "auprc": 0.4998325900068267,
+        "brier": 0.04375661537051201,
+        "logloss": 0.14425526559352875,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24110
+      },
+      "fit_seconds": 0.185831299982965,
+      "cpu_seconds": 0.10703910002484918,
+      "gpu_peak": 28103680,
+      "checkpoint": "GA15.pt",
+      "sha256": "cc8c512952231f5c3e6257effed4a797cf9e67015217a492a6129f8c85f78b44"
+    },
+    "GA16": {
+      "view": "distance",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328116308435227,
+        "auprc": 0.49989683927412215,
+        "brier": 0.043731994926929474,
+        "logloss": 0.144222691655159,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24054
+      },
+      "fit_seconds": 0.17397030000574887,
+      "cpu_seconds": 0.11503260000608861,
+      "gpu_peak": 30173696,
+      "checkpoint": "GA16.pt",
+      "sha256": "e128bd63c096c68f89c82992b95f6965dec399cf17bd08aab78c75960916a842"
+    },
+    "GA17": {
+      "view": "distance",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9327940333943296,
+        "auprc": 0.49983264131714183,
+        "brier": 0.043715327978134155,
+        "logloss": 0.14419718086719513,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24084
+      },
+      "fit_seconds": 0.17385560006368905,
+      "cpu_seconds": 0.12138589995447546,
+      "gpu_peak": 30173696,
+      "checkpoint": "GA17.pt",
+      "sha256": "d1192bd8d0f038dda879c26a778b261bc2b85fbaf2dc00a5677bd99fe259f743"
+    },
+    "GA18": {
+      "view": "distance",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328311179015988,
+        "auprc": 0.5000147428003255,
+        "brier": 0.04372793436050415,
+        "logloss": 0.1442321091890335,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24118
+      },
+      "fit_seconds": 0.1777769000036642,
+      "cpu_seconds": 0.13015260000247508,
+      "gpu_peak": 30173696,
+      "checkpoint": "GA18.pt",
+      "sha256": "40db07ed5ce3b3fe3b007328ad6e523dd8f078aac349fab2633d556632b9ca04"
+    },
+    "GA19": {
+      "view": "distance",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328433562571591,
+        "auprc": 0.5000018106889232,
+        "brier": 0.04371451586484909,
+        "logloss": 0.14418989419937134,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24063
+      },
+      "fit_seconds": 0.17247480002697557,
+      "cpu_seconds": 0.13400099996943027,
+      "gpu_peak": 30173696,
+      "checkpoint": "GA19.pt",
+      "sha256": "5f44d3af65c4603b69ef62af00fb2f8e90510449253ba738d2d0a49cdb412b38"
+    },
+    "GA20": {
+      "view": "distance",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328170292898714,
+        "auprc": 0.49990920134259687,
+        "brier": 0.04375360906124115,
+        "logloss": 0.14426158368587494,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24033
+      },
+      "fit_seconds": 0.17293510003946722,
+      "cpu_seconds": 0.12057149992324412,
+      "gpu_peak": 30173696,
+      "checkpoint": "GA20.pt",
+      "sha256": "deb7f60ca3543f7c379b34b4f3399f9a3571e873dd3edac65d1bdeb508be77d1"
+    },
+    "GA21": {
+      "view": "distance",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328003288112148,
+        "auprc": 0.49990641644799944,
+        "brier": 0.0437142439186573,
+        "logloss": 0.1441984474658966,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24047
+      },
+      "fit_seconds": 0.21247340005356818,
+      "cpu_seconds": 0.12377840001136065,
+      "gpu_peak": 31777792,
+      "checkpoint": "GA21.pt",
+      "sha256": "8ca6a5730e973b0ea7321306cfc2a2a9bbfe36a212b3284ff0a0fd16980c6acd"
+    },
+    "GA22": {
+      "view": "distance",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9327301554543844,
+        "auprc": 0.49982055271909787,
+        "brier": 0.04376905411481857,
+        "logloss": 0.1443428099155426,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24026
+      },
+      "fit_seconds": 0.22955609997734427,
+      "cpu_seconds": 0.12579920003190637,
+      "gpu_peak": 31777792,
+      "checkpoint": "GA22.pt",
+      "sha256": "d6af5d9dc4bfc70ed2fa7b2dece3c0ac64e06d5f6341fa992331ce738a881d71"
+    },
+    "GA23": {
+      "view": "distance",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9327892656091864,
+        "auprc": 0.4997442959307889,
+        "brier": 0.04372650012373924,
+        "logloss": 0.1442192792892456,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24089
+      },
+      "fit_seconds": 0.24864480004180223,
+      "cpu_seconds": 0.12442669994197786,
+      "gpu_peak": 31777792,
+      "checkpoint": "GA23.pt",
+      "sha256": "a125468f4354908b00677d4c1dc0ebee3400f7ef5947cf1490ebe2d27d8ca676"
+    },
+    "GA24": {
+      "view": "distance",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9327606948585674,
+        "auprc": 0.49987366309477693,
+        "brier": 0.043741535395383835,
+        "logloss": 0.14425870776176453,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24032
+      },
+      "fit_seconds": 0.266947100055404,
+      "cpu_seconds": 0.14037829998414963,
+      "gpu_peak": 31777792,
+      "checkpoint": "GA24.pt",
+      "sha256": "7aca9ca5b2d2388368a79459dc839ccdb163cff7cb327ed43ce79adf28ecc32f"
+    },
+    "GA25": {
+      "view": "distance",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9327777875073976,
+        "auprc": 0.49993542700951554,
+        "brier": 0.043726846575737,
+        "logloss": 0.14424452185630798,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23972
+      },
+      "fit_seconds": 0.24498959991615266,
+      "cpu_seconds": 0.13371840002946556,
+      "gpu_peak": 31777792,
+      "checkpoint": "GA25.pt",
+      "sha256": "19eb97447bb00eb7ddb2107d0b463b79e8e9720dae84e8195f928b038cb7c63b"
+    },
+    "GA26": {
+      "view": "existing_static",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328520518504987,
+        "auprc": 0.5001002555390159,
+        "brier": 0.04370955377817154,
+        "logloss": 0.14418019354343414,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24119
+      },
+      "fit_seconds": 0.16821509995497763,
+      "cpu_seconds": 0.10520240000914782,
+      "gpu_peak": 30987264,
+      "checkpoint": "GA26.pt",
+      "sha256": "27e4089e1c7dab1b5a5fb4bde277c5aeffa9c8846ffc0535a4d151d198005495"
+    },
+    "GA27": {
+      "view": "existing_static",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328544218339206,
+        "auprc": 0.5002715488463092,
+        "brier": 0.043704159557819366,
+        "logloss": 0.14416705071926117,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24124
+      },
+      "fit_seconds": 0.19320589990820736,
+      "cpu_seconds": 0.10313280008267611,
+      "gpu_peak": 30987264,
+      "checkpoint": "GA27.pt",
+      "sha256": "327e560a45d82d24e944f6730a2bde736d63694614b66dbf914df796d3db1184"
+    },
+    "GA28": {
+      "view": "existing_static",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328530109033377,
+        "auprc": 0.5003667205716248,
+        "brier": 0.043706078082323074,
+        "logloss": 0.14416462182998657,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24125
+      },
+      "fit_seconds": 0.19268770003691316,
+      "cpu_seconds": 0.11576029995921999,
+      "gpu_peak": 31624192,
+      "checkpoint": "GA28.pt",
+      "sha256": "35b8357b70339ce1c424413711d18a0262f51cc767d7cf7bf02cc14a54a51214"
+    },
+    "GA29": {
+      "view": "existing_static",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328550022864878,
+        "auprc": 0.5002459665543013,
+        "brier": 0.04370426759123802,
+        "logloss": 0.14414720237255096,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24124
+      },
+      "fit_seconds": 0.1857467999216169,
+      "cpu_seconds": 0.11495299998205155,
+      "gpu_peak": 31191552,
+      "checkpoint": "GA29.pt",
+      "sha256": "9499bb298e04caa189b37ef1f25dfa0aee9065eac8b40f13e12fa6332eb2c958"
+    },
+    "GA30": {
+      "view": "existing_static",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328202911551163,
+        "auprc": 0.4996147194877325,
+        "brier": 0.04374777898192406,
+        "logloss": 0.14424817264080048,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24126
+      },
+      "fit_seconds": 0.1714383999351412,
+      "cpu_seconds": 0.10770980000961572,
+      "gpu_peak": 30987264,
+      "checkpoint": "GA30.pt",
+      "sha256": "d4edb9aabb2b1fd4d814729ec100b72b60d48e3f528c97355da15f461e747240"
+    },
+    "GA31": {
+      "view": "existing_static",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328235431821823,
+        "auprc": 0.49957138233032544,
+        "brier": 0.04371576011180878,
+        "logloss": 0.14424335956573486,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24009
+      },
+      "fit_seconds": 0.18084889999590814,
+      "cpu_seconds": 0.1114233999978751,
+      "gpu_peak": 31773696,
+      "checkpoint": "GA31.pt",
+      "sha256": "6ac8e15f1f9927d3685637fc881eb727f6d32f7cd8044d3a9ab421c06721de72"
+    },
+    "GA32": {
+      "view": "existing_static",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.932793152707676,
+        "auprc": 0.5002252662178792,
+        "brier": 0.0437161810696125,
+        "logloss": 0.144246444106102,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24079
+      },
+      "fit_seconds": 0.23567560000810772,
+      "cpu_seconds": 0.10984010004904121,
+      "gpu_peak": 31773696,
+      "checkpoint": "GA32.pt",
+      "sha256": "606d7e8aa179dbf22022708aed3d9be2a8af671b6cc25157eec270d53a19f9eb"
+    },
+    "GA33": {
+      "view": "existing_static",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328266255854704,
+        "auprc": 0.4999344612720366,
+        "brier": 0.04371083527803421,
+        "logloss": 0.14421609044075012,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24084
+      },
+      "fit_seconds": 0.19781409995630383,
+      "cpu_seconds": 0.1127379999961704,
+      "gpu_peak": 31773696,
+      "checkpoint": "GA33.pt",
+      "sha256": "b9a557d6ca43abb1b7f64b547eecf6e24f92334ffbd5fe2f2845a8d8de481d24"
+    },
+    "GA34": {
+      "view": "existing_static",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328180405868338,
+        "auprc": 0.5000185017469521,
+        "brier": 0.04370804876089096,
+        "logloss": 0.1442204862833023,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24088
+      },
+      "fit_seconds": 0.20484300004318357,
+      "cpu_seconds": 0.1200416999636218,
+      "gpu_peak": 31773696,
+      "checkpoint": "GA34.pt",
+      "sha256": "5311c9fb6eb446ee77f4334fee3b9b7da987129111f78ed15c2dbf4668367483"
+    },
+    "GA35": {
+      "view": "existing_static",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328648506430205,
+        "auprc": 0.5004011345592058,
+        "brier": 0.04370918869972229,
+        "logloss": 0.14418481290340424,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24094
+      },
+      "fit_seconds": 0.17769489996135235,
+      "cpu_seconds": 0.11478770000394434,
+      "gpu_peak": 31773696,
+      "checkpoint": "GA35.pt",
+      "sha256": "4cafa0a2a985b37afd3b6723797a5513cc7eeec55fe44c89ade02f3d37ef7e4f"
+    },
+    "GA36": {
+      "view": "existing_static",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328521068086026,
+        "auprc": 0.5001689358888283,
+        "brier": 0.043707601726055145,
+        "logloss": 0.14415164291858673,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24114
+      },
+      "fit_seconds": 0.17874769994523376,
+      "cpu_seconds": 0.10736110003199428,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA36.pt",
+      "sha256": "9bb93d239db23ef3b0c4973c0a1f7892763bfb6c69a7c5c8ae76a7ad0bba213e"
+    },
+    "GA37": {
+      "view": "existing_static",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328451301826263,
+        "auprc": 0.5001685621063103,
+        "brier": 0.043718501925468445,
+        "logloss": 0.1441858559846878,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24110
+      },
+      "fit_seconds": 0.21631479996722192,
+      "cpu_seconds": 0.10294929996598512,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA37.pt",
+      "sha256": "28a4e3e3db3b1b08307efbc42c10676a3e84b9079c43721fb4a6fb2efa3c08b2"
+    },
+    "GA38": {
+      "view": "existing_static",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328529311801622,
+        "auprc": 0.5002607019510916,
+        "brier": 0.04371989145874977,
+        "logloss": 0.14417560398578644,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24141
+      },
+      "fit_seconds": 0.18243829999119043,
+      "cpu_seconds": 0.10682280000764877,
+      "gpu_peak": 31640576,
+      "checkpoint": "GA38.pt",
+      "sha256": "3cb77070dfed54e754d684c09c021353ecf60eeff6348a35d37c8e150e7b81a2"
+    },
+    "GA39": {
+      "view": "existing_static",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328572606574641,
+        "auprc": 0.5003226205666975,
+        "brier": 0.04371364042162895,
+        "logloss": 0.14417313039302826,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24144
+      },
+      "fit_seconds": 0.17675800004508346,
+      "cpu_seconds": 0.11331200005952269,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA39.pt",
+      "sha256": "267be572e711d056095a7319a2025f43c5b00fa12bc1f937326551d96630fa98"
+    },
+    "GA40": {
+      "view": "existing_static",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328491003967668,
+        "auprc": 0.5002066880032039,
+        "brier": 0.043737560510635376,
+        "logloss": 0.1442003697156906,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24124
+      },
+      "fit_seconds": 0.1698481000494212,
+      "cpu_seconds": 0.10588789999019355,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA40.pt",
+      "sha256": "37ce2a6b3688dcbcba599bdab19205f943b02f8ad9febfcea3e34f4733d729f5"
+    },
+    "GA41": {
+      "view": "existing_static",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328325156015269,
+        "auprc": 0.5003186339596597,
+        "brier": 0.043719179928302765,
+        "logloss": 0.14421473443508148,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24073
+      },
+      "fit_seconds": 0.1589781999355182,
+      "cpu_seconds": 0.12716969999019057,
+      "gpu_peak": 32824320,
+      "checkpoint": "GA41.pt",
+      "sha256": "63ab93fd89d73d07b24cac87e3947f5757e638baa99a58b01864b24135339441"
+    },
+    "GA42": {
+      "view": "existing_static",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.932799688651078,
+        "auprc": 0.5000963806569915,
+        "brier": 0.043721191585063934,
+        "logloss": 0.1442074328660965,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24070
+      },
+      "fit_seconds": 0.23821350000798702,
+      "cpu_seconds": 0.13630270003341138,
+      "gpu_peak": 32824320,
+      "checkpoint": "GA42.pt",
+      "sha256": "5b306abb87075ebf83f46f771b2f91a6f8f726934ed0a9442759b75744d00775"
+    },
+    "GA43": {
+      "view": "existing_static",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328183557478129,
+        "auprc": 0.499969809142903,
+        "brier": 0.04371538758277893,
+        "logloss": 0.14420188963413239,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24162
+      },
+      "fit_seconds": 0.2139331999933347,
+      "cpu_seconds": 0.1287727999733761,
+      "gpu_peak": 32824320,
+      "checkpoint": "GA43.pt",
+      "sha256": "bbcef53de92930b7c79ffced91fdb265a32c509765c801b4783f665870e9da20"
+    },
+    "GA44": {
+      "view": "existing_static",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328024060239966,
+        "auprc": 0.49988322191087,
+        "brier": 0.04373302310705185,
+        "logloss": 0.14423635601997375,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24088
+      },
+      "fit_seconds": 0.1886448001023382,
+      "cpu_seconds": 0.1335979999275878,
+      "gpu_peak": 32824320,
+      "checkpoint": "GA44.pt",
+      "sha256": "d512bf33c04e282e6a86ea82595b3d24b1db356042271dae341ae59000c76dce"
+    },
+    "GA45": {
+      "view": "existing_static",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328252574000796,
+        "auprc": 0.5002005060250495,
+        "brier": 0.04371415823698044,
+        "logloss": 0.14418058097362518,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24121
+      },
+      "fit_seconds": 0.180557299987413,
+      "cpu_seconds": 0.11669940000865608,
+      "gpu_peak": 32824320,
+      "checkpoint": "GA45.pt",
+      "sha256": "89d6716544f85ff501e0cba2e056b6850fff0e8870a5414472ae789914d3a3fb"
+    },
+    "GA46": {
+      "view": "existing_static",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328124399489421,
+        "auprc": 0.5000585357060172,
+        "brier": 0.04371961951255798,
+        "logloss": 0.1441965401172638,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24122
+      },
+      "fit_seconds": 0.23672010004520416,
+      "cpu_seconds": 0.1269558999920264,
+      "gpu_peak": 34923520,
+      "checkpoint": "GA46.pt",
+      "sha256": "9f02fc7fec5980adb8c12147c8b727565305342703fad6384d724129cc762bc0"
+    },
+    "GA47": {
+      "view": "existing_static",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328147495462992,
+        "auprc": 0.5001168685109949,
+        "brier": 0.04371647909283638,
+        "logloss": 0.14419272541999817,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24074
+      },
+      "fit_seconds": 0.22754949994850904,
+      "cpu_seconds": 0.13867650006432086,
+      "gpu_peak": 34923520,
+      "checkpoint": "GA47.pt",
+      "sha256": "b43681809db5884a55422c31bbc710f0cacc6a48a11d17cd1083d2b7ff9e0e10"
+    },
+    "GA48": {
+      "view": "existing_static",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328427686803932,
+        "auprc": 0.5002466481926208,
+        "brier": 0.0437089279294014,
+        "logloss": 0.14416618645191193,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24130
+      },
+      "fit_seconds": 0.24602469999808818,
+      "cpu_seconds": 0.13180190010461956,
+      "gpu_peak": 34923520,
+      "checkpoint": "GA48.pt",
+      "sha256": "26ed25e8bf51c23d647d2bcdf63281db7d4a8ae9b79b4b39ae40e359675577fc"
+    },
+    "GA49": {
+      "view": "existing_static",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328686000070026,
+        "auprc": 0.5004150306843995,
+        "brier": 0.04369828477501869,
+        "logloss": 0.14414578676223755,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24125
+      },
+      "fit_seconds": 0.217998499982059,
+      "cpu_seconds": 0.12895360006950796,
+      "gpu_peak": 34923520,
+      "checkpoint": "GA49.pt",
+      "sha256": "2c07ae425e3a351777f187f7970112036d9ad9fd289433024f71eabacf07c4ed"
+    },
+    "GA50": {
+      "view": "existing_static",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328503359363635,
+        "auprc": 0.5002210358102717,
+        "brier": 0.04372132569551468,
+        "logloss": 0.14420977234840393,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24093
+      },
+      "fit_seconds": 0.2219143999973312,
+      "cpu_seconds": 0.1346614999929443,
+      "gpu_peak": 34923520,
+      "checkpoint": "GA50.pt",
+      "sha256": "891b9862b6748a6b8b7ecfeea87bc5d798605916364401089691030dfee7ff7f"
+    },
+    "GA51": {
+      "view": "local_response",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328581359161568,
+        "auprc": 0.5000533222353208,
+        "brier": 0.04371686279773712,
+        "logloss": 0.14422515034675598,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24124
+      },
+      "fit_seconds": 0.1493425000226125,
+      "cpu_seconds": 0.10599720000755042,
+      "gpu_peak": 28365824,
+      "checkpoint": "GA51.pt",
+      "sha256": "e886b7e693d868b8e93e179c58a3ac88c77411f2995cbefcfe9dd1b338c8d4be"
+    },
+    "GA52": {
+      "view": "local_response",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328524273975426,
+        "auprc": 0.5000644723759593,
+        "brier": 0.043707869946956635,
+        "logloss": 0.14420126378536224,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24133
+      },
+      "fit_seconds": 0.18245659989770502,
+      "cpu_seconds": 0.10252140008378774,
+      "gpu_peak": 28365824,
+      "checkpoint": "GA52.pt",
+      "sha256": "499317a00c511dbfed58b923dd0d9ba847c981d6dcccdd7888709e0154ccae25"
+    },
+    "GA53": {
+      "view": "local_response",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328383452315187,
+        "auprc": 0.4999117793816062,
+        "brier": 0.04371295124292374,
+        "logloss": 0.14418451488018036,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24111
+      },
+      "fit_seconds": 0.19236859993543476,
+      "cpu_seconds": 0.10796739999204874,
+      "gpu_peak": 28832256,
+      "checkpoint": "GA53.pt",
+      "sha256": "36bd3f8b4c207b7fe2b41e31a961e16f72d8c7422a11ada73193e06a639c5f7b"
+    },
+    "GA54": {
+      "view": "local_response",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328371907720875,
+        "auprc": 0.4998560361812667,
+        "brier": 0.04370974004268646,
+        "logloss": 0.1442074477672577,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24086
+      },
+      "fit_seconds": 0.16329950001090765,
+      "cpu_seconds": 0.11509470001328737,
+      "gpu_peak": 28401664,
+      "checkpoint": "GA54.pt",
+      "sha256": "f7b04708d9633ad81f70f40e097fd6930d0d213a235586034b25b5052df84a98"
+    },
+    "GA55": {
+      "view": "local_response",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328190929327507,
+        "auprc": 0.4995335964250746,
+        "brier": 0.0437374971807003,
+        "logloss": 0.14422209560871124,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24111
+      },
+      "fit_seconds": 0.18337820004671812,
+      "cpu_seconds": 0.11071749997790903,
+      "gpu_peak": 28365824,
+      "checkpoint": "GA55.pt",
+      "sha256": "9ca35ec0329e833d085fa73533db996e783e65576e35bc11341635c665bbcafc"
+    },
+    "GA56": {
+      "view": "local_response",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328135184169206,
+        "auprc": 0.4998781340739611,
+        "brier": 0.04371430724859238,
+        "logloss": 0.14422200620174408,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24157
+      },
+      "fit_seconds": 0.17464530002325773,
+      "cpu_seconds": 0.10326869995333254,
+      "gpu_peak": 29152256,
+      "checkpoint": "GA56.pt",
+      "sha256": "054472ff1059ff81209c051c9dabf527f5a0a73110a4472083467fca33e5ff9c"
+    },
+    "GA57": {
+      "view": "local_response",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328237399457643,
+        "auprc": 0.4993060925953793,
+        "brier": 0.043751977384090424,
+        "logloss": 0.14431926608085632,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23995
+      },
+      "fit_seconds": 0.2116090999916196,
+      "cpu_seconds": 0.1043644999153912,
+      "gpu_peak": 29152256,
+      "checkpoint": "GA57.pt",
+      "sha256": "bcfe1f0d57ba3762a13f0aa88d29f27b9b852c39ba231fc37b1d7b827e2db1a1"
+    },
+    "GA58": {
+      "view": "local_response",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328379812188916,
+        "auprc": 0.4998487362601334,
+        "brier": 0.043717965483665466,
+        "logloss": 0.14422199130058289,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24116
+      },
+      "fit_seconds": 0.1979259999934584,
+      "cpu_seconds": 0.11714859993662685,
+      "gpu_peak": 29152256,
+      "checkpoint": "GA58.pt",
+      "sha256": "2a793f7a899105998c9a8f8b9b275e5eaf5259d2e58a9e5494eb016084d10d3d"
+    },
+    "GA59": {
+      "view": "local_response",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9327560251159676,
+        "auprc": 0.49896425506179093,
+        "brier": 0.0437457449734211,
+        "logloss": 0.14428173005580902,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24052
+      },
+      "fit_seconds": 0.20214080007281154,
+      "cpu_seconds": 0.11780559993349016,
+      "gpu_peak": 29152256,
+      "checkpoint": "GA59.pt",
+      "sha256": "414b6330c9c4ec831056af173839401dc57b711052c0fb80e43e711651ae694a"
+    },
+    "GA60": {
+      "view": "local_response",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328002596047138,
+        "auprc": 0.4994701627530324,
+        "brier": 0.04376334324479103,
+        "logloss": 0.14430053532123566,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24111
+      },
+      "fit_seconds": 0.1849184000166133,
+      "cpu_seconds": 0.1172604999737814,
+      "gpu_peak": 29152256,
+      "checkpoint": "GA60.pt",
+      "sha256": "ca7c16021da235cbc54b3593a3292f47cf367e21c8909954c37b2425b7e073a6"
+    },
+    "GA61": {
+      "view": "local_response",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328503586659497,
+        "auprc": 0.500031433560551,
+        "brier": 0.04370395466685295,
+        "logloss": 0.14417098462581635,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24106
+      },
+      "fit_seconds": 0.18647009995765984,
+      "cpu_seconds": 0.10425340000074357,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA61.pt",
+      "sha256": "d43593025ff78809cb5d3d2cf35862e3451fc8f1eb39c9c37a92f2a2e865ef13"
+    },
+    "GA62": {
+      "view": "local_response",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.932828739436988,
+        "auprc": 0.49978132181084006,
+        "brier": 0.04372231289744377,
+        "logloss": 0.14419636130332947,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24140
+      },
+      "fit_seconds": 0.21263470000121742,
+      "cpu_seconds": 0.11201249994337559,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA62.pt",
+      "sha256": "571f3abd6878825543bf044b2e5d7de936913bb099e12556b28fa47811aec5d5"
+    },
+    "GA63": {
+      "view": "local_response",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328135445389822,
+        "auprc": 0.49951340346886197,
+        "brier": 0.04373852536082268,
+        "logloss": 0.14422792196273804,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24113
+      },
+      "fit_seconds": 0.18893459998071194,
+      "cpu_seconds": 0.11761950002983212,
+      "gpu_peak": 28848640,
+      "checkpoint": "GA63.pt",
+      "sha256": "9768f0099b12bd396f986912bf301bb73b2d60b68d2a80a85c3f353b62120578"
+    },
+    "GA64": {
+      "view": "local_response",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328210846551483,
+        "auprc": 0.49974092017805205,
+        "brier": 0.043718330562114716,
+        "logloss": 0.14420484006404877,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24130
+      },
+      "fit_seconds": 0.1783546000951901,
+      "cpu_seconds": 0.11910719994921237,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA64.pt",
+      "sha256": "19954925c3dd34d61d03239d76e02c8df33aec9ac35e6144c7ce697cd1619396"
+    },
+    "GA65": {
+      "view": "local_response",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328132951920293,
+        "auprc": 0.49950857042460256,
+        "brier": 0.043733324855566025,
+        "logloss": 0.14421047270298004,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24124
+      },
+      "fit_seconds": 0.1665517999790609,
+      "cpu_seconds": 0.10532510001212358,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA65.pt",
+      "sha256": "59c5f6f9a211f9d85b022c816ffc50bb046ff60e19d6f8a34e2017a9acf9f182"
+    },
+    "GA66": {
+      "view": "local_response",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9327856414275523,
+        "auprc": 0.49981066047420036,
+        "brier": 0.04372251033782959,
+        "logloss": 0.14420931041240692,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24027
+      },
+      "fit_seconds": 0.182802899973467,
+      "cpu_seconds": 0.11150270001962781,
+      "gpu_peak": 30697984,
+      "checkpoint": "GA66.pt",
+      "sha256": "014c4bd3ab5a150b818d5afd628c336549b4d0632be2f01c89d8474cb6244f30"
+    },
+    "GA67": {
+      "view": "local_response",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328077942929186,
+        "auprc": 0.4997391190199833,
+        "brier": 0.04372861236333847,
+        "logloss": 0.14422611892223358,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24054
+      },
+      "fit_seconds": 0.18774560000747442,
+      "cpu_seconds": 0.11377809999976307,
+      "gpu_peak": 30697984,
+      "checkpoint": "GA67.pt",
+      "sha256": "fbbcc319e543523b66f3394628856584bb5c7b97219b86a1b89457fc07e3afdf"
+    },
+    "GA68": {
+      "view": "local_response",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328513889607756,
+        "auprc": 0.49994436336884196,
+        "brier": 0.0437086820602417,
+        "logloss": 0.14419478178024292,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24113
+      },
+      "fit_seconds": 0.20121630001813173,
+      "cpu_seconds": 0.11345689999870956,
+      "gpu_peak": 30697984,
+      "checkpoint": "GA68.pt",
+      "sha256": "a66dd0810f0b062542b906685b943632329b9d5a0cde9fd99c78419d99f65213"
+    },
+    "GA69": {
+      "view": "local_response",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328238471479918,
+        "auprc": 0.49983233861426135,
+        "brier": 0.043716225773096085,
+        "logloss": 0.14418107271194458,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24145
+      },
+      "fit_seconds": 0.18853909999597818,
+      "cpu_seconds": 0.12185929995030165,
+      "gpu_peak": 30697984,
+      "checkpoint": "GA69.pt",
+      "sha256": "a631918d4d26df2dae430912e4abd41af42f8dd4bcb488c223603e5eed5b1c86"
+    },
+    "GA70": {
+      "view": "local_response",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328005282887776,
+        "auprc": 0.5002974130115257,
+        "brier": 0.043710533529520035,
+        "logloss": 0.14418858289718628,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24032
+      },
+      "fit_seconds": 0.18722119997255504,
+      "cpu_seconds": 0.11981599999126047,
+      "gpu_peak": 30697984,
+      "checkpoint": "GA70.pt",
+      "sha256": "bb83aeb107145a556c816948540fa8673d6f231834cd1620ed9a044b3976cc49"
+    },
+    "GA71": {
+      "view": "local_response",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9327823575112162,
+        "auprc": 0.4994301206501213,
+        "brier": 0.04373602569103241,
+        "logloss": 0.1442420333623886,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24039
+      },
+      "fit_seconds": 0.2256022000219673,
+      "cpu_seconds": 0.12891800003126264,
+      "gpu_peak": 32302080,
+      "checkpoint": "GA71.pt",
+      "sha256": "f7312416ac2d9272230c51c3f87d254132027cb978aadfac112d25ef35553cf2"
+    },
+    "GA72": {
+      "view": "local_response",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.932817879444245,
+        "auprc": 0.49972560924401366,
+        "brier": 0.04373946785926819,
+        "logloss": 0.14422976970672607,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24067
+      },
+      "fit_seconds": 0.2463576999725774,
+      "cpu_seconds": 0.1353368000127375,
+      "gpu_peak": 32302080,
+      "checkpoint": "GA72.pt",
+      "sha256": "6a134bd49fb3a183ab434deade132c3a7ccb2d7245d3e0b180a6c289fd5d8048"
+    },
+    "GA73": {
+      "view": "local_response",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9327790311889357,
+        "auprc": 0.49932562634002914,
+        "brier": 0.04373186081647873,
+        "logloss": 0.1442229300737381,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24110
+      },
+      "fit_seconds": 0.23936260002665222,
+      "cpu_seconds": 0.1291817999444902,
+      "gpu_peak": 32302080,
+      "checkpoint": "GA73.pt",
+      "sha256": "0293a43a819d41afbf225e1e915c3dbf3be181d7e967ed9774a9ebbb883313e0"
+    },
+    "GA74": {
+      "view": "local_response",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9327946033302228,
+        "auprc": 0.49915909131055336,
+        "brier": 0.04375322535634041,
+        "logloss": 0.14426857233047485,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24079
+      },
+      "fit_seconds": 0.2620304999873042,
+      "cpu_seconds": 0.1422851999523118,
+      "gpu_peak": 32302080,
+      "checkpoint": "GA74.pt",
+      "sha256": "cdc529d048588a450aef0829fff47ddfca834a6a16860845987bcdd4a45cc5b0"
+    },
+    "GA75": {
+      "view": "local_response",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328519826439974,
+        "auprc": 0.5000443628331458,
+        "brier": 0.04370484501123428,
+        "logloss": 0.1441662460565567,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24076
+      },
+      "fit_seconds": 0.22280790004879236,
+      "cpu_seconds": 0.11971899995114654,
+      "gpu_peak": 32302080,
+      "checkpoint": "GA75.pt",
+      "sha256": "ca59948d87ffb5d561c4eea61384b6f27054999be62a2acb977cc254e37ff919"
+    },
+    "GA76": {
+      "view": "network_response",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.93282506165424,
+        "auprc": 0.4996547940275172,
+        "brier": 0.0437203049659729,
+        "logloss": 0.14422333240509033,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24122
+      },
+      "fit_seconds": 0.15482479997444898,
+      "cpu_seconds": 0.10573770001064986,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA76.pt",
+      "sha256": "36f0e53dccf3d93e1981e47427f04c95548eb1b25f78576b761405f31fc06804"
+    },
+    "GA77": {
+      "view": "network_response",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328497778741348,
+        "auprc": 0.4999487390855182,
+        "brier": 0.04371252655982971,
+        "logloss": 0.14420144259929657,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24086
+      },
+      "fit_seconds": 0.17146619991399348,
+      "cpu_seconds": 0.11273849999997765,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA77.pt",
+      "sha256": "62d8d68558dc89fe01d5fd3c676c6c2d83e7c32e94762d6c91981a14ba3168c0"
+    },
+    "GA78": {
+      "view": "network_response",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.93282688375286,
+        "auprc": 0.4996098708681594,
+        "brier": 0.0437149703502655,
+        "logloss": 0.14419400691986084,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24125
+      },
+      "fit_seconds": 0.177191499969922,
+      "cpu_seconds": 0.10711230000015348,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA78.pt",
+      "sha256": "f0c2f7012124923f34c1c07cf6b59ef3b55fe1c9680509f1bc3c9036b04c07d9"
+    },
+    "GA79": {
+      "view": "network_response",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328552214404087,
+        "auprc": 0.4999023235718436,
+        "brier": 0.04370748996734619,
+        "logloss": 0.14417964220046997,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24096
+      },
+      "fit_seconds": 0.18672080000396818,
+      "cpu_seconds": 0.11187520006205887,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA79.pt",
+      "sha256": "d3b47bcbbca616e688245d19a076d1d9152b2c384db06e4714d6f12fbcd23455"
+    },
+    "GA80": {
+      "view": "network_response",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9327922252048595,
+        "auprc": 0.4994395862047069,
+        "brier": 0.043729331344366074,
+        "logloss": 0.14420513808727264,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24092
+      },
+      "fit_seconds": 0.148945500026457,
+      "cpu_seconds": 0.10395389993209392,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA80.pt",
+      "sha256": "bcb471affa55029788238b3f61a3f9878f33cd90b2d3c1599255fa9277951b21"
+    },
+    "GA81": {
+      "view": "network_response",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9327974536881831,
+        "auprc": 0.4992114358244611,
+        "brier": 0.04373253881931305,
+        "logloss": 0.14427368342876434,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24100
+      },
+      "fit_seconds": 0.16750300000421703,
+      "cpu_seconds": 0.10916100000031292,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA81.pt",
+      "sha256": "f8713f41f10a6c0cecaecb7596b50ec82e723d6f315e7023af6e39c5536cfaf3"
+    },
+    "GA82": {
+      "view": "network_response",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9327939913276329,
+        "auprc": 0.4993687911588793,
+        "brier": 0.04373357072472572,
+        "logloss": 0.14426946640014648,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24065
+      },
+      "fit_seconds": 0.24178939999546856,
+      "cpu_seconds": 0.10567730001639575,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA82.pt",
+      "sha256": "4352c47e619412662d0b0ee431578970a999c46344fde5aa7b2a5de6b74b506e"
+    },
+    "GA83": {
+      "view": "network_response",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328152791117331,
+        "auprc": 0.49951241191301693,
+        "brier": 0.04372391104698181,
+        "logloss": 0.14423906803131104,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24103
+      },
+      "fit_seconds": 0.23292399989441037,
+      "cpu_seconds": 0.10664030001498759,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA83.pt",
+      "sha256": "a5c945af288e64fd44d01e4849ad3d39db1cbd8bd0cdcee3c41823866c4c3838"
+    },
+    "GA84": {
+      "view": "network_response",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9327480405855042,
+        "auprc": 0.4992379713534612,
+        "brier": 0.04375980421900749,
+        "logloss": 0.1443408727645874,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24020
+      },
+      "fit_seconds": 0.1784946999978274,
+      "cpu_seconds": 0.12206670001614839,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA84.pt",
+      "sha256": "be099170bbf0a5012d9335282cb545fdd3abeebcdcf95791b6f73c7b81cc1a64"
+    },
+    "GA85": {
+      "view": "network_response",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328307484610108,
+        "auprc": 0.49903518962328425,
+        "brier": 0.043747588992118835,
+        "logloss": 0.14425592124462128,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24084
+      },
+      "fit_seconds": 0.19042040000203997,
+      "cpu_seconds": 0.11303710006177425,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA85.pt",
+      "sha256": "89a31a674c3bfdf0de91a9e3090119859ff6e6316668b88bfcb7cfdabb4e7a9b"
+    },
+    "GA86": {
+      "view": "network_response",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328301934520102,
+        "auprc": 0.49968459167708307,
+        "brier": 0.043729349970817566,
+        "logloss": 0.1442158967256546,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24136
+      },
+      "fit_seconds": 0.18167680001351982,
+      "cpu_seconds": 0.11562729999423027,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA86.pt",
+      "sha256": "858e1629ab662c9edf381bdb8a0537b95c242deabc399f06b07c8e2665c24563"
+    },
+    "GA87": {
+      "view": "network_response",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328131605107497,
+        "auprc": 0.4998864805973807,
+        "brier": 0.04372557997703552,
+        "logloss": 0.14421133697032928,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24102
+      },
+      "fit_seconds": 0.2253840999910608,
+      "cpu_seconds": 0.11266580002848059,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA87.pt",
+      "sha256": "f6bb5118bf7e909125bb0b4e4505a973f633d3845a9ff78640178f6b57094cae"
+    },
+    "GA88": {
+      "view": "network_response",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328267334661929,
+        "auprc": 0.4998753558044565,
+        "brier": 0.043718647211790085,
+        "logloss": 0.14419837296009064,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24128
+      },
+      "fit_seconds": 0.21962659992277622,
+      "cpu_seconds": 0.10761409997940063,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA88.pt",
+      "sha256": "f2db9fba347f5a6813b1265bbdbc412bbf88ce61f9e015f75faeefd597d0e6f3"
+    },
+    "GA89": {
+      "view": "network_response",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328113842105497,
+        "auprc": 0.4993191336007836,
+        "brier": 0.04372695833444595,
+        "logloss": 0.144239604473114,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24089
+      },
+      "fit_seconds": 0.1872930999379605,
+      "cpu_seconds": 0.11848499998450279,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA89.pt",
+      "sha256": "5a51e2a596efe5bf57b5842c5fb8703fdebb37d1a7a9280c745527217cc30e46"
+    },
+    "GA90": {
+      "view": "network_response",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328188581734423,
+        "auprc": 0.49983888985243174,
+        "brier": 0.04372274875640869,
+        "logloss": 0.14418283104896545,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24144
+      },
+      "fit_seconds": 0.18377489992417395,
+      "cpu_seconds": 0.1038274000165984,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA90.pt",
+      "sha256": "50593b2e69b5fea138b6ad27b3227e0b79591eab123ffdc7f7d508db33d4d78e"
+    },
+    "GA91": {
+      "view": "network_response",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328189073643378,
+        "auprc": 0.4997802373501719,
+        "brier": 0.04371919110417366,
+        "logloss": 0.14421696960926056,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24105
+      },
+      "fit_seconds": 0.1589043999556452,
+      "cpu_seconds": 0.12256220006383955,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA91.pt",
+      "sha256": "66ce298f8487070d8df70121e595ae03ced6ab834d003f4992bb4b26cf244a2d"
+    },
+    "GA92": {
+      "view": "network_response",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328245307318159,
+        "auprc": 0.49986667437560983,
+        "brier": 0.04371026158332825,
+        "logloss": 0.14420105516910553,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24105
+      },
+      "fit_seconds": 0.20464200002606958,
+      "cpu_seconds": 0.11673570005223155,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA92.pt",
+      "sha256": "173fcf19c5c5534f6a15f285767aeba894a2ee451aa3380b859046b0fe9d4405"
+    },
+    "GA93": {
+      "view": "network_response",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.932792362260872,
+        "auprc": 0.4995953729413361,
+        "brier": 0.043724216520786285,
+        "logloss": 0.14423497021198273,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24098
+      },
+      "fit_seconds": 0.20024549996014684,
+      "cpu_seconds": 0.12399340001866221,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA93.pt",
+      "sha256": "c6d625ebe23ca7a8770f4666a004fbf41029343ac9f7031451e405c32c212e45"
+    },
+    "GA94": {
+      "view": "network_response",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328173542890293,
+        "auprc": 0.49968661968738526,
+        "brier": 0.04371366277337074,
+        "logloss": 0.14419947564601898,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24110
+      },
+      "fit_seconds": 0.18700150004588068,
+      "cpu_seconds": 0.12757809995673597,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA94.pt",
+      "sha256": "5f226ea3dc39be20eea3119f916a7ef81cb775d04fa7f9a07365c5f7519e536e"
+    },
+    "GA95": {
+      "view": "network_response",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328131635639777,
+        "auprc": 0.5001556965648685,
+        "brier": 0.04370592162013054,
+        "logloss": 0.14418521523475647,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24126
+      },
+      "fit_seconds": 0.19353419996332377,
+      "cpu_seconds": 0.11750419996678829,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA95.pt",
+      "sha256": "3161f6c2fa021b572ad9f3609a9d6f6ae6019fe8d66711cf41df487a1fa83731"
+    },
+    "GA96": {
+      "view": "network_response",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328111148479908,
+        "auprc": 0.4996831174898644,
+        "brier": 0.04372105747461319,
+        "logloss": 0.14421308040618896,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24076
+      },
+      "fit_seconds": 0.22130460001062602,
+      "cpu_seconds": 0.1281434999546036,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA96.pt",
+      "sha256": "99e385c56f52ea29c04542534bd951b822e2291c49b3b022044cce122604963e"
+    },
+    "GA97": {
+      "view": "network_response",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328034264806431,
+        "auprc": 0.4993895883910877,
+        "brier": 0.04374699294567108,
+        "logloss": 0.1442430466413498,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24041
+      },
+      "fit_seconds": 0.28804170002695173,
+      "cpu_seconds": 0.12825269997119904,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA97.pt",
+      "sha256": "dfb3f25f9cd16cfd50f638357ca070cb1496670059fdf69eed8d3b7918d45f0e"
+    },
+    "GA98": {
+      "view": "network_response",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.932794895422368,
+        "auprc": 0.4996391067870382,
+        "brier": 0.04371900111436844,
+        "logloss": 0.1442064344882965,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24102
+      },
+      "fit_seconds": 0.2579261999344453,
+      "cpu_seconds": 0.12806100002489984,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA98.pt",
+      "sha256": "114fbfb8b89e4e44b0c8bfe48a4bdf36f8f8de67f6d5b0d4eb798ac02e29077c"
+    },
+    "GA99": {
+      "view": "network_response",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9327988785279157,
+        "auprc": 0.49927466104482765,
+        "brier": 0.04371924698352814,
+        "logloss": 0.14421731233596802,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24103
+      },
+      "fit_seconds": 0.25290840002708137,
+      "cpu_seconds": 0.1374663000460714,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA99.pt",
+      "sha256": "cb69bc48acf7613d63d1dd34f75cb4afdb843a9aabbeb2544995ed3fc0424905"
+    },
+    "GA100": {
+      "view": "network_response",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328332833187447,
+        "auprc": 0.49945715396528556,
+        "brier": 0.043713971972465515,
+        "logloss": 0.14418457448482513,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24175
+      },
+      "fit_seconds": 0.24745929997880012,
+      "cpu_seconds": 0.1259255000622943,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA100.pt",
+      "sha256": "865a5e5140777d410a182e78d670d7c41f5ef0a84dea7b09828b41df700bd8a2"
+    },
+    "GA101": {
+      "view": "occupancy",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328542372832505,
+        "auprc": 0.49990072276085007,
+        "brier": 0.043708547949790955,
+        "logloss": 0.14418046176433563,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24108
+      },
+      "fit_seconds": 0.1521249000215903,
+      "cpu_seconds": 0.10122169996611774,
+      "gpu_peak": 29676544,
+      "checkpoint": "GA101.pt",
+      "sha256": "0698dd3cd064c1b05fd1c8587306b7ce21fd84cf5b85ca04651f125c9d03fa1b"
+    },
+    "GA102": {
+      "view": "occupancy",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328514144043422,
+        "auprc": 0.49993369193283776,
+        "brier": 0.04370448738336563,
+        "logloss": 0.1441652774810791,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24094
+      },
+      "fit_seconds": 0.1810136999702081,
+      "cpu_seconds": 0.10819089994765818,
+      "gpu_peak": 29676544,
+      "checkpoint": "GA102.pt",
+      "sha256": "89942de4d47e560dce7cd6eb34f57e92f58e43933644c8c328e56b83257e9b31"
+    },
+    "GA103": {
+      "view": "occupancy",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328506802726322,
+        "auprc": 0.5001144669527982,
+        "brier": 0.04370742291212082,
+        "logloss": 0.14417685568332672,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24100
+      },
+      "fit_seconds": 0.16486899997107685,
+      "cpu_seconds": 0.10927220003213733,
+      "gpu_peak": 30228480,
+      "checkpoint": "GA103.pt",
+      "sha256": "2c0548865189d68968a470ee7eef5d30b340d20876fa9642ff760e1c43fe2711"
+    },
+    "GA104": {
+      "view": "occupancy",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328525254400859,
+        "auprc": 0.499762669155356,
+        "brier": 0.043708350509405136,
+        "logloss": 0.1441846340894699,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24117
+      },
+      "fit_seconds": 0.19438770005945116,
+      "cpu_seconds": 0.11421499995049089,
+      "gpu_peak": 29796864,
+      "checkpoint": "GA104.pt",
+      "sha256": "be94941c51646b852334c53c751d9cd4a4e39fda535fd4dab5390b52b5b46395"
+    },
+    "GA105": {
+      "view": "occupancy",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328505920682678,
+        "auprc": 0.5000195635400915,
+        "brier": 0.04370514303445816,
+        "logloss": 0.14417502284049988,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24084
+      },
+      "fit_seconds": 0.16919779998715967,
+      "cpu_seconds": 0.10911750001832843,
+      "gpu_peak": 29676544,
+      "checkpoint": "GA105.pt",
+      "sha256": "94fcb67c89d773f6795ca7a866fcc124bd19091c226ea662cd568ca9bb7a7b57"
+    },
+    "GA106": {
+      "view": "occupancy",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9327879106544501,
+        "auprc": 0.4996533747906986,
+        "brier": 0.0437353178858757,
+        "logloss": 0.14427702128887177,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24017
+      },
+      "fit_seconds": 0.195509499986656,
+      "cpu_seconds": 0.1067269000923261,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA106.pt",
+      "sha256": "680716daff2932e4e9513dfec4704923e8ed06d0dfc8c6a8e75d51c6547f6ae1"
+    },
+    "GA107": {
+      "view": "occupancy",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9326868345593048,
+        "auprc": 0.49947217988005344,
+        "brier": 0.04378199204802513,
+        "logloss": 0.14437569677829742,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24079
+      },
+      "fit_seconds": 0.20651589997578412,
+      "cpu_seconds": 0.10759479994885623,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA107.pt",
+      "sha256": "e963b0b33c18c0997c90ec909352ada80a7a1cdf5fe957eb73ac3781c5c79dd3"
+    },
+    "GA108": {
+      "view": "occupancy",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328497863553238,
+        "auprc": 0.5002572849930266,
+        "brier": 0.04370903968811035,
+        "logloss": 0.1442137509584427,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24057
+      },
+      "fit_seconds": 0.19611519994214177,
+      "cpu_seconds": 0.1153393000131473,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA108.pt",
+      "sha256": "8ebab23b510458c8dedf683200d4734b8d89cdbfe98c1a4829ca9c858175a37c"
+    },
+    "GA109": {
+      "view": "occupancy",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9327928575623027,
+        "auprc": 0.4999266927662691,
+        "brier": 0.04372319579124451,
+        "logloss": 0.14425843954086304,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23992
+      },
+      "fit_seconds": 0.22658560005947948,
+      "cpu_seconds": 0.11996269994415343,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA109.pt",
+      "sha256": "0e4a2b9edc3bcea8b4cfcfb4c595e701ea727644b0041597e598e6514ea25123"
+    },
+    "GA110": {
+      "view": "occupancy",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328052031200906,
+        "auprc": 0.5001216032685685,
+        "brier": 0.043725598603487015,
+        "logloss": 0.14424891769886017,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24063
+      },
+      "fit_seconds": 0.1912785000167787,
+      "cpu_seconds": 0.11266569991130382,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA110.pt",
+      "sha256": "a24134d3b1f36bbe1877ced3c1632a7447d323a4dd11abc2e72c90a7f1b9a8b8"
+    },
+    "GA111": {
+      "view": "occupancy",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328500214538797,
+        "auprc": 0.4999948443435324,
+        "brier": 0.04370753839612007,
+        "logloss": 0.14417119324207306,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24075
+      },
+      "fit_seconds": 0.22201529995072633,
+      "cpu_seconds": 0.12246490002144128,
+      "gpu_peak": 29938688,
+      "checkpoint": "GA111.pt",
+      "sha256": "31423f1f8791fbf9e53087b4c2d3f5ecf6b2417ab406b0b59ea0976ad8fe662e"
+    },
+    "GA112": {
+      "view": "occupancy",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328501842927062,
+        "auprc": 0.5000650358463149,
+        "brier": 0.04370512068271637,
+        "logloss": 0.14417609572410583,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24098
+      },
+      "fit_seconds": 0.23397770000156015,
+      "cpu_seconds": 0.11311709997244179,
+      "gpu_peak": 29938688,
+      "checkpoint": "GA112.pt",
+      "sha256": "563f94b29c4223eb2f392178f701e2447ab45c34e145facec685ffec492ca90c"
+    },
+    "GA113": {
+      "view": "occupancy",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328490098176695,
+        "auprc": 0.5001153429981191,
+        "brier": 0.043709322810173035,
+        "logloss": 0.14416904747486115,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24112
+      },
+      "fit_seconds": 0.22571110003627837,
+      "cpu_seconds": 0.11702739994507283,
+      "gpu_peak": 30244864,
+      "checkpoint": "GA113.pt",
+      "sha256": "9d6f176d86d96b6424526e519886f9030da45ca28607d3799676fc6ee7e493ad"
+    },
+    "GA114": {
+      "view": "occupancy",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328436001761514,
+        "auprc": 0.5000412989407579,
+        "brier": 0.043710969388484955,
+        "logloss": 0.14418821036815643,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24114
+      },
+      "fit_seconds": 0.20800089999102056,
+      "cpu_seconds": 0.11317379993852228,
+      "gpu_peak": 29938688,
+      "checkpoint": "GA114.pt",
+      "sha256": "63a11a5dab0457b4e199203cb95394c783296516f1390075aaa07ed3812fdd84"
+    },
+    "GA115": {
+      "view": "occupancy",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328123870263234,
+        "auprc": 0.49996843183088174,
+        "brier": 0.04372325912117958,
+        "logloss": 0.14419998228549957,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24145
+      },
+      "fit_seconds": 0.20847760001197457,
+      "cpu_seconds": 0.10776369995437562,
+      "gpu_peak": 29938688,
+      "checkpoint": "GA115.pt",
+      "sha256": "b4bb4bf3bb4f316978585086da7cb92dc1b677859f563a80ddfdd15b079b2feb"
+    },
+    "GA116": {
+      "view": "occupancy",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328063474020951,
+        "auprc": 0.4997929246829368,
+        "brier": 0.0437135323882103,
+        "logloss": 0.14418332278728485,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24097
+      },
+      "fit_seconds": 0.18847459997050464,
+      "cpu_seconds": 0.118670399999246,
+      "gpu_peak": 32008704,
+      "checkpoint": "GA116.pt",
+      "sha256": "5faeb9107dbf24409f9c4b16c26e2b880706922fa0bb79aada7143dfdf732533"
+    },
+    "GA117": {
+      "view": "occupancy",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328114269557415,
+        "auprc": 0.5000428489900901,
+        "brier": 0.04371386766433716,
+        "logloss": 0.1442013680934906,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24024
+      },
+      "fit_seconds": 0.22462460002861917,
+      "cpu_seconds": 0.12347499991301447,
+      "gpu_peak": 32008704,
+      "checkpoint": "GA117.pt",
+      "sha256": "ce3ec82171198b63664bbc631d0b5e546faebe43a8d889432e43510a2849b8cb"
+    },
+    "GA118": {
+      "view": "occupancy",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328243136133806,
+        "auprc": 0.500003023498881,
+        "brier": 0.04371107369661331,
+        "logloss": 0.1441817283630371,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24135
+      },
+      "fit_seconds": 0.18050099990796298,
+      "cpu_seconds": 0.11326490005012602,
+      "gpu_peak": 32008704,
+      "checkpoint": "GA118.pt",
+      "sha256": "3a67107a60212e712ef9a32b17d5ef0c5a6925beaa76fc791bb5ad55a7876a52"
+    },
+    "GA119": {
+      "view": "occupancy",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.932835588845131,
+        "auprc": 0.5000280234379747,
+        "brier": 0.04370769113302231,
+        "logloss": 0.1441824585199356,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24121
+      },
+      "fit_seconds": 0.20310090004932135,
+      "cpu_seconds": 0.1245678000850603,
+      "gpu_peak": 32008704,
+      "checkpoint": "GA119.pt",
+      "sha256": "8ea4f0cd0d9ee6cfaaaec5e1de848c24f3d647e97ec6b70532decd698db9a2cf"
+    },
+    "GA120": {
+      "view": "occupancy",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328077990423844,
+        "auprc": 0.5001505564365591,
+        "brier": 0.0437176451086998,
+        "logloss": 0.14419721066951752,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24096
+      },
+      "fit_seconds": 0.1844063000753522,
+      "cpu_seconds": 0.12713349994737655,
+      "gpu_peak": 32008704,
+      "checkpoint": "GA120.pt",
+      "sha256": "293c8bab210a1410751215816db9c9a9a958972ccbe7dffaab598c5dfbd99d13"
+    },
+    "GA121": {
+      "view": "occupancy",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328041433107276,
+        "auprc": 0.4998558980627319,
+        "brier": 0.043717075139284134,
+        "logloss": 0.14420035481452942,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24073
+      },
+      "fit_seconds": 0.2585935000097379,
+      "cpu_seconds": 0.13246270001400262,
+      "gpu_peak": 33612800,
+      "checkpoint": "GA121.pt",
+      "sha256": "8965cf2dcd447e94f5c90d6b29b8531bfdc12b9e1668dab920abc4807eecc2ca"
+    },
+    "GA122": {
+      "view": "occupancy",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.932831787576273,
+        "auprc": 0.49991866169580457,
+        "brier": 0.04371470957994461,
+        "logloss": 0.14419874548912048,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24014
+      },
+      "fit_seconds": 0.2607629999984056,
+      "cpu_seconds": 0.1349775999551639,
+      "gpu_peak": 33612800,
+      "checkpoint": "GA122.pt",
+      "sha256": "cf1403f353568fbbc8187a18c64a9ed72cde0989681cdc4f9333d5662ee2f462"
+    },
+    "GA123": {
+      "view": "occupancy",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328461584419665,
+        "auprc": 0.5001030192942794,
+        "brier": 0.043702054768800735,
+        "logloss": 0.14416268467903137,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24107
+      },
+      "fit_seconds": 0.23087750002741814,
+      "cpu_seconds": 0.12608600000385195,
+      "gpu_peak": 33612800,
+      "checkpoint": "GA123.pt",
+      "sha256": "c1d82f48d85d8496b113820710ca08a7bbcee76825dbf47a4b15a0ab3eebd597"
+    },
+    "GA124": {
+      "view": "occupancy",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9327759528566182,
+        "auprc": 0.4998795491452643,
+        "brier": 0.043731994926929474,
+        "logloss": 0.14424432814121246,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24026
+      },
+      "fit_seconds": 0.2283126999391243,
+      "cpu_seconds": 0.13666100008413196,
+      "gpu_peak": 33612800,
+      "checkpoint": "GA124.pt",
+      "sha256": "29e149fe8e32b72193c3d817548551e681983e49c534df1249e460cf665dbb2a"
+    },
+    "GA125": {
+      "view": "occupancy",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328471527765513,
+        "auprc": 0.5000680515548145,
+        "brier": 0.04370430111885071,
+        "logloss": 0.1441545933485031,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24095
+      },
+      "fit_seconds": 0.2200365000171587,
+      "cpu_seconds": 0.12937560002319515,
+      "gpu_peak": 33612800,
+      "checkpoint": "GA125.pt",
+      "sha256": "152dfde688fdb096ccc3244619adc8a6ab45e3d812efd2b360ec0ec2608d9a16"
+    },
+    "GA126": {
+      "view": "competitors",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328545683888644,
+        "auprc": 0.4999325095775341,
+        "brier": 0.04370645433664322,
+        "logloss": 0.1441860944032669,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24095
+      },
+      "fit_seconds": 0.14429730002302676,
+      "cpu_seconds": 0.10300410003401339,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA126.pt",
+      "sha256": "70b89bc4b369a3c71844a2141d1ea7b8cf9b5fd3fecfb320ad7e8afbb4137e4b"
+    },
+    "GA127": {
+      "view": "competitors",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328229416962666,
+        "auprc": 0.49993981880778265,
+        "brier": 0.043720465153455734,
+        "logloss": 0.1441909819841385,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24127
+      },
+      "fit_seconds": 0.17374369991011918,
+      "cpu_seconds": 0.10823100002016872,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA127.pt",
+      "sha256": "e4310bba4ccadabc175a1b60238cb61606262143586b210668f56ac33d678cd1"
+    },
+    "GA128": {
+      "view": "competitors",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.93285657707364,
+        "auprc": 0.5001312222790684,
+        "brier": 0.043712764978408813,
+        "logloss": 0.1441640704870224,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24098
+      },
+      "fit_seconds": 0.17315289995167404,
+      "cpu_seconds": 0.11416430003009737,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA128.pt",
+      "sha256": "f6f6873fbfbbf41a7c50a01f671398f9bed1e2313ff285822ae004cfe868b2ad"
+    },
+    "GA129": {
+      "view": "competitors",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328560105302223,
+        "auprc": 0.5000607230090208,
+        "brier": 0.04371018707752228,
+        "logloss": 0.14419546723365784,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24104
+      },
+      "fit_seconds": 0.17150689999107271,
+      "cpu_seconds": 0.12555160000920296,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA129.pt",
+      "sha256": "30f7ad3250332b2aecb9841525d7ce409f512b143f7aac4520ad730e3ffe21a2"
+    },
+    "GA130": {
+      "view": "competitors",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328432524474071,
+        "auprc": 0.500145798385591,
+        "brier": 0.04371783509850502,
+        "logloss": 0.1441897302865982,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24087
+      },
+      "fit_seconds": 0.14138760010246187,
+      "cpu_seconds": 0.10118369990959764,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA130.pt",
+      "sha256": "9f8e6a4fc00c6977e2eff3e08c1976b215fb73d047ade3b831ba01557e553127"
+    },
+    "GA131": {
+      "view": "competitors",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.932822078311238,
+        "auprc": 0.4999254756070194,
+        "brier": 0.04371599853038788,
+        "logloss": 0.14423871040344238,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24093
+      },
+      "fit_seconds": 0.19174110004678369,
+      "cpu_seconds": 0.11119850003160536,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA131.pt",
+      "sha256": "64ea9108321c35c00494c6c908317ff4414cb0692a644486e9dd7c67058eb692"
+    },
+    "GA132": {
+      "view": "competitors",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9327919595740236,
+        "auprc": 0.49966255257470077,
+        "brier": 0.04371727257966995,
+        "logloss": 0.14422883093357086,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23976
+      },
+      "fit_seconds": 0.1894317000405863,
+      "cpu_seconds": 0.10469499998725951,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA132.pt",
+      "sha256": "d3dcc6add6cfcc8b5f333b9a6178bf6d50f8f124de3dfdd52b8375732445eeef"
+    },
+    "GA133": {
+      "view": "competitors",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328544493129726,
+        "auprc": 0.5000429029277715,
+        "brier": 0.04370846971869469,
+        "logloss": 0.14418981969356537,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24131
+      },
+      "fit_seconds": 0.21745590004138649,
+      "cpu_seconds": 0.11461349995806813,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA133.pt",
+      "sha256": "a489afb478fc014b8ad56c0aa8a912196015512293c6eaf263e74d2e3835cf65"
+    },
+    "GA134": {
+      "view": "competitors",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.932787811594164,
+        "auprc": 0.49987757116652953,
+        "brier": 0.043733373284339905,
+        "logloss": 0.14428073167800903,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24020
+      },
+      "fit_seconds": 0.18191759998444468,
+      "cpu_seconds": 0.12366749998182058,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA134.pt",
+      "sha256": "817645fe7eb6f61d5eb546937e95e0d3baaac9e5d4bb377cf1bf8119be7c10d0"
+    },
+    "GA135": {
+      "view": "competitors",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.932747627042734,
+        "auprc": 0.4998065520162776,
+        "brier": 0.043755464255809784,
+        "logloss": 0.1443055123090744,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24039
+      },
+      "fit_seconds": 0.19232030003331602,
+      "cpu_seconds": 0.1109328999882564,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA135.pt",
+      "sha256": "ee680df2a1d7077313f0e774cde89b5986a635ffdf1aa06ad6ea6d9165c5f209"
+    },
+    "GA136": {
+      "view": "competitors",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328512254434538,
+        "auprc": 0.5001502711370845,
+        "brier": 0.043714869767427444,
+        "logloss": 0.14419421553611755,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24087
+      },
+      "fit_seconds": 0.16799869993701577,
+      "cpu_seconds": 0.10471610003151,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA136.pt",
+      "sha256": "dc4b65caea9aa71274ed7b10bffb8fb45a5b8d7cedaf140ae93a69a1c0260214"
+    },
+    "GA137": {
+      "view": "competitors",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328432741592506,
+        "auprc": 0.5000384963766952,
+        "brier": 0.04371834918856621,
+        "logloss": 0.14420825242996216,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24096
+      },
+      "fit_seconds": 0.20188249996863306,
+      "cpu_seconds": 0.11694670002907515,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA137.pt",
+      "sha256": "3369d21b31d4f3ab8ba608b76aeb1b9f4859cc2ad63f0ac6b25969c425df82cc"
+    },
+    "GA138": {
+      "view": "competitors",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328520732230947,
+        "auprc": 0.5000616131803877,
+        "brier": 0.04371194913983345,
+        "logloss": 0.14417605102062225,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24095
+      },
+      "fit_seconds": 0.2022694000042975,
+      "cpu_seconds": 0.1058570999884978,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA138.pt",
+      "sha256": "7566dbef30ef935509c5c347e3dabe5001acc1942acaadc25f22a76663dd8888"
+    },
+    "GA139": {
+      "view": "competitors",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328565139735946,
+        "auprc": 0.5001714986090425,
+        "brier": 0.0437113381922245,
+        "logloss": 0.14419054985046387,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24108
+      },
+      "fit_seconds": 0.18940280005335808,
+      "cpu_seconds": 0.1307786999968812,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA139.pt",
+      "sha256": "d79c1182ae196c28335074f0f23faedce988f79f04bc4bde03864a4d1085b392"
+    },
+    "GA140": {
+      "view": "competitors",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.932809310050996,
+        "auprc": 0.49992193376108834,
+        "brier": 0.04373462125658989,
+        "logloss": 0.14420807361602783,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24123
+      },
+      "fit_seconds": 0.16162619995884597,
+      "cpu_seconds": 0.10741320007946342,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA140.pt",
+      "sha256": "0a3377f22a12a30b2942d02a9957e5b2bd0713325c3058dbb017d14d7b8d0cca"
+    },
+    "GA141": {
+      "view": "competitors",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328436161207866,
+        "auprc": 0.49996441261862024,
+        "brier": 0.04370942711830139,
+        "logloss": 0.1441752016544342,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24081
+      },
+      "fit_seconds": 0.16267709992825985,
+      "cpu_seconds": 0.12249780003912747,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA141.pt",
+      "sha256": "e6157b01816e45d1b9d3f243a02a6e07e84a6545d224a104b5b66681ffa585c3"
+    },
+    "GA142": {
+      "view": "competitors",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9327227883544715,
+        "auprc": 0.49894835068147053,
+        "brier": 0.04373985528945923,
+        "logloss": 0.1442890465259552,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24101
+      },
+      "fit_seconds": 0.19481600006110966,
+      "cpu_seconds": 0.12101289990823716,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA142.pt",
+      "sha256": "465a32e32d3252f9d8c0915c3424725b6e19d9d257a192514009b21faf79f9d5"
+    },
+    "GA143": {
+      "view": "competitors",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328586132374673,
+        "auprc": 0.5000247945983727,
+        "brier": 0.04370666667819023,
+        "logloss": 0.14416874945163727,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24104
+      },
+      "fit_seconds": 0.2001581999938935,
+      "cpu_seconds": 0.11659180000424385,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA143.pt",
+      "sha256": "ed82b7cac8fa6a44d74b1042045ac83533c6466b7c60fbc389744e0da6a9244b"
+    },
+    "GA144": {
+      "view": "competitors",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.932809671010395,
+        "auprc": 0.49994027286340664,
+        "brier": 0.043718330562114716,
+        "logloss": 0.1441921889781952,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24043
+      },
+      "fit_seconds": 0.18186480004806072,
+      "cpu_seconds": 0.13512019999325275,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA144.pt",
+      "sha256": "8e98386bfb5ceee77a8380cb0c1a512e8aa39fe4569113c3ba741a0ba2a14a1a"
+    },
+    "GA145": {
+      "view": "competitors",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328368237062326,
+        "auprc": 0.5001781567843068,
+        "brier": 0.04370854049921036,
+        "logloss": 0.14416955411434174,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24089
+      },
+      "fit_seconds": 0.1687618000432849,
+      "cpu_seconds": 0.1252709999680519,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA145.pt",
+      "sha256": "275ee7d59a31a0892bc2c513ec50a5c638fa02dc9348f420787586a88fe48550"
+    },
+    "GA146": {
+      "view": "competitors",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9327765967484783,
+        "auprc": 0.5000678793555613,
+        "brier": 0.0437387190759182,
+        "logloss": 0.14423856139183044,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23960
+      },
+      "fit_seconds": 0.2364961999701336,
+      "cpu_seconds": 0.12154580000787973,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA146.pt",
+      "sha256": "c4b0c83a9cc0caea3fc529653037499bd50e16a8a817eae5d1a6ef3a36827468"
+    },
+    "GA147": {
+      "view": "competitors",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328126984555793,
+        "auprc": 0.499012403161425,
+        "brier": 0.043724846094846725,
+        "logloss": 0.1442359834909439,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23990
+      },
+      "fit_seconds": 0.23159250000026077,
+      "cpu_seconds": 0.1312029999680817,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA147.pt",
+      "sha256": "9046e76b5ff9ca8b98a6458ce84228d04d321e667cad1d59e018c7a71164e391"
+    },
+    "GA148": {
+      "view": "competitors",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328474184073874,
+        "auprc": 0.500067540521818,
+        "brier": 0.043707385659217834,
+        "logloss": 0.1441391557455063,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24100
+      },
+      "fit_seconds": 0.29754120006691664,
+      "cpu_seconds": 0.13262579997535795,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA148.pt",
+      "sha256": "772c3554ec269d35fd4e99ae78a7fe9878c62f7fa9971cd03936545357bac6d1"
+    },
+    "GA149": {
+      "view": "competitors",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9327957659315952,
+        "auprc": 0.4998267690357526,
+        "brier": 0.04371882602572441,
+        "logloss": 0.14419159293174744,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24127
+      },
+      "fit_seconds": 0.25668749993201345,
+      "cpu_seconds": 0.1365985000738874,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA149.pt",
+      "sha256": "cb58819746183fbd3c062deb6d16f511f354f742a987b588e8b16f34d3619126"
+    },
+    "GA150": {
+      "view": "competitors",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9327767965652883,
+        "auprc": 0.49948670848749377,
+        "brier": 0.0437399186193943,
+        "logloss": 0.14423677325248718,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24013
+      },
+      "fit_seconds": 0.22732089995406568,
+      "cpu_seconds": 0.12549420003779233,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA150.pt",
+      "sha256": "b2970c463cfc565020f6cf03e2756665e115de6218636cd6fb74c64d87212c23"
+    },
+    "GA151": {
+      "view": "combined",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328481488073741,
+        "auprc": 0.49988731248772034,
+        "brier": 0.04370955377817154,
+        "logloss": 0.14419786632061005,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24075
+      },
+      "fit_seconds": 0.16638790001161397,
+      "cpu_seconds": 0.10130879993084818,
+      "gpu_peak": 32822272,
+      "checkpoint": "GA151.pt",
+      "sha256": "701a917fd6fee9a63b4e1767326aa7b1cf947d7dbaf0ec2dbd4f0e3b5b9bd61f"
+    },
+    "GA152": {
+      "view": "combined",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328520586354497,
+        "auprc": 0.49999792042197605,
+        "brier": 0.043707095086574554,
+        "logloss": 0.14417119324207306,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24114
+      },
+      "fit_seconds": 0.18047629995271564,
+      "cpu_seconds": 0.11542619997635484,
+      "gpu_peak": 32822272,
+      "checkpoint": "GA152.pt",
+      "sha256": "27452ee9d709fe8c6678ea51a85c6c7e1e7353dd00d03e91a8d4149a9b58e22f"
+    },
+    "GA153": {
+      "view": "combined",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328442589949041,
+        "auprc": 0.5000719805490098,
+        "brier": 0.0437082014977932,
+        "logloss": 0.1441618949174881,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24108
+      },
+      "fit_seconds": 0.19614880008157343,
+      "cpu_seconds": 0.10705089999828488,
+      "gpu_peak": 33581056,
+      "checkpoint": "GA153.pt",
+      "sha256": "bd9e6d1516a3f61f5ac171a5f57fc4381e155338548e9316b05b570f9fce1c4d"
+    },
+    "GA154": {
+      "view": "combined",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328548794788726,
+        "auprc": 0.5000298023028441,
+        "brier": 0.04370592162013054,
+        "logloss": 0.144189715385437,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24100
+      },
+      "fit_seconds": 0.15195319999475032,
+      "cpu_seconds": 0.12099069997202605,
+      "gpu_peak": 33146368,
+      "checkpoint": "GA154.pt",
+      "sha256": "81491d03d972c2dd33298cb3e4f3d0888b8e34db4d1e8dbf71b1519766622e5b"
+    },
+    "GA155": {
+      "view": "combined",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328405316820131,
+        "auprc": 0.500094120105919,
+        "brier": 0.043714653700590134,
+        "logloss": 0.14418037235736847,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24110
+      },
+      "fit_seconds": 0.16555569996125996,
+      "cpu_seconds": 0.11123000003863126,
+      "gpu_peak": 32822272,
+      "checkpoint": "GA155.pt",
+      "sha256": "a29405f5d3be7a17a2cb3099a75f8ea5edbfd8e1f345f1a851d086e3acd0b087"
+    },
+    "GA156": {
+      "view": "combined",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328238610571415,
+        "auprc": 0.4996580406659356,
+        "brier": 0.04371766000986099,
+        "logloss": 0.14421403408050537,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24080
+      },
+      "fit_seconds": 0.19520269997883588,
+      "cpu_seconds": 0.1075932999374345,
+      "gpu_peak": 33608704,
+      "checkpoint": "GA156.pt",
+      "sha256": "2177cf516bf29a720611b76ba1c682c1ca40c1febb131370c9af840e37fd3257"
+    },
+    "GA157": {
+      "view": "combined",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328289202559351,
+        "auprc": 0.499586363208578,
+        "brier": 0.04372634366154671,
+        "logloss": 0.14421558380126953,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24103
+      },
+      "fit_seconds": 0.2295099999755621,
+      "cpu_seconds": 0.1116712000221014,
+      "gpu_peak": 33608704,
+      "checkpoint": "GA157.pt",
+      "sha256": "d374b388d61ca4e68cfbb53302827cae763040d15b9e2bbc8c0b9e7a0a5b9ba0"
+    },
+    "GA158": {
+      "view": "combined",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328557733961812,
+        "auprc": 0.4999444105796357,
+        "brier": 0.043712761253118515,
+        "logloss": 0.14421002566814423,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24130
+      },
+      "fit_seconds": 0.30018020002171397,
+      "cpu_seconds": 0.11747349996585399,
+      "gpu_peak": 33608704,
+      "checkpoint": "GA158.pt",
+      "sha256": "879fd5a507e141cd5ae709d5a943192fc19cd9bf617e66a159a1fd0765ae10d7"
+    },
+    "GA159": {
+      "view": "combined",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328455040334324,
+        "auprc": 0.4997202445355048,
+        "brier": 0.04372940957546234,
+        "logloss": 0.14423981308937073,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24088
+      },
+      "fit_seconds": 0.2144115000264719,
+      "cpu_seconds": 0.13213319994974881,
+      "gpu_peak": 33608704,
+      "checkpoint": "GA159.pt",
+      "sha256": "2b332cb9c880dbcb2ef3288be93bd63c9ce9cee7e177b8e399457605c2120c94"
+    },
+    "GA160": {
+      "view": "combined",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328389077039655,
+        "auprc": 0.4997533842708731,
+        "brier": 0.04371555149555206,
+        "logloss": 0.14420387148857117,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24096
+      },
+      "fit_seconds": 0.20214930002111942,
+      "cpu_seconds": 0.11025309993419796,
+      "gpu_peak": 33608704,
+      "checkpoint": "GA160.pt",
+      "sha256": "5c34bc5b172905cc9954450105e0359188b3c928403d2f3d055379271661ab5d"
+    },
+    "GA161": {
+      "view": "combined",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328465217760984,
+        "auprc": 0.5001525120819821,
+        "brier": 0.043713703751564026,
+        "logloss": 0.14418624341487885,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24106
+      },
+      "fit_seconds": 0.17082190001383424,
+      "cpu_seconds": 0.11589190002996475,
+      "gpu_peak": 33084416,
+      "checkpoint": "GA161.pt",
+      "sha256": "c9da00b2066da5b9ad130459081b07cd1366c2a001d73fdfab85dbf11c0e3044"
+    },
+    "GA162": {
+      "view": "combined",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328498779521637,
+        "auprc": 0.5000920560315877,
+        "brier": 0.04370416700839996,
+        "logloss": 0.144182950258255,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24086
+      },
+      "fit_seconds": 0.2044653999619186,
+      "cpu_seconds": 0.11108990001957864,
+      "gpu_peak": 33084416,
+      "checkpoint": "GA162.pt",
+      "sha256": "b0bc24db667258628882322eae76e31dc15c7eea819c86c6451e4dfefc794d9d"
+    },
+    "GA163": {
+      "view": "combined",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328505377886589,
+        "auprc": 0.4999758506632792,
+        "brier": 0.043713364750146866,
+        "logloss": 0.1441752016544342,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24094
+      },
+      "fit_seconds": 0.199660399928689,
+      "cpu_seconds": 0.1128624000120908,
+      "gpu_peak": 33597440,
+      "checkpoint": "GA163.pt",
+      "sha256": "cb0db62aa381e431cf2914d0d8572116023bb8c0c37abe4ba5f8cc857b278c69"
+    },
+    "GA164": {
+      "view": "combined",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328535771075077,
+        "auprc": 0.5000513619115866,
+        "brier": 0.04371042549610138,
+        "logloss": 0.14418219029903412,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24100
+      },
+      "fit_seconds": 0.18542939994949847,
+      "cpu_seconds": 0.11621839995495975,
+      "gpu_peak": 33162752,
+      "checkpoint": "GA164.pt",
+      "sha256": "0b9968d5f6355ae50ec6cb155c5ee6531f698db7835d6dfb3b222db043749257"
+    },
+    "GA165": {
+      "view": "combined",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328411918577558,
+        "auprc": 0.5001194024308377,
+        "brier": 0.04370832443237305,
+        "logloss": 0.144170343875885,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24077
+      },
+      "fit_seconds": 0.1903308000182733,
+      "cpu_seconds": 0.11411059997044504,
+      "gpu_peak": 33084416,
+      "checkpoint": "GA165.pt",
+      "sha256": "8e2ebe8f73fa26a065ed7daebf46ad6f411c1ca111a38d76ae4893812fa7de8a"
+    },
+    "GA166": {
+      "view": "combined",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328436754891087,
+        "auprc": 0.5001223800565108,
+        "brier": 0.04370585083961487,
+        "logloss": 0.14417137205600739,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24082
+      },
+      "fit_seconds": 0.15409450000151992,
+      "cpu_seconds": 0.11795580002944916,
+      "gpu_peak": 35154432,
+      "checkpoint": "GA166.pt",
+      "sha256": "300aa98e03cc8ee330fd44a60e90ffbb96693c0d52c85453593583b4713154aa"
+    },
+    "GA167": {
+      "view": "combined",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328419714486381,
+        "auprc": 0.5001759940120873,
+        "brier": 0.043704092502593994,
+        "logloss": 0.144171804189682,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24056
+      },
+      "fit_seconds": 0.17319849994964898,
+      "cpu_seconds": 0.11435790010727942,
+      "gpu_peak": 35154432,
+      "checkpoint": "GA167.pt",
+      "sha256": "6876a60360bbf11d0c52c7369b34ec84e2ed1181ac057590ffb9665b1b0a8286"
+    },
+    "GA168": {
+      "view": "combined",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328651050786871,
+        "auprc": 0.5002380215672316,
+        "brier": 0.04370619356632233,
+        "logloss": 0.1441759467124939,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24133
+      },
+      "fit_seconds": 0.18885129992850125,
+      "cpu_seconds": 0.11634379997849464,
+      "gpu_peak": 35154432,
+      "checkpoint": "GA168.pt",
+      "sha256": "ab34d36e1148dcf843ff06a1d0601748486441167ecf371984d2b87e1a42d19c"
+    },
+    "GA169": {
+      "view": "combined",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328420304777126,
+        "auprc": 0.5002371373804615,
+        "brier": 0.04370300471782684,
+        "logloss": 0.144155353307724,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24129
+      },
+      "fit_seconds": 0.1693486999720335,
+      "cpu_seconds": 0.12377439998090267,
+      "gpu_peak": 35154432,
+      "checkpoint": "GA169.pt",
+      "sha256": "3625842c333fb6a2869c55a58613f0cfc01f4661ecedb4aa075cef58fc1caeaf"
+    },
+    "GA170": {
+      "view": "combined",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328431404957139,
+        "auprc": 0.5000307922116849,
+        "brier": 0.04370652511715889,
+        "logloss": 0.14417339861392975,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24082
+      },
+      "fit_seconds": 0.19562769995536655,
+      "cpu_seconds": 0.11536170006729662,
+      "gpu_peak": 35154432,
+      "checkpoint": "GA170.pt",
+      "sha256": "8c13d7897fe789aef0be2550fd618a17fb20c37292097e0a101bed0081c739ae"
+    },
+    "GA171": {
+      "view": "combined",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328352071916313,
+        "auprc": 0.5000924898015743,
+        "brier": 0.04370655119419098,
+        "logloss": 0.14417465031147003,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24128
+      },
+      "fit_seconds": 0.24706800002604723,
+      "cpu_seconds": 0.12141269992571324,
+      "gpu_peak": 36758528,
+      "checkpoint": "GA171.pt",
+      "sha256": "5177254264e750ed2aec5c516b2006d37ec2c7a34ee3d63bd876ccf21c4c8542"
+    },
+    "GA172": {
+      "view": "combined",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328405913895828,
+        "auprc": 0.4996126425913446,
+        "brier": 0.04371718317270279,
+        "logloss": 0.1441851258277893,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24094
+      },
+      "fit_seconds": 0.25986220000777394,
+      "cpu_seconds": 0.12687489995732903,
+      "gpu_peak": 36758528,
+      "checkpoint": "GA172.pt",
+      "sha256": "62c1ef6be7d58b4737f971201316650f422e539a41099bb6ab3dd63e6eea5dd4"
+    },
+    "GA173": {
+      "view": "combined",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328616454321171,
+        "auprc": 0.5000368549418241,
+        "brier": 0.04370516166090965,
+        "logloss": 0.14414235949516296,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24111
+      },
+      "fit_seconds": 0.25544259999878705,
+      "cpu_seconds": 0.1269187000580132,
+      "gpu_peak": 36758528,
+      "checkpoint": "GA173.pt",
+      "sha256": "667cba1464c2f8a4a6a5a70688e0ca19a3fef0a6f04f8678b55311cb258f26f7"
+    },
+    "GA174": {
+      "view": "combined",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328514008344398,
+        "auprc": 0.5001363070184783,
+        "brier": 0.043705105781555176,
+        "logloss": 0.14416050910949707,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24087
+      },
+      "fit_seconds": 0.2352080000564456,
+      "cpu_seconds": 0.13444449997041374,
+      "gpu_peak": 36758528,
+      "checkpoint": "GA174.pt",
+      "sha256": "540f09e1ef94d0d44dd21b688dc581fcf45718a9d8d4671c4731881a692a9265"
+    },
+    "GA175": {
+      "view": "combined",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328800204367071,
+        "auprc": 0.5004618338922942,
+        "brier": 0.04369984567165375,
+        "logloss": 0.1441483050584793,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24096
+      },
+      "fit_seconds": 0.22868479997850955,
+      "cpu_seconds": 0.12435569998342544,
+      "gpu_peak": 36758528,
+      "checkpoint": "GA175.pt",
+      "sha256": "8400455f63ed85c4b8521cab35f1e99442bd6a06761a32d54fce785882c5d4b6"
+    },
+    "GA176": {
+      "view": "straight",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328520820435313,
+        "auprc": 0.500037771446193,
+        "brier": 0.04370918869972229,
+        "logloss": 0.14418944716453552,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24101
+      },
+      "fit_seconds": 0.17312890000175685,
+      "cpu_seconds": 0.1049368999665603,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA176.pt",
+      "sha256": "0c14aa886f10d5670ed3d461aed7858c7890e5d908c173e311547c301d1f7628"
+    },
+    "GA177": {
+      "view": "straight",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328749707368452,
+        "auprc": 0.49997079016236606,
+        "brier": 0.04370561242103577,
+        "logloss": 0.1441933661699295,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24079
+      },
+      "fit_seconds": 0.1782971000066027,
+      "cpu_seconds": 0.11277809995226562,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA177.pt",
+      "sha256": "21f53ca540333c5c071d1a00f35d5bec8da9002b38a2a3bb0a04499017d8672e"
+    },
+    "GA178": {
+      "view": "straight",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328594379482745,
+        "auprc": 0.49992171235261734,
+        "brier": 0.04371413588523865,
+        "logloss": 0.14419026672840118,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24090
+      },
+      "fit_seconds": 0.18673309998121113,
+      "cpu_seconds": 0.11328599997796118,
+      "gpu_peak": 29110784,
+      "checkpoint": "GA178.pt",
+      "sha256": "194f2c1d5e60005c5d2c1ab92e429c8571ddc8055c0c0f3e528e96bdbd80d26a"
+    },
+    "GA179": {
+      "view": "straight",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328659603217743,
+        "auprc": 0.49997230481672816,
+        "brier": 0.043705664575099945,
+        "logloss": 0.1441737562417984,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24087
+      },
+      "fit_seconds": 0.1617707998957485,
+      "cpu_seconds": 0.13372440007515252,
+      "gpu_peak": 28680192,
+      "checkpoint": "GA179.pt",
+      "sha256": "933e29cd8cede73a6506382abaeacc960cf5c8ed235c770e7d5da6ec575c8782"
+    },
+    "GA180": {
+      "view": "straight",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328436035686268,
+        "auprc": 0.49958342184651694,
+        "brier": 0.043723851442337036,
+        "logloss": 0.14419040083885193,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24081
+      },
+      "fit_seconds": 0.15101509995292872,
+      "cpu_seconds": 0.1009665000019595,
+      "gpu_peak": 28627968,
+      "checkpoint": "GA180.pt",
+      "sha256": "64a9545fcb0fb61d588ff72fbb535c43c4653c6ce65ec6bf9c7166a81b160b6e"
+    },
+    "GA181": {
+      "view": "straight",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328359114695565,
+        "auprc": 0.5000356524352725,
+        "brier": 0.0437089242041111,
+        "logloss": 0.14423440396785736,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23992
+      },
+      "fit_seconds": 0.19076800008770078,
+      "cpu_seconds": 0.10583409992977977,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA181.pt",
+      "sha256": "ffd8957c1de02f91556b4dd069a7887b1e157ea6cb11744aeff2002719a2304a"
+    },
+    "GA182": {
+      "view": "straight",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328615344981667,
+        "auprc": 0.5000032263270716,
+        "brier": 0.04370422661304474,
+        "logloss": 0.14419814944267273,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24053
+      },
+      "fit_seconds": 0.2031636000610888,
+      "cpu_seconds": 0.12287309998646379,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA182.pt",
+      "sha256": "5970a7c926e34caa1430fa724ebce905f5693770fb314d13867d059e3fea7ee2"
+    },
+    "GA183": {
+      "view": "straight",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328497005256923,
+        "auprc": 0.49985382304684967,
+        "brier": 0.04371434822678566,
+        "logloss": 0.1441975086927414,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24065
+      },
+      "fit_seconds": 0.20511719991918653,
+      "cpu_seconds": 0.11769660003483295,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA183.pt",
+      "sha256": "4ad72e29ab1ed7cf7267db7cc47d078f8ded3004c5c3a049cc5df3a6b0a1be24"
+    },
+    "GA184": {
+      "view": "straight",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328311776091682,
+        "auprc": 0.4997677171551783,
+        "brier": 0.04372383654117584,
+        "logloss": 0.14424903690814972,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24054
+      },
+      "fit_seconds": 0.19637050002347678,
+      "cpu_seconds": 0.11713290004990995,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA184.pt",
+      "sha256": "b0cb31e73c5f288175d4676b3ce0dc8d5f98b8cfc6e69d4d3c239d94ad3c1545"
+    },
+    "GA185": {
+      "view": "straight",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328534125724433,
+        "auprc": 0.49997713305841035,
+        "brier": 0.043724749237298965,
+        "logloss": 0.1442233771085739,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24047
+      },
+      "fit_seconds": 0.17044129990972579,
+      "cpu_seconds": 0.10436900006607175,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA185.pt",
+      "sha256": "68325d5c3ea95bc1f0bdfcead0f2554c729b076a14d181a55059932672c963fa"
+    },
+    "GA186": {
+      "view": "straight",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328569495674557,
+        "auprc": 0.5000104082344796,
+        "brier": 0.04370782524347305,
+        "logloss": 0.14417359232902527,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24086
+      },
+      "fit_seconds": 0.16267039999365807,
+      "cpu_seconds": 0.10182440001517534,
+      "gpu_peak": 28890112,
+      "checkpoint": "GA186.pt",
+      "sha256": "595d9b9a092294b8527cd88cb63785dce08a9201e932f87d55d51b34ea78ae84"
+    },
+    "GA187": {
+      "view": "straight",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328321909416163,
+        "auprc": 0.49980875550726406,
+        "brier": 0.043739717453718185,
+        "logloss": 0.14422142505645752,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24087
+      },
+      "fit_seconds": 0.21315490000415593,
+      "cpu_seconds": 0.10682069999165833,
+      "gpu_peak": 28890112,
+      "checkpoint": "GA187.pt",
+      "sha256": "a761597d9e1ca82acad2fdde41f8461ee29b6641aae0b94d7f67fe65fd8a7f87"
+    },
+    "GA188": {
+      "view": "straight",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328286162901253,
+        "auprc": 0.49992371263311164,
+        "brier": 0.043742112815380096,
+        "logloss": 0.14422905445098877,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24103
+      },
+      "fit_seconds": 0.17221490002702922,
+      "cpu_seconds": 0.10469389997888356,
+      "gpu_peak": 29127168,
+      "checkpoint": "GA188.pt",
+      "sha256": "7b3f91a8b9068dd42c18421d9385c8f4b0dbf00f623e4e263871994d8c32735d"
+    },
+    "GA189": {
+      "view": "straight",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328536079790352,
+        "auprc": 0.4999115646000819,
+        "brier": 0.043710578233003616,
+        "logloss": 0.14416879415512085,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24074
+      },
+      "fit_seconds": 0.22999349993187934,
+      "cpu_seconds": 0.11434620001818985,
+      "gpu_peak": 28890112,
+      "checkpoint": "GA189.pt",
+      "sha256": "c1e2431a82b86ca15b88a07f5bd8030b0c2f2098567cd162c8d7360de9b00eff"
+    },
+    "GA190": {
+      "view": "straight",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328307847604993,
+        "auprc": 0.49974186238071144,
+        "brier": 0.04375004768371582,
+        "logloss": 0.1442262828350067,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24111
+      },
+      "fit_seconds": 0.1874126000329852,
+      "cpu_seconds": 0.10877429996617138,
+      "gpu_peak": 28890112,
+      "checkpoint": "GA190.pt",
+      "sha256": "04722f24242eb379cbaf869d97b089865eb793c2c16be6c06c4776f6fcccdc40"
+    },
+    "GA191": {
+      "view": "straight",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328545096990375,
+        "auprc": 0.49997071168576035,
+        "brier": 0.0437171570956707,
+        "logloss": 0.14419163763523102,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24038
+      },
+      "fit_seconds": 0.17012579995207489,
+      "cpu_seconds": 0.11511480004992336,
+      "gpu_peak": 30465024,
+      "checkpoint": "GA191.pt",
+      "sha256": "1db4ce5b45b488a59b5ee844ac4266d1ea94c27eae4c71040cc762fdf0d04e0a"
+    },
+    "GA192": {
+      "view": "straight",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328396567625677,
+        "auprc": 0.4998144924704164,
+        "brier": 0.04371483623981476,
+        "logloss": 0.14419446885585785,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24079
+      },
+      "fit_seconds": 0.18055479996837676,
+      "cpu_seconds": 0.11448460002429783,
+      "gpu_peak": 30465024,
+      "checkpoint": "GA192.pt",
+      "sha256": "f59d5a9506cab83ef7f62c6977da86607649c344cc0c8fff8b1b564c354b58e1"
+    },
+    "GA193": {
+      "view": "straight",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9327727371290407,
+        "auprc": 0.4994449831072551,
+        "brier": 0.04373984411358833,
+        "logloss": 0.14424817264080048,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24068
+      },
+      "fit_seconds": 0.18052599998191,
+      "cpu_seconds": 0.11540340003557503,
+      "gpu_peak": 30465024,
+      "checkpoint": "GA193.pt",
+      "sha256": "1c06e59e8ca93c56901b01df1bc2ab7be32ffdfbbd72a2db9998eb75930536e3"
+    },
+    "GA194": {
+      "view": "straight",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328562748040681,
+        "auprc": 0.49995582729563376,
+        "brier": 0.04370950162410736,
+        "logloss": 0.144174724817276,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24055
+      },
+      "fit_seconds": 0.20435959997121245,
+      "cpu_seconds": 0.13250190007966012,
+      "gpu_peak": 30465024,
+      "checkpoint": "GA194.pt",
+      "sha256": "d3b864714048f53cf037daa4f513dfc106abf900085ef7788e20f0c41b5476d5"
+    },
+    "GA195": {
+      "view": "straight",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9327844710234863,
+        "auprc": 0.4997733689484084,
+        "brier": 0.043733518570661545,
+        "logloss": 0.14422942698001862,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24007
+      },
+      "fit_seconds": 0.17782069998793304,
+      "cpu_seconds": 0.12063559994567186,
+      "gpu_peak": 30465024,
+      "checkpoint": "GA195.pt",
+      "sha256": "aa44028d4c53f23acba97d33183bd50f625eecf175a3a071ede024ea87c4cbd2"
+    },
+    "GA196": {
+      "view": "straight",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9327942861337585,
+        "auprc": 0.4996274420417883,
+        "brier": 0.043719422072172165,
+        "logloss": 0.14420460164546967,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24067
+      },
+      "fit_seconds": 0.23900089995004237,
+      "cpu_seconds": 0.13455810002051294,
+      "gpu_peak": 32564224,
+      "checkpoint": "GA196.pt",
+      "sha256": "1e61325b1d83bb888e515547b32f226b0cbe8f159bddcec367f9015591383292"
+    },
+    "GA197": {
+      "view": "straight",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.932778876831298,
+        "auprc": 0.49987240926927834,
+        "brier": 0.04373122751712799,
+        "logloss": 0.14425279200077057,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24006
+      },
+      "fit_seconds": 0.26766579994000494,
+      "cpu_seconds": 0.13722130004316568,
+      "gpu_peak": 32564224,
+      "checkpoint": "GA197.pt",
+      "sha256": "20ee1e46245f21c548cb298ed5ff00a21de1f201e18c3361fc70ce87198c6c13"
+    },
+    "GA198": {
+      "view": "straight",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9327215626530542,
+        "auprc": 0.49883981910180347,
+        "brier": 0.043757032603025436,
+        "logloss": 0.14428941905498505,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24046
+      },
+      "fit_seconds": 0.22567720001097769,
+      "cpu_seconds": 0.12770729989279062,
+      "gpu_peak": 32564224,
+      "checkpoint": "GA198.pt",
+      "sha256": "25c5c54e7c95eea73b5b873f19a5fcbd065428c930af74ebac7b0700f31105e3"
+    },
+    "GA199": {
+      "view": "straight",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328335319872029,
+        "auprc": 0.4997773927389673,
+        "brier": 0.04372773692011833,
+        "logloss": 0.14421819150447845,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23988
+      },
+      "fit_seconds": 0.2650409999769181,
+      "cpu_seconds": 0.14097180007956922,
+      "gpu_peak": 32564224,
+      "checkpoint": "GA199.pt",
+      "sha256": "b0a8f063420297f50df988f7fe352271b48123a37b9043a15c16cd39002919c3"
+    },
+    "GA200": {
+      "view": "straight",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.932815885007867,
+        "auprc": 0.4998831577353967,
+        "brier": 0.043720319867134094,
+        "logloss": 0.14420363306999207,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24001
+      },
+      "fit_seconds": 0.2626103999791667,
+      "cpu_seconds": 0.12166950001846999,
+      "gpu_peak": 32564224,
+      "checkpoint": "GA200.pt",
+      "sha256": "aab8fec1e1fd5eb1dc7421af2093897d3ad710ade8c2522942c0755af0099cb7"
+    },
+    "GA201": {
+      "view": "detour",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328390026932809,
+        "auprc": 0.4995048505326124,
+        "brier": 0.04371869936585426,
+        "logloss": 0.1441928893327713,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24067
+      },
+      "fit_seconds": 0.16450780001468956,
+      "cpu_seconds": 0.10234770004171878,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA201.pt",
+      "sha256": "ddb127ccd343e4e2331be6414baf1a0e93484748bd5638b1cf8afb1f5a652cbd"
+    },
+    "GA202": {
+      "view": "detour",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328546440410693,
+        "auprc": 0.49997577081753747,
+        "brier": 0.04371282085776329,
+        "logloss": 0.14417068660259247,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24105
+      },
+      "fit_seconds": 0.1681550000794232,
+      "cpu_seconds": 0.10469089995604008,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA202.pt",
+      "sha256": "8047bb95a186b44f502c407428bd59410caa8c14b69f6581b0b3ad4339fb9259"
+    },
+    "GA203": {
+      "view": "detour",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328490464564057,
+        "auprc": 0.49970325349838435,
+        "brier": 0.043716832995414734,
+        "logloss": 0.14418546855449677,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24078
+      },
+      "fit_seconds": 0.19382200005929917,
+      "cpu_seconds": 0.10224639996886253,
+      "gpu_peak": 31067136,
+      "checkpoint": "GA203.pt",
+      "sha256": "2f2636e46e3b822d07b5793033c08ecef668cdf1110ef607814191c11632689a"
+    },
+    "GA204": {
+      "view": "detour",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328420603314975,
+        "auprc": 0.49952264878267716,
+        "brier": 0.04371420294046402,
+        "logloss": 0.1441672444343567,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24099
+      },
+      "fit_seconds": 0.19852360000368208,
+      "cpu_seconds": 0.11179049999918789,
+      "gpu_peak": 30634496,
+      "checkpoint": "GA204.pt",
+      "sha256": "5dc3613ec24e36593db862a36c3e339b48c120332f33f55b9c3df38e64d18430"
+    },
+    "GA205": {
+      "view": "detour",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328494929061883,
+        "auprc": 0.4996150534164422,
+        "brier": 0.04373321309685707,
+        "logloss": 0.14420674741268158,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24099
+      },
+      "fit_seconds": 0.18583959992974997,
+      "cpu_seconds": 0.11232780001591891,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA205.pt",
+      "sha256": "f9401812347daf42756a100b790d33a0047f44151ade933a875216d989a46ab8"
+    },
+    "GA206": {
+      "view": "detour",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328583482851266,
+        "auprc": 0.5002651250993861,
+        "brier": 0.043702632188797,
+        "logloss": 0.14420916140079498,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23991
+      },
+      "fit_seconds": 0.21383390005212277,
+      "cpu_seconds": 0.10565859999042004,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA206.pt",
+      "sha256": "a6406c3dbec147a5a74bbe28946cf50743d8e70e13c57896285b5a4c07f21e90"
+    },
+    "GA207": {
+      "view": "detour",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328239872572321,
+        "auprc": 0.5000538500647798,
+        "brier": 0.04370877519249916,
+        "logloss": 0.1442335546016693,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23960
+      },
+      "fit_seconds": 0.18968389998190105,
+      "cpu_seconds": 0.11285779997706413,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA207.pt",
+      "sha256": "c52d4f696ce33a94191b28de02ee9875f86999d10c9e53e2cc1e5bdd6f953dc2"
+    },
+    "GA208": {
+      "view": "detour",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328185179081443,
+        "auprc": 0.49956596664590275,
+        "brier": 0.04371270909905434,
+        "logloss": 0.14419223368167877,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24036
+      },
+      "fit_seconds": 0.19818239996675402,
+      "cpu_seconds": 0.1112006000475958,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA208.pt",
+      "sha256": "9755daaa93bf8c0e90699155124e4cb100dbdf15c7403e69b0081fe72e107609"
+    },
+    "GA209": {
+      "view": "detour",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328587031380696,
+        "auprc": 0.4999768725128971,
+        "brier": 0.043702684342861176,
+        "logloss": 0.14419704675674438,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24058
+      },
+      "fit_seconds": 0.2508478000527248,
+      "cpu_seconds": 0.1273586000315845,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA209.pt",
+      "sha256": "2e55fc914c4438470a49ff5d17704a20e5f7a143bba5bfcdf59ad9a5d3d36c24"
+    },
+    "GA210": {
+      "view": "detour",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328143414314898,
+        "auprc": 0.49993981553317207,
+        "brier": 0.04371490702033043,
+        "logloss": 0.1442427635192871,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24039
+      },
+      "fit_seconds": 0.17291469988413155,
+      "cpu_seconds": 0.10698800010140985,
+      "gpu_peak": 31249408,
+      "checkpoint": "GA210.pt",
+      "sha256": "6dcb185a0d727e0519d0b21d711c93a48116daa991b68bcb0d6fc41b079577c2"
+    },
+    "GA211": {
+      "view": "detour",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328302453568863,
+        "auprc": 0.499458070669512,
+        "brier": 0.04372674971818924,
+        "logloss": 0.1442132294178009,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24076
+      },
+      "fit_seconds": 0.16817789990454912,
+      "cpu_seconds": 0.10617600008845329,
+      "gpu_peak": 30725120,
+      "checkpoint": "GA211.pt",
+      "sha256": "aad33bc64efb27e6d56cc29938677b7236aba94e3eb83dc83089f1be100cff40"
+    },
+    "GA212": {
+      "view": "detour",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328514781828825,
+        "auprc": 0.4999635628242474,
+        "brier": 0.043709900230169296,
+        "logloss": 0.1441716104745865,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24086
+      },
+      "fit_seconds": 0.18119000003207475,
+      "cpu_seconds": 0.11077350005507469,
+      "gpu_peak": 30725120,
+      "checkpoint": "GA212.pt",
+      "sha256": "149df91b585da64d6804ee464ea4e9cbf396f27d6a5bb3881ea3d95ba334e44b"
+    },
+    "GA213": {
+      "view": "detour",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328397666787756,
+        "auprc": 0.4998531295713134,
+        "brier": 0.04373463988304138,
+        "logloss": 0.14420515298843384,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24111
+      },
+      "fit_seconds": 0.20049750001635402,
+      "cpu_seconds": 0.11983079998753965,
+      "gpu_peak": 31083520,
+      "checkpoint": "GA213.pt",
+      "sha256": "c4ac89e729c9633c70b16110c50e2f533b5e859f64aa01dbec496e10572404c7"
+    },
+    "GA214": {
+      "view": "detour",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328448316447775,
+        "auprc": 0.49956281132539887,
+        "brier": 0.04371659830212593,
+        "logloss": 0.14417831599712372,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24096
+      },
+      "fit_seconds": 0.19318529998417944,
+      "cpu_seconds": 0.12006149999797344,
+      "gpu_peak": 30725120,
+      "checkpoint": "GA214.pt",
+      "sha256": "c45a3a0dede032386979c1d41ef343a4c7ee1cfc25611a12de18370b588c4eb6"
+    },
+    "GA215": {
+      "view": "detour",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328267561957794,
+        "auprc": 0.499820503024849,
+        "brier": 0.04373227804899216,
+        "logloss": 0.14419560134410858,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24113
+      },
+      "fit_seconds": 0.16962479997891933,
+      "cpu_seconds": 0.10492740001063794,
+      "gpu_peak": 30725120,
+      "checkpoint": "GA215.pt",
+      "sha256": "db9fc507bab10d209de28b36addc19c79750b21caf41e37c2bdc1df625535306"
+    },
+    "GA216": {
+      "view": "detour",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328390990395866,
+        "auprc": 0.4996118822125755,
+        "brier": 0.04371969774365425,
+        "logloss": 0.14420366287231445,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24112
+      },
+      "fit_seconds": 0.15201159997377545,
+      "cpu_seconds": 0.11274819995742291,
+      "gpu_peak": 32795136,
+      "checkpoint": "GA216.pt",
+      "sha256": "e9cbbe65c52516ce1dacf3904a17927ca27e9bdff10689eaa31d75e65e192dce"
+    },
+    "GA217": {
+      "view": "detour",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328429630692425,
+        "auprc": 0.5001308994626089,
+        "brier": 0.04370803013443947,
+        "logloss": 0.14417658746242523,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24075
+      },
+      "fit_seconds": 0.17098619998432696,
+      "cpu_seconds": 0.12514690007083118,
+      "gpu_peak": 32795136,
+      "checkpoint": "GA217.pt",
+      "sha256": "ef607856c7001b957e46748561b7268c7b1c401a4d261c9dd053521e01fbaa0e"
+    },
+    "GA218": {
+      "view": "detour",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328340968343825,
+        "auprc": 0.4999211362027554,
+        "brier": 0.043709587305784225,
+        "logloss": 0.14415989816188812,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24100
+      },
+      "fit_seconds": 0.18648020003456622,
+      "cpu_seconds": 0.11626659997273237,
+      "gpu_peak": 32795136,
+      "checkpoint": "GA218.pt",
+      "sha256": "84278e56d4523cc217c1d2d70bf04809e2664cd621cd2c48242fe8da586746f5"
+    },
+    "GA219": {
+      "view": "detour",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328291729953638,
+        "auprc": 0.49947662886710287,
+        "brier": 0.0437350757420063,
+        "logloss": 0.14423824846744537,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24098
+      },
+      "fit_seconds": 0.1752272000303492,
+      "cpu_seconds": 0.1292565999319777,
+      "gpu_peak": 32795136,
+      "checkpoint": "GA219.pt",
+      "sha256": "3d3faa83c96b13e47350bed987056b5e5404ccc2f10f77585eacd97b04c8075c"
+    },
+    "GA220": {
+      "view": "detour",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9327916695173637,
+        "auprc": 0.49956482255899476,
+        "brier": 0.043734729290008545,
+        "logloss": 0.14422959089279175,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24033
+      },
+      "fit_seconds": 0.1587919999146834,
+      "cpu_seconds": 0.11318200000096112,
+      "gpu_peak": 32795136,
+      "checkpoint": "GA220.pt",
+      "sha256": "bad5cc3e31e4c61dd06042e7d4d09c81f7412e8b4a1d5cab8f5384097d555bf7"
+    },
+    "GA221": {
+      "view": "detour",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328388578345748,
+        "auprc": 0.4997250574783879,
+        "brier": 0.0437132902443409,
+        "logloss": 0.144195556640625,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24035
+      },
+      "fit_seconds": 0.21860530006233603,
+      "cpu_seconds": 0.12436299992259592,
+      "gpu_peak": 34399232,
+      "checkpoint": "GA221.pt",
+      "sha256": "58e38b859e3a6e505da88b61d67c3872dc932b4321b0d6d430c4a445cb6d1196"
+    },
+    "GA222": {
+      "view": "detour",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328359813545527,
+        "auprc": 0.4998219116475108,
+        "brier": 0.043722860515117645,
+        "logloss": 0.14421510696411133,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24133
+      },
+      "fit_seconds": 0.27229110000189394,
+      "cpu_seconds": 0.12461389997042716,
+      "gpu_peak": 34399232,
+      "checkpoint": "GA222.pt",
+      "sha256": "4fc996bf7049b6fc44c06addfa5ea37f5ad7704536eb21c93f5feb5db7f1a6d4"
+    },
+    "GA223": {
+      "view": "detour",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328264868332202,
+        "auprc": 0.4997159210141008,
+        "brier": 0.043713103979825974,
+        "logloss": 0.1441827267408371,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24107
+      },
+      "fit_seconds": 0.2308267999906093,
+      "cpu_seconds": 0.12757359992247075,
+      "gpu_peak": 34399232,
+      "checkpoint": "GA223.pt",
+      "sha256": "9b72f47601c3d5a2e65d248fba48a61e66d80fc89b64e2d95eabe0e174c6a433"
+    },
+    "GA224": {
+      "view": "detour",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328047912735585,
+        "auprc": 0.5001568723953577,
+        "brier": 0.043712276965379715,
+        "logloss": 0.14420926570892334,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24143
+      },
+      "fit_seconds": 0.26168809994123876,
+      "cpu_seconds": 0.1484554000198841,
+      "gpu_peak": 34399232,
+      "checkpoint": "GA224.pt",
+      "sha256": "d8df9653c47dae0323ea0111de33c184f207215ed2b6d8883523141a7c0b18e1"
+    },
+    "GA225": {
+      "view": "detour",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.932801578599209,
+        "auprc": 0.499472577013881,
+        "brier": 0.04372898116707802,
+        "logloss": 0.1442253440618515,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24045
+      },
+      "fit_seconds": 0.26110670005436987,
+      "cpu_seconds": 0.12659889995120466,
+      "gpu_peak": 34399232,
+      "checkpoint": "GA225.pt",
+      "sha256": "034755095ea4cd4cd0c3f6e845214eec9e17b816897c1b5ee02f44bd8a4cb7b1"
+    },
+    "GA226": {
+      "view": "anisotropy",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328633738984119,
+        "auprc": 0.5001314171048354,
+        "brier": 0.04370637983083725,
+        "logloss": 0.14418838918209076,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24092
+      },
+      "fit_seconds": 0.15276000008452684,
+      "cpu_seconds": 0.10315699991770089,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA226.pt",
+      "sha256": "ac0b03cfa4afb3aadc95db6e8fe6942c080a4ff0e03167a3ec515dc1331edf4a"
+    },
+    "GA227": {
+      "view": "anisotropy",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328479591679906,
+        "auprc": 0.49999518488541833,
+        "brier": 0.04370969533920288,
+        "logloss": 0.14420166611671448,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24089
+      },
+      "fit_seconds": 0.18283920001704246,
+      "cpu_seconds": 0.10360189992934465,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA227.pt",
+      "sha256": "b1b4abc605771fe4d51984c5e4182318733eb8011989dccdf2a7b9b64f4fa653"
+    },
+    "GA228": {
+      "view": "anisotropy",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328472786373945,
+        "auprc": 0.499934155006118,
+        "brier": 0.043713100254535675,
+        "logloss": 0.1442011296749115,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24087
+      },
+      "fit_seconds": 0.18000360007863492,
+      "cpu_seconds": 0.10667999996803701,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA228.pt",
+      "sha256": "bf103e28fc49b68ee3225318bf0f1ba898e46192ffa3576669ec3a15b1a563cd"
+    },
+    "GA229": {
+      "view": "anisotropy",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328596811887716,
+        "auprc": 0.5000549295190998,
+        "brier": 0.043712008744478226,
+        "logloss": 0.1442120224237442,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24086
+      },
+      "fit_seconds": 0.19288250000681728,
+      "cpu_seconds": 0.11545200005639344,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA229.pt",
+      "sha256": "d6f59038ff15de3fdb3de998f9dbdd8d0c30c761385be187f6f14ecf11055cbd"
+    },
+    "GA230": {
+      "view": "anisotropy",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328349005118413,
+        "auprc": 0.4997955731259559,
+        "brier": 0.043714236468076706,
+        "logloss": 0.14418134093284607,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24068
+      },
+      "fit_seconds": 0.1794029000448063,
+      "cpu_seconds": 0.1300857999594882,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA230.pt",
+      "sha256": "dbd9824e3c6ebaee2fbd5664117b87fa6ec5deecabdc4c5bd773568e5a1dfada"
+    },
+    "GA231": {
+      "view": "anisotropy",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328288717435345,
+        "auprc": 0.5000221532151282,
+        "brier": 0.043718185275793076,
+        "logloss": 0.1442602574825287,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23957
+      },
+      "fit_seconds": 0.19905709999147803,
+      "cpu_seconds": 0.11381010001059622,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA231.pt",
+      "sha256": "db55052fd3850c885ca510672c0852e7e3588d93741343e8e73dd9a93cf0d084"
+    },
+    "GA232": {
+      "view": "anisotropy",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328269733142146,
+        "auprc": 0.4998976803948266,
+        "brier": 0.04371752217411995,
+        "logloss": 0.14423152804374695,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23982
+      },
+      "fit_seconds": 0.2043399999383837,
+      "cpu_seconds": 0.11017350002657622,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA232.pt",
+      "sha256": "8fce4c89d3e6a1d6a0ec491f578330899b423f597d88cb92377707e6b4d9f968"
+    },
+    "GA233": {
+      "view": "anisotropy",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328443526272293,
+        "auprc": 0.4998957364263162,
+        "brier": 0.04371175915002823,
+        "logloss": 0.14419424533843994,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24102
+      },
+      "fit_seconds": 0.21163220005109906,
+      "cpu_seconds": 0.1197916999226436,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA233.pt",
+      "sha256": "7018b974c432b77d210777093f0e98e892a44952b1803425aa81da85d59d2abc"
+    },
+    "GA234": {
+      "view": "anisotropy",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328275269662248,
+        "auprc": 0.49997748581277895,
+        "brier": 0.04371583089232445,
+        "logloss": 0.1442425549030304,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24034
+      },
+      "fit_seconds": 0.2083497999701649,
+      "cpu_seconds": 0.12749230000190437,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA234.pt",
+      "sha256": "24a12ea5714a6d88b7f60936a578e739c7e3b29d5d50717ddbadddfc727ef9c5"
+    },
+    "GA235": {
+      "view": "anisotropy",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328263901476668,
+        "auprc": 0.499661825929994,
+        "brier": 0.04373007267713547,
+        "logloss": 0.14423170685768127,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24039
+      },
+      "fit_seconds": 0.18054029997438192,
+      "cpu_seconds": 0.1100588000845164,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA235.pt",
+      "sha256": "97d296b2bfbb7353aba1cdc4de6f136594f3c611dc4a29ab854d39baee7b6d5d"
+    },
+    "GA236": {
+      "view": "anisotropy",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328178288963593,
+        "auprc": 0.4996963084108969,
+        "brier": 0.043722499161958694,
+        "logloss": 0.14421232044696808,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24073
+      },
+      "fit_seconds": 0.1837615999393165,
+      "cpu_seconds": 0.10802240006159991,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA236.pt",
+      "sha256": "6339ec46cc5954cef3abeb2beae840d633370351bebb1d9b85d614418a74daef"
+    },
+    "GA237": {
+      "view": "anisotropy",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9327793619553021,
+        "auprc": 0.4996406909210225,
+        "brier": 0.04373873397707939,
+        "logloss": 0.1442495733499527,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24083
+      },
+      "fit_seconds": 0.19814490003045648,
+      "cpu_seconds": 0.10950479994062334,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA237.pt",
+      "sha256": "02b2c9b50dae753d87f39b16ad6e5997168af667df89173f8b77212a9916fc6a"
+    },
+    "GA238": {
+      "view": "anisotropy",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328187414722834,
+        "auprc": 0.49982611660009396,
+        "brier": 0.043721795082092285,
+        "logloss": 0.14419351518154144,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24112
+      },
+      "fit_seconds": 0.20681670005433261,
+      "cpu_seconds": 0.11502499994821846,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA238.pt",
+      "sha256": "8f78c19d6e80585d98f19992a76f67a050123794ea0da56c023536ee57698e0e"
+    },
+    "GA239": {
+      "view": "anisotropy",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328089378964279,
+        "auprc": 0.4996094027859946,
+        "brier": 0.04372921958565712,
+        "logloss": 0.14421619474887848,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24078
+      },
+      "fit_seconds": 0.19497269997373223,
+      "cpu_seconds": 0.12051950010936707,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA239.pt",
+      "sha256": "841be15719fbc360e1ff2a1f5d854a382b15ed3ee109fd7a3816e86dfa0e92d2"
+    },
+    "GA240": {
+      "view": "anisotropy",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328119069910327,
+        "auprc": 0.49976354852582927,
+        "brier": 0.043735433369874954,
+        "logloss": 0.14422547817230225,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24124
+      },
+      "fit_seconds": 0.19237399997655302,
+      "cpu_seconds": 0.10824970004614443,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA240.pt",
+      "sha256": "3cd3062230bb8370bdc9a7ab1f87c2e0a7d7e9d74145c90b9b86c30d7bf1b90a"
+    },
+    "GA241": {
+      "view": "anisotropy",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328109611688482,
+        "auprc": 0.4996557810462993,
+        "brier": 0.04372217506170273,
+        "logloss": 0.14420679211616516,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24071
+      },
+      "fit_seconds": 0.17371000000275671,
+      "cpu_seconds": 0.12167339993175119,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA241.pt",
+      "sha256": "54edfeaa0a332e47c56be0ca9716cc4aec1db67b4973ae8719231f6eb84d25bb"
+    },
+    "GA242": {
+      "view": "anisotropy",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328440869963934,
+        "auprc": 0.49986802958382853,
+        "brier": 0.043711669743061066,
+        "logloss": 0.1441826969385147,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24042
+      },
+      "fit_seconds": 0.18213609990198165,
+      "cpu_seconds": 0.12244659999851137,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA242.pt",
+      "sha256": "d97e1b362cbddc621888c5dcc1f1b49ce0494d3c0cc273c186e8b7c291a98d42"
+    },
+    "GA243": {
+      "view": "anisotropy",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9327750938818079,
+        "auprc": 0.4997451497762451,
+        "brier": 0.043734319508075714,
+        "logloss": 0.14425356686115265,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24065
+      },
+      "fit_seconds": 0.1816316000185907,
+      "cpu_seconds": 0.12607309990562499,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA243.pt",
+      "sha256": "7037dc284acb4ae524a05c4f01e1876fe843a73e00eed15fd3ca29600ca08623"
+    },
+    "GA244": {
+      "view": "anisotropy",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328175822633867,
+        "auprc": 0.4996298730827155,
+        "brier": 0.04372112452983856,
+        "logloss": 0.14420457184314728,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24112
+      },
+      "fit_seconds": 0.18184990005102009,
+      "cpu_seconds": 0.1396685999352485,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA244.pt",
+      "sha256": "014d043de84183997f950f189264fc587b4aac06eb932652dedbee602942c41a"
+    },
+    "GA245": {
+      "view": "anisotropy",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.93277685186264,
+        "auprc": 0.49985940398951323,
+        "brier": 0.04373931512236595,
+        "logloss": 0.14424283802509308,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24044
+      },
+      "fit_seconds": 0.1821861999342218,
+      "cpu_seconds": 0.11993709998205304,
+      "gpu_peak": 31746560,
+      "checkpoint": "GA245.pt",
+      "sha256": "c6de792754df5fbc153721f600da85373abff0926aa8ae9fc1f2be3501c46345"
+    },
+    "GA246": {
+      "view": "anisotropy",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9327551634271769,
+        "auprc": 0.4991087675203403,
+        "brier": 0.043738942593336105,
+        "logloss": 0.14427979290485382,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24026
+      },
+      "fit_seconds": 0.2898038999410346,
+      "cpu_seconds": 0.1292008999735117,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA246.pt",
+      "sha256": "4731555ab2e8697c41715c79376a19979569029a303db47584da14d4d13f71fa"
+    },
+    "GA247": {
+      "view": "anisotropy",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328596733860779,
+        "auprc": 0.5001257117060146,
+        "brier": 0.04370709881186485,
+        "logloss": 0.1441890448331833,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24050
+      },
+      "fit_seconds": 0.25490780000109226,
+      "cpu_seconds": 0.12585319997742772,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA247.pt",
+      "sha256": "59315f9b68e822e91663265294725a938c218e95d61b617eb0509118b3c626ad"
+    },
+    "GA248": {
+      "view": "anisotropy",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9327900635194367,
+        "auprc": 0.4997741484149321,
+        "brier": 0.04372364655137062,
+        "logloss": 0.144223153591156,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24099
+      },
+      "fit_seconds": 0.24846889998298138,
+      "cpu_seconds": 0.12932150007691234,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA248.pt",
+      "sha256": "a6f3abdc7f39a9975303eb304bf7e476aecb07b7118420bdab5029159729be51"
+    },
+    "GA249": {
+      "view": "anisotropy",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328312539398684,
+        "auprc": 0.49988493134939066,
+        "brier": 0.043717801570892334,
+        "logloss": 0.14419959485530853,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24104
+      },
+      "fit_seconds": 0.22999240003991872,
+      "cpu_seconds": 0.1432982999831438,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA249.pt",
+      "sha256": "1915ac7683aaf2487e0ae7c40cce93b17a2835b92120ca070d4d8708b9659003"
+    },
+    "GA250": {
+      "view": "anisotropy",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9327736327425871,
+        "auprc": 0.4997781255542586,
+        "brier": 0.043738994747400284,
+        "logloss": 0.14425362646579742,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 23991
+      },
+      "fit_seconds": 0.2182552000740543,
+      "cpu_seconds": 0.13250649999827147,
+      "gpu_peak": 33845760,
+      "checkpoint": "GA250.pt",
+      "sha256": "1f216192c1eb03c8dbaed0c79cc2d22517d1bacc58f56ed212cacb7cb5304064"
+    },
+    "GA251": {
+      "view": "availability",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328568104759579,
+        "auprc": 0.5001979699901795,
+        "brier": 0.04370211809873581,
+        "logloss": 0.1441613882780075,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24098
+      },
+      "fit_seconds": 0.15918340010102838,
+      "cpu_seconds": 0.10249529988504946,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA251.pt",
+      "sha256": "dc460fdf43d063eae5acd115505e6fd0ba09f891dde985e3014cfa44937368cb"
+    },
+    "GA252": {
+      "view": "availability",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328511959289165,
+        "auprc": 0.5000057518194662,
+        "brier": 0.043713513761758804,
+        "logloss": 0.14421327412128448,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24111
+      },
+      "fit_seconds": 0.2034031000221148,
+      "cpu_seconds": 0.10746029997244477,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA252.pt",
+      "sha256": "240499941a5484aab8d7e204ce29f38f2d97a6d5edfa04aedced252e6e344ae4"
+    },
+    "GA253": {
+      "view": "availability",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328517156561712,
+        "auprc": 0.5002896082634958,
+        "brier": 0.043709203600883484,
+        "logloss": 0.1441730409860611,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24073
+      },
+      "fit_seconds": 0.16456850001122802,
+      "cpu_seconds": 0.11213919997680932,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA253.pt",
+      "sha256": "a9d49e5724b86e70b09a7d874efebfa8f1269258244f945fbeb41517aa7f2097"
+    },
+    "GA254": {
+      "view": "availability",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328551651253143,
+        "auprc": 0.5000120787170205,
+        "brier": 0.04370533302426338,
+        "logloss": 0.14417244493961334,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24059
+      },
+      "fit_seconds": 0.16757049993611872,
+      "cpu_seconds": 0.12299139995593578,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA254.pt",
+      "sha256": "28990cf8ac200ae35d9d96987edb8ed98fb181169dc7937fac0e03add2208fbd"
+    },
+    "GA255": {
+      "view": "availability",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328343533055344,
+        "auprc": 0.5001036738723201,
+        "brier": 0.043735768646001816,
+        "logloss": 0.14419373869895935,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24083
+      },
+      "fit_seconds": 0.1731525999493897,
+      "cpu_seconds": 0.10940720001235604,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA255.pt",
+      "sha256": "231048bdc6d1053cf21a5c28945634100cf99e5cb213928e4c309cfc4ad85897"
+    },
+    "GA256": {
+      "view": "availability",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.932841028340434,
+        "auprc": 0.5000036899876931,
+        "brier": 0.043718669563531876,
+        "logloss": 0.14423798024654388,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24014
+      },
+      "fit_seconds": 0.17343250010162592,
+      "cpu_seconds": 0.11738859990146011,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA256.pt",
+      "sha256": "cda4b18a1376328dc3d6d174d32b95027d28b13677c32d7a62f970b96ee0a8e0"
+    },
+    "GA257": {
+      "view": "availability",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328029939400101,
+        "auprc": 0.5001090001752537,
+        "brier": 0.04371536523103714,
+        "logloss": 0.1442541629076004,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24041
+      },
+      "fit_seconds": 0.1962975999340415,
+      "cpu_seconds": 0.11044590000528842,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA257.pt",
+      "sha256": "7cc877db9b82cbdb4de78d1bc667a04e8a201f6792541a69daefe92e0705b691"
+    },
+    "GA258": {
+      "view": "availability",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328261916878471,
+        "auprc": 0.4999792585348436,
+        "brier": 0.04372018203139305,
+        "logloss": 0.14423322677612305,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24063
+      },
+      "fit_seconds": 0.18835409998428077,
+      "cpu_seconds": 0.11740850005298853,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA258.pt",
+      "sha256": "6789da1c3d64af781b5edff5571869f693a464aca4c13fb97fd22078464bd092"
+    },
+    "GA259": {
+      "view": "availability",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328699393563513,
+        "auprc": 0.5005801734233702,
+        "brier": 0.0437103770673275,
+        "logloss": 0.14420142769813538,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24061
+      },
+      "fit_seconds": 0.18894050002563745,
+      "cpu_seconds": 0.1259375000372529,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA259.pt",
+      "sha256": "b4dd26694f9b03e5f47ebbbef5220161e3833cab94b436824fbe4b84ec8d8652"
+    },
+    "GA260": {
+      "view": "availability",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328045124120679,
+        "auprc": 0.4999834826648151,
+        "brier": 0.04374471306800842,
+        "logloss": 0.14429199695587158,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24063
+      },
+      "fit_seconds": 0.18498370004817843,
+      "cpu_seconds": 0.1146920999744907,
+      "gpu_peak": 30462976,
+      "checkpoint": "GA260.pt",
+      "sha256": "a1367037e5f87036dde0e32088d3463ece92f09d09e18ec393af92c61b51c88e"
+    },
+    "GA261": {
+      "view": "availability",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328412030529251,
+        "auprc": 0.5000270283506394,
+        "brier": 0.04371406137943268,
+        "logloss": 0.14418935775756836,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24114
+      },
+      "fit_seconds": 0.17188180005177855,
+      "cpu_seconds": 0.10799140005838126,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA261.pt",
+      "sha256": "45f004ff7de40194e11a93fe3b35d31919f43125b34762ab0df8a660bf77dd8a"
+    },
+    "GA262": {
+      "view": "availability",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328463613120046,
+        "auprc": 0.4998438458571783,
+        "brier": 0.043712880462408066,
+        "logloss": 0.14418433606624603,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24096
+      },
+      "fit_seconds": 0.1979026000481099,
+      "cpu_seconds": 0.12145179999060929,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA262.pt",
+      "sha256": "c10203102dec7335ce6ff6e22955bd446d4b35863ea4acf0d0dea222072cbefc"
+    },
+    "GA263": {
+      "view": "availability",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.932815958963834,
+        "auprc": 0.49974183704168873,
+        "brier": 0.04373882710933685,
+        "logloss": 0.14423279464244843,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24098
+      },
+      "fit_seconds": 0.2468762999633327,
+      "cpu_seconds": 0.11438400007318705,
+      "gpu_peak": 30171648,
+      "checkpoint": "GA263.pt",
+      "sha256": "7f81fabeca437af9112befa1ce805f3855b3c9aab705905ecc4fa238ce1defc9"
+    },
+    "GA264": {
+      "view": "availability",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328324199337164,
+        "auprc": 0.5000305836329194,
+        "brier": 0.04372090846300125,
+        "logloss": 0.14420276880264282,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24096
+      },
+      "fit_seconds": 1.6373828999930993,
+      "cpu_seconds": 0.12821539992000908,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA264.pt",
+      "sha256": "09c7229026a11e67668e2052168ef90c19a2e2ddef39d3ce05b0fa17ef782503"
+    },
+    "GA265": {
+      "view": "availability",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328278041314778,
+        "auprc": 0.49993026980380045,
+        "brier": 0.0437668152153492,
+        "logloss": 0.14427177608013153,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24114
+      },
+      "fit_seconds": 0.1965048999991268,
+      "cpu_seconds": 0.10817619995214045,
+      "gpu_peak": 29909504,
+      "checkpoint": "GA265.pt",
+      "sha256": "bcf638ea92ad07383c6c48729fe5113fbd111885035dc292a6f3eac61df1207a"
+    },
+    "GA266": {
+      "view": "availability",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328290064248141,
+        "auprc": 0.49983951525100995,
+        "brier": 0.04372453689575195,
+        "logloss": 0.14419445395469666,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24094
+      },
+      "fit_seconds": 0.16914670006372035,
+      "cpu_seconds": 0.11192359996493906,
+      "gpu_peak": 31484416,
+      "checkpoint": "GA266.pt",
+      "sha256": "96e97f1c8ce8442cc68df8327b33296ae991f0c0970f58e33698ff2792ba4e8e"
+    },
+    "GA267": {
+      "view": "availability",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9327843909610631,
+        "auprc": 0.4997911718354021,
+        "brier": 0.043730735778808594,
+        "logloss": 0.1442311853170395,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24063
+      },
+      "fit_seconds": 0.24005320004653186,
+      "cpu_seconds": 0.12302830000407994,
+      "gpu_peak": 31484416,
+      "checkpoint": "GA267.pt",
+      "sha256": "e1f2dbea384b8d8c609b4bb91faa43ca04fd3f0fe081809ff22df30d2c9b9462"
+    },
+    "GA268": {
+      "view": "availability",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328086905849601,
+        "auprc": 0.49991094004617004,
+        "brier": 0.04372020438313484,
+        "logloss": 0.14419694244861603,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24112
+      },
+      "fit_seconds": 0.1940013999119401,
+      "cpu_seconds": 0.11692020006012172,
+      "gpu_peak": 31484416,
+      "checkpoint": "GA268.pt",
+      "sha256": "128b7f9030e9219834d38e37747a1ba2086953c5a6f786f546b0777bae3b1d69"
+    },
+    "GA269": {
+      "view": "availability",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328118771372477,
+        "auprc": 0.4998586433198423,
+        "brier": 0.04371920973062515,
+        "logloss": 0.14419427514076233,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24103
+      },
+      "fit_seconds": 0.20574109989684075,
+      "cpu_seconds": 0.13564870005939156,
+      "gpu_peak": 31484416,
+      "checkpoint": "GA269.pt",
+      "sha256": "2c8606273bdba207aa5c64616933ecd947296a60304e591bfb99c09b7c8aca3b"
+    },
+    "GA270": {
+      "view": "availability",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328317573832405,
+        "auprc": 0.500022322686192,
+        "brier": 0.04370436444878578,
+        "logloss": 0.14416518807411194,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24039
+      },
+      "fit_seconds": 0.16432640003040433,
+      "cpu_seconds": 0.1199985999846831,
+      "gpu_peak": 31484416,
+      "checkpoint": "GA270.pt",
+      "sha256": "f1503948291a39c4dd9eb75d3a1f90c40cdb3d4527ce146aaf75962997a1340a"
+    },
+    "GA271": {
+      "view": "availability",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9326593490616155,
+        "auprc": 0.4989797095902949,
+        "brier": 0.043766170740127563,
+        "logloss": 0.14434194564819336,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24097
+      },
+      "fit_seconds": 0.29348300001583993,
+      "cpu_seconds": 0.13029569992795587,
+      "gpu_peak": 33714688,
+      "checkpoint": "GA271.pt",
+      "sha256": "1aaf2e2c7679fd94b0c8e868fffe0ab1bcd42f16a902e1107e11bcf4b959deb5"
+    },
+    "GA272": {
+      "view": "availability",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328359060415953,
+        "auprc": 0.49983902194848157,
+        "brier": 0.04371664300560951,
+        "logloss": 0.1441871076822281,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24051
+      },
+      "fit_seconds": 0.257081100018695,
+      "cpu_seconds": 0.12309140001889318,
+      "gpu_peak": 33714688,
+      "checkpoint": "GA272.pt",
+      "sha256": "aa2e3faa51a910c172abce6e84d9410c080475f1a600389379ec0a4667a0e634"
+    },
+    "GA273": {
+      "view": "availability",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328358680458693,
+        "auprc": 0.5001860174578722,
+        "brier": 0.04371548444032669,
+        "logloss": 0.1441648304462433,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24103
+      },
+      "fit_seconds": 0.23572550003882498,
+      "cpu_seconds": 0.13384050002787262,
+      "gpu_peak": 33714688,
+      "checkpoint": "GA273.pt",
+      "sha256": "a54ef70eef58ca56dcfea921c7a2ae001b362fef5f6b5d11ee1780be117ad0e3"
+    },
+    "GA274": {
+      "view": "availability",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9326874543645883,
+        "auprc": 0.4991007238329179,
+        "brier": 0.043775059282779694,
+        "logloss": 0.1443360149860382,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24112
+      },
+      "fit_seconds": 0.22932249994482845,
+      "cpu_seconds": 0.13548489997629076,
+      "gpu_peak": 33714688,
+      "checkpoint": "GA274.pt",
+      "sha256": "29cb0a918f73e9c7322188893206ed529825d0e80b51e035e39d2c139ad75ffc"
+    },
+    "GA275": {
+      "view": "availability",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328232097018351,
+        "auprc": 0.500232456602477,
+        "brier": 0.043730832636356354,
+        "logloss": 0.14420542120933533,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24082
+      },
+      "fit_seconds": 0.21936260000802577,
+      "cpu_seconds": 0.12524889991618693,
+      "gpu_peak": 33714688,
+      "checkpoint": "GA275.pt",
+      "sha256": "c4dbdff11cece658d63964391ebec83e49ba4094b0f32a90f76c203fa576b939"
+    },
+    "GA276": {
+      "view": "hybrid",
+      "target": "point",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328553483189942,
+        "auprc": 0.4999089373743645,
+        "brier": 0.043711237609386444,
+        "logloss": 0.14417777955532074,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24079
+      },
+      "fit_seconds": 0.14110039989463985,
+      "cpu_seconds": 0.11057130002882332,
+      "gpu_peak": 39506944,
+      "checkpoint": "GA276.pt",
+      "sha256": "22fa25c855b2aef66e90186a7475d49ceb1f490c8a89ade6df56ae0e22afe65c"
+    },
+    "GA277": {
+      "view": "hybrid",
+      "target": "point",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328487085658402,
+        "auprc": 0.4996970532806645,
+        "brier": 0.04371371120214462,
+        "logloss": 0.14418882131576538,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24119
+      },
+      "fit_seconds": 0.24716240004636347,
+      "cpu_seconds": 0.10847159998957068,
+      "gpu_peak": 39506944,
+      "checkpoint": "GA277.pt",
+      "sha256": "23462d6df6feb1b341011645e811cd63ff253e55d7dfa696d59f5f8fee1be76b"
+    },
+    "GA278": {
+      "view": "hybrid",
+      "target": "point",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328562493605014,
+        "auprc": 0.5000742194599291,
+        "brier": 0.043707843869924545,
+        "logloss": 0.14418986439704895,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24098
+      },
+      "fit_seconds": 0.1645912000676617,
+      "cpu_seconds": 0.11006700003053993,
+      "gpu_peak": 40696320,
+      "checkpoint": "GA278.pt",
+      "sha256": "5e77721e618ce3a96ade75c71f3e94e3c832b2f8a89ebd6ea595f157782edf8b"
+    },
+    "GA279": {
+      "view": "hybrid",
+      "target": "point",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328542277843189,
+        "auprc": 0.5000270685796031,
+        "brier": 0.0437186136841774,
+        "logloss": 0.14422762393951416,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24101
+      },
+      "fit_seconds": 0.17367260006722063,
+      "cpu_seconds": 0.11675559997092932,
+      "gpu_peak": 40256512,
+      "checkpoint": "GA279.pt",
+      "sha256": "ef950af34283e730e2f8d4c4ee3164a3fc2e275ca0b0aed56004d906bd3723d2"
+    },
+    "GA280": {
+      "view": "hybrid",
+      "target": "point",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.932853012260328,
+        "auprc": 0.49991605507015263,
+        "brier": 0.04371090978384018,
+        "logloss": 0.1441686451435089,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24091
+      },
+      "fit_seconds": 0.14826360007282346,
+      "cpu_seconds": 0.10701279994100332,
+      "gpu_peak": 39506944,
+      "checkpoint": "GA280.pt",
+      "sha256": "d55034720e3747724f8531a404246d263003a303083eaa0d44a56cd11d47ef5a"
+    },
+    "GA281": {
+      "view": "hybrid",
+      "target": "moments",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328388887061023,
+        "auprc": 0.5000759105731728,
+        "brier": 0.04371007904410362,
+        "logloss": 0.1442069411277771,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24128
+      },
+      "fit_seconds": 0.15869900002144277,
+      "cpu_seconds": 0.1115896999835968,
+      "gpu_peak": 40293376,
+      "checkpoint": "GA281.pt",
+      "sha256": "59d3b5770b6f0c5e1e1c282a8823e3df760e53909555edce7da888722a63e844"
+    },
+    "GA282": {
+      "view": "hybrid",
+      "target": "moments",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328384076530689,
+        "auprc": 0.49981292436320607,
+        "brier": 0.04372747242450714,
+        "logloss": 0.14422623813152313,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24081
+      },
+      "fit_seconds": 0.1967762999702245,
+      "cpu_seconds": 0.11095900007057935,
+      "gpu_peak": 40293376,
+      "checkpoint": "GA282.pt",
+      "sha256": "9b799581398ba9f68bfecf4cd3a575995e55f37d1ea683603c61766bdc450ab0"
+    },
+    "GA283": {
+      "view": "hybrid",
+      "target": "moments",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328363782741925,
+        "auprc": 0.5000393481392904,
+        "brier": 0.04370654374361038,
+        "logloss": 0.14417341351509094,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24076
+      },
+      "fit_seconds": 0.1833984999684617,
+      "cpu_seconds": 0.11127080000005662,
+      "gpu_peak": 40696320,
+      "checkpoint": "GA283.pt",
+      "sha256": "a1f469ff9434ab4ae70a6930d738cb9c4cbe9f51a74b40018e19c8a3d83b2ea8"
+    },
+    "GA284": {
+      "view": "hybrid",
+      "target": "moments",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328520464225377,
+        "auprc": 0.5000404036984081,
+        "brier": 0.04371463879942894,
+        "logloss": 0.14418476819992065,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24124
+      },
+      "fit_seconds": 0.17879320005886257,
+      "cpu_seconds": 0.12487119995057583,
+      "gpu_peak": 40293376,
+      "checkpoint": "GA284.pt",
+      "sha256": "fc8733239b160719ed7568e549d76a52c4589ae3e2914311093ae369f7a9bb05"
+    },
+    "GA285": {
+      "view": "hybrid",
+      "target": "moments",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328406992703054,
+        "auprc": 0.4998333977554878,
+        "brier": 0.04371953383088112,
+        "logloss": 0.1442188024520874,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24128
+      },
+      "fit_seconds": 0.1736926999874413,
+      "cpu_seconds": 0.12004629999864846,
+      "gpu_peak": 40293376,
+      "checkpoint": "GA285.pt",
+      "sha256": "cb0e6ea9d87b1ac82fdac3ccb3b49f78132883cc82b63f80273f3cad1e518a4c"
+    },
+    "GA286": {
+      "view": "hybrid",
+      "target": "hurdle",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328406154761593,
+        "auprc": 0.49994504971173404,
+        "brier": 0.04371277242898941,
+        "logloss": 0.14418736100196838,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24099
+      },
+      "fit_seconds": 0.18530839995946735,
+      "cpu_seconds": 0.10672600008547306,
+      "gpu_peak": 39769088,
+      "checkpoint": "GA286.pt",
+      "sha256": "3f2e3bf1a80b31904d5fa0235f21156695b50b29da17a45c29024574ee93706b"
+    },
+    "GA287": {
+      "view": "hybrid",
+      "target": "hurdle",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328512383348607,
+        "auprc": 0.49997840665009885,
+        "brier": 0.04370665177702904,
+        "logloss": 0.14416928589344025,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24095
+      },
+      "fit_seconds": 0.1997304999968037,
+      "cpu_seconds": 0.10881649993825704,
+      "gpu_peak": 39769088,
+      "checkpoint": "GA287.pt",
+      "sha256": "2d8ace455721b417d8a5ea64fed297a47f8f9771c06e4a1457ea5a3ed1fb6cf4"
+    },
+    "GA288": {
+      "view": "hybrid",
+      "target": "hurdle",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328532714454605,
+        "auprc": 0.5000643989714533,
+        "brier": 0.04370467737317085,
+        "logloss": 0.14416810870170593,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24086
+      },
+      "fit_seconds": 0.20517450000625104,
+      "cpu_seconds": 0.11689900001510978,
+      "gpu_peak": 40712704,
+      "checkpoint": "GA288.pt",
+      "sha256": "88267c3255b201cc52fa2effa28e511f35aee5d947137da681450cf9d18f81ae"
+    },
+    "GA289": {
+      "view": "hybrid",
+      "target": "hurdle",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328466564573779,
+        "auprc": 0.4999547479018878,
+        "brier": 0.04371196776628494,
+        "logloss": 0.14419454336166382,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24095
+      },
+      "fit_seconds": 0.19927030010148883,
+      "cpu_seconds": 0.12413769995328039,
+      "gpu_peak": 40272896,
+      "checkpoint": "GA289.pt",
+      "sha256": "59f43c3e62b06296051f94096bd624768062a392f3ad2562d9e83ac2942c7d7f"
+    },
+    "GA290": {
+      "view": "hybrid",
+      "target": "hurdle",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328563433320742,
+        "auprc": 0.5000559985918537,
+        "brier": 0.043703071773052216,
+        "logloss": 0.14415612816810608,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24098
+      },
+      "fit_seconds": 0.1915866999188438,
+      "cpu_seconds": 0.108464700053446,
+      "gpu_peak": 39769088,
+      "checkpoint": "GA290.pt",
+      "sha256": "2008d1fdf4ef77eecc01f920bd3c5507537445b0a0c54e35c193e6f1b92bce94"
+    },
+    "GA291": {
+      "view": "hybrid",
+      "target": "distribution",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328462619124709,
+        "auprc": 0.5001543160939783,
+        "brier": 0.04370336979627609,
+        "logloss": 0.14417047798633575,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24149
+      },
+      "fit_seconds": 0.18801190005615354,
+      "cpu_seconds": 0.12170889996923506,
+      "gpu_peak": 41576960,
+      "checkpoint": "GA291.pt",
+      "sha256": "364ce99f0f375fd3dc23c4228ae185920cbc01b5f7e8acc10fc2386cfc405f15"
+    },
+    "GA292": {
+      "view": "hybrid",
+      "target": "distribution",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.932840923852187,
+        "auprc": 0.5001894539569931,
+        "brier": 0.04370662942528725,
+        "logloss": 0.14419256150722504,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24121
+      },
+      "fit_seconds": 0.19583620002958924,
+      "cpu_seconds": 0.12028709996957332,
+      "gpu_peak": 41576960,
+      "checkpoint": "GA292.pt",
+      "sha256": "ccd5c052da8748ff0def7912a7f9f01a656293f2a76ef3448505414c3fbda8bc"
+    },
+    "GA293": {
+      "view": "hybrid",
+      "target": "distribution",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328604706178332,
+        "auprc": 0.4999759135503126,
+        "brier": 0.04370484501123428,
+        "logloss": 0.14416854083538055,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24069
+      },
+      "fit_seconds": 0.1987439999356866,
+      "cpu_seconds": 0.12293469998985529,
+      "gpu_peak": 41576960,
+      "checkpoint": "GA293.pt",
+      "sha256": "57105ff1001af930e3c4320af60f5d927afbfd6954ff110ee588b1bdb3159547"
+    },
+    "GA294": {
+      "view": "hybrid",
+      "target": "distribution",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328231567792167,
+        "auprc": 0.4998157156488661,
+        "brier": 0.04371323063969612,
+        "logloss": 0.14419977366924286,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24120
+      },
+      "fit_seconds": 0.20173219998832792,
+      "cpu_seconds": 0.12775189999956638,
+      "gpu_peak": 41576960,
+      "checkpoint": "GA294.pt",
+      "sha256": "55ed76fb900ed2c00b40011733992589c0700e0b564018e88d9ae8c0322750b3"
+    },
+    "GA295": {
+      "view": "hybrid",
+      "target": "distribution",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328711938938111,
+        "auprc": 0.5001923515712964,
+        "brier": 0.04370077699422836,
+        "logloss": 0.14417137205600739,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24115
+      },
+      "fit_seconds": 0.1853453000076115,
+      "cpu_seconds": 0.12141749996226281,
+      "gpu_peak": 41576960,
+      "checkpoint": "GA295.pt",
+      "sha256": "5bbf760415472ab87163d2cf51b5be12f9b36715845a65055a275dbad64391d6"
+    },
+    "GA296": {
+      "view": "hybrid",
+      "target": "joint",
+      "architecture": "additive",
+      "metrics": {
+        "auc": 0.9328097334319452,
+        "auprc": 0.5001203710690678,
+        "brier": 0.04371053725481033,
+        "logloss": 0.14418847858905792,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24099
+      },
+      "fit_seconds": 0.22261539997998625,
+      "cpu_seconds": 0.13435059995390475,
+      "gpu_peak": 43574272,
+      "checkpoint": "GA296.pt",
+      "sha256": "63778431fc57842a36b246527eb52c5de96a2c5e679cf29ac9e8184da7b631c0"
+    },
+    "GA297": {
+      "view": "hybrid",
+      "target": "joint",
+      "architecture": "lowrank",
+      "metrics": {
+        "auc": 0.9328332517687221,
+        "auprc": 0.5000264531354105,
+        "brier": 0.043707869946956635,
+        "logloss": 0.14417797327041626,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24149
+      },
+      "fit_seconds": 0.2666165999835357,
+      "cpu_seconds": 0.13776770001277328,
+      "gpu_peak": 43574272,
+      "checkpoint": "GA297.pt",
+      "sha256": "6ca174ceb0feb79f09524a78ee44ed6e8d4fd539a40b162192728a68f7edde9a"
+    },
+    "GA298": {
+      "view": "hybrid",
+      "target": "joint",
+      "architecture": "gated",
+      "metrics": {
+        "auc": 0.9328527927671595,
+        "auprc": 0.5001299477506538,
+        "brier": 0.043703917413949966,
+        "logloss": 0.14416135847568512,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24101
+      },
+      "fit_seconds": 0.27228600007947534,
+      "cpu_seconds": 0.1287544999504462,
+      "gpu_peak": 43574272,
+      "checkpoint": "GA298.pt",
+      "sha256": "f4e0592a7fe07d304790ecadcb2a248454193e90fc8f8456721ad4e8a73ccfdf"
+    },
+    "GA299": {
+      "view": "hybrid",
+      "target": "joint",
+      "architecture": "experts",
+      "metrics": {
+        "auc": 0.9328579418665551,
+        "auprc": 0.5003215121218862,
+        "brier": 0.0437009260058403,
+        "logloss": 0.14416474103927612,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24131
+      },
+      "fit_seconds": 0.24240200000349432,
+      "cpu_seconds": 0.14084289991296828,
+      "gpu_peak": 43574272,
+      "checkpoint": "GA299.pt",
+      "sha256": "97e134fcec17aa898dba3fcd512cded2513c65b940ab264ef036620344095de9"
+    },
+    "GA300": {
+      "view": "hybrid",
+      "target": "joint",
+      "architecture": "residual",
+      "metrics": {
+        "auc": 0.9328666679921748,
+        "auprc": 0.5002036941696061,
+        "brier": 0.04369625076651573,
+        "logloss": 0.14414119720458984,
+        "rows": 153212,
+        "positives": 10314,
+        "r80": 24063
+      },
+      "fit_seconds": 0.22122290008701384,
+      "cpu_seconds": 0.1217349999351427,
+      "gpu_peak": 43574272,
+      "checkpoint": "GA300.pt",
+      "sha256": "4c2dbabb4bd48b9ccd6c109a86b09d1ef69430c929d91744ae39f5968c3ee856"
+    }
+  }
+}
