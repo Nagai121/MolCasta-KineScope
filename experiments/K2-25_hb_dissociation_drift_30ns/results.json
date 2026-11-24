@@ -1,7 +1,7 @@
 {
   "label": "HB dissociation, drift (first-half mean minus second-half mean) on top of the full mean (K2-15 question on HB dissociation at 30 ns)",
   "phenomenon": "HB dissociation (Doc D, data_cache_k46)",
-  "horizon_ns": 1,
+  "horizon_ns": 30,
   "frames": {
     "first_half": [
       0,

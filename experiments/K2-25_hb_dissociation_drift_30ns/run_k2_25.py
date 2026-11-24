@@ -212,7 +212,7 @@ print(f"gain_full {gain_full:+.4f} gain_drift {gains['drift_only']:+.4f} "
 out = {
     "label": "HB dissociation, drift (first-half mean minus second-half mean) on top of the full mean (K2-15 question on HB dissociation at 30 ns)",
     "phenomenon": "HB dissociation (Doc D, data_cache_k46)",
-    "horizon_ns": 1,
+    "horizon_ns": 30,
     "frames": {"first_half": FRAMES_FIRST, "second_half": FRAMES_SECOND,
                "full": FRAMES_FULL,
                "note": "frame 5 belongs to neither half"},
