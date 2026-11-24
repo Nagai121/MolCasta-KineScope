@@ -341,7 +341,7 @@ print("AUPRC-diff CIs contain 0:", contains_zero_auprc, flush=True)
 out = {
     "label": "Salt-bridge dissociation, origin-frame effect on mean-only recovery uncertainty across horizons (G151)",
     "phenomenon": "salt-bridge dissociation (K15 expanded conditions, K53 cache)",
-    "prefix_frames": PREFIX_FRAMES,
+    "prefix_frames_10f": PREFIX_FRAMES_10F, "prefix_frames_11f": PREFIX_FRAMES_11F,
     "bootstrap": {"n_boot": N_BOOT, "seed": BOOT_SEED, "method": "percentile",
                   "resampling_unit": "protein (30 test proteins, sampled with "
                   "replacement; unlike the 2-protein bases, the bootstrap "
