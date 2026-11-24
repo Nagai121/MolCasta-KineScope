@@ -182,7 +182,7 @@ print(f"gain_full {gain_full:+.4f} gain_first {gains['mean_first_half']:+.4f} "
 out = {
     "label": "Contact dissociation, first-half vs second-half history means (K2-01 question on contact dissociation)",
     "phenomenon": "Contact dissociation (Doc D, k50_cache)",
-    "horizon_ns": 1,
+    "horizon_ns": 10,
     "frames": {"first_half": FRAMES_FIRST, "second_half": FRAMES_SECOND,
                "full": FRAMES_FULL,
                "note": "frame 5 belongs to neither half"},
