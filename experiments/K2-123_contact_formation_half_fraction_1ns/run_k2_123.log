@@ -1,0 +1,12 @@
+train (15926, 5) test (7384, 5)
+static_only {'n': 7384, 'positives': 219, 'auc': 0.9007, 'auprc': 0.3398, 'brier': 0.023, 'logloss': 0.0894}
+frac_first_half {'n': 7384, 'positives': 219, 'auc': 0.9167, 'auprc': 0.5024, 'brier': 0.0189, 'logloss': 0.0772}
+frac_second_half {'n': 7384, 'positives': 219, 'auc': 0.9184, 'auprc': 0.5199, 'brier': 0.0192, 'logloss': 0.0783}
+frac_both_halves {'n': 7384, 'positives': 219, 'auc': 0.9234, 'auprc': 0.5487, 'brier': 0.0188, 'logloss': 0.0759}
+frac_full {'n': 7384, 'positives': 219, 'auc': 0.9251, 'auprc': 0.5578, 'brier': 0.0184, 'logloss': 0.0746}
+full_hist6 {'n': 7384, 'positives': 219, 'auc': 0.956, 'auprc': 0.5669, 'brier': 0.0186, 'logloss': 0.0733}
+base reproduction vs K27: OK
+gain_full +0.2271 gain_first +0.1626 (ratio 0.716) gain_second +0.1801 (ratio 0.793) gain_both +0.2089 (ratio 0.920) gain_frac_full +0.2180 (ratio 0.960) reading: どちらでもない（数値をそのまま記録）
+reading with denominator = full-fraction gain: どちらでもない（数値をそのまま記録）
+per-protein readings: {'1mix_A': 'どちらでもない（数値をそのまま記録）', '2qt4_A': '続いている状態が効いている'} counts: {'今の状態': 0, '続いている状態': 1, 'どちらでもない': 1, '利得が小さく判定から外したもの': 0}
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-123_contact_formation_half_fraction_1ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-123_contact_formation_half_fraction_1ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-123_contact_formation_half_fraction_1ns/test_predictions.npz
