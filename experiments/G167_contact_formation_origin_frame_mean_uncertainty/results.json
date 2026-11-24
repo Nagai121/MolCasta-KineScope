@@ -1,0 +1,420 @@
+{
+  "label": "Contact formation, origin-frame (mean10 vs mean11) recovery-difference uncertainty across horizons",
+  "phenomenon": "contact formation (D conditions, K13 cache)",
+  "conditions": {
+    "mean10": {
+      "label": "フレーム [0..9] の 10 フレームの平均だけ",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "covered_length": "0.9 ns"
+    },
+    "mean11": {
+      "label": "フレーム [0..10] の 11 フレーム全部の平均だけ",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "covered_length": "1.0 ns"
+    }
+  },
+  "bootstrap": {
+    "n_boot": 10000,
+    "seed": 42,
+    "method": "percentile",
+    "resampling_unit": "protein (2 test proteins, sampled with replacement; only 3 distinct draws exist: both 1mix_A, both 2qt4_A, one of each, so the percentile interval is the min and max of the 3 values, as in G49/G59/G62/G67)",
+    "note": "AUPRC inside the bootstrap uses a numpy reimplementation of sklearn's average_precision_score (same threshold-grouping treatment of ties); it was verified to agree with sklearn to 1e-12 on all fitted conditions before use. Models were retrained per condition and horizon; pooled AUPRCs were verified against G149 records to 4 decimal places. Within each bootstrap sample, the base gain and the two recoveries are recomputed inside the sample before taking their difference (same as G147/G148)."
+  },
+  "horizons": {
+    "1": {
+      "test_positives": 219,
+      "auprc": {
+        "static_only": 0.33977026863870574,
+        "full_hist": 0.5668799691676633,
+        "mean10": 0.5475669980864415,
+        "mean11": 0.5008301534366115
+      },
+      "full_gain": 0.22710970052895751,
+      "mean10_recovery": 0.9149619279306862,
+      "mean11_recovery": 0.7091721948590651,
+      "recovery_diff": -0.20578973307162107,
+      "auprc_diff": -0.04673684464982997,
+      "per_protein": {
+        "1mix_A": {
+          "n": 5012,
+          "positives": 173,
+          "auprc": {
+            "static_only": 0.3949574026461551,
+            "full_hist": 0.5710353296016614,
+            "mean10": 0.5569862442983381,
+            "mean11": 0.5086654773149816
+          },
+          "full_gain": 0.17607792695550628,
+          "recovery_diff": -0.274428304665166,
+          "auprc_diff": -0.04832076698335652
+        },
+        "2qt4_A": {
+          "n": 2372,
+          "positives": 46,
+          "auprc": {
+            "static_only": 0.21935830536642853,
+            "full_hist": 0.5600952870806147,
+            "mean10": 0.5161358591844675,
+            "mean11": 0.5106960210931235
+          },
+          "full_gain": 0.3407369817141862,
+          "recovery_diff": -0.015964918348390363,
+          "auprc_diff": -0.005439838091343963
+        }
+      }
+    },
+    "5": {
+      "test_positives": 214,
+      "auprc": {
+        "static_only": 0.2869855867812501,
+        "full_hist": 0.5191989452346799,
+        "mean10": 0.46907135385636795,
+        "mean11": 0.4478561990956109
+      },
+      "full_gain": 0.23221335845342983,
+      "mean10_recovery": 0.7841313190930616,
+      "mean11_recovery": 0.6927707061548024,
+      "recovery_diff": -0.09136061293825914,
+      "auprc_diff": -0.021215154760757027,
+      "per_protein": {
+        "1mix_A": {
+          "n": 5012,
+          "positives": 168,
+          "auprc": {
+            "static_only": 0.34803523785415436,
+            "full_hist": 0.5419156845742461,
+            "mean10": 0.4766128168391227,
+            "mean11": 0.46241508733057424
+          },
+          "full_gain": 0.19388044672009175,
+          "recovery_diff": -0.07322930057534868,
+          "auprc_diff": -0.014197729508548473
+        },
+        "2qt4_A": {
+          "n": 2372,
+          "positives": 46,
+          "auprc": {
+            "static_only": 0.18327788716960944,
+            "full_hist": 0.49725924501549335,
+            "mean10": 0.4822906988180221,
+            "mean11": 0.44786141038482946
+          },
+          "full_gain": 0.3139813578458839,
+          "recovery_diff": -0.10965392553685334,
+          "auprc_diff": -0.03442928843319265
+        }
+      }
+    },
+    "10": {
+      "test_positives": 226,
+      "auprc": {
+        "static_only": 0.320384938464356,
+        "full_hist": 0.5233798114377418,
+        "mean10": 0.45056934427409895,
+        "mean11": 0.45162809820314465
+      },
+      "full_gain": 0.2029948729733858,
+      "mean10_recovery": 0.6413186890035943,
+      "mean11_recovery": 0.6465343573283037,
+      "recovery_diff": 0.005215668324709322,
+      "auprc_diff": 0.001058753929045697,
+      "per_protein": {
+        "1mix_A": {
+          "n": 5012,
+          "positives": 178,
+          "auprc": {
+            "static_only": 0.38172224678223166,
+            "full_hist": 0.5337894603060316,
+            "mean10": 0.4538641310714991,
+            "mean11": 0.46393788250711804
+          },
+          "full_gain": 0.15206721352379993,
+          "recovery_diff": 0.0662453871691567,
+          "auprc_diff": 0.01007375143561895
+        },
+        "2qt4_A": {
+          "n": 2372,
+          "positives": 48,
+          "auprc": {
+            "static_only": 0.2523042905855595,
+            "full_hist": 0.5052055627652375,
+            "mean10": 0.4633761089178626,
+            "mean11": 0.429147397509417
+          },
+          "full_gain": 0.25290127217967806,
+          "recovery_diff": -0.13534416459608475,
+          "auprc_diff": -0.03422871140844558
+        }
+      }
+    },
+    "30": {
+      "test_positives": 247,
+      "auprc": {
+        "static_only": 0.28681357061495694,
+        "full_hist": 0.4386046069734208,
+        "mean10": 0.4505265968272691,
+        "mean11": 0.4371572874384626
+      },
+      "full_gain": 0.15179103635846386,
+      "mean10_recovery": 1.0785421204035643,
+      "mean11_recovery": 0.9904650526824241,
+      "recovery_diff": -0.08807706772114021,
+      "auprc_diff": -0.013369309388806483,
+      "per_protein": {
+        "1mix_A": {
+          "n": 5012,
+          "positives": 192,
+          "auprc": {
+            "static_only": 0.3137138626957356,
+            "full_hist": 0.4414524165341951,
+            "mean10": 0.45604023890445833,
+            "mean11": 0.4454749456290001
+          },
+          "full_gain": 0.1277385538384595,
+          "recovery_diff": -0.08271029347035903,
+          "auprc_diff": -0.010565293275458243
+        },
+        "2qt4_A": {
+          "n": 2372,
+          "positives": 55,
+          "auprc": {
+            "static_only": 0.25913821009288107,
+            "full_hist": 0.4573475421891869,
+            "mean10": 0.46207527007209764,
+            "mean11": 0.43779617576044366
+          },
+          "full_gain": 0.1982093320963058,
+          "recovery_diff": -0.12249218568506791,
+          "auprc_diff": -0.02427909431165398
+        }
+      }
+    },
+    "50": {
+      "test_positives": 250,
+      "auprc": {
+        "static_only": 0.26038453431471853,
+        "full_hist": 0.46379209531119275,
+        "mean10": 0.412544662471832,
+        "mean11": 0.3935261394770647
+      },
+      "full_gain": 0.20340756099647422,
+      "mean10_recovery": 0.7480554184500102,
+      "mean11_recovery": 0.6545558312095094,
+      "recovery_diff": -0.09349958724050078,
+      "auprc_diff": -0.019018522994767306,
+      "per_protein": {
+        "1mix_A": {
+          "n": 5012,
+          "positives": 203,
+          "auprc": {
+            "static_only": 0.30891475188881146,
+            "full_hist": 0.4585805557036849,
+            "mean10": 0.39428050208651355,
+            "mean11": 0.39144451973884364
+          },
+          "full_gain": 0.14966580381487343,
+          "recovery_diff": -0.018948766353988435,
+          "auprc_diff": -0.0028359823476699075
+        },
+        "2qt4_A": {
+          "n": 2372,
+          "positives": 47,
+          "auprc": {
+            "static_only": 0.17891108383008583,
+            "full_hist": 0.5188119079968682,
+            "mean10": 0.5291448595778213,
+            "mean11": 0.46331556157939197
+          },
+          "full_gain": 0.33990082416678236,
+          "recovery_diff": -0.1936720752584238,
+          "auprc_diff": -0.06582929799842935
+        }
+      }
+    },
+    "90": {
+      "test_positives": 257,
+      "auprc": {
+        "static_only": 0.2872126453371935,
+        "full_hist": 0.47216777524969433,
+        "mean10": 0.423699232818619,
+        "mean11": 0.4065937715486499
+      },
+      "full_gain": 0.18495512991250085,
+      "mean10_recovery": 0.7379443195006,
+      "mean11_recovery": 0.6454599354337109,
+      "recovery_diff": -0.09248438406688908,
+      "auprc_diff": -0.01710546126996909,
+      "per_protein": {
+        "1mix_A": {
+          "n": 5012,
+          "positives": 203,
+          "auprc": {
+            "static_only": 0.32735345698473944,
+            "full_hist": 0.4670432103164897,
+            "mean10": 0.41468080850640493,
+            "mean11": 0.403698620583877
+          },
+          "full_gain": 0.13968975333175027,
+          "recovery_diff": -0.07861842161354697,
+          "auprc_diff": -0.01098218792252792
+        },
+        "2qt4_A": {
+          "n": 2372,
+          "positives": 54,
+          "auprc": {
+            "static_only": 0.22656054538503667,
+            "full_hist": 0.5091222950913852,
+            "mean10": 0.5078896425012501,
+            "mean11": 0.47309390022710673
+          },
+          "full_gain": 0.2825617497063485,
+          "recovery_diff": -0.12314385195556288,
+          "auprc_diff": -0.03479574227414339
+        }
+      }
+    }
+  },
+  "bootstrap_results_recovery_diff": {
+    "1": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.20578973307162107,
+      "ci_lower": -0.274428304665166,
+      "ci_upper": -0.015964918348389708,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    },
+    "5": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.09136061293825914,
+      "ci_lower": -0.10965392553685277,
+      "ci_upper": -0.07322930057534865,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    },
+    "10": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.005215668324709322,
+      "ci_lower": -0.13534416459608473,
+      "ci_upper": 0.06624538716915676,
+      "contains_zero": true,
+      "n_distinct_boot_values": 3
+    },
+    "30": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.08807706772114021,
+      "ci_lower": -0.12249218568506766,
+      "ci_upper": -0.08271029347035946,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    },
+    "50": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.09349958724050078,
+      "ci_lower": -0.19367207525842373,
+      "ci_upper": -0.018948766353988063,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    },
+    "90": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.09248438406688908,
+      "ci_lower": -0.12314385195556327,
+      "ci_upper": -0.07861842161354697,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    }
+  },
+  "bootstrap_results_auprc_diff": {
+    "1": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.04673684464982997,
+      "ci_lower": -0.04832076698335652,
+      "ci_upper": -0.0054398380913437405,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    },
+    "5": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.021215154760757027,
+      "ci_lower": -0.034429288433192484,
+      "ci_upper": -0.014197729508548473,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    },
+    "10": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": 0.001058753929045697,
+      "ci_lower": -0.03422871140844558,
+      "ci_upper": 0.01007375143561895,
+      "contains_zero": true,
+      "n_distinct_boot_values": 3
+    },
+    "30": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.013369309388806483,
+      "ci_lower": -0.024279094311653926,
+      "ci_upper": -0.010565293275458298,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    },
+    "50": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.019018522994767306,
+      "ci_lower": -0.06582929799842935,
+      "ci_upper": -0.002835982347669852,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    },
+    "90": {
+      "n_boot": 10000,
+      "seed": 42,
+      "point_estimate": -0.01710546126996909,
+      "ci_lower": -0.034795742274143504,
+      "ci_upper": -0.01098218792252792,
+      "contains_zero": false,
+      "n_distinct_boot_values": 3
+    }
+  },
+  "recovery_diff_cis_contain_zero": {
+    "1ns": false,
+    "5ns": false,
+    "10ns": true,
+    "30ns": false,
+    "50ns": false,
+    "90ns": false
+  }
+}
