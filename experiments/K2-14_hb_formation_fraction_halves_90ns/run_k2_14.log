@@ -1,0 +1,16 @@
+train (9610, 7) test (4972, 7) test pos 90ns 335
+{'1mix_A': 3101, '2qt4_A': 1871}
+static_only {'n': 4972, 'positives': 335, 'auprc': 0.3035, 'auc': 0.8507, 'brier': 0.0538, 'logloss': 0.1926}
+base_hist_D6 {'n': 4972, 'positives': 335, 'auprc': 0.4246, 'auc': 0.8985, 'brier': 0.0486, 'logloss': 0.1697}
+first_half_frac {'n': 4972, 'positives': 335, 'auprc': 0.4023, 'auc': 0.8757, 'brier': 0.0497, 'logloss': 0.178}
+second_half_frac {'n': 4972, 'positives': 335, 'auprc': 0.3854, 'auc': 0.8672, 'brier': 0.0503, 'logloss': 0.1818}
+full_frac {'n': 4972, 'positives': 335, 'auprc': 0.4213, 'auc': 0.8843, 'brier': 0.0484, 'logloss': 0.1729}
+base gain (should be ~0.1211): 0.1211
+base reproduction OK (static 0.3035 / full6 0.4246 / gain +0.1211 / full frac 0.4213)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-frac 0.0
+base_hist_D6 gain 0.1211 ratio vs full6 1.0 ratio vs full-frac 1.0278
+first_half_frac gain 0.0988 ratio vs full6 0.8158 ratio vs full-frac 0.8386
+second_half_frac gain 0.0819 ratio vs full6 0.6761 ratio vs full-frac 0.6949
+full_frac gain 0.1178 ratio vs full6 0.9729 ratio vs full-frac 1.0
+verdict: どちらでもない（数値をそのまま記録）
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-14_hb_formation_fraction_halves_90ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-14_hb_formation_fraction_halves_90ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-14_hb_formation_fraction_halves_90ns/test_predictions.npz
