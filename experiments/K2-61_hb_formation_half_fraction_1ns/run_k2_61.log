@@ -1,0 +1,18 @@
+train (9610, 7) test (4972, 7) test pos 1ns 290
+{'1mix_A': 3101, '2qt4_A': 1871}
+static_only {'n': 4972, 'positives': 290, 'auprc': 0.3637, 'auc': 0.9056, 'brier': 0.0432, 'logloss': 0.1494}
+base_hist_D6 {'n': 4972, 'positives': 290, 'auprc': 0.4815, 'auc': 0.9352, 'brier': 0.0395, 'logloss': 0.1344}
+first_half_frac {'n': 4972, 'positives': 290, 'auprc': 0.4675, 'auc': 0.9234, 'brier': 0.0393, 'logloss': 0.1363}
+second_half_frac {'n': 4972, 'positives': 290, 'auprc': 0.4297, 'auc': 0.9213, 'brier': 0.0407, 'logloss': 0.1401}
+both_halves_frac {'n': 4972, 'positives': 290, 'auprc': 0.4864, 'auc': 0.9255, 'brier': 0.0389, 'logloss': 0.1351}
+full_frac {'n': 4972, 'positives': 290, 'auprc': 0.4829, 'auc': 0.9271, 'brier': 0.0388, 'logloss': 0.1343}
+base gain (should be ~0.1178): 0.1178
+base reproduction OK (static 0.3637 / full6 0.4815 / gain +0.1178 / full_frac 0.4829)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-frac 0.0
+base_hist_D6 gain 0.1178 ratio vs full6 1.0 ratio vs full-frac 0.9886
+first_half_frac gain 0.1038 ratio vs full6 0.8811 ratio vs full-frac 0.871
+second_half_frac gain 0.066 ratio vs full6 0.5601 ratio vs full-frac 0.5537
+both_halves_frac gain 0.1227 ratio vs full6 1.0417 ratio vs full-frac 1.0299
+full_frac gain 0.1192 ratio vs full6 1.0115 ratio vs full-frac 1.0
+verdict: どちらでもない（数値をそのまま記録）
+saved /tmp/k2-61/results.json /tmp/k2-61/results.csv /tmp/k2-61/test_predictions.npz
