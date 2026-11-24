@@ -1,0 +1,82 @@
+{
+  "proteins": [
+    "6vjg_A",
+    "1lr0_A",
+    "3b4q_B",
+    "2i9x_A",
+    "2qev_A",
+    "2pyq_B",
+    "1o4k_A",
+    "4obi_A",
+    "4oe9_B",
+    "7fd1_A",
+    "3c9p_A",
+    "2bo1_A",
+    "2y1y_A",
+    "2end_A",
+    "1bgf_A",
+    "4goq_B",
+    "3cw3_A",
+    "2fhz_A",
+    "3mwz_A",
+    "3a39_A",
+    "1fk5_A",
+    "2j6a_A",
+    "3ehg_A",
+    "1ijt_A"
+  ],
+  "samples": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "branches": 2,
+  "origins": [
+    149,
+    249
+  ],
+  "default_step_fs": 4,
+  "minimization": 25,
+  "failures": {},
+  "recovery": {
+    "6vjg_A": {
+      "completed": [],
+      "step_fs": 2,
+      "minimization": 100
+    },
+    "4oe9_B": {
+      "completed": [
+        "4oe9_B-149.npz"
+      ],
+      "step_fs": 2,
+      "minimization": 100
+    },
+    "3c9p_A": {
+      "completed": [],
+      "step_fs": 2,
+      "minimization": 100
+    },
+    "2end_A": {
+      "completed": [
+        "2end_A-149.npz"
+      ],
+      "step_fs": 2,
+      "minimization": 100
+    },
+    "2j6a_A": {
+      "completed": [],
+      "step_fs": 2,
+      "minimization": 100
+    },
+    "1ijt_A": {
+      "completed": [
+        "1ijt_A-149.npz"
+      ],
+      "step_fs": 2,
+      "minimization": 100
+    }
+  }
+}
