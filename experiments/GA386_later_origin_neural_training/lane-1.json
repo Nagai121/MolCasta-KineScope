@@ -1,0 +1,57 @@
+{
+  "proteins": [
+    "6vjg_A",
+    "1lr0_A",
+    "3b4q_B",
+    "2i9x_A",
+    "2qev_A",
+    "2pyq_B",
+    "1o4k_A",
+    "4obi_A",
+    "4oe9_B",
+    "7fd1_A",
+    "3c9p_A",
+    "2bo1_A",
+    "2y1y_A",
+    "2end_A",
+    "1bgf_A",
+    "4goq_B",
+    "3cw3_A",
+    "2fhz_A",
+    "3mwz_A",
+    "3a39_A",
+    "1fk5_A",
+    "2j6a_A",
+    "3ehg_A",
+    "1ijt_A"
+  ],
+  "assigned": [
+    "1lr0_A",
+    "2i9x_A",
+    "2pyq_B",
+    "4obi_A",
+    "7fd1_A",
+    "2bo1_A",
+    "2end_A",
+    "4goq_B",
+    "2fhz_A",
+    "3a39_A",
+    "2j6a_A",
+    "1ijt_A"
+  ],
+  "origins": [
+    149,
+    249
+  ],
+  "seeds": 2,
+  "window": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "recovery": {},
+  "failures": {}
+}

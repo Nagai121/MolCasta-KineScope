@@ -1,0 +1,20 @@
+{
+  "samples": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "branches": 2,
+  "step_fs": 2,
+  "minimization": 100,
+  "repartitioning": false,
+  "control": "GA372/ACE",
+  "origins": [
+    49,
+    149,
+    249
+  ]
+}
