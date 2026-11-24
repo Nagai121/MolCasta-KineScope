@@ -1,0 +1,16 @@
+train (9610, 7) test (4972, 7) test pos 30ns 345
+{'1mix_A': 3101, '2qt4_A': 1871}
+static_only {'n': 4972, 'positives': 345, 'auprc': 0.3639, 'auc': 0.8617, 'brier': 0.0528, 'logloss': 0.1907}
+base_hist_D6 {'n': 4972, 'positives': 345, 'auprc': 0.4264, 'auc': 0.905, 'brier': 0.0487, 'logloss': 0.1686}
+first_half_frac {'n': 4972, 'positives': 345, 'auprc': 0.4287, 'auc': 0.8865, 'brier': 0.0495, 'logloss': 0.1767}
+second_half_frac {'n': 4972, 'positives': 345, 'auprc': 0.4245, 'auc': 0.8767, 'brier': 0.0493, 'logloss': 0.1795}
+full_frac {'n': 4972, 'positives': 345, 'auprc': 0.4689, 'auc': 0.8933, 'brier': 0.0474, 'logloss': 0.1704}
+base gain (should be ~0.0626): 0.0626
+base reproduction OK (static 0.3639 / full6 0.4264 / gain +0.0626)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-frac 0.0
+base_hist_D6 gain 0.0626 ratio vs full6 1.0 ratio vs full-frac 0.5959
+first_half_frac gain 0.0648 ratio vs full6 1.0358 ratio vs full-frac 0.6172
+second_half_frac gain 0.0606 ratio vs full6 0.9687 ratio vs full-frac 0.5772
+full_frac gain 0.105 ratio vs full6 1.6782 ratio vs full-frac 1.0
+verdict: 続いている状態が効いている
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-21_hb_formation_fraction_halves_30ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-21_hb_formation_fraction_halves_30ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-21_hb_formation_fraction_halves_30ns/test_predictions.npz
