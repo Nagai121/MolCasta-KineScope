@@ -1,0 +1,21 @@
+cal 13808 test 163074
+full mean vs stored history col 1: cal max diff 1.43e-06, test 2.86e-06
+--- horizon 50 ns: cal pos 975 test pos 12819 ---
+  static_only: pooled auprc 0.4470 macro auprc 0.4407
+  full_history: pooled auprc 0.4825 macro auprc 0.4752
+  first_half_mean: pooled auprc 0.4729 macro auprc 0.4653
+  second_half_mean: pooled auprc 0.4676 macro auprc 0.4610
+  both_halves: pooled auprc 0.4744 macro auprc 0.4681
+  full_mean: pooled auprc 0.4791 macro auprc 0.4723
+  base reproduced (results_100.json by_horizon[50], 50 ns)
+  base gain pooled 0.0354 macro 0.0344 (full-mean gain pooled 0.0321 macro 0.0315)
+  full_history: frac vs full-history pooled 1.000 macro 1.000 | vs full-mean pooled 1.104 macro 1.091 | per-protein median vs full-history 1.000
+  first_half_mean: frac vs full-history pooled 0.730 macro 0.713 | vs full-mean pooled 0.806 macro 0.778 | per-protein median vs full-history 0.698
+  second_half_mean: frac vs full-history pooled 0.581 macro 0.589 | vs full-mean pooled 0.641 macro 0.643 | per-protein median vs full-history 0.564
+  both_halves: frac vs full-history pooled 0.773 macro 0.796 | vs full-mean pooled 0.854 macro 0.868 | per-protein median vs full-history 0.760
+  full_mean: frac vs full-history pooled 0.906 macro 0.917 | vs full-mean pooled 1.000 macro 1.000 | per-protein median vs full-history 0.874
+  full-mean recovery vs K77: 0.906 (ref 0.906)
+  judgment: {'pooled': 'どちらでもない（数値をそのまま記録）', 'macro': 'どちらでもない（数値をそのまま記録）', 'pooled_vs_full_mean': 'どちらでもない（数値をそのまま記録）', 'macro_vs_full_mean': 'どちらでもない（数値をそのまま記録）'}
+  per-protein shapes (vs full-history gain, gain > 0.01): {'now_state': 5, 'continuing': 15, 'other': 62, 'excluded_gain_le_0.01': 18}
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-76_hb_formation_half_means_strong_50ns/results.json
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-76_hb_formation_half_means_strong_50ns/test_predictions.npz
