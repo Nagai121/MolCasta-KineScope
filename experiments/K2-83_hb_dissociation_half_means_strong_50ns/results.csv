@@ -1,0 +1,7 @@
+condition,auprc_pooled,auprc_macro,auprc_macro_protein,auc,brier,logloss,gain_pooled,ratio_vs_full_pooled,ratio_vs_full_macro,ratio_vs_full_macro_protein
+static_only,0.6001,0.6246,0.6171,0.8853,0.1124,0.3352,0.0,0.0,0.0,0.0
+full_history,0.6568,0.6758,0.6687,0.9019,0.1042,0.3134,0.0567,1.0,1.0,1.0
+first_half_mean,0.6542,0.6731,0.6662,0.8999,0.105,0.3153,0.054,0.954,0.946,0.952
+second_half_mean,0.6357,0.657,0.6495,0.8958,0.1075,0.3217,0.0356,0.628,0.633,0.627
+both_halves,0.6587,0.677,0.6701,0.9013,0.1044,0.3138,0.0586,1.033,1.022,1.028
+full_mean,0.6549,0.6742,0.6674,0.9016,0.1044,0.3129,0.0548,0.967,0.967,0.976
