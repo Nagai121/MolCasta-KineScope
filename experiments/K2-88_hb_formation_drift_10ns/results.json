@@ -1,0 +1,282 @@
+{
+  "label": "HB formation 10ns: does the drift (first-half mean minus second-half mean) add on top of the full mean?",
+  "series": "K2 (what the guidance is, not where it is)",
+  "experiment": "K2-88",
+  "horizon_ns": 1,
+  "conditions_definition": {
+    "base": "Material D conditions: train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 (100 ps spacing), HistGBM (120 iters, lr 0.075, 31 leaves, min_samples_leaf 15, L2 0.02, seed 42) refit per condition, 7 static features.",
+    "drift": {
+      "definition": "first-half mean minus second-half mean (mean distance over frames [0..4] minus mean over frames [6..10])",
+      "sign": "positive drift = distance larger in the first half (pair moving closer during the history); negative drift = distance larger in the second half (pair moving apart)",
+      "first_half": {
+        "frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "span_ns": "0.0-0.4"
+      },
+      "second_half": {
+        "frames": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "span_ns": "0.6-1.0"
+      },
+      "note": "Frame 5 (0.5 ns) belongs to neither half by design (same as K2-01)."
+    },
+    "drift_only": "static + drift only (a)",
+    "full_mean": "static + mean over frames [0..10] only (b)",
+    "full_mean_plus_drift": "static + full mean + drift (c)",
+    "both_halves_mean": "static + first-half mean + second-half mean (cross-check vs K2-35, AUPRC 0.4478, ratio 1.122)",
+    "base_hist_D6": "static + 6 statistics of the full 11-frame history (all-in reference)"
+  },
+  "base_reproduction": {
+    "expected_from_K2-35_10ns": {
+      "static_only_auprc": 0.3548,
+      "base_hist_D6_auprc": 0.4377,
+      "full6_gain": 0.0829,
+      "full_mean_auprc": 0.4467,
+      "both_halves_auprc": 0.4478,
+      "front_half_mean_auprc": 0.4469
+    },
+    "observed": {
+      "static_only_auprc": 0.35476856489174796,
+      "base_hist_D6_auprc": 0.4376925992987372,
+      "full6_gain": 0.08292403440698926,
+      "full_mean_auprc": 0.4466674766876979,
+      "both_halves_auprc": 0.44782814799122195
+    },
+    "match": "all within 5e-4 (identical to 4 decimal places)",
+    "n_train": 9610,
+    "n_test": 4972,
+    "n_test_positives": 325
+  },
+  "metrics_10ns": {
+    "static_only": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.35476856489174796,
+      "auc": 0.8750899670589793,
+      "brier": 0.04945700886925582,
+      "logloss": 0.17527504097694893
+    },
+    "base_hist_D6": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.4376925992987372,
+      "auc": 0.9083570872854281,
+      "brier": 0.046232954526879956,
+      "logloss": 0.16082345004219542
+    },
+    "drift_only": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.38328858785990527,
+      "auc": 0.8820393636920429,
+      "brier": 0.04850526793383118,
+      "logloss": 0.1716566882442197
+    },
+    "full_mean": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.4466674766876979,
+      "auc": 0.9043389448941418,
+      "brier": 0.04606187791748759,
+      "logloss": 0.1598513252829234
+    },
+    "full_mean_plus_drift": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.4302092447468854,
+      "auc": 0.9043948949694594,
+      "brier": 0.045771645098152444,
+      "logloss": 0.16088549656839596
+    },
+    "both_halves_mean": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.44782814799122195,
+      "auc": 0.9061793381999967,
+      "brier": 0.04628144112239948,
+      "logloss": 0.1599288996077127
+    }
+  },
+  "gains": {
+    "static_only": {
+      "gain": 0.0,
+      "ratio_vs_full6_gain": 0.0,
+      "ratio_vs_fullmean_gain": 0.0
+    },
+    "base_hist_D6": {
+      "gain": 0.08292403440698926,
+      "ratio_vs_full6_gain": 1.0,
+      "ratio_vs_fullmean_gain": 0.9023396772217686
+    },
+    "drift_only": {
+      "gain": 0.02852002296815731,
+      "ratio_vs_full6_gain": 0.3439295153945561,
+      "ratio_vs_fullmean_gain": 0.31034124790816303
+    },
+    "full_mean": {
+      "gain": 0.09189891179594994,
+      "ratio_vs_full6_gain": 1.1082301102827703,
+      "ratio_vs_fullmean_gain": 1.0
+    },
+    "full_mean_plus_drift": {
+      "gain": 0.07544067985513742,
+      "ratio_vs_full6_gain": 0.9097565065982716,
+      "ratio_vs_fullmean_gain": 0.8209093925142881
+    },
+    "both_halves_mean": {
+      "gain": 0.09305958309947399,
+      "ratio_vs_full6_gain": 1.1222269124381925,
+      "ratio_vs_fullmean_gain": 1.0126298699390606
+    }
+  },
+  "reading_rule_fixed_in_advance": {
+    "rule": "(c) full_mean_plus_drift beats (b) full_mean by AUPRC >= +0.01 -> 'drift adds on top of the full mean'; otherwise 'drift does not add'.",
+    "auprc_c_minus_b": -0.01645823194081253,
+    "auprc_c_minus_both_halves": -0.01761890324433657,
+    "verdict": "漂いは足しにならない"
+  },
+  "per_protein": {
+    "static_only": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 245,
+        "auprc_static": 0.402507802661433,
+        "auprc_full6": 0.45948310054940267,
+        "auprc_condition": 0.402507802661433,
+        "full6_gain": 0.05697529788796968,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 80,
+        "auprc_static": 0.2334198496388016,
+        "auprc_full6": 0.3864498322654845,
+        "auprc_condition": 0.2334198496388016,
+        "full6_gain": 0.1530299826266829,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      }
+    },
+    "base_hist_D6": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 245,
+        "auprc_static": 0.402507802661433,
+        "auprc_full6": 0.45948310054940267,
+        "auprc_condition": 0.45948310054940267,
+        "full6_gain": 0.05697529788796968,
+        "gain": 0.05697529788796968,
+        "ratio_vs_full6_gain": 1.0
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 80,
+        "auprc_static": 0.2334198496388016,
+        "auprc_full6": 0.3864498322654845,
+        "auprc_condition": 0.3864498322654845,
+        "full6_gain": 0.1530299826266829,
+        "gain": 0.1530299826266829,
+        "ratio_vs_full6_gain": 1.0
+      }
+    },
+    "drift_only": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 245,
+        "auprc_static": 0.402507802661433,
+        "auprc_full6": 0.45948310054940267,
+        "auprc_condition": 0.419887173239338,
+        "full6_gain": 0.05697529788796968,
+        "gain": 0.017379370577905007,
+        "ratio_vs_full6_gain": 0.30503343066460137
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 80,
+        "auprc_static": 0.2334198496388016,
+        "auprc_full6": 0.3864498322654845,
+        "auprc_condition": 0.2857858143442354,
+        "full6_gain": 0.1530299826266829,
+        "gain": 0.05236596470543378,
+        "ratio_vs_full6_gain": 0.3421941491895788
+      }
+    },
+    "full_mean": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 245,
+        "auprc_static": 0.402507802661433,
+        "auprc_full6": 0.45948310054940267,
+        "auprc_condition": 0.4527634425832161,
+        "full6_gain": 0.05697529788796968,
+        "gain": 0.05025563992178311,
+        "ratio_vs_full6_gain": 0.882060152113651
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 80,
+        "auprc_static": 0.2334198496388016,
+        "auprc_full6": 0.3864498322654845,
+        "auprc_condition": 0.45502574244144883,
+        "full6_gain": 0.1530299826266829,
+        "gain": 0.22160589280264723,
+        "ratio_vs_full6_gain": 1.4481207473129984
+      }
+    },
+    "full_mean_plus_drift": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 245,
+        "auprc_static": 0.402507802661433,
+        "auprc_full6": 0.45948310054940267,
+        "auprc_condition": 0.44978280769812645,
+        "full6_gain": 0.05697529788796968,
+        "gain": 0.04727500503669346,
+        "ratio_vs_full6_gain": 0.8297456404642259
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 80,
+        "auprc_static": 0.2334198496388016,
+        "auprc_full6": 0.3864498322654845,
+        "auprc_condition": 0.39459872454232314,
+        "full6_gain": 0.1530299826266829,
+        "gain": 0.16117887490352154,
+        "ratio_vs_full6_gain": 1.0532502986471473
+      }
+    },
+    "both_halves_mean": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 245,
+        "auprc_static": 0.402507802661433,
+        "auprc_full6": 0.45948310054940267,
+        "auprc_condition": 0.44347600927602376,
+        "full6_gain": 0.05697529788796968,
+        "gain": 0.040968206614590774,
+        "ratio_vs_full6_gain": 0.7190520828016803
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 80,
+        "auprc_static": 0.2334198496388016,
+        "auprc_full6": 0.3864498322654845,
+        "auprc_condition": 0.47896941343862365,
+        "full6_gain": 0.1530299826266829,
+        "gain": 0.24554956379982204,
+        "ratio_vs_full6_gain": 1.60458466756048
+      }
+    }
+  }
+}
