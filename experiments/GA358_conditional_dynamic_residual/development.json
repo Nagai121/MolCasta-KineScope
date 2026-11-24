@@ -1,0 +1,232 @@
+{
+  "best": "dynamic/4/0.1",
+  "trials": {
+    "dynamic/2/0.1": {
+      "residual_sd": 0.4050854111853411,
+      "rmse": 0.4051851459270182,
+      "bias": -0.008989556424104062,
+      "residual_correlation": 0.6648303040560747
+    },
+    "dynamic/2/0.2": {
+      "residual_sd": 0.40681515029280624,
+      "rmse": 0.406916497744467,
+      "bias": -0.009081279032398337,
+      "residual_correlation": 0.6614625514374877
+    },
+    "dynamic/2/0.35": {
+      "residual_sd": 0.4103493581841457,
+      "rmse": 0.410452901466503,
+      "bias": -0.009218924022385163,
+      "residual_correlation": 0.6538854721162816
+    },
+    "dynamic/2/0.5": {
+      "residual_sd": 0.41498479197307386,
+      "rmse": 0.4150902571207822,
+      "bias": -0.009356494410923174,
+      "residual_correlation": 0.6431897496650549
+    },
+    "dynamic/4/0.1": {
+      "residual_sd": 0.4047493220770069,
+      "rmse": 0.40485306962793444,
+      "bias": -0.009164838534555797,
+      "residual_correlation": 0.6655621389630095
+    },
+    "dynamic/4/0.2": {
+      "residual_sd": 0.4062445235791885,
+      "rmse": 0.4063539991254383,
+      "bias": -0.009431843253301805,
+      "residual_correlation": 0.6626808781155513
+    },
+    "dynamic/4/0.35": {
+      "residual_sd": 0.4096165589922496,
+      "rmse": 0.40973455023568317,
+      "bias": -0.00983240846316543,
+      "residual_correlation": 0.6553653295348554
+    },
+    "dynamic/4/0.5": {
+      "residual_sd": 0.41431327607010454,
+      "rmse": 0.41443962531686085,
+      "bias": -0.01023290305032418,
+      "residual_correlation": 0.6443971183445694
+    },
+    "dynamic/6/0.1": {
+      "residual_sd": 0.40495004047626304,
+      "rmse": 0.40505233131804125,
+      "bias": -0.009102517478870501,
+      "residual_correlation": 0.6649593528925173
+    },
+    "dynamic/6/0.2": {
+      "residual_sd": 0.4066271773675823,
+      "rmse": 0.4067336786731873,
+      "bias": -0.009307201141931214,
+      "residual_correlation": 0.6615001304571502
+    },
+    "dynamic/6/0.35": {
+      "residual_sd": 0.4102356926436482,
+      "rmse": 0.41034833742468196,
+      "bias": -0.00961428668112456,
+      "residual_correlation": 0.653421729843734
+    },
+    "dynamic/6/0.5": {
+      "residual_sd": 0.4151242601142592,
+      "rmse": 0.41524280067110336,
+      "bias": -0.009921298996126607,
+      "residual_correlation": 0.6418914061873077
+    },
+    "conditioned/2/0.1": {
+      "residual_sd": 0.40510582923318605,
+      "rmse": 0.40520534168163297,
+      "bias": -0.008979757715083069,
+      "residual_correlation": 0.6647731220298607
+    },
+    "conditioned/2/0.2": {
+      "residual_sd": 0.40684686331365605,
+      "rmse": 0.4069477660116108,
+      "bias": -0.009061681614356349,
+      "residual_correlation": 0.6613690415414795
+    },
+    "conditioned/2/0.35": {
+      "residual_sd": 0.41038108538638984,
+      "rmse": 0.4104838518750059,
+      "bias": -0.009184628856433197,
+      "residual_correlation": 0.6537812805853419
+    },
+    "conditioned/2/0.5": {
+      "residual_sd": 0.4149967183911476,
+      "rmse": 0.4151010790968544,
+      "bias": -0.009307501917889918,
+      "residual_correlation": 0.6431312349280258
+    },
+    "conditioned/4/0.1": {
+      "residual_sd": 0.40474990919805387,
+      "rmse": 0.4048536323788846,
+      "bias": -0.009163768577622064,
+      "residual_correlation": 0.6655090868093195
+    },
+    "conditioned/4/0.2": {
+      "residual_sd": 0.40620952986909925,
+      "rmse": 0.40631896517581406,
+      "bias": -0.00942970333943434,
+      "residual_correlation": 0.6626619268800381
+    },
+    "conditioned/4/0.35": {
+      "residual_sd": 0.4094616541399742,
+      "rmse": 0.40957960016858813,
+      "bias": -0.009828665383290703,
+      "residual_correlation": 0.6555814080591134
+    },
+    "conditioned/4/0.5": {
+      "residual_sd": 0.41396141699646044,
+      "rmse": 0.41408774145814714,
+      "bias": -0.010227554164698617,
+      "residual_correlation": 0.6450838288268458
+    },
+    "conditioned/6/0.1": {
+      "residual_sd": 0.4048743320279313,
+      "rmse": 0.40498232190252664,
+      "bias": -0.00935180830097062,
+      "residual_correlation": 0.665210839378607
+    },
+    "conditioned/6/0.2": {
+      "residual_sd": 0.40645941677261854,
+      "rmse": 0.40657768121133503,
+      "bias": -0.009805782786131452,
+      "residual_correlation": 0.6620544003452465
+    },
+    "conditioned/6/0.35": {
+      "residual_sd": 0.40990052212754136,
+      "rmse": 0.41003464617705826,
+      "bias": -0.01048680242563868,
+      "residual_correlation": 0.6544973985355823
+    },
+    "conditioned/6/0.5": {
+      "residual_sd": 0.41458867802366794,
+      "rmse": 0.414739063296037,
+      "bias": -0.011167751710241107,
+      "residual_correlation": 0.6435209958548169
+    }
+  },
+  "parent": {
+    "residual_sd": 0.4038645730659292,
+    "rmse": 0.403962578518607,
+    "bias": -0.0088978348870101,
+    "residual_correlation": 0.6669163631369147
+  },
+  "train_proteins": [
+    "2pyq_B",
+    "3qfl_A",
+    "3mhs_B",
+    "4ykd_A",
+    "3v0r_A",
+    "2y7b_A",
+    "1ok0_A",
+    "2j6a_A",
+    "3ic3_B",
+    "4hwx_A",
+    "3mwz_A",
+    "5v0m_A",
+    "3p4h_A",
+    "6fub_B",
+    "4oe9_B",
+    "4b6i_D",
+    "1n8u_A",
+    "2o4t_A",
+    "2p9x_D",
+    "3lyy_A",
+    "3klr_A",
+    "1ijt_A",
+    "2gc4_B",
+    "4goq_B",
+    "2bo1_A",
+    "2rff_A",
+    "6vjg_A",
+    "5x1e_D",
+    "5h6x_A",
+    "7s86_A",
+    "2vm5_A",
+    "1i4m_A",
+    "2oxo_A",
+    "5pal_A",
+    "4obi_A",
+    "1m9z_A",
+    "3po8_A",
+    "3cw3_A",
+    "7fd1_A",
+    "1o4k_A",
+    "2fhz_A",
+    "3cyi_A",
+    "5cyz_C",
+    "6pxz_B",
+    "5ydn_A",
+    "1bgf_A",
+    "1cpq_A",
+    "1fk5_A",
+    "1gqv_A",
+    "1ikt_A",
+    "1krn_A",
+    "1lr0_A",
+    "1msc_A",
+    "1qw2_A",
+    "1u84_A",
+    "1yu5_X",
+    "2b0a_A",
+    "2cg7_A",
+    "2dlb_A",
+    "2end_A",
+    "2fe5_A",
+    "2hng_A",
+    "2i9x_A",
+    "2igp_A",
+    "2oy9_B",
+    "2qev_A",
+    "2w9y_A",
+    "2y1y_A",
+    "3a39_A",
+    "3b4q_B",
+    "3bwu_D",
+    "3c9p_A",
+    "3dso_A",
+    "3ehg_A"
+  ],
+  "pairs": 41376
+}
