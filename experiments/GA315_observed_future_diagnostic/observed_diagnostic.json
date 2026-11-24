@@ -1,0 +1,41 @@
+{
+  "purpose": "observed future diagnostic only, excluded from predictors",
+  "proteins": [
+    "3mx7_A",
+    "3t92_A",
+    "4wrp_A"
+  ],
+  "pairs": 4820,
+  "results": {
+    "frame100ps": {
+      "residual_sd": 0.6140821576118469,
+      "rmse": 0.6157485842704773,
+      "bias": -0.045270808041095734,
+      "residual_correlation": 0.5426711644534747
+    },
+    "0-200ps": {
+      "residual_sd": 0.5305077433586121,
+      "rmse": 0.5324471592903137,
+      "bias": -0.045403555035591125,
+      "residual_correlation": 0.5614504714968986
+    },
+    "0-500ps": {
+      "residual_sd": 0.5284419059753418,
+      "rmse": 0.529535174369812,
+      "bias": -0.03401026502251625,
+      "residual_correlation": 0.5899189563299945
+    },
+    "0-1000ps": {
+      "residual_sd": 0.5492919087409973,
+      "rmse": 0.5500937700271606,
+      "bias": -0.029691925272345543,
+      "residual_correlation": 0.5894463753759442
+    },
+    "600-1000ps": {
+      "residual_sd": 0.6752567887306213,
+      "rmse": 0.675701916217804,
+      "bias": -0.02452191151678562,
+      "residual_correlation": 0.5241324210429206
+    }
+  }
+}
