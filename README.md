@@ -19,6 +19,8 @@ KineScope は、実軌道が持つ指導力が、生成軌道やその処理の�
 
 ## 記録の置き場
 
+- [GA01〜GA392の総合レポートと全試行索引](docs/ga/README.md)
+
 - `docs/facts.md` — 既存実験から確認できた事実と、実験どうしの条件の食い違い
 - `docs/hypotheses.md` — 原因の仮説の一覧、既存実験との対応、未検証の組み合わせ、実験の登録
 - `experiments/` — 実験ごとの記録（1実験1ディレクトリ、記録の約束は experiments/README.md）
