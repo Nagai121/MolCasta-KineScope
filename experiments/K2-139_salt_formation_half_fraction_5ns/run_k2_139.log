@@ -1,0 +1,17 @@
+train proteins 58 test proteins 30
+train (2557, 5) test (1170, 5)
+5 ns: static 0.2513 full 0.3301 gain 0.0788 (ref 0.0788)
+  base_hist_D6: auprc 0.3301 gain +0.0788 recovery 1.000 ratio_to_full 1.240
+  frac_first_half: auprc 0.3372 gain +0.0859 recovery 1.090 ratio_to_full 1.352
+  frac_second_half: auprc 0.2793 gain +0.0280 recovery 0.356 ratio_to_full 0.441
+  frac_both: auprc 0.3051 gain +0.0538 recovery 0.683 ratio_to_full 0.847
+  frac_full: auprc 0.3148 gain +0.0635 recovery 0.806 ratio_to_full 1.000
+  verdict (vs full history gain): どちらでもない; (vs full frac gain): どちらでもない
+  auprc diff (second - first): -0.0579
+  auprc diff (both - full): -0.0097
+per-protein verdict counts (vs full history gain): {'今の状態が効いている': 3, '続いている状態が効いている': 4, 'どちらでもない': 23}
+per-protein undefined AUPRC: {'zero_positives': ['2qt4_A', '2ftx_A', '1pch_A', '6fc0_B'], 'all_positive': []}
+per-protein shapes (K2-07 rule): {'now_state': 2, 'continuing': 2, 'other': 14, 'excluded_gain_le_0.01': 8, 'undefined_auprc': 4}
+per-protein: first recovery >= 0.8 in 6/30, second >= 0.8 in 7/30, first <= 0.5 in 17/30
+all base checks passed
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-139_salt_formation_half_fraction_5ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-139_salt_formation_half_fraction_5ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-139_salt_formation_half_fraction_5ns/test_predictions.npz
