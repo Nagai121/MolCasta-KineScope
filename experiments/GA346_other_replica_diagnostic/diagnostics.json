@@ -1,0 +1,75 @@
+{
+  "proteins": [
+    "3u5v_A",
+    "6fc0_B",
+    "1ef1_D",
+    "3ofg_B",
+    "2p6v_A",
+    "1m8s_A",
+    "5dbl_A",
+    "1ifg_A"
+  ],
+  "scope": "diagnostic; alternate real trajectories excluded from predictors",
+  "results": {
+    "0.2": {
+      "pairs": 2943,
+      "other_replica": {
+        "residual_sd": 0.4073964155741314,
+        "rmse": 0.40836307900969576,
+        "bias": 0.02808139732329313,
+        "residual_correlation": 0.43303006662289834
+      },
+      "ga332": {
+        "residual_sd": 0.29497920045965165,
+        "rmse": 0.2961573171429625,
+        "bias": 0.026389918406503197,
+        "residual_correlation": 0.5770560667295322
+      }
+    },
+    "0.4": {
+      "pairs": 3469,
+      "other_replica": {
+        "residual_sd": 0.45176754809621067,
+        "rmse": 0.4524804365135654,
+        "bias": 0.02538952371835064,
+        "residual_correlation": 0.3944723978007066
+      },
+      "ga332": {
+        "residual_sd": 0.3228184590246473,
+        "rmse": 0.32396216250552584,
+        "bias": 0.027197890510274172,
+        "residual_correlation": 0.5769803610357083
+      }
+    },
+    "0.8": {
+      "pairs": 3757,
+      "other_replica": {
+        "residual_sd": 0.5087136381868667,
+        "rmse": 0.5092003202539165,
+        "bias": 0.022257593521602413,
+        "residual_correlation": 0.3462742826672369
+      },
+      "ga332": {
+        "residual_sd": 0.3523567273803196,
+        "rmse": 0.35344586829585106,
+        "bias": 0.027725772942142724,
+        "residual_correlation": 0.5863255251681209
+      }
+    },
+    "4.0": {
+      "pairs": 3880,
+      "other_replica": {
+        "residual_sd": 0.548979988929505,
+        "rmse": 0.549137357117792,
+        "bias": 0.013145673709407467,
+        "residual_correlation": 0.31652172889951746
+      },
+      "ga332": {
+        "residual_sd": 0.3788844355928967,
+        "rmse": 0.37947811988001984,
+        "bias": 0.021218575190780714,
+        "residual_correlation": 0.5978756385650627
+      }
+    }
+  }
+}
