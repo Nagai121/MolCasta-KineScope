@@ -137,7 +137,7 @@
    "2qt4_A": {
     "n": 24,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "1u6t_A": {
     "n": 46,
@@ -207,7 +207,7 @@
    "1uha_A": {
     "n": 32,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "5yrv_I": {
     "n": 68,
@@ -217,7 +217,7 @@
    "1pch_A": {
     "n": 8,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "4ytw_C": {
     "n": 14,
@@ -237,7 +237,7 @@
    "6in7_A": {
     "n": 30,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "2end_A": {
     "n": 70,
@@ -252,7 +252,7 @@
    "6fc0_B": {
     "n": 8,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "1l9l_A": {
     "n": 22,
@@ -289,7 +289,7 @@
    "2qt4_A": {
     "n": 24,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "1u6t_A": {
     "n": 46,
@@ -359,7 +359,7 @@
    "1uha_A": {
     "n": 32,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "5yrv_I": {
     "n": 68,
@@ -369,7 +369,7 @@
    "1pch_A": {
     "n": 8,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "4ytw_C": {
     "n": 14,
@@ -389,7 +389,7 @@
    "6in7_A": {
     "n": 30,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "2end_A": {
     "n": 70,
@@ -404,7 +404,7 @@
    "6fc0_B": {
     "n": 8,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "1l9l_A": {
     "n": 22,
@@ -441,7 +441,7 @@
    "2qt4_A": {
     "n": 24,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "1u6t_A": {
     "n": 46,
@@ -511,7 +511,7 @@
    "1uha_A": {
     "n": 32,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "5yrv_I": {
     "n": 68,
@@ -521,7 +521,7 @@
    "1pch_A": {
     "n": 8,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "4ytw_C": {
     "n": 14,
@@ -541,7 +541,7 @@
    "6in7_A": {
     "n": 30,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "2end_A": {
     "n": 70,
@@ -556,7 +556,7 @@
    "6fc0_B": {
     "n": 8,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "1l9l_A": {
     "n": 22,
@@ -593,7 +593,7 @@
    "2qt4_A": {
     "n": 24,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "1u6t_A": {
     "n": 46,
@@ -663,7 +663,7 @@
    "1uha_A": {
     "n": 32,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "5yrv_I": {
     "n": 68,
@@ -673,7 +673,7 @@
    "1pch_A": {
     "n": 8,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "4ytw_C": {
     "n": 14,
@@ -693,7 +693,7 @@
    "6in7_A": {
     "n": 30,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "2end_A": {
     "n": 70,
@@ -708,7 +708,7 @@
    "6fc0_B": {
     "n": 8,
     "positives": 0,
-    "auprc": NaN
+    "auprc": null
    },
    "1l9l_A": {
     "n": 22,
@@ -748,9 +748,9 @@
   "2qt4_A": {
    "n": 24,
    "positives": 0,
-   "auprc_full_frac": NaN,
-   "auprc_full_frac_plus_drift": NaN,
-   "diff_c_minus_b": NaN
+   "auprc_full_frac": null,
+   "auprc_full_frac_plus_drift": null,
+   "diff_c_minus_b": null
   },
   "1u6t_A": {
    "n": 46,
@@ -846,9 +846,9 @@
   "1uha_A": {
    "n": 32,
    "positives": 0,
-   "auprc_full_frac": NaN,
-   "auprc_full_frac_plus_drift": NaN,
-   "diff_c_minus_b": NaN
+   "auprc_full_frac": null,
+   "auprc_full_frac_plus_drift": null,
+   "diff_c_minus_b": null
   },
   "5yrv_I": {
    "n": 68,
@@ -860,9 +860,9 @@
   "1pch_A": {
    "n": 8,
    "positives": 0,
-   "auprc_full_frac": NaN,
-   "auprc_full_frac_plus_drift": NaN,
-   "diff_c_minus_b": NaN
+   "auprc_full_frac": null,
+   "auprc_full_frac_plus_drift": null,
+   "diff_c_minus_b": null
   },
   "4ytw_C": {
    "n": 14,
@@ -888,9 +888,9 @@
   "6in7_A": {
    "n": 30,
    "positives": 0,
-   "auprc_full_frac": NaN,
-   "auprc_full_frac_plus_drift": NaN,
-   "diff_c_minus_b": NaN
+   "auprc_full_frac": null,
+   "auprc_full_frac_plus_drift": null,
+   "diff_c_minus_b": null
   },
   "2end_A": {
    "n": 70,
@@ -909,9 +909,9 @@
   "6fc0_B": {
    "n": 8,
    "positives": 0,
-   "auprc_full_frac": NaN,
-   "auprc_full_frac_plus_drift": NaN,
-   "diff_c_minus_b": NaN
+   "auprc_full_frac": null,
+   "auprc_full_frac_plus_drift": null,
+   "diff_c_minus_b": null
   },
   "1l9l_A": {
    "n": 22,
