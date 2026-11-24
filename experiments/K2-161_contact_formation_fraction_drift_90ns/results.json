@@ -1,0 +1,289 @@
+{
+  "label": "Contact formation 90ns, fraction drift (first-half fraction minus second-half fraction) on top of the full fraction (K2-15 question, fraction form)",
+  "phenomenon": "contact formation (Doc D, k13_cache)",
+  "horizon_ns": 90,
+  "frames": {
+    "first_half": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "second_half": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "full": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "note": "frame 5 belongs to neither half"
+  },
+  "bound": 4.5,
+  "fraction_definition": "fraction = share of frames with pair min heavy-atom distance <= 4.5 A (same definition as the 'fraction <= 4.5 A' of the 6 statistics) within the given frame range",
+  "drift_definition": "drift = first-half fraction minus second-half fraction of the min-distance series",
+  "metrics": {
+    "static_only": {
+      "n": 7384,
+      "positives": 257,
+      "auc": 0.8734379427387166,
+      "auprc": 0.2872126453371935,
+      "brier": 0.0283498952054554,
+      "logloss": 0.11077667429940925
+    },
+    "full_hist6": {
+      "n": 7384,
+      "positives": 257,
+      "auc": 0.9135703050655724,
+      "auprc": 0.47216777524969433,
+      "brier": 0.023603493191096076,
+      "logloss": 0.09251423080626342
+    },
+    "drift_only": {
+      "n": 7384,
+      "positives": 257,
+      "auc": 0.8833618414982428,
+      "auprc": 0.3776083224896366,
+      "brier": 0.025778776027427265,
+      "logloss": 0.10238272795674609
+    },
+    "frac_full": {
+      "n": 7384,
+      "positives": 257,
+      "auc": 0.8869018403735671,
+      "auprc": 0.41980939780288823,
+      "brier": 0.02443912979313746,
+      "logloss": 0.09819927045524973
+    },
+    "frac_full_plus_drift": {
+      "n": 7384,
+      "positives": 257,
+      "auc": 0.8879009455465842,
+      "auprc": 0.4184857460478209,
+      "brier": 0.024588306157979738,
+      "logloss": 0.0982028757550611
+    },
+    "frac_both_halves": {
+      "n": 7384,
+      "positives": 257,
+      "auc": 0.8857307580806042,
+      "auprc": 0.40972436613263663,
+      "brier": 0.024645691198963978,
+      "logloss": 0.09876686257562205
+    },
+    "frac_first_half": {
+      "n": 7384,
+      "positives": 257,
+      "auc": 0.8809028416625766,
+      "auprc": 0.4170784280513156,
+      "brier": 0.024935781662419162,
+      "logloss": 0.10122835262335837
+    },
+    "frac_second_half": {
+      "n": 7384,
+      "positives": 257,
+      "auc": 0.874625130825452,
+      "auprc": 0.39467731315890986,
+      "brier": 0.025425164513184224,
+      "logloss": 0.10328431555451961
+    }
+  },
+  "per_protein_metrics": {
+    "static_only": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.8657550958947049,
+        "auprc": 0.32735345698473944,
+        "brier": 0.03184840619108805,
+        "logloss": 0.12380585753913272
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 54,
+        "auc": 0.9257341897548973,
+        "auprc": 0.22656054538503667,
+        "brier": 0.020957594589944933,
+        "logloss": 0.08324620785864448
+      }
+    },
+    "full_hist6": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.8964308506115893,
+        "auprc": 0.4670432103164897,
+        "brier": 0.027878769450896315,
+        "logloss": 0.11027422776352674
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 54,
+        "auc": 0.9662863899274599,
+        "auprc": 0.5091222950913852,
+        "brier": 0.014569899340287155,
+        "logloss": 0.054987626780207834
+      }
+    },
+    "drift_only": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.8698386748164105,
+        "auprc": 0.3674448269445043,
+        "brier": 0.030282457935769128,
+        "logloss": 0.11885265536756427
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 54,
+        "auc": 0.9458145591665867,
+        "auprc": 0.47694361518115763,
+        "brier": 0.01626256450777742,
+        "logloss": 0.06758202130285873
+      }
+    },
+    "frac_full": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.876963554583104,
+        "auprc": 0.4039158787682845,
+        "brier": 0.02916634556221066,
+        "logloss": 0.11474210306667391
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 54,
+        "auc": 0.9324010162017065,
+        "auprc": 0.5475233666545828,
+        "brier": 0.014450594618350396,
+        "logloss": 0.06324451621896898
+      }
+    },
+    "frac_full_plus_drift": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.8777651099590567,
+        "auprc": 0.40617597254425725,
+        "brier": 0.02920016245780528,
+        "logloss": 0.11462702649613994
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 54,
+        "auc": 0.9340906912088965,
+        "auprc": 0.5149649406849517,
+        "brier": 0.014843523790894734,
+        "logloss": 0.06349889450957742
+      }
+    },
+    "frac_both_halves": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.8777461594485709,
+        "auprc": 0.40159801395629735,
+        "brier": 0.028923650625017287,
+        "logloss": 0.11368850543275014
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 54,
+        "auc": 0.9284184961492985,
+        "auprc": 0.4855244539822923,
+        "brier": 0.0156064278585849,
+        "logloss": 0.06723765768526542
+      }
+    },
+    "frac_first_half": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.872066128062428,
+        "auprc": 0.4185387937701714,
+        "brier": 0.028798599625628186,
+        "logloss": 0.11569707531140545
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 54,
+        "auc": 0.9208409228901032,
+        "auprc": 0.48498446190198785,
+        "brier": 0.016773705932400764,
+        "logloss": 0.07065616117627073
+      }
+    },
+    "frac_second_half": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.8620146748655795,
+        "auprc": 0.391025638446103,
+        "brier": 0.02987408636285355,
+        "logloss": 0.11989102513335897
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 54,
+        "auc": 0.9418120665963634,
+        "auprc": 0.4537797951210703,
+        "brier": 0.016024660166412453,
+        "logloss": 0.06819459025555553
+      }
+    }
+  },
+  "gains": {
+    "static_only": 0.0,
+    "full_hist6": 0.18495512991250085,
+    "drift_only": 0.09039567715244312,
+    "frac_full": 0.13259675246569474,
+    "frac_full_plus_drift": 0.13127310071062742,
+    "frac_both_halves": 0.12251172079544315,
+    "frac_first_half": 0.12986578271412214,
+    "frac_second_half": 0.10746466782171638
+  },
+  "gain_ratios_vs_full_hist6": {
+    "static_only": 0.0,
+    "full_hist6": 1.0,
+    "drift_only": 0.4887438223271114,
+    "frac_full": 0.7169130833431008,
+    "frac_full_plus_drift": 0.7097564732199129,
+    "frac_both_halves": 0.662386173627092,
+    "frac_first_half": 0.7021475034272336,
+    "frac_second_half": 0.5810310201861181
+  },
+  "gain_ratios_vs_frac_full": {
+    "static_only": 0.0,
+    "full_hist6": 1.3948692292471656,
+    "drift_only": 0.6817337187487316,
+    "frac_full": 1.0,
+    "frac_full_plus_drift": 0.9900174647534465,
+    "frac_both_halves": 0.9239420914712011,
+    "frac_first_half": 0.9794039469233671,
+    "frac_second_half": 0.8104622912957049
+  },
+  "diff_c_minus_b_auprc": -0.0013236517550673232,
+  "diff_c_minus_both_halves_auprc": 0.008761379915184275,
+  "reading_rule": "(c) minus (b) in AUPRC >= +0.01 -> drift adds; otherwise it does not (K2-06 convention)",
+  "reading": "漂いは足しにならない",
+  "checks_vs_K2_28_K2_124": {
+    "static_only_auprc_expected": 0.2872,
+    "full_hist6_auprc_expected": 0.4722,
+    "frac_full_auprc_expected": 0.4198
+  }
+}
