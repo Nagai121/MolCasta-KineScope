@@ -1959,10 +1959,12 @@
   "per_protein_shapes": {
     "now_state": 1,
     "continuing": 0,
-    "other": 22,
-    "excluded_gain_le_0.01": 2,
-    "undefined_auprc": 5
+    "other": 13,
+    "excluded_gain_le_0_01": 2,
+    "undefined_auprc": 5,
+    "negative_full_gain": 9
   },
+  "per_protein_shapes_correction": "Corrected 2026-11-24: the original counting excluded a protein only when |full gain| <= 0.01, so proteins with a large negative full gain were classified by ratios against a negative denominator (all 9 were counted as 'other'). The corrected counting (K2-145's rule) defines the ratio only when full gain > 0.01 and counts proteins with full gain < -0.01 separately as negative_full_gain. Original: now_state 1, continuing 0, other 22, excluded_gain_le_0.01 2, undefined_auprc 5. Pooled verdict unchanged.",
   "undefined_auprc_breakdown": {
     "zero_positives": [
       "2qt4_A",
