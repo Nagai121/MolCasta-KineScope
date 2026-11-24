@@ -1,0 +1,156 @@
+{
+  "selected": "local-attention-squared",
+  "validation": [
+    "3mx7_A",
+    "3t92_A",
+    "4wrp_A"
+  ],
+  "training": [
+    "1yu5_X",
+    "1knt_A",
+    "3txs_C",
+    "2vm5_A",
+    "3fp5_A",
+    "1i4m_A",
+    "3fyb_A",
+    "2oxo_A",
+    "2qsa_A",
+    "5pal_A",
+    "1uz3_A",
+    "4obi_A",
+    "5hqh_A",
+    "1m9z_A",
+    "3fpu_A",
+    "3po8_A",
+    "1tov_A",
+    "3cw3_A",
+    "7fd1_A",
+    "1o4k_A"
+  ],
+  "evaluation": [
+    "2oxl_B",
+    "4h4n_A",
+    "1vbw_A",
+    "1j2l_A",
+    "4ftf_A",
+    "3msw_A",
+    "3wx4_A",
+    "4wlr_B"
+  ],
+  "samples": [
+    10222,
+    4820,
+    9843
+  ],
+  "trials": {
+    "radial-pool-squared": {
+      "validation": {
+        "residual_sd": 0.6243155598640442,
+        "rmse": 0.624383270740509,
+        "bias": -0.00919619482010603,
+        "residual_correlation": 0.23175703177370927
+      }
+    },
+    "radial-pool-robust": {
+      "validation": {
+        "residual_sd": 0.632043182849884,
+        "rmse": 0.6404868364334106,
+        "bias": -0.10365724563598633,
+        "residual_correlation": 0.16407292193663744
+      }
+    },
+    "radial-attention-squared": {
+      "validation": {
+        "residual_sd": 0.6238831877708435,
+        "rmse": 0.6240463852882385,
+        "bias": -0.014272172003984451,
+        "residual_correlation": 0.23440598735362
+      }
+    },
+    "radial-attention-robust": {
+      "validation": {
+        "residual_sd": 0.6318912506103516,
+        "rmse": 0.6402143239974976,
+        "bias": -0.10289707034826279,
+        "residual_correlation": 0.16547383556915018
+      }
+    },
+    "global_-pool-squared": {
+      "validation": {
+        "residual_sd": 0.6337161660194397,
+        "rmse": 0.6338021159172058,
+        "bias": -0.010437589138746262,
+        "residual_correlation": 0.1475673270819365
+      }
+    },
+    "global_-pool-robust": {
+      "validation": {
+        "residual_sd": 0.6401587724685669,
+        "rmse": 0.6471489071846008,
+        "bias": -0.09486012905836105,
+        "residual_correlation": 0.0816766993764871
+      }
+    },
+    "global_-attention-squared": {
+      "validation": {
+        "residual_sd": 0.6336250305175781,
+        "rmse": 0.6336820721626282,
+        "bias": -0.008505270816385746,
+        "residual_correlation": 0.14853604714968563
+      }
+    },
+    "global_-attention-robust": {
+      "validation": {
+        "residual_sd": 0.640156090259552,
+        "rmse": 0.647054135799408,
+        "bias": -0.09422998875379562,
+        "residual_correlation": 0.08181078792970706
+      }
+    },
+    "local-pool-squared": {
+      "validation": {
+        "residual_sd": 0.6266259551048279,
+        "rmse": 0.6266260147094727,
+        "bias": -0.0002188860671594739,
+        "residual_correlation": 0.20966524086303306
+      }
+    },
+    "local-pool-robust": {
+      "validation": {
+        "residual_sd": 0.6330984234809875,
+        "rmse": 0.6416143774986267,
+        "bias": -0.10418927669525146,
+        "residual_correlation": 0.1544303039687889
+      }
+    },
+    "local-attention-squared": {
+      "validation": {
+        "residual_sd": 0.6264017224311829,
+        "rmse": 0.6264021396636963,
+        "bias": 0.0007497257320210338,
+        "residual_correlation": 0.21125679580326892
+      }
+    },
+    "local-attention-robust": {
+      "validation": {
+        "residual_sd": 0.6331585645675659,
+        "rmse": 0.6415766477584839,
+        "bias": -0.10358968377113342,
+        "residual_correlation": 0.15394890324593033
+      }
+    }
+  },
+  "test": {
+    "residual_sd": 0.5198522806167603,
+    "rmse": 0.520763099193573,
+    "bias": 0.030787015333771706,
+    "residual_correlation": 0.22643815467885176
+  },
+  "ridge": {
+    "residual_sd": 0.5337151885032654,
+    "rmse": 0.5339248776435852,
+    "bias": -0.014962282031774521,
+    "residual_correlation": null
+  },
+  "minicalc_sha256": "060b6eb49f0b26d4428859a5fdd6c11a89008ac8c584a661a395d4592e748ea5"
+}
