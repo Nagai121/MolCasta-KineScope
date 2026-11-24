@@ -1,0 +1,12 @@
+train (9610, 7) test (4972, 7) test proteins 2
+prefix mean (frames 0..9) test: mean 5.0582
+{'1mix_A': 3101, '2qt4_A': 1871}
+1ns: static 0.3637 full 0.4815 prefix1.0 0.4949 gain 0.1178 recovery 1.114 (record 1.114) CI [1.008, 1.200] contains_0.5=False auprc_diff +0.1312 CI [+0.1044, +0.1953] contains_zero=False
+5ns: static 0.3493 full 0.4648 prefix1.0 0.4785 gain 0.1155 recovery 1.119 (record 1.119) CI [1.081, 1.148] contains_0.5=False auprc_diff +0.1292 CI [+0.1028, +0.1987] contains_zero=False
+10ns: static 0.3548 full 0.4377 prefix1.0 0.4243 gain 0.0829 recovery 0.839 (record 0.839) CI [0.639, 1.025] contains_0.5=False auprc_diff +0.0696 CI [+0.0364, +0.1569] contains_zero=False
+30ns: static 0.3639 full 0.4264 prefix1.0 0.4340 gain 0.0626 recovery 1.121 (record 1.121) CI [0.825, 1.570] contains_0.5=False auprc_diff +0.0702 CI [+0.0435, +0.1407] contains_zero=False
+50ns: static 0.3342 full 0.4081 prefix1.0 0.4332 gain 0.0739 recovery 1.340 (record 1.340) CI [1.124, 1.746] contains_0.5=False auprc_diff +0.0991 CI [+0.0596, +0.2098] contains_zero=False
+90ns: static 0.3035 full 0.4246 prefix1.0 0.4035 gain 0.1211 recovery 0.826 (record 0.826) CI [0.755, 0.892] contains_0.5=False auprc_diff +0.1001 CI [+0.0795, +0.1580] contains_zero=False
+recovery CIs contain 0.5: {'1ns': False, '5ns': False, '10ns': False, '30ns': False, '50ns': False, '90ns': False}
+auprc-diff CIs contain zero: {'1ns': False, '5ns': False, '10ns': False, '30ns': False, '50ns': False, '90ns': False}
+saved /home/hatch/workspace/kinescope/repo/experiments/G176_hb_formation_mean_only_prefix_1ns_uncertainty/results.json /home/hatch/workspace/kinescope/repo/experiments/G176_hb_formation_mean_only_prefix_1ns_uncertainty/results.csv /home/hatch/workspace/kinescope/repo/experiments/G176_hb_formation_mean_only_prefix_1ns_uncertainty/test_predictions.npz
