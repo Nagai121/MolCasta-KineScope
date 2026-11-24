@@ -72,5 +72,5 @@ G146（6 個の統計量の切り取り 1.0 ns の区間）は、この記録を
 
 - この記録: `experiments/G150_strong_hb_formation_mean_only_prefix_1ns_uncertainty/README.md`
 - 実行コード: `run_g150.py`（このディレクトリ、G146 の run_g146.py を平均だけに変えたもの）
-- 結果: `results.json`・`results.csv`・`test_predictions.npz`・`results_g150_partial.json`（このディレクトリ）
+- 結果: `results.json`・`results.csv`・`test_predictions.npz`（このディレクトリ）。ブートストラップの途中の結果 `results_g150_partial.json` は最終結果を `results.json` に入れたあと、容量の都合でリポジトリの外（`~/workspace/kinescope/work/g150_partial_backup/`）に移した。
 - 入力データ: K06B の保存値 `~/workspace/k06b/run/k06b_out/`、G05 で作り直した系列 `~/workspace/kinescope/work/g05_series/`
