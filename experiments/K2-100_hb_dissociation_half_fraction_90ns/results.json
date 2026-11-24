@@ -1,0 +1,280 @@
+{
+  "label": "HB dissociation 90ns: guidance of first-half fraction vs second-half fraction of the history",
+  "series": "K2 (what the guidance is, not where it is)",
+  "experiment": "K2-100",
+  "horizon_ns": 90,
+  "bound_A": 3.5,
+  "conditions_definition": {
+    "base": "Material D conditions (K46 dissociation cache): train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 (100 ps spacing), HistGBM (120 iters, lr 0.075, 31 leaves, min_samples_leaf 15, L2 0.02, seed 42) refit per condition, 7 static features.",
+    "fraction": "fraction of frames with pair distance <= 3.5 A (boundary from K71; same as formation) within the given frame range, divided by the number of frames in that range (first/second half: 5, full: 11)",
+    "first_half": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "span_ns": "0.0-0.4",
+      "feature": "fraction of frames [0..4] with distance <= 3.5 A"
+    },
+    "second_half": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "span_ns": "0.6-1.0",
+      "feature": "fraction of frames [6..10] with distance <= 3.5 A"
+    },
+    "note": "Frame 5 (0.5 ns) belongs to neither half by design.",
+    "both_halves_frac": "static + first-half fraction + second-half fraction (2 features; no prior record at 90 ns for dissociation)",
+    "full_frac": "static + fraction over frames [0..10] (no prior record at 90 ns for dissociation)",
+    "base_hist_D6": "static + 6 statistics of the full 11-frame history (all-in reference)"
+  },
+  "base_reproduction": {
+    "expected_from_K46": {
+      "static_only_auprc": 0.5118,
+      "base_hist_D6_auprc": 0.5797,
+      "full6_gain": 0.0679,
+      "full_frac_auprc": null
+    },
+    "observed": {
+      "static_only_auprc": 0.5117592861334694,
+      "base_hist_D6_auprc": 0.5796635423446886,
+      "full6_gain": 0.0679042562112192,
+      "full_frac_auprc": 0.5965029865757333
+    },
+    "match": "all within 5e-4 (identical to 4 decimal places)",
+    "n_train": 4051,
+    "n_test": 2080,
+    "n_test_positives": 413
+  },
+  "metrics_90ns": {
+    "static_only": {
+      "n": 2080,
+      "positives": 413,
+      "auprc": 0.5117592861334694,
+      "auc": 0.8552175763394537,
+      "brier": 0.12382547255829228,
+      "logloss": 0.35661611237214524
+    },
+    "base_hist_D6": {
+      "n": 2080,
+      "positives": 413,
+      "auprc": 0.5796635423446886,
+      "auc": 0.8760746640018242,
+      "brier": 0.11648893699149614,
+      "logloss": 0.35034492063621836
+    },
+    "first_half_frac": {
+      "n": 2080,
+      "positives": 413,
+      "auprc": 0.6005326766174501,
+      "auc": 0.8773085576589282,
+      "brier": 0.1136738998623137,
+      "logloss": 0.3324069156572029
+    },
+    "second_half_frac": {
+      "n": 2080,
+      "positives": 413,
+      "auprc": 0.5734903887256495,
+      "auc": 0.8744006646612567,
+      "brier": 0.11566276124631909,
+      "logloss": 0.33689018095748463
+    },
+    "both_halves_frac": {
+      "n": 2080,
+      "positives": 413,
+      "auprc": 0.5910395217265496,
+      "auc": 0.8789259097333076,
+      "brier": 0.11344031903702298,
+      "logloss": 0.33306264441542077
+    },
+    "full_frac": {
+      "n": 2080,
+      "positives": 413,
+      "auprc": 0.5965029865757333,
+      "auc": 0.8777668195174523,
+      "brier": 0.11369956590273876,
+      "logloss": 0.33391251329450067
+    }
+  },
+  "gains": {
+    "static_only": {
+      "gain": 0.0,
+      "ratio_vs_full6_gain": 0.0,
+      "ratio_vs_fullfrac_gain": 0.0
+    },
+    "base_hist_D6": {
+      "gain": 0.0679042562112192,
+      "ratio_vs_full6_gain": 1.0,
+      "ratio_vs_fullfrac_gain": 0.8012897225025307
+    },
+    "first_half_frac": {
+      "gain": 0.0887733904839807,
+      "ratio_vs_full6_gain": 1.3073317555801969,
+      "ratio_vs_fullfrac_gain": 1.0475514996476023
+    },
+    "second_half_frac": {
+      "gain": 0.061731102592180065,
+      "ratio_vs_full6_gain": 0.9090903285968222,
+      "ratio_vs_fullfrac_gain": 0.728444737131082
+    },
+    "both_halves_frac": {
+      "gain": 0.07928023559308017,
+      "ratio_vs_full6_gain": 1.1675296957303454,
+      "ratio_vs_fullfrac_gain": 0.9355295459052325
+    },
+    "full_frac": {
+      "gain": 0.08474370044226387,
+      "ratio_vs_full6_gain": 1.2479880521578033,
+      "ratio_vs_fullfrac_gain": 1.0
+    }
+  },
+  "reading_rule_fixed_in_advance": {
+    "rule": "second-half ratio (vs full6 gain) >= 0.8 and first-half ratio <= 0.5 -> 'current state carries it'; both ratios >= 0.8 -> 'persistent state carries it'; otherwise record the numbers as they are. The same rule is also applied with the full-frac gain as denominator.",
+    "first_half_ratio_vs_full6": 1.3073317555801969,
+    "second_half_ratio_vs_full6": 0.9090903285968222,
+    "verdict": "続いている状態が効いている",
+    "first_half_ratio_vs_fullfrac": 1.0475514996476023,
+    "second_half_ratio_vs_fullfrac": 0.728444737131082,
+    "verdict_vs_fullfrac": "どちらでもない（数値をそのまま記録）"
+  },
+  "per_protein": {
+    "static_only": {
+      "1mix_A": {
+        "n": 1415,
+        "positives": 299,
+        "auprc_static": 0.5926187726074083,
+        "auprc_full6": 0.6122470594527607,
+        "auprc_condition": 0.5926187726074083,
+        "full6_gain": 0.01962828684535245,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      },
+      "2qt4_A": {
+        "n": 665,
+        "positives": 114,
+        "auprc_static": 0.3916241246070595,
+        "auprc_full6": 0.5087689521087343,
+        "auprc_condition": 0.3916241246070595,
+        "full6_gain": 0.11714482750167482,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      }
+    },
+    "base_hist_D6": {
+      "1mix_A": {
+        "n": 1415,
+        "positives": 299,
+        "auprc_static": 0.5926187726074083,
+        "auprc_full6": 0.6122470594527607,
+        "auprc_condition": 0.6122470594527607,
+        "full6_gain": 0.01962828684535245,
+        "gain": 0.01962828684535245,
+        "ratio_vs_full6_gain": 1.0
+      },
+      "2qt4_A": {
+        "n": 665,
+        "positives": 114,
+        "auprc_static": 0.3916241246070595,
+        "auprc_full6": 0.5087689521087343,
+        "auprc_condition": 0.5087689521087343,
+        "full6_gain": 0.11714482750167482,
+        "gain": 0.11714482750167482,
+        "ratio_vs_full6_gain": 1.0
+      }
+    },
+    "first_half_frac": {
+      "1mix_A": {
+        "n": 1415,
+        "positives": 299,
+        "auprc_static": 0.5926187726074083,
+        "auprc_full6": 0.6122470594527607,
+        "auprc_condition": 0.6305045713282774,
+        "full6_gain": 0.01962828684535245,
+        "gain": 0.03788579872086917,
+        "ratio_vs_full6_gain": 1.9301632903250392
+      },
+      "2qt4_A": {
+        "n": 665,
+        "positives": 114,
+        "auprc_static": 0.3916241246070595,
+        "auprc_full6": 0.5087689521087343,
+        "auprc_condition": 0.5581121153090963,
+        "full6_gain": 0.11714482750167482,
+        "gain": 0.16648799070203685,
+        "ratio_vs_full6_gain": 1.4212150399867767
+      }
+    },
+    "second_half_frac": {
+      "1mix_A": {
+        "n": 1415,
+        "positives": 299,
+        "auprc_static": 0.5926187726074083,
+        "auprc_full6": 0.6122470594527607,
+        "auprc_condition": 0.6279437876916101,
+        "full6_gain": 0.01962828684535245,
+        "gain": 0.03532501508420183,
+        "ratio_vs_full6_gain": 1.799699350357009
+      },
+      "2qt4_A": {
+        "n": 665,
+        "positives": 114,
+        "auprc_static": 0.3916241246070595,
+        "auprc_full6": 0.5087689521087343,
+        "auprc_condition": 0.5049899682296181,
+        "full6_gain": 0.11714482750167482,
+        "gain": 0.11336584362255858,
+        "ratio_vs_full6_gain": 0.9677409241217909
+      }
+    },
+    "both_halves_frac": {
+      "1mix_A": {
+        "n": 1415,
+        "positives": 299,
+        "auprc_static": 0.5926187726074083,
+        "auprc_full6": 0.6122470594527607,
+        "auprc_condition": 0.6277365635105333,
+        "full6_gain": 0.01962828684535245,
+        "gain": 0.03511779090312506,
+        "ratio_vs_full6_gain": 1.7891419246015443
+      },
+      "2qt4_A": {
+        "n": 665,
+        "positives": 114,
+        "auprc_static": 0.3916241246070595,
+        "auprc_full6": 0.5087689521087343,
+        "auprc_condition": 0.536361998107631,
+        "full6_gain": 0.11714482750167482,
+        "gain": 0.1447378735005715,
+        "ratio_vs_full6_gain": 1.23554643075045
+      }
+    },
+    "full_frac": {
+      "1mix_A": {
+        "n": 1415,
+        "positives": 299,
+        "auprc_static": 0.5926187726074083,
+        "auprc_full6": 0.6122470594527607,
+        "auprc_condition": 0.6339901510161768,
+        "full6_gain": 0.01962828684535245,
+        "gain": 0.04137137840876859,
+        "ratio_vs_full6_gain": 2.1077427049403665
+      },
+      "2qt4_A": {
+        "n": 665,
+        "positives": 114,
+        "auprc_static": 0.3916241246070595,
+        "auprc_full6": 0.5087689521087343,
+        "auprc_condition": 0.5314340213615066,
+        "full6_gain": 0.11714482750167482,
+        "gain": 0.13980989675444716,
+        "ratio_vs_full6_gain": 1.1934790441553922
+      }
+    }
+  }
+}
