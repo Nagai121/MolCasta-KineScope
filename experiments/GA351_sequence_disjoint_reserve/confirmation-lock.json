@@ -1,0 +1,12 @@
+{
+  "predictor": "GA384",
+  "model_commit": "49ee377",
+  "rule": "joint/False/30/0.2/False",
+  "baseline": "GA348 frozen as in GA384 confirmation",
+  "origin": 49,
+  "scope": "all 8 pre-selected proteins and all qualifying candidate pairs",
+  "target": "past 0–1 ns pair mean-distance residual against the frozen GA305 static reference",
+  "primary": "pooled Pearson residual correlation",
+  "threshold": 0.7,
+  "scoring_status": "unobserved at registration"
+}
