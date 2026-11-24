@@ -1,0 +1,5 @@
+{
+  "reason": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan",
+  "step_fs": 2,
+  "minimize": 100
+}

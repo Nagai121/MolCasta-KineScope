@@ -1,0 +1,43 @@
+3qfl_A 49 native-seconds 7.08
+4ykd_A 49 native-seconds 6.8
+2y7b_A 49 native-seconds 7.92
+2j6a_A 49 native-seconds 7.87
+4hwx_A 49 native-seconds 6.96
+5v0m_A 49 native-seconds 6.58
+6fub_B 49 native-seconds 6.56
+4b6i_D 49 native-seconds 6.73
+2o4t_A 49 native-seconds 6.36
+3lyy_A 49 native-seconds 6.34
+1ijt_A 49 native-seconds 7.88
+4goq_B 49 native-seconds 6.86
+2rff_A 49 native-seconds 7.0
+5x1e_D 49 native-seconds 6.86
+7s86_A 49 native-seconds 6.42
+1i4m_A 49 native-seconds 6.43
+5pal_A 49 native-seconds 6.93
+1m9z_A 49 native-seconds 6.85
+3cw3_A 49 native-seconds 6.77
+1o4k_A 49 native-seconds 6.81
+3cyi_A 49 native-seconds 6.77
+6pxz_B 49 native-seconds 6.71
+1bgf_A 49 native-seconds 7.59
+1fk5_A 49 native-seconds 6.44
+1ikt_A 49 native-seconds 7.34
+1lr0_A 49 native-seconds 6.85
+1qw2_A 49 native-seconds 6.7
+1yu5_X 49 native-seconds 5.84
+2cg7_A 49 native-seconds 6.38
+2end_A 49 native-seconds 8.35
+2hng_A 49 native-seconds 7.12
+2igp_A 49 native-seconds 7.23
+2qev_A 49 native-seconds 8.36
+2y1y_A 49 native-seconds 6.33
+3b4q_B 49 native-seconds 6.44
+3c9p_A 49 native-seconds 7.58
+3ehg_A 49 native-seconds 7.9
+generated-2 {'seconds': 0.3032551999203861, 'residual_sd': 0.43714794516563416, 'rmse': 0.4373709261417389, 'bias': -0.013964290730655193, 'residual_correlation': 0.5881829463692296}
+generated-4 {'seconds': 0.3761682999320328, 'residual_sd': 0.4425725042819977, 'rmse': 0.44279032945632935, 'bias': -0.013887747190892696, 'residual_correlation': 0.5774591603028192}
+generated-6 {'seconds': 0.5759194000856951, 'residual_sd': 0.4438713788986206, 'rmse': 0.44404780864715576, 'bias': -0.01251644641160965, 'residual_correlation': 0.5780780611401054}
+joint-2 {'seconds': 0.7291752999881282, 'residual_sd': 0.4268069863319397, 'rmse': 0.4269627630710602, 'bias': -0.011532679200172424, 'residual_correlation': 0.6135282575912454}
+joint-4 {'seconds': 0.9340181000297889, 'residual_sd': 0.4258807301521301, 'rmse': 0.4260953962802887, 'bias': -0.013524355366826057, 'residual_correlation': 0.6161274805450664}
+joint-6 {'seconds': 1.3763724999735132, 'residual_sd': 0.42572078108787537, 'rmse': 0.4259434938430786, 'bias': -0.013772653415799141, 'residual_correlation': 0.6163210307525898}

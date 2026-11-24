@@ -1,0 +1,14 @@
+Prepared 13796 candidates in 11.41s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\MIniTopol prior reserch\t2i\ga360.py", line 26, in <module>
+    main()
+  File "D:\MIniTopol prior reserch\t2i\ga360.py", line 22, in main
+    simulate((protein,),3,destination=directory,samples=SAMPLES,branches=branches,
+  File "D:\MIniTopol prior reserch\t2i\ga_native240.py", line 105, in simulate
+    sim.integrator.step((t-prior)*1000//step_fs)
+  File "D:\MIniTopol prior reserch\.venv\Lib\site-packages\openmm\openmm.py", line 16351, in step
+    return _openmm.LangevinMiddleIntegrator_step(self, steps)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+openmm.OpenMMException: Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan

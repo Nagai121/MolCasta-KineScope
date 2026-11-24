@@ -1,0 +1,17 @@
+{
+  "proteins": [
+    "5b1n_A",
+    "1utg_A",
+    "5h1n_B",
+    "1uha_A",
+    "1wq8_A",
+    "4f55_A",
+    "5dje_B",
+    "1vr8_A"
+  ],
+  "origin": 49,
+  "window": 100,
+  "branches": 8,
+  "step_fs": 4,
+  "minimize": 25
+}

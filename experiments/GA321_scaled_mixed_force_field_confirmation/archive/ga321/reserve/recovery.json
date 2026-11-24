@@ -1,0 +1,10 @@
+{
+  "5dbl_A": {
+    "reason": "nonfinite coordinate at 4 fs on original run",
+    "replacement_step_fs": 2
+  },
+  "1ifg_A": {
+    "reason": "nonfinite coordinate at 4 fs",
+    "replacement_step_fs": 2
+  }
+}
