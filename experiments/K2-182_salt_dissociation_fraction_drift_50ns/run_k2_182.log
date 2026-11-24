@@ -1,0 +1,21 @@
+train (735, 5) test (360, 5) test pos 50ns 166
+test proteins: 30 candidates per protein: min 1 max 30
+static_only {'n': 360, 'positives': 166, 'auprc': 0.4863, 'auc': 0.5233, 'brier': 0.3135, 'logloss': 0.92}
+base_hist_D6 {'n': 360, 'positives': 166, 'auprc': 0.6165, 'auc': 0.6239, 'brier': 0.2747, 'logloss': 0.8171}
+drift_only {'n': 360, 'positives': 166, 'auprc': 0.5287, 'auc': 0.5594, 'brier': 0.303, 'logloss': 0.8866}
+full_frac {'n': 360, 'positives': 166, 'auprc': 0.5869, 'auc': 0.5899, 'brier': 0.2904, 'logloss': 0.8698}
+full_frac_drift {'n': 360, 'positives': 166, 'auprc': 0.5459, 'auc': 0.5778, 'brier': 0.2965, 'logloss': 0.8958}
+mean_full {'n': 360, 'positives': 166, 'auprc': 0.5845, 'auc': 0.6179, 'brier': 0.2759, 'logloss': 0.8409}
+both_halves_frac {'n': 360, 'positives': 166, 'auprc': 0.5731, 'auc': 0.5905, 'brier': 0.2875, 'logloss': 0.8697}
+base gain (should be ~0.1788): 0.1302
+base reproduction OK (static 0.4863 / full6 0.6165 / gain +0.1302 / full frac 0.5869 / mean 0.5845 / both halves 0.5731)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-frac 0.0
+base_hist_D6 gain 0.1302 ratio vs full6 1.0 ratio vs full-frac 1.2943
+drift_only gain 0.0424 ratio vs full6 0.3256 ratio vs full-frac 0.4215
+full_frac gain 0.1006 ratio vs full6 0.7726 ratio vs full-frac 1.0
+full_frac_drift gain 0.0595 ratio vs full6 0.4574 ratio vs full-frac 0.5919
+mean_full gain 0.0982 ratio vs full6 0.7541 ratio vs full-frac 0.976
+both_halves_frac gain 0.0868 ratio vs full6 0.6666 ratio vs full-frac 0.8628
+drift adds on top of full fraction (AUPRC diff): -0.041
+verdict: 漂いは足しにならない
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-182_salt_dissociation_fraction_drift_50ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-182_salt_dissociation_fraction_drift_50ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-182_salt_dissociation_fraction_drift_50ns/test_predictions.npz
