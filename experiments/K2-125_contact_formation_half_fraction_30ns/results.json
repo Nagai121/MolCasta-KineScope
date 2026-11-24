@@ -1,0 +1,249 @@
+{
+  "label": "Contact formation, first-half vs second-half history fraction at 30 ns (K2-14 question at 30 ns)",
+  "phenomenon": "contact formation (Doc D, k13_cache)",
+  "horizon_ns": 30,
+  "bound_A": 4.5,
+  "fraction": "fraction of frames with min heavy-atom distance <= 4.5 A",
+  "frames": {
+    "first_half": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "second_half": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "full": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "note": "frame 5 belongs to neither half"
+  },
+  "bound": 4.5,
+  "metrics": {
+    "static_only": {
+      "n": 7384,
+      "positives": 247,
+      "auc": 0.8720430510103305,
+      "auprc": 0.28681357061495694,
+      "brier": 0.027413390870807096,
+      "logloss": 0.10767839383208935
+    },
+    "full_hist6": {
+      "n": 7384,
+      "positives": 247,
+      "auc": 0.9228678852691596,
+      "auprc": 0.4386046069734208,
+      "brier": 0.02298551920106458,
+      "logloss": 0.08742653793090724
+    },
+    "first_half_frac": {
+      "n": 7384,
+      "positives": 247,
+      "auc": 0.8959357604409705,
+      "auprc": 0.4490131051378755,
+      "brier": 0.022835727600935416,
+      "logloss": 0.09181138021300575
+    },
+    "second_half_frac": {
+      "n": 7384,
+      "positives": 247,
+      "auc": 0.890949769094058,
+      "auprc": 0.4147026071715132,
+      "brier": 0.023786833519668548,
+      "logloss": 0.0953204174504899
+    },
+    "both_halves_frac": {
+      "n": 7384,
+      "positives": 247,
+      "auc": 0.9001579270710485,
+      "auprc": 0.46147429538647217,
+      "brier": 0.022341631330464375,
+      "logloss": 0.08943559712855606
+    },
+    "full_frac": {
+      "n": 7384,
+      "positives": 247,
+      "auc": 0.9008888503147479,
+      "auprc": 0.45129904887619093,
+      "brier": 0.022460750239632392,
+      "logloss": 0.08957901704395783
+    }
+  },
+  "per_protein_metrics": {
+    "static_only": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 192,
+        "auc": 0.861191433264177,
+        "auprc": 0.3137138626957356,
+        "brier": 0.030284226219989694,
+        "logloss": 0.1188858893944626
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 55,
+        "auc": 0.9161258680896143,
+        "auprc": 0.25913821009288107,
+        "brier": 0.021347359348841164,
+        "logloss": 0.08399712580569187
+      }
+    },
+    "full_hist6": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 192,
+        "auc": 0.9128890041493776,
+        "auprc": 0.4414524165341951,
+        "brier": 0.02615933778474007,
+        "logloss": 0.09957565182220132
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 55,
+        "auc": 0.9558676972574254,
+        "auprc": 0.4573475421891869,
+        "brier": 0.016279288703011652,
+        "logloss": 0.061755644666503365
+      }
+    },
+    "first_half_frac": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 192,
+        "auc": 0.8819815439142462,
+        "auprc": 0.4489797674385654,
+        "brier": 0.025852956944928927,
+        "logloss": 0.10369347958703706
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 55,
+        "auc": 0.9411857025150077,
+        "auprc": 0.4750180974531253,
+        "brier": 0.016460367789765312,
+        "logloss": 0.06670468457108122
+      }
+    },
+    "second_half_frac": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 192,
+        "auc": 0.8768974757952974,
+        "auprc": 0.43082140519548334,
+        "brier": 0.02669760730022048,
+        "logloss": 0.10725577861788027
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 55,
+        "auc": 0.9425118687958567,
+        "auprc": 0.40036049825848785,
+        "brier": 0.01763641269836741,
+        "logloss": 0.07010118044755544
+      }
+    },
+    "both_halves_frac": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 192,
+        "auc": 0.8870964081950208,
+        "auprc": 0.4662584335409343,
+        "brier": 0.025168631901774728,
+        "logloss": 0.10053343679429319
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 55,
+        "auc": 0.9420449640993448,
+        "auprc": 0.46793415726654786,
+        "brier": 0.016368222028859195,
+        "logloss": 0.065986030347496
+      }
+    },
+    "full_frac": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 192,
+        "auc": 0.8868894795988935,
+        "auprc": 0.44487051882879103,
+        "brier": 0.02556950595178904,
+        "logloss": 0.10119089068439935
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 55,
+        "auc": 0.9436261623572801,
+        "auprc": 0.48618826230475737,
+        "brier": 0.01589199660163531,
+        "logloss": 0.06504330427587485
+      }
+    }
+  },
+  "gains": {
+    "static_only": 0.0,
+    "full_hist6": 0.15179103635846386,
+    "first_half_frac": 0.16219953452291858,
+    "second_half_frac": 0.12788903655655626,
+    "both_halves_frac": 0.17466072477151523,
+    "full_frac": 0.164485478261234
+  },
+  "gain_ratios_vs_full_hist6": {
+    "static_only": 0.0,
+    "full_hist6": 1.0,
+    "first_half_frac": 1.0685712306481288,
+    "second_half_frac": 0.8425335225628109,
+    "both_halves_frac": 1.1506656055700364,
+    "full_frac": 1.0836310378222298
+  },
+  "gain_ratios_vs_full_frac": {
+    "static_only": 0.0,
+    "full_hist6": 0.9228233274027452,
+    "first_half_frac": 0.9861024586335524,
+    "second_half_frac": 0.7775095887397689,
+    "both_halves_frac": 1.0618610628600358,
+    "full_frac": 1.0
+  },
+  "full_frac_gain": 0.164485478261234,
+  "reading_rule": "ratios are vs the full hist6 gain (K2-01 convention); second >= 0.8 and first <= 0.5 -> current state; both >= 0.8 -> persistent state; else record numbers",
+  "judgment": {
+    "vs_full_hist6": "続いている状態が効いている",
+    "vs_full_frac": "どちらでもない（数値をそのまま記録）"
+  },
+  "per_protein_shapes": {
+    "now_state": 0,
+    "continuing": 1,
+    "other": 1,
+    "excluded_gain_le_0.01": 0
+  },
+  "per_protein_fractions": {
+    "1mix_A": {
+      "first": 1.0589277917917368,
+      "second": 0.9167752333241856
+    },
+    "2qt4_A": {
+      "first": 1.0891509752696844,
+      "second": 0.7124906111735939
+    }
+  },
+  "checks_vs_K27_30ns": {
+    "static_only_auprc_expected": 0.2868,
+    "full_hist6_auprc_expected": 0.4386,
+    "full_frac_auprc_expected": 0.4513
+  }
+}
