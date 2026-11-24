@@ -1,0 +1,13 @@
+residual,quantity,scope,n,pearson,spearman
+gbm,residual,pooled,7384,0.719,0.711
+gbm,residual,1mix_A,5012,0.706,0.693
+gbm,residual,2qt4_A,2372,0.782,0.765
+gbm,raw_mean,pooled,7384,0.973,0.973
+gbm,raw_mean,1mix_A,5012,0.965,0.963
+gbm,raw_mean,2qt4_A,2372,0.99,0.99
+linear,residual,pooled,7384,0.726,0.721
+linear,residual,1mix_A,5012,0.712,0.702
+linear,residual,2qt4_A,2372,0.792,0.779
+linear,raw_mean,pooled,7384,0.973,0.973
+linear,raw_mean,1mix_A,5012,0.965,0.963
+linear,raw_mean,2qt4_A,2372,0.99,0.99
