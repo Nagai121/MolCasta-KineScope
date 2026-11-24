@@ -54,7 +54,11 @@ from pathlib import Path
 import numpy as np
 import sklearn
 
-BUNDLE_URL = sys.argv[1]
+# 入力の渡し方: 引数に URL を渡すと GitHub から取ってきますが、この
+# リポジトリは非公開のため、認証なしの raw GitHub URL では 404 になります。
+# そのため、入力は `colab upload` でセッションに直接置き、引数を省略して
+# /content/k2_18_bundle.npz を使うのが普通の使い方です。
+BUNDLE_URL = sys.argv[1] if len(sys.argv) > 1 else "/content/k2_18_bundle.npz"
 OUTDIR = Path("/content/k2_18_out")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 BUNDLE = Path("/tmp/k2_18_bundle.npz")
@@ -73,8 +77,11 @@ TOL = 1e-3  # Colab の sklearn の版違いを吸収するための許容差
 
 def main():
     print("sklearn", sklearn.__version__, "numpy", np.__version__, flush=True)
-    print("downloading bundle...", flush=True)
-    urllib.request.urlretrieve(BUNDLE_URL, BUNDLE)
+    if BUNDLE_URL.startswith("http"):
+        print("downloading bundle...", flush=True)
+        urllib.request.urlretrieve(BUNDLE_URL, BUNDLE)
+    else:
+        BUNDLE = Path(BUNDLE_URL)
     print("bundle bytes:", BUNDLE.stat().st_size, flush=True)
     from sklearn.ensemble import HistGradientBoostingClassifier
     from sklearn.metrics import (average_precision_score, brier_score_loss,
