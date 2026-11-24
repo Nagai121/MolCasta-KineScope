@@ -1,0 +1,190 @@
+{
+  "label": "Contact formation, first-half vs second-half history statistics at 50 ns (K2-04 question at long horizon)",
+  "phenomenon": "contact formation (Doc D, k13_cache)",
+  "horizon_ns": 50,
+  "frames": {
+    "first_half": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "second_half": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "full": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "note": "frame 5 belongs to neither half"
+  },
+  "bound": 4.5,
+  "metrics": {
+    "static_only": {
+      "n": 7384,
+      "positives": 250,
+      "auc": 0.8514715447154472,
+      "auprc": 0.26038453431471853,
+      "brier": 0.028478152054399332,
+      "logloss": 0.11552858681533154
+    },
+    "hist6_first_half": {
+      "n": 7384,
+      "positives": 250,
+      "auc": 0.900399215026633,
+      "auprc": 0.43326968320143017,
+      "brier": 0.023647253073799206,
+      "logloss": 0.09297163212181289
+    },
+    "hist6_second_half": {
+      "n": 7384,
+      "positives": 250,
+      "auc": 0.9096077936641436,
+      "auprc": 0.42125458727010656,
+      "brier": 0.023890552103690975,
+      "logloss": 0.09356620249049179
+    },
+    "hist6_both_halves": {
+      "n": 7384,
+      "positives": 250,
+      "auc": 0.918550883095038,
+      "auprc": 0.45496075117097456,
+      "brier": 0.023359246012431716,
+      "logloss": 0.08999227164962374
+    },
+    "full_hist6": {
+      "n": 7384,
+      "positives": 250,
+      "auc": 0.9219983179142136,
+      "auprc": 0.46379209531119275,
+      "brier": 0.023214635464442558,
+      "logloss": 0.08864011876955129
+    }
+  },
+  "per_protein_metrics": {
+    "static_only": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.8460240292472959,
+        "auprc": 0.30891475188881146,
+        "brier": 0.032055499514043656,
+        "logloss": 0.13089055647678582
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 47,
+        "auc": 0.8935072065888812,
+        "auprc": 0.17891108383008583,
+        "brier": 0.020919271165808554,
+        "logloss": 0.08306897807030252
+      }
+    },
+    "hist6_first_half": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.8930950485901332,
+        "auprc": 0.4400028636283227,
+        "brier": 0.02789878760513414,
+        "logloss": 0.10815139605018757
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 47,
+        "auc": 0.9304644246167924,
+        "auprc": 0.4545302663270836,
+        "brier": 0.014663825134907675,
+        "logloss": 0.060897021325432656
+      }
+    },
+    "hist6_second_half": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.9041764876406819,
+        "auprc": 0.41210971325538254,
+        "brier": 0.028627789530426852,
+        "logloss": 0.1092881303627821
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 47,
+        "auc": 0.9355570807595516,
+        "auprc": 0.5136166351545738,
+        "brier": 0.013880841318362045,
+        "logloss": 0.06034600750907576
+      }
+    },
+    "hist6_both_halves": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.9150054239434067,
+        "auprc": 0.446544348568404,
+        "brier": 0.02777039604754747,
+        "logloss": 0.10458294691125007
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 47,
+        "auc": 0.9306474490963166,
+        "auprc": 0.5013773156030159,
+        "brier": 0.014038552936546309,
+        "logloss": 0.05916239626544533
+      }
+    },
+    "full_hist6": {
+      "1mix_A": {
+        "n": 5012,
+        "positives": 203,
+        "auc": 0.9142351113009577,
+        "auprc": 0.4585805557036849,
+        "brier": 0.027782665565210394,
+        "logloss": 0.10432571301338464
+      },
+      "2qt4_A": {
+        "n": 2372,
+        "positives": 47,
+        "auc": 0.9446808510638298,
+        "auprc": 0.5188119079968682,
+        "brier": 0.01356245719081338,
+        "logloss": 0.05549669619362684
+      }
+    }
+  },
+  "gains": {
+    "static_only": 0.0,
+    "hist6_first_half": 0.17288514888671164,
+    "hist6_second_half": 0.16087005295538803,
+    "hist6_both_halves": 0.19457621685625603,
+    "full_hist6": 0.20340756099647422
+  },
+  "gain_ratios_vs_full_hist6": {
+    "static_only": 0.0,
+    "hist6_first_half": 0.8499445548619914,
+    "hist6_second_half": 0.7908754825400836,
+    "hist6_both_halves": 0.956583009515702,
+    "full_hist6": 1.0
+  },
+  "reading_rule": "ratios are vs the full hist6 gain (K2-01 convention); second >= 0.8 and first <= 0.5 -> current state; both >= 0.8 -> persistent state; else record numbers",
+  "reading": "どちらでもない（数値をそのまま記録）",
+  "checks_vs_K27_50ns": {
+    "static_only_auprc_expected": 0.2604,
+    "full_hist6_auprc_expected": 0.4638
+  }
+}
