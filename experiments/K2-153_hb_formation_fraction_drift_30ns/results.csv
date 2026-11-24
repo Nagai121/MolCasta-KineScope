@@ -1,0 +1,9 @@
+condition,n,positives,auprc,auc,brier,logloss
+static_only,4972,345,0.363889,0.861673,0.052822,0.190740
+base_hist_D6,4972,345,0.426447,0.904971,0.048736,0.168567
+full_frac,4972,345,0.468873,0.893303,0.047364,0.170372
+full_frac_plus_drift,4972,345,0.468371,0.892850,0.047726,0.170737
+
+protein,n,positives,auprc_full_frac,auprc_full_frac_plus_drift,diff_c_minus_b
+1mix_A,3101,251,0.458450,0.456957,-0.001494
+2qt4_A,1871,94,0.516512,0.521522,0.005010
