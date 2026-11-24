@@ -332,7 +332,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -352,7 +352,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -362,7 +362,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5ii7_A": {
         "n": 19,
@@ -382,7 +382,7 @@
         "auprc_condition": 0.9166666666666666,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "6in7_A": {
         "n": 6,
@@ -392,7 +392,7 @@
         "auprc_condition": 0.5,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2end_A": {
         "n": 27,
@@ -452,7 +452,7 @@
         "auprc_condition": 0.5833333333333333,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "3bwu_D": {
         "n": 7,
@@ -462,7 +462,7 @@
         "auprc_condition": 0.8055555555555556,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -634,7 +634,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -654,7 +654,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -664,7 +664,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5ii7_A": {
         "n": 19,
@@ -684,7 +684,7 @@
         "auprc_condition": 0.9166666666666666,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "6in7_A": {
         "n": 6,
@@ -694,7 +694,7 @@
         "auprc_condition": 0.5,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2end_A": {
         "n": 27,
@@ -754,7 +754,7 @@
         "auprc_condition": 0.5833333333333333,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "3bwu_D": {
         "n": 7,
@@ -764,7 +764,7 @@
         "auprc_condition": 0.8055555555555556,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -936,7 +936,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -956,7 +956,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -966,7 +966,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5ii7_A": {
         "n": 19,
@@ -986,7 +986,7 @@
         "auprc_condition": 0.9166666666666666,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "6in7_A": {
         "n": 6,
@@ -996,7 +996,7 @@
         "auprc_condition": 0.325,
         "full6_gain": 0.0,
         "gain": -0.175,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2end_A": {
         "n": 27,
@@ -1056,7 +1056,7 @@
         "auprc_condition": 0.5833333333333333,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "3bwu_D": {
         "n": 7,
@@ -1066,7 +1066,7 @@
         "auprc_condition": 0.8666666666666667,
         "full6_gain": 0.0,
         "gain": 0.061111111111111116,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -1238,7 +1238,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -1258,7 +1258,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -1268,7 +1268,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5ii7_A": {
         "n": 19,
@@ -1288,7 +1288,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.08333333333333337,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "6in7_A": {
         "n": 6,
@@ -1298,7 +1298,7 @@
         "auprc_condition": 0.5,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2end_A": {
         "n": 27,
@@ -1358,7 +1358,7 @@
         "auprc_condition": 0.5833333333333333,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "3bwu_D": {
         "n": 7,
@@ -1368,7 +1368,7 @@
         "auprc_condition": 0.4666666666666667,
         "full6_gain": 0.0,
         "gain": -0.3388888888888889,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -1540,7 +1540,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -1560,7 +1560,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -1570,7 +1570,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5ii7_A": {
         "n": 19,
@@ -1590,7 +1590,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.08333333333333337,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "6in7_A": {
         "n": 6,
@@ -1600,7 +1600,7 @@
         "auprc_condition": 0.3666666666666667,
         "full6_gain": 0.0,
         "gain": -0.1333333333333333,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2end_A": {
         "n": 27,
@@ -1660,7 +1660,7 @@
         "auprc_condition": 0.8333333333333333,
         "full6_gain": 0.0,
         "gain": 0.25,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "3bwu_D": {
         "n": 7,
@@ -1670,7 +1670,7 @@
         "auprc_condition": 0.4666666666666667,
         "full6_gain": 0.0,
         "gain": -0.3388888888888889,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -1842,7 +1842,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -1862,7 +1862,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -1872,7 +1872,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5ii7_A": {
         "n": 19,
@@ -1892,7 +1892,7 @@
         "auprc_condition": 0.95,
         "full6_gain": 0.0,
         "gain": 0.033333333333333326,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "6in7_A": {
         "n": 6,
@@ -1902,7 +1902,7 @@
         "auprc_condition": 0.45,
         "full6_gain": 0.0,
         "gain": -0.04999999999999999,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2end_A": {
         "n": 27,
@@ -1962,7 +1962,7 @@
         "auprc_condition": 0.8333333333333333,
         "full6_gain": 0.0,
         "gain": 0.25,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "3bwu_D": {
         "n": 7,
@@ -1972,7 +1972,7 @@
         "auprc_condition": 0.47619047619047616,
         "full6_gain": 0.0,
         "gain": -0.3293650793650794,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -2144,7 +2144,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -2164,7 +2164,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -2174,7 +2174,7 @@
         "auprc_condition": 0.3333333333333333,
         "full6_gain": 0.0,
         "gain": -0.6666666666666667,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5ii7_A": {
         "n": 19,
@@ -2194,7 +2194,7 @@
         "auprc_condition": 0.95,
         "full6_gain": 0.0,
         "gain": 0.033333333333333326,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "6in7_A": {
         "n": 6,
@@ -2204,7 +2204,7 @@
         "auprc_condition": 0.45,
         "full6_gain": 0.0,
         "gain": -0.04999999999999999,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2end_A": {
         "n": 27,
@@ -2264,7 +2264,7 @@
         "auprc_condition": 0.8333333333333333,
         "full6_gain": 0.0,
         "gain": 0.25,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "3bwu_D": {
         "n": 7,
@@ -2274,7 +2274,7 @@
         "auprc_condition": 0.5,
         "full6_gain": 0.0,
         "gain": -0.3055555555555556,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,
@@ -2446,7 +2446,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5yrv_I": {
         "n": 25,
@@ -2466,7 +2466,7 @@
         "auprc_condition": 0.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "4ytw_C": {
         "n": 14,
@@ -2476,7 +2476,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.0,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "5ii7_A": {
         "n": 19,
@@ -2496,7 +2496,7 @@
         "auprc_condition": 1.0,
         "full6_gain": 0.0,
         "gain": 0.08333333333333337,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "6in7_A": {
         "n": 6,
@@ -2506,7 +2506,7 @@
         "auprc_condition": 0.3666666666666667,
         "full6_gain": 0.0,
         "gain": -0.1333333333333333,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2end_A": {
         "n": 27,
@@ -2566,7 +2566,7 @@
         "auprc_condition": 0.8333333333333333,
         "full6_gain": 0.0,
         "gain": 0.25,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "3bwu_D": {
         "n": 7,
@@ -2576,7 +2576,7 @@
         "auprc_condition": 0.44285714285714284,
         "full6_gain": 0.0,
         "gain": -0.36269841269841274,
-        "ratio_vs_full6_gain": NaN
+        "ratio_vs_full6_gain": null
       },
       "2hng_A": {
         "n": 6,

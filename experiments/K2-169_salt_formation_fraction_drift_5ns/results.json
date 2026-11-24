@@ -115,7 +115,7 @@
       "2qt4_A": {
         "n": 24,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.015638641326949306,
         "logloss": 0.07489242809212993
@@ -171,7 +171,7 @@
       "2ftx_A": {
         "n": 25,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.03560955957158952,
         "logloss": 0.12992289652911418
@@ -243,7 +243,7 @@
       "1pch_A": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.0001327622276864887,
         "logloss": 0.005873994683734714
@@ -299,7 +299,7 @@
       "6fc0_B": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.000589885555252774,
         "logloss": 0.014051744607928702
@@ -357,7 +357,7 @@
       "2qt4_A": {
         "n": 24,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 9.517685776395056e-05,
         "logloss": 0.004660316191258728
@@ -413,7 +413,7 @@
       "2ftx_A": {
         "n": 25,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.003629918756819089,
         "logloss": 0.03627261198678664
@@ -485,7 +485,7 @@
       "1pch_A": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 1.0747004694745698e-05,
         "logloss": 0.0019693314370113736
@@ -541,7 +541,7 @@
       "6fc0_B": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.00016965695318293115,
         "logloss": 0.008426666904978095
@@ -599,7 +599,7 @@
       "2qt4_A": {
         "n": 24,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.009635157962569621,
         "logloss": 0.058381238121694816
@@ -655,7 +655,7 @@
       "2ftx_A": {
         "n": 25,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.02754666289913734,
         "logloss": 0.10774444374702309
@@ -727,7 +727,7 @@
       "1pch_A": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 1.1842936788823008e-05,
         "logloss": 0.0021737641161917736
@@ -783,7 +783,7 @@
       "6fc0_B": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.000643265321716899,
         "logloss": 0.016124156640770656
@@ -841,7 +841,7 @@
       "2qt4_A": {
         "n": 24,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.014389549221074507,
         "logloss": 0.06979185914117259
@@ -897,7 +897,7 @@
       "2ftx_A": {
         "n": 25,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.040931424369113234,
         "logloss": 0.13623274936390484
@@ -969,7 +969,7 @@
       "1pch_A": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 5.728880381227846e-05,
         "logloss": 0.004534102091909721
@@ -1025,7 +1025,7 @@
       "6fc0_B": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.0005266842927097652,
         "logloss": 0.014831119675448652
@@ -1083,7 +1083,7 @@
       "2qt4_A": {
         "n": 24,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.0031114560048372,
         "logloss": 0.03724647532152437
@@ -1139,7 +1139,7 @@
       "2ftx_A": {
         "n": 25,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.03900520415586245,
         "logloss": 0.13329314425314723
@@ -1211,7 +1211,7 @@
       "1pch_A": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 1.033304341160806e-05,
         "logloss": 0.002159055554615983
@@ -1267,7 +1267,7 @@
       "6fc0_B": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.0005117212271764255,
         "logloss": 0.015167821594601888
@@ -1325,7 +1325,7 @@
       "2qt4_A": {
         "n": 24,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.009354982845162682,
         "logloss": 0.05697724853679816
@@ -1381,7 +1381,7 @@
       "2ftx_A": {
         "n": 25,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.03186279674685973,
         "logloss": 0.1200256851204978
@@ -1453,7 +1453,7 @@
       "1pch_A": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 2.178009878613831e-05,
         "logloss": 0.0027929286041768375
@@ -1509,7 +1509,7 @@
       "6fc0_B": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.00040717568008412906,
         "logloss": 0.013450023453638252
@@ -1567,7 +1567,7 @@
       "2qt4_A": {
         "n": 24,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.014166512865584001,
         "logloss": 0.06518941520614567
@@ -1623,7 +1623,7 @@
       "2ftx_A": {
         "n": 25,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.02654980328647754,
         "logloss": 0.10789760347834756
@@ -1695,7 +1695,7 @@
       "1pch_A": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.0006645483663239333,
         "logloss": 0.011048571115219842
@@ -1751,7 +1751,7 @@
       "6fc0_B": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.0003486265044089547,
         "logloss": 0.011803777624944549
@@ -1809,7 +1809,7 @@
       "2qt4_A": {
         "n": 24,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.002838941545396612,
         "logloss": 0.035989001746109965
@@ -1865,7 +1865,7 @@
       "2ftx_A": {
         "n": 25,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.01668701230009187,
         "logloss": 0.07787128386994119
@@ -1937,7 +1937,7 @@
       "1pch_A": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 3.4039818387572656e-06,
         "logloss": 0.0014383662992196627
@@ -1993,7 +1993,7 @@
       "6fc0_B": {
         "n": 8,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.0002944228621787326,
         "logloss": 0.011749883578647046

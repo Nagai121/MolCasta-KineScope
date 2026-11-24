@@ -235,7 +235,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.3712774612845597,
         "logloss": 0.9398803287785717
@@ -251,7 +251,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.3220071926251454,
         "logloss": 0.838610414950311
@@ -477,7 +477,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.21620052873008516,
         "logloss": 0.6254393483648321
@@ -493,7 +493,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.1404589237982396,
         "logloss": 0.4082307507729572
@@ -719,7 +719,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.49218174210256377,
         "logloss": 1.209175167762207
@@ -735,7 +735,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.16569858117482164,
         "logloss": 0.503420006908645
@@ -961,7 +961,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.10880518572265901,
         "logloss": 0.40026312798071134
@@ -977,7 +977,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.16140095701925897,
         "logloss": 0.5071360876345932
@@ -1203,7 +1203,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.7539180118820495,
         "logloss": 2.027111155684415
@@ -1219,7 +1219,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.19405016297980135,
         "logloss": 0.550970731186454
@@ -1445,7 +1445,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.23855953613761877,
         "logloss": 0.6702621883941953
@@ -1461,7 +1461,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.1131444168258634,
         "logloss": 0.38282929904432067
@@ -1687,7 +1687,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.3746188508317085,
         "logloss": 0.9469075538033987
@@ -1703,7 +1703,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.09349482115760764,
         "logloss": 0.3454618933831764
@@ -1929,7 +1929,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.3216909107892015,
         "logloss": 0.8374287761557551
@@ -1945,7 +1945,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.22741191945833536,
         "logloss": 0.6476339689232161
@@ -2171,7 +2171,7 @@
       "1uha_A": {
         "n": 1,
         "positives": 1,
-        "auc": NaN,
+        "auc": null,
         "auprc": 1.0,
         "brier": 0.2819192372837248,
         "logloss": 0.7570686632028565
@@ -2187,7 +2187,7 @@
       "1pch_A": {
         "n": 3,
         "positives": 0,
-        "auc": NaN,
+        "auc": null,
         "auprc": 0.0,
         "brier": 0.0783086271501855,
         "logloss": 0.3136101161187855
