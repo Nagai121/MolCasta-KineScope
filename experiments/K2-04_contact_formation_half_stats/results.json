@@ -1,0 +1,85 @@
+{
+  "label": "Contact formation, first-half vs second-half history statistics (K2-01 question on contact formation)",
+  "phenomenon": "contact formation (Doc D, k13_cache)",
+  "horizon_ns": 1,
+  "frames": {
+    "first_half": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "second_half": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "full": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "note": "frame 5 belongs to neither half"
+  },
+  "bound": 4.5,
+  "metrics": {
+    "static_only": {
+      "n": 7384,
+      "positives": 219,
+      "auc": 0.9006946502372325,
+      "auprc": 0.33977026863870574,
+      "brier": 0.02300508340973585,
+      "logloss": 0.08939714596298191
+    },
+    "hist6_first_half": {
+      "n": 7384,
+      "positives": 219,
+      "auc": 0.9419358436335943,
+      "auprc": 0.5197328510341107,
+      "brier": 0.019201284959541147,
+      "logloss": 0.077176177496248
+    },
+    "hist6_second_half": {
+      "n": 7384,
+      "positives": 219,
+      "auc": 0.9458934381044333,
+      "auprc": 0.562392206277168,
+      "brier": 0.01869833648656531,
+      "logloss": 0.07562499127175455
+    },
+    "full_hist6": {
+      "n": 7384,
+      "positives": 219,
+      "auc": 0.955950890140109,
+      "auprc": 0.5668799691676633,
+      "brier": 0.018563037823337798,
+      "logloss": 0.07334830941244141
+    }
+  },
+  "gains": {
+    "full": 0.22710970052895751,
+    "first_half": 0.17996258239540497,
+    "second_half": 0.22262193763846228
+  },
+  "gain_ratios_vs_full": {
+    "first_half": 0.792403767766225,
+    "second_half": 0.9802396688470688
+  },
+  "reading_rule": "second >= 0.8 and first <= 0.5 -> current state; both >= 0.8 -> persistent state; else record numbers",
+  "reading": "どちらでもない（数値をそのまま記録）",
+  "checks_vs_K27": {
+    "static_only_auprc_expected": 0.3398,
+    "full_hist6_auprc_expected": 0.5669
+  }
+}
