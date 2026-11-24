@@ -54,14 +54,23 @@ from pathlib import Path
 import numpy as np
 import sklearn
 
-# 入力の渡し方: 引数に URL を渡すと GitHub から取ってきますが、この
-# リポジトリは非公開のため、認証なしの raw GitHub URL では 404 になります。
-# そのため、入力は `colab upload` でセッションに直接置き、引数を省略して
-# /content/k2_18_bundle.npz を使うのが普通の使い方です。
-BUNDLE_URL = sys.argv[1] if len(sys.argv) > 1 else "/content/k2_18_bundle.npz"
+# 入力の渡し方: このリポジトリは非公開のため、認証なしの raw GitHub URL
+# では 404 になります。そのため、入力は `colab upload` でセッションに
+# 直接置いた /content/k2_18_bundle.npz を使うのが普通の使い方です。
+# 注意点が 2 つあります。(1) `colab exec -f` は、セッションを作ったときの
+# `run` の引数（sys.argv）をそのまま引き継ぐため、引数の有無だけでは
+# 使い方を切り替えられません。(2) main() の中で BUNDLE に代入すると
+# BUNDLE が main() のローカル変数になり、URL の分岐で参照する前に
+# 未代入で落ちます（UnboundLocalError）。そのため、入力は下の順番で
+# 決め、main() の中では別の変数（bundle_path）だけを使います。
+# 順番: (a) /content/k2_18_bundle.npz があればそれを使う、(b) なければ
+# 引数が http の URL なら GitHub から取ってくる、(c) 引数が手元の
+# パスならそれを使う、(d) どれもなければ止まる。
+LOCAL_BUNDLE = Path("/content/k2_18_bundle.npz")
+BUNDLE_URL = sys.argv[1] if len(sys.argv) > 1 else ""
 OUTDIR = Path("/content/k2_18_out")
 OUTDIR.mkdir(parents=True, exist_ok=True)
-BUNDLE = Path("/tmp/k2_18_bundle.npz")
+BUNDLE_TMP = Path("/tmp/k2_18_bundle.npz")
 
 FRAMES_FIRST = [0, 1, 2, 3, 4]       # 前半（0〜0.4 ns）
 FRAMES_SECOND = [6, 7, 8, 9, 10]     # 後半（0.6〜1.0 ns）
@@ -77,17 +86,23 @@ TOL = 1e-3  # Colab の sklearn の版違いを吸収するための許容差
 
 def main():
     print("sklearn", sklearn.__version__, "numpy", np.__version__, flush=True)
-    if BUNDLE_URL.startswith("http"):
+    if LOCAL_BUNDLE.is_file():
+        bundle_path = LOCAL_BUNDLE
+        print("using uploaded bundle:", bundle_path, flush=True)
+    elif BUNDLE_URL.startswith("http"):
         print("downloading bundle...", flush=True)
-        urllib.request.urlretrieve(BUNDLE_URL, BUNDLE)
+        urllib.request.urlretrieve(BUNDLE_URL, BUNDLE_TMP)
+        bundle_path = BUNDLE_TMP
+    elif BUNDLE_URL:
+        bundle_path = Path(BUNDLE_URL)
     else:
-        BUNDLE = Path(BUNDLE_URL)
-    print("bundle bytes:", BUNDLE.stat().st_size, flush=True)
+        raise SystemExit("bundle not found: upload it to /content/k2_18_bundle.npz or pass a URL/path")
+    print("bundle bytes:", bundle_path.stat().st_size, flush=True)
     from sklearn.ensemble import HistGradientBoostingClassifier
     from sklearn.metrics import (average_precision_score, brier_score_loss,
                                  log_loss, roc_auc_score)
 
-    with np.load(BUNDLE) as z:
+    with np.load(bundle_path) as z:
         cal_static = z["cal_static"].astype(np.float64)
         cal_hist = z["cal_history"].astype(np.float64)
         cal_series = z["cal_series"].astype(np.float64)  # (N, 11)
