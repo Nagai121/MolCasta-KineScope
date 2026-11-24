@@ -1,0 +1,20 @@
+{
+  "proteins": [
+    "2oxl_B",
+    "4h4n_A",
+    "1vbw_A",
+    "1j2l_A",
+    "4ftf_A",
+    "3msw_A",
+    "3wx4_A",
+    "4wlr_B"
+  ],
+  "origins": 1,
+  "amber_seeds": 8,
+  "charmm_seeds": 2,
+  "window_ps": 100,
+  "static_model": "GA318/all-8",
+  "static_weight": 0.525,
+  "amber_weight": 0.2,
+  "charmm_weight": 0.2
+}
