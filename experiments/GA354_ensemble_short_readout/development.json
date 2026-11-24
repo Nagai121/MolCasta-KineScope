@@ -1,0 +1,17 @@
+{
+  "parent": {
+    "residual_sd": 0.4038645730659292,
+    "rmse": 0.403962578518607,
+    "bias": -0.0088978348870101,
+    "residual_correlation": 0.6669163631369147
+  },
+  "bagged": {
+    "residual_sd": 0.4048967502634109,
+    "rmse": 0.4049907703765756,
+    "bias": -0.008726151290302369,
+    "residual_correlation": 0.6644790337397173
+  },
+  "pairs": 1558,
+  "amber_combinations": 28,
+  "charmm_combinations": 1
+}
