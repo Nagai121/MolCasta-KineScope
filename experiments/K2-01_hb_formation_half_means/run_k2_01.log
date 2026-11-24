@@ -1,0 +1,18 @@
+train (9610, 7) test (4972, 7) test pos 1ns 290
+{'1mix_A': 3101, '2qt4_A': 1871}
+static_only {'n': 4972, 'positives': 290, 'auprc': 0.3637, 'auc': 0.9056, 'brier': 0.0432, 'logloss': 0.1494}
+base_hist_D6 {'n': 4972, 'positives': 290, 'auprc': 0.4815, 'auc': 0.9352, 'brier': 0.0395, 'logloss': 0.1344}
+first_half_mean {'n': 4972, 'positives': 290, 'auprc': 0.456, 'auc': 0.9295, 'brier': 0.0394, 'logloss': 0.1353}
+second_half_mean {'n': 4972, 'positives': 290, 'auprc': 0.4506, 'auc': 0.9275, 'brier': 0.0392, 'logloss': 0.1354}
+both_halves_mean {'n': 4972, 'positives': 290, 'auprc': 0.4902, 'auc': 0.937, 'brier': 0.0384, 'logloss': 0.1303}
+full_mean {'n': 4972, 'positives': 290, 'auprc': 0.4865, 'auc': 0.9324, 'brier': 0.0383, 'logloss': 0.1313}
+base gain (should be ~0.1178): 0.1178
+base reproduction OK (static 0.3637 / full6 0.4815 / gain +0.1178 / full mean 0.4865)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-mean 0.0
+base_hist_D6 gain 0.1178 ratio vs full6 1.0 ratio vs full-mean 0.9595
+first_half_mean gain 0.0923 ratio vs full6 0.7838 ratio vs full-mean 0.7521
+second_half_mean gain 0.0869 ratio vs full6 0.7378 ratio vs full-mean 0.7079
+both_halves_mean gain 0.1265 ratio vs full6 1.0741 ratio vs full-mean 1.0306
+full_mean gain 0.1228 ratio vs full6 1.0422 ratio vs full-mean 1.0
+verdict: どちらでもない（数値をそのまま記録）
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-01_hb_formation_half_means/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-01_hb_formation_half_means/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-01_hb_formation_half_means/test_predictions.npz
