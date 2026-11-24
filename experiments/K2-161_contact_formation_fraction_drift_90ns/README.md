@@ -81,4 +81,5 @@
 - `run_k2_161.py`：K2-150 の `run_k2_150.py` を、予測幅 90 ns先（y の列 5）と接触の形成の 90 ns先の記録（K2-28・K2-124）に変えたもの。
 - `results.json`：全条件の指標、利得、割合、漂いの足し、タンパク質ごとの値
 - `results.csv`：条件ごとの指標の一覧
-- 実行ログ: `~/workspace/kinescope/work/k2_161_run.log`
+- `test_predictions.npz`：全条件のテスト予測確率（8 条件分、テスト 7,384件、約 0.66 MB）。実行スクリプトに保存の処理がなかったため、保存の処理を足して測り直した。再生成した予測確率は results.json の AUPRC と 8 条件すべてで小数第4位まで一致した。
+- 実行ログ: `~/workspace/kinescope/work/k2_161_run.log`、`~/workspace/kinescope/work/k2_161_run2.log`（test_predictions.npz の再生成）
