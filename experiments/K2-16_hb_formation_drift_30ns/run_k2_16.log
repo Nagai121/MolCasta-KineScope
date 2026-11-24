@@ -1,0 +1,21 @@
+train (9610, 7) test (4972, 7) test pos 30ns 345
+{'1mix_A': 3101, '2qt4_A': 1871}
+static_only {'n': 4972, 'positives': 345, 'auprc': 0.3639, 'auc': 0.8617, 'brier': 0.0528, 'logloss': 0.1907}
+base_hist_D6 {'n': 4972, 'positives': 345, 'auprc': 0.4264, 'auc': 0.905, 'brier': 0.0487, 'logloss': 0.1686}
+drift_only {'n': 4972, 'positives': 345, 'auprc': 0.3592, 'auc': 0.8741, 'brier': 0.0529, 'logloss': 0.1869}
+full_mean {'n': 4972, 'positives': 345, 'auprc': 0.4426, 'auc': 0.8979, 'brier': 0.048, 'logloss': 0.169}
+full_mean_plus_drift {'n': 4972, 'positives': 345, 'auprc': 0.4412, 'auc': 0.8971, 'brier': 0.0484, 'logloss': 0.171}
+both_halves_mean {'n': 4972, 'positives': 345, 'auprc': 0.4231, 'auc': 0.8956, 'brier': 0.0491, 'logloss': 0.1725}
+front_mean {'n': 4972, 'positives': 345, 'auprc': 0.439, 'auc': 0.8936, 'brier': 0.0485, 'logloss': 0.1729}
+base gain (should be ~0.0626): 0.0626
+base reproduction OK (static 0.3639 / full6 0.4264 / gain +0.0626 / full mean 0.4426 / front-half mean 0.4390)
+static_only gain 0.0 ratio vs full6 0.0 ratio vs full-mean 0.0
+base_hist_D6 gain 0.0626 ratio vs full6 1.0 ratio vs full-mean 0.7952
+drift_only gain -0.0047 ratio vs full6 -0.0749 ratio vs full-mean -0.0595
+full_mean gain 0.0787 ratio vs full6 1.2576 ratio vs full-mean 1.0
+full_mean_plus_drift gain 0.0773 ratio vs full6 1.2351 ratio vs full-mean 0.9821
+both_halves_mean gain 0.0592 ratio vs full6 0.9464 ratio vs full-mean 0.7526
+front_mean gain 0.0752 ratio vs full6 1.2013 ratio vs full-mean 0.9552
+AUPRC (c) - (b): -0.0014 verdict: 漂いは足しにならない
+AUPRC (c) - both_halves: 0.0181
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-16_hb_formation_drift_30ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-16_hb_formation_drift_30ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-16_hb_formation_drift_30ns/test_predictions.npz
