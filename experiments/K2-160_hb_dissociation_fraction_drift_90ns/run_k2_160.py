@@ -178,10 +178,12 @@ def feats_for(cname):
 
 ytr, yte = Ytr[:, HIDX], Yte[:, HIDX]
 res = {}
+preds = {}
 per_protein = {}
 for cname in CONDS:
     xtr, xte = feats_for(cname)
     p = predict(xtr, ytr, xte)
+    preds[cname] = p.astype(np.float64)
     res[cname] = metrics(yte, p)
     per_protein[cname] = {}
     for prot in TEST_P:
@@ -252,4 +254,9 @@ with open(OUT / "results.csv", "w", newline="") as f:
         w.writerow([c, m["n"], m["positives"], m["auc"], m["auprc"],
                     m["brier"], m["logloss"], gains[c], ratios[c],
                     ratios_vs_frac_full[c]])
-print("saved", OUT / "results.json", OUT / "results.csv", flush=True)
+np.savez_compressed(
+    OUT / "test_predictions.npz",
+    **{f"pred_{c}": preds[c].astype(np.float32) for c in CONDS},
+    y_test=yte, protein=Pte)
+print("saved", OUT / "results.json", OUT / "results.csv",
+      OUT / "test_predictions.npz", flush=True)
