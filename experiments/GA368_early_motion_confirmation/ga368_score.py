@@ -54,12 +54,17 @@ def main():
     d348=.2*(long_a+long_c-2*p)
     parent=.8*(b+static+d348)+.2*predict(R/"ga344/generated-6.ubj",np.c_[x[:,:3],d])
     short=np.array(SAMPLES)<=10
-    prediction=parent+.08*(a[:,short].mean((0,1))+c[:,short].mean((0,1))-long_a-long_c)
+    delta=a[:,short].mean((0,1))+c[:,short].mean((0,1))-long_a-long_c
+    prediction=parent+.08*delta
+    near=np.clip((5.5-x[:,0])/2,0,1)
+    distance_gate=parent+.16*near*delta
     record(D/"confirmation.json",dict(proteins=names,origin=149,pairs=len(y),
-                                     ga348=estimates(parent,y,b),ga368=estimates(prediction,y,b)))
-    np.savez(D/"evaluation.npz",predicted=prediction,target=y,static=b,parent=parent,
+                                     ga348=estimates(parent,y,b),ga368=estimates(prediction,y,b),
+                                     ga371=estimates(distance_gate,y,b)))
+    np.savez(D/"evaluation.npz",predicted=prediction,gated=distance_gate,target=y,static=b,parent=parent,
              proteins=np.concatenate([np.repeat(r["protein"],len(r["pair"])) for r in rows]))
-    print(estimates(parent,y,b),estimates(prediction,y,b),flush=True)
+    print(estimates(parent,y,b),estimates(prediction,y,b),estimates(distance_gate,y,b),flush=True)
 
 if __name__=="__main__":
     main()
+
