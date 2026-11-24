@@ -1,0 +1,19 @@
+{
+  "surface": "ACE",
+  "origins": [
+    49,
+    149,
+    249
+  ],
+  "samples": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "branches": 2,
+  "step_fs": 2,
+  "minimization": 100
+}
