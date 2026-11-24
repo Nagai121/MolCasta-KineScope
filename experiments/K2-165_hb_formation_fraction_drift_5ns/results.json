@@ -1,0 +1,357 @@
+{
+  "label": "HB formation 5ns: does history fraction drift (first-half fraction minus second-half fraction) add on top of the full fraction?",
+  "series": "K2 (what the guidance is, not where it is)",
+  "experiment": "K2-165",
+  "horizon_ns": 5,
+  "bound_A": 3.5,
+  "conditions_definition": {
+    "base": "Material D conditions: train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 (100 ps spacing), HistGBM (120 iters, lr 0.075, 31 leaves, min_samples_leaf 15, L2 0.02, seed 42) refit per condition, 7 static features.",
+    "fraction": "fraction of frames with pair distance <= 3.5 A (boundary from K71) within the given frame range, divided by the number of frames in that range (first/second half: 5, full: 11)",
+    "first_half": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "span_ns": "0.0-0.4",
+      "feature": "fraction of frames [0..4] with distance <= 3.5 A"
+    },
+    "second_half": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "span_ns": "0.6-1.0",
+      "feature": "fraction of frames [6..10] with distance <= 3.5 A"
+    },
+    "note": "Frame 5 (0.5 ns) belongs to neither half by design.",
+    "drift_only": "static + drift only (fraction over frames [0..4] minus fraction over frames [6..10])",
+    "frac_full": "static + fraction over frames [0..10] (K2-54 reference)",
+    "frac_full_plus_drift": "static + full fraction + drift",
+    "both_halves_frac": "static + first-half fraction and second-half fraction (2 features)",
+    "base_hist_D6": "static + 6 statistics of the full 11-frame history (all-in reference)"
+  },
+  "base_reproduction": {
+    "expected_from_K2-54_5ns": {
+      "static_only_auprc": 0.3493,
+      "base_hist_D6_auprc": 0.4648,
+      "full6_gain": 0.1155,
+      "full_frac_auprc": 0.4592,
+      "test_n": 4972,
+      "test_positives": 312
+    },
+    "note": "Base reproduction is checked against K2-54 (5ns), which matches the K2-26/G74/G136 records to 4 decimal places.",
+    "observed": {
+      "static_only_auprc": 0.349302325532271,
+      "base_hist_D6_auprc": 0.4647730596143089,
+      "full6_gain": 0.11547073408203795,
+      "full_frac_auprc": 0.4591596227328268
+    },
+    "match": "all within 5e-4 (identical to 4 decimal places)",
+    "n_train": 9610,
+    "n_test": 4972,
+    "n_test_positives": 312
+  },
+  "metrics_5ns": {
+    "static_only": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.349302325532271,
+      "auc": 0.8797997826565422,
+      "brier": 0.04854167952070918,
+      "logloss": 0.1714567253040607
+    },
+    "base_hist_D6": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.4647730596143089,
+      "auc": 0.9221979201056455,
+      "brier": 0.04278903719160868,
+      "logloss": 0.14801486411494005
+    },
+    "drift_only": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.38835991396744923,
+      "auc": 0.9004205871024541,
+      "brier": 0.04662659164545403,
+      "logloss": 0.1606807539482172
+    },
+    "frac_full": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.4591596227328268,
+      "auc": 0.9147511554968636,
+      "brier": 0.04341981656388466,
+      "logloss": 0.1499485935799669
+    },
+    "frac_full_plus_drift": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.45016701145747223,
+      "auc": 0.9119903433476395,
+      "brier": 0.044107288972973904,
+      "logloss": 0.1528532025148786
+    },
+    "first_half_frac": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.45320855513810443,
+      "auc": 0.9076916198965556,
+      "brier": 0.043510264811996414,
+      "logloss": 0.15291576719731098
+    },
+    "second_half_frac": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.4549726170088828,
+      "auc": 0.9016758143501706,
+      "brier": 0.043948945420169035,
+      "logloss": 0.15546055320076482
+    },
+    "both_halves_frac": {
+      "n": 4972,
+      "positives": 312,
+      "auprc": 0.46012139851766837,
+      "auc": 0.9128524953229888,
+      "brier": 0.043330250198510806,
+      "logloss": 0.15055957527631358
+    }
+  },
+  "gains": {
+    "static_only": {
+      "gain": 0.0,
+      "ratio_vs_full6_gain": 0.0,
+      "ratio_vs_fullfrac_gain": 0.0
+    },
+    "base_hist_D6": {
+      "gain": 0.11547073408203795,
+      "ratio_vs_full6_gain": 1.0,
+      "ratio_vs_fullfrac_gain": 1.0510975331136558
+    },
+    "drift_only": {
+      "gain": 0.03905758843517826,
+      "ratio_vs_full6_gain": 0.33824664531386106,
+      "ratio_vs_fullfrac_gain": 0.3555302144733691
+    },
+    "frac_full": {
+      "gain": 0.10985729720055581,
+      "ratio_vs_full6_gain": 0.9513864969673269,
+      "ratio_vs_fullfrac_gain": 1.0
+    },
+    "frac_full_plus_drift": {
+      "gain": 0.10086468592520126,
+      "ratio_vs_full6_gain": 0.8735086576442859,
+      "ratio_vs_fullfrac_gain": 0.9181427952033299
+    },
+    "first_half_frac": {
+      "gain": 0.10390622960583346,
+      "ratio_vs_full6_gain": 0.8998490434122614,
+      "ratio_vs_fullfrac_gain": 0.945829109705311
+    },
+    "second_half_frac": {
+      "gain": 0.10567029147661183,
+      "ratio_vs_full6_gain": 0.9151261773527547,
+      "ratio_vs_fullfrac_gain": 0.9618868675032104
+    },
+    "both_halves_frac": {
+      "gain": 0.1108190729853974,
+      "ratio_vs_full6_gain": 0.9597156705236176,
+      "ratio_vs_fullfrac_gain": 1.0087547737778926
+    }
+  },
+  "drift_adds": -0.008992611275354556,
+  "diff_c_minus_both_halves_auprc": -0.009954387060196135,
+  "reading_rule_fixed_in_advance": {
+    "rule": "(c) frac_full_plus_drift beats (b) frac_full by AUPRC >= +0.01 -> 'drift adds'; otherwise 'drift does not add'.",
+    "drift_adds_auprc": -0.008992611275354556,
+    "verdict": "漂いは足しにならない"
+  },
+  "per_protein": {
+    "static_only": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.38583921934686094,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.2649638114572563,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      }
+    },
+    "base_hist_D6": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.4754504963941919,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.08961127704733096,
+        "ratio_vs_full6_gain": 1.0
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.4488284875292456,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.1838646760719893,
+        "ratio_vs_full6_gain": 1.0
+      }
+    },
+    "drift_only": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.41465845498870635,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.02881923564184541,
+        "ratio_vs_full6_gain": 0.32160277803678256
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.334611438957191,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.0696476274999347,
+        "ratio_vs_full6_gain": 0.37879830420860866
+      }
+    },
+    "frac_full": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.46452866433051315,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.07868944498365221,
+        "ratio_vs_full6_gain": 0.8781198926792434
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.4520498805368907,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.18708606907963443,
+        "ratio_vs_full6_gain": 1.0175204562206601
+      }
+    },
+    "frac_full_plus_drift": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.45963949087363204,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.0738002715267711,
+        "ratio_vs_full6_gain": 0.8235600915249898
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.4322242816177563,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.1672604701605,
+        "ratio_vs_full6_gain": 0.9096933338898212
+      }
+    },
+    "first_half_frac": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.4845100269552301,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.09867080760836916,
+        "ratio_vs_full6_gain": 1.1010981079563582
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.38929309491674974,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.12432928345949346,
+        "ratio_vs_full6_gain": 0.676199942890685
+      }
+    },
+    "second_half_frac": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.4715672511048198,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.08572803175795884,
+        "ratio_vs_full6_gain": 0.9566656628794492
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.4320883157838738,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.16712450432661752,
+        "ratio_vs_full6_gain": 0.9089538452790277
+      }
+    },
+    "both_halves_frac": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 219,
+        "auprc_static": 0.38583921934686094,
+        "auprc_full6": 0.4754504963941919,
+        "auprc_condition": 0.4877152551954787,
+        "full6_gain": 0.08961127704733096,
+        "gain": 0.10187603584861776,
+        "ratio_vs_full6_gain": 1.136866242792286
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 93,
+        "auprc_static": 0.2649638114572563,
+        "auprc_full6": 0.4488284875292456,
+        "auprc_condition": 0.4179007240301871,
+        "full6_gain": 0.1838646760719893,
+        "gain": 0.1529369125729308,
+        "ratio_vs_full6_gain": 0.8317906181884048
+      }
+    }
+  },
+  "drift_diff_per_protein": {
+    "1mix_A": -0.004889173456881113,
+    "2qt4_A": -0.019825598919134435
+  }
+}
