@@ -1,0 +1,12 @@
+train (15926, 5) test (7384, 5)
+static_only {'n': 7384, 'positives': 257, 'auc': 0.8734, 'auprc': 0.2872, 'brier': 0.0283, 'logloss': 0.1108}
+full_hist6 {'n': 7384, 'positives': 257, 'auc': 0.9136, 'auprc': 0.4722, 'brier': 0.0236, 'logloss': 0.0925}
+drift_only {'n': 7384, 'positives': 257, 'auc': 0.8867, 'auprc': 0.3409, 'brier': 0.0273, 'logloss': 0.1055}
+mean_full {'n': 7384, 'positives': 257, 'auc': 0.8959, 'auprc': 0.4066, 'brier': 0.025, 'logloss': 0.0983}
+mean_full_plus_drift {'n': 7384, 'positives': 257, 'auc': 0.9001, 'auprc': 0.4153, 'brier': 0.0245, 'logloss': 0.0968}
+mean_both_halves {'n': 7384, 'positives': 257, 'auc': 0.9042, 'auprc': 0.439, 'brier': 0.024, 'logloss': 0.0945}
+mean_first_half {'n': 7384, 'positives': 257, 'auc': 0.9028, 'auprc': 0.4129, 'brier': 0.0249, 'logloss': 0.0972}
+mean_second_half {'n': 7384, 'positives': 257, 'auc': 0.8916, 'auprc': 0.4, 'brier': 0.0253, 'logloss': 0.1002}
+base reproduction vs K13/K27: OK
+gain_full +0.1850 gain_drift +0.0537 (ratio 0.290) gain_mean_full +0.1194 (ratio 0.645) gain_c +0.1280 (ratio 0.692) diff (c)-(b) +0.0087 reading: 漂いは足しにならない diff (c)-(both halves) -0.0238
+saved /home/hatch/workspace/kinescope/repo/experiments/K2-71_contact_formation_drift_90ns/results.json /home/hatch/workspace/kinescope/repo/experiments/K2-71_contact_formation_drift_90ns/results.csv /home/hatch/workspace/kinescope/repo/experiments/K2-71_contact_formation_drift_90ns/test_predictions.npz
