@@ -1,0 +1,59 @@
+{
+  "proteins": [
+    "3dso_A",
+    "3mwz_A",
+    "2igp_A",
+    "3po8_A",
+    "5v0m_A",
+    "2vm5_A",
+    "2oxo_A",
+    "4hwx_A",
+    "2w9y_A",
+    "3b4q_B",
+    "4oe9_B",
+    "3ic3_B",
+    "3a39_A",
+    "2b0a_A",
+    "6pxz_B",
+    "3qfl_A",
+    "1o4k_A",
+    "2y1y_A",
+    "5x1e_D",
+    "3cyi_A",
+    "3ehg_A",
+    "2i9x_A",
+    "1bgf_A",
+    "2y7b_A"
+  ],
+  "origins": [
+    49,
+    149
+  ],
+  "samples": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "branches": 2,
+  "step_fs": 2,
+  "minimization": 100,
+  "recoveries": {},
+  "failures": {},
+  "assigned": [
+    "3dso_A",
+    "2igp_A",
+    "5v0m_A",
+    "2oxo_A",
+    "2w9y_A",
+    "4oe9_B",
+    "3a39_A",
+    "6pxz_B",
+    "1o4k_A",
+    "5x1e_D",
+    "3ehg_A",
+    "1bgf_A"
+  ]
+}

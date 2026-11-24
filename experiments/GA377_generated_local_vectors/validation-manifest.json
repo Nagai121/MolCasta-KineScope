@@ -1,0 +1,25 @@
+{
+  "proteins": [
+    "3mx7_A",
+    "3t92_A",
+    "4wrp_A"
+  ],
+  "origins": [
+    49,
+    149,
+    249
+  ],
+  "samples": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "branches": 2,
+  "step_fs": 2,
+  "minimization": 100,
+  "recoveries": {},
+  "failures": {}
+}
