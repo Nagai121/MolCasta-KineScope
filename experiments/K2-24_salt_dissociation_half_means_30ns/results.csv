@@ -1,0 +1,8 @@
+condition,auprc,auc,brier,logloss,gain_vs_static,recovery_vs_full_history_gain,ratio_to_full_mean_gain
+static_only,0.4799,0.5723,0.277,0.7907,,,
+base_hist_D6,0.5432,0.6501,0.2591,0.791,0.0633,1.0,0.724
+mean_first_half,0.5695,0.6535,0.2531,0.7712,0.0896,1.416,1.025
+mean_second_half,0.5019,0.576,0.2934,0.8401,0.0219,0.347,0.251
+mean_both,0.554,0.6408,0.2642,0.7938,0.0741,1.17,0.847
+mean_full,0.5673,0.6539,0.2586,0.7992,0.0874,1.381,1.0
+prefix_mean_0.1ns,0.5948,0.6515,0.2492,0.7478,0.1149,1.815,1.314
