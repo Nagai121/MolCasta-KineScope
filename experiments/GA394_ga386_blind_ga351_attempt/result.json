@@ -1,1 +1,104 @@
-{"available_in_repo":["experiments/GA386_later_origin_neural_training/expanded-1.0-40.pt (candidate checkpoint)","experiments/GA318_scaled_static_prior/all-8.ubj","experiments/GA330_all_available_static_prior/all-9.ubj","experiments/GA347_more_training_origins/all-9.ubj","experiments/GA344_learned_two_force_fields/generated-6.ubj","experiments/GA351_sequence_disjoint_reserve/blind-ga351.npz (target, static, proteins for all 3980 pairs; GA384 mixed predictions)","module sources (ga314/ga344/ga348/ga_static_offset/ga_native_offset copies in experiment dirs)"],"branch":"research/ga301-static-pair-offset","candidate":{"checkpoint":"experiments/GA386_later_origin_neural_training/expanded-1.0-40.pt","checkpoint_hash_record_in_repo":null,"checkpoint_sha256":"1ed2a094cdd68fd58f2238082e1715c94aa8d7af1045d56107a8d75f9c5e4618","experiment":"GA386","rule":"expanded-1.0-40/0.35","validation_all_9_origins_residual_correlation":0.615022284728005,"validation_later_origins_residual_correlation":0.6000484294572446},"experiment":"GA394","ga386_blind_score":null,"missing":["runs/ga351/blind/amber/{5b1n_A,1utg_A,5h1n_B,1uha_A,1wq8_A,4f55_A,5dje_B,1vr8_A}-49.npz (8 files, generated ensembles, Amber)","runs/ga351/blind/charmm/{5b1n_A,1utg_A,5h1n_B,1uha_A,1wq8_A,4f55_A,5dje_B,1vr8_A}-49.npz (8 files, generated ensembles, CHARMM)"],"panel":{"experiment":"GA351","ga384_reference_from_blind_ga351_json":{"bias":-0.021301346410670413,"residual_correlation":0.6221390978666421,"residual_sd":0.5001449051881158,"rmse":0.5005983155630238},"pairs":3980,"parent_ga348_reference_from_blind_ga351_json":{"bias":-0.01365994463790095,"residual_correlation":0.6219451585202694,"residual_sd":0.4994855302878378,"rmse":0.49967228165511945},"proteins":["5b1n_A","1utg_A","5h1n_B","1uha_A","1wq8_A","4f55_A","5dje_B","1vr8_A"]},"parent_reproduction_check":"not_run_missing_data","reading_rule_fixed_in_advance":"On the same 3980 pairs, record GA386 and GA348 residual correlation, residual SD, RMSE and bias side by side. If GA386 correlation exceeds GA348 by >= +0.005 and RMSE is not worse, record 'blind-panel gain remains'; otherwise record the numbers as-is. Also state the position against the 0.700 line.","scoring_path":"experiments/GA351_sequence_disjoint_reserve/ga351_confirm.py -> ga384_confirm.main(blind=True), with GA386 checkpoint loading as in experiments/GA386_later_origin_neural_training/ga386_confirm.py","status":"blocked_missing_panel_data","title":"Blind scoring of frozen GA386 on the GA351 panel (attempted by Dosukoi side on Echizen's instruction, 2026-11-25)","unblock_condition":"Commit the 16 generated-ensemble npz files (runs/ga351/blind/amber/*-49.npz and runs/ga351/blind/charmm/*-49.npz) to the branch, e.g. under experiments/GA351_sequence_disjoint_reserve/ as was done for the GA321 reserve panel, or provide the per-pair parent forecast and the (x, d) feature arrays for the panel. Then this scoring can be run unchanged.","why_missing_blocks_scoring":"components() (ga348) and inputs() (ga344) read the per-protein generated-ensemble npz files (pair/tracks) for both force fields. The GA348 parent per-pair forecast and the GA386 head features are both computed from these files. blind-ga351.npz stores only GA384's mixed prediction (0.8*parent + 0.2*head384), so the parent forecast cannot be recovered from committed outputs. The ensembles were never committed on any branch (git history checked: only blind-ga351.json and blind-ga351.npz exist for the blind panel).","why_not_regenerated":"The ensembles are stochastic OpenMM simulations (ga351_generate.py; locked.json records proteins/origin/window/branches/step/minimize but no seeds). Regenerating them here would produce a different panel, the GA348 parent would not reproduce its recorded values (correlation 0.621945, RMSE 0.499672, residual SD 0.499486), and the run would no longer be the same scoring path as GA384's blind scoring. Per the assignment, failure of the parent reproduction means record and stop."}
+{
+  "available_in_repo": [
+    "experiments/GA386_later_origin_neural_training/expanded-1.0-40.pt (candidate checkpoint)",
+    "experiments/GA318_scaled_static_prior/all-8.ubj",
+    "experiments/GA330_all_available_static_prior/all-9.ubj",
+    "experiments/GA347_more_training_origins/all-9.ubj",
+    "experiments/GA344_learned_two_force_fields/generated-6.ubj",
+    "experiments/GA351_sequence_disjoint_reserve/blind-ga351.npz (target, static, proteins for all 3980 pairs; GA384 mixed predictions)",
+    "module sources (ga314/ga344/ga348/ga_static_offset/ga_native_offset copies in experiment dirs)"
+  ],
+  "branch": "research/ga301-static-pair-offset",
+  "candidate": {
+    "checkpoint": "experiments/GA386_later_origin_neural_training/expanded-1.0-40.pt",
+    "checkpoint_hash_record_in_repo": null,
+    "checkpoint_sha256": "1ed2a094cdd68fd58f2238082e1715c94aa8d7af1045d56107a8d75f9c5e4618",
+    "experiment": "GA386",
+    "rule": "expanded-1.0-40/0.35",
+    "validation_all_9_origins_residual_correlation": 0.615022284728005,
+    "validation_later_origins_residual_correlation": 0.6000484294572446
+  },
+  "experiment": "GA394",
+  "ga386_blind_score": null,
+  "missing": [
+    "runs/ga351/blind/amber/{5b1n_A,1utg_A,5h1n_B,1uha_A,1wq8_A,4f55_A,5dje_B,1vr8_A}-49.npz (8 files, generated ensembles, Amber)",
+    "runs/ga351/blind/charmm/{5b1n_A,1utg_A,5h1n_B,1uha_A,1wq8_A,4f55_A,5dje_B,1vr8_A}-49.npz (8 files, generated ensembles, CHARMM)"
+  ],
+  "panel": {
+    "experiment": "GA351",
+    "ga384_reference_from_blind_ga351_json": {
+      "bias": -0.021301346410670413,
+      "residual_correlation": 0.6221390978666421,
+      "residual_sd": 0.5001449051881158,
+      "rmse": 0.5005983155630238
+    },
+    "pairs": 3980,
+    "parent_ga348_reference_from_blind_ga351_json": {
+      "bias": -0.01365994463790095,
+      "residual_correlation": 0.6219451585202694,
+      "residual_sd": 0.4994855302878378,
+      "rmse": 0.49967228165511945
+    },
+    "proteins": [
+      "5b1n_A",
+      "1utg_A",
+      "5h1n_B",
+      "1uha_A",
+      "1wq8_A",
+      "4f55_A",
+      "5dje_B",
+      "1vr8_A"
+    ]
+  },
+  "parent_reproduction_check": "not_run_missing_data",
+  "reading_rule_fixed_in_advance": "On the same 3980 pairs, record GA386 and GA348 residual correlation, residual SD, RMSE and bias side by side. If GA386 correlation exceeds GA348 by >= +0.005 and RMSE is not worse, record 'blind-panel gain remains'; otherwise record the numbers as-is. Also state the position against the 0.700 line.",
+  "scoring_path": "experiments/GA351_sequence_disjoint_reserve/ga351_confirm.py -> ga384_confirm.main(blind=True), with GA386 checkpoint loading as in experiments/GA386_later_origin_neural_training/ga386_confirm.py",
+  "status": "blocked_missing_panel_data",
+  "title": "Blind scoring of frozen GA386 on the GA351 panel (attempted by Dosukoi side on Echizen's instruction, 2026-11-25)",
+  "unblock_condition": "Commit the shared package modules (frontends.py, gc_history.py, g2i_path35.py, explore.py) as used by the GA scoring path, or provide the per-pair parent forecast and the (x, d) feature arrays for the panel. The real ATLAS trajectories for the 8 reserved proteins are also needed unless the precomputed per-pair inputs are provided instead.",
+  "why_missing_blocks_scoring": "components() (ga348) and inputs() (ga344) read the per-protein generated-ensemble npz files (pair/tracks) for both force fields. The GA348 parent per-pair forecast and the GA386 head features are both computed from these files. blind-ga351.npz stores only GA384's mixed prediction (0.8*parent + 0.2*head384), so the parent forecast cannot be recovered from committed outputs. The ensembles were never committed on any branch (git history checked: only blind-ga351.json and blind-ga351.npz exist for the blind panel).",
+  "why_not_regenerated": "The ensembles are stochastic OpenMM simulations (ga351_generate.py; locked.json records proteins/origin/window/branches/step/minimize but no seeds). Regenerating them here would produce a different panel, the GA348 parent would not reproduce its recorded values (correlation 0.621945, RMSE 0.499672, residual SD 0.499486), and the run would no longer be the same scoring path as GA384's blind scoring. Per the assignment, failure of the parent reproduction means record and stop.",
+  "resume_2026_11_25": {
+    "archive_commit": "e083600",
+    "branch_tip_at_resume": "82c2c2a",
+    "ensembles_now_in_repo": "experiments/GA351_sequence_disjoint_reserve/blind/{amber,charmm}/*-49.npz (8 + 8 files)",
+    "ensemble_verification": {
+      "amber_tracks_shape": "(8 branches, 13, n_pairs)",
+      "charmm_tracks_shape": "(2 branches, 13, n_pairs)",
+      "pair_arrays_amber_vs_charmm": "identical for all 8 proteins",
+      "per_protein_pairs": {
+        "5b1n_A": 331,
+        "1utg_A": 351,
+        "5h1n_B": 344,
+        "1uha_A": 460,
+        "1wq8_A": 506,
+        "4f55_A": 621,
+        "5dje_B": 676,
+        "1vr8_A": 691
+      },
+      "total_pairs": 3980,
+      "matches_blind_ga351_npz": true,
+      "locked_json": "amber 8 branches / charmm 2 branches, origin 49, window 100"
+    },
+    "still_missing": [
+      "Shared package modules used by the scoring path, never committed in any branch: frontends.py (data), gc_history.py (past), g2i_path35.py (paths), explore.py (record). ga_static_offset imports all four at module level; cohort()/extract() cannot run without them. The GC branch has a gc_history.py copy, but frontends/g2i_path35/explore exist nowhere in any branch or on this VM.",
+      "Real ATLAS trajectories for the 8 reserved proteins (1001 frames x 3 replicas each, per acquisition.json). The local atlas-workspace holds only 1mix_A. They can in principle be re-downloaded via tseries.data.acquire (MiniTopol AtlasClient), but the scoring still cannot run without the modules above."
+    ],
+    "modules_available_as_copies": [
+      "ga309",
+      "ga314",
+      "ga333",
+      "ga344",
+      "ga348",
+      "ga_force",
+      "ga_native240",
+      "ga_native_offset",
+      "ga_openmm_pilot",
+      "ga_static_offset",
+      "ga365",
+      "tseries (k06b/pkg, incl. data.acquire/registry/trajectory/cell/shard)"
+    ],
+    "scoring_path_chosen": "Copy the 16 files to runs/ga351/blind/ was the intended option, but the scoring cannot be executed even with the files in place, because the shared package modules above are missing. The modules were not reimplemented: that would not be the same scoring path as GA384 blind scoring.",
+    "status_after_resume": "still_blocked_missing_package_modules_and_real_trajectories"
+  }
+}
