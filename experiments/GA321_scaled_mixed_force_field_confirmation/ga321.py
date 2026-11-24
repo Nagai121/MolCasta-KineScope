@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 
 import numpy as np
+import openmm
 from xgboost import XGBRegressor
 
 from tseries.data import TEST
@@ -33,7 +34,21 @@ def main(reserve=False):
     amber=dest/"amber" if reserve else Path("runs/ga312")
     if reserve:
         amber.mkdir(exist_ok=True)
-        simulate(names,1,destination=amber,samples=SAMPLES,branches=8)
+        from .ga333 import candidates
+        recovery_file=dest/"recovery.json"
+        recovery=json.loads(recovery_file.read_bytes()) if recovery_file.exists() else {}
+        for name in names:
+            try:
+                step=2 if name in recovery else 4
+                simulate((name,),1,destination=amber,samples=SAMPLES,branches=8,
+                         step_fs=step,parts_fn=candidates)
+            except openmm.OpenMMException as exc:
+                if step!=4 or "NaN" not in str(exc):
+                    raise
+                recovery[name]={"reason":"nonfinite coordinate at 4 fs","replacement_step_fs":2}
+                record(recovery_file,recovery)
+                simulate((name,),1,destination=amber,samples=SAMPLES,branches=8,
+                         step_fs=2,parts_fn=candidates)
     a,y,b,p,f,g=load(names,amber)
     c,y2,b2,p2,f2,g2=load(names,dest)
     for u,v in ((y,y2),(b,b2),(p,p2),(g,g2),(f,f2)):

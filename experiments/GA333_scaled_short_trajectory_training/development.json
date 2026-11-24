@@ -1,0 +1,315 @@
+{
+  "proteins": [
+    "2pyq_B",
+    "3qfl_A",
+    "3mhs_B",
+    "4ykd_A",
+    "3v0r_A",
+    "2y7b_A",
+    "1ok0_A",
+    "2j6a_A",
+    "3ic3_B",
+    "4hwx_A",
+    "3mwz_A",
+    "3fkc_A",
+    "5v0m_A",
+    "3p4h_A",
+    "6fub_B",
+    "4oe9_B",
+    "4b6i_D",
+    "1n8u_A",
+    "2o4t_A",
+    "2p9x_D",
+    "3lyy_A",
+    "3klr_A",
+    "1ijt_A",
+    "2gc4_B",
+    "1puc_A",
+    "4goq_B",
+    "2bo1_A",
+    "2rff_A",
+    "6vjg_A",
+    "5x1e_D",
+    "5h6x_A",
+    "7s86_A",
+    "2vm5_A",
+    "1i4m_A",
+    "2oxo_A",
+    "5pal_A",
+    "4obi_A",
+    "1m9z_A",
+    "3po8_A",
+    "3cw3_A",
+    "7fd1_A",
+    "1o4k_A",
+    "2fhz_A",
+    "3cyi_A",
+    "6as3_A",
+    "5cyz_C",
+    "6pxz_B",
+    "5ydn_A",
+    "1bgf_A",
+    "1cpq_A",
+    "1fk5_A",
+    "1gqv_A",
+    "1ikt_A",
+    "1krn_A",
+    "1lr0_A",
+    "1msc_A",
+    "1qw2_A",
+    "1tzw_A",
+    "1u84_A",
+    "1x6j_A",
+    "1yu5_X",
+    "2b0a_A",
+    "2cg7_A",
+    "2dlb_A",
+    "2end_A",
+    "2fe5_A",
+    "2hng_A",
+    "2i9x_A",
+    "2igp_A",
+    "2oy9_B",
+    "2qev_A",
+    "2vac_A",
+    "2w9y_A",
+    "2y1y_A",
+    "3a39_A",
+    "3b4q_B",
+    "3bwu_D",
+    "3c9p_A",
+    "3dso_A",
+    "3ehg_A"
+  ],
+  "window": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "seeds": 2,
+  "trials": {
+    "generated-3": {
+      "seconds": 0.5487330999458209,
+      "direct": {
+        "residual_sd": 0.46094241738319397,
+        "rmse": 0.4610133767127991,
+        "bias": -0.008088641799986362,
+        "residual_correlation": 0.5222582754505899
+      },
+      "blend": {
+        "residual_sd": 0.43794944882392883,
+        "rmse": 0.43810275197029114,
+        "bias": -0.01158963330090046,
+        "residual_correlation": 0.6111236784782711
+      }
+    },
+    "generated-5": {
+      "seconds": 1.2627748000668362,
+      "direct": {
+        "residual_sd": 0.4654065668582916,
+        "rmse": 0.46545979380607605,
+        "bias": -0.007041502743959427,
+        "residual_correlation": 0.510191683838966
+      },
+      "blend": {
+        "residual_sd": 0.43900400400161743,
+        "rmse": 0.43914347887039185,
+        "bias": -0.01106606237590313,
+        "residual_correlation": 0.6049904762408442
+      }
+    },
+    "generated-7": {
+      "seconds": 2.9149446999654174,
+      "direct": {
+        "residual_sd": 0.47079381346702576,
+        "rmse": 0.47081100940704346,
+        "bias": -0.004019455518573523,
+        "residual_correlation": 0.49733347738591666
+      },
+      "blend": {
+        "residual_sd": 0.4404412806034088,
+        "rmse": 0.4405449330806732,
+        "bias": -0.009555037133395672,
+        "residual_correlation": 0.5969992425182171
+      }
+    },
+    "joint-3": {
+      "seconds": 2.158318299916573,
+      "direct": {
+        "residual_sd": 0.44182202219963074,
+        "rmse": 0.44202542304992676,
+        "bias": -0.013409442268311977,
+        "residual_correlation": 0.5772540222410097
+      },
+      "blend": {
+        "residual_sd": 0.4344828426837921,
+        "rmse": 0.43471649289131165,
+        "bias": -0.014250031672418118,
+        "residual_correlation": 0.6143102145942716
+      }
+    },
+    "joint-5": {
+      "seconds": 2.7716828000266105,
+      "direct": {
+        "residual_sd": 0.43831032514572144,
+        "rmse": 0.438599169254303,
+        "bias": -0.015914853662252426,
+        "residual_correlation": 0.5859744869974695
+      },
+      "blend": {
+        "residual_sd": 0.4336201250553131,
+        "rmse": 0.4338971674442291,
+        "bias": -0.015502738766372204,
+        "residual_correlation": 0.6134016298561
+      }
+    },
+    "joint-7": {
+      "seconds": 3.9042414999566972,
+      "direct": {
+        "residual_sd": 0.4364117383956909,
+        "rmse": 0.43686217069625854,
+        "bias": -0.019832761958241463,
+        "residual_correlation": 0.5908614618892994
+      },
+      "blend": {
+        "residual_sd": 0.4328007996082306,
+        "rmse": 0.4331528842449188,
+        "bias": -0.01746169663965702,
+        "residual_correlation": 0.6151553793212368
+      }
+    },
+    "static-3": {
+      "seconds": 2.102282900013961,
+      "direct": {
+        "residual_sd": 0.4879493713378906,
+        "rmse": 0.4881274402141571,
+        "bias": -0.013183980248868465,
+        "residual_correlation": 0.43680628143339284
+      },
+      "blend": {
+        "residual_sd": 0.4659184515476227,
+        "rmse": 0.46613287925720215,
+        "bias": -0.014137307181954384,
+        "residual_correlation": 0.5227865136955056
+      }
+    },
+    "static-5": {
+      "seconds": 2.677021900075488,
+      "direct": {
+        "residual_sd": 0.4849337339401245,
+        "rmse": 0.48509296774864197,
+        "bias": -0.012426143512129784,
+        "residual_correlation": 0.4434605746228424
+      },
+      "blend": {
+        "residual_sd": 0.466179221868515,
+        "rmse": 0.46638223528862,
+        "bias": -0.013758385553956032,
+        "residual_correlation": 0.5144993104596374
+      }
+    },
+    "static-7": {
+      "seconds": 4.121167000033893,
+      "direct": {
+        "residual_sd": 0.484476238489151,
+        "rmse": 0.4846366047859192,
+        "bias": -0.01246662251651287,
+        "residual_correlation": 0.4431836920812018
+      },
+      "blend": {
+        "residual_sd": 0.4660979211330414,
+        "rmse": 0.4663015604019165,
+        "bias": -0.013778630644083023,
+        "residual_correlation": 0.5110314774214485
+      }
+    }
+  },
+  "failures": {
+    "3fkc_A": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan",
+    "1puc_A": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan",
+    "6as3_A": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan",
+    "1tzw_A": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan",
+    "1x6j_A": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan",
+    "2vac_A": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan"
+  },
+  "successful": [
+    "2pyq_B",
+    "3qfl_A",
+    "3mhs_B",
+    "4ykd_A",
+    "3v0r_A",
+    "2y7b_A",
+    "1ok0_A",
+    "2j6a_A",
+    "3ic3_B",
+    "4hwx_A",
+    "3mwz_A",
+    "5v0m_A",
+    "3p4h_A",
+    "6fub_B",
+    "4oe9_B",
+    "4b6i_D",
+    "1n8u_A",
+    "2o4t_A",
+    "2p9x_D",
+    "3lyy_A",
+    "3klr_A",
+    "1ijt_A",
+    "2gc4_B",
+    "4goq_B",
+    "2bo1_A",
+    "2rff_A",
+    "6vjg_A",
+    "5x1e_D",
+    "5h6x_A",
+    "7s86_A",
+    "2vm5_A",
+    "1i4m_A",
+    "2oxo_A",
+    "5pal_A",
+    "4obi_A",
+    "1m9z_A",
+    "3po8_A",
+    "3cw3_A",
+    "7fd1_A",
+    "1o4k_A",
+    "2fhz_A",
+    "3cyi_A",
+    "5cyz_C",
+    "6pxz_B",
+    "5ydn_A",
+    "1bgf_A",
+    "1cpq_A",
+    "1fk5_A",
+    "1gqv_A",
+    "1ikt_A",
+    "1krn_A",
+    "1lr0_A",
+    "1msc_A",
+    "1qw2_A",
+    "1u84_A",
+    "1yu5_X",
+    "2b0a_A",
+    "2cg7_A",
+    "2dlb_A",
+    "2end_A",
+    "2fe5_A",
+    "2hng_A",
+    "2i9x_A",
+    "2igp_A",
+    "2oy9_B",
+    "2qev_A",
+    "2w9y_A",
+    "2y1y_A",
+    "3a39_A",
+    "3b4q_B",
+    "3bwu_D",
+    "3c9p_A",
+    "3dso_A",
+    "3ehg_A"
+  ],
+  "rows": 41376
+}
