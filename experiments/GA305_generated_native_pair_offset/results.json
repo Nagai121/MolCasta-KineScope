@@ -1,0 +1,178 @@
+{
+  "trials": {
+    "mean-ridge": {
+      "validation": {
+        "residual_sd": 0.5552311539649963,
+        "rmse": 0.5556446313858032,
+        "bias": -0.02143131196498871,
+        "residual_correlation": 0.5059580027991686
+      }
+    },
+    "mean-tree2": {
+      "validation": {
+        "residual_sd": 0.553722083568573,
+        "rmse": 0.5541080832481384,
+        "bias": -0.02067912556231022,
+        "residual_correlation": 0.5067949140275679
+      }
+    },
+    "mean-tree4": {
+      "validation": {
+        "residual_sd": 0.5541349053382874,
+        "rmse": 0.554523229598999,
+        "bias": -0.02074827067553997,
+        "residual_correlation": 0.5053487507244192
+      }
+    },
+    "raw-ridge": {
+      "validation": {
+        "residual_sd": 0.556612491607666,
+        "rmse": 0.5571454763412476,
+        "bias": -0.024364503100514412,
+        "residual_correlation": 0.4999309930586662
+      }
+    },
+    "raw-tree2": {
+      "validation": {
+        "residual_sd": 0.5677321553230286,
+        "rmse": 0.5683051943778992,
+        "bias": -0.025515584275126457,
+        "residual_correlation": 0.464057832346995
+      }
+    },
+    "raw-tree4": {
+      "validation": {
+        "residual_sd": 0.578954815864563,
+        "rmse": 0.5794534087181091,
+        "bias": -0.024032574146986008,
+        "residual_correlation": 0.4303836308218021
+      }
+    },
+    "residual-ridge": {
+      "validation": {
+        "residual_sd": 0.5494564175605774,
+        "rmse": 0.5498273372650146,
+        "bias": -0.020192719995975494,
+        "residual_correlation": 0.5202354707419633
+      }
+    },
+    "residual-tree2": {
+      "validation": {
+        "residual_sd": 0.5607001781463623,
+        "rmse": 0.5609930753707886,
+        "bias": -0.018126582726836205,
+        "residual_correlation": 0.4851246831084276
+      }
+    },
+    "residual-tree4": {
+      "validation": {
+        "residual_sd": 0.5672155618667603,
+        "rmse": 0.5674843788146973,
+        "bias": -0.01746617816388607,
+        "residual_correlation": 0.46538016073267385
+      }
+    },
+    "hybrid-ridge": {
+      "validation": {
+        "residual_sd": 0.5494499206542969,
+        "rmse": 0.549817681312561,
+        "bias": -0.0201076939702034,
+        "residual_correlation": 0.5202139437174229
+      }
+    },
+    "hybrid-tree2": {
+      "validation": {
+        "residual_sd": 0.559731662273407,
+        "rmse": 0.5601060390472412,
+        "bias": -0.020476236939430237,
+        "residual_correlation": 0.4879822401352892
+      }
+    },
+    "hybrid-tree4": {
+      "validation": {
+        "residual_sd": 0.5659980773925781,
+        "rmse": 0.5662423372268677,
+        "bias": -0.016630269587039948,
+        "residual_correlation": 0.46886257546683774
+      }
+    },
+    "rich-ridge": {
+      "validation": {
+        "residual_sd": 0.5501148104667664,
+        "rmse": 0.5509545803070068,
+        "bias": -0.030407924205064774,
+        "residual_correlation": 0.5134603956495297
+      }
+    },
+    "rich-tree2": {
+      "validation": {
+        "residual_sd": 0.5543560981750488,
+        "rmse": 0.5547922849655151,
+        "bias": -0.021996447816491127,
+        "residual_correlation": 0.5033412778185441
+      }
+    },
+    "rich-tree4": {
+      "validation": {
+        "residual_sd": 0.549554169178009,
+        "rmse": 0.5501930117607117,
+        "bias": -0.02650580182671547,
+        "residual_correlation": 0.5151921566918483
+      }
+    },
+    "native-offset-0": {
+      "validation": {
+        "residual_sd": 0.5730465054512024,
+        "rmse": 0.5736525058746338,
+        "bias": -0.02636057883501053,
+        "residual_correlation": 0.5059580303066242
+      },
+      "scale": 0.25
+    },
+    "native-offset-1": {
+      "validation": {
+        "residual_sd": 0.5530684590339661,
+        "rmse": 0.553361177444458,
+        "bias": -0.017998486757278442,
+        "residual_correlation": 0.5059580069051387
+      },
+      "scale": 0.5
+    },
+    "native-offset-2": {
+      "validation": {
+        "residual_sd": 0.5856910943984985,
+        "rmse": 0.5857703685760498,
+        "bias": -0.009636393748223782,
+        "residual_correlation": 0.5059580075313633
+      },
+      "scale": 0.75
+    },
+    "native-offset-3": {
+      "validation": {
+        "residual_sd": 0.6631972193717957,
+        "rmse": 0.6631984710693359,
+        "bias": -0.0012743035331368446,
+        "residual_correlation": 0.5059580112490306
+      },
+      "scale": 1.0
+    }
+  },
+  "test_proteins": [
+    "2oxl_B",
+    "4h4n_A",
+    "1vbw_A",
+    "1j2l_A",
+    "4ftf_A",
+    "3msw_A",
+    "3wx4_A",
+    "4wlr_B"
+  ],
+  "criterion": 0.5,
+  "selected": "residual-ridge",
+  "test_metrics": {
+    "residual_sd": 0.4468555450439453,
+    "rmse": 0.4469479024410248,
+    "bias": -0.00908574927598238,
+    "residual_correlation": 0.5505339870325627
+  }
+}
