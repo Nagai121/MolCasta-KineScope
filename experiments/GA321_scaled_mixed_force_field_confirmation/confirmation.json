@@ -1,0 +1,79 @@
+{
+  "pairs": 3586,
+  "rule": {
+    "proteins": [
+      "2oxl_B",
+      "4h4n_A",
+      "1vbw_A",
+      "1j2l_A",
+      "4ftf_A",
+      "3msw_A",
+      "3wx4_A",
+      "4wlr_B"
+    ],
+    "origins": 1,
+    "amber_seeds": 8,
+    "charmm_seeds": 2,
+    "window_ps": 100,
+    "static_model": "GA318/all-8",
+    "static_weight": 0.525,
+    "amber_weight": 0.2,
+    "charmm_weight": 0.2
+  },
+  "pooled": {
+    "residual_sd": 0.4110596257699787,
+    "rmse": 0.41125760733715816,
+    "bias": -0.012759453535682698,
+    "residual_correlation": 0.6740128560165192
+  },
+  "proteins": {
+    "2oxl_B": {
+      "residual_sd": 0.2910251329446074,
+      "rmse": 0.29103200848065414,
+      "bias": -0.0020004886545890235,
+      "residual_correlation": 0.5993259095764116
+    },
+    "4h4n_A": {
+      "residual_sd": 0.49320827183167637,
+      "rmse": 0.4987130538826747,
+      "bias": -0.07389391524202013,
+      "residual_correlation": 0.6987647589259368
+    },
+    "1vbw_A": {
+      "residual_sd": 0.3253194189582416,
+      "rmse": 0.32783622562503384,
+      "bias": 0.04054462332714572,
+      "residual_correlation": 0.7573452608601579
+    },
+    "1j2l_A": {
+      "residual_sd": 0.37034306303404085,
+      "rmse": 0.37580871472985883,
+      "bias": 0.06386083094881294,
+      "residual_correlation": 0.6659726063194373
+    },
+    "4ftf_A": {
+      "residual_sd": 0.45241003959258097,
+      "rmse": 0.4541927362500015,
+      "bias": -0.04020196186882888,
+      "residual_correlation": 0.6051878165803509
+    },
+    "3msw_A": {
+      "residual_sd": 0.3547838817699909,
+      "rmse": 0.3548720241849371,
+      "bias": -0.007908905444603922,
+      "residual_correlation": 0.688674050183198
+    },
+    "3wx4_A": {
+      "residual_sd": 0.36650852352106983,
+      "rmse": 0.3666980022307567,
+      "bias": 0.011786730947700254,
+      "residual_correlation": 0.6976180925031195
+    },
+    "4wlr_B": {
+      "residual_sd": 0.5523917398984597,
+      "rmse": 0.5565518125179754,
+      "bias": -0.06792117275928183,
+      "residual_correlation": 0.7047445695645831
+    }
+  }
+}

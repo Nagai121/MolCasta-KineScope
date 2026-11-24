@@ -1,0 +1,7 @@
+{
+  "purpose": "Reserve for independent GA confirmation, excluded from selection and expanded training",
+  "proteins": ["3u5v_A","6fc0_B","1ef1_D","3ofg_B","2p6v_A","1m8s_A","5dbl_A","1ifg_A"],
+  "selection": "Existing MiniTopol R1 stores with source structures. Excluded GA305/GA318 training and validation, previously used GA eight-protein confirmation, and the two historical proteins. Systematic eight quantiles of the CA count, sorted by count then identifier.",
+  "protocol": "R1 first eligible origin, same GA305 candidate specification and target. Lock predictor before evaluating. GA-only separation, not a claim about the frozen T1-series training history.",
+  "status": "reserved"
+}

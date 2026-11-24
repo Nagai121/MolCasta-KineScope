@@ -1,7 +1,7 @@
 """GA321 locks the scaled static and two-family ensemble for confirmation."""
 from functools import partial
 from pathlib import Path
-import time
+import json
 
 import numpy as np
 from xgboost import XGBRegressor
@@ -16,10 +16,13 @@ from .ga314 import field, load
 from .ga_static_offset import estimates
 
 
-def main():
-    dest=Path("runs/ga321")
+def main(reserve=False):
+    primary=Path("runs/ga321")
+    dest=primary/"reserve" if reserve else primary
     dest.mkdir(parents=True,exist_ok=True)
     names=TEST+HOLD
+    if reserve:
+        names=tuple(json.loads((primary/"reserve.json").read_bytes())["proteins"])
     rule=dict(proteins=names,origins=1,amber_seeds=8,charmm_seeds=2,
               window_ps=100,static_model="GA318/all-8",static_weight=.525,
               amber_weight=.2,charmm_weight=.2)
@@ -27,9 +30,10 @@ def main():
     builder=partial(build,force_files=("charmm36_2024.xml","implicit/gbn2.xml"))
     simulate(names,1,destination=dest,samples=SAMPLES,branches=2,step_fs=2,
              minimize_iterations=60,setup_fn=builder)
-    amber=Path("runs/ga312")
-    while not (amber/"confirmation.json").exists():
-        time.sleep(10)
+    amber=dest/"amber" if reserve else Path("runs/ga312")
+    if reserve:
+        amber.mkdir(exist_ok=True)
+        simulate(names,1,destination=amber,samples=SAMPLES,branches=8)
     a,y,b,p,f,g=load(names,amber)
     c,y2,b2,p2,f2,g2=load(names,dest)
     for u,v in ((y,y2),(b,b2),(p,p2),(g,g2),(f,f2)):
