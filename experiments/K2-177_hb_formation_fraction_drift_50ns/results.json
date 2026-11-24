@@ -1,0 +1,300 @@
+{
+  "label": "HB formation 50ns: does fraction drift add on top of full fraction?",
+  "series": "K2 (what the guidance is, not where it is)",
+  "experiment": "K2-177",
+  "horizon_ns": 50,
+  "bound_A": 3.5,
+  "conditions_definition": {
+    "base": "Material D conditions: train 1bgf_A/1ifg_A/1j8r_A/2b0a_A, test 1mix_A+2qt4_A pooled, origin frame 10 (1 ns), history frames 0-10 (100 ps spacing), HistGBM (120 iters, lr 0.075, 31 leaves, min_samples_leaf 15, L2 0.02, seed 42) refit per condition, 7 static features.",
+    "fraction": "fraction of frames with pair distance <= 3.5 A (boundary from K71) within the given frame range, divided by the number of frames in that range (first/second half: 5, full: 11)",
+    "drift": "first-half fraction minus second-half fraction. Note the sign is opposite to the mean drift (K2-06): a positive fraction drift means the pair was within 3.5 A more often in the first half, i.e. the distance tended to open up; a positive mean drift means the first-half mean distance was larger, i.e. the distance tended to close.",
+    "first_half": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "span_ns": "0.0-0.4",
+      "feature": "fraction of frames [0..4] with distance <= 3.5 A"
+    },
+    "second_half": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "span_ns": "0.6-1.0",
+      "feature": "fraction of frames [6..10] with distance <= 3.5 A"
+    },
+    "note": "Frame 5 (0.5 ns) belongs to neither half by design.",
+    "drift_frac_only": "static + fraction drift (1 feature), condition (a)",
+    "full_frac": "static + fraction over frames [0..10], condition (b)",
+    "full_frac_drift": "static + full fraction and fraction drift (2 features), condition (c)",
+    "both_halves_frac": "static + first-half fraction and second-half fraction (2 features, comparison with K2-66)",
+    "base_hist_D6": "static + 6 statistics of the full 11-frame history (all-in reference)"
+  },
+  "base_reproduction": {
+    "expected_from_K2_66_50ns": {
+      "static_only_auprc": 0.3342,
+      "base_hist_D6_auprc": 0.4081,
+      "full6_gain": 0.0739,
+      "full_frac_auprc": 0.4042,
+      "both_halves_frac_auprc": 0.4058,
+      "test_n": 4972,
+      "test_positives": 325
+    },
+    "note": "K2-66 (experiments/K2-66_hb_formation_half_fraction_50ns/results.json), which itself checks against K2-45's 50ns record (matching G74/G136 to 4 decimal places). K71 has no 50ns value (only 1ns and 90ns).",
+    "observed": {
+      "static_only_auprc": 0.3341761994205714,
+      "base_hist_D6_auprc": 0.4081103824328296,
+      "full6_gain": 0.07393418301225818,
+      "full_frac_auprc": 0.40417815029810666,
+      "both_halves_frac_auprc": 0.4057575107521332
+    },
+    "match": "all within 5e-4 (identical to 4 decimal places)",
+    "n_train": 9610,
+    "n_test": 4972,
+    "n_test_positives": 325
+  },
+  "metrics_50ns": {
+    "static_only": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.3341761994205714,
+      "auc": 0.8613222757444836,
+      "brier": 0.052211218464227355,
+      "logloss": 0.18540939931072076
+    },
+    "base_hist_D6": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.4081103824328296,
+      "auc": 0.8968730860273791,
+      "brier": 0.04881237830318968,
+      "logloss": 0.1703206491061416
+    },
+    "drift_frac_only": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.366124013505565,
+      "auc": 0.8709642283690058,
+      "brier": 0.050680816994667505,
+      "logloss": 0.1791303332463379
+    },
+    "full_frac": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.40417815029810666,
+      "auc": 0.8800764761384516,
+      "brier": 0.049766870012865276,
+      "logloss": 0.17532812645183565
+    },
+    "full_frac_drift": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.4001102818932177,
+      "auc": 0.8785171574713214,
+      "brier": 0.04941016716050071,
+      "logloss": 0.17536754320373493
+    },
+    "both_halves_frac": {
+      "n": 4972,
+      "positives": 325,
+      "auprc": 0.4057575107521332,
+      "auc": 0.8832547052689079,
+      "brier": 0.04865823721831537,
+      "logloss": 0.17243831683348312
+    }
+  },
+  "gains": {
+    "static_only": {
+      "gain": 0.0,
+      "ratio_vs_full6_gain": 0.0,
+      "ratio_vs_fullfrac_gain": 0.0
+    },
+    "base_hist_D6": {
+      "gain": 0.07393418301225818,
+      "ratio_vs_full6_gain": 1.0,
+      "ratio_vs_fullfrac_gain": 1.0561731792532778
+    },
+    "drift_frac_only": {
+      "gain": 0.03194781408499359,
+      "ratio_vs_full6_gain": 0.43211154547682884,
+      "ratio_vs_fullfrac_gain": 0.45638462477830966
+    },
+    "full_frac": {
+      "gain": 0.07000195087753525,
+      "ratio_vs_full6_gain": 0.9468144236601496,
+      "ratio_vs_fullfrac_gain": 1.0
+    },
+    "full_frac_drift": {
+      "gain": 0.06593408247264626,
+      "ratio_vs_full6_gain": 0.8917942930635276,
+      "ratio_vs_fullfrac_gain": 0.9418892137448354
+    },
+    "both_halves_frac": {
+      "gain": 0.07158131133156176,
+      "ratio_vs_full6_gain": 0.968176132002347,
+      "ratio_vs_fullfrac_gain": 1.02256166341406
+    }
+  },
+  "reading_rule_fixed_in_advance": {
+    "rule": "(c) full fraction + drift exceeds (b) full fraction alone by AUPRC +0.01 or more -> 'drift adds'; otherwise 'drift does not add'.",
+    "c_minus_b": -0.004067868404888986,
+    "verdict": "漂いは足しにならない"
+  },
+  "per_protein": {
+    "static_only": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 233,
+        "auprc_static": 0.38606820581877466,
+        "auprc_full6": 0.42022242346917665,
+        "auprc_condition": 0.38606820581877466,
+        "full6_gain": 0.034154217650402,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 92,
+        "auprc_static": 0.20718874592360928,
+        "auprc_full6": 0.3937821784761902,
+        "auprc_condition": 0.20718874592360928,
+        "full6_gain": 0.1865934325525809,
+        "gain": 0.0,
+        "ratio_vs_full6_gain": 0.0
+      }
+    },
+    "base_hist_D6": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 233,
+        "auprc_static": 0.38606820581877466,
+        "auprc_full6": 0.42022242346917665,
+        "auprc_condition": 0.42022242346917665,
+        "full6_gain": 0.034154217650402,
+        "gain": 0.034154217650402,
+        "ratio_vs_full6_gain": 1.0
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 92,
+        "auprc_static": 0.20718874592360928,
+        "auprc_full6": 0.3937821784761902,
+        "auprc_condition": 0.3937821784761902,
+        "full6_gain": 0.1865934325525809,
+        "gain": 0.1865934325525809,
+        "ratio_vs_full6_gain": 1.0
+      }
+    },
+    "drift_frac_only": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 233,
+        "auprc_static": 0.38606820581877466,
+        "auprc_full6": 0.42022242346917665,
+        "auprc_condition": 0.4087051244294184,
+        "full6_gain": 0.034154217650402,
+        "gain": 0.022636918610643764,
+        "ratio_vs_full6_gain": 0.6627854528056311
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 92,
+        "auprc_static": 0.20718874592360928,
+        "auprc_full6": 0.3937821784761902,
+        "auprc_condition": 0.25972176506421346,
+        "full6_gain": 0.1865934325525809,
+        "gain": 0.05253301914060418,
+        "ratio_vs_full6_gain": 0.28153734256322605
+      }
+    },
+    "full_frac": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 233,
+        "auprc_static": 0.38606820581877466,
+        "auprc_full6": 0.42022242346917665,
+        "auprc_condition": 0.4295193785385987,
+        "full6_gain": 0.034154217650402,
+        "gain": 0.043451172719824016,
+        "ratio_vs_full6_gain": 1.2722051831075274
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 92,
+        "auprc_static": 0.20718874592360928,
+        "auprc_full6": 0.3937821784761902,
+        "auprc_condition": 0.34853713684822646,
+        "full6_gain": 0.1865934325525809,
+        "gain": 0.14134839092461718,
+        "ratio_vs_full6_gain": 0.757520717588954
+      }
+    },
+    "full_frac_drift": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 233,
+        "auprc_static": 0.38606820581877466,
+        "auprc_full6": 0.42022242346917665,
+        "auprc_condition": 0.4327158731870202,
+        "full6_gain": 0.034154217650402,
+        "gain": 0.04664766736824555,
+        "ratio_vs_full6_gain": 1.3657952246403309
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 92,
+        "auprc_static": 0.20718874592360928,
+        "auprc_full6": 0.3937821784761902,
+        "auprc_condition": 0.33415594695081446,
+        "full6_gain": 0.1865934325525809,
+        "gain": 0.12696720102720518,
+        "ratio_vs_full6_gain": 0.6804483914053437
+      }
+    },
+    "both_halves_frac": {
+      "1mix_A": {
+        "n": 3101,
+        "positives": 233,
+        "auprc_static": 0.38606820581877466,
+        "auprc_full6": 0.42022242346917665,
+        "auprc_condition": 0.4336731774950719,
+        "full6_gain": 0.034154217650402,
+        "gain": 0.047604971676297236,
+        "ratio_vs_full6_gain": 1.3938240999567129
+      },
+      "2qt4_A": {
+        "n": 1871,
+        "positives": 92,
+        "auprc_static": 0.20718874592360928,
+        "auprc_full6": 0.3937821784761902,
+        "auprc_condition": 0.35696935186032164,
+        "full6_gain": 0.1865934325525809,
+        "gain": 0.14978060593671236,
+        "ratio_vs_full6_gain": 0.8027110273267795
+      }
+    }
+  },
+  "per_protein_c_minus_b": {
+    "1mix_A": {
+      "auprc_full_frac": 0.4295193785385987,
+      "auprc_full_frac_drift": 0.4327158731870202,
+      "diff_c_minus_b": 0.003196494648421533,
+      "n": 3101,
+      "positives": 233
+    },
+    "2qt4_A": {
+      "auprc_full_frac": 0.34853713684822646,
+      "auprc_full_frac_drift": 0.33415594695081446,
+      "diff_c_minus_b": -0.014381189897411994,
+      "n": 1871,
+      "positives": 92
+    }
+  }
+}
