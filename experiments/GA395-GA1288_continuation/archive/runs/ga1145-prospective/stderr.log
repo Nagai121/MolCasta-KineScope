@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\MIniTopol prior reserch\t2i\ga1145_prospective.py", line 94, in <module>
+    main()
+  File "D:\MIniTopol prior reserch\t2i\ga1145_prospective.py", line 61, in main
+    generate(OUT,field)
+  File "D:\MIniTopol prior reserch\t2i\ga351_generate.py", line 32, in main
+    simulate((n,),1,step_fs=step,minimize_iterations=iterations,**options)
+  File "D:\MIniTopol prior reserch\t2i\ga_native240.py", line 40, in simulate
+    setup=setup_fn(protein,replica) if missing else None
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MIniTopol prior reserch\t2i\ga_openmm_pilot.py", line 38, in build
+    model.addHydrogens(field,platform=cpu)
+  File "D:\MIniTopol prior reserch\.venv\Lib\site-packages\openmm\app\modeller.py", line 1053, in addHydrogens
+    system = forcefield.createSystem(newTopology, rigidWater=False, nonbondedMethod=CutoffNonPeriodic, residueTemplates=newResidueTemplates)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MIniTopol prior reserch\.venv\Lib\site-packages\openmm\app\forcefield.py", line 1305, in createSystem
+    templateForResidue = self._matchAllResiduesToTemplates(data, topology, residueTemplates, ignoreExternalBonds)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MIniTopol prior reserch\.venv\Lib\site-packages\openmm\app\forcefield.py", line 1542, in _matchAllResiduesToTemplates
+    unmatchedResidues = _applyPatchesToMatchResidues(self, data, unmatchedResidues, templateForResidue, data.bondedToAtom, ignoreExternalBonds, ignoreExtraParticles)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MIniTopol prior reserch\.venv\Lib\site-packages\openmm\app\forcefield.py", line 1764, in _applyPatchesToMatchResidues
+    [template, matches] = forcefield._getResidueTemplateMatches(res, bondedToAtom, patchedTemplateSignatures, ignoreExternalBonds, ignoreExtraParticles)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MIniTopol prior reserch\.venv\Lib\site-packages\openmm\app\forcefield.py", line 1086, in _getResidueTemplateMatches
+    raise Exception('Multiple non-identical matching templates found for residue %d (%s): %s.' % (res.index, res.name, ', '.join(match[0].name for match in allMatches)))
+Exception: Multiple non-identical matching templates found for residue 70 (HIS): HSD-CTER_2-HS2_0, HSE-CTER_2, HSP-CTER_2-HS2_1.

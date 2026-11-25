@@ -1,0 +1,53 @@
+generating amber 24
+1knt_A 49 native-seconds 2.92
+3x0g_A 49 native-seconds 6.27
+3e9v_A 49 native-seconds 3.35
+1mk0_A 49 native-seconds 3.47
+1g2r_A 49 native-seconds 3.44
+2y39_A 49 native-seconds 5.96
+2y4x_B 49 native-seconds 5.8
+1doi_A 49 native-seconds 6.26
+4o66_D 49 native-seconds 5.67
+3zfn_A 49 native-seconds 6.78
+4ew5_A 49 native-seconds 5.78
+5ii7_A 49 native-seconds 6.52
+1t8k_A 49 native-seconds 5.75
+1tzw_A 49 native-seconds 4.05
+5hqh_A 49 native-seconds 3.09
+4q0y_A 49 native-seconds 3.83
+3fp5_A 49 native-seconds 3.24
+4tsh_A 49 native-seconds 2.96
+3nrl_B 49 native-seconds 3.3
+1f3u_G 49 native-seconds 6.19
+1uz3_A 49 native-seconds 6.17
+5hub_A 49 native-seconds 5.97
+1by2_A 49 native-seconds 6.57
+3txs_C 49 native-seconds 4.93
+generating charmm 24
+1knt_A 49 native-seconds 6.48
+3x0g_A 49 native-seconds 6.94
+3e9v_A 49 native-seconds 7.36
+1mk0_A 49 native-seconds 7.4
+1g2r_A 49 native-seconds 11.42
+2y39_A 49 native-seconds 13.29
+2y4x_B 49 native-seconds 7.04
+1doi_A 49 native-seconds 8.08
+4o66_D 49 native-seconds 7.1
+3zfn_A 49 native-seconds 9.07
+4ew5_A 49 native-seconds 6.99
+5ii7_A 49 native-seconds 8.54
+1t8k_A 49 native-seconds 6.9
+1tzw_A 49 native-seconds 9.52
+5hqh_A 49 native-seconds 6.77
+4q0y_A 49 native-seconds 8.87
+3fp5_A 49 native-seconds 7.33
+4tsh_A 49 native-seconds 6.47
+assembled expanded training pool 24 13027
+GA963 ('level', 3, 1.0, -1.0, 688) 0.6208762144388011
+GA964 ('level', 5, 1.0, -1.0, 688) 0.6201882933066653
+GA965 ('level', 3, 1.0, -1.0, 872) 0.6329071571558076
+GA966 ('level', 5, 1.0, -1.0, 872) 0.6292013383031146
+GA967 ('level', 3, 1.0, -2.0, 872) 0.633367185552786
+GA968 ('level', 5, 1.0, -2.0, 872) 0.628792607636364
+GA969 ('level', 3, 1.0, -2.0, 688) 0.6201750504880027
+GA970 ('level', 5, 1.0, -2.0, 688) 0.6180099589615339

@@ -1,0 +1,21 @@
+6c62_C {'frames': {'1': 1001, '2': 1001, '3': 1001}}
+3ipf_A {'frames': {'1': 1001, '2': 1001, '3': 1001}}
+1xmk_A {'frames': {'1': 1001, '2': 1001, '3': 1001}}
+1w53_A {'frames': {'1': 1001, '2': 1001, '3': 1001}}
+1jyo_F {'frames': {'1': 1001, '2': 1001, '3': 1001}}
+1a62_A {'frames': {'1': 1001, '2': 1001, '3': 1001}}
+1c52_A {'frames': {'1': 1001, '2': 1001, '3': 1001}}
+2dt4_A {'frames': {'1': 1001, '2': 1001, '3': 1001}}
+Preparing fixed ROD candidate data
+Prepared 110852 candidates in 158.96s
+Starting amber
+6c62_C 49 native-seconds 89.1
+3ipf_A 49 native-seconds 89.95
+1xmk_A 49 native-seconds 265.29
+1w53_A 49 native-seconds 137.09
+1jyo_F 49 native-seconds 51.33
+1a62_A 49 native-seconds 141.41
+1c52_A 49 native-seconds 137.99
+2dt4_A 49 native-seconds 143.57
+Starting charmm
+6c62_C 49 native-seconds 56.54

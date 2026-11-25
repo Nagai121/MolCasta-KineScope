@@ -1,0 +1,1 @@
+{"phase":"CHARMM setup, before scoring","protein":"3ipf_A","issue":"Multiple CHARMM patches match a C-terminal histidine","recovery":"Resolve only the exact terminal histidine ambiguity with neutral HSE-CTER. Keep all archived pairs and prior Amber trajectories."}

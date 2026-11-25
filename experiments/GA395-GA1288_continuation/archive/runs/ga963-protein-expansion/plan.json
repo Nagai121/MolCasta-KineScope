@@ -1,0 +1,35 @@
+{
+  "proteins": [
+    "1knt_A",
+    "3x0g_A",
+    "3e9v_A",
+    "1mk0_A",
+    "1g2r_A",
+    "2y39_A",
+    "2y4x_B",
+    "1doi_A",
+    "4o66_D",
+    "3zfn_A",
+    "4ew5_A",
+    "5ii7_A",
+    "1t8k_A",
+    "1tzw_A",
+    "5hqh_A",
+    "4q0y_A",
+    "3fp5_A",
+    "4tsh_A",
+    "3nrl_B",
+    "1f3u_G",
+    "1uz3_A",
+    "5hub_A",
+    "1by2_A",
+    "3txs_C"
+  ],
+  "replica": 1,
+  "origins": [
+    49
+  ],
+  "branches_per_field": 2,
+  "ps": 25,
+  "purpose": "additional proteins for generated-response training"
+}

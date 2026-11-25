@@ -1,0 +1,91 @@
+generating amber 24
+1knt_A 149 native-seconds 2.8
+1knt_A 249 native-seconds 2.79
+3x0g_A 149 native-seconds 3.08
+3x0g_A 249 native-seconds 3.02
+3e9v_A 149 native-seconds 3.26
+3e9v_A 249 native-seconds 3.25
+1mk0_A 149 native-seconds 3.36
+1mk0_A 249 native-seconds 3.5
+1g2r_A 149 native-seconds 3.37
+1g2r_A 249 native-seconds 6.09
+2y39_A 149 native-seconds 6.33
+2y39_A 249 native-seconds 12.29
+2y4x_B 149 native-seconds 5.99
+2y4x_B 249 native-seconds 4.35
+1doi_A 149 native-seconds 3.53
+1doi_A 249 native-seconds 3.58
+4o66_D 149 native-seconds 3.33
+4o66_D 249 native-seconds 3.01
+3zfn_A 149 native-seconds 3.86
+3zfn_A 249 native-seconds 3.84
+4ew5_A 149 native-seconds 3.16
+4ew5_A 249 native-seconds 3.22
+5ii7_A 149 native-seconds 3.9
+5ii7_A 249 native-seconds 3.86
+1t8k_A 149 native-seconds 5.57
+1t8k_A 249 native-seconds 5.67
+1tzw_A 149 native-seconds 9.88
+1tzw_A 249 native-seconds 10.12
+5hqh_A 149 native-seconds 9.13
+5hqh_A 249 native-seconds 8.87
+4q0y_A 149 native-seconds 5.35
+4q0y_A 249 native-seconds 3.97
+3fp5_A 149 native-seconds 3.33
+3fp5_A 249 native-seconds 3.33
+4tsh_A 149 native-seconds 3.99
+4tsh_A 249 native-seconds 5.92
+3nrl_B 149 native-seconds 5.88
+3nrl_B 249 native-seconds 5.88
+1f3u_G 149 native-seconds 6.0
+1f3u_G 249 native-seconds 5.74
+1uz3_A 149 native-seconds 5.84
+1uz3_A 249 native-seconds 5.84
+5hub_A 149 native-seconds 5.76
+5hub_A 249 native-seconds 5.78
+1by2_A 149 native-seconds 6.65
+1by2_A 249 native-seconds 6.72
+3txs_C 149 native-seconds 2.97
+3txs_C 249 native-seconds 3.11
+generating charmm 24
+1knt_A 149 native-seconds 8.19
+1knt_A 249 native-seconds 11.59
+3x0g_A 149 native-seconds 14.86
+3x0g_A 249 native-seconds 11.76
+3e9v_A 149 native-seconds 7.63
+3e9v_A 249 native-seconds 7.54
+1mk0_A 149 native-seconds 7.5
+1mk0_A 249 native-seconds 12.76
+1g2r_A 149 native-seconds 7.66
+1g2r_A 249 native-seconds 7.45
+2y39_A 149 native-seconds 10.34
+2y39_A 249 native-seconds 7.62
+2y4x_B 149 native-seconds 19.43
+2y4x_B 249 native-seconds 7.34
+1doi_A 149 native-seconds 8.91
+1doi_A 249 native-seconds 8.25
+4o66_D 149 native-seconds 7.27
+4o66_D 249 native-seconds 6.9
+1t8k_A 149 native-seconds 9.13
+1t8k_A 249 native-seconds 11.74
+1tzw_A 149 native-seconds 16.65
+1tzw_A 249 native-seconds 14.47
+history preparation 40 48
+assembled expanded training pool 24 25841
+GA1029 ('level', 3, 1.0, -1.0, 688) 0.6399665896496669
+GA1030 ('level', 5, 1.0, -1.0, 688) 0.6278555689681843
+GA1031 ('level', 3, 1.0, -1.0, 872) 0.6368068125945037
+GA1032 ('level', 3, 1.0, -2.0, 688) 0.638707632230632
+GA1033 ('level', 5, 1.0, -1.0, 872) 0.6263951160771294
+GA1034 ('level', 5, 1.0, -2.0, 688) 0.628586696675798
+GA1035 ('level', 3, 1.0, -2.0, 872) 0.6365057093242426
+GA1036 ('level', 5, 1.0, -2.0, 872) 0.6280206768862462
+GA1095 ('angles', 5, 0.0, -2.0, 688, 0.3) 0.6369544997627085
+GA1096 ('angles', 5, 0.0, -2.0, 688, 0.6) 0.6378327843641273
+GA1097 ('angles', 5, 0.0, -2.0, 688, 1.0) 0.6321024401781663
+GA1098 ('angles', 5, 0.0, -2.0, 872, 0.6) 0.6222848949424794
+GA1099 ('angles', 5, 0.0, -2.0, 1009, 0.6) 0.616237442956305
+GA1100 ('angles', 5, 0.0, -2.0, 872, 0.3) 0.6244141319515554
+GA1101 ('angles', 5, 0.0, -2.0, 872, 1.0) 0.6151179411027843
+GA1102 ('angles', 5, 0.0, -2.0, 1009, 0.3) 0.6165608596527407
+GA1103 ('angles', 5, 0.0, -2.0, 1009, 1.0) 0.6198615927492188

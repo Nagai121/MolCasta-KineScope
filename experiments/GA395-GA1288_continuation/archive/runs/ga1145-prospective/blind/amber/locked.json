@@ -1,0 +1,17 @@
+{
+  "proteins": [
+    "6c62_C",
+    "3ipf_A",
+    "1xmk_A",
+    "1w53_A",
+    "1jyo_F",
+    "1a62_A",
+    "1c52_A",
+    "2dt4_A"
+  ],
+  "origin": 49,
+  "window": 100,
+  "branches": 8,
+  "step_fs": 4,
+  "minimize": 25
+}

@@ -1,0 +1,21 @@
+{
+  "id": "GA1086",
+  "validation": 0.6533458839081768,
+  "reference": "frozen static Ridge",
+  "parents": "GA348 fixed 65 percent",
+  "origin": 49,
+  "replica": 1,
+  "response": "Amber 8 and CHARMM 2, 100 ps; readout consumes the first 2 of both at <=25 ps",
+  "proteins": [
+    "6c62_C",
+    "3ipf_A",
+    "1xmk_A",
+    "1w53_A",
+    "1jyo_F",
+    "1a62_A",
+    "1c52_A",
+    "2dt4_A"
+  ],
+  "goal": 0.7,
+  "checkpoint_sha256": "f34b6bda4ceea52673f1321b87935c24ededbacbb36e56225f9e1821c0c54638"
+}

@@ -1,0 +1,13 @@
+Preparing fixed ROD candidate data
+Starting amber
+Starting charmm
+CHARMM terminal histidine 70: HSE-CTER_2
+CHARMM terminal histidine 70: HSE-CTER_2
+3ipf_A 49 native-seconds 57.22
+1xmk_A 49 native-seconds 41.6
+1w53_A 49 native-seconds 27.62
+1jyo_F 49 native-seconds 29.4
+1a62_A 49 native-seconds 44.23
+1c52_A 49 native-seconds 36.74
+2dt4_A 49 native-seconds 48.61
+{'id': 'GA1086', 'n_pairs': 3715, 'proteins': ['6c62_C', '3ipf_A', '1xmk_A', '1w53_A', '1jyo_F', '1a62_A', '1c52_A', '2dt4_A'], 'metrics': {'residual_sd': 0.39396906123719455, 'rmse': 0.39415912248242235, 'bias': 0.012238979695910125, 'residual_correlation': 0.6639247977946722}, 'parent': {'residual_sd': 0.3923787291958989, 'rmse': 0.39251412380194933, 'bias': 0.010308746704784358, 'residual_correlation': 0.6688846053919282}, 'by_protein': {'6c62_C': {'residual_sd': 0.30085593730960897, 'rmse': 0.30110318457584034, 'bias': -0.01219970275331346, 'residual_correlation': 0.6863804172222929}, '3ipf_A': {'residual_sd': 0.5145340915984182, 'rmse': 0.5147588990553166, 'bias': 0.015211598851936108, 'residual_correlation': 0.46543514392666724}, '1xmk_A': {'residual_sd': 0.4544480396359215, 'rmse': 0.4547342649157515, 'bias': 0.01613167565805829, 'residual_correlation': 0.7217587637508313}, '1w53_A': {'residual_sd': 0.36436609510986684, 'rmse': 0.36510664253752867, 'bias': 0.023242400035585035, 'residual_correlation': 0.7048653859573126}, '1jyo_F': {'residual_sd': 0.44855822175031074, 'rmse': 0.4495190427871745, 'bias': -0.02937501537866294, 'residual_correlation': 0.5898173690100653}, '1a62_A': {'residual_sd': 0.4049020384069363, 'rmse': 0.4058769088139055, 'bias': 0.02811413171768199, 'residual_correlation': 0.7159578247650751}, '1c52_A': {'residual_sd': 0.32711126639074556, 'rmse': 0.3308960363251991, 'bias': 0.04990397034275107, 'residual_correlation': 0.6844381400653975}, '2dt4_A': {'residual_sd': 0.3216408579773997, 'rmse': 0.32176468478922127, 'bias': -0.008925853296413004, 'residual_correlation': 0.7056328431884329}}}

@@ -1,0 +1,55 @@
+{
+  "dataset": "ATLAS",
+  "purpose": "future confirmation only",
+  "rule": "outside all local protein workspaces, annotated distinct UniProt, nonviral; nonredundant ATLAS metadata; eight length bins, hashed ordering; global sequence identity<.39 against local and selected proteins of comparable length (shorter/longer>=.65)",
+  "proteins": [
+    {
+      "id": "6c62_C",
+      "uniprot": "A0A384E126",
+      "length": 68,
+      "max_identity": 0.3235294117647059
+    },
+    {
+      "id": "3ipf_A",
+      "uniprot": "Q251Q8",
+      "length": 71,
+      "max_identity": 0.352112676056338
+    },
+    {
+      "id": "1xmk_A",
+      "uniprot": "P55265",
+      "length": 79,
+      "max_identity": 0.2911392405063291
+    },
+    {
+      "id": "1w53_A",
+      "uniprot": "P40399",
+      "length": 84,
+      "max_identity": 0.32142857142857145
+    },
+    {
+      "id": "1jyo_F",
+      "uniprot": "P74873",
+      "length": 105,
+      "max_identity": 0.2839506172839506
+    },
+    {
+      "id": "1a62_A",
+      "uniprot": "P0AG30",
+      "length": 130,
+      "max_identity": 0.26262626262626265
+    },
+    {
+      "id": "1c52_A",
+      "uniprot": "P04164",
+      "length": 131,
+      "max_identity": 0.25688073394495414
+    },
+    {
+      "id": "2dt4_A",
+      "uniprot": "O58532",
+      "length": 143,
+      "max_identity": 0.32
+    }
+  ]
+}
