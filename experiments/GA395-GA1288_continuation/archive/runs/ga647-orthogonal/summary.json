@@ -1,0 +1,27 @@
+{
+  "id": "GA657",
+  "projection": "compact",
+  "strength": 0.5,
+  "depth": 7,
+  "metrics": {
+    "all": {
+      "residual_sd": 0.5099643746901201,
+      "rmse": 0.5108665837895889,
+      "bias": -0.030348030904159932,
+      "residual_correlation": 0.6141510277350032
+    },
+    "first": {
+      "residual_sd": 0.4055172266206544,
+      "rmse": 0.4056676267709711,
+      "bias": -0.011045466214003711,
+      "residual_correlation": 0.6632902880124615
+    },
+    "later": {
+      "residual_sd": 0.5526939241484611,
+      "rmse": 0.5541084265883076,
+      "bias": -0.039567342917422775,
+      "residual_correlation": 0.6003696629087285
+    }
+  },
+  "seconds": 4.477264299988747
+}

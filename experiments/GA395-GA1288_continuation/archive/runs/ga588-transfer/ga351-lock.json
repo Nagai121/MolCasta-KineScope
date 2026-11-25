@@ -1,0 +1,28 @@
+{
+  "id": "GA594",
+  "initial": "pretrained",
+  "freeze": false,
+  "head_width": 96,
+  "blend": 0.35,
+  "metrics": {
+    "all": {
+      "residual_sd": 0.5038143241712657,
+      "rmse": 0.5044921432137254,
+      "bias": -0.026142863734272437,
+      "residual_correlation": 0.6249750451877142
+    },
+    "first": {
+      "residual_sd": 0.4076330300330632,
+      "rmse": 0.40769730667966425,
+      "bias": -0.007239247192626443,
+      "residual_correlation": 0.6569610344201909
+    },
+    "later": {
+      "residual_sd": 0.5435503127746422,
+      "rmse": 0.5446870533186793,
+      "bias": -0.03517162969744977,
+      "residual_correlation": 0.6179934131677679
+    }
+  },
+  "fit_seconds": 3.6916302000172436
+}
