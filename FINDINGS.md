@@ -135,6 +135,23 @@ one eighth of the cost of a 1 ns run.
   obligation. Attribution is appreciated but not required.
 - Code in this repository is released under the MIT license.
 
+## Public Verification Update (E01–E04, 2026-11-26)
+
+Four 100% public, leak-free verification experiments (`E01–E04`, zero proprietary `T1I2006`/`T1I2007` dependencies, 5-fold protein-grouped CV) were run directly on public ATLAS trajectories, OpenMM GPU simulations, and official `MDGen` weights to audit and update the six findings above:
+
+- **Finding 1 & Cost Note revised ([E01](experiments/E01_true_short_md_guidance/README.md))**:
+  - The G/L series claim that "0.1 ns recovers ≥ 0.5 at all horizons" was inflated by a **1.0 ns time gap** between early frames `[0, 1]` and origin frame `10` (even single frame `f0` alone scored `0.38–0.54`). Under a strict steady-state adjacent window (`[9, 10]`, 100 unseen proteins, 100% public 20-feature baseline), true `0.1 ns` recovers only **0.36–0.44** (HB formation) and **0.28–0.45** (HB dissociation), failing `0.50` on 6/6 horizons.
+  - A **true zero-gap forward prefix** (`0.0 → 0.1 ns`, moving origin `t = L`) recovers **0.48–0.60** (`0.579` at 90 ns), revealing an *initial-relaxation vs steady-state asymmetry*; in steady state, `0.2–0.5 ns` is the practical sweet spot (`0.5 ns` = **0.75–0.88**), and `1.0 ns mean` alone captures **0.90–0.96** of 6-stats guidance.
+  - On a real consumer GPU (`RTX 4060 Ti`, `123–188 ns/day` explicit solvent AMBER14 + TIP3P + standard 200 ps equilibration), fixed overhead is **66–69%** of a 0.1 ns run, giving a true `0.1 ns / 1.0 ns` cost ratio of **0.27–0.28 (~1/3.6, not 1/8)** (`1mix_A`: 3.8 min vs 14.2 min).
+- **Finding 3 & K3 static-elimination wall established 100% publicly ([E02](experiments/E02_public_k3_and_replica_floor/README.md))**:
+  - First direct measurement of the **100-protein replica floor** across 4 phenomena (`484,049` pairs): for HB formation, `static20` residual SD is **0.561 Å** vs single-replica thermal noise **0.201 Å** (3-replica diff SD `0.285 Å`, **2.8× S/N**), and independent replicas agree on the *static residual itself* (`r = +0.388` HB form, `+0.568` HB diss, `+0.249` contact, `+0.416` salt bridge).
+  - Combining all 4 K3 static physical families simultaneously (`68` features, `T1I2006`-free, 5-fold CV) reduces residual SD only from `0.602` to `0.574 Å` (`9.1%` of residual variance); protein-atom `K3-02` H-bond network features (`10` features) also fail (`0.561 → 0.559 Å`, `max|r| = 0.025`).
+- **Open Task Breakthrough — water-free 100 ps implicit-solvent MD shatters the K3 wall ([E03](experiments/E03_implicit_md_relaxation_vs_k3/README.md))**:
+  - Starting strictly from single static frame `10` (`d0_err = 0.0000 Å`, 25 unseen ATLAS proteins, `N = 13,687`, **55 s/protein** on RTX 4060 Ti), `4 × 100 ps` OpenMM GBn2 implicit-solvent MD (zero explicit water) recovers **`r = +0.520`** of the explicit-solvent residual (`SD: 0.603 → 0.513 Å`, `-0.090 Å`) and **55.4–85.7% (mean-only, ≥55% on 6/6 horizons)** / **up to 115.6% (all 7 stats at 90 ns)** of explicit 1 ns MD's downstream 1–90 ns H-bond formation guidance.
+- **Finding 4 refined on real SOTA generative MD (`MDGen`, [E04](experiments/E04_public_generator_static_redundancy/README.md))**:
+  - On 25 strictly unseen `splits/atlas_test.csv` proteins (avoiding the 88/100 overlap between KineScope's test set and MDGen's `atlas_train.csv`, **40 s/protein**), official `MDGen` (`atlas.ckpt`) is **not** statically redundant ($R^2 = 0.594$ [1.2 ns] → `0.485` [100 ns] vs real `0.662`); the $R^2 \approx 0.96$ collapse was specific to KineScope's internal generators.
+  - Instead, E03 vs E04 exposes a **two-regime split** at equal ~40–55 s/protein GPU cost: implicit physics (E03) dominates sub-ns local offset (`r = +0.520`, `1 ns rec = 58.2%`), whereas MDGen is weak at `1 ns` (`r = +0.266`, `-5.2% to +24.6%`) but genuinely recovers **55.0–77.8%** of explicit 1 ns MD guidance across **5–90 ns** via its 100 ns rollout.
+
 ## Where things are
 
 - `docs/facts.md` — verified facts and cross-experiment condition notes
@@ -143,8 +160,10 @@ one eighth of the cost of a 1 ns run.
   (Japanese).
 - `docs/hypotheses.md` — hypothesis registry and experiment index
   (Japanese).
-- `experiments/` — one directory per experiment, each with a README stating
-  the hypothesis, the conditions changed, the result, and what remains
-  unresolved (mostly Japanese).
+- `docs/literature/` — prior literature review and novelty audit
+  (`01`–`04`, including post-E01–E04 update).
+- `experiments/` — one directory per experiment (`K*`, `K2*`, `K3*`, `G*`, `L*`,
+  and public verification series `E01`–`E04`), each with a README, code, and
+  result files.
 
 A citable DOI will be added when the repository snapshot is archived.

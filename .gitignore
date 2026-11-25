@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+experiments/E0*/**/*.npz
+experiments/E0*/**/*.ckpt
+experiments/E0*/**/*.pt
+experiments/E0*/**/*.pth
+experiments/E0*/**/*.xtc
+experiments/E0*/**/*.trr
+experiments/E0*/**/*.dcd
+experiments/E04_public_generator_static_redundancy/mdgen_repo/
+experiments/E04_public_generator_static_redundancy/checkpoints/
+experiments/E03_implicit_md_relaxation_vs_k3/implicit_md_cache/
+experiments/E04_public_generator_static_redundancy/mdgen_rollouts/
+shared_data/
+.venv/

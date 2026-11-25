@@ -1,0 +1,136 @@
+{
+  "n_candidates": 163074,
+  "n_proteins": 100,
+  "runs": [
+    {
+      "name": "A0_origin_dist_only",
+      "n_features": 1,
+      "gbm_r2": 0.5938337054197189,
+      "gbm_resid_sd": 0.6333503703897638,
+      "gbm_rmse": 0.633350404543498,
+      "ridge_r2": 0.5923172940619719,
+      "ridge_resid_sd": 0.6345316017440098
+    },
+    {
+      "name": "A1_public_static4",
+      "n_features": 4,
+      "gbm_r2": 0.633111428840168,
+      "gbm_resid_sd": 0.6019483144060993,
+      "gbm_rmse": 0.6019483155655649,
+      "ridge_r2": 0.6225207701290137,
+      "ridge_resid_sd": 0.61057447002848
+    },
+    {
+      "name": "A2_static4+chi_all_f10",
+      "n_features": 52,
+      "gbm_r2": 0.6465716238480264,
+      "gbm_resid_sd": 0.5907939354658741,
+      "gbm_rmse": 0.590803173517015,
+      "ridge_r2": 0.6238858243010275,
+      "ridge_resid_sd": 0.6094693768108334
+    },
+    {
+      "name": "A3_static4+backbone_phipsi_f10",
+      "n_features": 12,
+      "gbm_r2": 0.6352858600088964,
+      "gbm_resid_sd": 0.6001614130652145,
+      "gbm_rmse": 0.6001618872036125,
+      "ridge_r2": 0.6228885077175974,
+      "ridge_resid_sd": 0.6102769767469998
+    },
+    {
+      "name": "A4_static4+efield_f10",
+      "n_features": 6,
+      "gbm_r2": 0.6385564109317896,
+      "gbm_resid_sd": 0.5974648064148983,
+      "gbm_rmse": 0.5974648704228974,
+      "ridge_r2": 0.6231642521494624,
+      "ridge_resid_sd": 0.6100538311612544
+    },
+    {
+      "name": "A5_static4+charmm36m_energy_f10",
+      "n_features": 14,
+      "gbm_r2": 0.6474647440817679,
+      "gbm_resid_sd": 0.590055485685908,
+      "gbm_rmse": 0.5900562158920282,
+      "ridge_r2": 0.623343939056488,
+      "ridge_resid_sd": 0.6099083591268025
+    },
+    {
+      "name": "A6_static4+ALL_4_K3_families_f10",
+      "n_features": 72,
+      "gbm_r2": 0.6666024158157136,
+      "gbm_resid_sd": 0.5738136245503007,
+      "gbm_rmse": 0.5738169015925123,
+      "ridge_r2": 0.6260281875930956,
+      "ridge_resid_sd": 0.6077310649493519
+    },
+    {
+      "name": "A7_static4+ALL_shuffled_control",
+      "n_features": 72,
+      "gbm_r2": 0.6318474040265187,
+      "gbm_resid_sd": 0.6029842952085591,
+      "gbm_rmse": 0.602984356804326,
+      "ridge_r2": 0.6224284381744074,
+      "ridge_resid_sd": 0.6106491307102613
+    },
+    {
+      "name": "A8_static4+energy_f0_ref",
+      "n_features": 14,
+      "gbm_r2": 0.718851959137238,
+      "gbm_resid_sd": 0.5269352374674843,
+      "gbm_rmse": 0.5269381502614078,
+      "ridge_r2": 0.6257780537237736,
+      "ridge_resid_sd": 0.6079344118190481
+    },
+    {
+      "name": "B1_static5_with_T1I2006",
+      "n_features": 5,
+      "gbm_r2": 0.6461568604821402,
+      "gbm_resid_sd": 0.5911497006232282,
+      "gbm_rmse": 0.5911497383081267,
+      "ridge_r2": 0.6265869829580331,
+      "ridge_resid_sd": 0.6072770045009225
+    },
+    {
+      "name": "B2_static5+ALL_4_K3_families_f10",
+      "n_features": 73,
+      "gbm_r2": 0.6758582679164722,
+      "gbm_resid_sd": 0.5657925375226542,
+      "gbm_rmse": 0.565795626421315,
+      "ridge_r2": 0.630246821470783,
+      "ridge_resid_sd": 0.6042935278975468
+    },
+    {
+      "name": "B3_static5+ALL_shuffled_control",
+      "n_features": 73,
+      "gbm_r2": 0.6434799311792763,
+      "gbm_resid_sd": 0.5933815134062487,
+      "gbm_rmse": 0.5933816374056751,
+      "ridge_r2": 0.6264858587801476,
+      "ridge_resid_sd": 0.6073592202370982
+    }
+  ],
+  "max_univariate_corr_vs_public_static4_resid": {
+    "chi_f10": {
+      "max_abs_pearson": 0.036368372320868515,
+      "max_abs_spearman": 0.050458920910435634
+    },
+    "backbone_phipsi_f10": {
+      "max_abs_pearson": 0.022651691164841534,
+      "max_abs_spearman": 0.024149637317491954
+    },
+    "efield_f10": {
+      "max_abs_pearson": 0.028133599992405105,
+      "max_abs_spearman": 0.04877564091292654
+    },
+    "charmm36m_energy_f10": {
+      "max_abs_pearson": 0.04719711993509855,
+      "max_abs_spearman": 0.04824233658474333
+    },
+    "charmm36m_energy_f0": {
+      "max_abs_pearson": 0.07689940567602294,
+      "max_abs_spearman": 0.08323094779664834
+    }
+  }
+}
