@@ -17,15 +17,22 @@ compute from the ATLAS initial structure:
     the protein, electrostatics and van der Waals separately
     (partner included; partner-excluded variants also stored).
 
-Force field: CHARMM36m, the force field of the ATLAS runs themselves.
+Force field: CHARMM36m, the force field of the ATLAS runs themselves
+(ATLAS About page: GROMACS with CHARMM36m, July 2020 version).
 Charges are taken from each protein's own .tpr (the topology of the
 actual ATLAS run). LJ sigma/epsilon per atom type come from OpenMM's
-charmm36.xml LennardJonesForce table (CHARMM36 and CHARMM36m share
-nonbonded parameters; the 36m update changed backbone torsions/CMAP).
-Combining: sigma_ij = (sigma_i+sigma_j)/2, epsilon_ij = sqrt(eps_i*eps_j).
+charmm36.xml LennardJonesForce table.
+Combining: sigma_ij = (sigma_i+sigma_j)/2, epsilon_ij = sqrt(eps_i*eps_j)
+(GROMACS comb-rule 1). Verified against the run topology itself
+(gmx dump of the ATLAS .tpr, 1uha_A and 3txs_C): the rule-1 pair table
+matches the .tpr's C6/C12 for every protein atom-type pair except one,
+the CHARMM36m salt-bridge NBFIX for NC2-OC, applied here from the .tpr
+values (C6 = 3.00044753e-03 kJ nm^6/mol, C12 = 3.47228797e-06
+kJ nm^12/mol). The NBFIX is the in-data fingerprint that the run used
+CHARMM36m, not CHARMM36.
 Coulomb: 1389.35456 * q_i q_j / r[Angstrom] kJ/mol. 1-2/1-3 pairs
 (bond-graph distance <= 2) excluded; 1-4 pairs at full strength
-(CHARMM coulomb14scale = lj14scale = 1.0). NBFIX overrides not applied.
+(CHARMM coulomb14scale = lj14scale = 1.0).
 Direct pairwise sums, minimum image with the frame-0 box, no cutoff;
 the PME reciprocal part is not pairwise decomposable and is excluded.
 Surroundings = the rest of the protein (the base data contains protein
@@ -52,6 +59,12 @@ from scipy import sparse
 from scipy.stats import pearsonr, spearmanr
 
 KC = 1389.35456
+# CHARMM36m salt-bridge NBFIX for the NC2-OC atom-type pair, taken from
+# the ATLAS run topology itself (gmx dump of the .tpr: c6 = 3.00044753e-03
+# kJ nm^6/mol, c12 = 3.47228797e-06 kJ nm^12/mol; identical values in
+# 1uha_A and 3txs_C). Converted to Angstrom units.
+NBFIX_C6_A = 3000.44753    # kJ Angstrom^6 / mol
+NBFIX_C12_A = 3472287.97   # kJ Angstrom^12 / mol
 XML = '/home/hatch/workspace/mt-venv/lib/python3.12/site-packages/openmm/app/data/charmm36.xml'
 SAVED = Path('/home/hatch/workspace/k06b/run/k06b_out')
 ORIG = json.loads(Path('/home/hatch/workspace/k06b/results_100.json').read_text())
@@ -132,30 +145,42 @@ def excluded_pairs(n, bonds):
     return np.column_stack([ex.row[keep], ex.col[keep]]).astype(np.int64)
 
 
-def _pair_energies(d, q1, q2, s1, s2, e1, e2):
+def _pair_energies(d, q1, q2, s1, s2, e1, e2, nb=None):
     r = np.sqrt(np.einsum('...i,...i->...', d, d))
     inv_r = np.where(r > 0, 1.0 / np.where(r > 0, r, 1.0), 0.0)
     elec = np.where(r > 0, KC * (q1 * q2) * inv_r, 0.0)
     sr6 = (0.5 * (s1 + s2) * inv_r) ** 6
     vdw = np.where(r > 0, 4.0 * np.sqrt(e1 * e2) * sr6 * (sr6 - 1.0), 0.0)
+    if nb is not None:
+        inv_r6 = inv_r ** 6
+        vdw = np.where(nb, NBFIX_C12_A * inv_r6 ** 2 - NBFIX_C6_A * inv_r6, vdw)
+        vdw = np.where(r > 0, vdw, 0.0)
     return elec, vdw
 
 
-def residue_matrices(pos, box, q, sig, eps, residx, excl, chunk=256):
+def _nbfix_mask(t1, t2):
+    return ((t1 == 1) & (t2 == 2)) | ((t1 == 2) & (t2 == 1))
+
+
+def residue_matrices(pos, box, q, sig, eps, residx, excl, types=None, chunk=256):
     n = len(pos)
     nres = int(residx.max()) + 1
     inv_box = np.linalg.inv(box)
     frac = pos @ inv_box
     Re = np.zeros((nres, nres))
     Rv = np.zeros((nres, nres))
+    code = None
+    if types is not None:
+        code = (types == 'NC2').astype(np.int8) + 2 * (types == 'OC').astype(np.int8)
     for s in range(0, n, chunk):
         e = min(n, s + chunk)
         df = frac[s:e, None, :] - frac[None, :, :]
         df -= np.round(df)
         d = df @ box
+        nb = _nbfix_mask(code[s:e, None], code[None, :]) if code is not None else None
         elec, vdw = _pair_energies(d, q[s:e, None], q[None, :],
                                    sig[s:e, None], sig[None, :],
-                                   eps[s:e, None], eps[None, :])
+                                   eps[s:e, None], eps[None, :], nb)
         idx = (residx[s:e, None] * nres + residx[None, :]).ravel()
         Re += np.bincount(idx, weights=elec.ravel(),
                           minlength=nres * nres).reshape(nres, nres)
@@ -165,8 +190,9 @@ def residue_matrices(pos, box, q, sig, eps, residx, excl, chunk=256):
         i, j = excl[:, 0], excl[:, 1]
         df = frac[i] - frac[j]
         df -= np.round(df)
+        nb = _nbfix_mask(code[i], code[j]) if code is not None else None
         elec, vdw = _pair_energies(df @ box, q[i], q[j], sig[i], sig[j],
-                                   eps[i], eps[j])
+                                   eps[i], eps[j], nb)
         np.subtract.at(Re, (residx[i], residx[j]), elec)
         np.subtract.at(Re, (residx[j], residx[i]), elec)
         np.subtract.at(Rv, (residx[i], residx[j]), vdw)
@@ -207,7 +233,7 @@ def compute_protein(protein, tab):
         if maxdiff > 0.05:
             raise ValueError(f'{protein} R{r}: frame0 distance mismatch {maxdiff}')
         Re, Rv = residue_matrices(pos, box, P['charges'], sig, eps,
-                                  P['residx'], excl)
+                                  P['residx'], excl, P['types'])
         dres = P['point_residue'][pair[:, 0].astype(int)]
         ares = P['point_residue'][pair[:, 1].astype(int)]
         pe, pv = Re[dres, ares], Rv[dres, ares]
