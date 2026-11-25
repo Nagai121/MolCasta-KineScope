@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "check": "static_pooled_vs_K75diag",
+      "got": 0.6042006063817402,
+      "reference": 0.6042,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "static_macro300_vs_K75diag",
+      "got": 0.6261232797884183,
+      "reference": 0.6261,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "full_pooled_vs_K75diag",
+      "got": 0.6662744859124756,
+      "reference": 0.6663,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "full_macro300_vs_K75diag",
+      "got": 0.6828108163732711,
+      "reference": 0.6828,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "recovery_1.0_pooled_vs_record",
+      "got": 0.9611547552356284,
+      "reference": 0.9612,
+      "tol": 0.005,
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}

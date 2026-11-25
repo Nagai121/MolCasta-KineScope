@@ -1,0 +1,79 @@
+cal 6144 test 76342 test pos 1 ns 12696
+static_only pooled 0.5061 macro 0.5222 macro300 0.5330 (5s)
+full_history pooled 0.6142 macro 0.6247 macro300 0.6345 (9s)
+prefix_mean_0.0ns pooled 0.5540 macro 0.5663 macro300 0.5771 (12s)
+prefix_mean_0.1ns pooled 0.5647 macro 0.5778 macro300 0.5881 (16s)
+prefix_mean_0.2ns pooled 0.5733 macro 0.5856 macro300 0.5961 (20s)
+prefix_mean_0.3ns pooled 0.5816 macro 0.5928 macro300 0.6033 (24s)
+prefix_mean_0.4ns pooled 0.5835 macro 0.5936 macro300 0.6053 (28s)
+prefix_mean_0.5ns pooled 0.5891 macro 0.5991 macro300 0.6097 (32s)
+prefix_mean_0.6ns pooled 0.5924 macro 0.6024 macro300 0.6121 (36s)
+prefix_mean_0.7ns pooled 0.5986 macro 0.6086 macro300 0.6194 (40s)
+prefix_mean_0.8ns pooled 0.6041 macro 0.6141 macro300 0.6243 (44s)
+prefix_mean_0.9ns pooled 0.6075 macro 0.6174 macro300 0.6279 (47s)
+prefix_mean_1.0ns pooled 0.6062 macro 0.6167 macro300 0.6264 (51s)
+check static_pooled_vs_K75diag got 0.5061 ref 0.5061 tol 0.0005 -> True
+check static_macro300_vs_K75diag got 0.5330 ref 0.5330 tol 0.0005 -> True
+check full_pooled_vs_K75diag got 0.6142 ref 0.6142 tol 0.0005 -> True
+check full_macro300_vs_K75diag got 0.6345 ref 0.6345 tol 0.0005 -> True
+check recovery_1.0_pooled_vs_record got 0.9262 ref 0.9343 tol 0.005 -> False
+premise OK (51s)
+saved fits checkpoint (52s)
+numpy AP verified vs sklearn for all conditions
+bootstrap 500/10000 (85s)
+bootstrap 1000/10000 (115s)
+bootstrap 1500/10000 (145s)
+bootstrap 2000/10000 (173s)
+bootstrap 2500/10000 (204s)
+bootstrap 3000/10000 (234s)
+bootstrap 3500/10000 (264s)
+bootstrap 4000/10000 (295s)
+bootstrap 4500/10000 (327s)
+bootstrap 5000/10000 (355s)
+bootstrap 5500/10000 (383s)
+bootstrap 6000/10000 (413s)
+bootstrap 6500/10000 (443s)
+bootstrap 7000/10000 (473s)
+bootstrap 7500/10000 (504s)
+bootstrap 8000/10000 (534s)
+bootstrap 8500/10000 (565s)
+bootstrap 9000/10000 (596s)
+bootstrap 9500/10000 (626s)
+bootstrap 10000/10000 (657s)
+bootstrap done (658s), bad gains: {'pooled': 0, 'macro': 0}
+bootstrap done (658s), bad gains: {'pooled': 0, 'macro': 0}
+saved results.json / results.csv / per_protein.csv / test_predictions.npz (659s total)
+{
+  "min_length_recovery_0_8": {
+    "pooled": 0.7,
+    "macro": 0.7
+  },
+  "min_length_recovery_0_9": {
+    "pooled": 0.8,
+    "macro": 0.9
+  },
+  "largest_step": {
+    "pooled": {
+      "from_ns": 0.0,
+      "to_ns": 0.1,
+      "increment": 0.09886149827240726
+    },
+    "macro": {
+      "from_ns": 0.0,
+      "to_ns": 0.1,
+      "increment": 0.11268743237201007
+    }
+  },
+  "step_per_protein": {
+    "from_ns": 0.0,
+    "to_ns": 0.1,
+    "n_proteins": 100,
+    "median": 0.1120844302029829,
+    "q25": -0.03066431697452371,
+    "q75": 0.24896960276871966,
+    "min": -3.4731493841592007,
+    "max": 1.5578968543868008,
+    "frac_positive": 0.67,
+    "frac_ge_0p1": 0.51
+  }
+}
