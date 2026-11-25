@@ -306,5 +306,9 @@
     "correlation_abs": 0.3,
     "residual_std_explains_most_A": 0.3,
     "residual_std_floor_A": 0.249
+  },
+  "correction_2026_11_25": {
+    "residual_std": "Assignment text said ~0.49 A; that is the DocD value (K23 static-7-feature residual 0.492 A). On the strong base the correct value is 0.6002 A (GBM residual, test side; linear 0.6076 A), re-measured in this experiment.",
+    "floor_0.249_A": "The 0.249 A floor is the between-replica spread measured by K23 under DocD conditions; no re-measurement on the strong base exists in the records. The fixed line (0.30 A or below) is unchanged, but whether 0.30 A is reachable on the strong base cannot be judged without re-measuring the floor."
   }
 }
