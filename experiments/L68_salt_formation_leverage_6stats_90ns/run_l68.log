@@ -1,0 +1,106 @@
+train 2557 test 1170 test pos 149
+static_only pooled 0.2136 macro 0.3181 (5s)
+full_history pooled 0.2736 macro 0.3921 (7s)
+prefix_stats6_0.0ns pooled 0.2644 macro 0.3845 (9s)
+prefix_stats6_0.1ns pooled 0.2248 macro 0.3736 (11s)
+prefix_stats6_0.2ns pooled 0.2758 macro 0.4111 (12s)
+prefix_stats6_0.3ns pooled 0.2656 macro 0.3888 (13s)
+prefix_stats6_0.4ns pooled 0.2594 macro 0.4130 (15s)
+prefix_stats6_0.5ns pooled 0.2862 macro 0.4129 (16s)
+prefix_stats6_0.6ns pooled 0.2620 macro 0.4066 (17s)
+prefix_stats6_0.7ns pooled 0.2827 macro 0.3990 (19s)
+prefix_stats6_0.8ns pooled 0.2775 macro 0.3918 (22s)
+prefix_stats6_0.9ns pooled 0.2626 macro 0.3839 (24s)
+prefix_stats6_1.0ns pooled 0.2736 macro 0.3921 (26s)
+prefix_mean_0.0ns pooled 0.2644 macro 0.3845 (27s)
+prefix_mean_0.1ns pooled 0.2529 macro 0.3646 (28s)
+prefix_mean_0.2ns pooled 0.2617 macro 0.3802 (31s)
+prefix_mean_0.3ns pooled 0.2542 macro 0.3598 (32s)
+prefix_mean_0.4ns pooled 0.2533 macro 0.3787 (34s)
+prefix_mean_0.5ns pooled 0.2415 macro 0.3576 (35s)
+prefix_mean_0.6ns pooled 0.2432 macro 0.3618 (36s)
+prefix_mean_0.7ns pooled 0.2584 macro 0.3749 (38s)
+prefix_mean_0.8ns pooled 0.2745 macro 0.3785 (39s)
+prefix_mean_0.9ns pooled 0.2529 macro 0.3697 (41s)
+prefix_mean_1.0ns pooled 0.2411 macro 0.3841 (42s)
+check static_pooled got 0.213572 ref 0.213600 tol 0.0005 -> True
+check full_pooled got 0.273636 ref 0.273600 tol 0.0005 -> True
+check mean_recovery_0.0ns_vs_L32 got 0.845548 ref 0.845548 tol 0.0005 -> True
+check mean_recovery_0.1ns_vs_L32 got 0.654219 ref 0.654219 tol 0.0005 -> True
+check mean_recovery_0.2ns_vs_L32 got 0.801459 ref 0.801459 tol 0.0005 -> True
+check mean_recovery_0.3ns_vs_L32 got 0.676068 ref 0.676068 tol 0.0005 -> True
+check mean_recovery_0.4ns_vs_L32 got 0.661016 ref 0.661016 tol 0.0005 -> True
+check mean_recovery_0.5ns_vs_L32 got 0.464809 ref 0.464809 tol 0.0005 -> True
+check mean_recovery_0.6ns_vs_L32 got 0.493496 ref 0.493496 tol 0.0005 -> True
+check mean_recovery_0.7ns_vs_L32 got 0.745732 ref 0.745732 tol 0.0005 -> True
+check mean_recovery_0.8ns_vs_L32 got 1.013724 ref 1.013724 tol 0.0005 -> True
+check mean_recovery_0.9ns_vs_L32 got 0.654273 ref 0.654273 tol 0.0005 -> True
+check mean_recovery_1.0ns_vs_L32 got 0.458881 ref 0.458881 tol 0.0005 -> True
+check stats6_recovery_at_1.0ns_is_1 got 1.000000 ref 1.000000 tol 1e-06 -> True
+premise OK (42s), mean cross-check max diff 0.00e+00
+numpy AP verified vs sklearn
+bootstrap 2500/10000 (49s)
+bootstrap 5000/10000 (56s)
+bootstrap 7500/10000 (64s)
+bootstrap 10000/10000 (71s)
+bootstrap done (71s), bad gains: {'pooled': 339, 'macro': 54}
+saved (71s total)
+{
+  "min_length_recovery_0_8": {
+    "pooled": 0.0,
+    "macro": 0.0
+  },
+  "min_length_recovery_0_9": {
+    "pooled": 0.2,
+    "macro": 0.2
+  },
+  "largest_step": {
+    "pooled": {
+      "from_ns": 0.1,
+      "to_ns": 0.2,
+      "increment": 0.8496074802131068
+    },
+    "macro": {
+      "from_ns": 0.1,
+      "to_ns": 0.2,
+      "increment": 0.5072280359513857
+    }
+  },
+  "step_per_protein": {
+    "from_ns": 0.1,
+    "to_ns": 0.2,
+    "n_proteins": 18,
+    "median": 0.29885522802871944,
+    "q25": -0.040135763236228195,
+    "q75": 0.668208699678554,
+    "min": -2.329402046716534,
+    "max": 7.732698128783725,
+    "frac_positive": 0.7222222222222222,
+    "frac_ge_0p1": 0.6666666666666666
+  }
+}
+{
+  "min_length_recovery_0_8": {
+    "stats6_ns": 0.0,
+    "mean_ns": 0.0,
+    "shrink_ns": 0.0
+  },
+  "min_length_recovery_0_9": {
+    "stats6_ns": 0.2,
+    "mean_ns": 0.8,
+    "shrink_ns": 0.6000000000000001
+  },
+  "recovery_diff_stats6_minus_mean_pooled": {
+    "0.0": 0.0,
+    "0.1": -0.4674906645347784,
+    "0.2": 0.23487644922526296,
+    "0.3": 0.18968096655167388,
+    "0.4": 0.10250072308741731,
+    "0.5": 0.7437422993433054,
+    "0.6": 0.3128509792456106,
+    "0.7": 0.4053132665252319,
+    "0.8": 0.050671962383986635,
+    "0.9": 0.16132953966158847,
+    "1.0": 0.5411186285006329
+  }
+}
