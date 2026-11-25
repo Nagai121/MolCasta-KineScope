@@ -1,0 +1,30 @@
+cal 13808 test 163074 test pos 10ns 12714
+static_only pooled 0.4505 macro 0.4438 (11s)
+full_history pooled 0.4881 macro 0.4826 (15s)
+prefix_mean_0.0ns pooled 0.4675 macro 0.4611 (19s)
+prefix_mean_0.1ns pooled 0.4763 macro 0.4703 (22s)
+prefix_mean_0.2ns pooled 0.4757 macro 0.4700 (27s)
+prefix_mean_0.3ns pooled 0.4800 macro 0.4741 (31s)
+prefix_mean_0.4ns pooled 0.4840 macro 0.4782 (35s)
+prefix_mean_0.5ns pooled 0.4804 macro 0.4759 (40s)
+prefix_mean_0.6ns pooled 0.4846 macro 0.4790 (45s)
+prefix_mean_0.7ns pooled 0.4849 macro 0.4785 (48s)
+prefix_mean_0.8ns pooled 0.4887 macro 0.4813 (53s)
+prefix_mean_0.9ns pooled 0.4918 macro 0.4850 (57s)
+prefix_mean_1.0ns pooled 0.4902 macro 0.4839 (61s)
+check static_pooled_vs_k06b_10ns got 0.4505 ref 0.4505 tol 0.0005 -> True
+check static_macro_vs_k06b_10ns got 0.4438 ref 0.4438 tol 0.0005 -> True
+check full_pooled_vs_k06b_10ns got 0.4881 ref 0.4881 tol 0.0005 -> True
+check full_macro_vs_k06b_10ns got 0.4826 ref 0.4826 tol 0.0005 -> True
+check test_positives_vs_k06b_10ns got 12714.0000 ref 12714.0000 tol 0.5 -> True
+check recovery_0.1_pooled_vs_G81_10ns got 0.6862 ref 0.6860 tol 0.005 -> True
+check recovery_0.1_macro_vs_G81_10ns got 0.6830 ref 0.6830 tol 0.005 -> True
+check recovery_0.5_pooled_vs_G81_10ns got 0.7945 ref 0.7940 tol 0.005 -> True
+check recovery_0.5_macro_vs_G81_10ns got 0.8272 ref 0.8270 tol 0.005 -> True
+check recovery_1.0_pooled_vs_G81_mean_only_full got 1.0539 ref 1.0540 tol 0.005 -> True
+check recovery_1.0_macro_vs_G81_mean_only_full got 1.0332 ref 1.0330 tol 0.005 -> True
+premise OK (61s)
+numpy AP verified vs sklearn for all conditions
+bootstrap 2000/10000 (365s)
+bootstrap 4000/10000 (1058s)
+bootstrap 6000/10000 (1927s)
