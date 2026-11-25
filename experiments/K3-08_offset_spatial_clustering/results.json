@@ -1,0 +1,73 @@
+{
+ "n_cal": 13808,
+ "n_test": 163074,
+ "n_groups": 300,
+ "premise": {
+  "resid_std_gbm_test_A": 0.6001888358758622,
+  "expected_A": 0.6002,
+  "geom_verify_worst_maxdiff_A": 6.560707337399663e-07,
+  "geom_all_ok": true
+ },
+ "pair_counts": {
+  "share_residue": 1770883,
+  "share_residue_sharing_two": 82582,
+  "near_8A_no_share": 2763646,
+  "far_20A": 19740349,
+  "far_20A_sharing_residue": 0
+ },
+ "correlations": {
+  "share_residue": {
+   "n_pairs": 1770883,
+   "pearson_raw": 0.1116294741027309,
+   "pearson_demeaned": 0.09620958258267448,
+   "shuffled_raw": [
+    0.008683252913413304,
+    0.011122654617279164,
+    0.010088825392042935
+   ],
+   "shuffled_raw_max_abs": 0.011122654617279164,
+   "shuffled_demeaned": [
+    -0.0040883607850433846,
+    -0.001453955108390906,
+    -0.0022804583663183684
+   ],
+   "shuffled_demeaned_max_abs": 0.0040883607850433846
+  },
+  "near_8A_no_share": {
+   "n_pairs": 2763646,
+   "pearson_raw": 0.032605533332788185,
+   "pearson_demeaned": 0.019946248952484927,
+   "shuffled_raw": [
+    0.010906378491087679,
+    0.009610176592700088,
+    0.010394388897329302
+   ],
+   "shuffled_raw_max_abs": 0.010906378491087679,
+   "shuffled_demeaned": [
+    -0.0011696916870896365,
+    -0.0017872202739954428,
+    -0.0014230093355136338
+   ],
+   "shuffled_demeaned_max_abs": 0.0017872202739954428
+  },
+  "far_20A": {
+   "n_pairs": 19740349,
+   "pearson_raw": -0.0008848974302306625,
+   "pearson_demeaned": -0.011885812292084989,
+   "shuffled_raw": [
+    0.009857696022237546,
+    0.009955745573823874,
+    0.009562282794986889
+   ],
+   "shuffled_raw_max_abs": 0.009955745573823874,
+   "shuffled_demeaned": [
+    -0.0017730913879520829,
+    -0.0017009611654713447,
+    -0.0019513493041007474
+   ],
+   "shuffled_demeaned_max_abs": 0.0019513493041007474
+  }
+ },
+ "sampling": "none: exact streaming sums over all pairs in all 300 groups",
+ "n_shuffles": 3
+}
