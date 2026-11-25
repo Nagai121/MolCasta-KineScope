@@ -1,0 +1,270 @@
+{
+ "n_cal": 13808,
+ "n_test": 163074,
+ "baseline": {
+  "gbm": {
+   "resid_std_test": 0.6001888358758622,
+   "r2_test": 0.6352458559766085
+  },
+  "linear": {
+   "resid_std_test": 0.6075883590992472,
+   "r2_test": 0.6262031859287579
+  }
+ },
+ "correlations": {
+  "n_out_donor_res": {
+   "gbm": {
+    "pearson": 0.07974201112038355,
+    "spearman": 0.01833142171597196
+   },
+   "linear": {
+    "pearson": 0.08688022678401273,
+    "spearman": 0.02002359610750668
+   }
+  },
+  "n_in_donor_res": {
+   "gbm": {
+    "pearson": -0.005836617341456018,
+    "spearman": -0.013567991567100694
+   },
+   "linear": {
+    "pearson": -0.016058481430405357,
+    "spearman": -0.037735949831415906
+   }
+  },
+  "n_out_acceptor_res": {
+   "gbm": {
+    "pearson": -0.00933811640777366,
+    "spearman": -0.03107913655976751
+   },
+   "linear": {
+    "pearson": -0.008070184382095252,
+    "spearman": -0.036616008034039735
+   }
+  },
+  "n_in_acceptor_res": {
+   "gbm": {
+    "pearson": 0.07875018338320819,
+    "spearman": 0.041327002670145774
+   },
+   "linear": {
+    "pearson": 0.06598046043758132,
+    "spearman": 0.026821666875514204
+   }
+  },
+  "n_hb_total": {
+   "gbm": {
+    "pearson": 0.08330189681272022,
+    "spearman": 0.03472212731211462
+   },
+   "linear": {
+    "pearson": 0.07451230239905364,
+    "spearman": 0.01657478939637269
+   }
+  },
+  "n_partner_backbone": {
+   "gbm": {
+    "pearson": -0.08053401365245999,
+    "spearman": -0.07724868559331861
+   },
+   "linear": {
+    "pearson": -0.07571897888879188,
+    "spearman": -0.07182610561308249
+   }
+  },
+  "n_partner_sidechain": {
+   "gbm": {
+    "pearson": -0.04211486062935472,
+    "spearman": -0.0384004640629629
+   },
+   "linear": {
+    "pearson": -0.03798040006151607,
+    "spearman": -0.03942973347144686
+   }
+  },
+  "n_partner_water": {
+   "gbm": {
+    "pearson": 0.14028821668037134,
+    "spearman": 0.0868139473510867
+   },
+   "linear": {
+    "pearson": 0.1275361226368662,
+    "spearman": 0.06626455682490888
+   }
+  },
+  "n_competing": {
+   "gbm": {
+    "pearson": 0.17051920916908042,
+    "spearman": 0.15359014169538232
+   },
+   "linear": {
+    "pearson": 0.17281815326534583,
+    "spearman": 0.16514491661485728
+   }
+  },
+  "n_hb_donor_res_total": {
+   "gbm": {
+    "pearson": 0.0574360166911836,
+    "spearman": 0.015008581981136993
+   },
+   "linear": {
+    "pearson": 0.055291557853916054,
+    "spearman": 0.005180231257605544
+   }
+  },
+  "n_hb_acceptor_res_total": {
+   "gbm": {
+    "pearson": 0.0632135525366127,
+    "spearman": 0.03509110082193131
+   },
+   "linear": {
+    "pearson": 0.05280943992557675,
+    "spearman": 0.017254563210132565
+   }
+  }
+ },
+ "quantity_stats_test": {
+  "n_out_donor_res": {
+   "mean": 4.612574659357102,
+   "std": 2.7786814359703844,
+   "min": 0.0,
+   "max": 17.0,
+   "frac_zero": 0.002324098262138661
+  },
+  "n_in_donor_res": {
+   "mean": 4.408188920367441,
+   "std": 2.6923699155015677,
+   "min": 0.0,
+   "max": 16.0,
+   "frac_zero": 0.0021523970712682586
+  },
+  "n_out_acceptor_res": {
+   "mean": 3.692955345426003,
+   "std": 2.3461097600440692,
+   "min": 0.0,
+   "max": 17.0,
+   "frac_zero": 0.03460392214577431
+  },
+  "n_in_acceptor_res": {
+   "mean": 5.375492107877405,
+   "std": 3.295331248757793,
+   "min": 0.0,
+   "max": 16.0,
+   "frac_zero": 0.0014778566785631064
+  },
+  "n_hb_total": {
+   "mean": 18.08921103302795,
+   "std": 5.323564337665761,
+   "min": 3.0,
+   "max": 38.0,
+   "frac_zero": 0.0
+  },
+  "n_partner_backbone": {
+   "mean": 8.103873088291206,
+   "std": 2.7496257648993816,
+   "min": 0.0,
+   "max": 19.0,
+   "frac_zero": 0.0001594368200939451
+  },
+  "n_partner_sidechain": {
+   "mean": 1.1096434747415285,
+   "std": 1.3306913649991177,
+   "min": 0.0,
+   "max": 12.0,
+   "frac_zero": 0.43495590958705865
+  },
+  "n_partner_water": {
+   "mean": 8.875694469995217,
+   "std": 5.139015267703291,
+   "min": 0.0,
+   "max": 33.0,
+   "frac_zero": 0.031225087996860322
+  },
+  "n_competing": {
+   "mean": 5.32341145737518,
+   "std": 1.5071591661834711,
+   "min": 0.0,
+   "max": 13.0,
+   "frac_zero": 0.00020849430319977433
+  },
+  "n_hb_donor_res_total": {
+   "mean": 9.020763579724543,
+   "std": 3.5842198830672483,
+   "min": 1.0,
+   "max": 22.0,
+   "frac_zero": 0.0
+  },
+  "n_hb_acceptor_res_total": {
+   "mean": 9.068447453303408,
+   "std": 3.7586828230508305,
+   "min": 0.0,
+   "max": 23.0,
+   "frac_zero": 0.00019009774703508838
+  }
+ },
+ "added_value_gbm": {
+  "n_out_donor_res": {
+   "resid_std_test": 0.5968521131289584,
+   "r2_test": 0.6392507611912825
+  },
+  "n_in_donor_res": {
+   "resid_std_test": 0.6002952610716206,
+   "r2_test": 0.6351213995955942
+  },
+  "n_out_acceptor_res": {
+   "resid_std_test": 0.6009126003647968,
+   "r2_test": 0.6343511667841844
+  },
+  "n_in_acceptor_res": {
+   "resid_std_test": 0.5965935179907379,
+   "r2_test": 0.6395963673441488
+  },
+  "n_hb_total": {
+   "resid_std_test": 0.5965816345927263,
+   "r2_test": 0.6394708422652149
+  },
+  "n_partner_backbone": {
+   "resid_std_test": 0.5986178320070438,
+   "r2_test": 0.6371589039255463
+  },
+  "n_partner_sidechain": {
+   "resid_std_test": 0.5996328779961185,
+   "r2_test": 0.6359258827877375
+  },
+  "n_partner_water": {
+   "resid_std_test": 0.5884188547129897,
+   "r2_test": 0.6494155235268265
+  },
+  "n_competing": {
+   "resid_std_test": 0.5858046538902836,
+   "r2_test": 0.6525013609906658
+  },
+  "n_hb_donor_res_total": {
+   "resid_std_test": 0.5981800438676688,
+   "r2_test": 0.637608977737331
+  },
+  "n_hb_acceptor_res_total": {
+   "resid_std_test": 0.5951318495914397,
+   "r2_test": 0.6413525276745837
+  },
+  "ALL": {
+   "resid_std_test": 0.5828691322652277,
+   "r2_test": 0.6559498544029987
+  }
+ },
+ "permutation_control_all": {
+  "resid_std_test": 0.6008657762567053,
+  "r2_test": 0.6344197178970044,
+  "note": "quantities shuffled within protein x replica groups"
+ },
+ "permutation_control_singles": {},
+ "premise_check": {
+  "n_proteins": 108,
+  "n_replicas_checked": 324,
+  "worst_frame0_maxdiff_A": 0.001995552333899475,
+  "worst_frame100_maxdiff_A": 0.003835405166355166,
+  "failures": [],
+  "all_ok": true,
+  "note": "frame0/frame100 are total-format frames 0 and 100 (= history frames 0 and 10); pair distances recomputed from the total trajectory vs the stored k06b history column 0 distances; element checks compare pair atom atomic numbers."
+ }
+}
