@@ -1,4 +1,4 @@
-"""K3-06: interaction energies at the initial structure vs the residual.
+"""K3-06: interaction energies at frames 0 and 10 vs the residual.
 
 Question (K3 series): what physical state of a pair does the trajectory
 know that the static structure does not? The residual ("zure") is the
@@ -9,8 +9,9 @@ seed 20261121, plus OLS).
 
 For every K06(b) hydrogen-bond formation candidate (8 calibration
 proteins, 13,808 candidates; 100 unseen proteins x 3 replicas, 163,074
-candidates), at the initial structure (frame 0 of the history window),
-compute from the ATLAS initial structure:
+candidates), at frame 0 and at frame 10 (the origin frame, where the
+static prediction is made) of the history window, compute from the
+ATLAS structures at those frames:
   - nonbonded interaction energy between the donor residue and the
     acceptor residue, electrostatics and van der Waals separately;
   - interaction energy of each of the two residues with the rest of
@@ -33,7 +34,7 @@ CHARMM36m, not CHARMM36.
 Coulomb: 1389.35456 * q_i q_j / r[Angstrom] kJ/mol. 1-2/1-3 pairs
 (bond-graph distance <= 2) excluded; 1-4 pairs at full strength
 (CHARMM coulomb14scale = lj14scale = 1.0).
-Direct pairwise sums, minimum image with the frame-0 box, no cutoff;
+Direct pairwise sums, minimum image with each frame's own box, no cutoff;
 the PME reciprocal part is not pairwise decomposable and is excluded.
 Surroundings = the rest of the protein (the base data contains protein
 atoms only; no water or ions).
@@ -127,13 +128,17 @@ def load_protein(srcdir, protein):
                 point_residue=residx[heavy], n=n)
 
 
-def frame0(srcdir, protein, replica):
+def frame_at(srcdir, protein, replica, index):
     src = Path(srcdir) / f'{protein}-analysis'
     u = mda.Universe(str(src / f'{protein}.pdb'),
                      str(src / f'{protein}_R{replica}.xtc'))
-    ts = u.trajectory[0]
+    ts = u.trajectory[index]
     return (np.asarray(ts.positions, dtype=np.float64),
             triclinic_vectors(ts.dimensions).astype(np.float64))
+
+
+def frame0(srcdir, protein, replica):
+    return frame_at(srcdir, protein, replica, 0)
 
 
 def excluded_pairs(n, bonds):
@@ -247,6 +252,25 @@ def compute_protein(protein, tab):
         out[f'r{r}_dres'] = dres
         out[f'r{r}_ares'] = ares
         out[f'r{r}_maxdiff'] = maxdiff
+        # frame 10 (the origin frame): same quantities, own box.
+        # The frame-10 distance is hist[:, 0] + hist[:, 5]
+        # (first + (last - first)); it also equals static[:, 1].
+        pos10, box10 = frame_at(srcdir, protein, r, 10)
+        d10 = mic_distances(pos10, box10, da, db)
+        maxdiff10 = float(np.abs(d10 - (hist[:, 0] + hist[:, 5])).max())
+        if maxdiff10 > 0.05:
+            raise ValueError(f'{protein} R{r}: frame10 distance mismatch {maxdiff10}')
+        Re10, Rv10 = residue_matrices(pos10, box10, P['charges'], sig, eps,
+                                       P['residx'], excl, P['types'])
+        pe10, pv10 = Re10[dres, ares], Rv10[dres, ares]
+        dre10 = Re10.sum(1)[dres] - Re10[dres, dres]
+        drv10 = Rv10.sum(1)[dres] - Rv10[dres, dres]
+        are10 = Re10.sum(1)[ares] - Re10[ares, ares]
+        arv10 = Rv10.sum(1)[ares] - Rv10[ares, ares]
+        Q10 = np.column_stack([pe10, pv10, dre10, drv10, are10, arv10,
+                               dre10 - pe10, drv10 - pv10, are10 - pe10, arv10 - pv10])
+        out[f'r{r}_quant10'] = Q10.astype(np.float64)
+        out[f'r{r}_maxdiff10'] = maxdiff10
     np.savez_compressed(WORK / f'{protein}.npz', **out)
     return out
 
@@ -283,6 +307,7 @@ def load_rows(proteins):
                                  static=z[f'r{r}_static'].astype(np.float64),
                                  mean=z[f'r{r}_history'][:, 1].astype(np.float64),
                                  quant=w[f'r{r}_quant'],
+                                 quant10=w[f'r{r}_quant10'],
                                  dres=w[f'r{r}_dres'], ares=w[f'r{r}_ares']))
     return rows
 
@@ -295,6 +320,84 @@ def sanitize(o):
     if isinstance(o, float) and not np.isfinite(o):
         return None
     return o
+
+
+# ---------------- stage 2: analysis ------------------------------------------
+
+def analyze_frame(Q_cal, Q_te, R, R_ols, groups, prot_of, Str, Ste, m_cal, m_te, tag):
+    """Correlations, augmented fits and shuffle control for one frame's
+    quantities. R is the GBM residual, R_ols the OLS residual."""
+    from sklearn.ensemble import HistGradientBoostingRegressor
+    from sklearn.linear_model import LinearRegression
+    out = {}
+    derived = {'pair_total': Q_te[:, 0] + Q_te[:, 1],
+               'rest_elec_sum': Q_te[:, 2] + Q_te[:, 4],
+               'rest_vdw_sum': Q_te[:, 3] + Q_te[:, 5],
+               'rest_total_sum': Q_te[:, 2] + Q_te[:, 3] + Q_te[:, 4] + Q_te[:, 5]}
+    allq = {name: Q_te[:, i] for i, name in enumerate(QUANT_NAMES)}
+    allq.update(derived)
+    out['quantities'] = {}
+    for name, v in allq.items():
+        e = {'mean': float(v.mean()), 'sd': float(v.std()),
+             'min': float(v.min()), 'max': float(v.max()),
+             'pearson_gbm': float(pearsonr(v, R)[0]),
+             'spearman_gbm': float(spearmanr(v, R)[0]),
+             'pearson_ols': float(pearsonr(v, R_ols)[0])}
+        out['quantities'][name] = e
+        print(tag, name, {k: round(x, 4) for k, x in e.items()}, flush=True)
+    pp = {}
+    for name in QUANT_NAMES[:6]:
+        v = allq[name]
+        vals = []
+        for p in TEST:
+            m = prot_of == p
+            if m.sum() >= 30 and v[m].std() > 0:
+                vals.append(pearsonr(v[m], R[m])[0])
+        vals = np.array(vals)
+        pp[name] = {'n_proteins': int(len(vals)),
+                    'median': float(np.median(vals)),
+                    'q25': float(np.percentile(vals, 25)),
+                    'q75': float(np.percentile(vals, 75)),
+                    'frac_abs_ge_0.3': float((np.abs(vals) >= 0.3).mean())}
+    out['per_protein_pearson'] = pp
+    sets = {f'single_{n}': [i] for i, n in enumerate(QUANT_NAMES[:6])}
+    sets['pair2'] = [0, 1]
+    sets['rest4'] = [2, 3, 4, 5]
+    sets['all6'] = [0, 1, 2, 3, 4, 5]
+    sets['all10'] = list(range(10))
+    fits = {}
+    models = {}
+    for sname, cols in sets.items():
+        Xtr = np.column_stack([Str, Q_cal[:, cols]])
+        Xte = np.column_stack([Ste, Q_te[:, cols]])
+        mdl = HistGradientBoostingRegressor(**GBM_KW).fit(Xtr, m_cal)
+        sd = float((m_te - mdl.predict(Xte)).std())
+        fits[sname] = {'cols': [QUANT_NAMES[c] for c in cols],
+                       'residual_sd_gbm': sd}
+        models[sname] = (mdl, cols)
+        print(tag, 'fit', sname, round(sd, 4), flush=True)
+    for sname in ('pair2', 'rest4', 'all6'):
+        cols = sets[sname]
+        mdl = LinearRegression().fit(np.column_stack([Str, Q_cal[:, cols]]), m_cal)
+        sd = float((m_te - mdl.predict(np.column_stack([Ste, Q_te[:, cols]]))).std())
+        fits[sname]['residual_sd_ols'] = sd
+    out['augmented_fits'] = fits
+    rng = np.random.default_rng(20261125)
+    Q_sh = Q_te.copy()
+    for g in np.unique(groups):
+        m = np.where(groups == g)[0]
+        Q_sh[m] = Q_sh[m][rng.permutation(len(m))]
+    sh = {}
+    for name in QUANT_NAMES[:6]:
+        v = Q_sh[:, QUANT_NAMES.index(name)]
+        sh[f'corr_{name}'] = float(pearsonr(v, R)[0])
+    for sname in ('pair2', 'rest4', 'all6'):
+        mdl, cols = models[sname]
+        Xte = np.column_stack([Ste, Q_sh[:, cols]])
+        sh[f'sd_{sname}'] = float((m_te - mdl.predict(Xte)).std())
+    out['shuffle_control'] = sh
+    print(tag, 'shuffle', {k: round(v, 4) for k, v in sh.items()}, flush=True)
+    return out
 
 
 def stage2():
@@ -310,6 +413,8 @@ def stage2():
     m_te = np.concatenate([r['mean'] for r in test])
     Q_cal = np.concatenate([r['quant'] for r in cal])
     Q_te = np.concatenate([r['quant'] for r in test])
+    Q10_cal = np.concatenate([r['quant10'] for r in cal])
+    Q10_te = np.concatenate([r['quant10'] for r in test])
     groups = np.concatenate([np.full(len(r['mean']), i)
                              for i, r in enumerate(test)])
     assert len(m_cal) == 13808 and len(m_te) == 163074, (len(m_cal), len(m_te))
@@ -328,92 +433,29 @@ def stage2():
             'residual_mean': float(resid[method].mean())}
         print(method, res[f'residual_{method}'], flush=True)
     R = resid['gbm']
-
-    # quantity distributions + correlations
-    derived = {'pair_total': Q_te[:, 0] + Q_te[:, 1],
-               'rest_elec_sum': Q_te[:, 2] + Q_te[:, 4],
-               'rest_vdw_sum': Q_te[:, 3] + Q_te[:, 5],
-               'rest_total_sum': Q_te[:, 2] + Q_te[:, 3] + Q_te[:, 4] + Q_te[:, 5]}
-    allq = {name: Q_te[:, i] for i, name in enumerate(QUANT_NAMES)}
-    allq.update(derived)
-    res['quantities'] = {}
-    for name, v in allq.items():
-        e = {'mean': float(v.mean()), 'sd': float(v.std()),
-             'min': float(v.min()), 'max': float(v.max()),
-             'pearson_gbm': float(pearsonr(v, R)[0]),
-             'spearman_gbm': float(spearmanr(v, R)[0]),
-             'pearson_ols': float(pearsonr(v, resid['ols'])[0])}
-        res['quantities'][name] = e
-        print(name, {k: round(x, 4) for k, x in e.items()}, flush=True)
-
-    # per-protein correlations (GBM residual), proteins with >= 30 candidates
     prot_of = np.concatenate([np.full(len(r['mean']), r['protein'])
                               for r in test])
-    pp = {}
-    for name in QUANT_NAMES[:6]:
-        v = allq[name]
-        vals = []
-        for p in TEST:
-            m = prot_of == p
-            if m.sum() >= 30 and v[m].std() > 0:
-                vals.append(pearsonr(v[m], R[m])[0])
-        vals = np.array(vals)
-        pp[name] = {'n_proteins': int(len(vals)),
-                    'median': float(np.median(vals)),
-                    'q25': float(np.percentile(vals, 25)),
-                    'q75': float(np.percentile(vals, 75)),
-                    'frac_abs_ge_0.3': float((np.abs(vals) >= 0.3).mean())}
-    res['per_protein_pearson'] = pp
 
-    # augmented fits: static + quantity sets, fitted on cal
-    sets = {f'single_{n}': [i] for i, n in enumerate(QUANT_NAMES[:6])}
-    sets['pair2'] = [0, 1]
-    sets['rest4'] = [2, 3, 4, 5]
-    sets['all6'] = [0, 1, 2, 3, 4, 5]
-    sets['all10'] = list(range(10))
-    base_sd = res['residual_gbm']['residual_sd']
-    fits = {}
-    models = {}
-    for sname, cols in sets.items():
-        Xtr = np.column_stack([Str, Q_cal[:, cols]])
-        Xte = np.column_stack([Ste, Q_te[:, cols]])
-        mdl = HistGradientBoostingRegressor(**GBM_KW).fit(Xtr, m_cal)
-        sd = float((m_te - mdl.predict(Xte)).std())
-        fits[sname] = {'cols': [QUANT_NAMES[c] for c in cols],
-                       'residual_sd_gbm': sd}
-        models[sname] = (mdl, cols)
-        print('fit', sname, round(sd, 4), flush=True)
-    for sname in ('pair2', 'rest4', 'all6'):
-        cols = sets[sname]
-        mdl = LinearRegression().fit(np.column_stack([Str, Q_cal[:, cols]]), m_cal)
-        sd = float((m_te - mdl.predict(np.column_stack([Ste, Q_te[:, cols]]))).std())
-        fits[sname]['residual_sd_ols'] = sd
-    res['augmented_fits'] = fits
-    res['baseline_residual_sd_gbm'] = base_sd
+    f0 = analyze_frame(Q_cal, Q_te, R, resid['ols'], groups, prot_of,
+                       Str, Ste, m_cal, m_te, 'frame0')
+    res['quantities'] = f0['quantities']
+    res['per_protein_pearson'] = f0['per_protein_pearson']
+    res['augmented_fits'] = f0['augmented_fits']
+    res['shuffle_control'] = f0['shuffle_control']
+    res['baseline_residual_sd_gbm'] = res['residual_gbm']['residual_sd']
+    f10 = analyze_frame(Q10_cal, Q10_te, R, resid['ols'], groups, prot_of,
+                        Str, Ste, m_cal, m_te, 'frame10')
+    res['frame10'] = f10
 
-    # shuffle control: permute quantities within protein x replica (test only)
-    rng = np.random.default_rng(20261125)
-    Q_sh = Q_te.copy()
-    for g in np.unique(groups):
-        m = np.where(groups == g)[0]
-        Q_sh[m] = Q_sh[m][rng.permutation(len(m))]
-    sh = {}
-    for name in QUANT_NAMES[:6]:
-        v = Q_sh[:, QUANT_NAMES.index(name)]
-        sh[f'corr_{name}'] = float(pearsonr(v, R)[0])
-    for sname in ('pair2', 'rest4', 'all6'):
-        mdl, cols = models[sname]
-        Xte = np.column_stack([Ste, Q_sh[:, cols]])
-        sh[f'sd_{sname}'] = float((m_te - mdl.predict(Xte)).std())
-    res['shuffle_control'] = sh
-    print('shuffle', {k: round(v, 4) for k, v in sh.items()}, flush=True)
-
-    # premise: frame-0 distance identity over all proteins
+    # premise: distance identity over all proteins, both frames
     md = []
+    md10 = []
     for p in CAL + TEST:
         with np.load(WORK / f'{p}.npz') as w:
             md += [float(w[f'r{r}_maxdiff']) for r in (1, 2, 3)]
+            md10 += [float(w[f'r{r}_maxdiff10']) for r in (1, 2, 3)]
     res['premise_frame0_distance_maxdiff'] = float(np.max(md))
+    res['premise_frame10_distance_maxdiff'] = float(np.max(md10))
     same = int(sum(int((r['dres'] == r['ares']).sum()) for r in test))
     res['same_residue_candidates_test'] = same
 
@@ -426,17 +468,23 @@ def stage2():
         for name, e in res['quantities'].items():
             wcsv.writerow([name, e['mean'], e['sd'], e['min'], e['max'],
                            e['pearson_gbm'], e['spearman_gbm'], e['pearson_ols']])
+    with open(OUT / 'results_frame10.csv', 'w', newline='') as f:
+        wcsv = csv.writer(f)
+        wcsv.writerow(['quantity', 'mean', 'sd', 'min', 'max',
+                       'pearson_gbm', 'spearman_gbm', 'pearson_ols'])
+        for name, e in res['frame10']['quantities'].items():
+            wcsv.writerow([name, e['mean'], e['sd'], e['min'], e['max'],
+                           e['pearson_gbm'], e['spearman_gbm'], e['pearson_ols']])
     np.savez_compressed(
         OUT / 'candidates.npz',
         protein=prot_of,
         replica=np.concatenate([np.full(len(r['mean']), r['replica'])
                                 for r in test]),
         residual_gbm=R, residual_ols=resid['ols'], real_mean=m_te,
-        quant=Q_te, quant_names=np.array(QUANT_NAMES),
+        quant=Q_te, quant10=Q10_te, quant_names=np.array(QUANT_NAMES),
         donor_res=np.concatenate([r['dres'] for r in test]),
         acceptor_res=np.concatenate([r['ares'] for r in test]))
     print('stage2 saved to', OUT)
-
 
 if __name__ == '__main__':
     which = sys.argv[1] if len(sys.argv) > 1 else 'all'

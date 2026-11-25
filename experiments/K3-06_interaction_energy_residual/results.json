@@ -266,7 +266,6 @@
       "residual_sd_gbm": 0.5490876555541531
     }
   },
-  "baseline_residual_sd_gbm": 0.6001888358758622,
   "shuffle_control": {
     "corr_pair_elec": -0.0035286603812959574,
     "corr_pair_vdw": 0.004308929968885951,
@@ -278,6 +277,276 @@
     "sd_rest4": 0.6191399433812543,
     "sd_all6": 0.6561757111788076
   },
+  "baseline_residual_sd_gbm": 0.6001888358758622,
+  "frame10": {
+    "quantities": {
+      "pair_elec": {
+        "mean": -37.5920747892471,
+        "sd": 86.94562005562123,
+        "min": -598.3970666914508,
+        "max": 315.09065491448854,
+        "pearson_gbm": -0.011649416410214462,
+        "spearman_gbm": 0.005864351154431384,
+        "pearson_ols": -0.006098713676643561
+      },
+      "pair_vdw": {
+        "mean": 1.236734923549535,
+        "sd": 11.166176484166382,
+        "min": -33.15962577342029,
+        "max": 121.56378830411211,
+        "pearson_gbm": -0.01262761071416022,
+        "spearman_gbm": 0.013954642202317447,
+        "pearson_ols": 0.007129943976091117
+      },
+      "donor_rest_elec": {
+        "mean": -246.53291665275725,
+        "sd": 317.20242213550557,
+        "min": -3125.9920683021883,
+        "max": 2128.63908161963,
+        "pearson_gbm": 0.0017236740884473902,
+        "spearman_gbm": 0.037693180302980696,
+        "pearson_ols": 0.00020371861496328687
+      },
+      "donor_rest_vdw": {
+        "mean": -12.028552095858549,
+        "sd": 27.949929061393277,
+        "min": -126.94323948787255,
+        "max": 125.26649245230924,
+        "pearson_gbm": 0.05180480644711358,
+        "spearman_gbm": 0.05019888930565995,
+        "pearson_ols": 0.04378159493610415
+      },
+      "acceptor_rest_elec": {
+        "mean": -222.97344109674648,
+        "sd": 329.3162924605932,
+        "min": -3125.9920683021883,
+        "max": 2128.63908161963,
+        "pearson_gbm": 0.018741503453760067,
+        "spearman_gbm": 0.049166325891060396,
+        "pearson_ols": 0.02050268256080192
+      },
+      "acceptor_rest_vdw": {
+        "mean": -9.093454374618485,
+        "sd": 26.859426602792595,
+        "min": -126.94323948787255,
+        "max": 125.26649245230924,
+        "pearson_gbm": 0.05342300234411552,
+        "spearman_gbm": 0.04459229524851178,
+        "pearson_ols": 0.047319977892213455
+      },
+      "donor_rest_elec_excl": {
+        "mean": -208.94084186351014,
+        "sd": 303.12352871162915,
+        "min": -3125.1377578392758,
+        "max": 2194.1229772830716,
+        "pearson_gbm": 0.005145160903638266,
+        "spearman_gbm": 0.031003197330172247,
+        "pearson_ols": 0.0019624886355286563
+      },
+      "donor_rest_vdw_excl": {
+        "mean": -13.265287019408087,
+        "sd": 27.054198950260616,
+        "min": -133.32268188402946,
+        "max": 127.70571200008769,
+        "pearson_gbm": 0.05873183670915491,
+        "spearman_gbm": 0.044004446339535264,
+        "pearson_ols": 0.042288380521001985
+      },
+      "acceptor_rest_elec_excl": {
+        "mean": -185.38136630749943,
+        "sd": 322.5894991361838,
+        "min": -3124.945099767081,
+        "max": 2224.5393991048372,
+        "pearson_gbm": 0.02227210800364209,
+        "spearman_gbm": 0.045321747649267254,
+        "pearson_ols": 0.0225739643357176
+      },
+      "acceptor_rest_vdw_excl": {
+        "mean": -10.33018929816802,
+        "sd": 26.348765419617035,
+        "min": -133.32268188397126,
+        "max": 130.91658949525683,
+        "pearson_gbm": 0.05980976015661671,
+        "spearman_gbm": 0.03721952560468443,
+        "pearson_ols": 0.045215524951898865
+      },
+      "pair_total": {
+        "mean": -36.35533986569756,
+        "sd": 84.92930161110291,
+        "min": -567.6450347805587,
+        "max": 311.0622193637043,
+        "pearson_gbm": -0.013586216311580317,
+        "spearman_gbm": 0.009394702967809854,
+        "pearson_ols": -0.005306086602027429
+      },
+      "rest_elec_sum": {
+        "mean": -469.5063577495038,
+        "sd": 465.80428019570826,
+        "min": -3549.1484750722893,
+        "max": 4158.270119701749,
+        "pearson_gbm": 0.014423731841911237,
+        "spearman_gbm": 0.039318982404852716,
+        "pearson_ols": 0.014633801650891301
+      },
+      "rest_vdw_sum": {
+        "mean": -21.122006470477036,
+        "sd": 42.96731505773719,
+        "min": -215.6835310365001,
+        "max": 233.31285307555845,
+        "pearson_gbm": 0.06709406607615111,
+        "spearman_gbm": 0.06384103455542296,
+        "pearson_ols": 0.05805994492204656
+      },
+      "rest_total_sum": {
+        "mean": -490.6283642199809,
+        "sd": 469.78193363743674,
+        "min": -3568.2828779846586,
+        "max": 4148.816371206591,
+        "pearson_gbm": 0.020438180390662152,
+        "spearman_gbm": 0.045246437018230994,
+        "pearson_ols": 0.01982019044054322
+      }
+    },
+    "per_protein_pearson": {
+      "pair_elec": {
+        "n_proteins": 100,
+        "median": 0.0003602958865312035,
+        "q25": -0.0483864161389636,
+        "q75": 0.031120613451263476,
+        "frac_abs_ge_0.3": 0.0
+      },
+      "pair_vdw": {
+        "n_proteins": 100,
+        "median": -0.00579975672870397,
+        "q25": -0.039929161852897556,
+        "q75": 0.019089513907853756,
+        "frac_abs_ge_0.3": 0.0
+      },
+      "donor_rest_elec": {
+        "n_proteins": 100,
+        "median": 0.022030606250116554,
+        "q25": -0.056753962386938,
+        "q75": 0.05380317900477408,
+        "frac_abs_ge_0.3": 0.0
+      },
+      "donor_rest_vdw": {
+        "n_proteins": 100,
+        "median": 0.0526031891409753,
+        "q25": 0.014932731285218196,
+        "q75": 0.07242377344858919,
+        "frac_abs_ge_0.3": 0.0
+      },
+      "acceptor_rest_elec": {
+        "n_proteins": 100,
+        "median": 0.02111398421361362,
+        "q25": -0.008804404754830743,
+        "q75": 0.0578016861818108,
+        "frac_abs_ge_0.3": 0.0
+      },
+      "acceptor_rest_vdw": {
+        "n_proteins": 100,
+        "median": 0.04848123764326396,
+        "q25": 0.01879662915396278,
+        "q75": 0.06935442203926075,
+        "frac_abs_ge_0.3": 0.0
+      }
+    },
+    "augmented_fits": {
+      "single_pair_elec": {
+        "cols": [
+          "pair_elec"
+        ],
+        "residual_sd_gbm": 0.6008832465221324
+      },
+      "single_pair_vdw": {
+        "cols": [
+          "pair_vdw"
+        ],
+        "residual_sd_gbm": 0.6000017754202113
+      },
+      "single_donor_rest_elec": {
+        "cols": [
+          "donor_rest_elec"
+        ],
+        "residual_sd_gbm": 0.6003841188963525
+      },
+      "single_donor_rest_vdw": {
+        "cols": [
+          "donor_rest_vdw"
+        ],
+        "residual_sd_gbm": 0.6001654745813202
+      },
+      "single_acceptor_rest_elec": {
+        "cols": [
+          "acceptor_rest_elec"
+        ],
+        "residual_sd_gbm": 0.6003386591792704
+      },
+      "single_acceptor_rest_vdw": {
+        "cols": [
+          "acceptor_rest_vdw"
+        ],
+        "residual_sd_gbm": 0.5986552182367619
+      },
+      "pair2": {
+        "cols": [
+          "pair_elec",
+          "pair_vdw"
+        ],
+        "residual_sd_gbm": 0.5982820424367905,
+        "residual_sd_ols": 0.6077653310105685
+      },
+      "rest4": {
+        "cols": [
+          "donor_rest_elec",
+          "donor_rest_vdw",
+          "acceptor_rest_elec",
+          "acceptor_rest_vdw"
+        ],
+        "residual_sd_gbm": 0.6016433141007607,
+        "residual_sd_ols": 0.6072988943815841
+      },
+      "all6": {
+        "cols": [
+          "pair_elec",
+          "pair_vdw",
+          "donor_rest_elec",
+          "donor_rest_vdw",
+          "acceptor_rest_elec",
+          "acceptor_rest_vdw"
+        ],
+        "residual_sd_gbm": 0.5962876085448634,
+        "residual_sd_ols": 0.60754754477008
+      },
+      "all10": {
+        "cols": [
+          "pair_elec",
+          "pair_vdw",
+          "donor_rest_elec",
+          "donor_rest_vdw",
+          "acceptor_rest_elec",
+          "acceptor_rest_vdw",
+          "donor_rest_elec_excl",
+          "donor_rest_vdw_excl",
+          "acceptor_rest_elec_excl",
+          "acceptor_rest_vdw_excl"
+        ],
+        "residual_sd_gbm": 0.596518838872219
+      }
+    },
+    "shuffle_control": {
+      "corr_pair_elec": -0.00326033107194857,
+      "corr_pair_vdw": 0.004083754496613522,
+      "corr_donor_rest_elec": -0.0005789708627661605,
+      "corr_donor_rest_vdw": 0.010491422393647785,
+      "corr_acceptor_rest_elec": -0.000467109494445529,
+      "corr_acceptor_rest_vdw": 0.008640225223556022,
+      "sd_pair2": 0.6042830503817878,
+      "sd_rest4": 0.6147167817676861,
+      "sd_all6": 0.6117015149698674
+    }
+  },
   "premise_frame0_distance_maxdiff": 1.8463080699859802e-06,
+  "premise_frame10_distance_maxdiff": 1.2623316383297833e-06,
   "same_residue_candidates_test": 0
 }
