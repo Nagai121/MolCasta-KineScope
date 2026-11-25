@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "check": "static_pooled",
+      "got": 0.4640999974218541,
+      "reference": 0.4641,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "full_pooled",
+      "got": 0.5780152766591036,
+      "reference": 0.578,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.0ns_vs_L34",
+      "got": 0.9220125945534137,
+      "reference": 0.9220125945534137,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.1ns_vs_L34",
+      "got": 0.9175332582673172,
+      "reference": 0.9175332582673172,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.2ns_vs_L34",
+      "got": 0.7119774107685393,
+      "reference": 0.7119774107685393,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.3ns_vs_L34",
+      "got": 0.8598892248277131,
+      "reference": 0.8598892248277131,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.4ns_vs_L34",
+      "got": 1.00803060721496,
+      "reference": 1.00803060721496,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.5ns_vs_L34",
+      "got": 0.9119025544046645,
+      "reference": 0.9119025544046645,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.6ns_vs_L34",
+      "got": 1.212994013250811,
+      "reference": 1.212994013250811,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.7ns_vs_L34",
+      "got": 1.0280114205125817,
+      "reference": 1.0280114205125817,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.8ns_vs_L34",
+      "got": 1.298974191083624,
+      "reference": 1.298974191083624,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_0.9ns_vs_L34",
+      "got": 0.9571612562524189,
+      "reference": 0.9571612562524189,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "mean_recovery_1.0ns_vs_L34",
+      "got": 1.0122771012418004,
+      "reference": 1.0122771012418004,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "stats6_recovery_at_1.0ns_is_1",
+      "got": 1.0,
+      "reference": 1.0,
+      "tol": 1e-06,
+      "ok": true
+    }
+  ],
+  "all_ok": true,
+  "mean_recovery_max_abs_diff": 0.0
+}
