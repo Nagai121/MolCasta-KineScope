@@ -1,0 +1,68 @@
+cal 13808 test 163074 test pos 30ns 13111
+static_only pooled 0.4492 macro 0.4418 (7s)
+full_history pooled 0.4855 macro 0.4788 (11s)
+prefix_mean_0.0ns pooled 0.4680 macro 0.4624 (14s)
+prefix_mean_0.1ns pooled 0.4719 macro 0.4658 (17s)
+prefix_mean_0.2ns pooled 0.4724 macro 0.4686 (20s)
+prefix_mean_0.3ns pooled 0.4783 macro 0.4724 (24s)
+prefix_mean_0.4ns pooled 0.4784 macro 0.4724 (26s)
+prefix_mean_0.5ns pooled 0.4829 macro 0.4772 (29s)
+prefix_mean_0.6ns pooled 0.4831 macro 0.4770 (32s)
+prefix_mean_0.7ns pooled 0.4855 macro 0.4794 (35s)
+prefix_mean_0.8ns pooled 0.4878 macro 0.4814 (38s)
+prefix_mean_0.9ns pooled 0.4897 macro 0.4837 (40s)
+prefix_mean_1.0ns pooled 0.4880 macro 0.4819 (43s)
+check static_pooled_vs_k06b_30ns got 0.4492 ref 0.4492 tol 0.0005 -> True
+check static_macro_vs_k06b_30ns got 0.4418 ref 0.4418 tol 0.0005 -> True
+check full_pooled_vs_k06b_30ns got 0.4855 ref 0.4855 tol 0.0005 -> True
+check full_macro_vs_k06b_30ns got 0.4788 ref 0.4788 tol 0.0005 -> True
+check test_positives_vs_k06b_30ns got 13111.0000 ref 13111.0000 tol 0.5 -> True
+check recovery_0.1_pooled_vs_G81_30ns got 0.6252 ref 0.6250 tol 0.005 -> True
+check recovery_0.1_macro_vs_G81_30ns got 0.6497 ref 0.6500 tol 0.005 -> True
+check recovery_0.5_pooled_vs_G81_30ns got 0.9265 ref 0.9270 tol 0.005 -> True
+check recovery_0.5_macro_vs_G81_30ns got 0.9573 ref 0.9570 tol 0.005 -> True
+check recovery_1.0_pooled_vs_G81_mean_only_full got 1.0690 ref 1.0690 tol 0.005 -> True
+check recovery_1.0_macro_vs_G81_mean_only_full got 1.0826 ref 1.0830 tol 0.005 -> True
+premise OK (43s)
+numpy AP verified vs sklearn for all conditions
+bootstrap 2000/10000 (255s)
+bootstrap 4000/10000 (462s)
+bootstrap 6000/10000 (659s)
+bootstrap 8000/10000 (856s)
+bootstrap 10000/10000 (1034s)
+bootstrap done (1035s), bad gains: {'pooled': 0, 'macro': 0}
+saved results.json / results.csv / per_protein.csv / test_predictions.npz (1036s total)
+{
+  "min_length_recovery_0_8": {
+    "pooled": 0.3,
+    "macro": 0.3
+  },
+  "min_length_recovery_0_9": {
+    "pooled": 0.5,
+    "macro": 0.5
+  },
+  "largest_step": {
+    "pooled": {
+      "from_ns": 0.19999999999999998,
+      "to_ns": 0.3,
+      "increment": 0.16069890801599485
+    },
+    "macro": {
+      "from_ns": 0.4,
+      "to_ns": 0.5,
+      "increment": 0.12943731252050028
+    }
+  },
+  "step_per_protein": {
+    "from_ns": 0.19999999999999998,
+    "to_ns": 0.3,
+    "n_proteins": 85,
+    "median": 0.06887065590250036,
+    "q25": -0.1508365142262098,
+    "q75": 0.37626008906710195,
+    "min": -30.86513169760829,
+    "max": 3.816228517199418,
+    "frac_positive": 0.5882352941176471,
+    "frac_ge_0p1": 0.4470588235294118
+  }
+}
