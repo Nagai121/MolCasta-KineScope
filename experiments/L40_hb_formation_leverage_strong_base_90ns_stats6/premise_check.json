@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "check": "static_pooled_vs_k06b_90ns",
+      "got": 0.441811867927162,
+      "reference": 0.4418,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "static_macro_vs_k06b_90ns",
+      "got": 0.43571625046705703,
+      "reference": 0.4357,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "full_pooled_vs_k06b_90ns",
+      "got": 0.46826751735970984,
+      "reference": 0.4683,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "full_macro_vs_k06b_90ns",
+      "got": 0.46297816152761734,
+      "reference": 0.463,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "test_positives_vs_k06b_90ns",
+      "got": 13068.0,
+      "reference": 13068.0,
+      "tol": 0.5,
+      "ok": true
+    },
+    {
+      "check": "recovery_mean_0.1_pooled_vs_G81_90ns",
+      "got": 0.7466234745243059,
+      "reference": 0.747,
+      "tol": 0.005,
+      "ok": true
+    },
+    {
+      "check": "recovery_mean_0.1_macro_vs_G81_90ns",
+      "got": 0.6949859904757116,
+      "reference": 0.695,
+      "tol": 0.005,
+      "ok": true
+    },
+    {
+      "check": "recovery_mean_0.5_pooled_vs_G81_90ns",
+      "got": 1.02532375188318,
+      "reference": 1.025,
+      "tol": 0.005,
+      "ok": true
+    },
+    {
+      "check": "recovery_mean_0.5_macro_vs_G81_90ns",
+      "got": 1.0077270787103927,
+      "reference": 1.008,
+      "tol": 0.005,
+      "ok": true
+    },
+    {
+      "check": "recovery_mean_1.0_pooled_vs_G81_mean_only_full",
+      "got": 1.0843664897030325,
+      "reference": 1.084,
+      "tol": 0.005,
+      "ok": true
+    },
+    {
+      "check": "recovery_mean_1.0_macro_vs_G81_mean_only_full",
+      "got": 1.059703017303389,
+      "reference": 1.06,
+      "tol": 0.005,
+      "ok": true
+    },
+    {
+      "check": "stats6_definition_maxdiff_vs_k06b_history",
+      "got": 3.814697265625e-06,
+      "reference": 0.0,
+      "tol": 0.0001,
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}
