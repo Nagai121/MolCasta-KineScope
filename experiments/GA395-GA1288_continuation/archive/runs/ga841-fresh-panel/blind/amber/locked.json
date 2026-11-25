@@ -1,0 +1,17 @@
+{
+  "proteins": [
+    "2e6x_A",
+    "1wq6_A",
+    "2pst_X",
+    "2bw3_B",
+    "3fpn_A",
+    "3ush_B",
+    "1j5u_A",
+    "2w6k_A"
+  ],
+  "origin": 49,
+  "window": 100,
+  "branches": 8,
+  "step_fs": 4,
+  "minimize": 25
+}

@@ -1,0 +1,26 @@
+{
+  "id": "GA898",
+  "pairs": 3980,
+  "proteins": [
+    "5b1n_A",
+    "1utg_A",
+    "5h1n_B",
+    "1uha_A",
+    "1wq8_A",
+    "4f55_A",
+    "5dje_B",
+    "1vr8_A"
+  ],
+  "metrics": {
+    "residual_sd": 0.493181125411734,
+    "rmse": 0.4934046975209491,
+    "bias": -0.01485170270894151,
+    "residual_correlation": 0.6334681743816397
+  },
+  "parent": {
+    "residual_sd": 0.4994855302878378,
+    "rmse": 0.49967228165511945,
+    "bias": -0.01365994463790095,
+    "residual_correlation": 0.6219451585202694
+  }
+}

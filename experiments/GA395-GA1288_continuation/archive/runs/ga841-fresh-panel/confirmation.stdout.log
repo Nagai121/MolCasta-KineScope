@@ -1,0 +1,21 @@
+Preparing fixed ROD candidate data
+Prepared 118461 candidates in 155.98s
+Starting amber
+2e6x_A 49 native-seconds 83.2
+1wq6_A 49 native-seconds 90.71
+2pst_X 49 native-seconds 92.76
+2bw3_B 49 native-seconds 48.51
+3fpn_A 49 native-seconds 53.67
+3ush_B 49 native-seconds 71.84
+1j5u_A 49 native-seconds 88.43
+2w6k_A 49 native-seconds 88.4
+Starting charmm
+2e6x_A 49 native-seconds 48.66
+1wq6_A 49 native-seconds 38.72
+2pst_X 49 native-seconds 62.06
+2bw3_B 49 native-seconds 29.11
+3fpn_A 49 native-seconds 30.66
+3ush_B 49 native-seconds 38.53
+1j5u_A 49 native-seconds 35.96
+2w6k_A 49 native-seconds 48.67
+{'id': 'GA821', 'n_pairs': 3864, 'proteins': ['2e6x_A', '1wq6_A', '2pst_X', '2bw3_B', '3fpn_A', '3ush_B', '1j5u_A', '2w6k_A'], 'metrics': {'residual_sd': 0.4258852936136326, 'rmse': 0.4259012519124999, 'bias': 0.0036868773053411134, 'residual_correlation': 0.6608569329686846}, 'parent': {'residual_sd': 0.4299476108445221, 'rmse': 0.4299589671867736, 'bias': 0.0031249629444994585, 'residual_correlation': 0.6528392899141975}, 'by_protein': {'2e6x_A': {'residual_sd': 0.5010372022671823, 'rmse': 0.5010575518346037, 'bias': -0.004515771779122035, 'residual_correlation': 0.5035225727436268}, '1wq6_A': {'residual_sd': 0.32480863728924664, 'rmse': 0.3248092708501656, 'bias': 0.0006415391795424449, 'residual_correlation': 0.7144772244616452}, '2pst_X': {'residual_sd': 0.4594838980175457, 'rmse': 0.46281145011819325, 'bias': -0.05539842798407317, 'residual_correlation': 0.5802032197453433}, '2bw3_B': {'residual_sd': 0.40644653465161096, 'rmse': 0.4068775208032585, 'bias': -0.018722483935174374, 'residual_correlation': 0.6028479486007376}, '3fpn_A': {'residual_sd': 0.44501906816691966, 'rmse': 0.44502928587048907, 'bias': -0.003015667462443619, 'residual_correlation': 0.7719718683045483}, '3ush_B': {'residual_sd': 0.4142298243163293, 'rmse': 0.41531796921407993, 'bias': 0.030044437071949818, 'residual_correlation': 0.6541810147897333}, '1j5u_A': {'residual_sd': 0.397699241611428, 'rmse': 0.3992057442495033, 'bias': 0.034648801761314546, 'residual_correlation': 0.6053538239691307}, '2w6k_A': {'residual_sd': 0.44147742169902604, 'rmse': 0.4414799629093653, 'bias': 0.001497925376946823, 'residual_correlation': 0.6973748268020001}}}

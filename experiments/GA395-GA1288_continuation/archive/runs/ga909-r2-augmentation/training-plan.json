@@ -1,0 +1,18 @@
+{
+  "proteins": [
+    "1i4m_A",
+    "1knt_A",
+    "1uz3_A",
+    "1yu5_X",
+    "2oxo_A",
+    "2qsa_A",
+    "2vm5_A",
+    "3fp5_A",
+    "3fyb_A",
+    "3txs_C",
+    "4obi_A",
+    "5pal_A"
+  ],
+  "replica": 2,
+  "origin": 49
+}
