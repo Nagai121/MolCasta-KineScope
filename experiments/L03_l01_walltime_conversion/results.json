@@ -180,7 +180,8 @@
     "G04 の費用は 1mix_A 1本・この仮想マシンの CPU での実測。タンパク質や計算機が変われば値は変わる。",
     "G04 の固定の費用に含まれる平衡化は 10 ps ずつ（NVT・NPT）の実測で、元の mdp の 100 ps ではない。100 ps で回した場合の見積もりは G04 の記録にない。",
     "L02 の曲がりについての同じ換算は、L02 の完了後に追記する。",
-    "2026-11-25 追記: L02 の曲がりについても同じ換算を行い、rows_L02 に記録した（README 第8節）。L01 の記録（rows）は書き換えていない。"
+    "2026-11-25 追記: L02 の曲がりについても同じ換算を行い、rows_L02 に記録した（README 第8節）。L01 の記録（rows）は書き換えていない。",
+    "2026-11-25: rows_L02 の n_frames を訂正（0.3 ns: 3->4、0.6 ns: 6->7、0.7 ns: 7->8）。合計時間・回復率・時間あたりの回復率は変わらない。"
   ],
   "source_L02": {
     "experiment": "L02",
@@ -270,7 +271,7 @@
     },
     {
       "covered_length_ns": 0.3,
-      "n_frames": 3,
+      "n_frames": 4,
       "production_length_ns": 0.3,
       "fixed_cost_s": 2802.0,
       "production_time_s": 25728.8,
@@ -336,7 +337,7 @@
     },
     {
       "covered_length_ns": 0.6,
-      "n_frames": 6,
+      "n_frames": 7,
       "production_length_ns": 0.6,
       "fixed_cost_s": 2802.0,
       "production_time_s": 51457.7,
@@ -358,7 +359,7 @@
     },
     {
       "covered_length_ns": 0.7,
-      "n_frames": 7,
+      "n_frames": 8,
       "production_length_ns": 0.7,
       "fixed_cost_s": 2802.0,
       "production_time_s": 60034.0,
