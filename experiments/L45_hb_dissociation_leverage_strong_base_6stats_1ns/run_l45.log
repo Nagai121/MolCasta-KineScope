@@ -1,0 +1,197 @@
+cal 6144 test 76342 test pos 1 ns 12696
+history stats check: {'n_candidates_checked': 82486, 'max_abs_diff_per_column_10stats': [0.0, 1.430511474609375e-06, 3.274535140818102e-07, 0.0, 0.0, 9.5367431640625e-07, 2.384185791015625e-07, 2.7093020382729094e-08, 2.7093020382729094e-08, 2.384185793236071e-08], 'max_abs_diff_6stats_subset': 1.430511474609375e-06, 'tol': 0.0001, 'ok': True} (2s)
+static_only pooled 0.5061 macro 0.5222 macro300 0.5330 (22s)
+full_history pooled 0.6142 macro 0.6247 macro300 0.6345 (33s)
+prefix_mean_0.0ns pooled 0.5540 macro 0.5663 macro300 0.5771 (42s)
+prefix_mean_0.1ns pooled 0.5647 macro 0.5778 macro300 0.5881 (49s)
+prefix_mean_0.2ns pooled 0.5733 macro 0.5856 macro300 0.5961 (62s)
+prefix_mean_0.3ns pooled 0.5816 macro 0.5928 macro300 0.6033 (75s)
+prefix_mean_0.4ns pooled 0.5835 macro 0.5936 macro300 0.6053 (82s)
+prefix_mean_0.5ns pooled 0.5891 macro 0.5991 macro300 0.6097 (90s)
+prefix_mean_0.6ns pooled 0.5924 macro 0.6024 macro300 0.6121 (95s)
+prefix_mean_0.7ns pooled 0.5986 macro 0.6086 macro300 0.6194 (100s)
+prefix_mean_0.8ns pooled 0.6041 macro 0.6141 macro300 0.6243 (107s)
+prefix_mean_0.9ns pooled 0.6075 macro 0.6174 macro300 0.6279 (114s)
+prefix_mean_1.0ns pooled 0.6062 macro 0.6167 macro300 0.6264 (124s)
+prefix_6stats_0.0ns pooled 0.5540 macro 0.5663 macro300 0.5771 (134s)
+prefix_6stats_0.1ns pooled 0.5689 macro 0.5811 macro300 0.5924 (140s)
+prefix_6stats_0.2ns pooled 0.5790 macro 0.5898 macro300 0.6000 (154s)
+prefix_6stats_0.3ns pooled 0.5885 macro 0.5993 macro300 0.6104 (169s)
+prefix_6stats_0.4ns pooled 0.5911 macro 0.6022 macro300 0.6128 (176s)
+prefix_6stats_0.5ns pooled 0.5912 macro 0.6009 macro300 0.6113 (195s)
+prefix_6stats_0.6ns pooled 0.5991 macro 0.6093 macro300 0.6197 (210s)
+prefix_6stats_0.7ns pooled 0.6091 macro 0.6189 macro300 0.6294 (223s)
+prefix_6stats_0.8ns pooled 0.6089 macro 0.6190 macro300 0.6293 (230s)
+prefix_6stats_0.9ns pooled 0.6142 macro 0.6237 macro300 0.6344 (235s)
+prefix_6stats_1.0ns pooled 0.6129 macro 0.6228 macro300 0.6326 (241s)
+check static_pooled_vs_L09 got 0.5061 ref 0.5061 tol 0.0005 -> True
+check static_macro_vs_L09 got 0.5222 ref 0.5222 tol 0.0005 -> True
+check static_macro300_vs_L09 got 0.5330 ref 0.5330 tol 0.0005 -> True
+check full_pooled_vs_L09 got 0.6142 ref 0.6142 tol 0.0005 -> True
+check full_macro_vs_L09 got 0.6247 ref 0.6247 tol 0.0005 -> True
+check full_macro300_vs_L09 got 0.6345 ref 0.6345 tol 0.0005 -> True
+check gain_pooled_vs_L09 got 0.1081 ref 0.1081 tol 0.0005 -> True
+check gain_macro_vs_L09 got 0.1025 ref 0.1025 tol 0.0005 -> True
+check mean_recovery_0.0_pooled_vs_L09 got 0.4434 ref 0.4434 tol 0.005 -> True
+check mean_recovery_0.0_macro_vs_L09 got 0.4301 ref 0.4301 tol 0.005 -> True
+check mean_recovery_0.1_pooled_vs_L09 got 0.5423 ref 0.5423 tol 0.005 -> True
+check mean_recovery_0.1_macro_vs_L09 got 0.5427 ref 0.5427 tol 0.005 -> True
+check mean_recovery_0.2_pooled_vs_L09 got 0.6214 ref 0.6214 tol 0.005 -> True
+check mean_recovery_0.2_macro_vs_L09 got 0.6186 ref 0.6186 tol 0.005 -> True
+check mean_recovery_0.3_pooled_vs_L09 got 0.6990 ref 0.6990 tol 0.005 -> True
+check mean_recovery_0.3_macro_vs_L09 got 0.6890 ref 0.6890 tol 0.005 -> True
+check mean_recovery_0.4_pooled_vs_L09 got 0.7159 ref 0.7159 tol 0.005 -> True
+check mean_recovery_0.4_macro_vs_L09 got 0.6967 ref 0.6967 tol 0.005 -> True
+check mean_recovery_0.5_pooled_vs_L09 got 0.7679 ref 0.7679 tol 0.005 -> True
+check mean_recovery_0.5_macro_vs_L09 got 0.7504 ref 0.7504 tol 0.005 -> True
+check mean_recovery_0.6_pooled_vs_L09 got 0.7987 ref 0.7987 tol 0.005 -> True
+check mean_recovery_0.6_macro_vs_L09 got 0.7823 ref 0.7823 tol 0.005 -> True
+check mean_recovery_0.7_pooled_vs_L09 got 0.8560 ref 0.8560 tol 0.005 -> True
+check mean_recovery_0.7_macro_vs_L09 got 0.8427 ref 0.8427 tol 0.005 -> True
+check mean_recovery_0.8_pooled_vs_L09 got 0.9066 ref 0.9066 tol 0.005 -> True
+check mean_recovery_0.8_macro_vs_L09 got 0.8967 ref 0.8967 tol 0.005 -> True
+check mean_recovery_0.9_pooled_vs_L09 got 0.9377 ref 0.9377 tol 0.005 -> True
+check mean_recovery_0.9_macro_vs_L09 got 0.9286 ref 0.9286 tol 0.005 -> True
+check mean_recovery_1.0_pooled_vs_L09 got 0.9262 ref 0.9262 tol 0.005 -> True
+check mean_recovery_1.0_macro_vs_L09 got 0.9224 ref 0.9224 tol 0.005 -> True
+check mean_recovery_1.0_pooled_vs_K2record got 0.9262 ref 0.9343 tol 0.005 -> False
+premise: hard checks OK, but all_ok=false (外部記録との照合のみ不一致)。判断理由は README に明記する。
+premise done (241s), all_ok=False hard_ok=True
+saved fits checkpoint (245s)
+numpy AP verified vs sklearn for all conditions
+bootstrap 500/10000 (333s)
+bootstrap 1000/10000 (414s)
+bootstrap 1500/10000 (490s)
+bootstrap 2000/10000 (574s)
+bootstrap 2500/10000 (645s)
+bootstrap 3000/10000 (721s)
+bootstrap 3500/10000 (794s)
+bootstrap 4000/10000 (870s)
+bootstrap 4500/10000 (942s)
+bootstrap 5000/10000 (1020s)
+bootstrap 5500/10000 (1081s)
+bootstrap 6000/10000 (1138s)
+bootstrap 6500/10000 (1201s)
+bootstrap 7000/10000 (1262s)
+bootstrap 7500/10000 (1320s)
+bootstrap 8000/10000 (1379s)
+bootstrap 8500/10000 (1437s)
+bootstrap 9000/10000 (1497s)
+bootstrap 9500/10000 (1558s)
+bootstrap 10000/10000 (1618s)
+bootstrap done (1618s), bad gains: {'pooled': 0, 'macro': 0}
+saved results.json / results.csv / per_protein.csv / test_predictions.npz (1619s total)
+{
+  "stats6": {
+    "min_length_recovery_0_8": {
+      "pooled": 0.6,
+      "macro": 0.6
+    },
+    "min_length_recovery_0_9": {
+      "pooled": 0.7,
+      "macro": 0.7
+    },
+    "largest_step": {
+      "pooled": {
+        "from_ns": 0.0,
+        "to_ns": 0.1,
+        "increment": 0.1375500463017763
+      },
+      "macro": {
+        "from_ns": 0.0,
+        "to_ns": 0.1,
+        "increment": 0.14479190335637104
+      }
+    },
+    "step_per_protein": {
+      "from_ns": 0.0,
+      "to_ns": 0.1,
+      "n_proteins": 100,
+      "median": 0.1297135416326055,
+      "q25": -0.02779914018366149,
+      "q75": 0.308249313652174,
+      "min": -5.76186340001671,
+      "max": 5.797275286410249,
+      "frac_positive": 0.7,
+      "frac_ge_0p1": 0.56
+    }
+  },
+  "mean_only_recomputed": {
+    "min_length_recovery_0_8": {
+      "pooled": 0.7,
+      "macro": 0.7
+    },
+    "min_length_recovery_0_9": {
+      "pooled": 0.8,
+      "macro": 0.9
+    },
+    "largest_step": {
+      "pooled": {
+        "from_ns": 0.0,
+        "to_ns": 0.1,
+        "increment": 0.09886149827240726
+      },
+      "macro": {
+        "from_ns": 0.0,
+        "to_ns": 0.1,
+        "increment": 0.11268743237201007
+      }
+    }
+  },
+  "l09_record_mean_only": {
+    "min_length_recovery_0_8": {
+      "pooled": 0.7,
+      "macro": 0.7
+    },
+    "min_length_recovery_0_9": {
+      "pooled": 0.8,
+      "macro": 0.9
+    }
+  }
+}
+{
+  "0.0": {
+    "pooled": 0.0,
+    "macro": 0.0
+  },
+  "0.1": {
+    "pooled": 0.03868854802936905,
+    "macro": 0.03210447098436098
+  },
+  "0.2": {
+    "pooled": 0.052838392829185676,
+    "macro": 0.04063428601490737
+  },
+  "0.3": {
+    "pooled": 0.06357645910691079,
+    "macro": 0.06318117313947946
+  },
+  "0.4": {
+    "pooled": 0.07028158582213184,
+    "macro": 0.08357565977321357
+  },
+  "0.5": {
+    "pooled": 0.019438114474996437,
+    "macro": 0.017240495974087833
+  },
+  "0.6": {
+    "pooled": 0.06212392883441109,
+    "macro": 0.06775495600982417
+  },
+  "0.7": {
+    "pooled": 0.0965176050456682,
+    "macro": 0.10120260396372016
+  },
+  "0.8": {
+    "pooled": 0.0447829793872625,
+    "macro": 0.04778902552872211
+  },
+  "0.9": {
+    "pooled": 0.0625492552642063,
+    "macro": 0.06183765740025582
+  },
+  "1.0": {
+    "pooled": 0.06161772541517663,
+    "macro": 0.05894127392711812
+  }
+}
