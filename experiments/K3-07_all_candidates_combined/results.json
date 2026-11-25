@@ -1,0 +1,164 @@
+{
+  "n_cal": 13808,
+  "n_test": 163074,
+  "premise_base_sd": {
+    "ols": 0.6075883590992472,
+    "gbm": 0.6001888358758622
+  },
+  "alignment_maxdiff": {
+    "resid_vs_k3_01_test_pairs": 0.0,
+    "protein_order_vs_k3_01": true,
+    "resid_vs_k3_06_candidates": 0.0,
+    "k3_06_quant10_maxdiff": 0.0,
+    "resid_vs_k3_03_analysis": 4.4814045097041344e-07,
+    "k3_03_quantities_maxdiff": 0.0,
+    "k3_04_quantities_maxdiff": 2.9801755840885846e-08,
+    "k3_01_chi_sincos_maxdiff": 0.0
+  },
+  "models": {
+    "base_static5": {
+      "resid_sd": 0.6001888358758622,
+      "r2": 0.6352458559766085,
+      "delta_vs_base": 0.0
+    },
+    "add_k3_01_chi": {
+      "resid_sd": 0.5973363445561887,
+      "r2": 0.6382898875816707,
+      "delta_vs_base": -0.002852491319673578
+    },
+    "add_k3_02_hb_frame10": {
+      "resid_sd": 0.5959450554987167,
+      "r2": 0.6403452746931002,
+      "delta_vs_base": -0.004243780377145567
+    },
+    "add_k3_03_field": {
+      "resid_sd": 0.5985696800962539,
+      "r2": 0.6372096945209789,
+      "delta_vs_base": -0.001619155779608361
+    },
+    "add_k3_04_backbone": {
+      "resid_sd": 0.6025355452249721,
+      "r2": 0.6323909527418328,
+      "delta_vs_base": 0.0023467093491098545
+    },
+    "add_k3_05_water": {
+      "resid_sd": 0.5787537505836625,
+      "r2": 0.6608350394112854,
+      "delta_vs_base": -0.02143508529219973
+    },
+    "add_k3_06_energy_frame10": {
+      "resid_sd": 0.596518838872219,
+      "r2": 0.63957463692905,
+      "delta_vs_base": -0.0036699970036432328
+    },
+    "add_k3_02_hb_frame0_only": {
+      "resid_sd": 0.5828691322652277,
+      "r2": 0.6559498544029987,
+      "delta_vs_base": -0.017319703610634507
+    },
+    "all_candidates": {
+      "resid_sd": 0.5632024177221966,
+      "r2": 0.6785617670791093,
+      "delta_vs_base": -0.03698641815366566
+    },
+    "all_plus_hb_frame0": {
+      "resid_sd": 0.5472128892588429,
+      "r2": 0.6967469907005419,
+      "delta_vs_base": -0.05297594661701932
+    },
+    "all_minus_k3_01_chi": {
+      "resid_sd": 0.5698983107722995,
+      "r2": 0.6710921192684902,
+      "delta_vs_base": -0.030290525103562782
+    },
+    "all_minus_k3_02_hb_frame10": {
+      "resid_sd": 0.5652650814325212,
+      "r2": 0.6761829440264886,
+      "delta_vs_base": -0.03492375444334106
+    },
+    "all_minus_k3_03_field": {
+      "resid_sd": 0.5645519039367562,
+      "r2": 0.6770522147796478,
+      "delta_vs_base": -0.035636931939106
+    },
+    "all_minus_k3_04_backbone": {
+      "resid_sd": 0.5646934273827162,
+      "r2": 0.6768109166706178,
+      "delta_vs_base": -0.03549540849314603
+    },
+    "all_minus_k3_05_water": {
+      "resid_sd": 0.5848993198204675,
+      "r2": 0.6532687222329385,
+      "delta_vs_base": -0.015289516055394747
+    },
+    "all_minus_k3_06_energy_frame10": {
+      "resid_sd": 0.5659798668223605,
+      "r2": 0.6755327320265336,
+      "delta_vs_base": -0.03420896905350179
+    },
+    "shuffle_refit_calibration": {
+      "resid_sd": 0.6019120585999388,
+      "r2": 0.6331000493501466,
+      "delta_vs_base": 0.0017232227240765452
+    },
+    "shuffle_eval_test": {
+      "resid_sd": 0.627720382694803,
+      "r2": 0.6006606436146663,
+      "delta_vs_base": 0.027531546818940766
+    }
+  },
+  "group_alone_vs_original": {
+    "k3_01_chi": {
+      "mine": 0.5973363445561887,
+      "original": 0.5973363445561887,
+      "diff": 0.0
+    },
+    "k3_02_hb_frame10": {
+      "mine": 0.5959450554987167,
+      "original": 0.5959450554987167,
+      "diff": 0.0
+    },
+    "k3_03_field": {
+      "mine": 0.5985696800962539,
+      "original": 0.5985696800962539,
+      "diff": 0.0
+    },
+    "k3_04_backbone": {
+      "mine": 0.6025355452249721,
+      "original": 0.6025355452249721,
+      "diff": 0.0
+    },
+    "k3_05_water": {
+      "mine": 0.5787537505836625,
+      "original": 0.5787537505836625,
+      "diff": 0.0
+    },
+    "k3_06_energy_frame10": {
+      "mine": 0.596518838872219,
+      "original": 0.596518838872219,
+      "diff": 0.0
+    }
+  },
+  "hb0_alone_vs_original": {
+    "mine": 0.5828691322652277,
+    "original": 0.5828691322652277,
+    "diff": 0.0
+  },
+  "feature_counts": {
+    "base": 5,
+    "k3_01_chi": 16,
+    "k3_02_hb_frame10": 11,
+    "k3_03_field": 2,
+    "k3_04_backbone": 8,
+    "k3_05_water": 8,
+    "k3_06_energy_frame10": 10,
+    "hb_frame0_extra": 11,
+    "all_total": 60,
+    "all_plus_hb0_total": 71
+  },
+  "judgement": {
+    "line_A": 0.3,
+    "all_candidates_sd": 0.5632024177221966,
+    "explains_most": false
+  }
+}
