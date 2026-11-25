@@ -15,6 +15,8 @@
 出力: <out_dir>/<protein>/<protein>_prod_R{r}.tpr / .xtc（切り取り済み）
      完了したタンパク質には done.txt を置き、再実行時は飛ばす。
 """
+import os
+
 import struct
 import sys
 import time
@@ -24,7 +26,11 @@ from pathlib import Path
 
 BASE = "https://www.dsimb.inserm.fr/ATLAS/api/ATLAS/total/{prot}"
 OUT_ROOT = Path("/home/hatch/workspace/kinescope/work/k3_05_total_head")
-XTC_RAW_TARGET = 3 * 1024 * 1024  # 伸ばした XTC の目標バイト数（完全形式は 10 ps 間隔で、必要なのはフレーム 0 と 10 だけ。1フレームは 1a62_A で約 114 KB、大きなタンパク質でも数百 KB なので、数 MB あれば 11 フレームに足りる。足りない場合は抽出側の確認で失敗として現れ、大きめの設定で取り直す）
+# 伸ばした XTC の目標バイト数。環境変数 K3_XTC_TARGET_MB で変えられる
+# （既定は 3 MB。起点フレーム（完全形式のフレーム100）まで要るときは
+# 32 MB にする。完全形式は 10 ps 間隔で、1フレームは 1a62_A で約 114 KB、
+# 大きなタンパク質でも数百 KB なので、32 MB あればフレーム100 まで届く）
+XTC_RAW_TARGET = int(os.environ.get("K3_XTC_TARGET_MB", "3")) * 1024 * 1024
 CHUNK = 2 * 1024 * 1024
 
 

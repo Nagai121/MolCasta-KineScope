@@ -1,5 +1,6 @@
-"""K3-02 shared counting code: frame-0 H-bond network counts per candidate.
-Topology/donor-acceptor definitions replicate the base pipeline
+"""K3-02 shared counting code: H-bond network counts per candidate at a
+chosen history frame (frame 0 = initial structure, frame 10 = origin
+frame). Topology/donor-acceptor definitions replicate the base pipeline
 (tseries prepare). Pair atom indices (k06b_out, converted heavy-atom
 order) map onto the total universe's protein atoms via heavy_rank.
 """
@@ -15,6 +16,10 @@ COLUMNS = ["n_out_donor_res", "n_in_donor_res", "n_out_acceptor_res", "n_in_acce
            "n_hb_total", "n_partner_backbone", "n_partner_sidechain", "n_partner_water",
            "n_competing", "dist_ab_frame0", "bonded_frame0", "n_hb_donor_res_total",
            "n_hb_acceptor_res_total"]
+COLUMNS_F10 = ["n_out_donor_res", "n_in_donor_res", "n_out_acceptor_res", "n_in_acceptor_res",
+               "n_hb_total", "n_partner_backbone", "n_partner_sidechain", "n_partner_water",
+               "n_competing", "dist_ab_frame10", "bonded_frame10", "n_hb_donor_res_total",
+               "n_hb_acceptor_res_total"]
 
 def build_protein_topology(u):
     prot = u.select_atoms("protein")
@@ -59,7 +64,11 @@ def mic_dist(P, Q, box):
 class FramesUnavailable(Exception):
     pass
 
-def count_replica(u, topo, pair, hist0):
+def count_replica(u, topo, pair, hist0, count_frame=0):
+    """Count the H-bond network quantities at history frame `count_frame`
+    (0 = initial structure, 100 = total frame 100 = origin frame 10).
+    The premise check always uses both frames 0 and 100 against the
+    saved history distances, whichever frame is counted."""
     frames = {}
     try:
         for fi, ts in enumerate(u.trajectory):
@@ -83,11 +92,14 @@ def count_replica(u, topo, pair, hist0):
         frame100_maxdiff=float(np.max(np.abs(pdist(pos100, box100, a_idx, b_idx) - pair[:, 2]))),
         elem_a_ok=bool(np.all(topo["elements"][a_idx] == np.where(pair[:, 6] == 7, "N", "O"))),
         elem_b_ok=bool(np.all(topo["elements"][b_idx] == np.where(pair[:, 7] == 7, "N", "O"))))
-    P = pos0[:topo["n_protein_atoms"]]
+    if count_frame not in frames:
+        raise ValueError(f"count_frame {count_frame} not in {sorted(frames)}")
+    pos, box = frames[count_frame]
+    P = pos[:topo["n_protein_atoms"]]
     wat = u.select_atoms("resname SOL and name OW")
-    W = pos0[wat.indices] if len(wat) else np.empty((0, 3))
+    W = pos[wat.indices] if len(wat) else np.empty((0, 3))
     dP = P[topo["d_at"]]; aP = P[topo["a_at"]]
-    Dpp = mic_dist(dP, aP, box0)
+    Dpp = mic_dist(dP, aP, box)
     bonds_pp = np.argwhere((Dpp <= HB) & (topo["d_res"][:, None] != topo["a_res"][None, :]))
     bl = []
     for i, j in bonds_pp:
@@ -95,11 +107,11 @@ def count_replica(u, topo, pair, hist0):
                    0 if topo["d_kind"][i] == 0 else 1, 0 if topo["a_kind"][j] == 0 else 1,
                    int(topo["d_at"][i]), int(topo["a_at"][j])))
     if len(W):
-        Dpw = mic_dist(dP, W, box0)
+        Dpw = mic_dist(dP, W, box)
         for i, j in np.argwhere(Dpw <= HB):
             bl.append((int(topo["d_res"][i]), -1, 0 if topo["d_kind"][i] == 0 else 1, 2,
                        int(topo["d_at"][i]), -1))
-        Dwp = mic_dist(W, aP, box0)
+        Dwp = mic_dist(W, aP, box)
         for i, j in np.argwhere(Dwp <= HB):
             bl.append((-1, int(topo["a_res"][j]), 2, 0 if topo["a_kind"][j] == 0 else 1,
                        -1, int(topo["a_at"][j])))
@@ -117,7 +129,7 @@ def count_replica(u, topo, pair, hist0):
         pk = np.where((is_d & (ba_res != ra)) | (is_d2 & (ba_res != rd)), ba_kc, bd_kc)
         n_bb = int((inv & (pk == 0)).sum()); n_sc = int((inv & (pk == 1)).sum()); n_w = int((inv & (pk == 2)).sum())
         comp = int(((bd_at == a_atm) & (ba_res != ra)).sum() + ((ba_at == b_atm) & (bd_res != rd)).sum())
-        dv = (pos0[b_atm] - pos0[a_atm]); dv -= box0 * np.round(dv / box0)
+        dv = (pos[b_atm] - pos[a_atm]); dv -= box * np.round(dv / box)
         dab = float(np.linalg.norm(dv))
         out[ci] = [n_out_d, n_in_d, n_out_a, n_in_a, n_out_d + n_in_d + n_out_a + n_in_a,
                    n_bb, n_sc, n_w, comp, dab, 1.0 if dab <= HB else 0.0,

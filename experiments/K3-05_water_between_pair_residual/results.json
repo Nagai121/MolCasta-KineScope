@@ -18,7 +18,9 @@
     "n_bridge_mean": 0.0664238321252928,
     "has_bridge_f0": 0.061812428713344865,
     "frac_frames_bridge": 0.05000490574831058,
-    "persistence": 0.010882585002431626
+    "persistence": 0.010882585002431626,
+    "n_bridge_f100": 0.09463188491114463,
+    "has_bridge_f100": 0.09014925739234948
   },
   "criteria_fixed_in_advance": {
     "correlation_abs_threshold": 0.3,
@@ -85,6 +87,26 @@
         "pearson": -0.05043615354522801,
         "spearman": -0.05733232233440809
       }
+    },
+    "n_bridge_f100": {
+      "gbm": {
+        "pearson": 0.09441984630533838,
+        "spearman": 0.03340392926074614
+      },
+      "ols": {
+        "pearson": 0.10888586156871215,
+        "spearman": 0.04219240724030424
+      }
+    },
+    "has_bridge_f100": {
+      "gbm": {
+        "pearson": 0.08977597674257073,
+        "spearman": 0.0331360212542601
+      },
+      "ols": {
+        "pearson": 0.10288298232071849,
+        "spearman": 0.04181177158458059
+      }
     }
   },
   "sd_reduction": {
@@ -112,9 +134,21 @@
       "gbm": 0.5986668694487115,
       "ols": 0.6068402609808793
     },
+    "n_bridge_f100": {
+      "gbm": 0.5976045071853175,
+      "ols": 0.6034915737473816
+    },
+    "has_bridge_f100": {
+      "gbm": 0.5977041691598064,
+      "ols": 0.6039548284740256
+    },
     "all_quantities": {
       "gbm": 0.5852801885713557,
       "ols": 0.6011207292691585
+    },
+    "all_quantities_including_f100": {
+      "gbm": 0.5787537505836625,
+      "ols": 0.5918759032519022
     }
   },
   "shuffle_control": {
@@ -160,8 +194,25 @@
       },
       "sd_gbm_with_shuffled": 0.600169302566862
     },
+    "n_bridge_f100": {
+      "corr_gbm": {
+        "pearson": 0.002432304113701803,
+        "spearman": 0.0012255482747657754
+      },
+      "sd_gbm_with_shuffled": 0.6028824611599292
+    },
+    "has_bridge_f100": {
+      "corr_gbm": {
+        "pearson": 0.0022799778951210045,
+        "spearman": 0.001271940787781728
+      },
+      "sd_gbm_with_shuffled": 0.6031294467649859
+    },
     "all_quantities": {
       "sd_gbm_with_shuffled": 0.6088807154747495
+    },
+    "all_quantities_including_f100": {
+      "sd_gbm_with_shuffled": 0.6098602293971469
     }
   },
   "per_protein_pearson_gbm": {
@@ -200,6 +251,18 @@
       "mean": -0.04903472999936968,
       "median": -0.04551377770869874,
       "frac_abs_ge_0.3": 0.0
+    },
+    "n_bridge_f100": {
+      "n_proteins": 100,
+      "mean": 0.09973338169672351,
+      "median": 0.0906901446147997,
+      "frac_abs_ge_0.3": 0.01
+    },
+    "has_bridge_f100": {
+      "n_proteins": 100,
+      "mean": 0.09498312811290528,
+      "median": 0.08679905956874093,
+      "frac_abs_ge_0.3": 0.01
     }
   }
 }
