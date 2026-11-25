@@ -1,0 +1,35 @@
+{
+  "train_proteins": [
+    "1gqv_A",
+    "1lr0_A",
+    "3v0r_A",
+    "6fub_B",
+    "4oe9_B",
+    "2y1y_A",
+    "2igp_A",
+    "5pal_A",
+    "2oy9_B",
+    "1bgf_A",
+    "3ic3_B",
+    "3cw3_A",
+    "2cg7_A",
+    "1u84_A",
+    "4hwx_A",
+    "1ikt_A",
+    "4ykd_A",
+    "4obi_A",
+    "2bo1_A",
+    "1i4m_A",
+    "2b0a_A",
+    "6pxz_B",
+    "3lyy_A",
+    "1cpq_A"
+  ],
+  "train_origin": 49,
+  "validation_proteins": [
+    "3mx7_A",
+    "3t92_A",
+    "4wrp_A"
+  ],
+  "length_ps": 25
+}

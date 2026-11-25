@@ -1,0 +1,32 @@
+1gqv_A 49 explicit elapsed 24.1431467999937
+1lr0_A 49 explicit elapsed 43.45171620009933
+3v0r_A 49 explicit elapsed 21.650944900000468
+6fub_B 49 explicit elapsed 31.495795499999076
+4oe9_B 49 explicit elapsed 21.40345270000398
+2y1y_A 49 explicit elapsed 21.91518889996223
+2igp_A 49 explicit elapsed 19.035654500010423
+5pal_A 49 explicit elapsed 18.41544959996827
+2oy9_B 49 explicit elapsed 21.800713900011033
+1bgf_A 49 explicit elapsed 30.282021600054577
+3ic3_B 49 explicit elapsed 27.584927799995057
+3cw3_A 49 explicit elapsed 15.088148799957708
+2cg7_A 49 explicit elapsed 21.03956039994955
+1u84_A 49 explicit elapsed 15.507450000033714
+4hwx_A 49 explicit elapsed 18.637886199983768
+1ikt_A 49 explicit elapsed 26.8029115999816
+4ykd_A 49 explicit elapsed 28.09484490007162
+4obi_A 49 explicit elapsed 25.959367500036024
+2bo1_A 49 explicit elapsed 20.720108599984087
+1i4m_A 49 explicit elapsed 27.33284809999168
+2b0a_A 49 explicit elapsed 27.09570609999355
+6pxz_B 49 explicit elapsed 22.030323099927045
+3lyy_A 49 explicit elapsed 38.86343249992933
+1cpq_A 49 explicit elapsed 16.20945510000456
+{'id': 'GA1238', 'view': 'implicit', 'depth': 2, 'metrics': {'all': {'residual_sd': 0.5159523553349596, 'rmse': 0.5165197561699868, 'bias': -0.02420383313052331, 'residual_correlation': 0.6009465888108261}, 'first': {'residual_sd': 0.4095685329719179, 'rmse': 0.40960146395558394, 'bias': -0.005193849611655746, 'residual_correlation': 0.6547656584767254}, 'later': {'residual_sd': 0.5594448850596778, 'rmse': 0.5604340855817084, 'bias': -0.03328340220544534, 'residual_correlation': 0.5852568989044491}}}
+{'id': 'GA1239', 'view': 'implicit', 'depth': 3, 'metrics': {'all': {'residual_sd': 0.515448720525958, 'rmse': 0.5160316719558454, 'bias': -0.02452147976159004, 'residual_correlation': 0.6012366571341464}, 'first': {'residual_sd': 0.4076931737472386, 'rmse': 0.40773921014975417, 'bias': -0.006126954663555807, 'residual_correlation': 0.6584089536184129}, 'later': {'residual_sd': 0.5594276603435779, 'rmse': 0.5604182987696448, 'bias': -0.03330709291387003, 'residual_correlation': 0.5843495633163645}}}
+{'id': 'GA1240', 'view': 'implicit', 'depth': 5, 'metrics': {'all': {'residual_sd': 0.5146249947662888, 'rmse': 0.5152499878132403, 'bias': -0.025370547951147696, 'residual_correlation': 0.6024217132099767}, 'first': {'residual_sd': 0.4062004130248658, 'rmse': 0.4062759654541827, 'bias': -0.007834830193225785, 'residual_correlation': 0.6617977373249146}, 'later': {'residual_sd': 0.5588448894231925, 'rmse': 0.5598628415705079, 'bias': -0.03374597660437956, 'residual_correlation': 0.5843913217304847}}}
+{'id': 'GA1241', 'view': 'implicit', 'depth': 7, 'metrics': {'all': {'residual_sd': 0.5143361855617611, 'rmse': 0.51501257191611, 'bias': -0.02638631185717546, 'residual_correlation': 0.603173672689835}, 'first': {'residual_sd': 0.40539807851321064, 'rmse': 0.4054744432964103, 'bias': -0.00786905993944568, 'residual_correlation': 0.663357000880306}, 'later': {'residual_sd': 0.5587079206225554, 'rmse': 0.5598175878362978, 'bias': -0.03523054192701697, 'residual_correlation': 0.5850646173908273}}}
+{'id': 'GA1242', 'view': 'solvent', 'depth': 2, 'metrics': {'all': {'residual_sd': 0.51612598100757, 'rmse': 0.5167377157888227, 'bias': -0.025136400848641365, 'residual_correlation': 0.6003354292003286}, 'first': {'residual_sd': 0.40737350033828756, 'rmse': 0.40741704313135163, 'bias': -0.005956362650550539, 'residual_correlation': 0.6593979197827371}, 'later': {'residual_sd': 0.5604420182546865, 'rmse': 0.5614904746999287, 'bias': -0.034297191625044035, 'residual_correlation': 0.5828745242641246}}}
+{'id': 'GA1243', 'view': 'solvent', 'depth': 3, 'metrics': {'all': {'residual_sd': 0.5161264572421188, 'rmse': 0.5167755835459076, 'bias': -0.025893703557286946, 'residual_correlation': 0.5998404907780329}, 'first': {'residual_sd': 0.40740810358483204, 'rmse': 0.40746987563281073, 'bias': -0.0070948348556526, 'residual_correlation': 0.659036716515677}, 'later': {'residual_sd': 0.5604397672743681, 'rmse': 0.5615236591597571, 'bias': -0.03487243974280084, 'residual_correlation': 0.5823080091587597}}}
+{'id': 'GA1244', 'view': 'solvent', 'depth': 5, 'metrics': {'all': {'residual_sd': 0.5153515979807459, 'rmse': 0.5160393950878737, 'bias': -0.026634333882232356, 'residual_correlation': 0.6007897127509841}, 'first': {'residual_sd': 0.4045312123531377, 'rmse': 0.40463846877707654, 'bias': -0.009316042419275677, 'residual_correlation': 0.665226346971105}, 'later': {'residual_sd': 0.560415148981483, 'rmse': 0.5615011684052659, 'bias': -0.03490591515117365, 'residual_correlation': 0.5810624958672646}}}
+{'id': 'GA1245', 'view': 'solvent', 'depth': 7, 'metrics': {'all': {'residual_sd': 0.5149943082168856, 'rmse': 0.5156495343531872, 'bias': -0.025986627000634036, 'residual_correlation': 0.6015250971381494}, 'first': {'residual_sd': 0.4045764586128053, 'rmse': 0.40467512723351723, 'bias': -0.008935756139492048, 'residual_correlation': 0.6651055309462337}, 'later': {'residual_sd': 0.5599197985035617, 'rmse': 0.5609590632081427, 'bias': -0.03413048254988579, 'residual_correlation': 0.5820824647102381}}}

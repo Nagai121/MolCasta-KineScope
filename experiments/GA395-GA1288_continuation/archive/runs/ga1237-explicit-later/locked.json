@@ -1,0 +1,9 @@
+{
+  "selector": "GA1236 first-origin pilot",
+  "coef": 0.1,
+  "origins": [
+    149,
+    249
+  ],
+  "model": "GA1086"
+}

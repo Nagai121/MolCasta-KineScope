@@ -1,0 +1,22 @@
+{
+  "protocol": "retrospective on GA841 after completion; no model or hyperparameter choice",
+  "n_pairs": 3864,
+  "GA348": {
+    "residual_sd": 0.42994760751110983,
+    "rmse": 0.4299589638395473,
+    "bias": 0.003124961031721003,
+    "residual_correlation": 0.6528392906488886
+  },
+  "GA386": {
+    "residual_sd": 0.42907751395870747,
+    "rmse": 0.4290855324268156,
+    "bias": -0.0026231951927039895,
+    "residual_correlation": 0.6541252618101829
+  },
+  "GA821": {
+    "residual_sd": 0.4258852897974676,
+    "rmse": 0.4259012480799197,
+    "bias": 0.0036868753925626578,
+    "residual_correlation": 0.6608569348533141
+  }
+}

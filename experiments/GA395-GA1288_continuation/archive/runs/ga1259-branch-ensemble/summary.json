@@ -1,0 +1,146 @@
+{
+  "GA1259": {
+    "method": "fixed_control",
+    "metrics": {
+      "all": {
+        "residual_sd": 0.4924740105015855,
+        "rmse": 0.4932668720352011,
+        "bias": -0.02795632357581466,
+        "residual_correlation": 0.6533458839081768
+      },
+      "first": {
+        "residual_sd": 0.40320976556348204,
+        "rmse": 0.40337139011661155,
+        "bias": -0.011417675720105894,
+        "residual_correlation": 0.6686627776031719
+      },
+      "later": {
+        "residual_sd": 0.5296457578726741,
+        "rmse": 0.5308580298989031,
+        "bias": -0.03585553061419426,
+        "residual_correlation": 0.6514875026590893
+      }
+    },
+    "amber_group_count": 28
+  },
+  "GA1260": {
+    "method": "readout_average",
+    "metrics": {
+      "all": {
+        "residual_sd": 0.4955569773916046,
+        "rmse": 0.496377378415557,
+        "bias": -0.02852689890608197,
+        "residual_correlation": 0.6473802998555085
+      },
+      "first": {
+        "residual_sd": 0.40301916566412394,
+        "rmse": 0.40318706808128074,
+        "bias": -0.01163460250170761,
+        "residual_correlation": 0.6696411327880312
+      },
+      "later": {
+        "residual_sd": 0.533938771982301,
+        "rmse": 0.5351913745739605,
+        "bias": -0.03659501595023134,
+        "residual_correlation": 0.642954322372028
+      }
+    },
+    "amber_group_count": 28
+  },
+  "GA1261": {
+    "method": "readout_median",
+    "metrics": {
+      "all": {
+        "residual_sd": 0.49502458998243487,
+        "rmse": 0.49586055281424785,
+        "bias": -0.028780951165202674,
+        "residual_correlation": 0.648584918976834
+      },
+      "first": {
+        "residual_sd": 0.40319770822585993,
+        "rmse": 0.40337640027495436,
+        "bias": -0.012005347983068931,
+        "residual_correlation": 0.6693430210653257
+      },
+      "later": {
+        "residual_sd": 0.5331466745292999,
+        "rmse": 0.53441475084404,
+        "bias": -0.03679333306519175,
+        "residual_correlation": 0.644626068474903
+      }
+    },
+    "amber_group_count": 28
+  },
+  "GA1262": {
+    "method": "all_branches_one_readout",
+    "metrics": {
+      "all": {
+        "residual_sd": 0.4926378663330884,
+        "rmse": 0.4933537958196636,
+        "bias": -0.02656878816303814,
+        "residual_correlation": 0.6522670398324278
+      },
+      "first": {
+        "residual_sd": 0.403556678732238,
+        "rmse": 0.4036808372616366,
+        "bias": -0.010011264798277004,
+        "residual_correlation": 0.6676822568904882
+      },
+      "later": {
+        "residual_sd": 0.5297443010806605,
+        "rmse": 0.5308650382002902,
+        "bias": -0.03447701054265122,
+        "residual_correlation": 0.6502623756538924
+      }
+    },
+    "amber_group_count": 28
+  },
+  "GA1263": {
+    "method": "half_anchor",
+    "metrics": {
+      "all": {
+        "residual_sd": 0.49390195576477897,
+        "rmse": 0.4947087331542085,
+        "bias": -0.028241613813098962,
+        "residual_correlation": 0.6507080779334037
+      },
+      "first": {
+        "residual_sd": 0.4029659701461816,
+        "rmse": 0.40313077903687594,
+        "bias": -0.011526140335135656,
+        "residual_correlation": 0.66951869616599
+      },
+      "later": {
+        "residual_sd": 0.5316912331052528,
+        "rmse": 0.5329238576179081,
+        "bias": -0.0362252764981593,
+        "residual_correlation": 0.6475584141913014
+      }
+    },
+    "amber_group_count": 28
+  },
+  "GA1264": {
+    "method": "soft_uncertainty",
+    "metrics": {
+      "all": {
+        "residual_sd": 0.4927140016686819,
+        "rmse": 0.4935192157150913,
+        "bias": -0.02818029168892642,
+        "residual_correlation": 0.653140250294683
+      },
+      "first": {
+        "residual_sd": 0.40292895880409874,
+        "rmse": 0.4030946327737757,
+        "bias": -0.011555826585320369,
+        "residual_correlation": 0.6693698301031263
+      },
+      "later": {
+        "residual_sd": 0.5300755629710538,
+        "rmse": 0.5313048014367222,
+        "bias": -0.0361204868549038,
+        "residual_correlation": 0.6510212758138556
+      }
+    },
+    "amber_group_count": 28
+  }
+}
