@@ -1,0 +1,146 @@
+{
+  "experiment": "K3-03",
+  "phenomenon": "hydrogen_bond_formation",
+  "base": "strong (K06(b)): correction model on frozen T1I2006, calibration 8 proteins, test 100 unseen proteins x 3 replicas",
+  "residual_definition": "real mean distance over history frames 0-10 minus static-only prediction (5 static features), regressors fitted on calibration candidates only (K39/K42 construction)",
+  "n_calibration": 13808,
+  "n_test": 163074,
+  "quantity_keys": [
+    "e_par",
+    "e_mag"
+  ],
+  "quantity_labels": [
+    "e_parallel_V_per_A",
+    "e_magnitude_V_per_A"
+  ],
+  "quantity_source": "electric field at the pair midpoint from CHARMM36 (Jul2022 GROMACS port) partial charges of heavy atoms at the origin frame (frame 10); donor and acceptor atoms excluded; HIS = HSE primary, HSD sensitivity; termini patched (NH3+ / COO-)",
+  "base_residual_std": {
+    "gbm": {
+      "residual_std_calibration": 0.5279234315784658,
+      "residual_std_test": 0.6001888358758622
+    },
+    "linear": {
+      "residual_std_calibration": 0.5652910448812659,
+      "residual_std_test": 0.6075883590992472
+    }
+  },
+  "premise_check_vs_K42": {
+    "gbm_test_std_expected_from_K42": 0.6,
+    "linear_test_std_expected_from_K42": 0.61,
+    "gbm_ok": true,
+    "linear_ok": true
+  },
+  "correlations": {
+    "vs_gbm_residual": {
+      "e_parallel_V_per_A": {
+        "pearson_pooled": 0.012102383294145405,
+        "spearman_pooled": 0.03712904972174171,
+        "n": 163074,
+        "per_protein_pearson_median": 0.01371462883109469,
+        "per_protein_pearson_q1": -0.006756824565450519,
+        "per_protein_pearson_q3": 0.03714111155433548,
+        "per_protein_frac_abs_ge_0.3": 0.0,
+        "related_by_fixed_line": false
+      },
+      "e_magnitude_V_per_A": {
+        "pearson_pooled": -0.013647523725384827,
+        "spearman_pooled": -0.024074852197579877,
+        "n": 163074,
+        "per_protein_pearson_median": -0.013275008444897433,
+        "per_protein_pearson_q1": -0.034193253716294156,
+        "per_protein_pearson_q3": 0.0030776743956799067,
+        "per_protein_frac_abs_ge_0.3": 0.0,
+        "related_by_fixed_line": false
+      }
+    },
+    "vs_linear_residual": {
+      "e_parallel_V_per_A": {
+        "pearson_pooled": 0.021520070718061057,
+        "spearman_pooled": 0.042604303618334775,
+        "n": 163074,
+        "per_protein_pearson_median": 0.025984164943833744,
+        "per_protein_pearson_q1": 0.007715628237002909,
+        "per_protein_pearson_q3": 0.051477982876149304,
+        "per_protein_frac_abs_ge_0.3": 0.0,
+        "related_by_fixed_line": false
+      },
+      "e_magnitude_V_per_A": {
+        "pearson_pooled": -0.02480312135173209,
+        "spearman_pooled": -0.0443406518387986,
+        "n": 163074,
+        "per_protein_pearson_median": -0.03224045687163059,
+        "per_protein_pearson_q1": -0.055749435416456175,
+        "per_protein_pearson_q3": -0.009698432001823113,
+        "per_protein_frac_abs_ge_0.3": 0.0,
+        "related_by_fixed_line": false
+      }
+    }
+  },
+  "added_to_static_prediction": {
+    "gbm": {
+      "residual_std_test_with_quantity": 0.5985696800962539,
+      "baseline_residual_std_test": 0.6001888358758622,
+      "explains_most_by_fixed_line": false
+    },
+    "linear": {
+      "residual_std_test_with_quantity": 0.6076193374978008,
+      "baseline_residual_std_test": 0.6075883590992472,
+      "explains_most_by_fixed_line": false
+    }
+  },
+  "sensitivity": {
+    "correlations_vs_gbm_residual": {
+      "e_parallel_V_per_A": {
+        "pearson_pooled": 0.011919553986973995,
+        "spearman_pooled": 0.03669763294308463,
+        "n": 163074,
+        "per_protein_pearson_median": 0.012943513535376275,
+        "per_protein_pearson_q1": -0.007640193091555798,
+        "per_protein_pearson_q3": 0.03694724849841431,
+        "per_protein_frac_abs_ge_0.3": 0.0,
+        "related_by_fixed_line": false
+      },
+      "e_magnitude_V_per_A": {
+        "pearson_pooled": -0.013563889580944894,
+        "spearman_pooled": -0.02413100532063302,
+        "n": 163074,
+        "per_protein_pearson_median": -0.011616414827751317,
+        "per_protein_pearson_q1": -0.036582533220018434,
+        "per_protein_pearson_q3": 0.002418653008148144,
+        "per_protein_frac_abs_ge_0.3": 0.0,
+        "related_by_fixed_line": false
+      }
+    },
+    "residual_std_test_with_quantity_gbm": 0.5989830599914386
+  },
+  "swap_control": {
+    "residual_std_test_with_swapped_quantity_gbm": 0.6045068371433272,
+    "correlations_vs_gbm_residual": {
+      "e_parallel_V_per_A": {
+        "pearson_pooled": 0.002769052191008824,
+        "spearman_pooled": -0.0006314948772104385,
+        "n": 163074,
+        "per_protein_pearson_median": 0.0031619209146506316,
+        "per_protein_pearson_q1": -0.010157153028742018,
+        "per_protein_pearson_q3": 0.0160506187288463,
+        "per_protein_frac_abs_ge_0.3": 0.0,
+        "related_by_fixed_line": false
+      },
+      "e_magnitude_V_per_A": {
+        "pearson_pooled": -0.00014889915456831035,
+        "spearman_pooled": -0.012784966611755122,
+        "n": 163074,
+        "per_protein_pearson_median": -0.002082944720700496,
+        "per_protein_pearson_q1": -0.01879710303076973,
+        "per_protein_pearson_q3": 0.01755460209438359,
+        "per_protein_frac_abs_ge_0.3": 0.0,
+        "related_by_fixed_line": false
+      }
+    }
+  },
+  "fixed_lines": {
+    "correlation_abs": 0.3,
+    "residual_std_explains_most_A": 0.3,
+    "residual_std_floor_A": 0.249
+  }
+}

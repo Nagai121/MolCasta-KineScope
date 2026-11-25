@@ -1,0 +1,3 @@
+quantity,pearson_vs_gbm_residual,spearman_vs_gbm_residual,pearson_vs_linear_residual,spearman_vs_linear_residual,related_by_fixed_line
+e_parallel_V_per_A,0.0121,0.0371,0.0215,0.0426,False
+e_magnitude_V_per_A,-0.0136,-0.0241,-0.0248,-0.0443,False
