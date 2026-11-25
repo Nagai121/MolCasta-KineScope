@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "check": "static_pooled",
+      "got": 0.48235254274429173,
+      "reference": 0.4824,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "check": "full_pooled",
+      "got": 0.5405050116387546,
+      "reference": 0.5405,
+      "tol": 0.0005,
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}
