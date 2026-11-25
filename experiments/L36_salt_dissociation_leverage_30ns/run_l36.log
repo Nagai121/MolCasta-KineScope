@@ -1,0 +1,58 @@
+train 735 test 360 test pos 149
+static_only pooled 0.4799 macro 0.6309 (13s)
+full_history pooled 0.5432 macro 0.6465 (20s)
+prefix_mean_0.0ns pooled 0.5500 macro 0.6567 (26s)
+prefix_mean_0.1ns pooled 0.5948 macro 0.6941 (34s)
+prefix_mean_0.2ns pooled 0.5828 macro 0.6894 (41s)
+prefix_mean_0.3ns pooled 0.5653 macro 0.6517 (48s)
+prefix_mean_0.4ns pooled 0.5695 macro 0.6782 (56s)
+prefix_mean_0.5ns pooled 0.5707 macro 0.6769 (60s)
+prefix_mean_0.6ns pooled 0.5490 macro 0.6305 (62s)
+prefix_mean_0.7ns pooled 0.5724 macro 0.6576 (64s)
+prefix_mean_0.8ns pooled 0.5432 macro 0.6281 (66s)
+prefix_mean_0.9ns pooled 0.5584 macro 0.6408 (68s)
+prefix_mean_1.0ns pooled 0.5673 macro 0.6578 (71s)
+check static_pooled got 0.4799 ref 0.4799 tol 0.0005 -> True
+check full_pooled got 0.5432 ref 0.5432 tol 0.0005 -> True
+premise OK (71s)
+numpy AP verified vs sklearn
+bootstrap 2500/10000 (81s)
+bootstrap 5000/10000 (95s)
+bootstrap 7500/10000 (113s)
+bootstrap 10000/10000 (125s)
+bootstrap done (125s), bad gains: {'pooled': 1116, 'macro': 3535}
+saved (125s total)
+{
+  "min_length_recovery_0_8": {
+    "pooled": 0.0,
+    "macro": 0.0
+  },
+  "min_length_recovery_0_9": {
+    "pooled": 0.0,
+    "macro": 0.0
+  },
+  "largest_step": {
+    "pooled": {
+      "from_ns": 0.0,
+      "to_ns": 0.1,
+      "increment": 0.7076139251918279
+    },
+    "macro": {
+      "from_ns": 0.0,
+      "to_ns": 0.1,
+      "increment": 2.39922459224644
+    }
+  },
+  "step_per_protein": {
+    "from_ns": 0.0,
+    "to_ns": 0.1,
+    "n_proteins": 15,
+    "median": 0.318769927677113,
+    "q25": -0.10714285714285676,
+    "q75": 0.5314367891716043,
+    "min": -0.5555555555555547,
+    "max": 4.575455058241403,
+    "frac_positive": 0.6,
+    "frac_ge_0p1": 0.5333333333333333
+  }
+}
