@@ -34,7 +34,8 @@ atoms only; no water or ions).
 Pre-fixed readings (K3 series): |correlation| >= 0.3 counts as
 "related" (same line as K2-03). If adding a quantity to the static
 prediction brings the residual SD to <= 0.30 Angstrom, the quantity
-"explains most of the residual" (replica floor 0.249 Angstrom).
+"explains most of the residual" (replica floor 0.249 Angstrom, measured by
+K23 on D conditions; no strong-base remeasurement on record).
 Shuffle control: quantities permuted within protein x replica groups
 (seed 20261125); the effect must disappear.
 """
