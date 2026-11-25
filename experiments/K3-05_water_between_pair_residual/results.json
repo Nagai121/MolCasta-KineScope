@@ -1,0 +1,205 @@
+{
+  "experiment": "K3-05",
+  "base": "K06(b) strong base, HB formation; residual = real mean - static-only prediction (K39/K42 construction, fits on calibration candidates only)",
+  "n_cal": 13808,
+  "n_test": 163074,
+  "dist_check_max_abs_diff_vs_G05_series_A": 0.004213805475035137,
+  "residual_sd_test": {
+    "ols": 0.6075883590992472,
+    "gbm": 0.6001888358758622
+  },
+  "residual_sd_cal": {
+    "ols": 0.5652910448812659,
+    "gbm": 0.5279234315784658
+  },
+  "water_quantity_means_test": {
+    "n_bridge_f0": 0.06480493518280045,
+    "n_bridge_f1": 0.06804272906778518,
+    "n_bridge_mean": 0.0664238321252928,
+    "has_bridge_f0": 0.061812428713344865,
+    "frac_frames_bridge": 0.05000490574831058,
+    "persistence": 0.010882585002431626
+  },
+  "criteria_fixed_in_advance": {
+    "correlation_abs_threshold": 0.3,
+    "residual_sd_line_A": 0.3,
+    "residual_sd_lower_bound_A": 0.249
+  },
+  "correlations": {
+    "n_bridge_f0": {
+      "gbm": {
+        "pearson": -0.11496351706223205,
+        "spearman": -0.11611957952455633
+      },
+      "ols": {
+        "pearson": -0.11385146107127987,
+        "spearman": -0.12008747266269995
+      }
+    },
+    "n_bridge_f1": {
+      "gbm": {
+        "pearson": -0.12314611618909245,
+        "spearman": -0.12338436644269771
+      },
+      "ols": {
+        "pearson": -0.12263955993914367,
+        "spearman": -0.12729568955862824
+      }
+    },
+    "n_bridge_mean": {
+      "gbm": {
+        "pearson": -0.143366035470173,
+        "spearman": -0.1433955960754003
+      },
+      "ols": {
+        "pearson": -0.14239565076566424,
+        "spearman": -0.14851729271209874
+      }
+    },
+    "has_bridge_f0": {
+      "gbm": {
+        "pearson": -0.1142699284259718,
+        "spearman": -0.11597381885307537
+      },
+      "ols": {
+        "pearson": -0.1137407477823124,
+        "spearman": -0.11997624139256098
+      }
+    },
+    "frac_frames_bridge": {
+      "gbm": {
+        "pearson": -0.13891044864230723,
+        "spearman": -0.14197182878712974
+      },
+      "ols": {
+        "pearson": -0.1391074378110757,
+        "spearman": -0.14715125938649365
+      }
+    },
+    "persistence": {
+      "gbm": {
+        "pearson": -0.053262290845648604,
+        "spearman": -0.0557912839037435
+      },
+      "ols": {
+        "pearson": -0.05043615354522801,
+        "spearman": -0.05733232233440809
+      }
+    }
+  },
+  "sd_reduction": {
+    "n_bridge_f0": {
+      "gbm": 0.5921881976597164,
+      "ols": 0.6035575020646942
+    },
+    "n_bridge_f1": {
+      "gbm": 0.5900234481566388,
+      "ols": 0.6028919168823147
+    },
+    "n_bridge_mean": {
+      "gbm": 0.5851967640583645,
+      "ols": 0.6011153459058797
+    },
+    "has_bridge_f0": {
+      "gbm": 0.592368727004655,
+      "ols": 0.603516229142387
+    },
+    "frac_frames_bridge": {
+      "gbm": 0.5853339956158137,
+      "ols": 0.6013654640814482
+    },
+    "persistence": {
+      "gbm": 0.5986668694487115,
+      "ols": 0.6068402609808793
+    },
+    "all_quantities": {
+      "gbm": 0.5852801885713557,
+      "ols": 0.6011207292691585
+    }
+  },
+  "shuffle_control": {
+    "n_bridge_f0": {
+      "corr_gbm": {
+        "pearson": 0.001165862879039039,
+        "spearman": 0.0010619736245753792
+      },
+      "sd_gbm_with_shuffled": 0.6040730900524234
+    },
+    "n_bridge_f1": {
+      "corr_gbm": {
+        "pearson": 0.0006040035291311726,
+        "spearman": -0.0006453040278199511
+      },
+      "sd_gbm_with_shuffled": 0.6052946875804455
+    },
+    "n_bridge_mean": {
+      "corr_gbm": {
+        "pearson": 0.00106169822711852,
+        "spearman": -0.00017257209761922232
+      },
+      "sd_gbm_with_shuffled": 0.6097874580332547
+    },
+    "has_bridge_f0": {
+      "corr_gbm": {
+        "pearson": 7.585447933115586e-05,
+        "spearman": 0.001012787372186903
+      },
+      "sd_gbm_with_shuffled": 0.6034769402994788
+    },
+    "frac_frames_bridge": {
+      "corr_gbm": {
+        "pearson": 0.0001443413799476379,
+        "spearman": -0.00022827253203677768
+      },
+      "sd_gbm_with_shuffled": 0.6096606605065421
+    },
+    "persistence": {
+      "corr_gbm": {
+        "pearson": 0.0004844389900941592,
+        "spearman": 0.0005002768524485414
+      },
+      "sd_gbm_with_shuffled": 0.600169302566862
+    },
+    "all_quantities": {
+      "sd_gbm_with_shuffled": 0.6088807154747495
+    }
+  },
+  "per_protein_pearson_gbm": {
+    "n_bridge_f0": {
+      "n_proteins": 100,
+      "mean": -0.1157306551980926,
+      "median": -0.12285389159207365,
+      "frac_abs_ge_0.3": 0.0
+    },
+    "n_bridge_f1": {
+      "n_proteins": 100,
+      "mean": -0.12393034294032274,
+      "median": -0.12711716033375886,
+      "frac_abs_ge_0.3": 0.0
+    },
+    "n_bridge_mean": {
+      "n_proteins": 100,
+      "mean": -0.1446958558868791,
+      "median": -0.1465794766336329,
+      "frac_abs_ge_0.3": 0.0
+    },
+    "has_bridge_f0": {
+      "n_proteins": 100,
+      "mean": -0.11495960421254617,
+      "median": -0.12098286325972413,
+      "frac_abs_ge_0.3": 0.0
+    },
+    "frac_frames_bridge": {
+      "n_proteins": 100,
+      "mean": -0.13975279986817876,
+      "median": -0.14454721604992235,
+      "frac_abs_ge_0.3": 0.0
+    },
+    "persistence": {
+      "n_proteins": 97,
+      "mean": -0.04903472999936968,
+      "median": -0.04551377770869874,
+      "frac_abs_ge_0.3": 0.0
+    }
+  }
+}
