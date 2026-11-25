@@ -1,0 +1,9 @@
+{
+ "n_proteins": 108,
+ "n_replicas_checked": 324,
+ "worst_frame0_maxdiff_A": 0.001995552333899475,
+ "worst_frame100_maxdiff_A": 0.003835405166355166,
+ "failures": [],
+ "all_ok": true,
+ "note": "frame0/frame100 are total-format frames 0 and 100 (= history frames 0 and 10); pair distances recomputed from the total trajectory vs the stored k06b history column 0 distances; element checks compare pair atom atomic numbers."
+}
