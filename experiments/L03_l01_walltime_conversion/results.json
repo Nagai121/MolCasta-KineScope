@@ -179,6 +179,270 @@
   "notes": [
     "G04 の費用は 1mix_A 1本・この仮想マシンの CPU での実測。タンパク質や計算機が変われば値は変わる。",
     "G04 の固定の費用に含まれる平衡化は 10 ps ずつ（NVT・NPT）の実測で、元の mdp の 100 ps ではない。100 ps で回した場合の見積もりは G04 の記録にない。",
-    "L02 の曲がりについての同じ換算は、L02 の完了後に追記する。"
+    "L02 の曲がりについての同じ換算は、L02 の完了後に追記する。",
+    "2026-11-25 追記: L02 の曲がりについても同じ換算を行い、rows_L02 に記録した（README 第8節）。L01 の記録（rows）は書き換えていない。"
+  ],
+  "source_L02": {
+    "experiment": "L02",
+    "dir": "experiments/L02_hb_formation_leverage_strong_base_1ns/",
+    "file": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json",
+    "condition": "強い土台（K06(b)、未見100タンパク質×3レプリカ）、水素結合の形成、1 ns先、切り取りの平均だけ",
+    "base_gain_1ns": {
+      "pooled": 0.07021665617839584,
+      "macro": 0.07121551322966235
+    },
+    "min_length_for_recovery_0.8": {
+      "pooled": 0.7,
+      "macro": 0.7
+    },
+    "min_length_for_recovery_0.9": {
+      "pooled": 0.8,
+      "macro": 0.9
+    },
+    "note": "換算の式と前提は L01 の換算とまったく同じ（合計時間 = 固定の費用 2,802 秒 + 生産の長さ × 85,762.8 秒/ns、生産の長さ = 覆う長さ）。実時間は覆う長さだけで決まるため、合計時間の列は L01 の行と一致する。"
+  },
+  "rows_L02": [
+    {
+      "covered_length_ns": 0.0,
+      "n_frames": 1,
+      "production_length_ns": 0.0,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 0.0,
+      "total_time_s": 2802.0,
+      "total_time_h": 0.7783,
+      "fixed_cost_fraction": 1.0,
+      "recovery_rate_L02_pooled": 0.35326241648478074,
+      "recovery_rate_L02_macro": 0.37705042787854154,
+      "recovery_ci95_L02_pooled": [
+        0.28380269273677966,
+        0.42798359395071955
+      ],
+      "recovery_ci95_L02_macro": [
+        0.31152726918511037,
+        0.44699601848082343
+      ],
+      "recovery_per_hour_pooled": 0.4539,
+      "recovery_per_hour_macro": 0.4844
+    },
+    {
+      "covered_length_ns": 0.1,
+      "n_frames": 2,
+      "production_length_ns": 0.1,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 8576.3,
+      "total_time_s": 11378.3,
+      "total_time_h": 3.1606,
+      "fixed_cost_fraction": 0.2463,
+      "recovery_rate_L02_pooled": 0.5450514212254068,
+      "recovery_rate_L02_macro": 0.5526075533971029,
+      "recovery_ci95_L02_pooled": [
+        0.47454730676430235,
+        0.6231537633393502
+      ],
+      "recovery_ci95_L02_macro": [
+        0.4854793056230908,
+        0.6232899005986641
+      ],
+      "recovery_per_hour_pooled": 0.1724,
+      "recovery_per_hour_macro": 0.1748
+    },
+    {
+      "covered_length_ns": 0.2,
+      "n_frames": 3,
+      "production_length_ns": 0.2,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 17152.6,
+      "total_time_s": 19954.6,
+      "total_time_h": 5.5429,
+      "fixed_cost_fraction": 0.1404,
+      "recovery_rate_L02_pooled": 0.5725096578824136,
+      "recovery_rate_L02_macro": 0.5882495012053587,
+      "recovery_ci95_L02_pooled": [
+        0.5053111022265038,
+        0.6436769967422142
+      ],
+      "recovery_ci95_L02_macro": [
+        0.5205948047679088,
+        0.6559196008450988
+      ],
+      "recovery_per_hour_pooled": 0.1033,
+      "recovery_per_hour_macro": 0.1061
+    },
+    {
+      "covered_length_ns": 0.3,
+      "n_frames": 3,
+      "production_length_ns": 0.3,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 25728.8,
+      "total_time_s": 28530.8,
+      "total_time_h": 7.9252,
+      "fixed_cost_fraction": 0.0982,
+      "recovery_rate_L02_pooled": 0.6701333842924913,
+      "recovery_rate_L02_macro": 0.682392204878751,
+      "recovery_ci95_L02_pooled": [
+        0.6094889515738829,
+        0.7326686095062406
+      ],
+      "recovery_ci95_L02_macro": [
+        0.6174456956256814,
+        0.7484288750029368
+      ],
+      "recovery_per_hour_pooled": 0.0846,
+      "recovery_per_hour_macro": 0.0861
+    },
+    {
+      "covered_length_ns": 0.4,
+      "n_frames": 5,
+      "production_length_ns": 0.4,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 34305.1,
+      "total_time_s": 37107.1,
+      "total_time_h": 10.3075,
+      "fixed_cost_fraction": 0.0755,
+      "recovery_rate_L02_pooled": 0.6798644825364577,
+      "recovery_rate_L02_macro": 0.6936686409291245,
+      "recovery_ci95_L02_pooled": [
+        0.6182413353682535,
+        0.7447060142923315
+      ],
+      "recovery_ci95_L02_macro": [
+        0.6325720354105336,
+        0.7568078502046411
+      ],
+      "recovery_per_hour_pooled": 0.066,
+      "recovery_per_hour_macro": 0.0673
+    },
+    {
+      "covered_length_ns": 0.5,
+      "n_frames": 6,
+      "production_length_ns": 0.5,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 42881.4,
+      "total_time_s": 45683.4,
+      "total_time_h": 12.6898,
+      "fixed_cost_fraction": 0.0613,
+      "recovery_rate_L02_pooled": 0.6950305880535543,
+      "recovery_rate_L02_macro": 0.6857592614130681,
+      "recovery_ci95_L02_pooled": [
+        0.6345772367529593,
+        0.7610682769487522
+      ],
+      "recovery_ci95_L02_macro": [
+        0.6276526513700748,
+        0.7460284423089737
+      ],
+      "recovery_per_hour_pooled": 0.0548,
+      "recovery_per_hour_macro": 0.054
+    },
+    {
+      "covered_length_ns": 0.6,
+      "n_frames": 6,
+      "production_length_ns": 0.6,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 51457.7,
+      "total_time_s": 54259.7,
+      "total_time_h": 15.0721,
+      "fixed_cost_fraction": 0.0516,
+      "recovery_rate_L02_pooled": 0.7736952856506679,
+      "recovery_rate_L02_macro": 0.7853224653558366,
+      "recovery_ci95_L02_pooled": [
+        0.7138425980728719,
+        0.8365895249461268
+      ],
+      "recovery_ci95_L02_macro": [
+        0.7234792569306684,
+        0.8500423156873014
+      ],
+      "recovery_per_hour_pooled": 0.0513,
+      "recovery_per_hour_macro": 0.0521
+    },
+    {
+      "covered_length_ns": 0.7,
+      "n_frames": 7,
+      "production_length_ns": 0.7,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 60034.0,
+      "total_time_s": 62836.0,
+      "total_time_h": 17.4544,
+      "fixed_cost_fraction": 0.0446,
+      "recovery_rate_L02_pooled": 0.8356704023886394,
+      "recovery_rate_L02_macro": 0.8243792007930503,
+      "recovery_ci95_L02_pooled": [
+        0.7752556589357047,
+        0.8995416429032991
+      ],
+      "recovery_ci95_L02_macro": [
+        0.7684153378442466,
+        0.8816806962347828
+      ],
+      "recovery_per_hour_pooled": 0.0479,
+      "recovery_per_hour_macro": 0.0472
+    },
+    {
+      "covered_length_ns": 0.8,
+      "n_frames": 9,
+      "production_length_ns": 0.8,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 68610.2,
+      "total_time_s": 71412.2,
+      "total_time_h": 19.8367,
+      "fixed_cost_fraction": 0.0392,
+      "recovery_rate_L02_pooled": 0.9300190310797984,
+      "recovery_rate_L02_macro": 0.8964940488621465,
+      "recovery_ci95_L02_pooled": [
+        0.8712341576249321,
+        0.9939236355073253
+      ],
+      "recovery_ci95_L02_macro": [
+        0.8419475230802926,
+        0.957450722785007
+      ],
+      "recovery_per_hour_pooled": 0.0469,
+      "recovery_per_hour_macro": 0.0452
+    },
+    {
+      "covered_length_ns": 0.9,
+      "n_frames": 10,
+      "production_length_ns": 0.9,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 77186.5,
+      "total_time_s": 79988.5,
+      "total_time_h": 22.219,
+      "fixed_cost_fraction": 0.035,
+      "recovery_rate_L02_pooled": 1.027822135886991,
+      "recovery_rate_L02_macro": 0.993971734879088,
+      "recovery_ci95_L02_pooled": [
+        0.9696830694697293,
+        1.0951219839299333
+      ],
+      "recovery_ci95_L02_macro": [
+        0.9430363349223068,
+        1.052566774582235
+      ],
+      "recovery_per_hour_pooled": 0.0463,
+      "recovery_per_hour_macro": 0.0447
+    },
+    {
+      "covered_length_ns": 1.0,
+      "n_frames": 11,
+      "production_length_ns": 1.0,
+      "fixed_cost_s": 2802.0,
+      "production_time_s": 85762.8,
+      "total_time_s": 88564.8,
+      "total_time_h": 24.6013,
+      "fixed_cost_fraction": 0.0316,
+      "recovery_rate_L02_pooled": 0.9749613912198013,
+      "recovery_rate_L02_macro": 0.9572269330571331,
+      "recovery_ci95_L02_pooled": [
+        0.9190794903722955,
+        1.0370824718086185
+      ],
+      "recovery_ci95_L02_macro": [
+        0.9039301535359072,
+        1.0147808623940335
+      ],
+      "recovery_per_hour_pooled": 0.0396,
+      "recovery_per_hour_macro": 0.0389
+    }
   ]
 }
