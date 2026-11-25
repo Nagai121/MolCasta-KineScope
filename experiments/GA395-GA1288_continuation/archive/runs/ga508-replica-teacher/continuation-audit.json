@@ -1,0 +1,229 @@
+{
+  "completed_scored_configurations": 452,
+  "batches": [
+    {
+      "folder": "ga508-replica-teacher",
+      "evaluations": 56,
+      "complete": true,
+      "top_id": "GA515",
+      "metric": "development_pooled_pearson",
+      "score": 0.6187576058872494
+    },
+    {
+      "folder": "ga564-analog",
+      "evaluations": 24,
+      "complete": true,
+      "top_id": "GA580",
+      "metric": "development_pooled_pearson",
+      "score": 0.6092818008491253
+    },
+    {
+      "folder": "ga588-transfer",
+      "evaluations": 12,
+      "complete": true,
+      "top_id": "GA594",
+      "metric": "development_pooled_pearson",
+      "score": 0.6249750451877142
+    },
+    {
+      "folder": "ga600-graph",
+      "evaluations": 16,
+      "complete": true,
+      "top_id": "GA605",
+      "metric": "development_pooled_pearson",
+      "score": 0.618899165211333
+    },
+    {
+      "folder": "ga616-transfer-expanded",
+      "evaluations": 5,
+      "complete": true,
+      "top_id": "GA617",
+      "metric": "development_pooled_pearson",
+      "score": 0.6206581243617556
+    },
+    {
+      "folder": "ga621-grouped-fusion",
+      "evaluations": 12,
+      "complete": true,
+      "top_id": "GA624",
+      "metric": "protein_group_cv_mean",
+      "score": 0.5527355296108935
+    },
+    {
+      "folder": "ga633-elastic",
+      "evaluations": 9,
+      "complete": true,
+      "top_id": "GA634",
+      "metric": "development_pooled_pearson",
+      "score": 0.6107241429791388
+    },
+    {
+      "folder": "ga642-joint-transfer",
+      "evaluations": 4,
+      "complete": true,
+      "top_id": "GA644",
+      "metric": "development_pooled_pearson",
+      "score": 0.6121119534588871
+    },
+    {
+      "folder": "ga647-orthogonal",
+      "evaluations": 12,
+      "complete": true,
+      "top_id": "GA657",
+      "metric": "development_pooled_pearson",
+      "score": 0.6141510277350032
+    },
+    {
+      "folder": "ga659-context-transfer",
+      "evaluations": 5,
+      "complete": true,
+      "top_id": "GA661",
+      "metric": "development_pooled_pearson",
+      "score": 0.6116035886033738
+    },
+    {
+      "folder": "ga664-grouped-adaptive",
+      "evaluations": 24,
+      "complete": true,
+      "top_id": "GA685",
+      "metric": "protein_group_cv_mean",
+      "score": 0.5632578008348249
+    },
+    {
+      "folder": "ga688-multiwindow",
+      "evaluations": 16,
+      "complete": true,
+      "top_id": "GA696",
+      "metric": "development_pooled_pearson",
+      "score": 0.6296492176504921
+    },
+    {
+      "folder": "ga704-transfer-multiwindow",
+      "evaluations": 21,
+      "complete": true,
+      "top_id": "GA707",
+      "metric": "development_pooled_pearson",
+      "score": 0.6112974859277696
+    },
+    {
+      "folder": "ga725-multiwindow-pretrain",
+      "evaluations": 12,
+      "complete": true,
+      "top_id": "GA731",
+      "metric": "development_pooled_pearson",
+      "score": 0.6196740165651387
+    },
+    {
+      "folder": "ga737-window-ablation",
+      "evaluations": 12,
+      "complete": true,
+      "top_id": "GA742",
+      "metric": "development_pooled_pearson",
+      "score": 0.6281846967755081
+    },
+    {
+      "folder": "ga749-window-curriculum",
+      "evaluations": 24,
+      "complete": true,
+      "top_id": "GA764",
+      "metric": "development_pooled_pearson",
+      "score": 0.6270070434191782
+    },
+    {
+      "folder": "ga773-distribution",
+      "evaluations": 16,
+      "complete": true,
+      "top_id": "GA777",
+      "metric": "development_pooled_pearson",
+      "score": 0.6295367957597233
+    },
+    {
+      "folder": "ga789-window-seed-check",
+      "evaluations": 16,
+      "complete": true,
+      "top_id": "GA790",
+      "metric": "development_pooled_pearson",
+      "score": 0.6296492176504921
+    },
+    {
+      "folder": "ga805-window-grouped",
+      "evaluations": 12,
+      "complete": true,
+      "top_id": "GA812",
+      "metric": "protein_group_cv_mean",
+      "score": 0.5591197311799533
+    },
+    {
+      "folder": "ga817-history-stability",
+      "evaluations": 24,
+      "complete": true,
+      "top_id": "GA821",
+      "metric": "development_pooled_pearson",
+      "score": 0.633545220833061
+    },
+    {
+      "folder": "ga842-relative",
+      "evaluations": 18,
+      "complete": true,
+      "top_id": "GA845",
+      "metric": "development_pooled_pearson",
+      "score": 0.615733651296409
+    },
+    {
+      "folder": "ga860-reliability-grouped",
+      "evaluations": 12,
+      "complete": true,
+      "top_id": "GA867",
+      "metric": "protein_group_cv_mean",
+      "score": 0.5628330341295604
+    },
+    {
+      "folder": "ga872-mixture",
+      "evaluations": 18,
+      "complete": true,
+      "top_id": "GA876",
+      "metric": "development_pooled_pearson",
+      "score": 0.6329238838178342
+    },
+    {
+      "folder": "ga890-robust-mixture",
+      "evaluations": 18,
+      "complete": true,
+      "top_id": "GA898",
+      "metric": "development_pooled_pearson",
+      "score": 0.6405229710932614
+    },
+    {
+      "folder": "ga909-r2-augmentation",
+      "evaluations": 8,
+      "complete": true,
+      "top_id": "GA912",
+      "metric": "development_pooled_pearson",
+      "score": 0.6307728919293408
+    },
+    {
+      "folder": "ga917-bins",
+      "evaluations": 12,
+      "complete": true,
+      "top_id": "GA925",
+      "metric": "development_pooled_pearson",
+      "score": 0.6288884038229828
+    },
+    {
+      "folder": "ga929-mixture-seeds",
+      "evaluations": 16,
+      "complete": true,
+      "top_id": "GA930",
+      "metric": "development_pooled_pearson",
+      "score": 0.6405229710932614
+    },
+    {
+      "folder": "ga945-shared-replica",
+      "evaluations": 18,
+      "complete": true,
+      "top_id": "GA950",
+      "metric": "development_pooled_pearson",
+      "score": 0.6357245211149024
+    }
+  ]
+}
