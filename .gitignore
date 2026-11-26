@@ -14,3 +14,6 @@ experiments/E03_implicit_md_relaxation_vs_k3/implicit_md_cache/
 experiments/E04_public_generator_static_redundancy/mdgen_rollouts/
 shared_data/
 .venv/
+experiments/E05_paired_6phenomena_replication/cache_real/
+experiments/E05_paired_6phenomena_replication/cache_gbn2/
+experiments/E05_paired_6phenomena_replication/cache_mdgen/

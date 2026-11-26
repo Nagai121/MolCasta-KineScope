@@ -49,20 +49,24 @@ This lightweight relaxation breaks through the barrier where all six static feat
 
 Explicit water molecules are therefore *not* required to capture most of the local equilibrium offset: fast many-body steric and electrostatic relaxation in a continuum solvent already recovers the majority of the signal at roughly 1/10–1/15 the wall-clock cost of explicit 1 ns MD.
 
-### 4. Implicit physics vs. a generative MD model (MDGen) split cleanly into two time regimes
+### 4. Paired 6-phenomena comparison (49 held-out proteins): implicit physics vs. MDGen vs. hybrid
 
-At a comparable GPU budget (~40 seconds per protein on the same GPU), we ran the published all-atom generative MD model **MDGen** (`atlas` checkpoint, 100 ns / 250-frame rollouts) starting from the same single frame. Because 88 of our 100 proteins appear in MDGen's training set, we evaluated MDGen strictly on **25 held-out proteins from its own official test split** (11,285 pairs, zero training overlap).
+Because 88 of our initial 100 proteins appear in MDGen's training set, we ran a **strictly paired replication across all 49 held-out proteins with length ≤ 250 residues** (`L = 38–240`, zero training overlap, 117,803 total candidate pairs) from MDGen's official test split, measuring **all six local molecular phenomena simultaneously** from the exact same single starting frame (OpenMM GBn2 `4 × 100 ps` at ~70 s/protein; MDGen 100 ns rollout at ~52 s/protein; identical 5-fold protein CV splits + 2,000 protein-cluster bootstraps).
 
-| Method (from single static frame) | GPU time / protein | Residual alignment with explicit 0–1 ns MD (`r`) | 1 ns H-bond gain recovered | 5–90 ns H-bond gain recovered |
-|---|---:|---:|---:|---:|
-| 6 static physical feature families combined | <1 s | weak (<12% variance) | — | — |
-| **4 × 100 ps implicit-solvent MD (GBn2)** | **~55 s** | **+0.52** | **58%** (mean only) | **55–86%** (mean) / **59–116%** (all stats) |
-| **MDGen (100 ns generative rollout)** | **~40 s** | **+0.27** | **−5% to +25%** | **55–78%** |
+| Phenomenon (`N` pairs, 49 proteins) | Residual `r` vs. explicit MD: GBn2 / MDGen | GBn2 recovery (1–90 ns) | MDGen 100 ns recovery (1–90 ns) | **Hybrid (`GBn2 + MDGen`) recovery** | Key paired result (95% bootstrap CI) |
+|---|---:|---:|---:|---:|---|
+| **H-bond formation** (32,758) | **+0.49** / +0.23 | **61–111%** | 24–51% | **72–115%** | GBn2 > MDGen on 5/6 horizons; Hybrid > GBn2 on 4/6 |
+| **H-bond dissociation** (14,764) | **+0.36** / +0.19 | **59–141%** | 9–94% | **56–161%** | GBn2 > MDGen on 5/6; Hybrid > GBn2 on 4/6 (**150–161%** at 30–90 ns) |
+| **Contact formation** (48,686) | **+0.54** / +0.24 | **71–98%** | 13–25% | **75–100%** | GBn2 > MDGen on **6/6** horizons (+0.10 to +0.13 AUPRC) |
+| **Contact dissociation** (20,543) | **+0.51** / +0.23 | **90–109%** | 16–45% | **90–120%** | GBn2 > MDGen on **6/6**; Hybrid > GBn2 at 50–90 ns |
+| **Salt-bridge formation** (807) | **+0.51** / +0.25 | variable (small `N`) | beats GBn2 at 90 ns | rescued | MDGen > GBn2 at 90 ns (−0.086 AUPRC*); Hybrid > GBn2 on 3/6 |
+| **Salt-bridge dissociation** (245) | +0.26 / **+0.33** (short **+0.40**) | 23–119% | beats GBn2 at 10–50 ns | rescued | **Only phenomenon where MDGen beats GBn2 on residual `r`**; Hybrid > GBn2 on 3/6 (+0.07 to +0.10 AUPRC*) |
 
-Two clear lessons emerge:
+Three physical findings stand out from this paired benchmark:
 
-- **Short-horizon local relaxation (1 ns):** Implicit-solvent physics clearly wins. MDGen is trained on 400 ps-stride trajectories rather than sub-nanosecond force relaxation, so it captures only about half as much of the local offset (`r = 0.27`) and adds little at 1 ns.
-- **Long-horizon conformational drift (5–90 ns):** MDGen is *not* merely repeating static structure (its static explainability R² drops to `0.49`, below real MD's `0.66`), and its 100 ns rollout genuinely recovers **55–78%** of explicit 1 ns MD's predictive gain at 5–90 ns.
+- **Universality across H-bonds and contacts:** Water-free continuum relaxation is even stronger on residue contacts (71–109% recovery across 1–90 ns) than on H-bonds, outperforming MDGen on **22 of 24** horizon × phenomenon cells across these four phenomena (95% CI > 0).
+- **Interaction-type separation (salt-bridge stress test):** Salt-bridge dissociation is the *only* phenomenon where MDGen outperforms GBn2 on explicit-solvent residual alignment (`+0.40/+0.33` vs. `+0.26`) and 10–50 ns prediction—matching the classical over-stabilization of exposed salt bridges in continuum GBn2 versus MDGen's explicit-solvent CHARMM36m training.
+- **Complementary physics + generative hybrid:** Because GBn2 and MDGen residuals correlate only weakly with each other (`r = 0.19–0.26`), combining them produces statistically significant paired AUPRC gains over GBn2 alone across H-bonds (8/12 cells, reaching 150–161% of single-replica explicit 1 ns MD on H-bond dissociation at 30–90 ns), long-horizon contact dissociation (50–90 ns), and salt bridges (5/12 cells, +0.05 to +0.10 AUPRC).
 
 ---
 
@@ -109,5 +113,6 @@ Earlier internal experiments in this repository (preserved in `experiments/` for
 | Public verification (static wall & replica floor) | 100-protein replica noise floor + simultaneous 5-family static elimination (no proprietary features) | [experiments/E02_public_k3_and_replica_floor](experiments/E02_public_k3_and_replica_floor/README.md) |
 | Public verification (implicit-solvent relaxation) | 4 × 100 ps OpenMM GBn2 relaxation vs static features & explicit 1 ns MD (25 unseen proteins) | [experiments/E03_implicit_md_relaxation_vs_k3](experiments/E03_implicit_md_relaxation_vs_k3/README.md) |
 | Public verification (generative MD diagnostic) | MDGen evaluated on 25 strictly held-out test proteins | [experiments/E04_public_generator_static_redundancy](experiments/E04_public_generator_static_redundancy/README.md) |
+| **Paired 6-phenomena replication (49 proteins)** | **Strictly paired GBn2 vs. MDGen vs. Hybrid across all 6 phenomena (117,803 pairs, 2,000 protein bootstraps)** | [experiments/E05_paired_6phenomena_replication](experiments/E05_paired_6phenomena_replication/README.md) |
 | Static-physics elimination & spatial clustering | Individual physical feature tests (χ, H-bond network, E-field, φ/ψ, bridging water, CHARMM36m energy, combined, clustering) | `experiments/K3-01_*` – `K3-08_*` |
 | Literature review & novelty audit | Prior work in biophysics, MD datasets, and generative MD | [docs/literature/README.md](docs/literature/README.md) |
