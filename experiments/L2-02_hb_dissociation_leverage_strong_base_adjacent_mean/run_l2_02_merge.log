@@ -1,0 +1,7 @@
+saved results.json / results.csv / per_protein.csv / test_predictions.npz
+[1 ns] 0.8 pooled 0.5, 0.9 pooled 0.9, largest step 0.0->0.1 0.508
+[5 ns] 0.8 pooled 0.4, 0.9 pooled 0.7, largest step 0.0->0.1 0.394
+[10 ns] 0.8 pooled 0.5, 0.9 pooled 0.6, largest step 0.0->0.1 0.400
+[30 ns] 0.8 pooled 0.7, 0.9 pooled 0.9, largest step 0.0->0.1 0.368
+[50 ns] 0.8 pooled 0.7, 0.9 pooled 0.8, largest step 0.0->0.1 0.381
+[90 ns] 0.8 pooled 0.6, 0.9 pooled 1.0, largest step 0.0->0.1 0.323

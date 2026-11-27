@@ -1,0 +1,7 @@
+[90 ns] bootstrap 2000/10000 (59s)
+[90 ns] bootstrap 4000/10000 (116s)
+[90 ns] bootstrap 6000/10000 (174s)
+[90 ns] bootstrap 8000/10000 (233s)
+[90 ns] bootstrap 10000/10000 (295s)
+[90 ns] bootstrap done (295s), bad gains: {'pooled': 0, 'macro': 0}
+[90 ns] done: 0.8 pooled 0.6, 0.9 pooled 1.0, largest step 0.0->0.1 0.323 (295s)
