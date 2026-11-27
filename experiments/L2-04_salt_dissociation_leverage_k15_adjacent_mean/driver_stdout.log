@@ -1,0 +1,58 @@
+=== phase1 checkpoint exists, skipping ===
+=== horizon 1 ===
+[1 ns] bootstrap 2000/10000 (2s)
+[1 ns] bootstrap 4000/10000 (3s)
+[1 ns] bootstrap 6000/10000 (5s)
+[1 ns] bootstrap 8000/10000 (6s)
+[1 ns] bootstrap 10000/10000 (8s)
+[1 ns] bootstrap done (8s), bad gains: {'pooled': 2, 'macro': 152}
+[1 ns] done: 0.8 pooled 0.4, 0.9 pooled 0.4, largest step 0.0->0.1 0.473 (8s)
+=== horizon 5 ===
+[5 ns] bootstrap 2000/10000 (2s)
+[5 ns] bootstrap 4000/10000 (3s)
+[5 ns] bootstrap 6000/10000 (5s)
+[5 ns] bootstrap 8000/10000 (6s)
+[5 ns] bootstrap 10000/10000 (8s)
+[5 ns] bootstrap done (8s), bad gains: {'pooled': 56, 'macro': 201}
+[5 ns] done: 0.8 pooled 0.4, 0.9 pooled 1.0, largest step 0.30000000000000004->0.4 0.407 (8s)
+=== horizon 10 ===
+[10 ns] bootstrap 2000/10000 (2s)
+[10 ns] bootstrap 4000/10000 (3s)
+[10 ns] bootstrap 6000/10000 (5s)
+[10 ns] bootstrap 8000/10000 (7s)
+[10 ns] bootstrap 10000/10000 (9s)
+[10 ns] bootstrap done (9s), bad gains: {'pooled': 0, 'macro': 113}
+[10 ns] done: 0.8 pooled 0.8, 0.9 pooled 0.8, largest step 0.0->0.1 0.333 (9s)
+=== horizon 30 ===
+[30 ns] bootstrap 2000/10000 (1s)
+[30 ns] bootstrap 4000/10000 (3s)
+[30 ns] bootstrap 6000/10000 (4s)
+[30 ns] bootstrap 8000/10000 (6s)
+[30 ns] bootstrap 10000/10000 (7s)
+[30 ns] bootstrap done (7s), bad gains: {'pooled': 1116, 'macro': 3535}
+[30 ns] done: 0.8 pooled 0.7, 0.9 pooled 0.8, largest step 0.19999999999999998->0.3 0.532 (7s)
+=== horizon 50 ===
+[50 ns] bootstrap 2000/10000 (2s)
+[50 ns] bootstrap 4000/10000 (3s)
+[50 ns] bootstrap 6000/10000 (5s)
+[50 ns] bootstrap 8000/10000 (6s)
+[50 ns] bootstrap 10000/10000 (8s)
+[50 ns] bootstrap done (8s), bad gains: {'pooled': 5, 'macro': 2717}
+[50 ns] done: 0.8 pooled None, 0.9 pooled None, largest step 0.0->0.1 0.369 (8s)
+=== horizon 90 ===
+[90 ns] bootstrap 2000/10000 (2s)
+[90 ns] bootstrap 4000/10000 (3s)
+[90 ns] bootstrap 6000/10000 (5s)
+[90 ns] bootstrap 8000/10000 (6s)
+[90 ns] bootstrap 10000/10000 (8s)
+[90 ns] bootstrap done (8s), bad gains: {'pooled': 756, 'macro': 2105}
+[90 ns] done: 0.8 pooled 0.1, 0.9 pooled 0.1, largest step 0.0->0.1 1.358 (8s)
+=== merge ===
+saved results.json / results.csv / per_protein.csv / test_predictions.npz
+[1 ns] 0.8 pooled 0.4, 0.9 pooled 0.4, largest step 0.0->0.1 0.473
+[5 ns] 0.8 pooled 0.4, 0.9 pooled 1.0, largest step 0.30000000000000004->0.4 0.407
+[10 ns] 0.8 pooled 0.8, 0.9 pooled 0.8, largest step 0.0->0.1 0.333
+[30 ns] 0.8 pooled 0.7, 0.9 pooled 0.8, largest step 0.19999999999999998->0.3 0.532
+[50 ns] 0.8 pooled None, 0.9 pooled None, largest step 0.0->0.1 0.369
+[90 ns] 0.8 pooled 0.1, 0.9 pooled 0.1, largest step 0.0->0.1 1.358
+ALL DONE

@@ -1,0 +1,7 @@
+[30 ns] bootstrap 2000/10000 (1s)
+[30 ns] bootstrap 4000/10000 (3s)
+[30 ns] bootstrap 6000/10000 (4s)
+[30 ns] bootstrap 8000/10000 (6s)
+[30 ns] bootstrap 10000/10000 (7s)
+[30 ns] bootstrap done (7s), bad gains: {'pooled': 1116, 'macro': 3535}
+[30 ns] done: 0.8 pooled 0.7, 0.9 pooled 0.8, largest step 0.19999999999999998->0.3 0.532 (7s)

@@ -1,0 +1,57 @@
+train 735 test 360
+[1 ns] static pooled 0.3734 macro 0.5577 | full pooled 0.5522 macro 0.6724 (6s)
+check [1 ns] static_pooled_vs_L got 0.3734 ref 0.3734 tol 0.0005 -> True
+check [1 ns] static_macro_vs_L got 0.5577 ref 0.5577 tol 0.0005 -> True
+check [1 ns] full_pooled_vs_L got 0.5522 ref 0.5522 tol 0.0005 -> True
+check [1 ns] full_macro_vs_L got 0.6724 ref 0.6724 tol 0.0005 -> True
+check [1 ns] gain_pooled_vs_L got 0.1788 ref 0.1788 tol 0.001 -> True
+check [1 ns] gain_macro_vs_L got 0.1148 ref 0.1148 tol 0.001 -> True
+check [1 ns] recovery_1.0_pooled_vs_L got 0.9215 ref 0.9215 tol 0.005 -> True
+check [1 ns] recovery_1.0_macro_vs_L got 1.0093 ref 1.0093 tol 0.005 -> True
+[5 ns] static pooled 0.4641 macro 0.6123 | full pooled 0.5780 macro 0.6909 (13s)
+check [5 ns] static_pooled_vs_L got 0.4641 ref 0.4641 tol 0.0005 -> True
+check [5 ns] static_macro_vs_L got 0.6123 ref 0.6123 tol 0.0005 -> True
+check [5 ns] full_pooled_vs_L got 0.5780 ref 0.5780 tol 0.0005 -> True
+check [5 ns] full_macro_vs_L got 0.6909 ref 0.6909 tol 0.0005 -> True
+check [5 ns] gain_pooled_vs_L got 0.1139 ref 0.1139 tol 0.001 -> True
+check [5 ns] gain_macro_vs_L got 0.0787 ref 0.0787 tol 0.001 -> True
+check [5 ns] recovery_1.0_pooled_vs_L got 1.0123 ref 1.0123 tol 0.005 -> True
+check [5 ns] recovery_1.0_macro_vs_L got 0.7032 ref 0.7032 tol 0.005 -> True
+[10 ns] static pooled 0.3572 macro 0.5385 | full pooled 0.5353 macro 0.6339 (19s)
+check [10 ns] static_pooled_vs_L got 0.3572 ref 0.3572 tol 0.0005 -> True
+check [10 ns] static_macro_vs_L got 0.5385 ref 0.5385 tol 0.0005 -> True
+check [10 ns] full_pooled_vs_L got 0.5353 ref 0.5353 tol 0.0005 -> True
+check [10 ns] full_macro_vs_L got 0.6339 ref 0.6339 tol 0.0005 -> True
+check [10 ns] gain_pooled_vs_L got 0.1781 ref 0.1781 tol 0.001 -> True
+check [10 ns] gain_macro_vs_L got 0.0954 ref 0.0954 tol 0.001 -> True
+check [10 ns] recovery_1.0_pooled_vs_L got 0.9712 ref 0.9712 tol 0.005 -> True
+check [10 ns] recovery_1.0_macro_vs_L got 1.2763 ref 1.2763 tol 0.005 -> True
+[30 ns] static pooled 0.4799 macro 0.6309 | full pooled 0.5432 macro 0.6465 (25s)
+check [30 ns] static_pooled_vs_L got 0.4799 ref 0.4799 tol 0.0005 -> True
+check [30 ns] static_macro_vs_L got 0.6309 ref 0.6309 tol 0.0005 -> True
+check [30 ns] full_pooled_vs_L got 0.5432 ref 0.5432 tol 0.0005 -> True
+check [30 ns] full_macro_vs_L got 0.6465 ref 0.6465 tol 0.0005 -> True
+check [30 ns] gain_pooled_vs_L got 0.0633 ref 0.0633 tol 0.001 -> True
+check [30 ns] gain_macro_vs_L got 0.0156 ref 0.0156 tol 0.001 -> True
+check [30 ns] recovery_1.0_pooled_vs_L got 1.3810 ref 1.3810 tol 0.005 -> True
+check [30 ns] recovery_1.0_macro_vs_L got 1.7238 ref 1.7238 tol 0.005 -> True
+[50 ns] static pooled 0.4863 macro 0.6789 | full pooled 0.6165 macro 0.7094 (31s)
+check [50 ns] static_pooled_vs_L got 0.4863 ref 0.4863 tol 0.0005 -> True
+check [50 ns] static_macro_vs_L got 0.6789 ref 0.6789 tol 0.0005 -> True
+check [50 ns] full_pooled_vs_L got 0.6165 ref 0.6165 tol 0.0005 -> True
+check [50 ns] full_macro_vs_L got 0.7094 ref 0.7094 tol 0.0005 -> True
+check [50 ns] gain_pooled_vs_L got 0.1302 ref 0.1302 tol 0.001 -> True
+check [50 ns] gain_macro_vs_L got 0.0305 ref 0.0305 tol 0.001 -> True
+check [50 ns] recovery_1.0_pooled_vs_L got 0.7541 ref 0.7541 tol 0.005 -> True
+check [50 ns] recovery_1.0_macro_vs_L got 0.4187 ref 0.4187 tol 0.005 -> True
+[90 ns] static pooled 0.4824 macro 0.6313 | full pooled 0.5405 macro 0.6657 (37s)
+check [90 ns] static_pooled_vs_L got 0.4824 ref 0.4824 tol 0.0005 -> True
+check [90 ns] static_macro_vs_L got 0.6313 ref 0.6313 tol 0.0005 -> True
+check [90 ns] full_pooled_vs_L got 0.5405 ref 0.5405 tol 0.0005 -> True
+check [90 ns] full_macro_vs_L got 0.6657 ref 0.6657 tol 0.0005 -> True
+check [90 ns] gain_pooled_vs_L got 0.0582 ref 0.0582 tol 0.001 -> True
+check [90 ns] gain_macro_vs_L got 0.0343 ref 0.0343 tol 0.001 -> True
+check [90 ns] recovery_1.0_pooled_vs_L got 1.0432 ref 1.0432 tol 0.005 -> True
+check [90 ns] recovery_1.0_macro_vs_L got 0.5800 ref 0.5800 tol 0.005 -> True
+premise OK for all 6 horizons (37s)
+saved _checkpoint_phase1.npz/.json (37s total)
