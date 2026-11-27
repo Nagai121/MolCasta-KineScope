@@ -1,0 +1,437 @@
+{
+  "checks": [
+    {
+      "horizon_ns": 1,
+      "check": "static_pooled_vs_L",
+      "got": 0.240221050801635,
+      "reference": 0.240221050801635,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L27_salt_formation_leverage_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "static_macro_vs_L",
+      "got": 0.4054673680291198,
+      "reference": 0.4054673680291198,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L27_salt_formation_leverage_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "full_pooled_vs_L",
+      "got": 0.3841961943278115,
+      "reference": 0.3841961943278115,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L27_salt_formation_leverage_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "full_macro_vs_L",
+      "got": 0.5284511954189111,
+      "reference": 0.5284511954189111,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L27_salt_formation_leverage_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "gain_pooled_vs_L",
+      "got": 0.1439751435261765,
+      "reference": 0.1439751435261765,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L27_salt_formation_leverage_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "gain_macro_vs_L",
+      "got": 0.12298382738979124,
+      "reference": 0.12298382738979124,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L27_salt_formation_leverage_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 0.8890425378317479,
+      "reference": 0.8890425378317479,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L27_salt_formation_leverage_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 0.8068145362407458,
+      "reference": 0.8068145362407458,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L27_salt_formation_leverage_1ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "static_pooled_vs_L",
+      "got": 0.2512805844530476,
+      "reference": 0.2512805844530476,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L28_salt_formation_leverage_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "static_macro_vs_L",
+      "got": 0.3899857931315675,
+      "reference": 0.3899857931315675,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L28_salt_formation_leverage_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "full_pooled_vs_L",
+      "got": 0.3300821413043612,
+      "reference": 0.3300821413043612,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L28_salt_formation_leverage_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "full_macro_vs_L",
+      "got": 0.42132124025746626,
+      "reference": 0.42132124025746626,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L28_salt_formation_leverage_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "gain_pooled_vs_L",
+      "got": 0.07880155685131363,
+      "reference": 0.07880155685131363,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L28_salt_formation_leverage_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "gain_macro_vs_L",
+      "got": 0.03133544712589875,
+      "reference": 0.03133544712589875,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L28_salt_formation_leverage_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 0.8759579717176592,
+      "reference": 0.8759579717176592,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L28_salt_formation_leverage_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 2.2892604538000594,
+      "reference": 2.2892604538000594,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L28_salt_formation_leverage_5ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "static_pooled_vs_L",
+      "got": 0.20337390996540963,
+      "reference": 0.20337390996540963,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L29_salt_formation_leverage_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "static_macro_vs_L",
+      "got": 0.3611717334336097,
+      "reference": 0.3611717334336097,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L29_salt_formation_leverage_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "full_pooled_vs_L",
+      "got": 0.2627448534882166,
+      "reference": 0.2627448534882166,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L29_salt_formation_leverage_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "full_macro_vs_L",
+      "got": 0.3963828414101346,
+      "reference": 0.3963828414101346,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L29_salt_formation_leverage_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "gain_pooled_vs_L",
+      "got": 0.059370943522806946,
+      "reference": 0.059370943522806946,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L29_salt_formation_leverage_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "gain_macro_vs_L",
+      "got": 0.03521110797652488,
+      "reference": 0.03521110797652488,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L29_salt_formation_leverage_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 0.34118679953999487,
+      "reference": 0.34118679953999487,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L29_salt_formation_leverage_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 0.7724763888421026,
+      "reference": 0.7724763888421026,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L29_salt_formation_leverage_10ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "static_pooled_vs_L",
+      "got": 0.15822875017845178,
+      "reference": 0.15822875017845178,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L30_salt_formation_leverage_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "static_macro_vs_L",
+      "got": 0.2357022172318025,
+      "reference": 0.2357022172318025,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L30_salt_formation_leverage_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "full_pooled_vs_L",
+      "got": 0.2465966103154433,
+      "reference": 0.2465966103154433,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L30_salt_formation_leverage_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "full_macro_vs_L",
+      "got": 0.3321928126493519,
+      "reference": 0.3321928126493519,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L30_salt_formation_leverage_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "gain_pooled_vs_L",
+      "got": 0.08836786013699152,
+      "reference": 0.08836786013699152,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L30_salt_formation_leverage_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "gain_macro_vs_L",
+      "got": 0.0964905954175494,
+      "reference": 0.0964905954175494,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L30_salt_formation_leverage_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 1.0955824949194528,
+      "reference": 1.0955824949194528,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L30_salt_formation_leverage_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 1.339452227377168,
+      "reference": 1.339452227377168,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L30_salt_formation_leverage_30ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "static_pooled_vs_L",
+      "got": 0.22952834831930785,
+      "reference": 0.22952834831930785,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L31_salt_formation_leverage_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "static_macro_vs_L",
+      "got": 0.3353970843260638,
+      "reference": 0.3353970843260638,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L31_salt_formation_leverage_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "full_pooled_vs_L",
+      "got": 0.25692656784025825,
+      "reference": 0.25692656784025825,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L31_salt_formation_leverage_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "full_macro_vs_L",
+      "got": 0.37673425212091904,
+      "reference": 0.37673425212091904,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L31_salt_formation_leverage_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "gain_pooled_vs_L",
+      "got": 0.027398219520950395,
+      "reference": 0.027398219520950395,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L31_salt_formation_leverage_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "gain_macro_vs_L",
+      "got": 0.041337167794855245,
+      "reference": 0.041337167794855245,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L31_salt_formation_leverage_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 0.7995533111932827,
+      "reference": 0.7995533111932827,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L31_salt_formation_leverage_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 0.32130882220213947,
+      "reference": 0.32130882220213947,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L31_salt_formation_leverage_50ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "static_pooled_vs_L",
+      "got": 0.2135724237746901,
+      "reference": 0.2135724237746901,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L32_salt_formation_leverage_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "static_macro_vs_L",
+      "got": 0.3180987163101263,
+      "reference": 0.3180987163101263,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L32_salt_formation_leverage_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "full_pooled_vs_L",
+      "got": 0.2736360608024428,
+      "reference": 0.2736360608024428,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L32_salt_formation_leverage_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "full_macro_vs_L",
+      "got": 0.3920815904372163,
+      "reference": 0.3920815904372163,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L32_salt_formation_leverage_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "gain_pooled_vs_L",
+      "got": 0.06006363702775269,
+      "reference": 0.06006363702775269,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L32_salt_formation_leverage_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "gain_macro_vs_L",
+      "got": 0.07398287412708998,
+      "reference": 0.07398287412708998,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L32_salt_formation_leverage_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 0.4588813714993671,
+      "reference": 0.4588813714993671,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L32_salt_formation_leverage_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 0.8915908266163718,
+      "reference": 0.8915908266163718,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L32_salt_formation_leverage_90ns/results.json"
+    }
+  ],
+  "all_ok": true
+}

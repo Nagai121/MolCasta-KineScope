@@ -1,0 +1,116 @@
+=== phase1 ===
+train 2557 test 1170
+[1 ns] static pooled 0.2402 macro 0.4055 | full pooled 0.3842 macro 0.5285 (6s)
+check [1 ns] static_pooled_vs_L got 0.2402 ref 0.2402 tol 0.0005 -> True
+check [1 ns] static_macro_vs_L got 0.4055 ref 0.4055 tol 0.0005 -> True
+check [1 ns] full_pooled_vs_L got 0.3842 ref 0.3842 tol 0.0005 -> True
+check [1 ns] full_macro_vs_L got 0.5285 ref 0.5285 tol 0.0005 -> True
+check [1 ns] gain_pooled_vs_L got 0.1440 ref 0.1440 tol 0.001 -> True
+check [1 ns] gain_macro_vs_L got 0.1230 ref 0.1230 tol 0.001 -> True
+check [1 ns] recovery_1.0_pooled_vs_L got 0.8890 ref 0.8890 tol 0.005 -> True
+check [1 ns] recovery_1.0_macro_vs_L got 0.8068 ref 0.8068 tol 0.005 -> True
+[5 ns] static pooled 0.2513 macro 0.3900 | full pooled 0.3301 macro 0.4213 (11s)
+check [5 ns] static_pooled_vs_L got 0.2513 ref 0.2513 tol 0.0005 -> True
+check [5 ns] static_macro_vs_L got 0.3900 ref 0.3900 tol 0.0005 -> True
+check [5 ns] full_pooled_vs_L got 0.3301 ref 0.3301 tol 0.0005 -> True
+check [5 ns] full_macro_vs_L got 0.4213 ref 0.4213 tol 0.0005 -> True
+check [5 ns] gain_pooled_vs_L got 0.0788 ref 0.0788 tol 0.001 -> True
+check [5 ns] gain_macro_vs_L got 0.0313 ref 0.0313 tol 0.001 -> True
+check [5 ns] recovery_1.0_pooled_vs_L got 0.8760 ref 0.8760 tol 0.005 -> True
+check [5 ns] recovery_1.0_macro_vs_L got 2.2893 ref 2.2893 tol 0.005 -> True
+[10 ns] static pooled 0.2034 macro 0.3612 | full pooled 0.2627 macro 0.3964 (16s)
+check [10 ns] static_pooled_vs_L got 0.2034 ref 0.2034 tol 0.0005 -> True
+check [10 ns] static_macro_vs_L got 0.3612 ref 0.3612 tol 0.0005 -> True
+check [10 ns] full_pooled_vs_L got 0.2627 ref 0.2627 tol 0.0005 -> True
+check [10 ns] full_macro_vs_L got 0.3964 ref 0.3964 tol 0.0005 -> True
+check [10 ns] gain_pooled_vs_L got 0.0594 ref 0.0594 tol 0.001 -> True
+check [10 ns] gain_macro_vs_L got 0.0352 ref 0.0352 tol 0.001 -> True
+check [10 ns] recovery_1.0_pooled_vs_L got 0.3412 ref 0.3412 tol 0.005 -> True
+check [10 ns] recovery_1.0_macro_vs_L got 0.7725 ref 0.7725 tol 0.005 -> True
+[30 ns] static pooled 0.1582 macro 0.2357 | full pooled 0.2466 macro 0.3322 (21s)
+check [30 ns] static_pooled_vs_L got 0.1582 ref 0.1582 tol 0.0005 -> True
+check [30 ns] static_macro_vs_L got 0.2357 ref 0.2357 tol 0.0005 -> True
+check [30 ns] full_pooled_vs_L got 0.2466 ref 0.2466 tol 0.0005 -> True
+check [30 ns] full_macro_vs_L got 0.3322 ref 0.3322 tol 0.0005 -> True
+check [30 ns] gain_pooled_vs_L got 0.0884 ref 0.0884 tol 0.001 -> True
+check [30 ns] gain_macro_vs_L got 0.0965 ref 0.0965 tol 0.001 -> True
+check [30 ns] recovery_1.0_pooled_vs_L got 1.0956 ref 1.0956 tol 0.005 -> True
+check [30 ns] recovery_1.0_macro_vs_L got 1.3395 ref 1.3395 tol 0.005 -> True
+[50 ns] static pooled 0.2295 macro 0.3354 | full pooled 0.2569 macro 0.3767 (26s)
+check [50 ns] static_pooled_vs_L got 0.2295 ref 0.2295 tol 0.0005 -> True
+check [50 ns] static_macro_vs_L got 0.3354 ref 0.3354 tol 0.0005 -> True
+check [50 ns] full_pooled_vs_L got 0.2569 ref 0.2569 tol 0.0005 -> True
+check [50 ns] full_macro_vs_L got 0.3767 ref 0.3767 tol 0.0005 -> True
+check [50 ns] gain_pooled_vs_L got 0.0274 ref 0.0274 tol 0.001 -> True
+check [50 ns] gain_macro_vs_L got 0.0413 ref 0.0413 tol 0.001 -> True
+check [50 ns] recovery_1.0_pooled_vs_L got 0.7996 ref 0.7996 tol 0.005 -> True
+check [50 ns] recovery_1.0_macro_vs_L got 0.3213 ref 0.3213 tol 0.005 -> True
+[90 ns] static pooled 0.2136 macro 0.3181 | full pooled 0.2736 macro 0.3921 (30s)
+check [90 ns] static_pooled_vs_L got 0.2136 ref 0.2136 tol 0.0005 -> True
+check [90 ns] static_macro_vs_L got 0.3181 ref 0.3181 tol 0.0005 -> True
+check [90 ns] full_pooled_vs_L got 0.2736 ref 0.2736 tol 0.0005 -> True
+check [90 ns] full_macro_vs_L got 0.3921 ref 0.3921 tol 0.0005 -> True
+check [90 ns] gain_pooled_vs_L got 0.0601 ref 0.0601 tol 0.001 -> True
+check [90 ns] gain_macro_vs_L got 0.0740 ref 0.0740 tol 0.001 -> True
+check [90 ns] recovery_1.0_pooled_vs_L got 0.4589 ref 0.4589 tol 0.005 -> True
+check [90 ns] recovery_1.0_macro_vs_L got 0.8916 ref 0.8916 tol 0.005 -> True
+premise OK for all 6 horizons (30s)
+saved _checkpoint_phase1.npz/.json (31s total)
+=== horizon 1 ===
+[1 ns] bootstrap 2000/10000 (2s)
+[1 ns] bootstrap 4000/10000 (4s)
+[1 ns] bootstrap 6000/10000 (6s)
+[1 ns] bootstrap 8000/10000 (8s)
+[1 ns] bootstrap 10000/10000 (10s)
+[1 ns] bootstrap done (10s), bad gains: {'pooled': 53, 'macro': 109}
+[1 ns] done: 0.8 pooled 1.0, 0.9 pooled None, largest step 0.1->0.2 0.334 (10s)
+=== horizon 5 ===
+[5 ns] bootstrap 2000/10000 (2s)
+[5 ns] bootstrap 4000/10000 (4s)
+[5 ns] bootstrap 6000/10000 (6s)
+[5 ns] bootstrap 8000/10000 (8s)
+[5 ns] bootstrap 10000/10000 (9s)
+[5 ns] bootstrap done (10s), bad gains: {'pooled': 122, 'macro': 2063}
+[5 ns] done: 0.8 pooled 0.4, 0.9 pooled 0.4, largest step 0.19999999999999998->0.3 0.343 (10s)
+=== horizon 10 ===
+[10 ns] bootstrap 2000/10000 (2s)
+[10 ns] bootstrap 4000/10000 (5s)
+[10 ns] bootstrap 6000/10000 (6s)
+[10 ns] bootstrap 8000/10000 (8s)
+[10 ns] bootstrap 10000/10000 (10s)
+[10 ns] bootstrap done (10s), bad gains: {'pooled': 272, 'macro': 2480}
+[10 ns] done: 0.8 pooled None, 0.9 pooled None, largest step 0.6->0.7 0.451 (10s)
+=== horizon 30 ===
+[30 ns] bootstrap 2000/10000 (2s)
+[30 ns] bootstrap 4000/10000 (4s)
+[30 ns] bootstrap 6000/10000 (6s)
+[30 ns] bootstrap 8000/10000 (8s)
+[30 ns] bootstrap 10000/10000 (10s)
+[30 ns] bootstrap done (10s), bad gains: {'pooled': 0, 'macro': 0}
+[30 ns] done: 0.8 pooled 0.6, 0.9 pooled 1.0, largest step 0.0->0.1 0.407 (10s)
+=== horizon 50 ===
+[50 ns] bootstrap 2000/10000 (2s)
+[50 ns] bootstrap 4000/10000 (3s)
+[50 ns] bootstrap 6000/10000 (5s)
+[50 ns] bootstrap 8000/10000 (7s)
+[50 ns] bootstrap 10000/10000 (8s)
+[50 ns] bootstrap done (8s), bad gains: {'pooled': 1457, 'macro': 299}
+[50 ns] done: 0.8 pooled 0.5, 0.9 pooled 0.5, largest step 0.6->0.7 1.286 (8s)
+=== horizon 90 ===
+[90 ns] bootstrap 2000/10000 (2s)
+[90 ns] bootstrap 4000/10000 (4s)
+[90 ns] bootstrap 6000/10000 (6s)
+[90 ns] bootstrap 8000/10000 (7s)
+[90 ns] bootstrap 10000/10000 (9s)
+[90 ns] bootstrap done (9s), bad gains: {'pooled': 339, 'macro': 54}
+[90 ns] done: 0.8 pooled None, 0.9 pooled None, largest step 0.7000000000000001->0.8 0.273 (9s)
+=== merge ===
+saved results.json / results.csv / per_protein.csv / test_predictions.npz
+[1 ns] 0.8 pooled 1.0, 0.9 pooled None, largest step 0.1->0.2 0.334
+[5 ns] 0.8 pooled 0.4, 0.9 pooled 0.4, largest step 0.19999999999999998->0.3 0.343
+[10 ns] 0.8 pooled None, 0.9 pooled None, largest step 0.6->0.7 0.451
+[30 ns] 0.8 pooled 0.6, 0.9 pooled 1.0, largest step 0.0->0.1 0.407
+[50 ns] 0.8 pooled 0.5, 0.9 pooled 0.5, largest step 0.6->0.7 1.286
+[90 ns] 0.8 pooled None, 0.9 pooled None, largest step 0.7000000000000001->0.8 0.273
+ALL DONE
+EXIT=0
