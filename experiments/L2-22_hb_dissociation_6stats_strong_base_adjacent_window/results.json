@@ -502,6 +502,78 @@
         "tol": 0.005,
         "ok": true
       }
+    ],
+    "90": [
+      {
+        "check": "static_pooled_vs_L",
+        "got": 0.6272181976515258,
+        "reference": 0.6272181976515258,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "static_macro_vs_L",
+        "got": 0.6428612916233888,
+        "reference": 0.6428612916233888,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "static_macro300_vs_L",
+        "got": 0.6494454142877857,
+        "reference": 0.6494454142877857,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "full_pooled_vs_L",
+        "got": 0.6757709725433758,
+        "reference": 0.6757709725433758,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "full_macro_vs_L",
+        "got": 0.6875240961722523,
+        "reference": 0.6875240961722523,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "full_macro300_vs_L",
+        "got": 0.6930815633092315,
+        "reference": 0.6930815633092315,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "window_mean_1.0_recovery_pooled_vs_L_prefix",
+        "got": 0.9576996432034974,
+        "reference": 0.9576996432034974,
+        "tol": 0.005,
+        "ok": true
+      },
+      {
+        "check": "window_mean_1.0_recovery_macro_vs_L_prefix",
+        "got": 0.9731561076163336,
+        "reference": 0.9731561076163336,
+        "tol": 0.005,
+        "ok": true
+      },
+      {
+        "check": "window_6stats_1.0_recovery_pooled_vs_L_prefix",
+        "got": 0.9807574972951021,
+        "reference": 0.9807574972951021,
+        "tol": 0.005,
+        "ok": true
+      },
+      {
+        "check": "window_6stats_1.0_recovery_macro_vs_L_prefix",
+        "got": 0.9795883708698964,
+        "reference": 0.9795883708698964,
+        "tol": 0.005,
+        "ok": true
+      }
     ]
   },
   "by_horizon": {
