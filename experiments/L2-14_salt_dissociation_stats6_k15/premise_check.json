@@ -1,0 +1,342 @@
+{
+  "checks": [
+    {
+      "horizon_ns": 1,
+      "check": "n_train",
+      "got": 735.0,
+      "reference": 735.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "n_test",
+      "got": 360.0,
+      "reference": 360.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "positives",
+      "got": 101.0,
+      "reference": 101.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "static_auprc",
+      "got": 0.3734017091925338,
+      "reference": 0.3734,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "full_auprc",
+      "got": 0.5522159031068683,
+      "reference": 0.5522,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "mean_recovery_at_1.0ns",
+      "got": 0.9214602944089734,
+      "reference": 0.9214602944089734,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "stats6_recovery_at_1.0ns_is_1",
+      "got": 1.0,
+      "reference": 1.0,
+      "tol": 1e-06,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "n_train",
+      "got": 735.0,
+      "reference": 735.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "n_test",
+      "got": 360.0,
+      "reference": 360.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "positives",
+      "got": 139.0,
+      "reference": 139.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "static_auprc",
+      "got": 0.4640999974218541,
+      "reference": 0.4641,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "full_auprc",
+      "got": 0.5780152766591036,
+      "reference": 0.578,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "mean_recovery_at_1.0ns",
+      "got": 1.0122771012418004,
+      "reference": 1.0122771012418004,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "stats6_recovery_at_1.0ns_is_1",
+      "got": 1.0,
+      "reference": 1.0,
+      "tol": 1e-06,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "n_train",
+      "got": 735.0,
+      "reference": 735.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "n_test",
+      "got": 360.0,
+      "reference": 360.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "positives",
+      "got": 131.0,
+      "reference": 131.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "static_auprc",
+      "got": 0.3572141129163314,
+      "reference": 0.3572,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "full_auprc",
+      "got": 0.5352768950075466,
+      "reference": 0.5353,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "mean_recovery_at_1.0ns",
+      "got": 0.9712367237166544,
+      "reference": 0.9712367237166544,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "stats6_recovery_at_1.0ns_is_1",
+      "got": 1.0,
+      "reference": 1.0,
+      "tol": 1e-06,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "n_train",
+      "got": 735.0,
+      "reference": 735.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "n_test",
+      "got": 360.0,
+      "reference": 360.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "positives",
+      "got": 149.0,
+      "reference": 149.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "static_auprc",
+      "got": 0.47994505071240295,
+      "reference": 0.4799,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "full_auprc",
+      "got": 0.543228544547926,
+      "reference": 0.5432,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "mean_recovery_at_1.0ns",
+      "got": 1.3809615034357994,
+      "reference": 1.3809615034357994,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "stats6_recovery_at_1.0ns_is_1",
+      "got": 1.0,
+      "reference": 1.0,
+      "tol": 1e-06,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "n_train",
+      "got": 735.0,
+      "reference": 735.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "n_test",
+      "got": 360.0,
+      "reference": 360.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "positives",
+      "got": 166.0,
+      "reference": 166.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "static_auprc",
+      "got": 0.48632671783312764,
+      "reference": 0.4863,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "full_auprc",
+      "got": 0.6165250269439089,
+      "reference": 0.6165,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "mean_recovery_at_1.0ns",
+      "got": 0.7540634941894074,
+      "reference": 0.7540634941894074,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "stats6_recovery_at_1.0ns_is_1",
+      "got": 1.0,
+      "reference": 1.0,
+      "tol": 1e-06,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "n_train",
+      "got": 735.0,
+      "reference": 735.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "n_test",
+      "got": 360.0,
+      "reference": 360.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "positives",
+      "got": 160.0,
+      "reference": 160.0,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "static_auprc",
+      "got": 0.48235254274429173,
+      "reference": 0.4824,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "full_auprc",
+      "got": 0.5405050116387546,
+      "reference": 0.5405,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "mean_recovery_at_1.0ns",
+      "got": 1.0431656508004632,
+      "reference": 1.0431656508004632,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "stats6_recovery_at_1.0ns_is_1",
+      "got": 1.0,
+      "reference": 1.0,
+      "tol": 1e-06,
+      "ok": true
+    }
+  ],
+  "all_ok": true,
+  "note": "Length 1.0 ns uses frames 0..10, identical to L69-L74; static/full AUPRCs must match the L records (tol 5e-4), the mean-only recovery at 1.0 ns must match the value remeasured in L69-L74 (tol 5e-4), and the 6-statistics recovery at 1.0 ns must be 1.0 (tol 1e-6)."
+}

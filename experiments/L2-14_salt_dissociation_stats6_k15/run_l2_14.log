@@ -1,0 +1,93 @@
+train 735 test 360
+premise 1ns n_train: got 735 ref 735 tol 0 -> OK
+premise 1ns n_test: got 360 ref 360 tol 0 -> OK
+premise 1ns positives: got 101 ref 101 tol 0 -> OK
+premise 1ns static_auprc: got 0.3734017091925338 ref 0.3734 tol 0.0005 -> OK
+premise 1ns full_auprc: got 0.5522159031068683 ref 0.5522 tol 0.0005 -> OK
+premise 1ns mean_recovery_at_1.0ns: got 0.9214602944089734 ref 0.9214602944089734 tol 0.0005 -> OK
+premise 1ns stats6_recovery_at_1.0ns_is_1: got 1.0 ref 1.0 tol 1e-06 -> OK
+premise 5ns n_train: got 735 ref 735 tol 0 -> OK
+premise 5ns n_test: got 360 ref 360 tol 0 -> OK
+premise 5ns positives: got 139 ref 139 tol 0 -> OK
+premise 5ns static_auprc: got 0.4640999974218541 ref 0.4641 tol 0.0005 -> OK
+premise 5ns full_auprc: got 0.5780152766591036 ref 0.578 tol 0.0005 -> OK
+premise 5ns mean_recovery_at_1.0ns: got 1.0122771012418004 ref 1.0122771012418004 tol 0.0005 -> OK
+premise 5ns stats6_recovery_at_1.0ns_is_1: got 1.0 ref 1.0 tol 1e-06 -> OK
+premise 10ns n_train: got 735 ref 735 tol 0 -> OK
+premise 10ns n_test: got 360 ref 360 tol 0 -> OK
+premise 10ns positives: got 131 ref 131 tol 0 -> OK
+premise 10ns static_auprc: got 0.3572141129163314 ref 0.3572 tol 0.0005 -> OK
+premise 10ns full_auprc: got 0.5352768950075466 ref 0.5353 tol 0.0005 -> OK
+premise 10ns mean_recovery_at_1.0ns: got 0.9712367237166544 ref 0.9712367237166544 tol 0.0005 -> OK
+premise 10ns stats6_recovery_at_1.0ns_is_1: got 1.0 ref 1.0 tol 1e-06 -> OK
+premise 30ns n_train: got 735 ref 735 tol 0 -> OK
+premise 30ns n_test: got 360 ref 360 tol 0 -> OK
+premise 30ns positives: got 149 ref 149 tol 0 -> OK
+premise 30ns static_auprc: got 0.47994505071240295 ref 0.4799 tol 0.0005 -> OK
+premise 30ns full_auprc: got 0.543228544547926 ref 0.5432 tol 0.0005 -> OK
+premise 30ns mean_recovery_at_1.0ns: got 1.3809615034357994 ref 1.3809615034357994 tol 0.0005 -> OK
+premise 30ns stats6_recovery_at_1.0ns_is_1: got 1.0 ref 1.0 tol 1e-06 -> OK
+premise 50ns n_train: got 735 ref 735 tol 0 -> OK
+premise 50ns n_test: got 360 ref 360 tol 0 -> OK
+premise 50ns positives: got 166 ref 166 tol 0 -> OK
+premise 50ns static_auprc: got 0.48632671783312764 ref 0.4863 tol 0.0005 -> OK
+premise 50ns full_auprc: got 0.6165250269439089 ref 0.6165 tol 0.0005 -> OK
+premise 50ns mean_recovery_at_1.0ns: got 0.7540634941894074 ref 0.7540634941894074 tol 0.0005 -> OK
+premise 50ns stats6_recovery_at_1.0ns_is_1: got 1.0 ref 1.0 tol 1e-06 -> OK
+premise 90ns n_train: got 735 ref 735 tol 0 -> OK
+premise 90ns n_test: got 360 ref 360 tol 0 -> OK
+premise 90ns positives: got 160 ref 160 tol 0 -> OK
+premise 90ns static_auprc: got 0.48235254274429173 ref 0.4824 tol 0.0005 -> OK
+premise 90ns full_auprc: got 0.5405050116387546 ref 0.5405 tol 0.0005 -> OK
+premise 90ns mean_recovery_at_1.0ns: got 1.0431656508004632 ref 1.0431656508004632 tol 0.0005 -> OK
+premise 90ns stats6_recovery_at_1.0ns_is_1: got 1.0 ref 1.0 tol 1e-06 -> OK
+premise OK (34s)
+1ns: fits done (62s)
+1ns bootstrap 2500/10000 (68s)
+1ns bootstrap 5000/10000 (74s)
+1ns bootstrap 7500/10000 (81s)
+1ns bootstrap 10000/10000 (87s)
+1ns bootstrap done (87s), bad gains: {'pooled': 2, 'macro': 152}
+1ns: block saved to checkpoint (87s)
+1ns readings: min08 pooled 0.3 macro 0.3, min09 pooled 0.3 macro 0.3, largest 0.0->0.1 +0.6164
+5ns: fits done (116s)
+5ns bootstrap 2500/10000 (122s)
+5ns bootstrap 5000/10000 (130s)
+5ns bootstrap 7500/10000 (135s)
+5ns bootstrap 10000/10000 (140s)
+5ns bootstrap done (140s), bad gains: {'pooled': 56, 'macro': 201}
+5ns: block saved to checkpoint (141s)
+5ns readings: min08 pooled 0.8 macro 0.5, min09 pooled 1.0 macro 1.0, largest 0.9->1.0 +0.7177
+10ns: fits done (168s)
+10ns bootstrap 2500/10000 (177s)
+10ns bootstrap 5000/10000 (183s)
+10ns bootstrap 7500/10000 (188s)
+10ns bootstrap 10000/10000 (193s)
+10ns bootstrap done (193s), bad gains: {'pooled': 0, 'macro': 113}
+10ns: block saved to checkpoint (193s)
+10ns readings: min08 pooled 0.3 macro 0.2, min09 pooled 1.0 macro 0.3, largest 0.2->0.3 +0.3260
+30ns: fits done (220s)
+30ns bootstrap 2500/10000 (226s)
+30ns bootstrap 5000/10000 (231s)
+30ns bootstrap 7500/10000 (235s)
+30ns bootstrap 10000/10000 (240s)
+30ns bootstrap done (240s), bad gains: {'pooled': 1116, 'macro': 3535}
+30ns: block saved to checkpoint (240s)
+30ns readings: min08 pooled 0.8 macro 0.9, min09 pooled 0.8 macro 0.9, largest 0.6->0.7 +0.4592
+50ns: fits done (265s)
+50ns bootstrap 2500/10000 (272s)
+50ns bootstrap 5000/10000 (277s)
+50ns bootstrap 7500/10000 (282s)
+50ns bootstrap 10000/10000 (289s)
+50ns bootstrap done (290s), bad gains: {'pooled': 5, 'macro': 2717}
+50ns: block saved to checkpoint (290s)
+50ns readings: min08 pooled 0.2 macro 0.9, min09 pooled 0.4 macro 0.9, largest 0.0->0.1 +0.5748
+90ns: fits done (320s)
+90ns bootstrap 2500/10000 (325s)
+90ns bootstrap 5000/10000 (330s)
+90ns bootstrap 7500/10000 (335s)
+90ns bootstrap 10000/10000 (341s)
+90ns bootstrap done (341s), bad gains: {'pooled': 756, 'macro': 2105}
+90ns: block saved to checkpoint (342s)
+90ns readings: min08 pooled 0.1 macro 0.1, min09 pooled 0.1 macro 0.1, largest 0.0->0.1 +1.2237
+saved (343s total)
