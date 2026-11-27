@@ -189,7 +189,8 @@ def run_horizon(h_ns, X, S, Y, G, proteins, e01_ref):
         results[cname] = dict(
             auprc=float(average_precision_score(y, pred)),
             macro_auprc=float(np.mean(list(aps.values()))),
-            n_proteins_macro=len(aps))
+            n_proteins_macro=len(aps),
+            positives=int(y.sum()))
         print(cname, "pooled %.4f macro %.4f (%.0fs)"
               % (results[cname]["auprc"], results[cname]["macro_auprc"], time.time() - t0), flush=True)
 
