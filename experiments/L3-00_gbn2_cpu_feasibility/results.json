@@ -100,5 +100,80 @@
     "per_seed_hours_smallest_1xmk_A_78res": 4.2,
     "per_seed_hours_largest_2ysk_A_144res": 14.4
   },
-  "conclusion": "CPU では対象に届かない。最小のタンパク質でも 100 ps 1 本に約 4.2 時間、中央の大きさで約 10 時間かかり、E03 の再現 (4x100 ps x 25 タンパク質) だけで約 914 時間、L3 全体では約 2,741 時間の見込み。再現の測定は実行していない。対象は縮めていない。進め方は統括と Echizen の判断待ち。"
+  "conclusion": "CPU では対象に届かない。最小のタンパク質でも 100 ps 1 本に約 4.2 時間、中央の大きさで約 10 時間かかり、E03 の再現 (4x100 ps x 25 タンパク質) だけで約 914 時間、L3 全体では約 2,741 時間の見込み。再現の測定は実行していない。対象は縮めていない。進め方は統括と Echizen の判断待ち。",
+  "reproduction": {
+    "platform": "Colab GPU セッション (T4, OpenMM 8.6.1, OpenCL プラットフォーム), Echizen の指示 (2026-11-28) で GPU を使った",
+    "sessions": [
+      "l3g (最初の15タンパク質)",
+      "l3g2 (残り10タンパク質の再実行を試みたがセッションが失われ出力は回収できず)",
+      "l3g3 (残り10タンパク質を回し直し、全25件を回収)"
+    ],
+    "gpu_time_per_protein_4x100ps_sec": "~117-125 (1a62_A 122.6, 1dd3_B 125.4, 1ikt_A 117.3; 残り10件は約19分で10件)",
+    "n_candidates": 13687,
+    "residual_pearson_r": 0.5194982859331951,
+    "residual_pearson_r_e03": 0.5195317678288958,
+    "residual_spearman_r": 0.5173463761422985,
+    "residual_spearman_r_e03": 0.5177782972497113,
+    "static20_resid_sd": 0.6043293647496955,
+    "static20_resid_sd_e03": 0.6028217848780927,
+    "r2_static_to_real_mean": 0.6404717572372369,
+    "r2_static_to_real_mean_e03": 0.6422623769687567,
+    "static20_plus_gen_mean_resid_sd": 0.5169977585097054,
+    "static20_plus_gen_mean_resid_sd_e03": 0.5132667304858604,
+    "static20_plus_gen_all7_resid_sd": 0.5192398381357407,
+    "static20_plus_gen_all7_resid_sd_e03": 0.5247958942276253,
+    "static20_plus_gen_shuffle_resid_sd": 0.601926922707827,
+    "static20_plus_gen_shuffle_resid_sd_e03": 0.6015877534483092,
+    "downstream": {
+      "1": {
+        "ap_static20": 0.4313864822043094,
+        "ap_real_1ns_6stats": 0.5119925369296892,
+        "recovery_gen_mean": 0.5440980886637068,
+        "recovery_gen_all7": 0.5619166402003382,
+        "recovery_gen_mean_e03": 0.5824740964243917,
+        "recovery_gen_all7_e03": 0.4653831407638474
+      },
+      "5": {
+        "ap_static20": 0.4010725930451239,
+        "ap_real_1ns_6stats": 0.4742174330746079,
+        "recovery_gen_mean": 0.5524729457152815,
+        "recovery_gen_all7": 0.5399692601710426,
+        "recovery_gen_mean_e03": 0.5536904139047774,
+        "recovery_gen_all7_e03": 0.594322005019075
+      },
+      "10": {
+        "ap_static20": 0.4125372787785209,
+        "ap_real_1ns_6stats": 0.47986322522712516,
+        "recovery_gen_mean": 0.6805458232749301,
+        "recovery_gen_all7": 0.8830160302995185,
+        "recovery_gen_mean_e03": 0.6332880617570934,
+        "recovery_gen_all7_e03": 0.6855207039719954
+      },
+      "30": {
+        "ap_static20": 0.4018152242190837,
+        "ap_real_1ns_6stats": 0.4856436292094343,
+        "recovery_gen_mean": 0.4393814834174673,
+        "recovery_gen_all7": 0.571045362672994,
+        "recovery_gen_mean_e03": 0.7078903699030061,
+        "recovery_gen_all7_e03": 0.6881763323599714
+      },
+      "50": {
+        "ap_static20": 0.3863224029389081,
+        "ap_real_1ns_6stats": 0.458533202687558,
+        "recovery_gen_mean": 0.4736299695767356,
+        "recovery_gen_all7": 0.5631972941826722,
+        "recovery_gen_mean_e03": 0.5616642665422277,
+        "recovery_gen_all7_e03": 0.664759426940806
+      },
+      "90": {
+        "ap_static20": 0.4113260071779055,
+        "ap_real_1ns_6stats": 0.45497270630050785,
+        "recovery_gen_mean": 0.6829276339627725,
+        "recovery_gen_all7": 0.9703008807826358,
+        "recovery_gen_mean_e03": 0.8568328370932481,
+        "recovery_gen_all7_e03": 1.156356782147666
+      }
+    },
+    "note": "ずれとの相関は E03 の値と小数第4位まで一致し、静的な予測に足したあとのばらつきも 0.006 Å 以内で一致した。静的な特徴だけのばらつきは 0.6043 Å で E03 の 0.6028 Å と 0.0015 Å だけずれがある（取り直した特徴か sklearn の版の違いと思われるが、原因は特定していない）。回復率の型（30 ns先が最も弱く、90 ns先が最も強い）は E03 と同じだが、値そのものは 30 ns先と 90 ns先で E03 より小さく出た（GPU の違いによる軌道のばらつきと、回復率が小さい利得の比であるためと思われる）。"
+  }
 }
