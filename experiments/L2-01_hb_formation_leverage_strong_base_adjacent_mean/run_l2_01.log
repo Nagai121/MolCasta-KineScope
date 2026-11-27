@@ -1,0 +1,74 @@
+cal (13808, 6) test (163074, 6)
+[1 ns] static pooled 0.4591 macro 0.4539 | full pooled 0.5293 macro 0.5251 (31s)
+check [1 ns] static_pooled_vs_L got 0.4591 ref 0.4591 tol 0.0005 -> True
+check [1 ns] static_macro_vs_L got 0.4539 ref 0.4539 tol 0.0005 -> True
+check [1 ns] full_pooled_vs_L got 0.5293 ref 0.5293 tol 0.0005 -> True
+check [1 ns] full_macro_vs_L got 0.5251 ref 0.5251 tol 0.0005 -> True
+check [1 ns] gain_pooled_vs_L got 0.0702 ref 0.0702 tol 0.001 -> True
+check [1 ns] gain_macro_vs_L got 0.0712 ref 0.0712 tol 0.001 -> True
+check [1 ns] recovery_1.0_pooled_vs_L got 0.9750 ref 0.9750 tol 0.005 -> True
+check [1 ns] recovery_1.0_macro_vs_L got 0.9572 ref 0.9572 tol 0.005 -> True
+[5 ns] static pooled 0.4575 macro 0.4505 | full pooled 0.5089 macro 0.5023 (74s)
+check [5 ns] static_pooled_vs_L got 0.4575 ref 0.4575 tol 0.0005 -> True
+check [5 ns] static_macro_vs_L got 0.4505 ref 0.4505 tol 0.0005 -> True
+check [5 ns] full_pooled_vs_L got 0.5089 ref 0.5089 tol 0.0005 -> True
+check [5 ns] full_macro_vs_L got 0.5023 ref 0.5023 tol 0.0005 -> True
+check [5 ns] gain_pooled_vs_L got 0.0514 ref 0.0514 tol 0.001 -> True
+check [5 ns] gain_macro_vs_L got 0.0518 ref 0.0518 tol 0.001 -> True
+check [5 ns] recovery_1.0_pooled_vs_L got 0.8817 ref 0.8817 tol 0.005 -> True
+check [5 ns] recovery_1.0_macro_vs_L got 0.8729 ref 0.8729 tol 0.005 -> True
+[10 ns] static pooled 0.4505 macro 0.4438 | full pooled 0.4881 macro 0.4826 (150s)
+check [10 ns] static_pooled_vs_L got 0.4505 ref 0.4505 tol 0.0005 -> True
+check [10 ns] static_macro_vs_L got 0.4438 ref 0.4438 tol 0.0005 -> True
+check [10 ns] full_pooled_vs_L got 0.4881 ref 0.4881 tol 0.0005 -> True
+check [10 ns] full_macro_vs_L got 0.4826 ref 0.4826 tol 0.0005 -> True
+check [10 ns] gain_pooled_vs_L got 0.0376 ref 0.0376 tol 0.001 -> True
+check [10 ns] gain_macro_vs_L got 0.0388 ref 0.0388 tol 0.001 -> True
+check [10 ns] recovery_1.0_pooled_vs_L got 1.0539 ref 1.0539 tol 0.005 -> True
+check [10 ns] recovery_1.0_macro_vs_L got 1.0332 ref 1.0332 tol 0.005 -> True
+[30 ns] static pooled 0.4492 macro 0.4418 | full pooled 0.4855 macro 0.4788 (233s)
+check [30 ns] static_pooled_vs_L got 0.4492 ref 0.4492 tol 0.0005 -> True
+check [30 ns] static_macro_vs_L got 0.4418 ref 0.4418 tol 0.0005 -> True
+check [30 ns] full_pooled_vs_L got 0.4855 ref 0.4855 tol 0.0005 -> True
+check [30 ns] full_macro_vs_L got 0.4788 ref 0.4788 tol 0.0005 -> True
+check [30 ns] gain_pooled_vs_L got 0.0363 ref 0.0363 tol 0.001 -> True
+check [30 ns] gain_macro_vs_L got 0.0370 ref 0.0370 tol 0.001 -> True
+check [30 ns] recovery_1.0_pooled_vs_L got 1.0690 ref 1.0690 tol 0.005 -> True
+check [30 ns] recovery_1.0_macro_vs_L got 1.0826 ref 1.0826 tol 0.005 -> True
+[50 ns] static pooled 0.4470 macro 0.4407 | full pooled 0.4825 macro 0.4752 (270s)
+check [50 ns] static_pooled_vs_L got 0.4470 ref 0.4470 tol 0.0005 -> True
+check [50 ns] static_macro_vs_L got 0.4407 ref 0.4407 tol 0.0005 -> True
+check [50 ns] full_pooled_vs_L got 0.4825 ref 0.4825 tol 0.0005 -> True
+check [50 ns] full_macro_vs_L got 0.4752 ref 0.4752 tol 0.0005 -> True
+check [50 ns] gain_pooled_vs_L got 0.0354 ref 0.0354 tol 0.001 -> True
+check [50 ns] gain_macro_vs_L got 0.0344 ref 0.0344 tol 0.001 -> True
+check [50 ns] recovery_1.0_pooled_vs_L got 0.9060 ref 0.9060 tol 0.005 -> True
+check [50 ns] recovery_1.0_macro_vs_L got 0.9167 ref 0.9167 tol 0.005 -> True
+[90 ns] static pooled 0.4418 macro 0.4357 | full pooled 0.4683 macro 0.4630 (326s)
+check [90 ns] static_pooled_vs_L got 0.4418 ref 0.4418 tol 0.0005 -> True
+check [90 ns] static_macro_vs_L got 0.4357 ref 0.4357 tol 0.0005 -> True
+check [90 ns] full_pooled_vs_L got 0.4683 ref 0.4683 tol 0.0005 -> True
+check [90 ns] full_macro_vs_L got 0.4630 ref 0.4630 tol 0.0005 -> True
+check [90 ns] gain_pooled_vs_L got 0.0265 ref 0.0265 tol 0.001 -> True
+check [90 ns] gain_macro_vs_L got 0.0273 ref 0.0273 tol 0.001 -> True
+check [90 ns] recovery_1.0_pooled_vs_L got 1.0844 ref 1.0844 tol 0.005 -> True
+check [90 ns] recovery_1.0_macro_vs_L got 1.0597 ref 1.0597 tol 0.005 -> True
+premise OK for all 6 horizons (326s)
+[1 ns] bootstrap 2000/10000 (655s)
+[1 ns] bootstrap 4000/10000 (987s)
+[1 ns] bootstrap 6000/10000 (1258s)
+[1 ns] bootstrap 8000/10000 (1495s)
+[1 ns] bootstrap 10000/10000 (1747s)
+[1 ns] bootstrap done (1748s), bad gains: {'pooled': 0, 'macro': 0}
+[1 ns] done: 0.8 pooled 0.4, 0.9 pooled 1.0, largest step 0.0->0.1 0.401 (1748s)
+[5 ns] bootstrap 2000/10000 (2009s)
+[5 ns] bootstrap 4000/10000 (2261s)
+[5 ns] bootstrap 6000/10000 (2516s)
+[5 ns] bootstrap 8000/10000 (2771s)
+[5 ns] bootstrap 10000/10000 (3021s)
+[5 ns] bootstrap done (3022s), bad gains: {'pooled': 0, 'macro': 0}
+[5 ns] done: 0.8 pooled 0.6, 0.9 pooled None, largest step 0.0->0.1 0.269 (3022s)
+[10 ns] bootstrap 2000/10000 (3279s)
+[10 ns] bootstrap 4000/10000 (3543s)
+[10 ns] bootstrap 6000/10000 (3820s)
+[10 ns] bootstrap 8000/10000 (4095s)

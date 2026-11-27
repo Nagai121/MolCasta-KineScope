@@ -1,0 +1,437 @@
+{
+  "checks": [
+    {
+      "horizon_ns": 1,
+      "check": "static_pooled_vs_L",
+      "got": 0.45908041605930167,
+      "reference": 0.45908041605930167,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "static_macro_vs_L",
+      "got": 0.45389897977810933,
+      "reference": 0.45389897977810933,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "full_pooled_vs_L",
+      "got": 0.5292970722376975,
+      "reference": 0.5292970722376975,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "full_macro_vs_L",
+      "got": 0.5251144930077717,
+      "reference": 0.5251144930077717,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "gain_pooled_vs_L",
+      "got": 0.07021665617839584,
+      "reference": 0.07021665617839584,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "gain_macro_vs_L",
+      "got": 0.07121551322966235,
+      "reference": 0.07121551322966235,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 0.9749613912198013,
+      "reference": 0.9749613912198013,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json"
+    },
+    {
+      "horizon_ns": 1,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 0.9572269330571331,
+      "reference": 0.9572269330571331,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L02_hb_formation_leverage_strong_base_1ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "static_pooled_vs_L",
+      "got": 0.4574644290052942,
+      "reference": 0.4574644290052942,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L04_hb_formation_leverage_strong_base_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "static_macro_vs_L",
+      "got": 0.45046327488513893,
+      "reference": 0.45046327488513893,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L04_hb_formation_leverage_strong_base_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "full_pooled_vs_L",
+      "got": 0.508897755209011,
+      "reference": 0.508897755209011,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L04_hb_formation_leverage_strong_base_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "full_macro_vs_L",
+      "got": 0.5022796373338545,
+      "reference": 0.5022796373338545,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L04_hb_formation_leverage_strong_base_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "gain_pooled_vs_L",
+      "got": 0.05143332620371682,
+      "reference": 0.05143332620371682,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L04_hb_formation_leverage_strong_base_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "gain_macro_vs_L",
+      "got": 0.05181636244871557,
+      "reference": 0.05181636244871557,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L04_hb_formation_leverage_strong_base_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 0.881654231291137,
+      "reference": 0.881654231291137,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L04_hb_formation_leverage_strong_base_5ns/results.json"
+    },
+    {
+      "horizon_ns": 5,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 0.8729105237787966,
+      "reference": 0.8729105237787966,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L04_hb_formation_leverage_strong_base_5ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "static_pooled_vs_L",
+      "got": 0.4505008695140563,
+      "reference": 0.4505008695140563,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L05_hb_formation_leverage_strong_base_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "static_macro_vs_L",
+      "got": 0.44380537047799934,
+      "reference": 0.44380537047799934,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L05_hb_formation_leverage_strong_base_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "full_pooled_vs_L",
+      "got": 0.4881399316051097,
+      "reference": 0.4881399316051097,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L05_hb_formation_leverage_strong_base_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "full_macro_vs_L",
+      "got": 0.48263670242184953,
+      "reference": 0.48263670242184953,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L05_hb_formation_leverage_strong_base_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "gain_pooled_vs_L",
+      "got": 0.03763906209105339,
+      "reference": 0.03763906209105339,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L05_hb_formation_leverage_strong_base_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "gain_macro_vs_L",
+      "got": 0.03883133194385019,
+      "reference": 0.03883133194385019,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L05_hb_formation_leverage_strong_base_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 1.0538598031438162,
+      "reference": 1.0538598031438162,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L05_hb_formation_leverage_strong_base_10ns/results.json"
+    },
+    {
+      "horizon_ns": 10,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 1.0331617491866367,
+      "reference": 1.0331617491866367,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L05_hb_formation_leverage_strong_base_10ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "static_pooled_vs_L",
+      "got": 0.4492150910499756,
+      "reference": 0.4492150910499756,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L06_hb_formation_leverage_strong_base_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "static_macro_vs_L",
+      "got": 0.4417628629469729,
+      "reference": 0.4417628629469729,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L06_hb_formation_leverage_strong_base_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "full_pooled_vs_L",
+      "got": 0.48552415832240897,
+      "reference": 0.48552415832240897,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L06_hb_formation_leverage_strong_base_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "full_macro_vs_L",
+      "got": 0.4787996665455646,
+      "reference": 0.4787996665455646,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L06_hb_formation_leverage_strong_base_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "gain_pooled_vs_L",
+      "got": 0.03630906727243338,
+      "reference": 0.03630906727243338,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L06_hb_formation_leverage_strong_base_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "gain_macro_vs_L",
+      "got": 0.03703680359859168,
+      "reference": 0.03703680359859168,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L06_hb_formation_leverage_strong_base_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 1.069025055819644,
+      "reference": 1.069025055819644,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L06_hb_formation_leverage_strong_base_30ns/results.json"
+    },
+    {
+      "horizon_ns": 30,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 1.0825804299573314,
+      "reference": 1.0825804299573314,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L06_hb_formation_leverage_strong_base_30ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "static_pooled_vs_L",
+      "got": 0.4470064658592353,
+      "reference": 0.4470064658592353,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L07_hb_formation_leverage_strong_base_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "static_macro_vs_L",
+      "got": 0.4407490691046369,
+      "reference": 0.4407490691046369,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L07_hb_formation_leverage_strong_base_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "full_pooled_vs_L",
+      "got": 0.4824563767902365,
+      "reference": 0.4824563767902365,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L07_hb_formation_leverage_strong_base_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "full_macro_vs_L",
+      "got": 0.47515953921590937,
+      "reference": 0.47515953921590937,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L07_hb_formation_leverage_strong_base_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "gain_pooled_vs_L",
+      "got": 0.035449910931001194,
+      "reference": 0.035449910931001194,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L07_hb_formation_leverage_strong_base_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "gain_macro_vs_L",
+      "got": 0.03441047011127246,
+      "reference": 0.03441047011127246,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L07_hb_formation_leverage_strong_base_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 0.9059701849645032,
+      "reference": 0.9059701849645032,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L07_hb_formation_leverage_strong_base_50ns/results.json"
+    },
+    {
+      "horizon_ns": 50,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 0.9166705258680196,
+      "reference": 0.9166705258680196,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L07_hb_formation_leverage_strong_base_50ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "static_pooled_vs_L",
+      "got": 0.441811867927162,
+      "reference": 0.441811867927162,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L08_hb_formation_leverage_strong_base_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "static_macro_vs_L",
+      "got": 0.43571625046705703,
+      "reference": 0.43571625046705703,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L08_hb_formation_leverage_strong_base_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "full_pooled_vs_L",
+      "got": 0.46826751735970984,
+      "reference": 0.46826751735970984,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L08_hb_formation_leverage_strong_base_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "full_macro_vs_L",
+      "got": 0.46297816152761734,
+      "reference": 0.46297816152761734,
+      "tol": 0.0005,
+      "ok": true,
+      "reference_source": "experiments/L08_hb_formation_leverage_strong_base_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "gain_pooled_vs_L",
+      "got": 0.026455649432547856,
+      "reference": 0.026455649432547856,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L08_hb_formation_leverage_strong_base_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "gain_macro_vs_L",
+      "got": 0.027261911060560307,
+      "reference": 0.027261911060560307,
+      "tol": 0.001,
+      "ok": true,
+      "reference_source": "experiments/L08_hb_formation_leverage_strong_base_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "recovery_1.0_pooled_vs_L",
+      "got": 1.0843664897030325,
+      "reference": 1.0843664897030325,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L08_hb_formation_leverage_strong_base_90ns/results.json"
+    },
+    {
+      "horizon_ns": 90,
+      "check": "recovery_1.0_macro_vs_L",
+      "got": 1.059703017303389,
+      "reference": 1.059703017303389,
+      "tol": 0.005,
+      "ok": true,
+      "reference_source": "experiments/L08_hb_formation_leverage_strong_base_90ns/results.json"
+    }
+  ],
+  "all_ok": true
+}
