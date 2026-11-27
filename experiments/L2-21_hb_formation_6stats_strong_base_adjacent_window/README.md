@@ -158,6 +158,6 @@ L では区間は先頭から（フレーム 0〜k）で、短い長さでは起
 
 ## 6. コードと出力の保存先
 
-- 実行コード: `run_l2-21.py`（sklearn はスレッド数を 1 に絞る。この仮想マシンで実行）
+- 実行コード: `run_l2_21.py`（sklearn はスレッド数を 1 に絞る。この仮想マシンで実行）
 - 結果: `results.json`（予測幅ごとの土台の再現値・曲がり・読み取り・タンパク質ごとの値・記録との照合）、`results.csv`（予測幅×長さの1行ずつ）、`test_predictions_<予測幅>ns.npz`（予測幅ごとの予測確率）
 - 対応する L の記録: `experiments/L39_hb_formation_leverage_strong_base_6stats_1ns/` など（予測幅ごと）
