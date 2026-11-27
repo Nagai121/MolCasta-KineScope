@@ -1,0 +1,48 @@
+name: CPU01 dual-probe MD engine
+on:
+  push:
+    branches: ["experiment/t3m-cpu-md"]
+    paths: [".github/workflows/cpu01-dual-probe.yml", "experiments/CPU01_dual_probe_engine/**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        pdb: [1A8O, 1UBQ]
+        config:
+          - {id: serial-1, workers: 1, threads: 1}
+          - {id: serial-2, workers: 1, threads: 2}
+          - {id: serial-4, workers: 1, threads: 4}
+          - {id: dual-1, workers: 2, threads: 1}
+          - {id: dual-2, workers: 2, threads: 2}
+          - {id: replica-1, workers: 4, threads: 1}
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: experiments/CPU01_dual_probe_engine
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "openmm==8.3.1" "numpy==2.2.6"
+      - run: lscpu
+      - name: Full 4 x 100 ps CPU trajectory benchmark
+        run: |
+          python -u experiments/CPU01_dual_probe_engine/benchmark.py --pdb ${{ matrix.pdb }} --workers ${{ matrix.config.workers }} --threads ${{ matrix.config.threads }} --out cpu01-result
+      - name: Upload actual trajectories and timing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpu01-${{ matrix.pdb }}-${{ matrix.config.id }}
+          path: cpu01-result/
+          if-no-files-found: warn
