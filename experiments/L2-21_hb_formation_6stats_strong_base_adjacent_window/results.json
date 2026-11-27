@@ -316,6 +316,64 @@
         "tol": 0.005,
         "ok": true
       }
+    ],
+    "30": [
+      {
+        "check": "static_pooled_vs_L",
+        "got": 0.4492150910499756,
+        "reference": 0.4492150910499756,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "static_macro_vs_L",
+        "got": 0.4417628629469729,
+        "reference": 0.4417628629469729,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "full_pooled_vs_L",
+        "got": 0.48552415832240897,
+        "reference": 0.48552415832240897,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "full_macro_vs_L",
+        "got": 0.4787996665455646,
+        "reference": 0.4787996665455646,
+        "tol": 0.0005,
+        "ok": true
+      },
+      {
+        "check": "window_mean_1.0_recovery_pooled_vs_L_prefix",
+        "got": 1.069025055819644,
+        "reference": 1.069025055819644,
+        "tol": 0.005,
+        "ok": true
+      },
+      {
+        "check": "window_mean_1.0_recovery_macro_vs_L_prefix",
+        "got": 1.0825804299573314,
+        "reference": 1.0825804299573314,
+        "tol": 0.005,
+        "ok": true
+      },
+      {
+        "check": "window_6stats_1.0_recovery_pooled_vs_L_prefix",
+        "got": 1.0570284426533594,
+        "reference": 1.0570284426533594,
+        "tol": 0.005,
+        "ok": true
+      },
+      {
+        "check": "window_6stats_1.0_recovery_macro_vs_L_prefix",
+        "got": 1.0628185599848776,
+        "reference": 1.0628185599848776,
+        "tol": 0.005,
+        "ok": true
+      }
     ]
   },
   "by_horizon": {
