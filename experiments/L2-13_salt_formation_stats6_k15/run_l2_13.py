@@ -431,7 +431,7 @@ def main():
             metrics=results,
             base_gain=dict(pooled=float(gain_pooled), macro=float(gain_macro)),
             recovery_vs_full_history_gain=recovery,
-            recovery_increment_per_0.1ns=dict(stats6=inc6, mean=incmean),
+            **{"recovery_increment_per_0.1ns": dict(stats6=inc6, mean=incmean)},
             readings=readings,
             comparison_stats6_vs_mean_only=comparison,
             comparison_vs_L=dict(
