@@ -1,0 +1,104 @@
+{
+  "experiment": "L3-00",
+  "date": "2026-11-27",
+  "question": "前提確認: E03 の GBn2 短い MD (4 seeds x 100 ps) を Colab の CPU セッションで再現できるか。速度の実測と、対象 25 タンパク質への到達可能性の判定。",
+  "data_layer_check": {
+    "proteins": 25,
+    "protein_list": [
+      "1a62_A",
+      "1dd3_B",
+      "1ikt_A",
+      "1m8s_A",
+      "1sf9_A",
+      "1uha_A",
+      "1xmk_A",
+      "2e5y_B",
+      "2gpi_A",
+      "2i9x_A",
+      "2nwv_A",
+      "2ysk_A",
+      "3c9p_A",
+      "3fpn_A",
+      "3kz7_A",
+      "3pes_A",
+      "3t92_A",
+      "3v3l_A",
+      "4cv4_A",
+      "4myy_A",
+      "4zds_B",
+      "5ii7_A",
+      "6bk4_A",
+      "6in7_A",
+      "7ead_A"
+    ],
+    "candidate_counts": {
+      "hb_form": 13687,
+      "hb_diss": 6542,
+      "ct_form": 20533,
+      "ct_diss": 8910,
+      "sb_form": 377,
+      "sb_diss": 97
+    },
+    "hb_form_e03_recorded": 13687,
+    "hb_form_match": true,
+    "note": "候補・実軌道の系列・ラベル・静的な特徴 (hb は公開 20 特徴 = E03 の static20 と同一) を E05 の抽出定義で取り直し、E03 の候補数と完全一致した。"
+  },
+  "protocol_check": {
+    "build": "ok",
+    "origin_distance_max_err_A": 1e-05,
+    "note": "起点フレーム (フレーム 10) の構造から OpenMM の系を組むところまでは E05 と同じ手順で通り、候補ペアの起点距離は実軌道の値と 1e-5 Å で一致した (1uha_A をこの仮想マシンで、3t92_A を Colab で確認)。"
+  },
+  "cpu_speed_colab": {
+    "environment": "Colab 無料枠の CPU セッション (2 vCPU), OpenMM 8.6.1, プラットフォームは CPU を明示",
+    "protein": "3t92_A",
+    "n_res": 120,
+    "n_atoms_with_hydrogens": 1899,
+    "energy_eval_sec": [
+      0.704,
+      0.7,
+      0.683
+    ],
+    "step200_sec_threads_default": 143.98,
+    "sec_per_step": 0.72,
+    "sec_per_100ps": 35994,
+    "hours_per_100ps": 10.0,
+    "threads1": {
+      "energy_eval_sec": [
+        0.909,
+        0.896,
+        0.915
+      ],
+      "step200_sec": 185.44,
+      "sec_per_100ps": 46360
+    },
+    "minimize200": "7 分では終わらなかった (下限のみ観測)。エネルギーの単価から約 1,400 秒と見積もられる。",
+    "forces": [
+      "HarmonicBondForce",
+      "PeriodicTorsionForce",
+      "NonbondedForce",
+      "CMMotionRemover",
+      "HarmonicAngleForce",
+      "CustomGBForce"
+    ],
+    "note": "GBn2 は amber14 の定義では CustomGBForce として実装されており、OpenMM の CPU プラットフォームでは 1 ステップ約 0.72 秒 (120 残基) かかった。スレッド数を 1 にしても速くならなかった。"
+  },
+  "cpu_speed_local_vm": {
+    "protein": "1uha_A",
+    "energy_eval_sec": 0.97,
+    "minimize10_sec": 88.71,
+    "note": "この仮想マシン (共有 CPU 1.5 コア) は Colab よりさらに遅く、代替にならない。"
+  },
+  "gpu_reference_e03": {
+    "device": "RTX 4060 Ti (OpenCL)",
+    "sec_per_protein_4x100ps_all_phenomena": 55.0
+  },
+  "projection": {
+    "assumption": "費用は原子数の 2 乗に比例するとし、実測した 3t92_A (120 残基で 100 ps あたり 10.0 時間) を基準に残基数で換算した見積もり。",
+    "sum_units_nres120_squared": 22.84,
+    "l3_00_reproduction_hours_4x100ps_x25": 914,
+    "full_l3_hours_12x100ps_equiv_x25": 2741,
+    "per_seed_hours_smallest_1xmk_A_78res": 4.2,
+    "per_seed_hours_largest_2ysk_A_144res": 14.4
+  },
+  "conclusion": "CPU では対象に届かない。最小のタンパク質でも 100 ps 1 本に約 4.2 時間、中央の大きさで約 10 時間かかり、E03 の再現 (4x100 ps x 25 タンパク質) だけで約 914 時間、L3 全体では約 2,741 時間の見込み。再現の測定は実行していない。対象は縮めていない。進め方は統括と Echizen の判断待ち。"
+}
