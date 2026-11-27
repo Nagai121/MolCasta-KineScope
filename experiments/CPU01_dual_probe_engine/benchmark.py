@@ -1,5 +1,5 @@
 """CPU-only full 400 ps dual-probe engine benchmark; no model or weights."""
-import argparse, concurrent.futures, io, json, os, platform, random, time, urllib.request
+import argparse, concurrent.futures, io, json, multiprocessing, os, platform, random, time, urllib.request
 from pathlib import Path
 import numpy as np
 import openmm as mm
@@ -137,7 +137,7 @@ def main():
             groups=[[0],[1]] if a.workers==4 else [[0,1]]
             for group in groups: tasks.append((xml,ch,group,pos,a.threads,dt))
         t_sim=time.perf_counter(); current={ch:{} for ch in active}; errors={}
-        with concurrent.futures.ThreadPoolExecutor(max_workers=a.workers) as ex:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=a.workers, mp_context=multiprocessing.get_context('spawn')) as ex:
             futures={ex.submit(one_group,task):task[1] for task in tasks}
             for f in concurrent.futures.as_completed(futures):
                 ch=futures[f]
