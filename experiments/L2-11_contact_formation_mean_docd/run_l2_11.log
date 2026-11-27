@@ -1,0 +1,27 @@
+train (15926, 5) test (7384, 5)
+premise 1ns static: got 0.339770 ref 0.339770 -> OK
+premise 1ns full: got 0.566880 ref 0.566880 -> OK
+premise 1ns mean_full: got 0.500830 ref 0.500830 -> OK
+premise 5ns static: got 0.286986 ref 0.286986 -> OK
+premise 5ns full: got 0.519199 ref 0.519199 -> OK
+premise 5ns mean_full: got 0.447856 ref 0.447856 -> OK
+premise 10ns static: got 0.320385 ref 0.320385 -> OK
+premise 10ns full: got 0.523380 ref 0.523380 -> OK
+premise 10ns mean_full: got 0.451628 ref 0.451628 -> OK
+premise 30ns static: got 0.286814 ref 0.286814 -> OK
+premise 30ns full: got 0.438605 ref 0.438605 -> OK
+premise 30ns mean_full: got 0.437157 ref 0.437157 -> OK
+premise 50ns static: got 0.260385 ref 0.260385 -> OK
+premise 50ns full: got 0.463792 ref 0.463792 -> OK
+premise 50ns mean_full: got 0.393526 ref 0.393526 -> OK
+premise 90ns static: got 0.287213 ref 0.287213 -> OK
+premise 90ns full: got 0.472168 ref 0.472168 -> OK
+premise 90ns mean_full: got 0.406594 ref 0.406594 -> OK
+premise OK (15s)
+1ns: recovery 0.000 0.472 0.699 0.738 0.826 0.833 0.955 0.930 0.826 0.776 0.709 | min08 0.4 min09 0.6 largest 0.0->0.1 +0.4725 (23s)
+5ns: recovery 0.000 0.482 0.697 0.811 0.714 0.804 0.784 0.829 0.756 0.781 0.693 | min08 0.3 min09 None largest 0.0->0.1 +0.4824 (55s)
+10ns: recovery 0.000 0.520 0.550 0.520 0.602 0.599 0.556 0.619 0.751 0.732 0.647 | min08 None min09 None largest 0.0->0.1 +0.5197 (70s)
+30ns: recovery 0.000 0.692 0.833 0.884 0.940 0.874 0.961 0.967 1.028 0.988 0.990 | min08 0.2 min09 0.4 largest 0.0->0.1 +0.6922 (85s)
+50ns: recovery 0.000 0.588 0.516 0.556 0.537 0.513 0.549 0.613 0.601 0.609 0.655 | min08 None min09 None largest 0.0->0.1 +0.5881 (99s)
+90ns: recovery 0.000 0.361 0.453 0.556 0.610 0.502 0.593 0.551 0.649 0.752 0.645 | min08 None min09 None largest 0.0->0.1 +0.3606 (114s)
+saved (115s total)

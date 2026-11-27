@@ -1,0 +1,246 @@
+{
+  "checks": [
+    {
+      "horizon_ns": 1,
+      "check": "static_auprc",
+      "got": 0.33977026863870574,
+      "reference": 0.33977026863870574,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "full_auprc",
+      "got": 0.5668799691676633,
+      "reference": 0.5668799691676633,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "mean_full_auprc",
+      "got": 0.5008301534366115,
+      "reference": 0.5008301534366115,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "n",
+      "got": 7384,
+      "reference": 7384,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 1,
+      "check": "positives",
+      "got": 219,
+      "reference": 219,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "static_auprc",
+      "got": 0.2869855867812501,
+      "reference": 0.2869855867812501,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "full_auprc",
+      "got": 0.5191989452346799,
+      "reference": 0.5191989452346799,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "mean_full_auprc",
+      "got": 0.4478561990956109,
+      "reference": 0.4478561990956109,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "n",
+      "got": 7384,
+      "reference": 7384,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 5,
+      "check": "positives",
+      "got": 214,
+      "reference": 214,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "static_auprc",
+      "got": 0.320384938464356,
+      "reference": 0.320384938464356,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "full_auprc",
+      "got": 0.5233798114377418,
+      "reference": 0.5233798114377418,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "mean_full_auprc",
+      "got": 0.45162809820314465,
+      "reference": 0.45162809820314465,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "n",
+      "got": 7384,
+      "reference": 7384,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 10,
+      "check": "positives",
+      "got": 226,
+      "reference": 226,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "static_auprc",
+      "got": 0.28681357061495694,
+      "reference": 0.28681357061495694,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "full_auprc",
+      "got": 0.4386046069734208,
+      "reference": 0.4386046069734208,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "mean_full_auprc",
+      "got": 0.4371572874384626,
+      "reference": 0.4371572874384626,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "n",
+      "got": 7384,
+      "reference": 7384,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 30,
+      "check": "positives",
+      "got": 247,
+      "reference": 247,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "static_auprc",
+      "got": 0.26038453431471853,
+      "reference": 0.26038453431471853,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "full_auprc",
+      "got": 0.46379209531119275,
+      "reference": 0.46379209531119275,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "mean_full_auprc",
+      "got": 0.3935261394770647,
+      "reference": 0.3935261394770647,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "n",
+      "got": 7384,
+      "reference": 7384,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 50,
+      "check": "positives",
+      "got": 250,
+      "reference": 250,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "static_auprc",
+      "got": 0.2872126453371935,
+      "reference": 0.2872126453371935,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "full_auprc",
+      "got": 0.47216777524969433,
+      "reference": 0.47216777524969433,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "mean_full_auprc",
+      "got": 0.4065937715486499,
+      "reference": 0.4065937715486499,
+      "tol": 0.0005,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "n",
+      "got": 7384,
+      "reference": 7384,
+      "tol": 0,
+      "ok": true
+    },
+    {
+      "horizon_ns": 90,
+      "check": "positives",
+      "got": 257,
+      "reference": 257,
+      "tol": 0,
+      "ok": true
+    }
+  ],
+  "all_ok": true,
+  "note": "Length 1.0 ns uses frames 0..10, identical to L15-L20; static/full/mean-at-1.0ns AUPRCs must match the L records."
+}
