@@ -176,6 +176,11 @@
         "reference": 0.9472911378851832,
         "tol": 0.03,
         "ok": false
+      },
+      {
+        "check": "premise_failure_accepted",
+        "basis": "2026-11-28 Echizen の判断：回復率の小さなずれは残るものとして受け入れ、最後まで測る",
+        "ok": true
       }
     ]
   },
