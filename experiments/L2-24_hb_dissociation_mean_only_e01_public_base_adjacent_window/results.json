@@ -251,6 +251,29 @@
         "tol": 0.03,
         "ok": true
       }
+    ],
+    "90": [
+      {
+        "check": "static_pooled_vs_E01",
+        "got": 0.6631013044893854,
+        "reference": 0.6669441585161393,
+        "tol": 0.005,
+        "ok": true
+      },
+      {
+        "check": "full_pooled_vs_E01",
+        "got": 0.7012158627599335,
+        "reference": 0.7029540929216478,
+        "tol": 0.005,
+        "ok": true
+      },
+      {
+        "check": "window_mean_1.0_recovery_pooled_vs_E01",
+        "got": 0.9246338661656949,
+        "reference": 0.9503614200183094,
+        "tol": 0.03,
+        "ok": true
+      }
     ]
   },
   "by_horizon": {
