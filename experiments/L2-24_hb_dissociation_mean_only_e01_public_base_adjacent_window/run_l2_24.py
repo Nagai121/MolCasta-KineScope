@@ -47,6 +47,14 @@ K06(b) の保存データ (形成) と K2-18 の入力バンドル (解離) と�
 なった。回復率の許容幅 0.03 は、L2-23 の予測幅 1 ns で実測したばらつきの
 幅 0.026 を覆う値である。
 
+L2-24 の 5 ns先では、回復率が 0.9056 (E01 は 0.9473、差 0.0417) で許容幅を
+超えて止まった。原因は同じく行の順番への敏感さで、解離・5 ns先では利得が
+小さいため動き幅が 0.049 に広がっていた (premise_investigation.md)。
+2026-11-28 の Echizen の判断で、この小さなずれは残るものとして受け入れ、
+AUPRC の照合 (static / full) が通っていて回復率だけが超えた場合は、
+不合格の記録を残したうえで最後まで測ることになった。AUPRC の照合が
+崩れた場合はこれまでどおり止める。
+
 使い方: run_l2_24.py <horizon_ns> (1/5/10/30/50/90 のどれか1つ)。
 予測幅ごとに results.json へ追記し、oof_predictions_<幅>ns.npz を保存する。
 全予測幅がそろうと results.csv と per_protein.csv を書く。
@@ -223,12 +231,31 @@ def run_horizon(h_ns, X, S, Y, G, proteins, e01_ref):
     ok &= chk("window_mean_1.0_recovery_pooled_vs_E01", rec(COND_MEAN[1.0], "pooled"), ref["recovery_pooled"], 0.03)
 
     res = load_results()
-    res["premise_checks"][str(h_ns)] = checks
-    save_results(res)
     if not ok:
-        print("PREMISE FAILED at horizon", h_ns, "- stopping as instructed.", flush=True)
-        sys.exit(2)
-    print("premise OK for horizon", h_ns, flush=True)
+        # 2026-11-28 の Echizen の判断: 5 ns先で回復率の差 0.0417 が許容幅 0.03 を
+        # 超えたが、この小さなずれは残るものとして受け入れ、最後まで測る。
+        # AUPRC の照合 (static / full) が通っていて回復率だけが超えた場合は、
+        # 不合格の記録を残したうえで測定を続ける。AUPRC の照合が崩れたら止める。
+        # (調査は premise_investigation.md)
+        ap_ok = all(c["ok"] for c in checks
+                    if c["check"] != "window_mean_1.0_recovery_pooled_vs_E01")
+        if ap_ok:
+            checks.append(dict(
+                check="premise_failure_accepted",
+                basis="2026-11-28 Echizen の判断：回復率の小さなずれは残るものとして受け入れ、最後まで測る",
+                ok=True))
+            res["premise_checks"][str(h_ns)] = checks
+            save_results(res)
+            print("premise recovery check failed but accepted per decision at horizon", h_ns, flush=True)
+        else:
+            res["premise_checks"][str(h_ns)] = checks
+            save_results(res)
+            print("PREMISE FAILED at horizon", h_ns, "- stopping as instructed.", flush=True)
+            sys.exit(2)
+    else:
+        res["premise_checks"][str(h_ns)] = checks
+        save_results(res)
+        print("premise OK for horizon", h_ns, flush=True)
 
     recovery = {c: dict(pooled=float(rec(c, "pooled")), macro=float(rec(c, "macro")))
                 for c in CONDITIONS if c != "static_only"}
